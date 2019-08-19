@@ -1,0 +1,14 @@
+[ignore]
+.*broken.json.*
+<PROJECT_ROOT>/node_modules/findup/test
+[include]
+
+[libs]
+.*flow-typed.*
+[lints]
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=.
+
+[strict]
