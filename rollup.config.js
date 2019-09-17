@@ -1,6 +1,8 @@
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import svgo from 'rollup-plugin-svgo';
+import svgSpriteLoader from 'rollup-svg-sprite-loader';
+import commonjs from 'rollup-plugin-commonjs';
+import autoExternal from 'rollup-plugin-auto-external';
 
 const rollupBuilds = [
   {
@@ -8,26 +10,33 @@ const rollupBuilds = [
     output: [
       {
         file: 'dist/uiKit.js',
-        format: 'cjs',
+        format: 'cjs'
       },
       {
         file: 'dist/uiKit-es.js',
-        format: 'es',
-      },
+        format: 'es'
+      }
     ],
     external: [
       'react',
-      'react-proptypes',
-      'emotion',
+      'react-dom'
     ],
     plugins: [
-        resolve(),
-        babel({
-          exclude: 'node_modules/**',
-          runtimeHelpers: true,
-        }),
-        svgo(),
-    ],
+      svgSpriteLoader(),
+      resolve(),
+      babel({
+        exclude: 'node_modules/**',
+        runtimeHelpers: true
+      }),
+      commonjs({
+        include: 'node_modules/**',
+        sourceMap: false,
+        namedExports: {
+          'react-draggable': ['DraggableCore']
+        }
+      }),
+      autoExternal()
+    ]
   }
 ];
 

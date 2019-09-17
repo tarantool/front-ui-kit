@@ -16,13 +16,21 @@
     "build": "styleguidist build",
     "flow": "flow",
     "lint": "eslint src",
+    "lint-fix": "eslint --fix src",
     "precommit": "npm run lint && npm run flow",
     "rollup": "NODE_ENV=production ./node_modules/.bin/rollup -c"
   },
   "author": "Roman Babaev <r.babaev@corp.mail.ru>",
   "license": "ISC",
   "dependencies": {
-    "emotion": "10.0.14"
+    "babel-plugin-emotion": "9.2.6",
+    "emotion": "10.0.14",
+    "ramda": "0.26.1",
+    "react-emotion": "9.2.6",
+    "react-scrollbars-custom": "4.0.20",
+    "rollup-plugin-auto-external": "2.0.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-svg-sprite-loader": "1.0.1"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
