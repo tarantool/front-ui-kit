@@ -12,5 +12,6 @@ module.exports = {
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
     }
-  ]
+  ],
+  styleguideDir: 'docs'
 };
