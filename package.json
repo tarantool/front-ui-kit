@@ -1,6 +1,6 @@
 {
   "name": "@tarantool.io/ui-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "UI component library for Tarantool",
   "source": "src/index.js",
   "main": "dist/uiKit.js",
@@ -23,7 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-plugin-emotion": "9.2.6",
-    "emotion": "10.0.14",
+    "emotion": "9.2.6",
     "ramda": "0.26.1",
     "react-emotion": "9.2.6",
     "react-scrollbars-custom": "4.0.20",
