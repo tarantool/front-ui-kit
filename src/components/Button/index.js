@@ -113,12 +113,37 @@ const styles = {
     }
   `,
 
+  plain: css`
+    border-color: transparent;
+    background-color: transparent;
+    color: rgba(245, 34, 45, 0.65);
+
+    &:focus,
+    &:hover {
+      border-color: #f5222d;
+      color: #f5222d;
+      box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
+    }
+
+    &:active {
+      border-color: #cf1322;
+      color: #cf1322;
+      box-shadow: none;
+    }
+  `,
+
   m: css`
     padding: 4px 15px;
   `,
 
   s: css`
     padding: 0px 15px;
+  `,
+
+  xs: css`
+    padding: 0 8px;
+    line-height: 18px;
+    font-size: 12px;
   `,
 
   iconicM: css`
@@ -135,9 +160,9 @@ type ButtonProps = {
   children?: React.Node,
   disabled?: boolean,
   icon?: ComponentType<any>,
-  intent?: 'primary' | 'secondary' | 'base',
+  intent?: 'primary' | 'secondary' | 'base' | 'iconic' | 'plain',
   onClick?: (MouseEvent) => void,
-  size?: 's' | 'm',
+  size?: 's' | 'xs' | 'm',
   text?: string,
   type?: 'button' | 'submit'
 };
@@ -183,7 +208,8 @@ ButtonProps) => {
           [styles.iconicM]: isOnlyIcon && size === 'm',
           [styles.iconicS]: isOnlyIcon && size === 's',
           [styles.m]: !isOnlyIcon && size === 'm',
-          [styles.s]: !isOnlyIcon && size === 's'
+          [styles.s]: !isOnlyIcon && size === 's',
+          [styles.xs]: !isOnlyIcon && size === 'xs'
         },
         className
       )}
