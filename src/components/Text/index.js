@@ -2,7 +2,7 @@
 import * as React from 'react'
 import { css, cx } from 'emotion'
 
-const styles = {
+export const textStyles = {
   h1: css`
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -101,10 +101,10 @@ TextProps) => {
   return (
     <Element
       className={cx(
-        styles[variant],
+        textStyles[variant],
         {
-          [styles.upperCase]: upperCase,
-          [styles.noCase]: noCase
+          [textStyles.upperCase]: upperCase,
+          [textStyles.noCase]: noCase
         },
         className
       )}

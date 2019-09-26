@@ -31,5 +31,5 @@ export * from './components/Tag';
 export * from './components/TagsList';
 export * from './components/Text';
 export * from './components/TiledList';
-// export * from './components/Tooltip';
+export * from './components/Tooltip';
 export * from './components/UriLabel';

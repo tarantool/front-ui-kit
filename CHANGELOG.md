@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updates in Modal: new `fit` prop, new behavior with content overload and scrollbars
 
+- Added Tooltip component
+
+- Export text styles from Text component
+
 ## [0.5.0] - 2019-11-27
 
 - Icons:
