@@ -7,11 +7,12 @@ export * from './components/ControlsPanel';
 export * from './components/Divider'; // Is it necessary component?
 export * from './components/DotIndicator';
 export * from './components/FlatList';
-// export * from './components/FormField';
+export * from './components/FormField';
 export * from './components/HealthStatus';
 export * from './components/Icon';
 export * from './components/Input';
 export * from './components/InputGroup';
+export * from './components/LabeledInput';
 export * from './components/LeaderFlag';
 export * from './components/LeaderFlagSmall';
 export * from './components/Modal';
