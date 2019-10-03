@@ -23,10 +23,6 @@ type PopupFooterProps = {
 export const PopupFooter = ({ children, className, controls }: PopupFooterProps) => (
   <div className={cx(styles.wrap, className)}>
     {children}
-    {controls && (
-      <ControlsPanel className={cx(styles.controls)} thin>
-        {controls}
-      </ControlsPanel>
-    )}
+    {controls && <ControlsPanel className={cx(styles.controls)} controls={controls} thin />}
   </div>
 );
