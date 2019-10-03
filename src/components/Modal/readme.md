@@ -1,7 +1,8 @@
-```
+```js
 import { css } from 'emotion';
 import { Button } from '../Button';
 import { Tabbed } from '../Tabbed';
+import { PopupFooter } from '../PopupFooter';
 
 initialState = { opened: false };
 
@@ -34,6 +35,12 @@ const tabs = [
     wide
   >
     <Tabbed tabs={tabs} />
+    <PopupFooter
+      controls={[
+        <Button intent='primary' text='Accept' />,
+        <Button text='Decline' />
+      ]}
+    />
   </Modal>
 </>
 ```
