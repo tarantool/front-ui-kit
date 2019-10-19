@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Icons: IconCode, IconSchema
 
+- Update Alert styles
+
 ## [0.4.0] - 2019-10-04
 
 - Add NotificationSplash component
