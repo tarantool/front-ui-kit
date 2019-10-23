@@ -3,6 +3,11 @@ import * as React from 'react';
 import { css, cx } from 'emotion';
 
 const styles = {
+  wrap: css`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  `,
   tab: css`
     position: relative;
     padding: 16px;
@@ -63,7 +68,7 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
     const { activeTab } = this.state;
 
     return (
-      <div className={className}>
+      <div className={cx(styles.wrap, className)}>
         <div className={styles.tabs}>
           {tabs && tabs.map(({ label }, i) => (
             <button

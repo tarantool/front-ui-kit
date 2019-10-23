@@ -5,6 +5,7 @@ import { ControlsPanel } from '../ControlsPanel';
 
 const styles = {
   wrap: css`
+    flex-shrink: 0;
     display: flex;
     padding: 8px 16px;
   `,
