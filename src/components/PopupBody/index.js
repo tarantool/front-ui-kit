@@ -7,6 +7,7 @@ const styles = {
   wrap: css`
     width: 100%;
     height: 100%;
+    overflow: hidden;
   `,
   scrollableWrap: css`
     height: 100%;

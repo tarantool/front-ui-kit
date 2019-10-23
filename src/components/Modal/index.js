@@ -8,10 +8,19 @@ import { BaseModalProps, BaseModal, styles as baseStyles } from '../BaseModal';
 
 const styles = {
   modal: css`
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
     padding: 16px;
     margin: 0 auto auto;
+    overflow: hidden;
+  `,
+  fit: css`
+    flex-shrink: 1;
+    height: calc(100vh - 80px);
   `,
   title: css`
+    flex-shrink: 0;
     padding-bottom: 16px;
     padding-right: 24px;
     border-bottom: 1px solid rgba(55, 52, 66, 0.08);
@@ -25,6 +34,13 @@ const styles = {
     position: absolute;
     top: 16px;
     right: 16px;
+  `,
+  children: css`
+    /* flex-shrink: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%; */
   `
 };
 
@@ -33,6 +49,7 @@ export interface ModalProps extends BaseModalProps {
   footerControls?: React.Node[],
   title: string,
   loading?:? boolean,
+  fit?: boolean
 };
 
 export class Modal extends BaseModal<ModalProps> {
@@ -45,6 +62,7 @@ export class Modal extends BaseModal<ModalProps> {
       title,
       onClose,
       loading,
+      fit,
       wide
     } = this.props;
 
@@ -54,7 +72,10 @@ export class Modal extends BaseModal<ModalProps> {
           className={cx(
             baseStyles.baseModal,
             styles.modal,
-            { [baseStyles.wide]: wide },
+            {
+              [styles.fit]: fit,
+              [baseStyles.wide]: wide
+            },
             className
           )}
           ref={this.modalRef}
@@ -63,7 +84,7 @@ export class Modal extends BaseModal<ModalProps> {
         >
           <Text className={styles.title} variant='h2'>{title}</Text>
           {onClose && <IconClose className={styles.closeIcon} onClick={onClose} />}
-          <div>
+          <div className={styles.children}>
             {loading ? 'Loading' : children}
           </div>
           {(footerContent || footerControls) && (

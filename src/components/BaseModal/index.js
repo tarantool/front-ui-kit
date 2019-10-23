@@ -5,6 +5,9 @@ import * as ReactDOM from 'react-dom';
 import { css, cx } from 'emotion';
 
 export const styles = {
+  lockedBody: css`
+    overflow: hidden;
+  `,
   shim: ({ bg }: { bg?: string}) => css`
     position: fixed;
     z-index: 100; /* TODO: to constants */
@@ -13,10 +16,11 @@ export const styles = {
     top: 0;
     bottom: 0;
     display: flex;
+    flex-direction: column;
     padding: 40px 16px;
     overflow: auto;
     background-color: ${bg ? bg : 'rgba(0, 0, 0, 0.65)'};
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   `,
   baseModal: css`
@@ -56,16 +60,28 @@ export interface BaseModalProps {
 export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Component<T> {
   modalRef = createRef<HTMLElement>();
 
+  lockBodyScroll = () => document.body.classList.add(styles.lockedBody);
+
+  releaseBodyScroll = () => document.body.classList.remove(styles.lockedBody);
+
   componentDidMount() {
     if (this.isModalVisible()) {
       this.focusFirstInteractiveElement();
+      this.lockBodyScroll();
     }
   }
 
   componentDidUpdate(prevProps: BaseModalProps) {
     if (prevProps.visible === false && this.isModalVisible()) {
       this.focusFirstInteractiveElement();
+      this.lockBodyScroll();
+    } else if (prevProps.visible === true && !this.isModalVisible()) {
+      this.releaseBodyScroll();
     }
+  }
+
+  componentWillUnmount() {
+    this.releaseBodyScroll();
   }
 
   render() {
