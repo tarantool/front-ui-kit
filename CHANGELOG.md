@@ -6,7 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
-- Icons: IconCode, IconSchema
+- Icons:
+  - IconCode
+  - IconCreateFile
+  - IconCreateFolder
+  - IconDelete
+  - IconEdit
+  - IconFile
+  - IconFolder
+  - IconNewWindow
+  - IconRefresh
+  - IconSchema
 
 - Update Alert styles
 

@@ -10,12 +10,18 @@ const styles = {
   `,
   down: css`
     transform: rotate(180deg);
+  `,
+  left: css`
+    transform: rotate(270deg);
+  `,
+  right: css`
+    transform: rotate(90deg);
   `
 };
 
 type IconChevronProps = {
   ...$Exact<GenericIconProps>,
-  direction: 'up' | 'down';
+  direction: 'up' | 'down' | 'left' | 'right'
 }
 
 export const IconChevron = (props: IconChevronProps) => {
@@ -26,6 +32,8 @@ export const IconChevron = (props: IconChevronProps) => {
       className={cx(
         styles.icon,
         { [styles.down]: direction === 'down' },
+        { [styles.left]: direction === 'left' },
+        { [styles.right]: direction === 'right' },
         className
       )}
       glyph={image}
