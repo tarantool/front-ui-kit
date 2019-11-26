@@ -27,14 +27,22 @@ import {
   IconClose,
   IconCluster,
   IconCode,
+  IconCreateFile,
+  IconCreateFolder,
   IconCrown,
+  IconDelete,
   IconDownload,
+  IconEdit,
+  IconFile,
+  IconFolder,
   IconGear,
   IconInfo,
   IconLink,
   IconMore,
+  IconNewWindow,
   IconOk,
   IconRadio,
+  IconRefresh,
   IconSchema,
   IconSearch,
   IconUser,
@@ -50,21 +58,33 @@ import {
   <IconBurger />
   <IconCancel />
   <IconCheckbox />
+  <IconCheckbox checked />
   <IconChevron />
-  <IconChevron direction='bottom' />
+  <IconChevron direction='down' />
+  <IconChevron direction='left' />
+  <IconChevron direction='right' />
   <IconChip />
   <IconClose />
   <IconCluster />
   <IconCode />
+  <IconCreateFile />
+  <IconCreateFolder />
   <IconCrown />
+  <IconDelete />
   <IconDownload />
+  <IconEdit />
+  <IconFile />
+  <IconFolder />
+  <IconFolder opened />
   <IconGear />
   <IconInfo />
   <IconLink />
   <IconMore />
+  <IconNewWindow />
   <IconOk />
   <IconRadio />
   <IconRadio checked />
+  <IconRefresh />
   <IconSearch />
   <IconSchema />
   <IconUser />
