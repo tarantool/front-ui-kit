@@ -60,9 +60,15 @@ export interface BaseModalProps {
 export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Component<T> {
   modalRef = createRef<HTMLElement>();
 
-  lockBodyScroll = () => document.body.classList.add(styles.lockedBody);
+  lockBodyScroll = () => {
+    const { body } = document;
+    body && body.classList.add(styles.lockedBody);
+  }
 
-  releaseBodyScroll = () => document.body.classList.remove(styles.lockedBody);
+  releaseBodyScroll = () => {
+    const { body } = document;
+    body && body.classList.remove(styles.lockedBody);
+  }
 
   componentDidMount() {
     if (this.isModalVisible()) {

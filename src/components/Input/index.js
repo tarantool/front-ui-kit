@@ -62,6 +62,12 @@ type InputProps = {
   onBlur?: (e: MouseEvent) => any,
   onChange?: (e: SyntheticInputEvent<HTMLInputElement>) => any,
   onFocus?: (e: MouseEvent) => any,
+  onKeyDown?: (e: KeyboardEvent) => any,
+  onKeyDownCapture?: (e: KeyboardEvent) => any,
+  onKeyPress?: (e: KeyboardEvent) => any,
+  onKeyPressCapture?: (e: KeyboardEvent) => any,
+  onKeyUp?: (e: KeyboardEvent) => any,
+  onKeyUpCapture?: (e: KeyboardEvent) => any,
   readOnly?: boolean,
   rightIcon?: React.Node,
   type?: 'text' | 'password' | 'email',
@@ -82,12 +88,24 @@ export class Input extends React.Component<InputProps, InputState> {
     focused: false
   };
 
+  focus = () => {
+    if (this.inputRef && this.inputRef.current) {
+      this.inputRef.current.focus();
+    }
+  }
+
   render() {
     const {
       autoComplete,
       autoFocus,
       className,
       onClearClick,
+      onKeyDown,
+      onKeyDownCapture,
+      onKeyPress,
+      onKeyPressCapture,
+      onKeyUp,
+      onKeyUpCapture,
       disabled,
       error,
       name,
@@ -120,6 +138,12 @@ export class Input extends React.Component<InputProps, InputState> {
           disabled={disabled}
           name={name}
           onChange={onChange}
+          onKeyDown={onKeyDown}
+          onKeyDownCapture={onKeyDownCapture}
+          onKeyPress={onKeyPress}
+          onKeyPressCapture={onKeyPressCapture}
+          onKeyUp={onKeyUp}
+          onKeyUpCapture={onKeyUpCapture}
           onBlur={this.handleInputBlur}
           onFocus={this.handleInputFocus}
           type={type}
@@ -147,7 +171,7 @@ export class Input extends React.Component<InputProps, InputState> {
   };
 
   handleClearClick = () => {
-    if (this.inputRef && this.inputRef.current) this.inputRef.current.focus();
+    this.focus();
     this.props.onClearClick && this.props.onClearClick();
   }
 }
