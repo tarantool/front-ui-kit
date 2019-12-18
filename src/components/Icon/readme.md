@@ -44,6 +44,7 @@ import {
   IconRadio,
   IconRefresh,
   IconSchema,
+  IconSpinner,
   IconSearch,
   IconUser,
   IconUsers
@@ -87,6 +88,7 @@ import {
   <IconRefresh />
   <IconSearch />
   <IconSchema />
+  <IconSpinner />
   <IconUser />
   <IconUsers />
 </div>
