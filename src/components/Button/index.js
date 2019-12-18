@@ -2,6 +2,7 @@
 import * as React from 'react'
 import type { ComponentType } from 'react'
 import { css, cx } from 'react-emotion'
+import { IconSpinner } from '../Icon';
 
 const styles = {
   button: css`
@@ -11,7 +12,9 @@ const styles = {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 22px;
-    transition: 0.07s ease-in-out;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.07s;
+    transition-property: border, background-color, color, box-shadow;
     outline: none;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
@@ -31,6 +34,72 @@ const styles = {
     }
   `,
 
+  icon: css`
+    margin-bottom: 2px;
+  `,
+
+  iconMargin: css`
+    margin-right: 8px;
+  `,
+
+  loading: css`
+    position: relative;
+    color: rgba(0, 0, 0, 0);
+    transition: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: rgba(0, 0, 0, 0);
+    }
+
+    & > *,
+    &:hover > *,
+    &:active > *,
+    &:focus > * {
+      visibility: hidden;
+    }
+
+    & > *:last-child {
+      visibility: visible;
+    }
+  `,
+
+  loadingWrap: css`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `,
+
+  m: css`
+    padding: 4px 15px;
+  `,
+
+  s: css`
+    padding: 0px 15px;
+  `,
+
+  xs: css`
+    padding: 0 8px;
+    line-height: 18px;
+    font-size: 12px;
+  `,
+
+  iconicM: css`
+    padding: 4px 7px;
+  `,
+
+  iconicS: css`
+    padding: 0px 3px;
+  `
+};
+
+const intentStyles = {
   base: css`
     border-color: #d9d9d9;
     background-color: white;
@@ -47,14 +116,6 @@ const styles = {
       color: rgba(0, 0, 0, 0.65);
       box-shadow: none;
     }
-  `,
-
-  icon: css`
-    margin-bottom: 2px;
-  `,
-
-  iconMargin: css`
-    margin-right: 8px;
   `,
 
   primary: css`
@@ -130,28 +191,40 @@ const styles = {
       color: #cf1322;
       box-shadow: none;
     }
-  `,
+  `
+};
 
-  m: css`
-    padding: 4px 15px;
+const intentLoadingStyles = {
+  base: css`
+    border-color: #d9d9d9;
   `,
-
-  s: css`
-    padding: 0px 15px;
+  primary: css``,
+  secondary: css`
+    border-color: #f5222d;
   `,
-
-  xs: css`
-    padding: 0 8px;
-    line-height: 18px;
-    font-size: 12px;
+  iconic: css`
+    border-color: rgba(217, 217, 217, 0.45);
   `,
+  plain: css`
+    border-color: #f5222d;
+  `
+};
 
-  iconicM: css`
-    padding: 4px 7px;
+const spinnerStyles = {
+  base: css`
+    fill: rgba(0, 0, 0, 0.65);
   `,
-
-  iconicS: css`
-    padding: 0px 3px;
+  primary: css`
+    fill: #ffffff;
+  `,
+  secondary: css`
+    fill: #CF1322;
+  `,
+  iconic: css`
+    fill: #CF1322;
+  `,
+  plain: css`
+    fill: #CF1322;
   `
 };
 
@@ -162,6 +235,7 @@ type ButtonProps = {
   icon?: ComponentType<any>,
   intent?: 'primary' | 'secondary' | 'base' | 'iconic' | 'plain',
   onClick?: (MouseEvent) => void,
+  loading?: boolean,
   size?: 's' | 'xs' | 'm',
   text?: string,
   type?: 'button' | 'submit'
@@ -174,6 +248,7 @@ export const Button = ({
   icon: Icon,
   intent = 'base',
   onClick,
+  loading,
   size = 'm',
   text,
   type = 'button'
@@ -198,18 +273,27 @@ ButtonProps) => {
 
   content.push(children || text)
 
+  if(loading && !disabled) {
+    content.push(
+      <div className={styles.loadingWrap}>
+        <IconSpinner className={spinnerStyles[intent]} />
+      </div>
+    );
+  }
 
   return (
     <button
       className={cx(
         styles.button,
-        styles[intent],
+        intentStyles[intent],
         {
           [styles.iconicM]: isOnlyIcon && size === 'm',
           [styles.iconicS]: isOnlyIcon && size === 's',
           [styles.m]: !isOnlyIcon && size === 'm',
           [styles.s]: !isOnlyIcon && size === 's',
-          [styles.xs]: !isOnlyIcon && size === 'xs'
+          [styles.xs]: !isOnlyIcon && size === 'xs',
+          [intentLoadingStyles[intent]]: loading && !disabled,
+          [styles.loading]: loading && !disabled
         },
         className
       )}
