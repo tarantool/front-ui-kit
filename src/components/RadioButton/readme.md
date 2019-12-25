@@ -1,5 +1,5 @@
 ```js
-<RadioButton>Initial</RadioButton>
+<RadioButton title='initial radio'>Initial</RadioButton>
 <br />
 <RadioButton checked>Checked</RadioButton>
 <br />

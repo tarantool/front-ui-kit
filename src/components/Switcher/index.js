@@ -105,7 +105,8 @@ type SwitcherProps = {
   children?: React.Node,
   className?: string,
   disabled?: boolean,
-  onChange?: (MouseEvent) => void
+  onChange?: (MouseEvent) => void,
+  title?: string
 };
 
 export const Switcher = ({
@@ -113,10 +114,11 @@ export const Switcher = ({
   children,
   className,
   disabled,
-  onChange
+  onChange,
+  title
 }:
 SwitcherProps) => (
-  <label className={cx(styles.label, className)}>
+  <label className={cx(styles.label, className)} title={title}>
     <input
       checked={checked}
       className={styles.input}

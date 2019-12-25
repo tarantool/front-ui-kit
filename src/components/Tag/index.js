@@ -65,9 +65,16 @@ export type TagProps = {
   highlightingOnHover?: string,
   onClick?: (MouseEvent) => void,
   text: string,
+  title?: string
 };
 
-export const Tag = ({ highlightingOnHover, className, onClick, text }: TagProps) => {
+export const Tag = ({
+  highlightingOnHover,
+  className,
+  onClick,
+  text,
+  title
+}: TagProps) => {
   const Element = onClick ? 'button' : 'span';
 
   return (
@@ -82,6 +89,7 @@ export const Tag = ({ highlightingOnHover, className, onClick, text }: TagProps)
         className
       )}
       onClick={onClick}
+      title={title}
     >
       {text}
     </Element>

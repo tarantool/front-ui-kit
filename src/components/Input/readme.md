@@ -10,6 +10,7 @@ handleChange = e => setState({ value: e.target.value });
     value={state.value}
     placeholder='Placeholder'
     onChange={handleChange}
+    title='Input'
   />
   <Input
     value={state.value}

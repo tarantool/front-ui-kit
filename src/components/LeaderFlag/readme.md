@@ -1,4 +1,4 @@
 ```
-<LeaderFlag />
-<LeaderFlag fail />
+<LeaderFlag title='Good' />
+<LeaderFlag fail title='Bad' />
 ```
