@@ -70,6 +70,7 @@ type InputProps = {
   onKeyUpCapture?: (e: KeyboardEvent) => any,
   readOnly?: boolean,
   rightIcon?: React.Node,
+  title?: string,
   type?: 'text' | 'password' | 'email',
   value?: string,
   placeholder?: string
@@ -112,6 +113,7 @@ export class Input extends React.Component<InputProps, InputState> {
       onChange,
       readOnly,
       rightIcon,
+      title,
       type,
       value,
       placeholder
@@ -130,6 +132,7 @@ export class Input extends React.Component<InputProps, InputState> {
           },
           className
         )}
+        title={title}
       >
         <input
           autoFocus={autoFocus}

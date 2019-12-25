@@ -14,7 +14,7 @@ const changeState = () => setState({ loading: !state.loading });
 
   <Text>Simple buttons:</Text>
   <div style={{ padding: '12px' }}>
-    <Button loading={state.loading}>Click me</Button>
+    <Button loading={state.loading} title='Click me right meow!'>Click me</Button>
     <Button loading={state.loading} intent='primary'>Click me</Button>
     <Button loading={state.loading} intent='secondary'>Click me</Button>
     <Button loading={state.loading} intent='iconic'>Click me</Button>

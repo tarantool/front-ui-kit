@@ -1,5 +1,5 @@
 ```js
-<Switcher>Initial</Switcher>
+<Switcher title='initial switcher'>Initial</Switcher>
 <br />
 <Switcher checked>Checked</Switcher>
 <br />

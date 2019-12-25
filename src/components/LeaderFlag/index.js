@@ -27,13 +27,14 @@ const styles = {
 
 type LeaderFlagProps = {
   className?: string,
-  fail?: boolean
+  fail?: boolean,
+  title?: string
 };
 
-export const LeaderFlag = ({ className, fail }: LeaderFlagProps) => {
+export const LeaderFlag = ({ className, fail, title }: LeaderFlagProps) => {
   const glyph = fail ? redFlag : greenFlag;
   return (
-    <div className={cx(styles.wrap, className)}>
+    <div className={cx(styles.wrap, className)} title={title}>
       <svg
         viewBox={glyph.viewBox}
         className={styles.flag}

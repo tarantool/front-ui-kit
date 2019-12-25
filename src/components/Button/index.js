@@ -238,6 +238,7 @@ type ButtonProps = {
   loading?: boolean,
   size?: 's' | 'xs' | 'm',
   text?: string,
+  title?: string,
   type?: 'button' | 'submit'
 };
 
@@ -251,6 +252,7 @@ export const Button = ({
   loading,
   size = 'm',
   text,
+  title,
   type = 'button'
 }:
 ButtonProps) => {
@@ -299,6 +301,7 @@ ButtonProps) => {
       )}
       disabled={disabled}
       onClick={onClick}
+      title={title}
       type={type}
     >
       {content}

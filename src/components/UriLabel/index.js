@@ -22,11 +22,12 @@ const styles = {
 
 type UriLabelProps = {
   className?: string,
+  title?: string,
   uri?: string,
 };
 
-export const UriLabel = ({ className, uri }: UriLabelProps) => (
-  <div className={cx(styles.uriWrap, className)}>
+export const UriLabel = ({ className, title, uri }: UriLabelProps) => (
+  <div className={cx(styles.uriWrap, className)} title={title}>
     <IconLink className={styles.uriIcon} />
     <Text className={styles.uri} variant='h5' tag='span'>{uri}</Text>
   </div>

@@ -82,6 +82,7 @@ type TextProps = {
   tag?: string,
   upperCase?: boolean,
   noCase?: boolean,
+  title?: string,
   variant?:
     |'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'basic',
   // colorVariant?: 'inherit' | 'primary' | 'secondary' | 'disabled' | 'white' | 'error',
@@ -93,6 +94,7 @@ export const Text = ({
   tag,
   upperCase,
   noCase,
+  title,
   variant = 'basic'
 }:
 TextProps) => {
@@ -108,6 +110,7 @@ TextProps) => {
         },
         className
       )}
+      title={title}
     >
       {children}
     </Element>

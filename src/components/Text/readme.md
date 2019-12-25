@@ -1,5 +1,5 @@
 ```
-<Text variant='h1'>Heading 1 - 24px, 38px, 600, spacing 0.48px</Text>
+<Text variant='h1' title='Text title'>Heading 1 - 24px, 38px, 600, spacing 0.48px</Text>
 <Text variant='h2'>Heading 2 - 20px, 28px, 600, spacing 0.4px</Text>
 <Text variant='h3'>Heading 3 - 16px, 24px, 600, spacing 0.32px</Text>
 <Text variant='h4'>Heading 4 - 16px, 24px, 600, spacing 0.32px</Text>

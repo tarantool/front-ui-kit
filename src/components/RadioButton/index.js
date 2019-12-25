@@ -50,6 +50,7 @@ type RadioButtonProps = {
   className?: string,
   disabled?: boolean,
   name?: string,
+  title?: string,
   value?: string,
   onChange?: (MouseEvent) => void
 };
@@ -61,10 +62,11 @@ export const RadioButton = ({
   disabled,
   onChange,
   name,
+  title,
   value
 }:
 RadioButtonProps) => (
-  <label className={cx(styles.label, className)}>
+  <label className={cx(styles.label, className)} title={title}>
     <input
       checked={checked}
       className={styles.input}
