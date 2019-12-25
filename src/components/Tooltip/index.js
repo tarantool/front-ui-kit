@@ -46,6 +46,7 @@ type TooltipProps = {
   children: React.Node,
   className?: string,
   content?: React.Node,
+  opened?: boolean,
   tag?: string
 };
 
@@ -73,10 +74,19 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
   wrapperRef = React.createRef<HTMLElement>();
   tooltipRef = React.createRef<HTMLElement>();
 
+  componentDidMount() {
+    const { opened } = this.props;
+
+    if (opened) this.showTooltip();
+  }
+
   componentDidUpdate(prevProps: TooltipProps, prevState: TooltipState) {
-    const {
-      visible
-    } = this.state;
+    const { opened } = this.props;
+    const { visible } = this.state;
+
+    if (!prevProps.opened && opened) this.showTooltip();
+
+    if (prevProps.opened && !opened) this.hideTooltip();
 
     const tooltipElement = this.tooltipRef.current;
     const wrapperElement = this.wrapperRef.current;
