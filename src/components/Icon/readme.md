@@ -31,6 +31,7 @@ import {
   IconCreateFolder,
   IconCrown,
   IconDelete,
+  IconDocumentCode,
   IconDownload,
   IconEdit,
   IconFile,
@@ -72,6 +73,7 @@ import {
   <IconCreateFolder />
   <IconCrown />
   <IconDelete />
+  <IconDocumentCode />
   <IconDownload />
   <IconEdit />
   <IconFile />
