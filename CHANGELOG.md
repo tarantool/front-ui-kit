@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added syntax highlight in markdown code blocks
 
+- Added NonIdealState component
+
+- Added autoFocus prop to Button
+
 ## [0.11.0] - 2020-01-17
 
 - Links in Markdown have a target='\_blank' attribute.

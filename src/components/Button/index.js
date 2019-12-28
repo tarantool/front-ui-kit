@@ -229,6 +229,7 @@ const spinnerStyles = {
 };
 
 type ButtonProps = {
+  autoFocus?: boolean,
   className?: string,
   children?: React.Node,
   disabled?: boolean,
@@ -243,6 +244,7 @@ type ButtonProps = {
 };
 
 export const Button = ({
+  autoFocus,
   className,
   children,
   disabled,
@@ -285,6 +287,7 @@ ButtonProps) => {
 
   return (
     <button
+      autoFocus={autoFocus}
       className={cx(
         styles.button,
         intentStyles[intent],
