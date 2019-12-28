@@ -19,6 +19,7 @@ export * from './components/LeaderFlagSmall';
 export * from './components/Link';
 export * from './components/Markdown';
 export * from './components/Modal';
+export * from './components/NonIdealState';
 export * from './components/NotificationSplash';
 export * from './components/NotificationSplashFixed';
 export * from './components/PageCard';
