@@ -3,6 +3,7 @@ import * as React from 'react';
 import { createRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { css, cx } from 'emotion';
+import { zIndex } from '../../variables';
 
 export const styles = {
   lockedBody: css`
@@ -10,7 +11,7 @@ export const styles = {
   `,
   shim: ({ bg }: { bg?: string}) => css`
     position: fixed;
-    z-index: 100; /* TODO: to constants */
+    z-index: ${zIndex.modal};
     left: 0;
     right: 0;
     top: 0;

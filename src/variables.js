@@ -13,3 +13,10 @@ export const navWidthExpanded = '256px';
 export const navWidthCollapsed = '62px';
 
 export const iconSize = '14px';
+
+export const zIndex = {
+  inline: 1,
+  fixedSplash: 50, // maybe 300 (see login modal)
+  modal: 100,
+  tooltip: 200
+};

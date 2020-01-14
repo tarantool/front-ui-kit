@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { zIndex } from '../../variables';
 
 const styles = {
   wrap: css`
@@ -23,7 +24,7 @@ const styles = {
     cursor: pointer;
 
     &:focus {
-      z-index: 1;
+      z-index: ${zIndex.inline};
     }
 
     &:focus::before {

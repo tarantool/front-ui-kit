@@ -3,13 +3,14 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { css, cx } from 'emotion';
 import { textStyles } from '../Text';
+import { zIndex } from '../../variables';
 
 const CORNER_HEIGHT = 8;
 
 const styles = {
   tooltip: ({ cornerPositionX }) => css`
     position: absolute;
-    z-index: 200;
+    z-index: ${zIndex.tooltip};
     max-width: 400px;
     padding: 5px 16px;
     color: #ffffff;
