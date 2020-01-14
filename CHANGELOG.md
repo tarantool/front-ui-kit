@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated IconBucket, IconChip
 
+- Updated FlatList styles
+
 ## [0.11.0] - 2020-01-17
 
 - Links in Markdown have a target='\_blank' attribute.
