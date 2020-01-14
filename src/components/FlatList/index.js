@@ -17,6 +17,10 @@ const styles = {
     transition: 0.1s ease-in-out;
     transition-property: border-color, box-shadow;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     &:hover {
       border-color: rgba(82, 82, 82, 0.07);
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
