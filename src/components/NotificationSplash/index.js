@@ -35,7 +35,7 @@ const styles = {
   `
 }
 
-type NotificationSplashProps = {
+export type NotificationSplashProps = {
   className?: string,
   children?: React.Node,
   controls?: React.Node[],
