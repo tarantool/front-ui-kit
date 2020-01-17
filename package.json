@@ -24,6 +24,7 @@
   "dependencies": {
     "babel-plugin-emotion": "9.2.6",
     "emotion": "9.2.6",
+    "markdown-to-jsx": "6.10.3",
     "ramda": "0.26.1",
     "react-emotion": "9.2.6",
     "react-scrollbars-custom": "4.0.20",

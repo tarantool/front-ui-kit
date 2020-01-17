@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
-- Added NotificationSplashFixed
+- Added NotificationSplashFixed, Markdown and Link components
 
 - Z-indexes of all components moved to variables file
 

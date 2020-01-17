@@ -58,6 +58,16 @@ export const textStyles = {
     letter-spacing: 0.28px;
     color: #000000;
   `,
+  code: css`
+    margin: 0;
+    font-family: 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    b {
+      font-weight: 600;
+    }
+  `,
   basic: css`
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -84,7 +94,7 @@ type TextProps = {
   noCase?: boolean,
   title?: string,
   variant?:
-    |'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'basic',
+    |'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'basic' | 'code',
   // colorVariant?: 'inherit' | 'primary' | 'secondary' | 'disabled' | 'white' | 'error',
 };
 
