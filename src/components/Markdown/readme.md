@@ -15,6 +15,10 @@ Code block
 \`\`\`js
 JS code block
 \`\`\`
+
+* Unsorted list
+* with bullets
+* and cakes
 `} />
 ```
 
