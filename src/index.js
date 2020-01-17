@@ -15,6 +15,8 @@ export * from './components/InputGroup';
 export * from './components/LabeledInput';
 export * from './components/LeaderFlag';
 export * from './components/LeaderFlagSmall';
+export * from './components/Link';
+export * from './components/Markdown';
 export * from './components/Modal';
 export * from './components/NotificationSplash';
 export * from './components/NotificationSplashFixed';

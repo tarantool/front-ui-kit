@@ -7,6 +7,8 @@
 <Text variant='p'>paragraph - 12px, 20px, 400, spacing: 0.28px</Text>
 <Text>basic - 14px, 22px, 400</Text>
 <br />
+<Text variant='code'>code - 14px, 22px, 400</Text>
+<br />
 <Text variant='h3' tag='span'>H3 styled span</Text>
 <Text variant='h4' tag='span'>H4 styled span</Text>
 ```
