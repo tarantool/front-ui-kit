@@ -38,19 +38,23 @@ const styles = {
   p: css`
     margin-top: 17px;
     margin-bottom: 17px;
+  `,
+  ul: css`
+    padding-left: 24px;
   `
 };
 
 const overrides = {
-  h1: ({ children, ...props }) => (<Text {...props} className={styles.h1} variant='h1'>{children}</Text>),
-  h2: ({ children, ...props }) => (<Text {...props} className={styles.h} variant='h2'>{children}</Text>),
-  h3: ({ children, ...props }) => (<Text {...props} className={styles.h} variant='h3'>{children}</Text>),
-  h4: ({ children, ...props }) => (<Text {...props} className={styles.h} variant='h4'>{children}</Text>),
-  h5: ({ children, ...props }) => (<Text {...props} className={styles.h} variant='h5'>{children}</Text>),
-  h6: ({ children, ...props }) => (<Text {...props} className={styles.h} variant='h6'>{children}</Text>),
-  p: ({ children, ...props }) => (<Text {...props} className={styles.p} variant='basic' tag='p'>{children}</Text>),
-  a: ({ children, ...props }) => (<Link {...props}>{children}</Link>),
-  code: ({ children, ...props }) => (<Text {...props} variant='code'>{children}</Text>)
+  h1: ({ children, ...props }) => <Text {...props} className={styles.h1} variant='h1'>{children}</Text>,
+  h2: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h2'>{children}</Text>,
+  h3: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h3'>{children}</Text>,
+  h4: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h4'>{children}</Text>,
+  h5: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h5'>{children}</Text>,
+  h6: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h6'>{children}</Text>,
+  p: ({ children, ...props }) => <Text {...props} className={styles.p} variant='basic' tag='p'>{children}</Text>,
+  a: ({ children, ...props }) => <Link {...props} target='_blank'>{children}</Link>,
+  code: ({ children, ...props }) => <Text {...props} variant='code'>{children}</Text>,
+  ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>
 };
 
 export const Markdown = ({
