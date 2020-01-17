@@ -1,7 +1,9 @@
 // @flow
 import * as React from 'react'
 import { css, cx } from 'emotion';
+import { type SVGGlyph } from '../../../declarations/SVGGlyph';
 // import { iconSize } from '../../variables';
+
 const iconSize = '14px';
 
 const styles = {
@@ -60,7 +62,7 @@ const styles = {
 type IconProps = {
   active?: boolean; // Выбраное состояние
   className?: string;
-  glyph: Glyph,
+  glyph: SVGGlyph,
   hasState?: boolean, // Включение состояния: Normal, Hover, Active
   onClick?: (evt: MouseEvent) => void,
   onMouseEnter?: () => void,
@@ -68,10 +70,10 @@ type IconProps = {
   stroke?: boolean // Задавать stroke вместо fill
 };
 
-export type GenericIconProps = {
+export type GenericIconProps = {|
   className?: string,
   onClick?: (e: MouseEvent) => void
-};
+|};
 
 
 export const Icon = ({
