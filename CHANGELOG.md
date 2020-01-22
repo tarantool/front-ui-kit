@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added Dropdown component
 
+- Removed Divider component
+
 ## [0.12.0] - 2020-02-10
 
 - Updated Markdown styles
