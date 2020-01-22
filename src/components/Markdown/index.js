@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MD from 'markdown-to-jsx';
-import { css, cx } from 'emotion';
+import { css } from 'emotion';
 import { Link } from '../Link';
 import { Text } from '../Text';
 
@@ -9,16 +9,18 @@ const styles = {
     & code {
       padding: 3px;
       border-radius: 3px;
-      background-color: #eeeeee;
+      background-color: #1E2537;
+      color: white;
+      font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
     }
 
     & pre {
       display: block;
       padding: 16px;
-      margin-top: 21px;
-      margin-bottom: 21px;
+      margin-bottom: 16px;
       border-radius: 4px;
-      background-color: #f6f8fa;
+      background-color: #1E2537;
+      color: white;
 
       & > code {
         padding: 0;
@@ -27,25 +29,21 @@ const styles = {
       }
     }
   `,
-  h1: css`
-    margin-top: 30px;
-    margin-bottom: 30px;
-  `,
   h: css`
-    margin-top: 21px;
-    margin-bottom: 21px;
+    margin-bottom: 16px;
+    color: #000;
   `,
   p: css`
-    margin-top: 17px;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
   `,
   ul: css`
     padding-left: 24px;
+    margin-bottom: 20px;
   `
 };
 
 const overrides = {
-  h1: ({ children, ...props }) => <Text {...props} className={styles.h1} variant='h1'>{children}</Text>,
+  h1: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h1'>{children}</Text>,
   h2: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h2'>{children}</Text>,
   h3: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h3'>{children}</Text>,
   h4: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h4'>{children}</Text>,
