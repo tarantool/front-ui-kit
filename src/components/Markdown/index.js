@@ -1,6 +1,7 @@
 import * as React from 'react';
 import MD from 'markdown-to-jsx';
 import { css } from 'emotion';
+import { CodeBlock } from '../CodeBlock';
 import { Link } from '../Link';
 import { Text } from '../Text';
 
@@ -51,7 +52,11 @@ const overrides = {
   h6: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h6'>{children}</Text>,
   p: ({ children, ...props }) => <Text {...props} className={styles.p} variant='basic' tag='p'>{children}</Text>,
   a: ({ children, ...props }) => <Link {...props} target='_blank'>{children}</Link>,
-  code: ({ children, ...props }) => <Text {...props} variant='code'>{children}</Text>,
+  code: ({ children, className, ...props }) => (
+    className && className.indexOf('lang-') === 0
+      ? <CodeBlock language={className.substr(5)} text={children} />
+      : <Text {...props} variant='code'>{children}</Text>
+  ),
   ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>
 };
 

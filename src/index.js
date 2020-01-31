@@ -2,6 +2,7 @@ export * from './components/Alert';
 export * from './components/BaseModal';
 export * from './components/Button';
 export * from './components/Checkbox';
+export * from './components/CodeBlock';
 export * from './components/ConfirmModal';
 export * from './components/ControlsPanel';
 export * from './components/Divider'; // Is it necessary component?
