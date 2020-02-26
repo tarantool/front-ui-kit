@@ -50,7 +50,16 @@ type TooltipProps = {
   tag?: string
 };
 
-type TooltipState = {
+type withTooltipProps = {
+  children?: React.Node,
+  className?: string,
+  onMouseEnter?: (e: MouseEvent) => void,
+  onMouseLeave?: (e: MouseEvent) => void,
+  onScroll?: (e: MouseEvent) => void,
+  tooltipContent?: React.Node
+};
+
+type withTooltipState = {
   cornerPositionX: number,
   visible: boolean,
   top: number,
@@ -58,7 +67,10 @@ type TooltipState = {
   topPlacement: boolean
 };
 
-export class Tooltip extends React.Component<TooltipProps, TooltipState> {
+export const withTooltip = (Component: React.ComponentType<any> | string) => class extends React.Component<
+  withTooltipProps,
+  withTooltipState
+> {
   state = {
     cornerPositionX: 0,
     visible: false,
@@ -71,18 +83,22 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
     placement: 'top'
   };
 
-  wrapperRef = React.createRef<HTMLElement>();
+  wrapperRef = React.createRef<HTMLElement | React.Component<any>>();
   tooltipRef = React.createRef<HTMLElement>();
 
-  componentDidUpdate(prevProps: TooltipProps, prevState: TooltipState) {
+  componentDidUpdate(prevProps: withTooltipProps, prevState: withTooltipState) {
     const {
       visible
     } = this.state;
 
-    const tooltipElement = this.tooltipRef.current;
-    const wrapperElement = this.wrapperRef.current;
+    const { wrapperRef, tooltipRef } = this;
 
-    if (visible && !prevState.visible && tooltipElement && wrapperElement) {
+    const tooltipElement = tooltipRef.current;
+    const wrapperElement: HTMLElement = (wrapperRef.current && wrapperRef.current.elementRef)
+      ? wrapperRef.current.elementRef.current
+      : wrapperRef.current;
+
+    if ((visible && !prevState.visible) || (prevProps !== this.props) && tooltipElement && wrapperElement) {
       const bodyWidth = document.body ? document.body.clientWidth : 0;
       const wrapperRect = wrapperElement.getBoundingClientRect();
       const wrapperCenterX = window.scrollX + wrapperRect.left + wrapperElement.offsetWidth / 2;
@@ -98,9 +114,6 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
 
       const cornerPositionX = tooltipElement.offsetWidth / 2 + tooltipShiftLeft;
 
-      window.wrapperElement = wrapperElement;
-      window.tooltipElement = tooltipElement;
-
       this.setState({
         cornerPositionX,
         top: topPlacement
@@ -112,31 +125,50 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
     }
   }
 
+  handleMouseEnter = (evt: MouseEvent) => {
+    const { onMouseEnter } = this.props;
+    this.showTooltip();
+    if (onMouseEnter) onMouseEnter(evt);
+  }
+
+  handleMouseLeave = (evt: MouseEvent) => {
+    const { onMouseLeave } = this.props;
+    this.hideTooltip();
+    if (onMouseLeave) onMouseLeave(evt);
+  }
+
+  handleScroll = (evt: MouseEvent) => {
+    const { onScroll } = this.props;
+    this.hideTooltip();
+    if (onScroll) onScroll(evt);
+  }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.hideTooltip, true);
   }
 
   render() {
-    const { children, className, tag } = this.props;
-
-    const Component = tag || 'div';
+    const { children, className, tooltipContent, ...props } = this.props;
 
     return (
-      <Component
-        className={cx(styles.wrapper, className)}
-        onMouseEnter={this.showTooltip}
-        onMouseLeave={this.hideTooltip}
-        onScroll={this.hideTooltip}
-        ref={this.wrapperRef}
-      >
+      <>
+        <Component
+          {...props}
+          className={cx(styles.wrapper, className)}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+          onScroll={this.handleScroll}
+          ref={this.wrapperRef}
+        >
+          {children}
+        </Component>
         {this.renderTooltipPortal()}
-        {children}
-      </Component>
+      </>
     );
   }
 
   renderTooltip() {
-    const { content } = this.props;
+    const { tooltipContent } = this.props;
     const { cornerPositionX, left, top, topPlacement } = this.state;
 
     return (
@@ -152,7 +184,7 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
         }}
         ref={this.tooltipRef}
       >
-        {content}
+        {tooltipContent}
       </div>
     );
   }
@@ -190,4 +222,17 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
 
     window.removeEventListener('scroll', this.hideTooltip, true);
   }
+};
+
+export const Tooltip = ({ children, className, content, tag }: TooltipProps) => {
+  const Component = withTooltip(tag || 'div');
+
+  return (
+    <Component
+      className={cx(styles.wrapper, className)}
+      tooltipContent={content}
+    >
+      {children}
+    </Component>
+  );
 };

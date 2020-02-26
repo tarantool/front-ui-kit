@@ -1,6 +1,8 @@
 ```js
 import { css } from 'emotion';
+import { Button } from '../Button';
 import { Input } from '../Input';
+import { Tooltip, withTooltip } from './index';
 
 const styles = {
   toRight: css`
@@ -19,6 +21,9 @@ const styles = {
 
 const largeText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero minima voluptate possimus nam vel nemo, blanditiis ut facere quo cum molestias sint aliquam sapiente aut. Inventore, suscipit vitae ut porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
 
+const InputWithTooltip = withTooltip(Input);
+const ButtonWithTooltip = withTooltip(Button);
+
 <>
   <div>
     {'Lorem ipsum dolor sit amet, consectetur adipisicing elit. '}
@@ -31,6 +36,8 @@ const largeText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lib
   <Tooltip className={styles.toRight} content={largeText}>
     <Input placeholder='Text area' />
   </Tooltip>
+  <InputWithTooltip tooltipContent={largeText} className={styles.toLeft} placeholder='withTooltip HOC' />
+  <ButtonWithTooltip tooltipContent={largeText}>withTooltip HOC</ButtonWithTooltip>
 </>
 ```
 
