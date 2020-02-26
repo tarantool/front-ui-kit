@@ -228,7 +228,7 @@ const spinnerStyles = {
   `
 };
 
-type ButtonProps = {
+export type ButtonProps = {
   autoFocus?: boolean,
   className?: string,
   children?: React.Node,
@@ -243,21 +243,25 @@ type ButtonProps = {
   type?: 'button' | 'submit'
 };
 
-export const Button = ({
-  autoFocus,
-  className,
-  children,
-  disabled,
-  icon: Icon,
-  intent = 'base',
-  onClick,
-  loading,
-  size = 'm',
-  text,
-  title,
-  type = 'button'
-}:
-ButtonProps) => {
+export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
+  {
+    autoFocus,
+    className,
+    children,
+    disabled,
+    icon: Icon,
+    intent = 'base',
+    onClick,
+    loading,
+    size = 'm',
+    text,
+    title,
+    type = 'button',
+    ...props
+  }:
+  ButtonProps,
+  ref
+) => {
   const isOnlyIcon = Icon && !children && !text;
 
   const content = []
@@ -306,8 +310,10 @@ ButtonProps) => {
       onClick={onClick}
       title={title}
       type={type}
+      ref={ref}
+      {...props}
     >
       {content}
     </button>
   );
-}
+});

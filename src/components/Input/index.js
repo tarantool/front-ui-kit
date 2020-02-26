@@ -83,15 +83,15 @@ type InputState = {
 const noop = () => {}
 
 export class Input extends React.Component<InputProps, InputState> {
-  inputRef = createRef<HTMLInputElement>();
+  elementRef = createRef<HTMLInputElement>();
 
   state = {
     focused: false
   };
 
   focus = () => {
-    if (this.inputRef && this.inputRef.current) {
-      this.inputRef.current.focus();
+    if (this.elementRef && this.elementRef.current) {
+      this.elementRef.current.focus();
     }
   }
 
@@ -116,7 +116,8 @@ export class Input extends React.Component<InputProps, InputState> {
       title,
       type,
       value,
-      placeholder
+      placeholder,
+      ...props
     } = this.props;
 
     const { focused } = this.state;
@@ -153,7 +154,8 @@ export class Input extends React.Component<InputProps, InputState> {
           value={value}
           placeholder={placeholder}
           readOnly={readOnly}
-          ref={this.inputRef}
+          ref={this.elementRef}
+          {...props}
         />
         {(onClearClick || rightIcon) && (
           <div className={styles.iconWrap}>
