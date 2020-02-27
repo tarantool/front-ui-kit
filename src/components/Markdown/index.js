@@ -55,7 +55,7 @@ const overrides = {
   code: ({ children, className, ...props }) => (
     className && className.indexOf('lang-') === 0
       ? <CodeBlock language={className.substr(5)} text={children} />
-      : <Text {...props} variant='code'>{children}</Text>
+      : <CodeBlock text={children} />
   ),
   ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>
 };
