@@ -55,7 +55,8 @@ export interface BaseModalProps {
   className?: string,
   wide?: boolean,
   onClose?: (?MouseEvent) => void,
-  bgColor?: string,
+  bgColor?: string, // TODO: remove it from cartridge
+  shimClassName?: string
 }
 
 export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Component<T> {
@@ -109,11 +110,12 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
       children,
       className,
       wide,
-      bgColor
+      bgColor,
+      shimClassName
     } = this.props;
 
     return (
-      <div className={styles.shim({ bg: bgColor })} onMouseDown={this.handleOutsideClick}>
+      <div className={cx(styles.shim({ bg: bgColor }), shimClassName)} onMouseDown={this.handleOutsideClick}>
         <div
           className={cx(
             styles.baseModal,
