@@ -7,6 +7,7 @@ export * from './components/ConfirmModal';
 export * from './components/ControlsPanel';
 export * from './components/CopyToClipboard';
 export * from './components/Divider'; // Is it necessary component?
+export * from './components/Dropdown';
 export * from './components/DotIndicator';
 export * from './components/FlatList';
 export * from './components/FormField';
