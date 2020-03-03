@@ -98,7 +98,7 @@ export const withTooltip = (Component: React.ComponentType<any> | string) => cla
       ? wrapperRef.current.elementRef.current
       : wrapperRef.current;
 
-    if ((visible && !prevState.visible) || (prevProps !== this.props) && tooltipElement && wrapperElement) {
+    if (((visible && !prevState.visible) || (prevProps !== this.props)) && tooltipElement && wrapperElement) {
       const bodyWidth = document.body ? document.body.clientWidth : 0;
       const wrapperRect = wrapperElement.getBoundingClientRect();
       const wrapperCenterX = window.scrollX + wrapperRect.left + wrapperElement.offsetWidth / 2;
