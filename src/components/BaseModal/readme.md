@@ -1,4 +1,4 @@
-```
+```js
 import { Button } from '../Button';
 
 initialState = { opened: false };
