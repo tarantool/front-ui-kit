@@ -31,6 +31,7 @@ export * from './components/PopupFooter';
 export * from './components/ProgressBar';
 export * from './components/RadioButton';
 export * from './components/Scrollbar';
+export * from './components/SplashModal';
 export * from './components/Spin';
 export * from './components/Switcher';
 export * from './components/Tabbed';

@@ -9,7 +9,7 @@ export const styles = {
   lockedBody: css`
     overflow: hidden;
   `,
-  shim: ({ bg }: { bg?: string}) => css`
+  shim: css`
     position: fixed;
     z-index: ${zIndex.modal};
     left: 0;
@@ -20,7 +20,7 @@ export const styles = {
     flex-direction: column;
     padding: 40px 16px;
     overflow: auto;
-    background-color: ${bg ? bg : 'rgba(0, 0, 0, 0.65)'};
+    background-color: rgba(0, 0, 0, 0.65);
     justify-content: flex-start;
     align-items: center;
   `,
@@ -55,7 +55,6 @@ export interface BaseModalProps {
   className?: string,
   wide?: boolean,
   onClose?: (?MouseEvent) => void,
-  bgColor?: string, // TODO: remove it from cartridge
   shimClassName?: string
 }
 
@@ -110,12 +109,11 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
       children,
       className,
       wide,
-      bgColor,
       shimClassName
     } = this.props;
 
     return (
-      <div className={cx(styles.shim({ bg: bgColor }), shimClassName)} onMouseDown={this.handleOutsideClick}>
+      <div className={cx(styles.shim, shimClassName)} onMouseDown={this.handleOutsideClick}>
         <div
           className={cx(
             styles.baseModal,
