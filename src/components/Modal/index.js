@@ -67,7 +67,7 @@ export class Modal extends BaseModal<ModalProps> {
     } = this.props;
 
     return (
-      <div className={baseStyles.shim({})} onMouseDown={this.handleOutsideClick}>
+      <div className={baseStyles.shim} onMouseDown={this.handleOutsideClick}>
         <div
           className={cx(
             baseStyles.baseModal,

@@ -5,7 +5,7 @@ import { ControlsPanel } from '../ControlsPanel';
 import { LabeledInput } from '../LabeledInput';
 import { Input } from '../Input';
 
-initialState = { opened: true };
+initialState = { opened: false };
 
 const openModal = () => setState({ opened: true });
 const closeModal = () => setState({ opened: false });
