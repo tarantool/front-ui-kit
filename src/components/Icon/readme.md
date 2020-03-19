@@ -13,7 +13,7 @@ Use `IconChevron` as a reference. Basic concepts:
 
 ### Icons set
 
-```
+```js
 import {
   IconAttach,
   IconBox,
@@ -37,6 +37,7 @@ import {
   IconFile,
   IconFolder,
   IconGear,
+  IconGeoPin,
   IconInfo,
   IconLink,
   IconMore,
@@ -80,6 +81,7 @@ import {
   <IconFolder />
   <IconFolder opened />
   <IconGear />
+  <IconGeoPin />
   <IconInfo />
   <IconLink />
   <IconMore />

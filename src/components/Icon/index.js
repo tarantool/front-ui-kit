@@ -22,6 +22,7 @@ export * from './icons/IconEdit';
 export * from './icons/IconFile';
 export * from './icons/IconFolder';
 export * from './icons/IconGear';
+export * from './icons/IconGeoPin';
 export * from './icons/IconInfo';
 export * from './icons/IconLink';
 export * from './icons/IconMore';
