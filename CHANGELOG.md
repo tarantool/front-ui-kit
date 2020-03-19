@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added IconGeoPin
 
+- Customizable fill color in icons
+
 ## [0.13.1] - 2020-03-04
 
 - Hotfix for modals

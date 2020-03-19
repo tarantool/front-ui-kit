@@ -7,6 +7,7 @@ import image from './download.svg';
 const styles = css`
   width: 12px;
   height: 12px;
+  fill: #F5222D;
 `;
 
 export const IconDownload = ({ className, onClick }: GenericIconProps) => (

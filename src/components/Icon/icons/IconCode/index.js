@@ -1,8 +1,13 @@
 // @flow
 import * as React from 'react';
+import { css, cx } from 'emotion';
 import { Icon, type GenericIconProps } from '../../Icon';
 import image from './code.svg';
 
+const styles = css`
+  fill: #fff;
+`;
+
 export const IconCode = ({ className }: GenericIconProps) => (
-  <Icon className={className} glyph={image} />
+  <Icon className={cx(styles, className)} glyph={image} />
 );

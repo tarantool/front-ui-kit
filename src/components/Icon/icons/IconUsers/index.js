@@ -7,6 +7,7 @@ import image from './users.svg';
 const styles = css`
   width: 14px;
   height: 14px;
+  fill: #fff;
 `;
 
 export const IconUsers = ({ className, ...props }: GenericIconProps) => (

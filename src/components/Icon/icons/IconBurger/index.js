@@ -7,6 +7,8 @@ import image from './burger.svg';
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: #000;
+  fill-opacity: 0.65;
 `;
 
 export const IconBurger = ({ className, onClick }: GenericIconProps) => (

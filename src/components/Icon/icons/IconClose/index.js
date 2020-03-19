@@ -7,6 +7,7 @@ import image from './close.svg';
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: #000;
 `;
 
 export const IconClose = ({ className, onClick }: GenericIconProps) => (
