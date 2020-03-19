@@ -36,7 +36,6 @@ import {
   IconCode,
   IconCreateFile,
   IconCreateFolder,
-  IconCrown,
   IconDelete,
   IconDocumentCode,
   IconDownload,
@@ -67,7 +66,7 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
 
 <>
   <Switcher checked={state.fill} onChange={switchState}>Custom fill</Switcher>
-<div style={{ backgroundColor: 'darkgray' }}>
+  <div style={{ backgroundColor: 'darkgray' }}>
     <IconAttach className={className} />
     <IconBox className={className} />
     <IconBoxNoData className={className} />
@@ -86,7 +85,6 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconCode className={className} />
     <IconCreateFile className={className} />
     <IconCreateFolder className={className} />
-  <IconCrown />
     <IconDelete className={className} />
     <IconDocumentCode className={className} />
     <IconDownload className={className} />
@@ -109,6 +107,6 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconSpinner className={className} />
     <IconUser className={className} />
     <IconUsers className={className} />
-</div>
+  </div>
 </>
 ```

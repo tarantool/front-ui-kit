@@ -14,7 +14,6 @@ export * from './icons/IconCluster';
 export * from './icons/IconCode';
 export * from './icons/IconCreateFile';
 export * from './icons/IconCreateFolder';
-export * from './icons/IconCrown';
 export * from './icons/IconDelete';
 export * from './icons/IconDocumentCode';
 export * from './icons/IconDownload';
