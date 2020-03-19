@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Customizable fill color in icons
 
+- Passing custom icon to UriLabel
+
 ## [0.13.1] - 2020-03-04
 
 - Hotfix for modals
