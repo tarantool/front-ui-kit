@@ -1,18 +1,19 @@
 // @flow
-// TODO: delete?
 import * as React from 'react';
 import { css, cx } from 'emotion';
 import { Icon, type GenericIconProps } from '../../Icon';
-import image from './crown.svg';
+import image from './geo-pin.svg';
 
 const styles = css`
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
+  fill: #F5222D;
 `;
 
-export const IconCrown = ({ className }: GenericIconProps) => (
+export const IconGeoPin = ({ className, ...props }: GenericIconProps) => (
   <Icon
     className={cx(styles, className)}
     glyph={image}
+    {...props}
   />
 );

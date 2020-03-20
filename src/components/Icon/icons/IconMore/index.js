@@ -7,6 +7,8 @@ import image from './more.svg';
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: #F5222D;
+  fill-opacity: 0.65;
 `;
 
 export const IconMore = ({ className }: GenericIconProps) => (

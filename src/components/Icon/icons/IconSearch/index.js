@@ -7,6 +7,8 @@ import image from './search.svg';
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: #000;
+  fill-opacity: 0.25;
 `;
 
 export const IconSearch = ({ className }: GenericIconProps) => (

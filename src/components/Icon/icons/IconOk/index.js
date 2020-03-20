@@ -7,6 +7,7 @@ import image from './ok.svg';
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: #52C41A;
 `;
 
 export const IconOk = ({ className, ...props }: GenericIconProps) => (

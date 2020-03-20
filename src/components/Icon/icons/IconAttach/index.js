@@ -7,6 +7,7 @@ import image from './attach.svg';
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: #000;
 `;
 
 export const IconAttach = ({ className }: GenericIconProps) => (

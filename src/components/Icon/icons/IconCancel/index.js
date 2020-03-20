@@ -7,6 +7,7 @@ import image from './cancel.svg';
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: #F5222D;
 `;
 
 export const IconCancel = ({ className, onClick }: GenericIconProps) => (

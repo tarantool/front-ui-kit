@@ -7,6 +7,7 @@ import image from './empty-box.svg';
 const styles = css`
   width: 48px;
   height: 48px;
+  fill: #F5222D;
 `;
 
 export const IconBox = ({ className }: GenericIconProps) => (

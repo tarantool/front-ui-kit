@@ -10,6 +10,8 @@ const styles = {
     align-items: center;
   `,
   uriIcon: css`
+    width: 14px;
+    height: 14px;
     margin-right: 4px;
   `,
   uri: css`
@@ -22,13 +24,18 @@ const styles = {
 
 type UriLabelProps = {
   className?: string,
+  icon?: React.AbstractComponent<any>,
   title?: string,
   uri?: string,
 };
 
-export const UriLabel = ({ className, title, uri }: UriLabelProps) => (
-  <div className={cx(styles.uriWrap, className)} title={title}>
-    <IconLink className={styles.uriIcon} />
-    <Text className={styles.uri} variant='h5' tag='span'>{uri}</Text>
-  </div>
-);
+export const UriLabel = ({ className, icon, title, uri }: UriLabelProps) => {
+  const Icon = icon || IconLink;
+
+  return (
+    <div className={cx(styles.uriWrap, className)} title={title}>
+      <Icon className={styles.uriIcon} />
+      <Text className={styles.uri} variant='h5' tag='span'>{uri}</Text>
+    </div>
+  );
+}
