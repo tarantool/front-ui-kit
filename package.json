@@ -1,6 +1,6 @@
 {
   "name": "@tarantool.io/ui-kit",
-  "version": "0.13.1",
+  "version": "0.14.0",
   "description": "UI component library for Tarantool",
   "source": "src/index.js",
   "main": "dist/uiKit.js",
