@@ -16,6 +16,9 @@ const styles = {
   `,
   inText: css`
     text-decoration: underline;
+  `,
+  blueTip: css`
+    padding: 20px;
   `
 };
 
@@ -33,11 +36,11 @@ const ButtonWithTooltip = withTooltip(Button);
   <Tooltip className={styles.toLeft} content={largeText}>
     Tooltip on text
   </Tooltip>
-  <Tooltip className={styles.toRight} content={largeText}>
+  <Tooltip className={styles.toRight} content={largeText} popoverClassName={styles.blueTip}>
     <Input placeholder='Text area' />
   </Tooltip>
   <InputWithTooltip tooltipContent={largeText} className={styles.toLeft} placeholder='withTooltip HOC' />
-  <ButtonWithTooltip tooltipContent={largeText}>withTooltip HOC</ButtonWithTooltip>
+  <ButtonWithTooltip tooltipContent={largeText} popoverClassName={styles.blueTip}>withTooltip HOC</ButtonWithTooltip>
 </>
 ```
 

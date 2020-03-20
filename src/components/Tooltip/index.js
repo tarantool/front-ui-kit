@@ -47,7 +47,8 @@ type TooltipProps = {
   children: React.Node,
   className?: string,
   content?: React.Node,
-  tag?: string
+  tag?: string,
+  popoverClassName?: string
 };
 
 type withTooltipProps = {
@@ -56,7 +57,8 @@ type withTooltipProps = {
   onMouseEnter?: (e: MouseEvent) => void,
   onMouseLeave?: (e: MouseEvent) => void,
   onScroll?: (e: MouseEvent) => void,
-  tooltipContent?: React.Node
+  tooltipContent?: React.Node,
+  popoverClassName?: string
 };
 
 type withTooltipState = {
@@ -168,7 +170,7 @@ export const withTooltip = (Component: React.ComponentType<any> | string) => cla
   }
 
   renderTooltip() {
-    const { tooltipContent } = this.props;
+    const { tooltipContent, popoverClassName } = this.props;
     const { cornerPositionX, left, top, topPlacement } = this.state;
 
     return (
@@ -176,7 +178,8 @@ export const withTooltip = (Component: React.ComponentType<any> | string) => cla
         className={cx(
           textStyles.p,
           styles.tooltip({ cornerPositionX }),
-          { [styles.cornerUp]: !topPlacement }
+          { [styles.cornerUp]: !topPlacement },
+          popoverClassName
         )}
         style={{
           left,
@@ -224,13 +227,22 @@ export const withTooltip = (Component: React.ComponentType<any> | string) => cla
   }
 };
 
-export const Tooltip = ({ children, className, content, tag }: TooltipProps) => {
+export const Tooltip = (
+  {
+    children,
+    className,
+    content,
+    tag,
+    popoverClassName
+  }: TooltipProps
+) => {
   const Component = withTooltip(tag || 'div');
 
   return (
     <Component
       className={cx(styles.wrapper, className)}
       tooltipContent={content}
+      popoverClassName={popoverClassName}
     >
       {children}
     </Component>
