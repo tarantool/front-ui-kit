@@ -9,6 +9,7 @@ const styles = {
   modal: css`
     display: flex;
     flex-direction: row;
+    flex-shrink: 0;
     min-height: 250px;
     border-radius: 2px;
     overflow: hidden;
