@@ -23,6 +23,7 @@ import { css } from 'emotion';
 import { Switcher } from '../Switcher';
 import {
   IconAttach,
+  IconAttention,
   IconBox,
   IconBoxNoData,
   IconBucket,
@@ -70,6 +71,7 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
   <Switcher checked={state.fill} onChange={switchState}>Custom fill</Switcher>
   <div style={{ backgroundColor: 'darkgray' }}>
     <IconAttach className={className} />
+    <IconAttention className={className} />
     <IconBox className={className} />
     <IconBoxNoData className={className} />
     <IconBucket className={className} />
