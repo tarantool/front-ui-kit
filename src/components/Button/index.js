@@ -50,7 +50,9 @@ const styles = {
     &:hover,
     &:focus,
     &:active {
+      cursor: default;
       color: rgba(0, 0, 0, 0);
+      box-shadow: none;
     }
 
     & > *,
@@ -109,13 +111,6 @@ const intentStyles = {
     &:hover {
       box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
     }
-
-    &:active {
-      border-color: rgba(217, 217, 217, 0.45);
-      background-color: #fafafa;
-      color: rgba(0, 0, 0, 0.65);
-      box-shadow: none;
-    }
   `,
 
   primary: css`
@@ -126,12 +121,6 @@ const intentStyles = {
     &:focus,
     &:hover {
       box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
-    }
-
-    &:active {
-      border-color: #cf1322;
-      background-color: #cf1322;
-      box-shadow: none;
     }
   `,
 
@@ -146,12 +135,6 @@ const intentStyles = {
       color: #f5222d;
       box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
     }
-
-    &:active {
-      border-color: #cf1322;
-      color: #cf1322;
-      box-shadow: none;
-    }
   `,
 
   iconic: css`
@@ -164,13 +147,6 @@ const intentStyles = {
       border-color: rgba(217, 217, 217, 0.45);
       color: #f5222d;
       box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
-    }
-
-    &:active {
-      border-color: #fafafa;
-      background-color: #fafafa;
-      color: #cf1322;
-      box-shadow: none;
     }
   `,
 
@@ -185,14 +161,52 @@ const intentStyles = {
       color: #f5222d;
       box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
     }
+  `
+};
 
+const intentActiveStyles = {
+  base: css`
+    &:active {
+      border-color: rgba(217, 217, 217, 0.45);
+      background-color: #fafafa;
+      color: rgba(0, 0, 0, 0.65);
+      box-shadow: none;
+    }
+  `,
+
+  primary: css`
+    &:active {
+      border-color: #cf1322;
+      background-color: #cf1322;
+      box-shadow: none;
+    }
+  `,
+
+  secondary: css`
+    &:active {
+      border-color: #cf1322;
+      color: #cf1322;
+      box-shadow: none;
+    }
+  `,
+
+  iconic: css`
+    &:active {
+      border-color: #fafafa;
+      background-color: #fafafa;
+      color: #cf1322;
+      box-shadow: none;
+    }
+  `,
+
+  plain: css`
     &:active {
       border-color: #cf1322;
       color: #cf1322;
       box-shadow: none;
     }
   `
-};
+}
 
 const intentLoadingStyles = {
   base: css`
@@ -302,7 +316,8 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
           [styles.s]: !isOnlyIcon && size === 's',
           [styles.xs]: !isOnlyIcon && size === 'xs',
           [intentLoadingStyles[intent]]: loading && !disabled,
-          [styles.loading]: loading && !disabled
+          [styles.loading]: loading && !disabled,
+          [intentActiveStyles[intent]]: !loading && !disabled
         },
         className
       )}
