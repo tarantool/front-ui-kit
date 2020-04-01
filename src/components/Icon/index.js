@@ -9,6 +9,8 @@ export * from './icons/IconCancel';
 export * from './icons/IconCheckbox';
 export * from './icons/IconChevron';
 export * from './icons/IconChip';
+export * from './icons/IconChipWarning';
+export * from './icons/IconChipDanger';
 export * from './icons/IconClose';
 export * from './icons/IconCluster';
 export * from './icons/IconCode';
