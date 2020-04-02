@@ -31,6 +31,8 @@ import {
   IconCheckbox,
   IconChevron,
   IconChip,
+  IconChipWarning,
+  IconChipDanger,
   IconClose,
   IconCluster,
   IconCode,
@@ -80,6 +82,8 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconChevron direction='left' className={className} />
     <IconChevron direction='right' className={className} />
     <IconChip className={className} />
+    <IconChipWarning className={className} />
+    <IconChipDanger className={className} />
     <IconClose className={className} />
     <IconCluster className={className} />
     <IconCode className={className} />
