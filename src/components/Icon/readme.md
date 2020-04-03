@@ -39,6 +39,9 @@ import {
   IconCode,
   IconCreateFile,
   IconCreateFolder,
+  IconWindowDead,
+  IconWindowNoNetwork,
+  IconWindowShocked,
   IconDelete,
   IconDocumentCode,
   IconDownload,
@@ -93,6 +96,9 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconCode className={className} />
     <IconCreateFile className={className} />
     <IconCreateFolder className={className} />
+    <IconWindowDead className={className} />
+    <IconWindowNoNetwork className={className} />
+    <IconWindowShocked className={className} />
     <IconDelete className={className} />
     <IconDocumentCode className={className} />
     <IconDownload className={className} />
