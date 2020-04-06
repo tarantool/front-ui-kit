@@ -26,19 +26,13 @@ import { NonIdealState, NonIdealStateAction } from './index';
     onActionClick={console.log}
   />
 
-  <NonIdealStateAction
+
+  <NonIdealState
+    isError
     icon={IconWindowDead}
-    title={(
-      <div>
-        <h3 style={{
-          textTransform: 'uppercase',
-          textAlign: 'center'
-        }}>Artificial error</h3>
-        <p>An error occured and your request couldn't be complited</p>
-      </div>
-    )}
-    actionText='Details'
-    onActionClick={console.log}
+    title='Critical problem'
+    description={'Sorry, the page you\'re looking for cannot be accessed'}
   />
+
 </>
 ```

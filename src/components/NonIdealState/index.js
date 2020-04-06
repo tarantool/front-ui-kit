@@ -14,24 +14,35 @@ const styles = {
     padding: 16px;
   `,
   icon: css`
-    width: 36px;
-    height: 36px;
-    fill: rgba(0, 0, 0, 0.45);
+    width: 200px;
+    height: 182px;
+    fill: rgba(0, 0, 0, 0.25);
   `,
   iconMargin: css`
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   `,
-  title: css`
+  description: css`
     margin-bottom: 16px;
     color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+  `,
+  title: css`
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+  `,
+  error: css`
+    color: #F5222D;
   `
 };
 
 type NonIdealStateProps = {
-  children: React.Node,
+  children?: React.Node,
   className?: string,
   icon: ComponentType<any>,
-  title: string,
+  title?: string,
+  description?: string,
+  isError?: bool,
 };
 
 export const NonIdealState = (
@@ -39,22 +50,27 @@ export const NonIdealState = (
     children,
     className,
     icon: Icon,
-    title
+    title,
+    description,
+    isError
   }: NonIdealStateProps
 ) => (
   <div className={cx(styles.wrap, className)}>
     {Icon
-      ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title })} />
+      ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description })} />
       : null
     }
-    <Text className={styles.title}>{title}</Text>
+    {title && <Text variant='h2' className={cx(styles.title, { [styles.error]: isError })}>{title}</Text>}
+    {description && <Text className={styles.description}>{description}</Text>}
+
     {children}
   </div>
 );
 
+
 type NonIdealStateActionProps = {
   actionText: string,
-  children: React.Node,
+  children?: React.Node,
   className?: string,
   icon: ComponentType<any>,
   onActionClick: (e: MouseEvent) => void,
