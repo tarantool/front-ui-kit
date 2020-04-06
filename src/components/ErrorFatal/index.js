@@ -1,22 +1,24 @@
 // @flow
 import * as React from 'react';
 import { NonIdealState } from '../NonIdealState';
-import { IconWindowNoNetwork } from '../Icon';
+import { IconWindowDead } from '../Icon';
 
 
 type Props = {
+  title: string,
   description: string,
 };
 
-export const ErrorNoNetwork = (
+export const ErrorFatal = (
   {
     description,
+    title,
   }: Props
 ) => (
   <NonIdealState
     isError
-    icon={IconWindowNoNetwork}
-    title='Network problem'
+    icon={IconWindowDead}
+    title={title}
     description={description}
   />
 );
