@@ -5,6 +5,11 @@ In first case modal will fit to content.
 But if you put large content in modal it might need scrollbars in some cases.
 To enable scrollbars in body, you should set `fit` prop and `max-height` for Modal and use PopupBody with `scrollable` prop. In this mode modal won't fit to content size.
 
+### Forms
+
+To create popup forms easy way use prop `onSubmit` and pass button with `type='submit'` to `footerControls`.
+Additional `<form>` don't need.
+
 ```js
 import { css } from 'emotion';
 import { Button } from '../Button';
@@ -12,6 +17,8 @@ import { Tabbed } from '../Tabbed';
 import { ControlsPanel } from '../ControlsPanel';
 import { PopupBody } from '../PopupBody';
 import { PopupFooter } from '../PopupFooter';
+import { Input } from '../Input';
+import { LabeledInput } from '../LabeledInput';
 
 initialState = { opened: null };
 
@@ -52,7 +59,8 @@ const tabs = [
     controls={[
       <Button onClick={() => openModal('simple')} text='simple Modal' />,
       <Button onClick={() => openModal('wide')} text='Wide Modal' />,
-      <Button onClick={() => openModal('tabbed')} text='Wide Modal with scrollable body' />
+      <Button onClick={() => openModal('tabbed')} text='Wide Modal with scrollable body' />,
+      <Button onClick={() => openModal('form')} text='Modal with form' />
     ]}
   />
   <Modal
@@ -96,6 +104,20 @@ const tabs = [
         <Button text='Decline' />
       ]}
     />
+  </Modal>
+  <Modal
+    title='Configure server'
+    visible={state.opened === 'form'}
+    onClose={closeModal}
+    onSubmit={() => console.log('submit')}
+    footerControls={[
+      <Button intent='primary' text='Accept' type='submit' />,
+      <Button text='Decline' onClick={closeModal} />
+    ]}
+  >
+    <LabeledInput label='First input'>
+      <Input />
+    </LabeledInput>
   </Modal>
 </>
 ```

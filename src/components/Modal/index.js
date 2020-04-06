@@ -49,6 +49,7 @@ export interface ModalProps extends BaseModalProps {
   footerControls?: React.Node[],
   title: string,
   loading?:? boolean,
+  onSubmit?: (e: Event) => ?boolean,
   fit?: boolean
 };
 
@@ -61,14 +62,17 @@ export class Modal extends BaseModal<ModalProps> {
       footerControls,
       title,
       onClose,
+      onSubmit,
       loading,
       fit,
       wide
     } = this.props;
 
+    const Component = onSubmit ? 'form' : 'div';
+
     return (
       <div className={baseStyles.shim} onMouseDown={this.handleOutsideClick}>
-        <div
+        <Component
           className={cx(
             baseStyles.baseModal,
             styles.modal,
@@ -81,6 +85,7 @@ export class Modal extends BaseModal<ModalProps> {
           ref={this.modalRef}
           tabIndex={0}
           onKeyDown={this.handleEscapePress}
+          onSubmit={onSubmit}
         >
           <Text className={styles.title} variant='h2'>{title}</Text>
           {onClose && <IconClose className={styles.closeIcon} onClick={onClose} />}
@@ -95,7 +100,7 @@ export class Modal extends BaseModal<ModalProps> {
             onFocus={this.focusFirstInteractiveElement}
             tabIndex='0'
           />
-        </div>
+        </Component>
       </div>
     );
   }
