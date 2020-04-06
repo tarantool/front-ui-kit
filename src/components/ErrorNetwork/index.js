@@ -5,18 +5,20 @@ import { IconWindowNoNetwork } from '../Icon';
 
 
 type Props = {
+  title?: string,
   description: string,
 };
 
-export const ErrorNoNetwork = (
+export const ErrorNetwork = (
   {
+    title,
     description,
   }: Props
 ) => (
   <NonIdealState
     isError
     icon={IconWindowNoNetwork}
-    title='Network problem'
+    title={title || 'Network problem'}
     description={description}
   />
 );

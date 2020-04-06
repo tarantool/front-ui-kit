@@ -1,8 +1,8 @@
 ```js
-import { ErrorNoNetwork } from './index';
+import { ErrorNetwork } from './index';
 
 <>
-  <ErrorNoNetwork
+  <ErrorNetwork
     description={<>
       Sorry, the page you're looking for cannot be accessed.
       <br />

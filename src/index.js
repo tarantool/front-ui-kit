@@ -10,7 +10,7 @@ export * from './components/Dropdown';
 export * from './components/DotIndicator';
 export * from './components/Error';
 export * from './components/ErrorFatal';
-export * from './components/ErrorNoNetwork';
+export * from './components/ErrorNetwork';
 export * from './components/FlatList';
 export * from './components/FormField';
 export * from './components/HealthStatus';
