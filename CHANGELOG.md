@@ -12,8 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - IconAttention
   - IconChipWarning
   - IconChipDanger
+  - IconEyeClosed
+  - IconEyeOpened
 
 - Added `onSubmit` prop to Modal component
+
+- Added InputPassword component
 
 ## [0.14.0] - 2020-03-20
 

@@ -51,7 +51,7 @@ const styles = {
   `
 };
 
-type InputProps = {
+export type InputProps = {
   autoComplete?: 'on' | 'off',
   autoFocus?: boolean,
   className?: string,
