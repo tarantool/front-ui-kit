@@ -43,6 +43,8 @@ import {
   IconDocumentCode,
   IconDownload,
   IconEdit,
+  IconEyeClosed,
+  IconEyeOpened,
   IconFile,
   IconFolder,
   IconGear,
@@ -95,6 +97,8 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconDocumentCode className={className} />
     <IconDownload className={className} />
     <IconEdit className={className} />
+    <IconEyeClosed className={className} />
+    <IconEyeOpened className={className} />
     <IconFile className={className} />
     <IconFolder className={className} />
     <IconFolder opened className={className} />

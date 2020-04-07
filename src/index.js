@@ -13,6 +13,7 @@ export * from './components/FormField';
 export * from './components/HealthStatus';
 export * from './components/Icon';
 export * from './components/Input';
+export * from './components/InputPassword';
 export * from './components/InputGroup';
 export * from './components/LabeledInput';
 export * from './components/LeaderFlag';

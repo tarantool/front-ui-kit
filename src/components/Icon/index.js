@@ -21,6 +21,8 @@ export * from './icons/IconDelete';
 export * from './icons/IconDocumentCode';
 export * from './icons/IconDownload';
 export * from './icons/IconEdit';
+export * from './icons/IconEyeClosed';
+export * from './icons/IconEyeOpened';
 export * from './icons/IconFile';
 export * from './icons/IconFolder';
 export * from './icons/IconGear';
