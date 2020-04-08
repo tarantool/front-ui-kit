@@ -29,6 +29,12 @@ const styles = {
   `,
   topRightControls: css`
     margin-left: auto;
+  `,
+  errorMessage: css`
+    display: block;
+    height: 20px;
+    color: #F5222D;
+    position: absolute;
   `
 };
 
@@ -36,20 +42,20 @@ type LabeledInputProps = {
   children?: React.Node,
   className?: string,
   info?: string,
-  itemClassName?: string,
   label: string,
   subTitle?: string | React.Node,
-  topRightControls?: React.Node[]
+  topRightControls?: React.Node[],
+  errorMessage?: string,
 };
 
 export const LabeledInput = ({
   children,
   topRightControls,
-  itemClassName,
   className,
   subTitle,
   info,
-  label
+  label,
+  errorMessage
 }:
 LabeledInputProps) => (
   <label className={cx(styles.wrap, className)}>
@@ -65,5 +71,6 @@ LabeledInputProps) => (
       {topRightControls && <ControlsPanel className={styles.topRightControls} controls={topRightControls} />}
     </div>
     {children}
+    <Text variant='p' className={styles.errorMessage}>{errorMessage}</Text>
   </label>
 );
