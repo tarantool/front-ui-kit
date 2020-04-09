@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [0.15.1] - 2020-04-09
 
 - Loading Button state looks more disabled than before
 
@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `onSubmit` prop to Modal component
 
 - Added InputPassword component
+
+- Added collection of svg images
+
+- Added group of SplashError components
 
 ## [0.14.0] - 2020-03-20
 
