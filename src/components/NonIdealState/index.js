@@ -14,24 +14,36 @@ const styles = {
     padding: 16px;
   `,
   icon: css`
-    width: 36px;
-    height: 36px;
-    fill: rgba(0, 0, 0, 0.45);
+    width: 200px;
+    height: 182px;
+    fill: rgba(0, 0, 0, 0.25);
   `,
   iconMargin: css`
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   `,
-  title: css`
+  description: css`
     margin-bottom: 16px;
     color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+  `,
+  title: css`
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.65);
+  `,
+  error: css`
+    color: #F5222D;
   `
 };
 
 type NonIdealStateProps = {
-  children: React.Node,
+  children?: React.Node,
   className?: string,
-  icon: ComponentType<any>,
-  title: string,
+  icon?: ComponentType<any>, // deprecated
+  image?: Glyph, // will be reqired
+  title?: string,
+  description?: string,
+  isError?: bool,
 };
 
 export const NonIdealState = (
@@ -39,24 +51,43 @@ export const NonIdealState = (
     children,
     className,
     icon: Icon,
-    title
+    image,
+    title,
+    description,
+    isError
   }: NonIdealStateProps
 ) => (
   <div className={cx(styles.wrap, className)}>
-    {Icon
-      ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title })} />
+    {image
+      ? (
+        <svg
+          viewBox={image.viewBox}
+          className={cx(styles.icon, { [styles.iconMargin]: title || description })}
+        >
+          <use xlinkHref={`#${image.id}`}/>
+        </svg>
+      )
+      : null}
+    {Icon && !image
+      ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description })} />
       : null
     }
-    <Text className={styles.title}>{title}</Text>
+    {title && <Text variant='h2' className={cx(styles.title, { [styles.error]: isError })}>{title}</Text>}
+    {description && <Text className={styles.description}>{description}</Text>}
+
     {children}
   </div>
 );
 
+
 type NonIdealStateActionProps = {
   actionText: string,
-  children: React.Node,
+  children?: React.Node,
   className?: string,
-  icon: ComponentType<any>,
+  description?: string,
+  icon?: ComponentType<any>, // deprecated
+  image?: Glyph, // will be reqired
+  isError?: bool,
   onActionClick: (e: MouseEvent) => void,
   title: string,
 };
@@ -65,14 +96,20 @@ export const NonIdealStateAction = (
   {
     actionText,
     className,
+    description,
     icon,
+    image,
+    isError,
     onActionClick,
     title
   }: NonIdealStateActionProps
 ) => (
   <NonIdealState
     className={className}
+    description={description}
     icon={icon}
+    image={image}
+    isError={isError}
     title={title}
   >
     <Button autoFocus text={actionText} onClick={onActionClick} />
