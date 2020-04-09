@@ -1,11 +1,10 @@
 ```js
 import { Button } from '../Button';
+import { IconSpinner } from '../Icon';
 import {
-  IconDocumentCode,
-  IconSpinner,
-  IconCancel,
-  IconWindowDead,
-} from '../Icon';
+  splashGenericErrorSvg,
+  splashSelectFileSvg
+} from '../../images';
 import { NonIdealState, NonIdealStateAction } from './index';
 
 <>
@@ -15,24 +14,17 @@ import { NonIdealState, NonIdealStateAction } from './index';
   />
 
   <NonIdealState
-    icon={IconDocumentCode}
+    image={splashSelectFileSvg}
     title='Please select a file'
   />
 
   <NonIdealStateAction
-    icon={IconCancel}
+    image={splashGenericErrorSvg}
     title='Error loading component'
+    description='Try to reload, please.'
+    isError
     actionText='Retry'
     onActionClick={console.log}
   />
-
-
-  <NonIdealState
-    isError
-    icon={IconWindowDead}
-    title='Critical problem'
-    description={'Sorry, the page you\'re looking for cannot be accessed'}
-  />
-
 </>
 ```

@@ -1,23 +1,23 @@
 // @flow
 import * as React from 'react';
 import { NonIdealState } from '../NonIdealState';
-import { IconWindowNoNetwork } from '../Icon';
+import image from '../../images/window-no-network.svg';
 
 
 type Props = {
   title?: string,
-  description: string,
+  description: string
 };
 
-export const ErrorNetwork = (
+export const SplashErrorNetwork = (
   {
     title,
-    description,
+    description
   }: Props
 ) => (
   <NonIdealState
     isError
-    icon={IconWindowNoNetwork}
+    image={image}
     title={title || 'Network problem'}
     description={description}
   />

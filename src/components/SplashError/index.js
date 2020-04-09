@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { NonIdealState } from '../NonIdealState';
-import { IconWindowDead } from '../Icon';
+import image from '../../images/window-shocked.svg';
 
 
 type Props = {
@@ -9,15 +9,15 @@ type Props = {
   description: string,
 };
 
-export const ErrorFatal = (
+export const SplashError = (
   {
     description,
-    title,
+    title
   }: Props
 ) => (
   <NonIdealState
     isError
-    icon={IconWindowDead}
+    image={image}
     title={title}
     description={description}
   />

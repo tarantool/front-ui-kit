@@ -39,7 +39,8 @@ const styles = {
 type NonIdealStateProps = {
   children?: React.Node,
   className?: string,
-  icon: ComponentType<any>,
+  icon?: ComponentType<any>, // deprecated
+  image?: Glyph, // will be reqired
   title?: string,
   description?: string,
   isError?: bool,
@@ -50,13 +51,24 @@ export const NonIdealState = (
     children,
     className,
     icon: Icon,
+    image,
     title,
     description,
     isError
   }: NonIdealStateProps
 ) => (
   <div className={cx(styles.wrap, className)}>
-    {Icon
+    {image
+      ? (
+        <svg
+          viewBox={image.viewBox}
+          className={cx(styles.icon, { [styles.iconMargin]: title || description })}
+        >
+          <use xlinkHref={`#${image.id}`}/>
+        </svg>
+      )
+      : null}
+    {Icon && !image
       ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description })} />
       : null
     }
@@ -72,7 +84,10 @@ type NonIdealStateActionProps = {
   actionText: string,
   children?: React.Node,
   className?: string,
-  icon: ComponentType<any>,
+  description?: string,
+  icon?: ComponentType<any>, // deprecated
+  image?: Glyph, // will be reqired
+  isError?: bool,
   onActionClick: (e: MouseEvent) => void,
   title: string,
 };
@@ -81,14 +96,20 @@ export const NonIdealStateAction = (
   {
     actionText,
     className,
+    description,
     icon,
+    image,
+    isError,
     onActionClick,
     title
   }: NonIdealStateActionProps
 ) => (
   <NonIdealState
     className={className}
+    description={description}
     icon={icon}
+    image={image}
+    isError={isError}
     title={title}
   >
     <Button autoFocus text={actionText} onClick={onActionClick} />
