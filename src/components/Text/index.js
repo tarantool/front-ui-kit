@@ -47,7 +47,6 @@ export const textStyles = {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     line-height: 22px;
-    letter-spacing: 0.24px;
     color: #000000;
   `,
   p: css`
@@ -55,7 +54,6 @@ export const textStyles = {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     line-height: 20px;
-    letter-spacing: 0.28px;
     color: #000000;
   `,
   code: css`
