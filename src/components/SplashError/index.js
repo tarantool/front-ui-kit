@@ -1,15 +1,22 @@
 // @flow
 import * as React from 'react';
 import { NonIdealState, NonIdealStateAction } from '../NonIdealState';
-import image from '../../images/window-shocked.svg';
+import defaultImage from '../../images/window-shocked.svg';
 import { Button } from '../Button'
 import { Modal } from '../Modal';
 
+
+//@TODO: refine, move for common use
+type Glyph = {
+  viewBox: string,
+  id: string
+}
 
 type Props = {
   title: string,
   description: string,
   details?: React.Node,
+  image?: Glyph,
   children?: React.Node,
 };
 
@@ -18,6 +25,7 @@ export const SplashError = (
     description,
     title,
     details,
+    image,
     children
   }: Props
 ) => {
@@ -26,7 +34,7 @@ export const SplashError = (
 
   const commonProps = {
     isError: true,
-    image,
+    image: image || defaultImage,
     title,
     description,
     children

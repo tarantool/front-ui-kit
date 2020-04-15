@@ -1,24 +1,21 @@
 // @flow
 import * as React from 'react';
-import { NonIdealState } from '../NonIdealState';
+import { SplashError } from '../SplashError';
 import image from '../../images/window-dead.svg';
 
 
 type Props = {
   title: string,
   description: string,
+  details?: React.Node,
+  children?: React.Node,
 };
 
 export const SplashErrorFatal = (
-  {
-    description,
-    title
-  }: Props
+  props: Props
 ) => (
-  <NonIdealState
-    isError
+  <SplashError
+    {...props}
     image={image}
-    title={title}
-    description={description}
   />
 );
