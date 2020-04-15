@@ -37,6 +37,7 @@ export * from './components/RadioButton';
 export * from './components/Scrollbar';
 export * from './components/SplashModal';
 export * from './components/Spin';
+export * from './components/SVGImage';
 export * from './components/Switcher';
 export * from './components/Tabbed';
 export * from './components/Tag';
