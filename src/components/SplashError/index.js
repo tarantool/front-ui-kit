@@ -12,13 +12,17 @@ type Glyph = {
   id: string
 }
 
-type Props = {
+export type CommonSplashErrorProps = {
   title: string,
   description: string,
   details?: React.Node,
-  image?: Glyph,
   children?: React.Node,
 };
+
+type Props = CommonSplashErrorProps & {
+  image?: Glyph,
+}
+
 
 export const SplashError = (
   {
