@@ -47,7 +47,7 @@ export const SplashError = (
           <Button intent={'primary'} onClick={onCloseClick}>Close</Button>
         ]}
       >
-        {details}
+        {!!details && details}
       </Modal>
     }
 
