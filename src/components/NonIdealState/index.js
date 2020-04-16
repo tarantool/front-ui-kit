@@ -4,6 +4,7 @@ import type { ComponentType } from 'react'
 import { css, cx } from 'emotion';
 import { Button } from '../Button';
 import { Text } from '../Text';
+import { SVGImage } from '../SVGImage';
 
 const styles = {
   wrap: css`
@@ -60,12 +61,10 @@ export const NonIdealState = (
   <div className={cx(styles.wrap, className)}>
     {image
       ? (
-        <svg
-          viewBox={image.viewBox}
-          className={cx(styles.icon, { [styles.iconMargin]: title || description })}
-        >
-          <use xlinkHref={`#${image.id}`}/>
-        </svg>
+        <SVGImage
+          glyph={image}
+          className={cx({ [styles.iconMargin]: title || description })}
+        />
       )
       : null}
     {Icon && !image

@@ -3,6 +3,7 @@ import * as React from 'react';
 import { css, cx } from 'emotion';
 import greenFlag from './flag.svg';
 import redFlag from './flag-red.svg';
+import { SVGImage } from '../SVGImage';
 
 const styles = {
   wrap: css`
@@ -20,8 +21,6 @@ const styles = {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 14px;
-    height: 59px;
   `
 };
 
@@ -35,12 +34,10 @@ export const LeaderFlag = ({ className, fail, title }: LeaderFlagProps) => {
   const glyph = fail ? redFlag : greenFlag;
   return (
     <div className={cx(styles.wrap, className)} title={title}>
-      <svg
-        viewBox={glyph.viewBox}
+      <SVGImage
+        glyph={glyph}
         className={styles.flag}
-      >
-        <use xlinkHref={`#${glyph.id}`}/>
-      </svg>
+      />
     </div>
   )
 };
