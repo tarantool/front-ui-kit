@@ -4,6 +4,7 @@ import { css, cx } from 'emotion';
 import { BaseModal, BaseModalProps } from '../BaseModal';
 import { Text } from '../Text';
 import logo from './images/tarantool-logo.svg';
+import { SVGImage } from '../SVGImage';
 
 const styles = {
   modal: css`
@@ -68,9 +69,7 @@ export const SplashModal = (
     {...props}
   >
     <div className={styles.logoContainer}>
-      <svg viewBox={logo.viewBox} className={styles.logo}>
-        <use xlinkHref={`#${logo.id}`}/>
-      </svg>
+      <SVGImage glyph={logo} className={styles.logo} />
     </div>
     <div className={styles.formContainer}>
       {title && (<Text variant={'h1'}>{title}</Text>)}

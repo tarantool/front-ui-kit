@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import { css, cx } from 'emotion';
+import { SVGImage } from '../SVGImage';
 // import { iconSize } from '../../variables';
 const iconSize = '14px';
 
@@ -84,25 +85,20 @@ export const Icon = ({
   onClick,
   stroke
 }:
-IconProps) => {
-
-  return (
-    <svg
-      viewBox={glyph.viewBox}
-      onClick={onClick}
-      onMouseLeave={onMouseLeave}
-      onMouseEnter={onMouseEnter}
-      className={cx(
-        styles.icon,
-        {
-          [styles.stroke]: stroke,
-          [styles.clickable]: !!onClick,
-          [styles.active]: active
-        },
-        className
-      )}
-    >
-      <use xlinkHref={`#${glyph.id}`}/>
-    </svg>
-  );
-};
+IconProps) => (
+  <SVGImage
+    glyph={glyph}
+    onClick={onClick}
+    onMouseLeave={onMouseLeave}
+    onMouseEnter={onMouseEnter}
+    className={cx(
+      styles.icon,
+      {
+        [styles.stroke]: stroke,
+        [styles.clickable]: !!onClick,
+        [styles.active]: active
+      },
+      className
+    )}
+  />
+);
