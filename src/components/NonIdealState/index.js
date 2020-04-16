@@ -40,7 +40,7 @@ type NonIdealStateProps = {
   children?: React.Node,
   className?: string,
   icon?: ComponentType<any>, // deprecated
-  image?: Glyph, // will be reqired
+  image?: SVGGlyph, // will be reqired
   title?: string,
   description?: string,
   isError?: bool,
@@ -86,7 +86,7 @@ type NonIdealStateActionProps = {
   className?: string,
   description?: string,
   icon?: ComponentType<any>, // deprecated
-  image?: Glyph, // will be reqired
+  image?: SVGGlyph, // will be reqired
   isError?: bool,
   onActionClick: (e: MouseEvent) => void,
   title: string,

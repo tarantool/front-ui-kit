@@ -5,21 +5,36 @@ import { withTooltip } from '../Tooltip';
 import { IconNewWindow } from '../Icon';
 
 export const copyToClipboard = (str: string) => {
+  if (!document.body) {
+    return;
+  }
+  // for Flow: prevent the refinement from invalidating
+  const body = document.body;
+
   const el = document.createElement('textarea');
   el.value = str;
   el.setAttribute('readonly', '');
   el.style.position = 'absolute';
   el.style.left = '-9999px';
-  document.body.appendChild(el);
-  const selected = document.getSelection().rangeCount > 0
-    ? document.getSelection().getRangeAt(0)
+  body.appendChild(el);
+
+  const currentSelection = document.getSelection();
+  const selected = (currentSelection && currentSelection.rangeCount > 0)
+    ? currentSelection.getRangeAt(0)
     : false;
   el.select();
   document.execCommand('copy');
-  document.body.removeChild(el);
+  body.removeChild(el);
   if (selected) {
-    document.getSelection().removeAllRanges();
-    document.getSelection().addRange(selected);
+    let currentSelection = document.getSelection();
+    if (currentSelection) {
+      currentSelection.removeAllRanges();
+    }
+
+    currentSelection = document.getSelection();
+    if (currentSelection) {
+      currentSelection.addRange(selected);
+    }
   }
 };
 
