@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { NonIdealState, NonIdealStateAction } from '../NonIdealState';
 import defaultImage from '../../images/window-shocked.svg';
-import { type Glyph } from '../../SVGFlowStub';
 import { Button } from '../Button'
 import { Modal } from '../Modal';
 
@@ -15,7 +14,7 @@ export type CommonSplashErrorProps = {
 };
 
 type Props = CommonSplashErrorProps & {
-  image?: Glyph,
+  image?: SVGGlyph,
 }
 
 

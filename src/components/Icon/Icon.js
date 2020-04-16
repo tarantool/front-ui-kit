@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react'
 import { css, cx } from 'emotion';
-import { type Glyph } from '../../SVGFlowStub';
 // import { iconSize } from '../../variables';
 const iconSize = '14px';
 
@@ -61,7 +60,7 @@ const styles = {
 type IconProps = {
   active?: boolean; // Выбраное состояние
   className?: string;
-  glyph: Glyph,
+  glyph: SVGGlyph,
   hasState?: boolean, // Включение состояния: Normal, Hover, Active
   onClick?: (evt: MouseEvent) => void,
   onMouseEnter?: () => void,
