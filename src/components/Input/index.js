@@ -71,7 +71,7 @@ export type InputProps = {
   readOnly?: boolean,
   rightIcon?: React.Node,
   title?: string,
-  type?: 'text' | 'password' | 'email',
+  type?: 'text' | 'password' | 'email' | 'number',
   value?: string,
   placeholder?: string
 };
