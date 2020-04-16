@@ -108,11 +108,11 @@ export class CopyToClipboard extends React.Component<CopyToClipboardProps, CopyT
 
     return (
       <ButtonWithTooltip
+        {...props}
         tooltipContent={clicked ? tooltipContentCopied : tooltipContent}
         icon={IconNewWindow}
         onClick={this.handleClick}
         onMouseLeave={this.resetClickedState}
-        {...props}
       />
     );
   }

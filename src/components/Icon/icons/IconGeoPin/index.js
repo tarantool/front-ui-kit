@@ -12,8 +12,8 @@ const styles = css`
 
 export const IconGeoPin = ({ className, ...props }: GenericIconProps) => (
   <Icon
+    {...props}
     className={cx(styles, className)}
     glyph={image}
-    {...props}
   />
 );

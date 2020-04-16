@@ -27,7 +27,7 @@ const styles = {
       border-radius: 3px;
     }
   `,
-  interactive: (className?: string) => className
+  interactive: (className?: string): string => className
     ? css`
       color: rgba(0, 0, 0, 0.2);
       background-color: transparent;
