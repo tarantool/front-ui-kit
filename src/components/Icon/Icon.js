@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import { css, cx } from 'emotion';
+import { type Glyph } from '../../SVGFlowStub';
 // import { iconSize } from '../../variables';
 const iconSize = '14px';
 

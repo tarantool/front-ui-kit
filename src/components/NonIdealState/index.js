@@ -2,6 +2,7 @@
 import * as React from 'react';
 import type { ComponentType } from 'react'
 import { css, cx } from 'emotion';
+import { type Glyph } from '../../SVGFlowStub';
 import { Button } from '../Button';
 import { Text } from '../Text';
 
