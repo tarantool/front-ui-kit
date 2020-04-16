@@ -71,7 +71,7 @@ export type InputProps = {
   readOnly?: boolean,
   rightIcon?: React.Node,
   title?: string,
-  type?: 'text' | 'password' | 'email',
+  type?: 'text' | 'password' | 'email' | 'number',
   value?: string,
   placeholder?: string
 };
@@ -136,6 +136,7 @@ export class Input extends React.Component<InputProps, InputState> {
         title={title}
       >
         <input
+          {...props}
           autoFocus={autoFocus}
           autoComplete={autoComplete}
           className={cx(styles.input, { [styles.inputWithIcon]: rightIcon || onClearClick })}
@@ -155,7 +156,6 @@ export class Input extends React.Component<InputProps, InputState> {
           placeholder={placeholder}
           readOnly={readOnly}
           ref={this.elementRef}
-          {...props}
         />
         {(onClearClick || rightIcon) && (
           <div className={styles.iconWrap}>

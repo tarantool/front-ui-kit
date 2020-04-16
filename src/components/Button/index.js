@@ -305,6 +305,7 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
 
   return (
     <button
+      {...props}
       autoFocus={autoFocus}
       className={cx(
         styles.button,
@@ -326,7 +327,6 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
       title={title}
       type={type}
       ref={ref}
-      {...props}
     >
       {content}
     </button>

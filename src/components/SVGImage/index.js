@@ -16,7 +16,7 @@ export const SVGImage = (
   }: SVGImageProps
 ) => {
   const [width, height] = (glyph.viewBox || '').split(' ').slice(2);
-  const sizingClassName = typeof width === 'number' && typeof height === 'number'
+  const sizingClassName = width && height
     ? css`
       width: ${width}px;
       height: ${height}px;

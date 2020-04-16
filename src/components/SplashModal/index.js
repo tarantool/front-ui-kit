@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import { BaseModal, BaseModalProps } from '../BaseModal';
+import { BaseModal, type BaseModalProps } from '../BaseModal';
 import { Text } from '../Text';
 import logo from './images/tarantool-logo.svg';
 import { SVGImage } from '../SVGImage';

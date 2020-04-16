@@ -29,6 +29,7 @@ export const IconChevron = (props: IconChevronProps) => {
 
   return (
     <Icon
+      {...otherProps}
       className={cx(
         styles.icon,
         { [styles.down]: direction === 'down' },
@@ -38,7 +39,6 @@ export const IconChevron = (props: IconChevronProps) => {
       )}
       glyph={image}
       hasState={true}
-      {...otherProps}
     />
   );
 };

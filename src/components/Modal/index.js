@@ -4,7 +4,7 @@ import { css, cx } from 'emotion';
 import { IconClose } from '../Icon';
 import { PopupFooter } from '../PopupFooter';
 import { Text } from '../Text';
-import { BaseModalProps, BaseModal, styles as baseStyles } from '../BaseModal';
+import { type BaseModalProps, BaseModal, styles as baseStyles } from '../BaseModal';
 
 const styles = {
   modal: css`

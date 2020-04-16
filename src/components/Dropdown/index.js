@@ -46,7 +46,7 @@ type DropdownItemProps = {
   children?: React.Node,
   color?: string,
   className?: string,
-  onClick?: (MouseEvent) => void
+  onClick?: (e: MouseEvent) => void
 }
 
 type DropdownProps = {
@@ -124,11 +124,12 @@ export class Dropdown extends React.Component<DropdownProps, DropdownState> {
 
   renderPopover = () => {
     const { popoverClassName } = this.props;
+    const { body } = document;
     const wrapElement = this.wrapRef && this.wrapRef.current;
     let toLeft = false;
 
-    if (wrapElement) {
-      toLeft = wrapElement.getBoundingClientRect().left > (document.body.clientWidth / 2);
+    if (wrapElement && body) {
+      toLeft = wrapElement.getBoundingClientRect().left > (body.clientWidth / 2);
     }
 
     return (
