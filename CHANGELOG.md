@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Update letter spacing in Text styles
 
+- Fixed flow typing for SVG images and some other cases
+
+- Added details prop to SplashError
+
 ## [0.15.1] - 2020-04-09
 
 - Loading Button state looks more disabled than before

@@ -4,6 +4,7 @@ import { NonIdealState, NonIdealStateAction } from '../NonIdealState';
 import defaultImage from '../../images/window-shocked.svg';
 import { Button } from '../Button'
 import { Modal } from '../Modal';
+import { Text } from '../Text';
 
 
 export type CommonSplashErrorProps = {
@@ -46,7 +47,7 @@ export const SplashError = (
           <Button intent={'primary'} onClick={onCloseClick}>Close</Button>
         ]}
       >
-        {!!details && details}
+        {!!details && <Text tag='div'>{details}</Text>}
       </Modal>
     }
 
