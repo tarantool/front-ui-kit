@@ -10,7 +10,7 @@ import { ControlsPanel } from '../ControlsPanel';
 const styles = {
   wrap: css`
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
   `,
   tooltip: css`
     display: inline-block;
@@ -31,10 +31,12 @@ const styles = {
   topRightControls: css`
     margin-left: auto;
   `,
+  input: css`
+    margin-bottom: 4px;
+  `,
   message: css`
     display: block;
-    height: 20px;
-    position: absolute;
+    min-height: 20px;
   `,
   errorMessage: css`
     color: #F5222D;
@@ -42,7 +44,7 @@ const styles = {
 };
 
 type LabeledInputProps = {
-  inputComponent?: React.Node,
+  inputComponent?: React.AbstractComponent<any>,
   inputClassName?: string,
   className?: string,
   info?: string,
@@ -69,16 +71,20 @@ LabeledInputProps) => (
   <label className={cx(styles.wrap, className)}>
     <div className={styles.headingPane}>
       <Text className={styles.label} variant='h4' tag='span'>{label}:
-        {info && (
+        {!!info && (
           <Tooltip className={styles.tooltip} content={info}>
             <IconInfo />
           </Tooltip>
         )}
       </Text>
-      {subTitle && <Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>}
-      {topRightControls && <ControlsPanel className={styles.topRightControls} controls={topRightControls} />}
+      {!!subTitle && (
+        <Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>
+      )}
+      {topRightControls && (
+        <ControlsPanel className={styles.topRightControls} controls={topRightControls} />
+      )}
     </div>
-    <InputComponent error={error} className={inputClassName} {...restProps} />
+    <InputComponent {...restProps} error={error} className={cx(styles.input, inputClassName)} />
     <Text variant='p' className={cx(styles.message, { [styles.errorMessage]: error })}>
       {message}
     </Text>

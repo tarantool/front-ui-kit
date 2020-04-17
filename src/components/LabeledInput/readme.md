@@ -1,3 +1,5 @@
+To keep good looking UI, pass to `message` text which can fit at one row.
+
 ```js
 import { InputPassword } from '../InputPassword';
 
@@ -20,7 +22,6 @@ handleChange = e => setState({ value: e.target.value });
     inputComponent={InputPassword}
     label='Label'
     subTitle='Sub title'
-    message='Field is required'
     value={state.value}
     placeholder='Placeholder'
     onChange={handleChange}
@@ -29,6 +30,7 @@ handleChange = e => setState({ value: e.target.value });
   <LabeledInput
     label='Label'
     subTitle='Sub title'
+    message='Field is required'
     value={state.value}
     placeholder='Placeholder'
     onChange={handleChange}
