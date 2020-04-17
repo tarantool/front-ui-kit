@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeaderFlagSmall renders correctly 1`] = `
+<svg
+  className="css-e7nc70"
+  viewBox="0 0 42 8"
+>
+  <use
+    xlinkHref="#flagSmall"
+  />
+</svg>
+`;

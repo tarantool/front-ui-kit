@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders correctly 1`] = `
+Array [
+  <label
+    className="css-759u60"
+    title="Initial"
+  >
+    <input
+      checked={true}
+      className="css-jgv3fg"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-1ni94lr"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#checkbox-checked"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-zbp510"
+    >
+      Checked
+    </span>
+  </label>,
+  <label
+    className="css-759u60"
+  >
+    <input
+      className="css-jgv3fg"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-1ni94lr"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#checkbox"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-zbp510"
+    >
+      Initial
+    </span>
+  </label>,
+  <label
+    className="css-759u60"
+  >
+    <input
+      checked={true}
+      className="css-jgv3fg"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-1ni94lr"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#checkbox-checked-disabled"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-zbp510"
+    >
+      Checked disabled
+    </span>
+  </label>,
+  <label
+    className="css-759u60"
+  >
+    <input
+      className="css-jgv3fg"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-1ni94lr"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#checkbox-disabled"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-zbp510"
+    >
+      Disabled
+    </span>
+  </label>,
+]
+`;

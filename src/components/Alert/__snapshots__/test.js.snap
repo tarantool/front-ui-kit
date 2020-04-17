@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`error type renders correctly 1`] = `
+<div
+  className="css-1xelhgn"
+>
+  Error alert
+</div>
+`;
+
+exports[`success type renders correctly 1`] = `
+<div
+  className="css-vu6cjl"
+>
+  Success alert
+</div>
+`;
