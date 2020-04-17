@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { Input } from '../Input';
 import { Text } from '../Text';
 import { Tooltip } from '../Tooltip';
 import { IconInfo } from '../Icon';
@@ -41,7 +42,8 @@ const styles = {
 };
 
 type LabeledInputProps = {
-  children?: React.Node,
+  inputComponent?: React.Node,
+  inputClassName?: string,
   className?: string,
   info?: string,
   label: string,
@@ -52,14 +54,16 @@ type LabeledInputProps = {
 };
 
 export const LabeledInput = ({
-  children,
+  inputComponent: InputComponent = Input,
   topRightControls,
   className,
+  inputClassName,
   subTitle,
   info,
   label,
   error,
-  message
+  message,
+  ...restProps
 }:
 LabeledInputProps) => (
   <label className={cx(styles.wrap, className)}>
@@ -74,7 +78,7 @@ LabeledInputProps) => (
       {subTitle && <Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>}
       {topRightControls && <ControlsPanel className={styles.topRightControls} controls={topRightControls} />}
     </div>
-    {children}
+    <InputComponent error={error} className={inputClassName} {...restProps} />
     <Text variant='p' className={cx(styles.message, { [styles.errorMessage]: error })}>
       {message}
     </Text>

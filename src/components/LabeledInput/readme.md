@@ -1,5 +1,5 @@
 ```js
-import { Input } from '../Input';
+import { InputPassword } from '../InputPassword';
 
 initialState = { value: '' };
 
@@ -10,38 +10,29 @@ handleChange = e => setState({ value: e.target.value });
     label='Label'
     info='Info LabeledInput component'
     message='Field is required'
+    value={state.value}
+    placeholder='Placeholder'
+    onChange={handleChange}
+    title='Input'
     error
-  >
-    <Input
-      value={state.value}
-      placeholder='Placeholder'
-      onChange={handleChange}
-      title='Input'
-      error
-    />
-  </LabeledInput>
+  />
   <LabeledInput
+    inputComponent={InputPassword}
     label='Label'
     subTitle='Sub title'
     message='Field is required'
-  >
-    <Input
-      value={state.value}
-      placeholder='Placeholder'
-      onChange={handleChange}
-      title='Input'
-    />
-  </LabeledInput>
+    value={state.value}
+    placeholder='Placeholder'
+    onChange={handleChange}
+    title='Input'
+  />
   <LabeledInput
     label='Label'
     subTitle='Sub title'
-  >
-    <Input
-      value={state.value}
-      placeholder='Placeholder'
-      onChange={handleChange}
-      title='Input'
-    />
-  </LabeledInput>
+    value={state.value}
+    placeholder='Placeholder'
+    onChange={handleChange}
+    title='Input'
+   />
 </>
 ```
