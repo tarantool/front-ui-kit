@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { Input } from '../Input';
 import { Text } from '../Text';
 import { Tooltip } from '../Tooltip';
 import { IconInfo } from '../Icon';
@@ -9,7 +10,7 @@ import { ControlsPanel } from '../ControlsPanel';
 const styles = {
   wrap: css`
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
   `,
   tooltip: css`
     display: inline-block;
@@ -29,41 +30,63 @@ const styles = {
   `,
   topRightControls: css`
     margin-left: auto;
+  `,
+  input: css`
+    margin-bottom: 4px;
+  `,
+  message: css`
+    display: block;
+    min-height: 20px;
+  `,
+  errorMessage: css`
+    color: #F5222D;
   `
 };
 
 type LabeledInputProps = {
-  children?: React.Node,
+  inputComponent?: React.AbstractComponent<any>,
+  inputClassName?: string,
   className?: string,
   info?: string,
-  itemClassName?: string,
   label: string,
   subTitle?: string | React.Node,
-  topRightControls?: React.Node[]
+  topRightControls?: React.Node[],
+  error?: boolean,
+  message?: string,
 };
 
 export const LabeledInput = ({
-  children,
+  inputComponent: InputComponent = Input,
   topRightControls,
-  itemClassName,
   className,
+  inputClassName,
   subTitle,
   info,
-  label
+  label,
+  error,
+  message,
+  ...restProps
 }:
 LabeledInputProps) => (
   <label className={cx(styles.wrap, className)}>
     <div className={styles.headingPane}>
       <Text className={styles.label} variant='h4' tag='span'>{label}:
-        {info && (
+        {!!info && (
           <Tooltip className={styles.tooltip} content={info}>
             <IconInfo />
           </Tooltip>
         )}
       </Text>
-      {subTitle && <Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>}
-      {topRightControls && <ControlsPanel className={styles.topRightControls} controls={topRightControls} />}
+      {!!subTitle && (
+        <Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>
+      )}
+      {topRightControls && (
+        <ControlsPanel className={styles.topRightControls} controls={topRightControls} />
+      )}
     </div>
-    {children}
+    <InputComponent {...restProps} error={error} className={cx(styles.input, inputClassName)} />
+    <Text variant='p' className={cx(styles.message, { [styles.errorMessage]: error })}>
+      {message}
+    </Text>
   </label>
 );
