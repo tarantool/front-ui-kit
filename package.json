@@ -31,7 +31,7 @@
     "react-scrollbars-custom": "4.0.20",
     "rollup-plugin-auto-external": "2.0.0",
     "rollup-plugin-commonjs": "10.1.0",
-    "rollup-svg-sprite-loader": "1.0.1"
+    "rollup-svg-sprite-loader": "1.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",
