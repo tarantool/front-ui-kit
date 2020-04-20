@@ -70,8 +70,13 @@ type withTooltipState = {
 };
 
 type ComponentRef = { elementRef: { current: ?HTMLElement } };
+type WrapperRefElement = HTMLElement | React.Component<any>;
 
-export const withTooltip = (Component: React.ComponentType<any> | string) => class extends React.Component<
+export const withTooltip = (
+  //@TODO Fix type: in fact, withTooltip() accepts
+  // only DOM intrinsics and specific class component (and no functional component)
+  Component: React.AbstractComponent<any, WrapperRefElement> | string
+) => class extends React.Component<
   withTooltipProps,
   withTooltipState
 > {
@@ -87,7 +92,7 @@ export const withTooltip = (Component: React.ComponentType<any> | string) => cla
     placement: 'top'
   };
 
-  wrapperRef = React.createRef<HTMLElement | React.Component<any>>();
+  wrapperRef = React.createRef<WrapperRefElement>();
   tooltipRef = React.createRef<HTMLElement>();
 
   componentDidUpdate(prevProps: withTooltipProps, prevState: withTooltipState) {
