@@ -69,6 +69,8 @@ type withTooltipState = {
   topPlacement: boolean
 };
 
+type ComponentRef = { elementRef: { current: ?HTMLElement } };
+
 export const withTooltip = (Component: React.ComponentType<any> | string) => class extends React.Component<
   withTooltipProps,
   withTooltipState
@@ -96,8 +98,11 @@ export const withTooltip = (Component: React.ComponentType<any> | string) => cla
     const { wrapperRef, tooltipRef } = this;
 
     const tooltipElement = tooltipRef.current;
-    const wrapperElement: HTMLElement = (wrapperRef.current && wrapperRef.current.elementRef)
-      ? wrapperRef.current.elementRef.current
+
+    const componentRef = wrapperRef.current && ((wrapperRef.current: any): ComponentRef).elementRef;
+
+    const wrapperElement: ?HTMLElement = componentRef
+      ? componentRef.current
       : wrapperRef.current;
 
     if (((visible && !prevState.visible) || (prevProps !== this.props)) && tooltipElement && wrapperElement) {
