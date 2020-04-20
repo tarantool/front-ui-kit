@@ -106,7 +106,10 @@ export class Dropdown extends React.Component<DropdownProps, DropdownState> {
     const { isOpen } = this.state;
     const ref = this.popoverRef && this.popoverRef.current;
 
-    if (isOpen && ref && !ref.contains(event.target) && ref !== event.target) {
+    // for Flow
+    const eventTarget = ((event.target: any): Node);
+
+    if (isOpen && ref && !ref.contains(eventTarget) && ref !== event.target) {
       this.toggleDropdown();
     }
   }
