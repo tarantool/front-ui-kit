@@ -8,7 +8,7 @@ const stub: SVGGlyph = {
   content: '',
   id: '',
   node: document.createElementNS('http://www.w3.org/2000/svg', 'symbol'),
-  viewbox: ''
+  viewBox: ''
 };
 
 // Flow will treat imports from '.svg' as if it were imports from this file

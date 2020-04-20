@@ -15,7 +15,7 @@ export const SVGImage = (
     ...props
   }: SVGImageProps
 ) => {
-  const [width, height] = (glyph.viewbox || '').split(' ').slice(2);
+  const [width, height] = (glyph.viewBox || '').split(' ').slice(2);
   const sizingClassName = width && height
     ? css`
       width: ${width}px;
@@ -27,7 +27,7 @@ export const SVGImage = (
     <svg
       {...props}
       className={cx(sizingClassName, className)}
-      viewBox={glyph.viewbox}
+      viewBox={glyph.viewBox}
     >
       <use xlinkHref={`#${glyph.id}`}/>
     </svg>
