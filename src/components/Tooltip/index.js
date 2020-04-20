@@ -100,10 +100,11 @@ export const withTooltip = (Component: React.ComponentType<any> | string) => cla
     const tooltipElement = tooltipRef.current;
 
     const componentRef = wrapperRef.current && ((wrapperRef.current: any): ComponentRef).elementRef;
+    const domNodeRef = ((wrapperRef: any): { current: HTMLElement });
 
     const wrapperElement: ?HTMLElement = componentRef
       ? componentRef.current
-      : wrapperRef.current;
+      : domNodeRef.current;
 
     if (((visible && !prevState.visible) || (prevProps !== this.props)) && tooltipElement && wrapperElement) {
       const bodyWidth = document.body ? document.body.clientWidth : 0;
