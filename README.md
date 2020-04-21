@@ -2,6 +2,8 @@
 
 It's UI components set for Tarantool's interfaces. Strongly recommended to use in every UI module.
 
+[![Build Status](https://travis-ci.com/tarantool/front-ui-kit.svg?branch=master)](https://travis-ci.com/tarantool/front-ui-kit)
+
 ## Usage
 
 Install package into your project:
