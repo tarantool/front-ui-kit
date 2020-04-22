@@ -49,7 +49,7 @@ export const styles = {
 
 const isNodeOutsideElement = (node: HTMLElement, element: HTMLElement) => !(element.contains(node) || element === node);
 
-export interface BaseModalProps {
+export type BaseModalProps = {
   visible?: boolean,
   children?: React.Node,
   className?: string,
