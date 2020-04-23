@@ -1,17 +1,35 @@
+const { name, version } = require('./package');
+
 module.exports = {
   sections: [
     {
-      name: 'UI Components',
-      components: 'src/components/*/index.js',
-      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
+      name: 'Readme',
+      content: './readme.md'
     },
     {
-      name: 'Icons',
-      components: 'src/components/Icon/icons/*/index.js',
-      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      usageMode: 'expand' // 'hide' | 'collapse' | 'expand'
+      name: 'UI Components',
+      components: 'src/components/*/index.js'
+    },
+    {
+      name: 'GitHub',
+      href: 'https://github.com/tarantool/front-ui-kit',
+      external: true
     }
   ],
-  styleguideDir: 'docs'
+  template: {
+    head: {
+      links: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap'
+        }
+      ]
+    }
+  },
+  title: name,
+  // skipComponentsWithoutExample: true,
+  exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
+  usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+  styleguideDir: 'docs',
+  version
 };

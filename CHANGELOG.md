@@ -12,7 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added details prop to SplashError
 
-- Added LabeledInput component
+- Improved LabeledInput component
+
+- Updated readme
+
+- Styleguide improvements: updated config, added open sans font
 
 ## [0.15.1] - 2020-04-09
 
