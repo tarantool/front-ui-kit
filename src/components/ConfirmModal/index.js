@@ -10,8 +10,6 @@ type ConfirmModalProps = ModalProps & {
   confirmText?: string,
 }
 
-
-
 export const ConfirmModal = (
   props: ConfirmModalProps
 ) => {
@@ -20,13 +18,14 @@ export const ConfirmModal = (
     onCancel,
     confirmText = 'Ok'
   } = props
-  return <Modal
-    {...props}
-    onClose={onCancel}
-    footerControls={[
-      <Button intent={'base'} onClick={onCancel}>Cancel</Button>,
-      <Button intent={'primary'} onClick={onConfirm}>{confirmText}</Button>
-    ]}
-
-  />
+  return (
+    <Modal
+      {...props}
+      onClose={onCancel}
+      footerControls={[
+        <Button intent={'base'} onClick={onCancel}>Cancel</Button>,
+        <Button intent={'primary'} onClick={onConfirm}>{confirmText}</Button>
+      ]}
+    />
+  )
 }

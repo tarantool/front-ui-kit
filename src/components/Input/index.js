@@ -73,8 +73,7 @@ export type InputProps = {
   title?: string,
   type?: 'text' | 'password' | 'email' | 'number',
   value?: string,
-  placeholder?: string,
-  children?: any
+  placeholder?: string
 };
 
 type InputState = {
@@ -118,7 +117,6 @@ export class Input extends React.Component<InputProps, InputState> {
       type,
       value,
       placeholder,
-      children,
       ...props
     } = this.props;
 
