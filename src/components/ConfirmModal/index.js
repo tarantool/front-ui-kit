@@ -4,25 +4,28 @@ import * as React from 'react';
 import { Button } from '../Button'
 import { Modal, type ModalProps } from '../Modal';
 
-interface ConfirmModalProps extends ModalProps {
+type ConfirmModalProps = ModalProps & {
   onConfirm: Function,
   onCancel: Function,
   confirmText?: string,
 }
 
 export const ConfirmModal = (
-  {
+  props: ConfirmModalProps
+) => {
+  const {
     onConfirm,
     onCancel,
-    confirmText = 'Ok',
-    ...props
-  }: ConfirmModalProps
-) =>
-  <Modal
-    onClose={onCancel}
-    footerControls={[
-      <Button intent={'base'} onClick={onCancel}>Cancel</Button>,
-      <Button intent={'primary'} onClick={onConfirm}>{confirmText}</Button>
-    ]}
-    {...props}
-  />
+    confirmText = 'Ok'
+  } = props
+  return (
+    <Modal
+      {...props}
+      onClose={onCancel}
+      footerControls={[
+        <Button intent={'base'} onClick={onCancel}>Cancel</Button>,
+        <Button intent={'primary'} onClick={onConfirm}>{confirmText}</Button>
+      ]}
+    />
+  )
+}

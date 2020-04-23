@@ -48,7 +48,7 @@ const styles = {
 };
 
 
-export interface SplashModalProps extends BaseModalProps {
+export type SplashModalProps = BaseModalProps & {
   title: string,
   subTitle: string
 };
@@ -64,9 +64,9 @@ export const SplashModal = (
   }: SplashModalProps
 ) => (
   <BaseModal
+    {...props}
     className={cx(styles.modal, className)}
     shimClassName={cx(styles.shim, shimClassName)}
-    {...props}
   >
     <div className={styles.logoContainer}>
       <SVGImage glyph={logo} className={styles.logo} />

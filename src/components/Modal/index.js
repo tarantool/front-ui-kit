@@ -44,7 +44,7 @@ const styles = {
   `
 };
 
-export interface ModalProps extends BaseModalProps {
+export type ModalProps = BaseModalProps & {
   footerContent?: React.Node,
   footerControls?: React.Node[],
   title: string,
