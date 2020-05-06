@@ -10,7 +10,8 @@
     "url": "https://github.com/tarantool/front-ui-kit"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test-update": "jest -u",
     "start": "styleguidist server",
     "build": "styleguidist build",
     "flow": "flow",
@@ -22,13 +23,16 @@
   "author": "Roman Babaev <r.babaev@corp.mail.ru>",
   "license": "ISC",
   "dependencies": {
+    "babel-jest": "25.4.0",
     "babel-plugin-emotion": "9.2.6",
     "emotion": "9.2.6",
+    "jest": "25.4.0",
     "markdown-to-jsx": "6.10.3",
     "prismjs": "1.19.0",
     "ramda": "0.26.1",
     "react-emotion": "9.2.6",
     "react-scrollbars-custom": "4.0.20",
+    "react-test-renderer": "16.13.1",
     "rollup-plugin-auto-external": "2.0.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-svg-sprite-loader": "1.0.2"
@@ -78,5 +82,11 @@
     "plugins": [
       "emotion"
     ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.svg": "<rootDir>/jestSVGLoader.js",
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }

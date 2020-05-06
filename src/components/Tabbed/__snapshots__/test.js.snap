@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabbed renders correctly 1`] = `
+<div
+  className="css-1g4yje1"
+>
+  <div
+    className="css-0"
+  >
+    <button
+      className="css-bni6hn"
+      onClick={[Function]}
+    >
+      Create Replica Set
+    </button>
+    <button
+      className="css-12wk8l0"
+      onClick={[Function]}
+    >
+      Another tab
+    </button>
+    <button
+      className="css-12wk8l0"
+      onClick={[Function]}
+    >
+      Third tab
+    </button>
+  </div>
+  Tab content
+</div>
+`;

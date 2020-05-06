@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopupBody renders with scrollbars 1`] = `
+<div
+  className="css-17w6qdz external-class"
+>
+  <div
+    className="css-gajhq5"
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`PopupBody renders without scrollbars 1`] = `
+<div
+  className="css-ogoe9v external-class"
+>
+  content
+</div>
+`;

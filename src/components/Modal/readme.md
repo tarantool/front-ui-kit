@@ -115,9 +115,7 @@ const tabs = [
       <Button text='Decline' onClick={closeModal} />
     ]}
   >
-    <LabeledInput label='First input'>
-      <Input />
-    </LabeledInput>
+    <LabeledInput label='First input' />
   </Modal>
 </>
 ```

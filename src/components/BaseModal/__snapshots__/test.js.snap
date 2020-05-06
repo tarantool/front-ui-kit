@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseModal renders closed 1`] = `null`;
+
+exports[`BaseModal renders opened 1`] = `
+<div
+  className="css-yhrqyo"
+  onMouseDown={[Function]}
+>
+  <div
+    className="css-1vn41o3"
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    Modal content
+    <div
+      className="css-vnc1z7"
+      onFocus={[Function]}
+      tabIndex="0"
+    />
+  </div>
+</div>
+`;
