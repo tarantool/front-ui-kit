@@ -8,6 +8,7 @@ type ConfirmModalProps = ModalProps & {
   onConfirm: Function,
   onCancel: Function,
   confirmText?: string,
+  confirmPreloader?: boolean
 }
 
 export const ConfirmModal = (
@@ -16,7 +17,8 @@ export const ConfirmModal = (
   const {
     onConfirm,
     onCancel,
-    confirmText = 'Ok'
+    confirmText = 'Ok',
+    confirmPreloader
   } = props
   return (
     <Modal
@@ -24,7 +26,7 @@ export const ConfirmModal = (
       onClose={onCancel}
       footerControls={[
         <Button intent={'base'} onClick={onCancel}>Cancel</Button>,
-        <Button intent={'primary'} onClick={onConfirm}>{confirmText}</Button>
+        <Button intent={'primary'} loading={confirmPreloader || false} onClick={onConfirm}>{confirmText}</Button>
       ]}
     />
   )
