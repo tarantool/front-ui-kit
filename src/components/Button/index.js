@@ -44,6 +44,10 @@ const styles = {
     margin-right: 8px;
   `,
 
+  iconRightMargin: css`
+    margin-left: 8px;
+  `,
+
   loading: css`
     position: relative;
     color: rgba(0, 0, 0, 0);
@@ -250,6 +254,7 @@ export type ButtonProps = {
   children?: React.Node,
   disabled?: boolean,
   icon?: ComponentType<any>,
+  iconRight?: ComponentType<any>,
   intent?: 'primary' | 'secondary' | 'base' | 'iconic' | 'plain',
   onClick?: (MouseEvent) => void,
   loading?: boolean,
@@ -266,6 +271,7 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
     children,
     disabled,
     icon: Icon,
+    iconRight: IconRight,
     intent = 'base',
     onClick,
     loading,
@@ -275,7 +281,7 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
     type = 'button',
     ...props
   }:
-  ButtonProps,
+    ButtonProps,
   ref
 ) => {
   const isOnlyIcon = Icon && !children && !text;
@@ -297,7 +303,18 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
 
   content.push(children || text)
 
-  if(loading && !disabled) {
+  if (IconRight && !isOnlyIcon) {
+    content.push(
+      <IconRight
+        className={cx([
+          styles.icon,
+          styles.iconRightMargin
+        ])}
+      />
+    )
+  }
+
+  if (loading && !disabled) {
     content.push(
       <div className={styles.loadingWrap}>
         <IconSpinner className={spinnerStyles[intent]} />
