@@ -25,8 +25,16 @@ const styles = {
     border-color: ${colors.intentDanger};
     box-shadow: 0px 0px 3px ${rgba(colors.intentDanger, 0.65)};
   `,
+  outerWithAddition: css`
+    display: flex;
+  `,
+  inputWithAddition: css`
+    width: auto;
+    flex-grow: 1;
+  `,
   input: css`
     display: block;
+    align-self: center;
     width: 100%;
     height: 100%;
     border: 0;
@@ -75,7 +83,9 @@ export type InputProps = {
   title?: string,
   type?: 'text' | 'password' | 'email' | 'number',
   value?: string,
-  placeholder?: string
+  placeholder?: string,
+  leftElement: React.Node,
+  rightElement: React.Node
 };
 
 type InputState = {
@@ -119,11 +129,14 @@ export class Input extends React.Component<InputProps, InputState> {
       type,
       value,
       placeholder,
+      leftElement,
+      rightElement,
       ...props
     } = this.props;
 
     const { focused } = this.state;
 
+    const hasAddition = !!leftElement || !!rightElement;
     return (
       <div
         className={cx(
@@ -131,17 +144,22 @@ export class Input extends React.Component<InputProps, InputState> {
           {
             [styles.disabled]: disabled,
             [styles.focused]: focused,
-            [styles.error]: error
+            [styles.error]: error,
+            [styles.outerWithAddition]: hasAddition,
           },
           className
         )}
         title={title}
       >
+        {leftElement}
         <input
           {...props}
           autoFocus={autoFocus}
           autoComplete={autoComplete}
-          className={cx(styles.input, { [styles.inputWithIcon]: rightIcon || onClearClick })}
+          className={cx(styles.input, {
+            [styles.inputWithAddition]: hasAddition,
+            [styles.inputWithIcon]: rightIcon || onClearClick
+          })}
           disabled={disabled}
           name={name}
           onChange={onChange}
@@ -166,6 +184,8 @@ export class Input extends React.Component<InputProps, InputState> {
               : rightIcon}
           </div>
         )}
+
+        {rightElement}
       </div>
     );
   }
