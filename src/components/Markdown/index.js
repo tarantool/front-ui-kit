@@ -1,6 +1,7 @@
 import * as React from 'react';
 import MD from 'markdown-to-jsx';
 import { css } from 'emotion';
+import { colors, monoFontFamily } from '../../variables';
 import { CodeBlock } from '../CodeBlock';
 import { Link } from '../Link';
 import { Text } from '../Text';
@@ -10,9 +11,9 @@ const styles = {
     & code {
       padding: 3px;
       border-radius: 3px;
-      background-color: #1E2537;
+      background-color: ${colors.codeBg};
       color: white;
-      font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+      font-family: ${monoFontFamily};
     }
 
     & pre {
@@ -20,7 +21,7 @@ const styles = {
       padding: 16px;
       margin-bottom: 16px;
       border-radius: 4px;
-      background-color: #1E2537;
+      background-color: ${colors.codeBg};
       color: white;
 
       & > code {

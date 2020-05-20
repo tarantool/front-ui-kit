@@ -1,6 +1,8 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { rgba } from 'emotion-rgba';
+import { colors } from '../../variables';
 import { Text } from '../Text';
 import { IconCheckbox } from '../Icon/icons/IconCheckbox';
 
@@ -33,7 +35,7 @@ const styles = {
       left: -2px;
       right: -2px;
       bottom: -2px;
-      border: solid 1px rgba(245, 34, 45, 0.55);
+      border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
       border-radius: 3px;
     }
   `,

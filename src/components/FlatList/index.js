@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 
 const styles = {
   outer: css`
@@ -22,7 +23,7 @@ const styles = {
     }
 
     &:hover {
-      border-color: rgba(82, 82, 82, 0.07);
+      border-color: ${colors.intentBaseBg};
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
     }
   `

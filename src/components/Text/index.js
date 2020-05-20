@@ -1,11 +1,12 @@
 // @flow
 import * as React from 'react'
 import { css, cx } from 'emotion'
+import { baseFontFamily, colors, monoFontFamily } from '../../variables';
 
 export const textStyles = {
   h1: css`
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 24px;
     line-height: 38px;
     font-weight: 600;
@@ -15,7 +16,7 @@ export const textStyles = {
   `,
   h2: css`
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
@@ -25,17 +26,17 @@ export const textStyles = {
   `,
   h3: css`
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
     letter-spacing: 0.32px;
     text-transform: uppercase;
-    color: #cf1322;
+    color: ${colors.activeAction};
   `,
   h4: css`
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
@@ -44,21 +45,21 @@ export const textStyles = {
   `,
   h5: css`
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 12px;
     line-height: 22px;
     color: #000000;
   `,
   p: css`
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 12px;
     line-height: 20px;
     color: #000000;
   `,
   code: css`
     margin: 0;
-    font-family: 'Monaco', monospace;
+    font-family: ${monoFontFamily};
     font-size: 14px;
     line-height: 22px;
     color: #000000;
@@ -68,7 +69,7 @@ export const textStyles = {
   `,
   basic: css`
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 14px;
     line-height: 22px;
     color: #000000;

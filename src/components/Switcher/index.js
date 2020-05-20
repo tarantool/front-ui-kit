@@ -2,6 +2,8 @@
 import * as React from 'react';
 import { css, cx } from 'emotion';
 import { Text } from '../Text';
+import { rgba } from 'emotion-rgba';
+import { colors } from '../../variables';
 
 const styles = {
   input: css`
@@ -18,7 +20,7 @@ const styles = {
       left: -3px;
       right: -3px;
       bottom: -3px;
-      border: solid 1px rgba(245, 34, 45, 0.55);
+      border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
       border-radius: 15px;
     }
   `,
@@ -65,11 +67,11 @@ const styles = {
     }
   `,
   checked: css`
-    background-color: #f5222d;
+    background-color: ${colors.intentPrimary};
 
     &:hover,
     &:focus {
-      background-color: #CF1322;
+      background-color: ${colors.activeAction};
     }
 
     &::after {
@@ -78,8 +80,8 @@ const styles = {
     }
   `,
   disabled: css`
-    border-color: #d9d9d9;
-    background-color: #f3f3f3;
+    border-color: ${colors.intentBase};
+    background-color: ${colors.intentBaseBg};
     cursor: default;
 
     &::after {

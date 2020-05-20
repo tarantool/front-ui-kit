@@ -1,19 +1,21 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { rgba } from 'emotion-rgba';
+import { colors } from '../../variables';
 
 const styles = {
   link: css`
-    color: rgba(245, 34, 45, 0.65);
+    color: ${rgba(colors.intentPrimary, 0.65)};
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: #f5222d;
+      color: ${colors.intentPrimary};
     }
 
     &:active {
-      color: #cf1322;
+      color: ${colors.activeAction};
     }
   `
 };

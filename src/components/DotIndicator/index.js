@@ -1,20 +1,21 @@
 // @flow
 import React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 
 const styles = {
   indicator: css`
     display: inline-block;
     flex-shrink: 0;
     margin: 8px;
-    background-color: rgba(110, 97, 160, 0.04);
+    background-color: ${colors.intentBaseBg};
     border-radius: 50%;
   `,
   state: {
-    bad: css`background-color: #f5222d;`,
-    good: css`background-color: #52c41a;`,
-    inactive: css`background-color: rgba(110, 97, 160, 0.04);`,
-    middle: css`background-color: #faad14;`
+    bad: css`background-color: ${colors.intentDanger};`,
+    good: css`background-color: ${colors.intentSuccess};`,
+    inactive: css`background-color: ${colors.intentBaseBg};`,
+    middle: css`background-color: ${colors.intentWarning};`
   },
   size: {
     s: css`

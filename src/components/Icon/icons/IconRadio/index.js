@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../../../variables';
 import { Icon, type GenericIconProps } from '../../Icon';
 import radio from './radio.svg';
 import radioSelected from './radio-checked.svg';
@@ -20,6 +21,13 @@ const states = [
 const styles = css`
   width: 16px;
   height: 16px;
+  fill: ${colors.intentPrimary};
+  stroke: ${colors.intentPrimary};
+`;
+
+const stylesDisabled = css`
+  fill: ${colors.intentPrimaryDisabled};
+  stroke: ${colors.intentPrimaryDisabled};
 `;
 
 type IconRadioProps = {
@@ -32,7 +40,7 @@ export const IconRadio = ({ checked, className, disabled }: IconRadioProps) => {
   const mask = (disabled ? DISABLED : 0) + (checked ? CHECKED : 0);
   return (
     <Icon
-      className={cx(styles, className)}
+      className={cx(styles, { [stylesDisabled]: disabled }, className)}
       glyph={states[mask]}
     />
   );

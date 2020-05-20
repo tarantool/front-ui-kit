@@ -9,7 +9,7 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-1nfc84n"
+        className="css-xq84wq"
       >
         Label
         :
@@ -21,7 +21,7 @@ Array [
           placement="top"
         >
           <svg
-            className="css-17swexf"
+            className="css-n25ly7"
             viewBox="0 0 12 12"
           >
             <use
@@ -32,11 +32,11 @@ Array [
       </span>
     </div>
     <div
-      className="css-lnb93j"
+      className="css-1at0a8"
       title="Input"
     >
       <input
-        className="css-72cois"
+        className="css-80przw"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -45,7 +45,7 @@ Array [
       />
     </div>
     <p
-      className="css-xhtfz9"
+      className="css-1qy7t6t"
     >
       Field is required
     </p>
@@ -57,23 +57,23 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-1nfc84n"
+        className="css-xq84wq"
       >
         Label
         :
       </span>
       <span
-        className="css-rbvd5"
+        className="css-1sicp5h"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-10q6wfl"
+      className="css-evmp0d"
       title="Input"
     >
       <input
-        className="css-lgubke"
+        className="css-1kf2sdk"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -85,12 +85,12 @@ Array [
         className="css-18knne"
       >
         <button
-          className="css-1r7flrx"
+          className="css-1hyvx7m"
           onClick={[Function]}
           type="button"
         >
           <svg
-            className="css-18q8u66"
+            className="css-1v31moo"
             viewBox="0 0 16 16"
           >
             <use
@@ -101,7 +101,7 @@ Array [
       </div>
     </div>
     <p
-      className="css-12oe7my"
+      className="css-1c9fjq5"
     />
   </label>,
   <label
@@ -111,23 +111,23 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-1nfc84n"
+        className="css-xq84wq"
       >
         Label
         :
       </span>
       <span
-        className="css-rbvd5"
+        className="css-1sicp5h"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-10q6wfl"
+      className="css-evmp0d"
       title="Input"
     >
       <input
-        className="css-72cois"
+        className="css-80przw"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -136,7 +136,7 @@ Array [
       />
     </div>
     <p
-      className="css-12oe7my"
+      className="css-1c9fjq5"
     >
       Field is required
     </p>

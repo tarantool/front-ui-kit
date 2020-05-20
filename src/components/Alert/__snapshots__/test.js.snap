@@ -2,7 +2,7 @@
 
 exports[`error type renders correctly 1`] = `
 <div
-  className="css-1xelhgn"
+  className="css-gy0wi9"
 >
   Error alert
 </div>
@@ -10,7 +10,7 @@ exports[`error type renders correctly 1`] = `
 
 exports[`success type renders correctly 1`] = `
 <div
-  className="css-vu6cjl"
+  className="css-1ie2zfx"
 >
   Success alert
 </div>

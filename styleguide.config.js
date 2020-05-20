@@ -7,6 +7,10 @@ module.exports = {
       content: './readme.md'
     },
     {
+      name: 'Colors',
+      content: './colors.md'
+    },
+    {
       name: 'UI Components',
       components: 'src/components/*/index.js'
     },
@@ -21,7 +25,7 @@ module.exports = {
       links: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap'
+          href: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro:wght@400;500&display=swap'
         }
       ]
     }

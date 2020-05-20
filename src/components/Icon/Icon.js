@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react'
 import { css, cx } from 'emotion';
+import { rgba } from 'emotion-rgba';
+import { colors, iconSize } from '../../variables';
 import { SVGImage } from '../SVGImage';
-// import { iconSize } from '../../variables';
-const iconSize = '14px';
 
 const styles = {
   icon: css`
@@ -52,7 +52,7 @@ const styles = {
       left: -2px;
       right: -2px;
       bottom: -2px;
-      border: solid 1px rgba(245, 34, 45, 0.55);
+      border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
       border-radius: 3px;
     }
   `

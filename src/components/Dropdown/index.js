@@ -1,9 +1,11 @@
 // @flow
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 import { Button } from '../Button';
 import { IconMore } from '../Icon';
 import { textStyles } from '../Text';
-import { css, cx } from 'emotion';
 
 const defaultListItemColor = 'rgba(0, 0, 0, 0.65)';
 
@@ -20,7 +22,7 @@ const styles = {
     padding: 8px 0;
     border-radius: 4px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
-    border: solid 1px rgba(82, 82, 82, 0.07);
+    border: solid 1px ${colors.intentBaseBg};
     background-color: #ffffff;
     z-index: 3;
   `,
@@ -37,7 +39,7 @@ const styles = {
 
     &:hover {
       cursor: pointer;
-      background-color: #fafafa;
+      background-color: ${colors.intentBaseActive};
     }
   `
 }

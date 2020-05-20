@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'react-emotion'
+import { colors } from '../../variables';
 import { Spin } from '../Spin';
 import { Text } from '../Text';
 import { IconClose } from '../Icon';
@@ -16,7 +17,7 @@ const styles = {
   `,
   cardHead: css`
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(55, 52, 66, 0.08);
+    border-bottom: 1px solid ${colors.intentBaseBg};
     margin-bottom: 16px;
   `,
   closeIcon: css`

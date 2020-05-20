@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import { css, cx } from 'emotion'
+import { colors } from '../../variables';
 import { ControlsPanel } from '../ControlsPanel';
 import { IconClose } from '../Icon';
 import { Text } from '../Text';
@@ -12,12 +13,12 @@ const styles = {
     align-items: center;
     justify-content: center;
     padding: 16px;
-    background: #fff1f0;
+    background: ${colors.intentDangerBg};
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.11);
-    color: #f5222d;
+    color: ${colors.intentDanger};
   `,
   children: css`
-    color: #f5222d;
+    color: ${colors.intentDanger};
   `,
   close: css`
     position: absolute;
