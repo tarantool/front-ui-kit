@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 import { IconClose } from '../Icon';
 import { PopupFooter } from '../PopupFooter';
 import { Text } from '../Text';
@@ -23,7 +24,7 @@ const styles = {
     flex-shrink: 0;
     padding-bottom: 16px;
     padding-right: 24px;
-    border-bottom: 1px solid rgba(55, 52, 66, 0.08);
+    border-bottom: 1px solid ${colors.intentBaseBg};
     margin-bottom: 16px;
     padding-left: 16px;
     overflow: hidden;

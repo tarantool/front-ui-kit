@@ -2,6 +2,7 @@
 import * as React from 'react';
 import type { ComponentType } from 'react'
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 import { Button } from '../Button';
 import { Text } from '../Text';
 import { SVGImage } from '../SVGImage';
@@ -33,7 +34,7 @@ const styles = {
     color: rgba(0, 0, 0, 0.65);
   `,
   error: css`
-    color: #F5222D;
+    color: ${colors.intentDanger};
   `
 };
 

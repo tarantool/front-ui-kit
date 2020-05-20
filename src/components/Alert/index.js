@@ -2,6 +2,7 @@
 import * as React from 'react';
 import { Text } from '../Text';
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 
 const styles = {
   alert: css`
@@ -13,12 +14,12 @@ const styles = {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   `,
   success: css`
-    border-color: #b5ec8e;
-    background-color: #f6ffee;
+    border-color: ${colors.intentSuccessBorder};
+    background-color: ${colors.intentSuccessBg};
   `,
   error: css`
-    border-color: #fea39e;
-    background-color: #fff1f0;
+    border-color: ${colors.intentDangerBorder};
+    background-color: ${colors.intentDangerBg};
   `
 };
 

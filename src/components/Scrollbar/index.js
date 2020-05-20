@@ -2,6 +2,7 @@
 import * as React from 'react';
 import ReactScroll from 'react-scrollbars-custom';
 import styled from 'react-emotion';
+import { colors } from '../../variables';
 
 const ScrollWrapper = styled.div`
   height: 100%;
@@ -9,12 +10,12 @@ const ScrollWrapper = styled.div`
 
 const Track = styled.div`
   width: 4px !important;
-  background: ${({ track }) => track || '#e8e8e8'} !important;
+  background: ${({ track }) => track || colors.scrollbar} !important;
   border-radius: 7px !important;
 `
 
 const Thumb = styled.div`
-  background: ${({ thumb }) => thumb || '#cf1322'} !important;
+  background: ${({ thumb }) => thumb || colors.activeAction} !important;
 `
 
 const trackYProps = {

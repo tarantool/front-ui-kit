@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import { zIndex } from '../../variables';
+import { rgba } from 'emotion-rgba';
+import { baseFontFamily, colors, zIndex } from '../../variables';
 
 const styles = {
   wrap: css`
@@ -14,7 +15,7 @@ const styles = {
     padding: 16px;
     border: none;
     border-bottom: solid 2px transparent;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
@@ -34,13 +35,13 @@ const styles = {
       left: -2px;
       right: -2px;
       bottom: -4px;
-      border: solid 1px rgba(245, 34, 45, 0.55);
+      border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
       border-radius: 3px;
     }
   `,
   activeTab: css`
-    color: #CF1322;
-    border-bottom-color: #CF1322;
+    color: ${colors.activeAction};
+    border-bottom-color: ${colors.activeAction};
   `,
   tabs: css``
 };

@@ -3,11 +3,12 @@
 import React from 'react';
 import { css, cx } from 'emotion';
 import * as R from 'ramda';
+import { colors } from '../../variables';
 
 const COLORS = {
-  success: '#52C41A',
-  warning: '#FAAD14',
-  danger: '#F5222D'
+  success: colors.intentSuccess,
+  warning: colors.intentWarning,
+  danger: colors.intentDanger
 };
 
 const style = css`

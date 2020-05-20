@@ -8,19 +8,19 @@ exports[`Tabbed renders correctly 1`] = `
     className="css-0"
   >
     <button
-      className="css-bni6hn"
+      className="css-1x95u6o"
       onClick={[Function]}
     >
       Create Replica Set
     </button>
     <button
-      className="css-12wk8l0"
+      className="css-ru39lv"
       onClick={[Function]}
     >
       Another tab
     </button>
     <button
-      className="css-12wk8l0"
+      className="css-ru39lv"
       onClick={[Function]}
     >
       Third tab

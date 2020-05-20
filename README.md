@@ -23,6 +23,12 @@ You can attach font from Google Fonts using link:
 https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap
 ```
 
+Optionally you can add Source Code Pro to display monotype texts (code, errors, etc.):
+
+```static
+https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro:wght@400;500&display=swap
+```
+
 ### Getting components
 
 Import components and whatever from ui-kit in code:

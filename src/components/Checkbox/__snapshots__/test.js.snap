@@ -8,7 +8,7 @@ Array [
   >
     <input
       checked={true}
-      className="css-jgv3fg"
+      className="css-1y12ua6"
       onChange={[Function]}
       type="checkbox"
     />
@@ -16,7 +16,7 @@ Array [
       className="css-1ysxw4w"
     >
       <svg
-        className="css-1ni94lr"
+        className="css-1v31moo"
         viewBox="0 0 16 16"
       >
         <use
@@ -25,7 +25,7 @@ Array [
       </svg>
     </div>
     <span
-      className="css-zbp510"
+      className="css-ibodyl"
     >
       Checked
     </span>
@@ -34,7 +34,7 @@ Array [
     className="css-759u60"
   >
     <input
-      className="css-jgv3fg"
+      className="css-1y12ua6"
       onChange={[Function]}
       type="checkbox"
     />
@@ -42,7 +42,7 @@ Array [
       className="css-1ysxw4w"
     >
       <svg
-        className="css-1ni94lr"
+        className="css-1v31moo"
         viewBox="0 0 16 16"
       >
         <use
@@ -51,7 +51,7 @@ Array [
       </svg>
     </div>
     <span
-      className="css-zbp510"
+      className="css-ibodyl"
     >
       Initial
     </span>
@@ -61,7 +61,7 @@ Array [
   >
     <input
       checked={true}
-      className="css-jgv3fg"
+      className="css-1y12ua6"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
@@ -70,7 +70,7 @@ Array [
       className="css-1ysxw4w"
     >
       <svg
-        className="css-1ni94lr"
+        className="css-17jpq69"
         viewBox="0 0 16 16"
       >
         <use
@@ -79,7 +79,7 @@ Array [
       </svg>
     </div>
     <span
-      className="css-zbp510"
+      className="css-ibodyl"
     >
       Checked disabled
     </span>
@@ -88,7 +88,7 @@ Array [
     className="css-759u60"
   >
     <input
-      className="css-jgv3fg"
+      className="css-1y12ua6"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
@@ -97,7 +97,7 @@ Array [
       className="css-1ysxw4w"
     >
       <svg
-        className="css-1ni94lr"
+        className="css-17jpq69"
         viewBox="0 0 16 16"
       >
         <use
@@ -106,7 +106,7 @@ Array [
       </svg>
     </div>
     <span
-      className="css-zbp510"
+      className="css-ibodyl"
     >
       Disabled
     </span>

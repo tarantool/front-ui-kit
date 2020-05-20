@@ -2,6 +2,8 @@
 import * as React from 'react'
 import type { ComponentType } from 'react'
 import { css, cx } from 'react-emotion'
+import { rgba } from 'emotion-rgba';
+import { baseFontFamily, colors } from '../../variables';
 import { IconSpinner } from '../Icon';
 
 const styles = {
@@ -9,7 +11,7 @@ const styles = {
     border: solid 1px;
     border-radius: 4px;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 14px;
     line-height: 22px;
     transition-timing-function: ease-in-out;
@@ -22,9 +24,9 @@ const styles = {
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      border-color: #d9d9d9;
+      border-color: ${colors.intentBase};
       color: #bfbfbf;
-      background-color: #f3f3f3;
+      background-color: ${colors.intentBaseBg};
       box-shadow: none;
       cursor: default;
     }
@@ -103,7 +105,7 @@ const styles = {
 
 const intentStyles = {
   base: css`
-    border-color: #d9d9d9;
+    border-color: ${colors.intentBase};
     background-color: white;
     color: rgba(0, 0, 0, 0.65);
 
@@ -114,52 +116,52 @@ const intentStyles = {
   `,
 
   primary: css`
-    border-color: #f5222d;
-    background-color: #f5222d;
+    border-color: ${colors.intentPrimary};
+    background-color: ${colors.intentPrimary};
     color: #ffffff;
 
     &:focus,
     &:hover {
-      box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
+      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
     }
   `,
 
   secondary: css`
-    border-color: rgba(245, 34, 45, 0.25);
+    border-color: ${rgba(colors.intentPrimary, 0.25)};
     background-color: white;
-    color: rgba(245, 34, 45, 0.65);
+    color: ${rgba(colors.intentPrimary, 0.65)};
 
     &:focus,
     &:hover {
-      border-color: #f5222d;
-      color: #f5222d;
-      box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
+      border-color: ${colors.intentPrimary};
+      color: ${colors.intentPrimary};
+      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
     }
   `,
 
   iconic: css`
     border-color: transparent;
     background-color: transparent;
-    color: rgba(245, 34, 45, 0.65);
+    color: ${rgba(colors.intentPrimary, 0.65)};
 
     &:focus,
     &:hover {
-      border-color: rgba(217, 217, 217, 0.45);
-      color: #f5222d;
-      box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
+      border-color: ${rgba(colors.intentBase, 0.45)};
+      color: ${colors.intentPrimary};
+      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
     }
   `,
 
   plain: css`
     border-color: transparent;
     background-color: transparent;
-    color: rgba(245, 34, 45, 0.65);
+    color: ${rgba(colors.intentPrimary, 0.65)};
 
     &:focus,
     &:hover {
-      border-color: #f5222d;
-      color: #f5222d;
-      box-shadow: 0px 10px 15px rgba(245, 34, 45, 0.15);
+      border-color: ${colors.intentPrimary};
+      color: ${colors.intentPrimary};
+      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
     }
   `
 };
@@ -167,8 +169,8 @@ const intentStyles = {
 const intentActiveStyles = {
   base: css`
     &:active {
-      border-color: rgba(217, 217, 217, 0.45);
-      background-color: #fafafa;
+      border-color: ${rgba(colors.intentBase, 0.45)};
+      background-color: ${colors.intentBaseActive};
       color: rgba(0, 0, 0, 0.65);
       box-shadow: none;
     }
@@ -176,33 +178,33 @@ const intentActiveStyles = {
 
   primary: css`
     &:active {
-      border-color: #cf1322;
-      background-color: #cf1322;
+      border-color: ${colors.activeAction};
+      background-color: ${colors.activeAction};
       box-shadow: none;
     }
   `,
 
   secondary: css`
     &:active {
-      border-color: #cf1322;
-      color: #cf1322;
+      border-color: ${colors.activeAction};
+      color: ${colors.activeAction};
       box-shadow: none;
     }
   `,
 
   iconic: css`
     &:active {
-      border-color: #fafafa;
-      background-color: #fafafa;
-      color: #cf1322;
+      border-color: ${colors.intentBaseActive};
+      background-color: ${colors.intentBaseActive};
+      color: ${colors.activeAction};
       box-shadow: none;
     }
   `,
 
   plain: css`
     &:active {
-      border-color: #cf1322;
-      color: #cf1322;
+      border-color: ${colors.activeAction};
+      color: ${colors.activeAction};
       box-shadow: none;
     }
   `
@@ -210,17 +212,17 @@ const intentActiveStyles = {
 
 const intentLoadingStyles = {
   base: css`
-    border-color: #d9d9d9;
+    border-color: ${colors.intentBase};
   `,
   primary: css``,
   secondary: css`
-    border-color: #f5222d;
+    border-color: ${colors.intentPrimary};
   `,
   iconic: css`
-    border-color: rgba(217, 217, 217, 0.45);
+    border-color: ${rgba(colors.intentBase, 0.45)};
   `,
   plain: css`
-    border-color: #f5222d;
+    border-color: ${colors.intentPrimary};
   `
 };
 
@@ -232,13 +234,13 @@ const spinnerStyles = {
     fill: #ffffff;
   `,
   secondary: css`
-    fill: #CF1322;
+    fill: ${colors.activeAction};
   `,
   iconic: css`
-    fill: #CF1322;
+    fill: ${colors.activeAction};
   `,
   plain: css`
-    fill: #CF1322;
+    fill: ${colors.activeAction};
   `
 };
 

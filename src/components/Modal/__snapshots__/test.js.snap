@@ -14,7 +14,7 @@ exports[`Modal renders modal with form 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-1lp09sp"
+      className="css-1hc1w8l"
     >
       Configure server
     </h2>
@@ -37,23 +37,23 @@ exports[`Modal renders modal with form 1`] = `
           className="css-13kfgn1"
         >
           <span
-            className="css-1nfc84n"
+            className="css-xq84wq"
           >
             First input
             :
           </span>
         </div>
         <div
-          className="css-10q6wfl"
+          className="css-evmp0d"
         >
           <input
-            className="css-72cois"
+            className="css-80przw"
             onBlur={[Function]}
             onFocus={[Function]}
           />
         </div>
         <p
-          className="css-12oe7my"
+          className="css-1c9fjq5"
         />
       </label>
     </div>
@@ -67,7 +67,7 @@ exports[`Modal renders modal with form 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-f4qvvk"
+            className="css-e7ftki"
             type="submit"
           >
             Accept
@@ -77,7 +77,7 @@ exports[`Modal renders modal with form 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-7mp4vg"
+            className="css-tn4srk"
             onClick={[Function]}
             type="button"
           >
@@ -106,7 +106,7 @@ exports[`Modal renders modal with large text 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-1lp09sp"
+      className="css-1hc1w8l"
     >
       Configure server
     </h2>
@@ -137,7 +137,7 @@ exports[`Modal renders modal with large text 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-f4qvvk"
+              className="css-e7ftki"
               type="button"
             >
               Accept
@@ -147,7 +147,7 @@ exports[`Modal renders modal with large text 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-7mp4vg"
+              className="css-tn4srk"
               type="button"
             >
               Decline
@@ -176,7 +176,7 @@ exports[`Modal renders modal with tabs 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-1lp09sp"
+      className="css-1hc1w8l"
     >
       Configure server
     </h2>
@@ -199,19 +199,19 @@ exports[`Modal renders modal with tabs 1`] = `
           className="css-0"
         >
           <button
-            className="css-bni6hn"
+            className="css-1x95u6o"
             onClick={[Function]}
           >
             Create Replica Set
           </button>
           <button
-            className="css-12wk8l0"
+            className="css-ru39lv"
             onClick={[Function]}
           >
             Join Replica Set
           </button>
           <button
-            className="css-12wk8l0"
+            className="css-ru39lv"
             onClick={[Function]}
           >
             Bad example tab
@@ -237,7 +237,7 @@ exports[`Modal renders modal with tabs 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-f4qvvk"
+              className="css-e7ftki"
               type="button"
             >
               Accept
@@ -247,7 +247,7 @@ exports[`Modal renders modal with tabs 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-7mp4vg"
+              className="css-tn4srk"
               type="button"
             >
               Decline
@@ -276,7 +276,7 @@ exports[`Modal renders simple modal 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-1lp09sp"
+      className="css-1hc1w8l"
     >
       Simple Modal
     </h2>
@@ -307,7 +307,7 @@ exports[`Modal renders simple modal 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-f4qvvk"
+              className="css-e7ftki"
               type="button"
             >
               Accept
@@ -317,7 +317,7 @@ exports[`Modal renders simple modal 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-7mp4vg"
+              className="css-tn4srk"
               type="button"
             >
               Decline

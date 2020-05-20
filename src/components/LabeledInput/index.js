@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 import { Input } from '../Input';
 import { Text } from '../Text';
 import { Tooltip } from '../Tooltip';
@@ -39,7 +40,7 @@ const styles = {
     min-height: 20px;
   `,
   errorMessage: css`
-    color: #F5222D;
+    color: ${colors.intentDanger};
   `
 };
 

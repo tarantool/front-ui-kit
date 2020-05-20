@@ -2,26 +2,28 @@
 import * as React from 'react';
 import { createRef } from 'react';
 import { css, cx } from 'react-emotion';
+import { rgba } from 'emotion-rgba';
+import { baseFontFamily, colors } from '../../variables';
 import { IconCancel } from '../Icon';
 
 const styles = {
   outer: css`
     position: relative;
-    border: solid 1px #D9D9D9;
+    border: solid 1px ${colors.intentBase};
     box-sizing: border-box;
     border-radius: 4px;
     background-color: #ffffff;
   `,
   disabled: css`
-    background-color: #F3F3F3;
+    background-color: ${colors.intentBaseBg};
   `,
   focused: css`
     border-color: rgba(0, 0, 0, 0.26);
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.24);
   `,
   error: css`
-    border-color: #F5222D;
-    box-shadow: 0px 0px 3px rgba(245, 34, 45, 0.65);
+    border-color: ${colors.intentDanger};
+    box-shadow: 0px 0px 3px ${rgba(colors.intentDanger, 0.65)};
   `,
   input: css`
     display: block;
@@ -31,7 +33,7 @@ const styles = {
     padding: 5px 16px;
     box-sizing: border-box;
     border-radius: 3px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${baseFontFamily};
     font-size: 14px;
     line-height: 22px;
     color: rgba(0, 0, 0, 0.65);

@@ -81,6 +81,8 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconCancel className={className} />
     <IconCheckbox className={className} />
     <IconCheckbox checked className={className} />
+    <IconCheckbox className={className} disabled />
+    <IconCheckbox checked className={className} disabled />
     <IconChevron className={className} />
     <IconChevron direction='down' className={className} />
     <IconChevron direction='left' className={className} />
@@ -111,6 +113,8 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconOk className={className} />
     <IconRadio className={className} />
     <IconRadio checked className={className} />
+    <IconRadio className={className} disabled />
+    <IconRadio checked className={className} disabled />
     <IconRefresh className={className} />
     <IconSchema className={className} />
     <IconSearch className={className} />
