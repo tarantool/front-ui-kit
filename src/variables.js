@@ -44,5 +44,6 @@ export const zIndex = {
   inline: 1,
   fixedSplash: 50, // maybe 300 (see login modal)
   modal: 100,
+  dropdownMenu: 150,
   tooltip: 200
 };
