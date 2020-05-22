@@ -47,3 +47,4 @@ export * from './components/TiledList';
 export * from './components/Tooltip';
 export * from './components/UriLabel';
 export * from './images';
+export * from './variables';
