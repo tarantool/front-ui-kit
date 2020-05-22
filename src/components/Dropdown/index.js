@@ -25,6 +25,7 @@ const styles = {
     background-color: #ffffff;
     z-index: ${zIndex.dropdownMenu};
     box-sizing: border-box;
+    user-select: none;
   `,
   item: (color = defaultListItemColor) => css`
     padding: 0 16px;
@@ -143,6 +144,8 @@ export const withDropdown = (
       }
     }
 
+    handlePopoverMouseDown = (event: MouseEvent)=> event.stopPropagation();
+
     toggleDropdown = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
 
     renderPopover = () => {
@@ -156,6 +159,7 @@ export const withDropdown = (
             popoverClassName
           )}
           onClick={this.handlePopoverClick}
+          onMouseDown={this.handlePopoverMouseDown}
           style={{
             left,
             top

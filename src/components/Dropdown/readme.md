@@ -5,7 +5,12 @@ The `Dropdown` component adds an additional `<div>` wrap and may be removed in t
 import { css } from 'emotion';
 import { Dropdown, DropdownItem, withDropdown } from './index';
 import { Button } from '../Button';
+import { Modal } from '../Modal';
 import { IconCancel, IconMore } from '../Icon';
+
+const initialState = { modalOpened: false };
+
+const toggleModal = () => setState(({ modalOpened }) => ({ modalOpened: !modalOpened }));
 
 const items = (
   <>
@@ -38,5 +43,10 @@ const DropdownButton = withDropdown(Button);
 
   <DropdownButton items={items} icon={IconMore} intent='iconic' />
   <DropdownButton items={items} text='Another Dropdown' />
+  <Button text='Open modal' onClick={toggleModal} />
+  <Modal onClose={toggleModal} visible={state.modalOpened} title='Modal'>
+    Modal content
+    <DropdownButton items={items} text='Dropdown' />
+  </Modal>
 </div>
 ```
