@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Refactor Dropdown using react portal. Added `withDropdown` HOC.
 
+- Added preloader in ConfirmModal
+
 ## [0.16.0] - 2020-04-24
 
 - Update letter spacing in Text styles

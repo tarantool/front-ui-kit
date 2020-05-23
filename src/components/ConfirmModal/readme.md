@@ -1,10 +1,14 @@
-```
+```js
 import { Button } from '../Button';
 
-initialState = { opened: false };
+initialState = { loading: false, opened: false };
 
 const openModal = () => setState({ opened: true });
 const closeModal = () => setState({ opened: false });
+const apply = () => {
+  setState({ loading: true });
+  setTimeout(() => setState({ loading: false, opened: false }), 1200);
+};
 
 <>
   <Button onClick={openModal} text='Open ConfirmModal' />
@@ -12,8 +16,9 @@ const closeModal = () => setState({ opened: false });
     title="Please confirm"
     visible={state.opened}
     onCancel={closeModal}
-    onConfirm={console.log}
+    onConfirm={apply}
     confirmText="Remove"
+    confirmPreloader={state.loading}
   >
     Removing user John Appleseed
   </ConfirmModal>
