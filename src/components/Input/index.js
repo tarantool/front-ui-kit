@@ -8,7 +8,7 @@ import { IconCancel } from '../Icon';
 
 const styles = {
   outer: css`
-    position: relative;
+    display: flex;
     border: solid 1px ${colors.intentBase};
     box-sizing: border-box;
     border-radius: 4px;
@@ -52,10 +52,7 @@ const styles = {
     padding: 5px 32px 5px 16px;
   `,
   iconWrap: css`
-    position: absolute;
-    top: 7px;
-    right: 7px;
-    bottom: 7px;
+    margin-right: 7px;
     display: flex;
     align-items: center;
   `,
