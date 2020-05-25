@@ -69,7 +69,17 @@ const dropdownExample = (
       title='Input'
     />
   </div>
+
   <div style={{ margin: '12px' }}>
+    <Input
+      value={state.value}
+      placeholder={'Filter by uri, uuid, role, alias or labels'}
+      onChange={handleChange}
+      rightIcon={<IconSearch />}
+    />
+  </div>
+
+  <div style={{ width: '250px', margin: '12px' }}>
     <Input
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
@@ -81,6 +91,7 @@ const dropdownExample = (
   <div style={{ margin: '12px' }}>
     <Text>With left-/rightElement:</Text>
   </div>
+
   <div style={{ margin: '12px' }}>
     <Input
       value={state.value}
@@ -93,6 +104,16 @@ const dropdownExample = (
   </div>
 
   <div style={{ margin: '12px' }}>
+    <Input
+      value={state.value}
+      placeholder={'Filter by uri, uuid, role, alias or labels'}
+      onChange={handleChange}
+      rightIcon={<IconSearch />}
+      rightElement={dropdownExample}
+    />
+  </div>
+
+  <div style={{ width: '250px', margin: '12px' }}>
     <Input
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}

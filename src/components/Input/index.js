@@ -9,6 +9,7 @@ import { IconCancel } from '../Icon';
 const styles = {
   outer: css`
     display: flex;
+    height: 32px;
     border: solid 1px ${colors.intentBase};
     box-sizing: border-box;
     border-radius: 4px;
@@ -36,6 +37,7 @@ const styles = {
     display: block;
     align-self: stretch;
     width: 100%;
+    min-width: 0;
     height: 100%;
     border: 0;
     padding: 5px 16px;
@@ -49,7 +51,7 @@ const styles = {
     outline: none;
   `,
   inputWithIcon: css`
-    padding: 5px 32px 5px 16px;
+    padding: 5px 8px 5px 16px;
   `,
   iconWrap: css`
     margin-right: 7px;
@@ -59,6 +61,7 @@ const styles = {
   withLeftElement: css`
     & > :first-child {
       align-self: stretch;
+      flex-shrink: 0;
       margin: -1px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -67,6 +70,7 @@ const styles = {
   withRightElement: css`
     & > :last-child {
       align-self: stretch;
+      flex-shrink: 0;
       margin: -1px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;

@@ -3,11 +3,11 @@
 exports[`Input simple 1`] = `
 Array [
   <div
-    className="css-b4lojo"
+    className="css-1magbpr"
     title="Input"
   >
     <input
-      className="css-1d8i2ty"
+      className="css-pjcgvs"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -16,10 +16,10 @@ Array [
     />
   </div>,
   <div
-    className="css-b4lojo"
+    className="css-1magbpr"
   >
     <input
-      className="css-gf5wl6"
+      className="css-3inftk"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -45,7 +45,7 @@ Array [
 exports[`Input with left-/rightElement 1`] = `
 Array [
   <div
-    className="css-v9bvhy"
+    className="css-t0xct3"
   >
     <button
       className="css-is0nsl"
@@ -63,7 +63,7 @@ Array [
       </svg>
     </button>
     <input
-      className="css-1ska3ae"
+      className="css-xgo562"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -85,10 +85,10 @@ Array [
     </div>
   </div>,
   <div
-    className="css-1nk6kt6"
+    className="css-zqsia"
   >
     <input
-      className="css-1ska3ae"
+      className="css-xgo562"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
