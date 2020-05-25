@@ -51,5 +51,19 @@ const changeState = () => setState({ loading: !state.loading });
     <Button loading={state.loading} intent='secondary' size='s' icon={IconOk}>Click me</Button>
     <Button loading={state.loading} disabled size='s' icon={IconOk}>Click me</Button>
   </div>
+
+  <Text>With icons to the right:</Text>
+  <div style={{ padding: '12px' }}>
+    <Button loading={state.loading} size='s' iconRight={IconOk}>Click me</Button>
+    <Button loading={state.loading} intent='primary' size='s' iconRight={IconOk}>Click me</Button>
+    <Button loading={state.loading} intent='secondary' size='s' iconRight={IconOk}>Click me</Button>
+    <Button loading={state.loading} disabled size='s' iconRight={IconOk}>Click me</Button>
+  </div>
+  <div style={{ padding: '12px' }}>
+    <Button loading={state.loading} size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
+    <Button loading={state.loading} intent='primary' size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
+    <Button loading={state.loading} intent='secondary' size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
+    <Button loading={state.loading} disabled size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
+  </div>
 </>
 ```

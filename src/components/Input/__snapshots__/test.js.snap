@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input simple 1`] = `
+Array [
+  <div
+    className="css-1magbpr"
+    title="Input"
+  >
+    <input
+      className="css-pjcgvs"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      placeholder="Placeholder"
+      value="value"
+    />
+  </div>,
+  <div
+    className="css-1magbpr"
+  >
+    <input
+      className="css-3inftk"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      placeholder="Filter by uri, uuid, role, alias or labels"
+      value="value"
+    />
+    <div
+      className="css-jgwfcl"
+    >
+      <svg
+        className="css-31a2qf"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#search"
+        />
+      </svg>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Input with left-/rightElement 1`] = `
+Array [
+  <div
+    className="css-t0xct3"
+  >
+    <button
+      className="css-is0nsl"
+      onClick={[Function]}
+      type="button"
+    >
+      Filter
+      <svg
+        className="css-1nldcbc"
+        viewBox="0 0 14 14"
+      >
+        <use
+          xlinkHref="#chevron-up"
+        />
+      </svg>
+    </button>
+    <input
+      className="css-xgo562"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      placeholder="Filter by uri, uuid, role, alias or labels"
+      value="value"
+    />
+    <div
+      className="css-jgwfcl"
+    >
+      <svg
+        className="css-1grsr1t"
+        onClick={[Function]}
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#cancel"
+        />
+      </svg>
+    </div>
+  </div>,
+  <div
+    className="css-zqsia"
+  >
+    <input
+      className="css-xgo562"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      placeholder="Filter by uri, uuid, role, alias or labels"
+      value="value"
+    />
+    <div
+      className="css-jgwfcl"
+    >
+      <svg
+        className="css-31a2qf"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#search"
+        />
+      </svg>
+    </div>
+    <button
+      className="css-is0nsl"
+      onClick={[Function]}
+      type="button"
+    >
+      Filter
+      <svg
+        className="css-1nldcbc"
+        viewBox="0 0 14 14"
+      >
+        <use
+          xlinkHref="#chevron-up"
+        />
+      </svg>
+    </button>
+  </div>,
+]
+`;

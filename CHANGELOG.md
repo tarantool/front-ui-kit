@@ -11,7 +11,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Refactor Dropdown using react portal. Added `withDropdown` HOC.
 
+- Added DropdownDivider
+
 - Added preloader in ConfirmModal
+
+- Added `leftElement` & `rightElement` props to Input
+
+- Added `rightIcon` prop to Button
 
 ## [0.16.0] - 2020-04-24
 

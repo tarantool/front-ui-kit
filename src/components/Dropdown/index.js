@@ -26,10 +26,10 @@ const styles = {
     z-index: ${zIndex.dropdownMenu};
     box-sizing: border-box;
     user-select: none;
+    list-style: none;
   `,
   item: (color = defaultListItemColor) => css`
     padding: 0 16px;
-    list-style: none;
     line-height: 32px;
     white-space: nowrap;
     color: ${color};
@@ -38,6 +38,10 @@ const styles = {
       cursor: pointer;
       background-color: ${colors.intentBaseActive};
     }
+  `,
+  divider: css`
+    border-bottom: 1px solid ${colors.intentBaseBg};
+    margin: 3px 8px 4px;
   `
 }
 
@@ -48,7 +52,7 @@ type DropdownItemProps = {
   onClick?: (e: MouseEvent) => void
 }
 
-type withDropdownProps = {
+export type withDropdownProps = {
   className?: string, // trigger wrapper class
   popoverClassName?: string,
   onClick?: (e: MouseEvent) => void,
@@ -227,4 +231,17 @@ export const DropdownItem = (
   <li {...props} className={cx(textStyles.basic, styles.item(color), className)}>
     {children}
   </li>
+);
+
+type DropdownDividerProps = { className?: string };
+
+export const DropdownDivider = (
+  {
+    className
+  }: DropdownDividerProps
+) => (
+  <li
+    className={cx(styles.divider, className)}
+    onClick={e => e.stopPropagation()}
+  />
 );

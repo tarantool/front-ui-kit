@@ -8,7 +8,8 @@ import { IconCancel } from '../Icon';
 
 const styles = {
   outer: css`
-    position: relative;
+    display: flex;
+    height: 32px;
     border: solid 1px ${colors.intentBase};
     box-sizing: border-box;
     border-radius: 4px;
@@ -25,9 +26,18 @@ const styles = {
     border-color: ${colors.intentDanger};
     box-shadow: 0px 0px 3px ${rgba(colors.intentDanger, 0.65)};
   `,
+  outerWithAddition: css`
+    display: flex;
+  `,
+  inputWithAddition: css`
+    width: auto;
+    flex-grow: 1;
+  `,
   input: css`
     display: block;
+    align-self: stretch;
     width: 100%;
+    min-width: 0;
     height: 100%;
     border: 0;
     padding: 5px 16px;
@@ -41,15 +51,30 @@ const styles = {
     outline: none;
   `,
   inputWithIcon: css`
-    padding: 5px 32px 5px 16px;
+    padding: 5px 8px 5px 16px;
   `,
   iconWrap: css`
-    position: absolute;
-    top: 7px;
-    right: 7px;
-    bottom: 7px;
+    margin-right: 7px;
     display: flex;
     align-items: center;
+  `,
+  withLeftElement: css`
+    & > :first-child {
+      align-self: stretch;
+      flex-shrink: 0;
+      margin: -1px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  `,
+  withRightElement: css`
+    & > :last-child {
+      align-self: stretch;
+      flex-shrink: 0;
+      margin: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   `
 };
 
@@ -75,7 +100,9 @@ export type InputProps = {
   title?: string,
   type?: 'text' | 'password' | 'email' | 'number',
   value?: string,
-  placeholder?: string
+  placeholder?: string,
+  leftElement: React.Node,
+  rightElement: React.Node
 };
 
 type InputState = {
@@ -119,11 +146,14 @@ export class Input extends React.Component<InputProps, InputState> {
       type,
       value,
       placeholder,
+      leftElement,
+      rightElement,
       ...props
     } = this.props;
 
     const { focused } = this.state;
 
+    const hasAddition = !!leftElement || !!rightElement;
     return (
       <div
         className={cx(
@@ -131,17 +161,24 @@ export class Input extends React.Component<InputProps, InputState> {
           {
             [styles.disabled]: disabled,
             [styles.focused]: focused,
-            [styles.error]: error
+            [styles.error]: error,
+            [styles.outerWithAddition]: hasAddition,
+            [styles.withLeftElement]: !!leftElement,
+            [styles.withRightElement]: !!rightElement
           },
           className
         )}
         title={title}
       >
+        {leftElement}
         <input
           {...props}
           autoFocus={autoFocus}
           autoComplete={autoComplete}
-          className={cx(styles.input, { [styles.inputWithIcon]: rightIcon || onClearClick })}
+          className={cx(styles.input, {
+            [styles.inputWithAddition]: hasAddition,
+            [styles.inputWithIcon]: rightIcon || onClearClick
+          })}
           disabled={disabled}
           name={name}
           onChange={onChange}
@@ -166,6 +203,8 @@ export class Input extends React.Component<InputProps, InputState> {
               : rightIcon}
           </div>
         )}
+
+        {rightElement}
       </div>
     );
   }

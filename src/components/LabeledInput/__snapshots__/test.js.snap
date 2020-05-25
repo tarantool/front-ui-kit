@@ -32,11 +32,11 @@ Array [
       </span>
     </div>
     <div
-      className="css-1at0a8"
+      className="css-h4nubo"
       title="Input"
     >
       <input
-        className="css-80przw"
+        className="css-pjcgvs"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -69,11 +69,11 @@ Array [
       </span>
     </div>
     <div
-      className="css-evmp0d"
+      className="css-142sba0"
       title="Input"
     >
       <input
-        className="css-1kf2sdk"
+        className="css-3inftk"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -82,7 +82,7 @@ Array [
         value="qwertyuiop"
       />
       <div
-        className="css-18knne"
+        className="css-jgwfcl"
       >
         <button
           className="css-1hyvx7m"
@@ -123,11 +123,11 @@ Array [
       </span>
     </div>
     <div
-      className="css-evmp0d"
+      className="css-142sba0"
       title="Input"
     >
       <input
-        className="css-80przw"
+        className="css-pjcgvs"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
