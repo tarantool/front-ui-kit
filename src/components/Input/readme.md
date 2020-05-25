@@ -3,7 +3,7 @@ import { css, cx } from 'emotion';
 import { IconSearch } from '../Icon';
 import {
   Text,
-  Dropdown,
+  withDropdown,
   DropdownItem,
   DropdownDivider,
   Button,
@@ -18,6 +18,8 @@ handleChange = e => setState({ value: e.target.value });
 const handleSelect = value => setState({ value });
 const handleInput = e => setState({ value: e.target.value });
 
+const DropdownButton = withDropdown(Button);
+
 const getDropdownOption = (prefix) => (option) => (
   <DropdownItem onClick={() => handleSelect(`${prefix}:${option.indexOf(' ') !== -1 ? `"${option}"` : option}`)}>{option}</DropdownItem>
 );
@@ -29,48 +31,34 @@ const DropdownControlIcon = ({ className }) => (
   />
 );
 
-const getDropdownExample = (isRightElement = false) => (
-  <Dropdown items={(
-    <Scrollbar className={css`height: 200px; width: 10em;`}>
-    {
-      [
-        'Healthy',
-        'Unhealthy',
-      ].map(getDropdownOption('status'))
-    }
-    <DropdownDivider />
-    {
-      [
-        'Stateful Connector',
-        'Input_processor',
-        'Connector',
-        'Scheduler',
-        'Storage',
-        'Task_runner',
-      ].map(getDropdownOption('role'))
-    }
-  </Scrollbar>
-)}>
-    <Button
-      className={isRightElement ?
-        css`
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          height: 2.4em;
-        `
-        :
-        css`
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-          height: 2.4em;
-        `
-      }
-      intent='secondary'
-      iconRight={DropdownControlIcon}
-    >
-      Filter
-    </Button>
-  </Dropdown>
+const dropdownExample = (
+  <DropdownButton
+    items={(
+      <Scrollbar className={css`height: 200px; width: 10em;`}>
+        {
+          [
+            'Healthy',
+            'Unhealthy',
+          ].map(getDropdownOption('status'))
+        }
+        <DropdownDivider />
+        {
+          [
+            'Stateful Connector',
+            'Input_processor',
+            'Connector',
+            'Scheduler',
+            'Storage',
+            'Task_runner',
+          ].map(getDropdownOption('role'))
+        }
+      </Scrollbar>
+    )}
+    intent='secondary'
+    iconRight={DropdownControlIcon}
+  >
+    Filter
+  </DropdownButton>
 );
 
 <>
@@ -96,7 +84,7 @@ const getDropdownExample = (isRightElement = false) => (
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       rightIcon={<IconSearch />}
-      leftElement={getDropdownExample()}
+      leftElement={dropdownExample}
     />
 
     <Input
@@ -104,7 +92,7 @@ const getDropdownExample = (isRightElement = false) => (
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       rightIcon={<IconSearch />}
-      rightElement={getDropdownExample(true)}
+      rightElement={dropdownExample}
     />
   </div>
 </>

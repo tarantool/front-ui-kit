@@ -34,7 +34,7 @@ const styles = {
   `,
   input: css`
     display: block;
-    align-self: center;
+    align-self: stretch;
     width: 100%;
     height: 100%;
     border: 0;
@@ -58,6 +58,22 @@ const styles = {
     bottom: 7px;
     display: flex;
     align-items: center;
+  `,
+  withLeftElement: css`
+    & > :first-child {
+      align-self: stretch;
+      margin: -1px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  `,
+  withRightElement: css`
+    & > :last-child {
+      align-self: stretch;
+      margin: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   `
 };
 
@@ -146,6 +162,8 @@ export class Input extends React.Component<InputProps, InputState> {
             [styles.focused]: focused,
             [styles.error]: error,
             [styles.outerWithAddition]: hasAddition,
+            [styles.withLeftElement]: !!leftElement,
+            [styles.withRightElement]: !!rightElement
           },
           className
         )}

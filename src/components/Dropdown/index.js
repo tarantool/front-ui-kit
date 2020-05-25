@@ -26,10 +26,10 @@ const styles = {
     z-index: ${zIndex.dropdownMenu};
     box-sizing: border-box;
     user-select: none;
+    list-style: none;
   `,
   item: (color = defaultListItemColor) => css`
     padding: 0 16px;
-    list-style: none;
     line-height: 32px;
     white-space: nowrap;
     color: ${color};
@@ -40,9 +40,8 @@ const styles = {
     }
   `,
   divider: css`
-    border-bottom: 1px solid ${colors.intentBase};
-    height: 1px;
-    margin: 0 10px;
+    border-bottom: 1px solid ${colors.intentBaseBg};
+    margin: 3px 8px 4px;
   `
 }
 
@@ -234,16 +233,15 @@ export const DropdownItem = (
   </li>
 );
 
-type DropdownDeviderProps = { className: ClassNameArg };
+type DropdownDividerProps = { className: ClassNameArg };
 
 export const DropdownDivider = (
   {
     className
-  }: DropdownDeviderProps
+  }: DropdownDividerProps
 ) => (
   <li
     className={cx(styles.divider, className)}
     onClick={e => e.stopPropagation()}
-  >
-  </li>
+  />
 );

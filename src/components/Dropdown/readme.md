@@ -3,7 +3,7 @@ The `Dropdown` component adds an additional `<div>` wrap and may be removed in t
 
 ```js
 import { css } from 'emotion';
-import { Dropdown, DropdownItem, withDropdown } from './index';
+import { Dropdown, DropdownItem, DropdownDivider, withDropdown } from './index';
 import { Button } from '../Button';
 import { Modal } from '../Modal';
 import { IconCancel, IconMore } from '../Icon';
@@ -18,6 +18,7 @@ const items = (
     <DropdownItem onClick={() => console.log('Clicked Item 2')}>Item 2</DropdownItem>
     <DropdownItem onClick={() => console.log('Clicked Item 3')}>Item 3</DropdownItem>
     <DropdownItem onClick={() => console.log('Clicked Item 3')}>Item 4</DropdownItem>
+    <DropdownDivider />
     <DropdownItem onClick={() => console.log('Clicked Item 3')}>Item 5</DropdownItem>
     <DropdownItem onClick={() => console.log('Clicked Item 3')}>Item 6</DropdownItem>
   </>

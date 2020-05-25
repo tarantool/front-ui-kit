@@ -47,7 +47,7 @@ exports[`Modal renders modal with form 1`] = `
           className="css-evmp0d"
         >
           <input
-            className="css-18npy2s"
+            className="css-1d8i2ty"
             onBlur={[Function]}
             onFocus={[Function]}
           />

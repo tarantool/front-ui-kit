@@ -306,10 +306,10 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
   if (IconRight && !isOnlyIcon) {
     content.push(
       <IconRight
-        className={cx([
+        className={cx(
           styles.icon,
           styles.iconRightMargin
-        ])}
+        )}
       />
     )
   }
