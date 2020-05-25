@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { css, cx, type ClassNameArg } from 'emotion';
+import { css, cx } from 'emotion';
 import { colors, zIndex } from '../../variables';
 import { Button } from '../Button';
 import { IconMore } from '../Icon';
@@ -233,7 +233,7 @@ export const DropdownItem = (
   </li>
 );
 
-type DropdownDividerProps = { className: ClassNameArg };
+type DropdownDividerProps = { className?: string };
 
 export const DropdownDivider = (
   {

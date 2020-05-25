@@ -1,6 +1,5 @@
 ```js
 import { css, cx } from 'emotion';
-import { IconSearch } from '../Icon';
 import {
   Text,
   withDropdown,
@@ -9,15 +8,14 @@ import {
   Button,
   Scrollbar,
   IconChevron,
+  IconSearch
 } from '../../index';
 
 initialState = { value: 'Value' };
 
-handleChange = e => setState({ value: e.target.value });
-handleClear = () => setState({ value: '' });
-
+const handleChange = e => setState({ value: e.target.value });
+const handleClear = () => setState({ value: '' });
 const handleSelect = value => setState({ value });
-const handleInput = e => setState({ value: e.target.value });
 
 const DropdownButton = withDropdown(Button);
 
@@ -63,13 +61,15 @@ const dropdownExample = (
 );
 
 <>
-  <div style={{ padding: '12px' }}>
+  <div style={{ margin: '12px' }}>
     <Input
       value={state.value}
       placeholder='Placeholder'
       onChange={handleChange}
       title='Input'
     />
+  </div>
+  <div style={{ margin: '12px' }}>
     <Input
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
@@ -78,8 +78,10 @@ const dropdownExample = (
     />
   </div>
 
-  <Text>With left-/rightElement:</Text>
-  <div style={{ padding: '12px' }}>
+  <div style={{ margin: '12px' }}>
+    <Text>With left-/rightElement:</Text>
+  </div>
+  <div style={{ margin: '12px' }}>
     <Input
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
@@ -88,7 +90,9 @@ const dropdownExample = (
       rightIcon={<IconSearch />}
       leftElement={dropdownExample}
     />
+  </div>
 
+  <div style={{ margin: '12px' }}>
     <Input
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
