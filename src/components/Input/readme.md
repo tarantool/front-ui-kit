@@ -14,6 +14,7 @@ import {
 initialState = { value: 'Value' };
 
 handleChange = e => setState({ value: e.target.value });
+handleClear = () => setState({ value: '' });
 
 const handleSelect = value => setState({ value });
 const handleInput = e => setState({ value: e.target.value });
@@ -83,6 +84,7 @@ const dropdownExample = (
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
+      onClearClick={handleClear}
       rightIcon={<IconSearch />}
       leftElement={dropdownExample}
     />
