@@ -80,6 +80,34 @@ describe('Buttons with icons renders correctly', () => {
         <Button icon={IconOk} size='s' intent='iconic'>Click me</Button>
         <Button icon={IconOk} size='s' intent='plain'>Click me</Button>
         <Button icon={IconOk} size='s' disabled>Click me</Button>
+
+        <Button iconRight={IconOk} title='Click me right meow!'>Click me</Button>
+        <Button iconRight={IconOk} intent='primary'>Click me</Button>
+        <Button iconRight={IconOk} intent='secondary'>Click me</Button>
+        <Button iconRight={IconOk} intent='iconic'>Click me</Button>
+        <Button iconRight={IconOk} intent='plain'>Click me</Button>
+        <Button iconRight={IconOk} disabled>Click me</Button>
+
+        <Button iconRight={IconOk} size='s' title='Click me right meow!'>Click me</Button>
+        <Button iconRight={IconOk} size='s' intent='primary'>Click me</Button>
+        <Button iconRight={IconOk} size='s' intent='secondary'>Click me</Button>
+        <Button iconRight={IconOk} size='s' intent='iconic'>Click me</Button>
+        <Button iconRight={IconOk} size='s' intent='plain'>Click me</Button>
+        <Button iconRight={IconOk} size='s' disabled>Click me</Button>
+
+        <Button icon={IconOk} iconRight={IconOk} title='Click me right meow!'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} intent='primary'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} intent='secondary'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} intent='iconic'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} intent='plain'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} disabled>Click me</Button>
+
+        <Button icon={IconOk} iconRight={IconOk} size='s' title='Click me right meow!'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} size='s' intent='primary'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} size='s' intent='secondary'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} size='s' intent='iconic'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} size='s' intent='plain'>Click me</Button>
+        <Button icon={IconOk} iconRight={IconOk} size='s' disabled>Click me</Button>
       </>
     ).toJSON();
 

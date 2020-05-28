@@ -38,7 +38,15 @@ const styles = {
 
   icon: css`
     margin-bottom: 2px;
+    width: 14px;
+    height: 14px;
   `,
+
+  /* TODO: Add new prop to fill icons in button intent color.
+    Example:
+    fill: ${colors.intentDangerBorder};
+    fill-opacity: 0.65;
+  */
 
   iconMargin: css`
     margin-right: 8px;
