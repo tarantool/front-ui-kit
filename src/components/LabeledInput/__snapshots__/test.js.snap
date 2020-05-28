@@ -9,7 +9,7 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-xq84wq"
+        className="css-rkd6q9"
       >
         Label
         :
@@ -36,7 +36,7 @@ Array [
       title="Input"
     >
       <input
-        className="css-pjcgvs"
+        className="css-1ssefzq"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -45,7 +45,7 @@ Array [
       />
     </div>
     <p
-      className="css-1qy7t6t"
+      className="css-1awbkhz"
     >
       Field is required
     </p>
@@ -57,13 +57,13 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-xq84wq"
+        className="css-rkd6q9"
       >
         Label
         :
       </span>
       <span
-        className="css-1sicp5h"
+        className="css-1cp4gbh"
       >
         Sub title
       </span>
@@ -73,7 +73,7 @@ Array [
       title="Input"
     >
       <input
-        className="css-3inftk"
+        className="css-1kkc718"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -85,7 +85,7 @@ Array [
         className="css-jgwfcl"
       >
         <button
-          className="css-1hyvx7m"
+          className="css-9z9vc8"
           onClick={[Function]}
           type="button"
         >
@@ -101,7 +101,7 @@ Array [
       </div>
     </div>
     <p
-      className="css-1c9fjq5"
+      className="css-194ftfm"
     />
   </label>,
   <label
@@ -111,13 +111,13 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-xq84wq"
+        className="css-rkd6q9"
       >
         Label
         :
       </span>
       <span
-        className="css-1sicp5h"
+        className="css-1cp4gbh"
       >
         Sub title
       </span>
@@ -127,7 +127,7 @@ Array [
       title="Input"
     >
       <input
-        className="css-pjcgvs"
+        className="css-1ssefzq"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -136,7 +136,7 @@ Array [
       />
     </div>
     <p
-      className="css-1c9fjq5"
+      className="css-194ftfm"
     >
       Field is required
     </p>

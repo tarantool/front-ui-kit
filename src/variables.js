@@ -2,7 +2,7 @@
 
 export const marginSmall = '4px';
 
-export const baseFontFamily = `'Open Sans', Arial, sans-serif`;
+export const baseFontFamily = `Inter, Arial, sans-serif`;
 export const monoFontFamily = `'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace`;
 
 export const colors = {
