@@ -7,7 +7,7 @@ Array [
     title="Input"
   >
     <input
-      className="css-pjcgvs"
+      className="css-1ssefzq"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -19,7 +19,7 @@ Array [
     className="css-1magbpr"
   >
     <input
-      className="css-3inftk"
+      className="css-1kkc718"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -48,7 +48,7 @@ Array [
     className="css-t0xct3"
   >
     <button
-      className="css-is0nsl"
+      className="css-r22usi"
       onClick={[Function]}
       type="button"
     >
@@ -63,7 +63,7 @@ Array [
       </svg>
     </button>
     <input
-      className="css-xgo562"
+      className="css-19jk83v"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -88,7 +88,7 @@ Array [
     className="css-zqsia"
   >
     <input
-      className="css-xgo562"
+      className="css-19jk83v"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -108,7 +108,7 @@ Array [
       </svg>
     </div>
     <button
-      className="css-is0nsl"
+      className="css-r22usi"
       onClick={[Function]}
       type="button"
     >

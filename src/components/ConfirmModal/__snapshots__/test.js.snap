@@ -13,7 +13,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-1hc1w8l"
+      className="css-pi59ny"
     >
       Please confirm
     </h2>
@@ -41,7 +41,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-tn4srk"
+            className="css-xhnfgx"
             onClick={[MockFunction]}
             type="button"
           >
@@ -52,7 +52,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-1ndsj8n"
+            className="css-ohrz5q"
             onClick={[MockFunction]}
             type="button"
           >
@@ -93,7 +93,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-1hc1w8l"
+      className="css-pi59ny"
     >
       Please confirm
     </h2>
@@ -121,7 +121,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-tn4srk"
+            className="css-xhnfgx"
             onClick={[MockFunction]}
             type="button"
           >
@@ -132,7 +132,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-e7ftki"
+            className="css-fz07pv"
             onClick={[MockFunction]}
             type="button"
           >
