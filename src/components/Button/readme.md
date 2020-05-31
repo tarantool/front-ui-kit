@@ -1,69 +1,69 @@
 Button example:
 
 ```js
-import { IconOk } from '../Icon';
-import { Switcher } from '../Switcher';
-import { Text } from '../Text';
+import { css, cx } from 'emotion';
+import { ControlsPanel, IconOk, IconChevron, Switcher, Text } from '../../index';
 
-initialState = { loading: false };
+const wrapped = css`margin: 12px;`;
+const label = 'Button';
+const sizes = ['m', 's', 'xs'];
+const intentions = ['primary', 'secondary', 'base', 'iconic', 'plain'];
 
-const changeState = () => setState({ loading: !state.loading });
+const DropdownControlIcon = ({ className }) => (
+  <IconChevron
+    direction='down'
+    className={cx(className, css`fill: rgba(245, 34, 45, 0.65);`)}
+  />
+);
+
+initialState = {
+  loading: false,
+  leftIcon: false,
+  rightIcon: false
+};
+
+const toggleLoading = () => setState({ loading: !state.loading });
+const toggleLeftIcon = () => setState({ leftIcon: !state.leftIcon });
+const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
 
 <>
-  <Switcher onChange={changeState} checked={state.loading}>Loading state</Switcher>
+  <ControlsPanel
+    className={wrapped}
+    controls={[
+      <Switcher onChange={toggleLoading} checked={state.loading}>Loading state</Switcher>,
+      <Switcher onChange={toggleLeftIcon} checked={state.leftIcon}>Left icon</Switcher>,
+      <Switcher onChange={toggleRightIcon} checked={state.rightIcon}>Right icon</Switcher>
+    ]}
+  />
 
-  <Text>Simple buttons:</Text>
-  <div style={{ padding: '12px' }}>
-    <Button loading={state.loading} title='Click me right meow!'>Click me</Button>
-    <Button loading={state.loading} intent='primary'>Click me</Button>
-    <Button loading={state.loading} intent='secondary'>Click me</Button>
-    <Button loading={state.loading} intent='iconic'>Click me</Button>
-    <Button loading={state.loading} intent='plain'>Click me</Button>
-    <Button loading={state.loading} disabled>Click me</Button>
-  </div>
-  <div style={{ padding: '12px' }}>
-    <Button loading={state.loading} size='s'>Click me</Button>
-    <Button loading={state.loading} intent='primary' size='s'>Click me</Button>
-    <Button loading={state.loading} intent='secondary' size='s'>Click me</Button>
-    <Button loading={state.loading} intent='iconic' size='s'>Click me</Button>
-    <Button loading={state.loading} intent='plain' size='s'>Click me</Button>
-    <Button loading={state.loading} disabled size='s'>Click me</Button>
-  </div>
-  <div style={{ padding: '12px' }}>
-    <Button loading={state.loading} size='xs'>Click me</Button>
-    <Button loading={state.loading} intent='primary' size='xs'>Click me</Button>
-    <Button loading={state.loading} intent='secondary' size='xs'>Click me</Button>
-    <Button loading={state.loading} intent='iconic' size='xs'>Click me</Button>
-    <Button loading={state.loading} intent='plain' size='xs'>Click me</Button>
-    <Button loading={state.loading} disabled size='xs'>Click me</Button>
-  </div>
-
-  <Text>With icons:</Text>
-  <div style={{ padding: '12px' }}>
-    <Button loading={state.loading} icon={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='primary' icon={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='secondary' icon={IconOk}>Click me</Button>
-    <Button loading={state.loading} disabled icon={IconOk}>Click me</Button>
-  </div>
-  <div style={{ padding: '12px' }}>
-    <Button loading={state.loading} size='s' icon={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='primary' size='s' icon={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='secondary' size='s' icon={IconOk}>Click me</Button>
-    <Button loading={state.loading} disabled size='s' icon={IconOk}>Click me</Button>
-  </div>
-
-  <Text>With icons to the right:</Text>
-  <div style={{ padding: '12px' }}>
-    <Button loading={state.loading} size='s' iconRight={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='primary' size='s' iconRight={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='secondary' size='s' iconRight={IconOk}>Click me</Button>
-    <Button loading={state.loading} disabled size='s' iconRight={IconOk}>Click me</Button>
-  </div>
-  <div style={{ padding: '12px' }}>
-    <Button loading={state.loading} size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='primary' size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
-    <Button loading={state.loading} intent='secondary' size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
-    <Button loading={state.loading} disabled size='s' icon={IconOk} iconRight={IconOk}>Click me</Button>
-  </div>
+  {sizes.map(size => (
+    <div>
+      {intentions.map(intent => (
+        <Button
+          className={wrapped}
+          icon={state.leftIcon && IconOk}
+          iconRight={state.rightIcon && (intent === 'primary' ? IconChevron : DropdownControlIcon)}
+          intent={intent}
+          loading={state.loading}
+          size={size}
+          text={label}
+          title='Click me right meow!'
+        />
+      ))}
+      <Button
+        className={wrapped}
+        disabled
+        icon={state.leftIcon && IconOk}
+        iconRight={state.rightIcon && DropdownControlIcon}
+        loading={state.loading}
+        size={size}
+        text={label}
+        title='Click me right meow!'
+      />
+    </div>
+  ))}
+  {(state.leftIcon || state.rightIcon) && (
+    <Text className={wrapped} tag='p'>The style guide doesn't recommend to use icons in 'xs' sized buttons.</Text>
+  )}
 </>
 ```

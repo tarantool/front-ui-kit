@@ -174,6 +174,446 @@ Array [
     </svg>
     Click me
   </button>,
+  <button
+    className="css-xhnfgx"
+    title="Click me right meow!"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-fz07pv"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-r22usi"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1lohzum"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1ku0exm"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-13hml7x"
+    disabled={true}
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-f1hm6e"
+    title="Click me right meow!"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-z3qrkx"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-che76u"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1kzr4pr"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-uar280"
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1508rq6"
+    disabled={true}
+    type="button"
+  >
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-xhnfgx"
+    title="Click me right meow!"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-fz07pv"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-r22usi"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1lohzum"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1ku0exm"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-13hml7x"
+    disabled={true}
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-f1hm6e"
+    title="Click me right meow!"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-z3qrkx"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-che76u"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1kzr4pr"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-uar280"
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  <button
+    className="css-1508rq6"
+    disabled={true}
+    type="button"
+  >
+    <svg
+      className="css-16vc0kf"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="css-1i0lh2x"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
 ]
 `;
 
