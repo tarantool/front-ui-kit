@@ -51,8 +51,8 @@ function getSortDirection(isSortedDesc?: boolean) {
   return undefined;
 }
 
-function Table(props: TableProps) {
-  const { rowClassName, codeClassName, columns, data } = props;
+export function Table(props: TableProps) {
+  const { rowClassName, codeClassName, columns = [], data = [] } = props;
 
   const {
     getTableProps,
@@ -107,5 +107,3 @@ function Table(props: TableProps) {
     </>
   );
 }
-
-export default Table;
