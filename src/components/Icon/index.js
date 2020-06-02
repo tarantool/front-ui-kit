@@ -39,7 +39,6 @@ export * from './icons/IconSearch';
 export * from './icons/IconSpinner';
 export * from './icons/IconUser';
 export * from './icons/IconUsers';
-export * from './icons/IconSortable';
 export * from './icons/IconSuccess';
 export * from './icons/IconFailed';
 export * from './icons/IconPlay';

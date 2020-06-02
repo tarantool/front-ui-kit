@@ -1,9 +1,11 @@
 // @flow
+
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import { Icon, type GenericIconProps } from '../../../Icon';
+import { SVGImage } from '../../../SVGImage';
 import sortUp from '../sortUp.svg';
 import sortDown from '../sortDown.svg';
+import type { IconSortableStyleProps } from '../index';
 
 const styles = {
   icon: css`
@@ -14,20 +16,18 @@ const styles = {
   baseIcon: css`
     width: 6px;
     height: 4px;
-    fill: #C4C4C4;
+    fill: #000000a6;
     margin: 1px;
   `
 };
 
-export const IconSortableNone = ({ className, ...props }: GenericIconProps) => (
+export const IconSortableNone = ({ className }: IconSortableStyleProps) => (
   <span className={cx(styles.icon, className)}>
-    <Icon
-      {...props}
+    <SVGImage
       className={cx(styles.baseIcon)}
       glyph={sortUp}
     />
-    <Icon
-      {...props}
+    <SVGImage
       className={cx(styles.baseIcon)}
       glyph={sortDown}
     />

@@ -3,10 +3,16 @@ import React from 'react';
 import { IconSortableNone } from './IconSortableNone';
 import { IconSortableAsc } from './IconSortableAsc';
 import { IconSortableDesc } from './IconSortableDesc';
-import type { GenericIconProps } from '../../Icon';
 
+export type IconSortableStyleProps = {
+  className?: string
+}
 
-export const IconSortable = ({ sort, ...props }: GenericIconProps & { sort?: 'asc' | 'desc'}) => {
+type IconSortableProps = IconSortableStyleProps & {
+  sort?: 'asc' | 'desc',
+}
+
+export const IconSortable = ({ sort, ...props }: IconSortableProps) => {
   switch (sort) {
     case 'asc':
       return <IconSortableAsc {...props} />;

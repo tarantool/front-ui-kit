@@ -11,6 +11,9 @@ const styles = {
   col: css`
     padding: 16px;
   `,
+  colText: css`
+    color: #000000a6;
+  `,
   rowBackground: css`
     background-color: #FFFFFF;
   `,
@@ -29,22 +32,25 @@ const styles = {
   `
 };
 
-function TableRow({ row, rowClassName, codeClassName, onClickCodeRow }: RowProps & { row: Row}) {
+function TableRow({
+  row, rowClassName, codeClassName, onClickCodeRow, codeRowKey
+}: RowProps & { row: Row}) {
   const rowProps = row.getRowProps();
+  const codeRow = codeRowKey && row.original[codeRowKey];
   const [ isHover, setHover ] = useState(false);
   return (
     <React.Fragment>
       <tr
         onMouseOver={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        className={cx(styles.rowBackground, { [styles.row]: !row.original.code, [styles.hoverRow]: isHover } )}
+        className={cx(styles.rowBackground, { [styles.row]: !codeRow, [styles.hoverRow]: isHover } )}
         {...rowProps}
       >
         {row.cells.map(cell => {
           return (
             <Text
               tag="td"
-              className={cx(styles.col, rowClassName)}
+              className={cx(styles.col, styles.colText, rowClassName)}
               {...cell.getCellProps()}
             >
               {cell.render('Cell')}
@@ -52,7 +58,7 @@ function TableRow({ row, rowClassName, codeClassName, onClickCodeRow }: RowProps
           );
         })}
       </tr>
-      {row.original.code && (
+      {codeRow && (
         <tr
           onMouseOver={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
@@ -63,7 +69,7 @@ function TableRow({ row, rowClassName, codeClassName, onClickCodeRow }: RowProps
             className={cx(styles.code)}
             colSpan={row.cells.length}
           >
-            <Text variant="code">{row.original.code}</Text>
+            <Text variant="code" className={cx(styles.colText)}>{codeRow}</Text>
           </td>
         </tr>
       )}

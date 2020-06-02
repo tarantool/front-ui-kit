@@ -3,14 +3,15 @@
 import React from 'react';
 import {
   useTable, useSortBy,
-  type UseTableOptions, Row
+  type UseTableOptions, Row, ColumnInstance, UseSortByColumnProps
 } from 'react-table';
 
 import { css, cx } from 'emotion';
 import { Text } from '../Text';
-import { IconSortable, IconBoxNoData } from '../Icon';
-import TableRow from './TableRow';
+import { IconBoxNoData } from '../Icon';
 import { NonIdealState } from '../NonIdealState';
+import TableRow from './TableRow';
+import { IconSortable } from './IconSortable';
 
 const styles = {
   table: css`
@@ -19,7 +20,7 @@ const styles = {
     border-spacing: initial;
   `,
   head: css`
-    opacity: .65;
+    color: #000000a6;
     font-weight: 600;
     font-size: 14px;
     padding: 12px 16px;
@@ -30,7 +31,6 @@ const styles = {
   `,
   noData: css`
     background-color: #FFFFFF;
-    
   `
 };
 
@@ -38,6 +38,7 @@ const styles = {
 export type RowProps = {
   rowClassName?: string,
   codeClassName?: string,
+  codeRowKey?: string,
   onClickCodeRow?: (row: Row) => void;
 }
 
@@ -80,7 +81,7 @@ export function Table(props: TableProps) {
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map(column => (
+              {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => (
                 <Text
                   tag="th"
                   className={cx(styles.head)}
@@ -105,6 +106,7 @@ export function Table(props: TableProps) {
                 rowClassName={rowClassName}
                 codeClassName={codeClassName}
                 onClickCodeRow={props.onClickCodeRow}
+                codeRowKey={props.codeRowKey}
               />
             )
           })}
