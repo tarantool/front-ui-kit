@@ -103,14 +103,15 @@ export const Text = ({
   tag,
   upperCase,
   noCase,
-  title,
-  variant = 'basic'
+  variant = 'basic',
+  ...props
 }:
-TextProps) => {
+                       TextProps) => {
   const Element = tag || (variant === 'basic' ? 'span' : variant);
 
   return (
     <Element
+      {...props}
       className={cx(
         textStyles[variant],
         {
@@ -119,7 +120,6 @@ TextProps) => {
         },
         className
       )}
-      title={title}
     >
       {children}
     </Element>

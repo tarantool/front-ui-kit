@@ -60,7 +60,13 @@ import {
   IconSearch,
   IconSpinner,
   IconUser,
-  IconUsers
+  IconUsers,
+  IconSortable,
+  IconSuccess,
+  IconFailed,
+  IconPlay,
+  IconStop,
+  IconTask,
 } from './index';
 
 initialState = { fill: false };
@@ -121,6 +127,12 @@ const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
     <IconSpinner className={className} />
     <IconUser className={className} />
     <IconUsers className={className} />
+    <IconSortable className={className} />
+    <IconSuccess className={className} />
+    <IconFailed className={className} />
+    <IconPlay className={className} />
+    <IconStop className={className} />
+    <IconTask className={className} />
   </div>
 </>
 ```
