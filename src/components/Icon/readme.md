@@ -19,108 +19,62 @@ Use `IconChevron` as a reference. Basic concepts:
 ### Icons set
 
 ```js
-import { css } from 'emotion';
+import { css, cx } from 'emotion';
+import { colors } from '../../variables';
+import * as icons from './index';
+import { ControlsPanel } from '../ControlsPanel';
+import { Text } from '../Text';
 import { Switcher } from '../Switcher';
-import {
-  IconAttach,
-  IconAttention,
-  IconBox,
-  IconBoxNoData,
-  IconBucket,
-  IconBurger,
-  IconCancel,
-  IconCheckbox,
-  IconChevron,
-  IconChip,
-  IconChipWarning,
-  IconChipDanger,
-  IconClose,
-  IconCluster,
-  IconCode,
-  IconCreateFile,
-  IconCreateFolder,
-  IconDelete,
-  IconDocumentCode,
-  IconDownload,
-  IconEdit,
-  IconEyeClosed,
-  IconEyeOpened,
-  IconFile,
-  IconFolder,
-  IconGear,
-  IconGeoPin,
-  IconInfo,
-  IconLink,
-  IconMore,
-  IconNewWindow,
-  IconOk,
-  IconRadio,
-  IconRefresh,
-  IconSchema,
-  IconSearch,
-  IconSpinner,
-  IconUser,
-  IconUsers
-} from './index';
 
-initialState = { fill: false };
+const styles = {
+  list: css`
+    display: flex;
+    padding: 0;
+    margin: 0 -8px;
+    flex-wrap: wrap;
+    list-style: none;
+  `,
+  listItem: css`
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-basis: 200px;
+    padding: 8px;
+  `,
+  icon: css`
+    margin-right: 8px;
+  `
+};
 
-const switchState = () => setState({ fill: !state.fill });
+initialState = { fill: false, background: false };
 
-const className = state.fill ? css`fill: #0044aa;fill-opacity: 0.65;` : '';
+const switchFill = () => setState({ fill: !state.fill });
+const switchBg = () => setState({ background: !state.background });
+
+const listBackground = state.background ? css`background-color: #e8e8e8;` : '';
+const fill = state.fill ? css`fill: #0044aa; fill-opacity: 0.65;` : '';
+
+const renderAllIcons = () => {
+  const [Icon, ...inconNames] = Object.keys(icons);
+
+  return inconNames.map(iconName => {
+    const IconComponent = icons[iconName];
+    return (
+      <li className={styles.listItem}>
+        <IconComponent className={cx(styles.icon, fill)} />
+        <Text>{iconName}</Text>
+      </li>
+    );
+  });
+};
 
 <>
-  <Switcher checked={state.fill} onChange={switchState}>Custom fill</Switcher>
-  <div style={{ backgroundColor: 'darkgray' }}>
-    <IconAttach className={className} />
-    <IconAttention className={className} />
-    <IconBox className={className} />
-    <IconBoxNoData className={className} />
-    <IconBucket className={className} />
-    <IconBurger className={className} />
-    <IconCancel className={className} />
-    <IconCheckbox className={className} />
-    <IconCheckbox checked className={className} />
-    <IconCheckbox className={className} disabled />
-    <IconCheckbox checked className={className} disabled />
-    <IconChevron className={className} />
-    <IconChevron direction='down' className={className} />
-    <IconChevron direction='left' className={className} />
-    <IconChevron direction='right' className={className} />
-    <IconChip className={className} />
-    <IconChipWarning className={className} />
-    <IconChipDanger className={className} />
-    <IconClose className={className} />
-    <IconCluster className={className} />
-    <IconCode className={className} />
-    <IconCreateFile className={className} />
-    <IconCreateFolder className={className} />
-    <IconDelete className={className} />
-    <IconDocumentCode className={className} />
-    <IconDownload className={className} />
-    <IconEdit className={className} />
-    <IconEyeClosed className={className} />
-    <IconEyeOpened className={className} />
-    <IconFile className={className} />
-    <IconFolder className={className} />
-    <IconFolder opened className={className} />
-    <IconGear className={className} />
-    <IconGeoPin className={className} />
-    <IconInfo className={className} />
-    <IconLink className={className} />
-    <IconMore className={className} />
-    <IconNewWindow className={className} />
-    <IconOk className={className} />
-    <IconRadio className={className} />
-    <IconRadio checked className={className} />
-    <IconRadio className={className} disabled />
-    <IconRadio checked className={className} disabled />
-    <IconRefresh className={className} />
-    <IconSchema className={className} />
-    <IconSearch className={className} />
-    <IconSpinner className={className} />
-    <IconUser className={className} />
-    <IconUsers className={className} />
-  </div>
+  <ControlsPanel
+    controls={[
+      <Switcher checked={state.fill} onChange={switchFill}>Custom fill</Switcher>,
+      <Switcher checked={state.background} onChange={switchBg}>Gray bg</Switcher>
+    ]}
+  />
+  <ul className={cx(styles.list, listBackground)}>{renderAllIcons()}</ul>
 </>
 ```

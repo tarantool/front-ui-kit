@@ -45,3 +45,15 @@ export const IconRadio = ({ checked, className, disabled }: IconRadioProps) => {
     />
   );
 };
+
+export const IconRadioChecked = (props: GenericIconProps) => (
+  <IconRadio {...props} checked />
+);
+
+export const IconRadioDisabled = (props: GenericIconProps) => (
+  <IconRadio {...props} disabled />
+);
+
+export const IconRadioCheckedDisabled = (props: GenericIconProps) => (
+  <IconRadio {...props} checked disabled />
+);
