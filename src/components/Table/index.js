@@ -8,8 +8,9 @@ import {
 
 import { css, cx } from 'emotion';
 import { Text } from '../Text';
-import { IconSortable } from '../Icon';
+import { IconSortable, IconBoxNoData } from '../Icon';
 import TableRow from './TableRow';
+import { NonIdealState } from '../NonIdealState';
 
 const styles = {
   table: css`
@@ -26,6 +27,10 @@ const styles = {
   `,
   sortIcon: css`
     margin-left: 12px;
+  `,
+  noData: css`
+    background-color: #FFFFFF;
+    
   `
 };
 
@@ -59,7 +64,8 @@ export function Table(props: TableProps) {
     getTableBodyProps,
     headerGroups,
     prepareRow,
-    rows
+    rows,
+    visibleColumns
   } = useTable(
     {
       columns,
@@ -102,6 +108,13 @@ export function Table(props: TableProps) {
               />
             )
           })}
+          {!rows.length && (
+            <tr className={cx(styles.noData)}>
+              <td colSpan={visibleColumns.length}>
+                <NonIdealState icon={IconBoxNoData} title='No data' />
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </>

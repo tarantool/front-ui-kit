@@ -75,7 +75,7 @@
     ],
     []
   );
-<div style={{ backgroundColor: '#E5E5E5', padding: '20px' }}>
+<div style={{ backgroundColor: '#F0F2F5', padding: '20px' }}>
   <Table columns={columns} data={data} />
 </div>
 ```
