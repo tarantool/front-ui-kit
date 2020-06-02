@@ -11,7 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added new npm package react-table https://github.com/tannerlinsley/react-table
 - Added new component Table
 - Added icons:
-  - IconSortable
   - IconSuccess
   - IconFailed
   - IconPlay
