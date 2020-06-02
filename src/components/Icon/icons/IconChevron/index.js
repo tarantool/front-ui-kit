@@ -42,3 +42,19 @@ export const IconChevron = (props: IconChevronProps) => {
     />
   );
 };
+
+// export const IconChevronUp = (props: GenericIconProps) => (
+//   <IconChevron {...props} direction='up' />
+// );
+
+export const IconChevronDown = (props: GenericIconProps) => (
+  <IconChevron {...props} direction='down' />
+);
+
+export const IconChevronLeft = (props: GenericIconProps) => (
+  <IconChevron {...props} direction='left' />
+);
+
+export const IconChevronRight = (props: GenericIconProps) => (
+  <IconChevron {...props} direction='right' />
+);

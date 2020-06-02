@@ -22,3 +22,7 @@ export const IconFolder = ({ className, onClick, opened }: IconFolderProps) => (
     onClick={onClick}
   />
 );
+
+export const IconFolderOpened = (props: GenericIconProps) => (
+  <IconFolder {...props} opened />
+);
