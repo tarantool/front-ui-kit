@@ -8,10 +8,11 @@ import {
 
 import { css, cx } from 'emotion';
 import { Text } from '../Text';
-import { IconBoxNoData } from '../Icon';
 import { NonIdealState } from '../NonIdealState';
 import TableRow from './TableRow';
 import { IconSortable } from './IconSortable';
+import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
+
 
 const styles = {
   table: css`
@@ -31,7 +32,12 @@ const styles = {
   `,
   noData: css`
     background-color: #FFFFFF;
-  `
+    padding: 25px;
+  `,
+  noDataText: css`
+    margin-top: 16px;
+    color: rgba(0, 0, 0, 0.25);
+ `
 };
 
 
@@ -111,9 +117,11 @@ export function Table(props: TableProps) {
             )
           })}
           {!rows.length && (
-            <tr className={cx(styles.noData)}>
+            <tr>
               <td colSpan={visibleColumns.length}>
-                <NonIdealState icon={IconBoxNoData} title='No data' />
+                <NonIdealState className={cx(styles.noData)} image={image}>
+                  <Text className={styles.noDataText}>The list is empty</Text>
+                </NonIdealState>
               </td>
             </tr>
           )}
