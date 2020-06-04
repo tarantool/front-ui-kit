@@ -1,0 +1,882 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders empty 1`] = `
+Array [
+  <table
+    className="css-1sbsopn"
+    role="table"
+  >
+    <thead>
+      <tr
+        role="row"
+      >
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          First Name
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Last Name
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Age
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Visits
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Status
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          onClick={[Function]}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          title="Toggle SortBy"
+        >
+          Profile Progress
+          <span
+            className="css-1x6dtcs"
+          >
+            <svg
+              className="css-1j1sb4k"
+              viewBox="0 0 6 4"
+            >
+              <use
+                xlinkHref="#sortUp"
+              />
+            </svg>
+            <svg
+              className="css-1j1sb4k"
+              viewBox="0 0 6 4"
+            >
+              <use
+                xlinkHref="#sortDown"
+              />
+            </svg>
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      role="rowgroup"
+    >
+      <tr>
+        <td
+          colSpan={6}
+        >
+          <div
+            className="css-1unytjj"
+          >
+            <svg
+              className="css-1mla397"
+              viewBox="0 0 64 41"
+            >
+              <use
+                xlinkHref="#empty-box-no-data"
+              />
+            </svg>
+            <span
+              className="css-vyyv1w"
+            >
+              The list is empty
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+  <table
+    className="css-1sbsopn"
+    role="table"
+  >
+    <thead>
+      <tr
+        role="row"
+      >
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          First Name
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Last Name
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Age
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Visits
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": undefined,
+            }
+          }
+        >
+          Status
+        </th>
+        <th
+          className="css-4oxon4"
+          colSpan={1}
+          onClick={[Function]}
+          role="columnheader"
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          title="Toggle SortBy"
+        >
+          Profile Progress
+          <span
+            className="css-1x6dtcs"
+          >
+            <svg
+              className="css-1j1sb4k"
+              viewBox="0 0 6 4"
+            >
+              <use
+                xlinkHref="#sortUp"
+              />
+            </svg>
+            <svg
+              className="css-1j1sb4k"
+              viewBox="0 0 6 4"
+            >
+              <use
+                xlinkHref="#sortDown"
+              />
+            </svg>
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      role="rowgroup"
+    >
+      <tr>
+        <td
+          colSpan={6}
+        >
+          <div
+            className="css-1unytjj"
+          >
+            <svg
+              className="css-1mla397"
+              viewBox="0 0 64 41"
+            >
+              <use
+                xlinkHref="#empty-box-no-data"
+              />
+            </svg>
+            <span
+              className="css-vyyv1w"
+            >
+              The list is empty
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+]
+`;
+
+exports[`Table renders simple 1`] = `
+<table
+  className="css-1sbsopn"
+  role="table"
+>
+  <thead>
+    <tr
+      role="row"
+    >
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        First Name
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Last Name
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Age
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Visits
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Status
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        onClick={[Function]}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+        title="Toggle SortBy"
+      >
+        Profile Progress
+        <span
+          className="css-1x6dtcs"
+        >
+          <svg
+            className="css-1j1sb4k"
+            viewBox="0 0 6 4"
+          >
+            <use
+              xlinkHref="#sortUp"
+            />
+          </svg>
+          <svg
+            className="css-1j1sb4k"
+            viewBox="0 0 6 4"
+          >
+            <use
+              xlinkHref="#sortDown"
+            />
+          </svg>
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    role="rowgroup"
+  >
+    <tr
+      className="css-b02ryf"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        spiders
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        profession
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        15
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        55
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        complicated
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        66
+      </td>
+    </tr>
+    <tr
+      className="css-b02ryf"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        spiders
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        profession
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        15
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        55
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        complicated
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        66
+      </td>
+    </tr>
+    <tr
+      className="css-b02ryf"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        profit
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        quiet
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        8
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        79
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        complicated
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        9
+      </td>
+    </tr>
+    <tr
+      className="css-b02ryf"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        hat
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        jelly
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        7
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        56
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        <button
+          className="css-16hprh3"
+          type="button"
+        >
+          Refresh
+        </button>
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        67
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Table renders with code row 1`] = `
+<table
+  className="css-1sbsopn"
+  role="table"
+>
+  <thead>
+    <tr
+      role="row"
+    >
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        First Name
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Last Name
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Age
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Visits
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": undefined,
+          }
+        }
+      >
+        Status
+      </th>
+      <th
+        className="css-4oxon4"
+        colSpan={1}
+        onClick={[Function]}
+        role="columnheader"
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+        title="Toggle SortBy"
+      >
+        Profile Progress
+        <span
+          className="css-1x6dtcs"
+        >
+          <svg
+            className="css-1j1sb4k"
+            viewBox="0 0 6 4"
+          >
+            <use
+              xlinkHref="#sortUp"
+            />
+          </svg>
+          <svg
+            className="css-1j1sb4k"
+            viewBox="0 0 6 4"
+          >
+            <use
+              xlinkHref="#sortDown"
+            />
+          </svg>
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    role="rowgroup"
+  >
+    <tr
+      className="css-14r34si"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        spiders
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        profession
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        15
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        55
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        complicated
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        66
+      </td>
+    </tr>
+    <tr
+      className="css-y47bfa"
+      onClick={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      <td
+        className="css-tqxve2"
+        colSpan={6}
+      >
+        some code1
+      </td>
+    </tr>
+    <tr
+      className="css-14r34si"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        spiders
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        profession
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        15
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        55
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        complicated
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        66
+      </td>
+    </tr>
+    <tr
+      className="css-y47bfa"
+      onClick={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      <td
+        className="css-tqxve2"
+        colSpan={6}
+      >
+        some code2
+      </td>
+    </tr>
+    <tr
+      className="css-b02ryf"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        profit
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        quiet
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        8
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        79
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        complicated
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        9
+      </td>
+    </tr>
+    <tr
+      className="css-14r34si"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="row"
+    >
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        hat
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        jelly
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        7
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        56
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        relationship
+      </td>
+      <td
+        className="css-1cixjav"
+        role="cell"
+      >
+        67
+      </td>
+    </tr>
+    <tr
+      className="css-y47bfa"
+      onClick={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      <td
+        className="css-tqxve2"
+        colSpan={6}
+      >
+        some code4
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

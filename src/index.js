@@ -40,6 +40,7 @@ export * from './components/Spin';
 export * from './components/SVGImage';
 export * from './components/Switcher';
 export * from './components/Tabbed';
+export * from './components/Table';
 export * from './components/Tag';
 export * from './components/TagsList';
 export * from './components/Text';

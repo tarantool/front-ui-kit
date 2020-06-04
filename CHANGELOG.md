@@ -5,9 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [Unreleased]
 
 - Primary font family changed to Inter.
+- Added new npm package react-table https://github.com/tannerlinsley/react-table
+- Added new component Table
+- Added icons:
+  - IconSuccess
+  - IconFailed
+  - IconPlay
+  - IconStop
+  - IconTask
 
 - Improve Icon's readme.
 
