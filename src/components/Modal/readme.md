@@ -64,31 +64,27 @@ const tabs = [
     ]}
   />
   <Modal
+    footerControls={[
+      <Button intent='primary' text='Accept' />,
+      <Button text='Decline' />
+    ]}
     title='Simple Modal'
     visible={state.opened === 'simple'}
     onClose={closeModal}
   >
-    <PopupBody>{sampleText}</PopupBody>
-    <PopupFooter
-      controls={[
-        <Button intent='primary' text='Accept' />,
-        <Button text='Decline' />
-      ]}
-    />
+    {sampleText}
   </Modal>
   <Modal
+    footerControls={[
+      <Button intent='primary' text='Accept' />,
+      <Button text='Decline' />
+    ]}
     title='Configure server'
     visible={state.opened === 'wide'}
     onClose={closeModal}
     wide
   >
-    <PopupBody>{sampleText.repeat(40)}</PopupBody>
-    <PopupFooter
-      controls={[
-        <Button intent='primary' text='Accept' />,
-        <Button text='Decline' />
-      ]}
-    />
+    {sampleText.repeat(40)}
   </Modal>
   <Modal
     title='Configure server'
@@ -96,6 +92,7 @@ const tabs = [
     onClose={closeModal}
     wide
     fit
+    thinBorders
   >
     <Tabbed tabs={tabs} />
     <PopupFooter

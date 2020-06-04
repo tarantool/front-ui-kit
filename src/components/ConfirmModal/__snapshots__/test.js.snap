@@ -27,7 +27,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
       />
     </svg>
     <div
-      className="css-0"
+      className="css-13osoup"
     >
       Removing user John Appleseed
     </div>
@@ -107,7 +107,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
       />
     </svg>
     <div
-      className="css-0"
+      className="css-13osoup"
     >
       Removing user John Appleseed
     </div>

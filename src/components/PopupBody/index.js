@@ -1,4 +1,6 @@
 // @flex
+
+// TODO: move popup components inside Modal
 import * as React from 'react';
 import { css, cx } from 'emotion';
 import { Scrollbar } from '../Scrollbar';
@@ -7,6 +9,8 @@ const styles = {
   wrap: css`
     width: 100%;
     height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
     overflow: hidden;
   `,
   scrollableWrap: css`
@@ -15,8 +19,8 @@ const styles = {
     margin-right: -16px;
   `,
   scrollableBody: css`
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
   `
 };
 

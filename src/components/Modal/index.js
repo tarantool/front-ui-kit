@@ -37,11 +37,13 @@ const styles = {
     right: 16px;
   `,
   children: css`
-    /* flex-shrink: 1;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100%; */
+    padding-left: 16px;
+    padding-right: 16px;
+  `,
+  childrenThin: css`
+    padding-left: 0;
+    padding-right: 0;
   `
 };
 
@@ -51,7 +53,8 @@ export type ModalProps = BaseModalProps & {
   title: string,
   loading?:? boolean,
   onSubmit?: (e: Event) => ?boolean,
-  fit?: boolean
+  fit?: boolean,
+  thinBorders?: boolean
 };
 
 export class Modal extends BaseModal<ModalProps> {
@@ -66,6 +69,7 @@ export class Modal extends BaseModal<ModalProps> {
       onSubmit,
       loading,
       fit,
+      thinBorders,
       wide
     } = this.props;
 
@@ -90,7 +94,12 @@ export class Modal extends BaseModal<ModalProps> {
         >
           <Text className={styles.title} variant='h2'>{title}</Text>
           {onClose && <IconClose className={styles.closeIcon} onClick={onClose} />}
-          <div className={styles.children}>
+          <div
+            className={cx(
+              styles.children,
+              { [styles.childrenThin]: thinBorders }
+            )}
+          >
             {loading ? 'Loading' : children}
           </div>
           {(footerContent || footerControls) && (
