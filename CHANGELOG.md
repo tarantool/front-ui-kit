@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - IconStop
   - IconTask
 
+- Improve Icon's readme.
+
 ## [0.17.0] - 2020-05-25
 
 - Testing with jest snapshots

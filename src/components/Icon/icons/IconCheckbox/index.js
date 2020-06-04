@@ -43,3 +43,15 @@ export const IconCheckbox = ({ checked, className, disabled }: IconCheckboxProps
     />
   );
 };
+
+export const IconCheckboxChecked = (props: GenericIconProps) => (
+  <IconCheckbox {...props} checked />
+);
+
+export const IconCheckboxDisabled = (props: GenericIconProps) => (
+  <IconCheckbox {...props} disabled />
+);
+
+export const IconCheckboxCheckedDisabled = (props: GenericIconProps) => (
+  <IconCheckbox {...props} checked disabled />
+);
