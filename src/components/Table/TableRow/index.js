@@ -65,12 +65,14 @@ function TableRow({
           className={cx(styles.codeRow, styles.row, codeClassName, { [styles.hoverRow]: isHover })}
           onClick={() => onClickCodeRow ? onClickCodeRow(row) : null}
         >
-          <td
-            className={cx(styles.code)}
+          <Text
+            tag="td"
+            variant="code"
+            className={cx(styles.code, styles.colText)}
             colSpan={row.cells.length}
           >
-            <Text variant="code" className={cx(styles.colText)}>{codeRow}</Text>
-          </td>
+            {codeRow}
+          </Text>
         </tr>
       )}
     </React.Fragment>
