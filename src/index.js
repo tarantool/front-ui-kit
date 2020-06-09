@@ -28,6 +28,7 @@ export * from './components/NonIdealState';
 export * from './components/NotificationSplash';
 export * from './components/NotificationSplashFixed';
 export * from './components/PageCard';
+export * from './components/Pagination';
 export * from './components/PageLayout';
 export * from './components/PageSection';
 export * from './components/PopupBody';
