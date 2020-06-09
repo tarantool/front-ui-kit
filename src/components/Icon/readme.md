@@ -38,7 +38,7 @@ const styles = {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    flex-basis: 200px;
+    flex-basis: 280px;
     padding: 8px;
   `,
   icon: css`

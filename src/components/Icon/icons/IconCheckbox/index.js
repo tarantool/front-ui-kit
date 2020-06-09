@@ -6,8 +6,11 @@ import { Icon, type GenericIconProps } from '../../Icon';
 import checkbox from './checkbox.svg';
 import checkboxChecked from './checkbox-checked.svg';
 import checkboxDisabled from './checkbox-disabled.svg';
+import checkboxIndeterminate from './checkbox-indeterminate.svg';
 import checkboxCheckedDisabled from './checkbox-checked-disabled.svg';
+import checkboxIndeterminateDisabled from './checkbox-indeterminate-disabled.svg';
 
+const INDETERMINATE = 4;
 const CHECKED = 2;
 const DISABLED = 1;
 
@@ -15,7 +18,9 @@ const states = [
   checkbox,
   checkboxDisabled,
   checkboxChecked,
-  checkboxCheckedDisabled
+  checkboxCheckedDisabled,
+  checkboxIndeterminate,
+  checkboxIndeterminateDisabled
 ];
 
 const styles = css`
@@ -32,10 +37,14 @@ type IconCheckboxProps = {
   ...$Exact<GenericIconProps>,
   checked?: boolean,
   disabled?: boolean,
+  indeterminate?: boolean,
 }
 
-export const IconCheckbox = ({ checked, className, disabled }: IconCheckboxProps) => {
-  const mask = (disabled ? DISABLED : 0) + (checked ? CHECKED : 0);
+export const IconCheckbox = ({ checked, className, disabled, indeterminate }: IconCheckboxProps) => {
+  const mask = (indeterminate ? INDETERMINATE : 0)
+    + (disabled ? DISABLED : 0)
+    + (checked && !indeterminate ? CHECKED : 0);
+
   return (
     <Icon
       className={cx(styles, { [stylesDisabled]: disabled }, className)}
@@ -50,6 +59,14 @@ export const IconCheckboxChecked = (props: GenericIconProps) => (
 
 export const IconCheckboxDisabled = (props: GenericIconProps) => (
   <IconCheckbox {...props} disabled />
+);
+
+export const IconCheckboxIndeterminate = (props: GenericIconProps) => (
+  <IconCheckbox {...props} indeterminate />
+);
+
+export const IconCheckboxIndeterminateDisabled = (props: GenericIconProps) => (
+  <IconCheckbox {...props} indeterminate disabled />
 );
 
 export const IconCheckboxCheckedDisabled = (props: GenericIconProps) => (

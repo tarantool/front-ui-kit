@@ -51,6 +51,7 @@ type CheckboxProps = {
   children?: React.Node,
   className?: string,
   disabled?: boolean,
+  indeterminate?: boolean,
   name?: string,
   title?: string,
   value?: string,
@@ -58,10 +59,11 @@ type CheckboxProps = {
 };
 
 export const Checkbox = ({
-  checked,
+  checked = false,
   children,
   className,
-  disabled,
+  disabled = false,
+  indeterminate = false,
   onChange,
   name,
   title,
@@ -87,6 +89,7 @@ CheckboxProps) => (
       <IconCheckbox
         className={styles.icon}
         checked={checked}
+        indeterminate={indeterminate}
         disabled={disabled}
       />
     </div>
