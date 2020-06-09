@@ -2,6 +2,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { css, cx } from 'emotion';
+import { throttle } from 'lodash';
 import { colors, zIndex } from '../../variables';
 import { Button } from '../Button';
 import { IconMore } from '../Icon';
@@ -17,9 +18,11 @@ const styles = {
   popover: css`
     position: absolute;
     left: 0;
+    max-width: 100%;
     padding: 8px 0;
     border-radius: 4px;
     margin: 0;
+    overflow: hidden;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
     border: solid 1px ${colors.intentBaseBg};
     background-color: #ffffff;
@@ -31,6 +34,8 @@ const styles = {
   item: (color = defaultListItemColor) => css`
     padding: 0 16px;
     line-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
     color: ${color};
 
@@ -63,6 +68,7 @@ export type withDropdownProps = {
 type withDropdownState = {
   top: number,
   left: number,
+  minWidth: number,
   isOpen: boolean
 };
 
@@ -76,30 +82,48 @@ export const withDropdown = (
     state = {
       isOpen: false,
       top: 0,
-      left: 0
+      left: 0,
+      minWidth: 0
     };
 
     componentDidMount() {
-      if (this.state.isOpen)
+      if (this.state.isOpen) {
+        document.addEventListener('scroll', this.throttledRecalcPosition, { capture: true });
         document.addEventListener('mousedown', this.handleMouseDownOutside);
+      }
     }
 
     componentDidUpdate(prevProps: withDropdownProps, prevState: withDropdownState) {
       const { isOpen } = this.state;
 
-      if (!prevState.isOpen && isOpen)
+      if (!prevState.isOpen && isOpen) {
+        document.addEventListener('scroll', this.throttledRecalcPosition, { capture: true });
         document.addEventListener('mousedown', this.handleMouseDownOutside);
-      else if (prevState.isOpen && !isOpen)
+      } else if (prevState.isOpen && !isOpen) {
+        document.removeEventListener('scroll', this.throttledRecalcPosition, { capture: true });
         document.removeEventListener('mousedown', this.handleMouseDownOutside);
+      }
 
+      if (((isOpen && !prevState.isOpen) || (prevProps !== this.props))) {
+        this.recalcPosition();
+      }
+    }
+
+    componentWillUnmount() {
+      document.removeEventListener('scroll', this.throttledRecalcPosition, { capture: true });
+      document.removeEventListener('mousedown', this.handleMouseDownOutside);
+    }
+
+    recalcPosition = () => {
       const { wrapperRef, popoverRef } = this;
 
       const popoverElement = popoverRef.current;
       const wrapperElement = wrapperRef.current;
 
-      if (((isOpen && !prevState.isOpen) || (prevProps !== this.props)) && popoverElement && wrapperElement) {
+      if (popoverElement && wrapperElement) {
         const bodyWidth = document.body ? document.body.clientWidth : 0;
         const wrapperRect = wrapperElement.getBoundingClientRect();
+        const popoverRect = popoverElement.getBoundingClientRect();
 
         const upside = window.innerHeight - wrapperRect.top - wrapperRect.height < popoverElement.offsetHeight;
         const leftside = wrapperRect.left > (bodyWidth / 2);
@@ -108,18 +132,26 @@ export const withDropdown = (
           ? Math.max(window.scrollX + wrapperRect.left + wrapperRect.width - popoverElement.offsetWidth, 0)
           : Math.max(window.scrollX + wrapperRect.left, 0);
 
+        const horizontalShift = left - window.scrollX + popoverRect.width > window.innerWidth
+          ? -(left - window.scrollX + popoverRect.width - window.innerWidth)
+          : left < window.scrollX
+            ? window.scrollX - left
+            : 0;
+
+        left += horizontalShift;
+
         this.setState({
           top: upside
             ? window.scrollY + wrapperRect.top - popoverElement.offsetHeight
             : window.scrollY + wrapperRect.top + wrapperRect.height,
-          left
-        })
+          left,
+          minWidth: wrapperRect.width
+        });
       }
     }
 
-    componentWillUnmount() {
-      document.removeEventListener('mousedown', this.handleMouseDownOutside);
-    }
+    // 33 approximately equals 2 frames with 60fps
+    throttledRecalcPosition = throttle(this.recalcPosition, 33);
 
     handleClick = (event: MouseEvent) => {
       const { onClick } = this.props;
@@ -129,12 +161,18 @@ export const withDropdown = (
 
     handleMouseDownOutside = (event: MouseEvent) => {
       const { isOpen } = this.state;
-      const ref = this.popoverRef && this.popoverRef.current;
+      const popoverElement = this.popoverRef && this.popoverRef.current;
+      const wrapperElement = this.wrapperRef && this.wrapperRef.current;
 
       // for Flow
       const eventTarget = ((event.target: any): Node);
 
-      if (isOpen && ref && !ref.contains(eventTarget) && ref !== event.target) {
+      if (
+        isOpen
+        && popoverElement && wrapperElement
+        && !(popoverElement.contains(eventTarget) || wrapperElement.contains(eventTarget))
+        && (popoverElement !== event.target || wrapperElement !== event.target)
+      ) {
         this.toggleDropdown();
       }
     }
@@ -154,7 +192,7 @@ export const withDropdown = (
 
     renderPopover = () => {
       const { popoverClassName } = this.props;
-      const { left, top } = this.state;
+      const { left, minWidth, top } = this.state;
 
       return (
         <ul
@@ -166,7 +204,8 @@ export const withDropdown = (
           onMouseDown={this.handlePopoverMouseDown}
           style={{
             left,
-            top
+            top,
+            minWidth
           }}
           ref={this.popoverRef}
         >

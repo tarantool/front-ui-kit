@@ -8,18 +8,38 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 - Primary font family changed to Inter.
+
 - Added new npm package react-table https://github.com/tannerlinsley/react-table
+
 - Added new component Table
+
 - Added icons:
+
   - IconSuccess
+
   - IconFailed
+
   - IconPlay
+
   - IconStop
+
   - IconTask
 
 - Improve Icon's readme.
 
 - Add indeterminate state to Checkbox.
+
+- Fix Dropdown issues:
+
+  - Popover's min width won't be less than toggler width.
+
+  - Popover's max width won't be more than window width.
+
+  - Recalculating popover position on document scroll.
+
+  - Clicking on toggler when popover is open will close popover.
+
+  - Scrollbars inside popover.
 
 ## [0.17.0] - 2020-05-25
 
