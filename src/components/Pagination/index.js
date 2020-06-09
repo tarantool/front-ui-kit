@@ -47,6 +47,7 @@ const styles = {
   `,
   dropDown: css`
     margin-left: 12px;
+    min-width: 120px;
   `
 };
 
@@ -142,7 +143,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
     setPageSize && setPageSize(pageSize);
   };
 
-  getDropDownItems = (): React.Node[] => [10, 20, 30, 40, 50].map(pageSize => (
+  getDropDownItems = (): React.Node[] => [10, 20, 50, 100].map(pageSize => (
     <DropdownItem onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
   ));
 
