@@ -2,21 +2,20 @@
 
 import * as React from 'react';
 import { css, cx } from 'emotion';
-
 import { Button } from '../Button';
+import { Text } from '../Text';
 import { Dropdown, DropdownItem } from '../Dropdown';
 import { IconMore } from '../Icon/icons/IconMore';
 import { IconChevronLeft, IconChevronRight, IconChevronDown } from '../Icon/icons/IconChevron';
 
 const styles = {
   pagination: css`
-    display: flex,
+    display: flex;
   `,
   countItemsText: css`
     display: flex;
     align-items: center;
     margin-right: 12px;
-    font-size: 14px;
     color: rgba(0, 0, 0, 0.65);
   `,
   icon: css`
@@ -29,7 +28,7 @@ const styles = {
    fill: rgba(0,0,0, .65);
   `,
   button: css`
-    width: 32px;
+    min-width: 32px;
     height: 32px;
     background: #FFFFFF;
     border: 1px solid #D9D9D9;
@@ -38,7 +37,7 @@ const styles = {
     color: rgba(0, 0, 0, 0.65);
     font-size: 14px;
     text-align: center;
-    padding: 0;
+    padding: 4px;
     margin: 0 4px;
   `,
   buttonActive: css`
@@ -162,9 +161,9 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
 
     return (
       <div className={styles.pagination}>
-        {showTotal && <div className={styles.countItemsText}>
+        {showTotal && <Text className={styles.countItemsText} tag='div'>
           {page * pageSize + 1}-{activePage * pageSize > items ? items : activePage * pageSize} of {items} items
-        </div>}
+        </Text>}
         <div>
           <Button
             className={styles.button}
