@@ -1,22 +1,33 @@
 Checkbox example:
 
 ```js
-initialState = { checked: false };
+import { css } from 'emotion';
+import { ControlsPanel } from '../ControlsPanel';
+import { Text } from '../Text';
 
-const changeState = () => setState({ checked: !state.checked });
+const variants = [
+  { indeterminate: true, disabled: false },
+  { indeterminate: false, disabled: false },
+  { indeterminate: false, disabled: false },
+  { indeterminate: true, disabled: true },
+  { indeterminate: false, disabled: true },
+  { indeterminate: false, disabled: true }
+];
+
+initialState = { checked: [false, true, false, false, true, false] };
+
+const changeState = i => () => setState(({ checked }) => {
+  checked[i] = !checked[i];
+  return { checked: [...checked] };
+});
 
 <>
-  <Checkbox checked={state.checked} onChange={changeState} indeterminate title='Indeterminate'>Initial</Checkbox>
-  <br />
-  <Checkbox checked={state.checked} onChange={changeState} title='Initial'>Initial</Checkbox>
-  <br />
-  <Checkbox checked={!state.checked} onChange={changeState}>Checked</Checkbox>
-  <br />
-  <Checkbox checked={state.checked} onChange={changeState} disabled>Disabled</Checkbox>
-  <br />
-  <Checkbox checked={state.checked} onChange={changeState} indeterminate disabled>Disabled</Checkbox>
-  <br />
-  <Checkbox checked={!state.checked} onChange={changeState} disabled>Checked disabled</Checkbox>
-  <br />
+<ControlsPanel
+  className={css`display: flex;`}
+  controls={variants.map((props, i) => (
+    <Checkbox {...props} checked={state.checked[i]} onChange={changeState(i)} title={`Checkbox ${i} title`}>{`Checkbox ${i}`}</Checkbox>
+  ))}
+/>
+<Text variant='code'>{JSON.stringify(state, null, 2)}</Text>
 </>
 ```
