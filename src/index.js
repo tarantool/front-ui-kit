@@ -6,6 +6,7 @@ export * from './components/CodeBlock';
 export * from './components/ConfirmModal';
 export * from './components/ControlsPanel';
 export * from './components/CopyToClipboard';
+export * from './components/RangeDatePicker';
 export * from './components/Dropdown';
 export * from './components/DotIndicator';
 export * from './components/SplashError';

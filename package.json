@@ -33,6 +33,7 @@
     "markdown-to-jsx": "6.10.3",
     "prismjs": "1.19.0",
     "ramda": "0.26.1",
+    "rc-picker": "^1.6.3",
     "react-emotion": "9.2.6",
     "react-scrollbars-custom": "4.0.20",
     "react-table": "^7.1.0",
