@@ -60,7 +60,9 @@ type PaginationProps = {
   page: number,
   onPageChange: (pageIndex: number) => void,
   pageSize: number,
-  setPageSize?: (pageSize: number) => void
+  setPageSize?: (pageSize: number) => void,
+  pageSizeOptions?: number[],
+  showTotal: boolean,
 }
 
 type PaginationState = {
@@ -68,11 +70,15 @@ type PaginationState = {
 }
 
 export class Pagination extends React.Component<PaginationProps, PaginationState> {
+  static defaultProps = {
+    pageSizeOptions: [10, 20, 50, 100]
+  };
+
   constructor(props: PaginationProps) {
     super(props);
     const { page, items } = props;
     this.state = {
-      visiblePages: this.getVisiblePages(page + 1, items),
+      visiblePages: this.getVisiblePages(page + 1, items)
     };
     const totalPages = this.getPages(items);
     if (page >= totalPages) {
@@ -143,20 +149,22 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
     setPageSize && setPageSize(pageSize);
   };
 
-  getDropDownItems = (): React.Node[] => [10, 20, 50, 100].map(pageSize => (
+  getDropDownItems = (): React.Node[] => this.props.pageSizeOptions.map(pageSize => (
     <DropdownItem onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
   ));
 
   render() {
-    const { page, items, setPageSize, pageSize } = this.props;
+    const {
+      page, items, setPageSize, pageSize, showTotal
+    } = this.props;
     const { visiblePages } = this.state;
     const activePage = page + 1;
 
     return (
       <div className={styles.pagination}>
-        <div className={styles.countItemsText}>
+        {showTotal && <div className={styles.countItemsText}>
           {page * pageSize + 1}-{activePage * pageSize > items ? items : activePage * pageSize} of {items} items
-        </div>
+        </div>}
         <div>
           <Button
             className={styles.button}

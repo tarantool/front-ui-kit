@@ -151,6 +151,7 @@ export function Table(props: TableProps) {
           items={rows.length}
           onPageChange={gotoPage}
           setPageSize={setPageSize}
+          showTotal
         />
       </div>}
     </>
