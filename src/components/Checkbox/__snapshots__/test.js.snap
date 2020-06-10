@@ -4,11 +4,69 @@ exports[`Checkbox renders correctly 1`] = `
 Array [
   <label
     className="css-759u60"
+    title="Indeterminate"
+  >
+    <input
+      checked={false}
+      className="css-1y12ua6"
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-1v31moo"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#checkbox-indeterminate"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-wrln3n"
+    >
+      Checked
+    </span>
+  </label>,
+  <label
+    className="css-759u60"
+  >
+    <input
+      checked={true}
+      className="css-1y12ua6"
+      disabled={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-1v31moo"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#checkbox-indeterminate"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-wrln3n"
+    >
+      Checked
+    </span>
+  </label>,
+  <label
+    className="css-759u60"
     title="Initial"
   >
     <input
       checked={true}
       className="css-1y12ua6"
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
@@ -34,7 +92,9 @@ Array [
     className="css-759u60"
   >
     <input
+      checked={false}
       className="css-1y12ua6"
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
@@ -74,6 +134,62 @@ Array [
         viewBox="0 0 16 16"
       >
         <use
+          xlinkHref="#checkbox-indeterminate-disabled"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-wrln3n"
+    >
+      Checked disabled
+    </span>
+  </label>,
+  <label
+    className="css-759u60"
+  >
+    <input
+      checked={false}
+      className="css-1y12ua6"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-17jpq69"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#checkbox-indeterminate-disabled"
+        />
+      </svg>
+    </div>
+    <span
+      className="css-wrln3n"
+    >
+      Disabled
+    </span>
+  </label>,
+  <label
+    className="css-759u60"
+  >
+    <input
+      checked={true}
+      className="css-1y12ua6"
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="css-1ysxw4w"
+    >
+      <svg
+        className="css-17jpq69"
+        viewBox="0 0 16 16"
+      >
+        <use
           xlinkHref="#checkbox-checked-disabled"
         />
       </svg>
@@ -88,6 +204,7 @@ Array [
     className="css-759u60"
   >
     <input
+      checked={false}
       className="css-1y12ua6"
       disabled={true}
       onChange={[Function]}
