@@ -60,7 +60,7 @@ type PaginationProps = {
   onPageChange: (pageIndex: number) => void,
   pageSize: number,
   setPageSize?: (pageSize: number) => void,
-  pageSizeOptions?: number[],
+  pageSizeOptions: number[],
   showTotal: boolean,
 }
 
