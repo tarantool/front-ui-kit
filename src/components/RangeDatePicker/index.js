@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Moment } from 'moment';
 import { RangePicker as RCRangePicker }  from 'rc-picker';
+import { css } from 'emotion';
 import momentGenerateConfig from 'rc-picker/lib/generate/moment';
 import enUS from 'rc-picker/lib/locale/en_US';
 
@@ -9,6 +10,9 @@ type DatePickerProps = {
   onSelect?: (newValue: Moment) => void,
 }
 
+const dropdownStyle = css`
+  position: absolute;
+`;
 
 export function RangeDatePicker(props: DatePickerProps) {
 
@@ -19,22 +23,12 @@ export function RangeDatePicker(props: DatePickerProps) {
   };
   return (
     <div style={{ margin: '0 8px' }}>
-      <style>
-        {`
-        .danger {
-          color: red;
-        }
-        .base {
-          background-color: lightgray;
-          color: turquoise;
-        }
-      `}
-      </style>
       <h3>Basic</h3>
 
       <RCRangePicker
         {...sharedProps}
         locale={enUS}
+        dropdownClassName={dropdownStyle}
       />
     </div>
   )
