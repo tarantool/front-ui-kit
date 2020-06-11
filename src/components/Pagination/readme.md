@@ -23,5 +23,14 @@ const setPageSize = (pageSize) => setState({ pageSize });
    onPageChange={changePage}
    setPageSize={setPageSize}
   />
+  <br />
+  <br />
+    
+  <Pagination
+   page={state.pageIndex}
+   pageSize={state.pageSize}
+   items={300}
+   onPageChange={changePage}
+  />
 </div>
 ```
