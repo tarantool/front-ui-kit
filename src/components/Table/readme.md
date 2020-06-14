@@ -517,7 +517,8 @@ const data = React.useMemo(
   ],
   []
 );
+const onSelectedRowsChange = (rows) => console.log(rows);
 <div style={{ backgroundColor: '#F0F2F5', padding: '20px' }}>
-  <Table columns={columns} data={data} codeRowKey='code' pagination />
+  <Table columns={columns} data={data} codeRowKey='code' pagination onSelectedRowsChange={onSelectedRowsChange}  />
 </div>
 ```
