@@ -115,20 +115,6 @@ const dropdownStyle = css`
     color: rgba(0, 0, 0, .65)
   }
   
-  // & .rc-picker-cell-in-view.rc-picker-cell-range-start, .rc-picker-cell-in-view.rc-picker-cell-range-end {
-  //   color: #FFFFFF;
-  // }
-  
-  & .rc-picker-cell-in-view.rc-picker-cell-range-start::before {
-     border-radius: 2px 0 0 2px;
-     background: rgba(245, 34, 45, 0.65);
-  }
-  
-  & .rc-picker-cell-in-view.rc-picker-cell-range-end::before {
-     border-radius: 0 2px 2px 0;
-     background: rgba(245, 34, 45, 0.65);
-  }  
-  
   & .rc-picker-cell-in-view.rc-picker-cell-in-range::before {
      background: #EFEFEF;
      opacity: 0.7;
@@ -150,15 +136,53 @@ const dropdownStyle = css`
     content: ''
   }
   
-  & .rc-picker-cell:hover:not(rc-picker-cell-in-view) 
-  rc-picker-cell-inner, rc-picker-cell:hover
-  :not(rc-picker-cell-selected):not(rc-picker-cell-range-start)
-  :not(rc-picker-cell-range-end):not(rc-picker-cell-range-hover-start)
-  :not(rc-picker-cell-range-hover-end) rc-picker-cell-inner {
-    background: #f5f5f5;
+  & .rc-picker-cell .rc-picker-cell-inner {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 2px;
+    transition: background .3s,border .3s;
   }
   
+  .rc-picker-cell-in-view.rc-picker-cell-selected .rc-picker-cell-inner,
+   .rc-picker-cell-in-view.rc-picker-cell-range-start .rc-picker-cell-inner,
+    .rc-picker-cell-in-view.rc-picker-cell-range-end .rc-picker-cell-inner {
+    color: #fff;
+    background: rgba(245, 34, 45, 0.65);
+  }
   
+  .rc-picker-cell:hover:not(.rc-picker-cell-in-view) .rc-picker-cell-inner,
+   .rc-picker-cell:hover:not(.rc-picker-cell-selected):not(.rc-picker-cell-range-start)
+   :not(.rc-picker-cell-range-end):not(.rc-picker-cell-range-hover-start):not(.rc-picker-cell-range-hover-end)
+    .rc-picker-cell-inner {
+      background: #f5f5f5;
+  }
+  
+  & .rc-picker-decade-panel .rc-picker-content,
+   .rc-picker-year-panel .rc-picker-content,
+    .rc-picker-quarter-panel .rc-picker-content,
+     .rc-picker-month-panel .rc-picker-content {
+    height: 264px;
+}
+  
+  & .rc-picker-year-panel .rc-picker-cell-inner,
+   .rc-picker-quarter-panel .rc-picker-cell-inner,
+    .rc-picker-month-panel .rc-picker-cell-inner {
+    width: 60px;
+  }
+  
+  .rc-picker-cell-in-view.rc-picker-cell-range-hover-start:not(.rc-picker-cell-in-range)
+  :not(.rc-picker-cell-range-start):not(.rc-picker-cell-range-end)::before,
+  .rc-picker-cell-in-view.rc-picker-cell-range-hover-end:not(.rc-picker-cell-in-range)
+  :not(.rc-picker-cell-range-start):not(.rc-picker-cell-range-end)::before,
+  .rc-picker-cell-in-view.rc-picker-cell-range-hover-end.rc-picker-cell-range-end-single::before,
+  .rc-picker-cell-in-view.rc-picker-cell-range-hover:not(.rc-picker-cell-in-range)::before {
+    background: #EFEFEF;
+  }
+
 `;
 
 const pickerStyles = css`
@@ -255,7 +279,6 @@ export function RangeDatePicker(props: DatePickerProps) {
         suffixIcon={<IconCalendar />}
         placeholder={['From date', 'to date']}
         locale={enUS}
-        open
         dropdownClassName={dropdownStyle}
         format="YYYY/MM/DD"
       />
