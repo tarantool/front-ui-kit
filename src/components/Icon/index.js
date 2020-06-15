@@ -6,6 +6,7 @@ export * from './icons/IconBox';
 export * from './icons/IconBoxNoData';
 export * from './icons/IconBucket';
 export * from './icons/IconBurger';
+export * from './icons/IconCalendar';
 export * from './icons/IconCancel';
 export * from './icons/IconCheckbox';
 export * from './icons/IconChevron';
