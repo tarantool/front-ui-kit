@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {
-  useTable, useSortBy,
+  useTable, useSortBy, usePagination, useRowSelect, useMountedLayoutEffect,
   type UseTableOptions, Row, ColumnInstance, UseSortByColumnProps
 } from 'react-table';
 
@@ -12,6 +12,8 @@ import { NonIdealState } from '../NonIdealState';
 import TableRow from './TableRow';
 import { IconSortable } from './IconSortable';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
+import { Pagination } from '../Pagination';
+import { Checkbox } from '../Checkbox';
 
 
 const styles = {
@@ -37,7 +39,13 @@ const styles = {
   noDataText: css`
     margin-top: 16px;
     color: rgba(0, 0, 0, 0.25);
- `
+ `,
+  pagination: css`
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+  `
 };
 
 
@@ -46,6 +54,8 @@ export type RowProps = {
   codeClassName?: string,
   codeRowKey?: string,
   onClickCodeRow?: (row: Row) => void;
+  pagination?: boolean;
+  onSelectedRowsChange?: (selectedFlatRows: Row[]) => void;
 }
 
 type TableProps = UseTableOptions & RowProps;
@@ -64,7 +74,9 @@ function getSortDirection(isSortedDesc?: boolean) {
 }
 
 export function Table(props: TableProps) {
-  const { rowClassName, codeClassName, columns = [], data = [] } = props;
+  const {
+    rowClassName, codeClassName, columns = [], data = [], pagination, onSelectedRowsChange
+  } = props;
 
   const {
     getTableProps,
@@ -72,15 +84,42 @@ export function Table(props: TableProps) {
     headerGroups,
     prepareRow,
     rows,
-    visibleColumns
+    page,
+    visibleColumns,
+
+    gotoPage,
+    setPageSize,
+    selectedFlatRows,
+    state: { pageIndex, pageSize }
   } = useTable(
     {
       columns,
       data
     },
-    useSortBy
+    useSortBy,
+    usePagination,
+    useRowSelect,
+    hooks => {
+      onSelectedRowsChange && hooks.visibleColumns.push(columns => [
+        // Let's make a column for selection
+        {
+          id: 'selection',
+          Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
+          Cell: ({ row }) => <Checkbox {...row.getToggleRowSelectedProps()} />
+        },
+        ...columns
+      ])
+    }
   );
 
+  useMountedLayoutEffect(() => {
+    if (onSelectedRowsChange) {
+      const selectedRows = selectedFlatRows.map(row => row.original);
+      onSelectedRowsChange(selectedRows);
+    }
+  }, [onSelectedRowsChange, selectedFlatRows]);
+
+  const dataRows = pagination ? page : rows;
   return (
     <>
       <table {...getTableProps()} className={cx(styles.table)}>
@@ -103,7 +142,7 @@ export function Table(props: TableProps) {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map(row => {
+          {dataRows.map(row => {
             prepareRow(row);
             return (
               <TableRow
@@ -127,6 +166,16 @@ export function Table(props: TableProps) {
           )}
         </tbody>
       </table>
+      {pagination && rows.length > 0 && <div className={styles.pagination}>
+        <Pagination
+          page={pageIndex}
+          pageSize={pageSize}
+          items={rows.length}
+          onPageChange={gotoPage}
+          setPageSize={setPageSize}
+          showTotal
+        />
+      </div>}
     </>
   );
 }

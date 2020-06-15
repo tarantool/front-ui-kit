@@ -16,8 +16,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - IconPlay
   - IconStop
   - IconTask
+- Added new component Pagination
+- Usage Pagination in table  
 
 - Improve Icon's readme.
+
+- Add indeterminate state to Checkbox.
 
 ## [0.17.0] - 2020-05-25
 

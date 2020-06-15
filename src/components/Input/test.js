@@ -41,7 +41,7 @@ const DropdownControlIcon = ({ className }) => (
 const dropdownExample = (
   <DropdownButton
     items={(
-      <Scrollbar className={css`height: 200px; width: 10em;`}>
+      <Scrollbar className={css`height: 200px;`}>
         {
           [
             'Healthy',
