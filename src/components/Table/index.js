@@ -104,14 +104,8 @@ export function Table(props: TableProps) {
         // Let's make a column for selection
         {
           id: 'selection',
-          Header: ({ getToggleAllRowsSelectedProps }) => (
-            <div>
-              <Checkbox {...getToggleAllRowsSelectedProps()} />
-            </div>
-          ),
-          Cell: ({ row }) => (<div>
-            <Checkbox {...row.getToggleRowSelectedProps()} />
-          </div>)
+          Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
+          Cell: ({ row }) => <Checkbox {...row.getToggleRowSelectedProps()} />
         },
         ...columns
       ])

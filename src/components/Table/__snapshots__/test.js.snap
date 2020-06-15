@@ -1306,32 +1306,30 @@ Array [
             }
           }
         >
-          <div>
-            <label
-              className="css-759u60"
-              title="Toggle All Rows Selected"
+          <label
+            className="css-759u60"
+            title="Toggle All Rows Selected"
+          >
+            <input
+              checked={false}
+              className="css-1y12ua6"
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="css-79elbk"
             >
-              <input
-                checked={false}
-                className="css-1y12ua6"
-                disabled={false}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <div
-                className="css-79elbk"
+              <svg
+                className="css-1v31moo"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-1v31moo"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#checkbox"
-                  />
-                </svg>
-              </div>
-            </label>
-          </div>
+                <use
+                  xlinkHref="#checkbox"
+                />
+              </svg>
+            </div>
+          </label>
         </th>
         <th
           className="css-4oxon4"
@@ -1442,32 +1440,30 @@ Array [
           className="css-1cixjav"
           role="cell"
         >
-          <div>
-            <label
-              className="css-759u60"
-              title="Toggle Row Selected"
+          <label
+            className="css-759u60"
+            title="Toggle Row Selected"
+          >
+            <input
+              checked={false}
+              className="css-1y12ua6"
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="css-79elbk"
             >
-              <input
-                checked={false}
-                className="css-1y12ua6"
-                disabled={false}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <div
-                className="css-79elbk"
+              <svg
+                className="css-1v31moo"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-1v31moo"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#checkbox"
-                  />
-                </svg>
-              </div>
-            </label>
-          </div>
+                <use
+                  xlinkHref="#checkbox"
+                />
+              </svg>
+            </div>
+          </label>
         </td>
         <td
           className="css-1cixjav"
@@ -1529,32 +1525,30 @@ Array [
           className="css-1cixjav"
           role="cell"
         >
-          <div>
-            <label
-              className="css-759u60"
-              title="Toggle Row Selected"
+          <label
+            className="css-759u60"
+            title="Toggle Row Selected"
+          >
+            <input
+              checked={false}
+              className="css-1y12ua6"
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="css-79elbk"
             >
-              <input
-                checked={false}
-                className="css-1y12ua6"
-                disabled={false}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <div
-                className="css-79elbk"
+              <svg
+                className="css-1v31moo"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-1v31moo"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#checkbox"
-                  />
-                </svg>
-              </div>
-            </label>
-          </div>
+                <use
+                  xlinkHref="#checkbox"
+                />
+              </svg>
+            </div>
+          </label>
         </td>
         <td
           className="css-1cixjav"
@@ -1616,32 +1610,30 @@ Array [
           className="css-1cixjav"
           role="cell"
         >
-          <div>
-            <label
-              className="css-759u60"
-              title="Toggle Row Selected"
+          <label
+            className="css-759u60"
+            title="Toggle Row Selected"
+          >
+            <input
+              checked={false}
+              className="css-1y12ua6"
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="css-79elbk"
             >
-              <input
-                checked={false}
-                className="css-1y12ua6"
-                disabled={false}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <div
-                className="css-79elbk"
+              <svg
+                className="css-1v31moo"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-1v31moo"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#checkbox"
-                  />
-                </svg>
-              </div>
-            </label>
-          </div>
+                <use
+                  xlinkHref="#checkbox"
+                />
+              </svg>
+            </div>
+          </label>
         </td>
         <td
           className="css-1cixjav"
@@ -1690,32 +1682,30 @@ Array [
           className="css-1cixjav"
           role="cell"
         >
-          <div>
-            <label
-              className="css-759u60"
-              title="Toggle Row Selected"
+          <label
+            className="css-759u60"
+            title="Toggle Row Selected"
+          >
+            <input
+              checked={false}
+              className="css-1y12ua6"
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <div
+              className="css-79elbk"
             >
-              <input
-                checked={false}
-                className="css-1y12ua6"
-                disabled={false}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <div
-                className="css-79elbk"
+              <svg
+                className="css-1v31moo"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-1v31moo"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#checkbox"
-                  />
-                </svg>
-              </div>
-            </label>
-          </div>
+                <use
+                  xlinkHref="#checkbox"
+                />
+              </svg>
+            </div>
+          </label>
         </td>
         <td
           className="css-1cixjav"
