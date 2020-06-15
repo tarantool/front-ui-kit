@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {
-  useTable, useSortBy, usePagination,
+  useTable, useSortBy, usePagination, useRowSelect, useMountedLayoutEffect,
   type UseTableOptions, Row, ColumnInstance, UseSortByColumnProps
 } from 'react-table';
 
@@ -13,6 +13,7 @@ import TableRow from './TableRow';
 import { IconSortable } from './IconSortable';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
 import { Pagination } from '../Pagination';
+import { Checkbox } from '../Checkbox';
 
 
 const styles = {
@@ -54,6 +55,7 @@ export type RowProps = {
   codeRowKey?: string,
   onClickCodeRow?: (row: Row) => void;
   pagination?: boolean;
+  onSelectedRowsChange?: (selectedFlatRows: Row[]) => void;
 }
 
 type TableProps = UseTableOptions & RowProps;
@@ -73,7 +75,7 @@ function getSortDirection(isSortedDesc?: boolean) {
 
 export function Table(props: TableProps) {
   const {
-    rowClassName, codeClassName, columns = [], data = [], pagination
+    rowClassName, codeClassName, columns = [], data = [], pagination, onSelectedRowsChange
   } = props;
 
   const {
@@ -87,6 +89,7 @@ export function Table(props: TableProps) {
 
     gotoPage,
     setPageSize,
+    selectedFlatRows,
     state: { pageIndex, pageSize }
   } = useTable(
     {
@@ -94,8 +97,27 @@ export function Table(props: TableProps) {
       data
     },
     useSortBy,
-    usePagination
+    usePagination,
+    useRowSelect,
+    hooks => {
+      onSelectedRowsChange && hooks.visibleColumns.push(columns => [
+        // Let's make a column for selection
+        {
+          id: 'selection',
+          Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
+          Cell: ({ row }) => <Checkbox {...row.getToggleRowSelectedProps()} />
+        },
+        ...columns
+      ])
+    }
   );
+
+  useMountedLayoutEffect(() => {
+    if (onSelectedRowsChange) {
+      const selectedRows = selectedFlatRows.map(row => row.original);
+      onSelectedRowsChange(selectedRows);
+    }
+  }, [onSelectedRowsChange, selectedFlatRows]);
 
   const dataRows = pagination ? page : rows;
   return (
