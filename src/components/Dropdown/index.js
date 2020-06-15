@@ -6,8 +6,10 @@ import { throttle } from 'lodash';
 import { colors, zIndex } from '../../variables';
 import { Button } from '../Button';
 import { IconMore } from '../Icon';
+import { Scrollbar } from '../Scrollbar';
 import { textStyles } from '../Text';
 
+const SCROLLBAR_WIDTH = 28;
 const defaultListItemColor = 'rgba(0, 0, 0, 0.65)';
 
 const styles = {
@@ -18,18 +20,28 @@ const styles = {
   popover: css`
     position: absolute;
     left: 0;
-    max-width: 100%;
+    max-width: 70%;
+    max-height: 100%;
     padding: 8px 0;
-    border-radius: 4px;
-    margin: 0;
     overflow: hidden;
+    border-radius: 4px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.09);
     border: solid 1px ${colors.intentBaseBg};
     background-color: #ffffff;
     z-index: ${zIndex.dropdownMenu};
     box-sizing: border-box;
     user-select: none;
-    list-style: none;
+  `,
+  popoverScrollable: css`
+    height: 100%;
+  `,
+  // list: css`
+  //   padding: 0;
+  //   margin: 0;
+  //   overflow-x: hidden;
+  // `,
+  scrollable: css`
+    height: 100%;
   `,
   item: (color = defaultListItemColor) => css`
     padding: 0 16px;
@@ -66,24 +78,27 @@ export type withDropdownProps = {
 };
 
 type withDropdownState = {
-  top: number,
+  isOpen: boolean,
   left: number,
   minWidth: number,
-  isOpen: boolean
+  top: number,
+  useScroll: boolean
 };
 
 export const withDropdown = (
   Component:  React.AbstractComponent<any, HTMLElement> | string
 ) =>
-  class Dropdown extends React.Component<withDropdownProps, withDropdownState> {
-    popoverRef = React.createRef<HTMLUListElement>();
+  class Dropdown extends React.PureComponent<withDropdownProps, withDropdownState> {
+    popoverRef = React.createRef<HTMLElement>();
     wrapperRef = React.createRef<HTMLElement>();
+    scrollablePopoverWidth = 0;
 
     state = {
       isOpen: false,
-      top: 0,
       left: 0,
-      minWidth: 0
+      minWidth: 0,
+      top: 0,
+      useScroll: false
     };
 
     componentDidMount() {
@@ -104,7 +119,7 @@ export const withDropdown = (
         document.removeEventListener('mousedown', this.handleMouseDownOutside);
       }
 
-      if (((isOpen && !prevState.isOpen) || (prevProps !== this.props))) {
+      if ((isOpen && !prevState.isOpen) || (prevProps !== this.props)) {
         this.recalcPosition();
       }
     }
@@ -124,13 +139,28 @@ export const withDropdown = (
         const bodyWidth = document.body ? document.body.clientWidth : 0;
         const wrapperRect = wrapperElement.getBoundingClientRect();
         const popoverRect = popoverElement.getBoundingClientRect();
+        const wrapperBottomSpace = window.innerHeight - wrapperRect.top - wrapperRect.height;
 
-        const upside = window.innerHeight - wrapperRect.top - wrapperRect.height < popoverElement.offsetHeight;
+        // will show popover upside toggler;
+        const upside = popoverElement.offsetHeight > wrapperBottomSpace
+          && popoverElement.offsetHeight <= wrapperRect.top;
+
+        // will show popover downside & shift vertical
+        const shiftVertical = popoverElement.offsetHeight > wrapperBottomSpace
+          && popoverElement.offsetHeight > wrapperRect.top;
+
+        // will show popover to left from toggler;
         const leftside = wrapperRect.left > (bodyWidth / 2);
 
         let left = leftside
           ? Math.max(window.scrollX + wrapperRect.left + wrapperRect.width - popoverElement.offsetWidth, 0)
           : Math.max(window.scrollX + wrapperRect.left, 0);
+
+        let top = shiftVertical
+          ? window.scrollY + window.innerHeight - popoverRect.height
+          : upside
+            ? window.scrollY + wrapperRect.top - popoverElement.offsetHeight
+            : window.scrollY + wrapperRect.top + wrapperRect.height;
 
         const horizontalShift = left - window.scrollX + popoverRect.width > window.innerWidth
           ? -(left - window.scrollX + popoverRect.width - window.innerWidth)
@@ -138,14 +168,18 @@ export const withDropdown = (
             ? window.scrollX - left
             : 0;
 
+        const useScroll = popoverRect.height >= window.innerHeight;
+        this.scrollablePopoverWidth = this.state.useScroll
+          ? popoverRect.width
+          : popoverRect.width + SCROLLBAR_WIDTH;
+
         left += horizontalShift;
 
         this.setState({
-          top: upside
-            ? window.scrollY + wrapperRect.top - popoverElement.offsetHeight
-            : window.scrollY + wrapperRect.top + wrapperRect.height,
+          top,
           left,
-          minWidth: wrapperRect.width
+          minWidth: wrapperRect.width,
+          useScroll
         });
       }
     }
@@ -188,16 +222,22 @@ export const withDropdown = (
 
     handlePopoverMouseDown = (event: MouseEvent)=> event.stopPropagation();
 
-    toggleDropdown = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
+    toggleDropdown = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen, useScroll: false }));
 
     renderPopover = () => {
       const { popoverClassName } = this.props;
-      const { left, minWidth, top } = this.state;
+      const { left, minWidth, top, useScroll } = this.state;
+      const ScrollableWrap = useScroll
+        ? ({ children }) => (
+          <Scrollbar className={styles.scrollable}>{children}</Scrollbar>
+        )
+        : ({ children }) => <>{children}</>;
 
       return (
-        <ul
+        <div
           className={cx(
             styles.popover,
+            { [styles.popoverScrollable]: useScroll },
             popoverClassName
           )}
           onClick={this.handlePopoverClick}
@@ -205,12 +245,15 @@ export const withDropdown = (
           style={{
             left,
             top,
-            minWidth
+            minWidth,
+            width: useScroll ? this.scrollablePopoverWidth : null
           }}
           ref={this.popoverRef}
         >
-          {this.props.items}
-        </ul>
+          <ScrollableWrap>
+            {this.props.items}
+          </ScrollableWrap>
+        </div>
       );
     };
 
@@ -261,15 +304,12 @@ export const Dropdown = withDropdown(React.forwardRef((
 
 export const DropdownItem = (
   {
-    children,
     className,
     color,
     ...props
   }: DropdownItemProps
 ) => (
-  <li {...props} className={cx(textStyles.basic, styles.item(color), className)}>
-    {children}
-  </li>
+  <div {...props} className={cx(textStyles.basic, styles.item(color), className)} />
 );
 
 type DropdownDividerProps = { className?: string };
@@ -279,7 +319,7 @@ export const DropdownDivider = (
     className
   }: DropdownDividerProps
 ) => (
-  <li
+  <div
     className={cx(styles.divider, className)}
     onClick={e => e.stopPropagation()}
   />
