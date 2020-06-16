@@ -716,10 +716,18 @@ exports[`Table renders with code row 1`] = `
       onMouseOver={[Function]}
     >
       <td
-        className="css-tqxve2"
+        className="css-1a513lk"
         colSpan={6}
       >
         some code1
+        <svg
+          className="css-kyotps"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#moreBurger"
+          />
+        </svg>
       </td>
     </tr>
     <tr
@@ -772,10 +780,18 @@ exports[`Table renders with code row 1`] = `
       onMouseOver={[Function]}
     >
       <td
-        className="css-tqxve2"
+        className="css-1a513lk"
         colSpan={6}
       >
         some code2
+        <svg
+          className="css-kyotps"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#moreBurger"
+          />
+        </svg>
       </td>
     </tr>
     <tr
@@ -871,10 +887,18 @@ exports[`Table renders with code row 1`] = `
       onMouseOver={[Function]}
     >
       <td
-        className="css-tqxve2"
+        className="css-1a513lk"
         colSpan={6}
       >
         some code4
+        <svg
+          className="css-kyotps"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#moreBurger"
+          />
+        </svg>
       </td>
     </tr>
   </tbody>
@@ -1040,10 +1064,18 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-tqxve2"
+          className="css-1a513lk"
           colSpan={6}
         >
           some code1
+          <svg
+            className="css-kyotps"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#moreBurger"
+            />
+          </svg>
         </td>
       </tr>
       <tr
@@ -1096,10 +1128,18 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-tqxve2"
+          className="css-1a513lk"
           colSpan={6}
         >
           some code2
+          <svg
+            className="css-kyotps"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#moreBurger"
+            />
+          </svg>
         </td>
       </tr>
       <tr
@@ -1195,10 +1235,18 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-tqxve2"
+          className="css-1a513lk"
           colSpan={6}
         >
           some code4
+          <svg
+            className="css-kyotps"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#moreBurger"
+            />
+          </svg>
         </td>
       </tr>
     </tbody>
@@ -1509,10 +1557,18 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-tqxve2"
+          className="css-1a513lk"
           colSpan={7}
         >
           some code1
+          <svg
+            className="css-kyotps"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#moreBurger"
+            />
+          </svg>
         </td>
       </tr>
       <tr
@@ -1594,10 +1650,18 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-tqxve2"
+          className="css-1a513lk"
           colSpan={7}
         >
           some code2
+          <svg
+            className="css-kyotps"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#moreBurger"
+            />
+          </svg>
         </td>
       </tr>
       <tr
@@ -1751,10 +1815,18 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-tqxve2"
+          className="css-1a513lk"
           colSpan={7}
         >
           some code4
+          <svg
+            className="css-kyotps"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#moreBurger"
+            />
+          </svg>
         </td>
       </tr>
     </tbody>
