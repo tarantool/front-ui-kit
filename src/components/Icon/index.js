@@ -14,6 +14,7 @@ export * from './icons/IconChip';
 export * from './icons/IconChipWarning';
 export * from './icons/IconChipDanger';
 export * from './icons/IconClose';
+export * from './icons/IconClock';
 export * from './icons/IconCluster';
 export * from './icons/IconCode';
 export * from './icons/IconCreateFile';
