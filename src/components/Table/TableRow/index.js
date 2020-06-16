@@ -27,7 +27,7 @@ const styles = {
   `,
   code: css`
     position: relative;
-    padding: 8px 16px;
+    padding: 8px 48px 8px 16px;
     white-space: pre-wrap;
   `,
   hoverRow: css`
