@@ -6,6 +6,7 @@ import { type Row } from 'react-table';
 import { css, cx } from 'emotion';
 import { Text } from '../../Text';
 import type { RowProps } from '../index';
+import { IconMoreBurger } from '../../Icon';
 
 const styles = {
   col: css`
@@ -25,11 +26,24 @@ const styles = {
     cursor: pointer;
   `,
   code: css`
+    position: relative;
     padding: 8px 16px;
+    white-space: pre-wrap;
   `,
   hoverRow: css`
     background-color: #EFEFEF;
+  `,
+  moreIcon: css`
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translate(0,-50%);
   `
+};
+const get2RowFromStr = (str: string) => {
+  const splitedStr = str.split('\n');
+
+  return `${splitedStr[0]}${splitedStr[1] ? `\n${splitedStr[1]}` : ''}`;
 };
 
 function TableRow({
@@ -38,6 +52,7 @@ function TableRow({
   const rowProps = row.getRowProps();
   const codeRow = codeRowKey && row.original[codeRowKey];
   const [ isHover, setHover ] = useState(false);
+
   return (
     <React.Fragment>
       <tr
@@ -71,7 +86,8 @@ function TableRow({
             className={cx(styles.code, styles.colText)}
             colSpan={row.cells.length}
           >
-            {codeRow}
+            {get2RowFromStr(codeRow)}
+            <IconMoreBurger className={styles.moreIcon} />
           </Text>
         </tr>
       )}

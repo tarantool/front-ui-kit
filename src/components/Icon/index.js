@@ -32,6 +32,7 @@ export * from './icons/IconGeoPin';
 export * from './icons/IconInfo';
 export * from './icons/IconLink';
 export * from './icons/IconMore';
+export * from './icons/IconMoreBurger';
 export * from './icons/IconNewWindow';
 export * from './icons/IconOk';
 export * from './icons/IconRadio';
