@@ -716,7 +716,7 @@ exports[`Table renders with code row 1`] = `
       onMouseOver={[Function]}
     >
       <td
-        className="css-1a513lk"
+        className="css-qcdam2"
         colSpan={6}
       >
         some code1
@@ -780,7 +780,7 @@ exports[`Table renders with code row 1`] = `
       onMouseOver={[Function]}
     >
       <td
-        className="css-1a513lk"
+        className="css-qcdam2"
         colSpan={6}
       >
         some code2
@@ -887,7 +887,7 @@ exports[`Table renders with code row 1`] = `
       onMouseOver={[Function]}
     >
       <td
-        className="css-1a513lk"
+        className="css-qcdam2"
         colSpan={6}
       >
         some code4
@@ -1064,7 +1064,7 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-1a513lk"
+          className="css-qcdam2"
           colSpan={6}
         >
           some code1
@@ -1128,7 +1128,7 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-1a513lk"
+          className="css-qcdam2"
           colSpan={6}
         >
           some code2
@@ -1235,7 +1235,7 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-1a513lk"
+          className="css-qcdam2"
           colSpan={6}
         >
           some code4
@@ -1557,7 +1557,7 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-1a513lk"
+          className="css-qcdam2"
           colSpan={7}
         >
           some code1
@@ -1650,7 +1650,7 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-1a513lk"
+          className="css-qcdam2"
           colSpan={7}
         >
           some code2
@@ -1815,7 +1815,7 @@ Array [
         onMouseOver={[Function]}
       >
         <td
-          className="css-1a513lk"
+          className="css-qcdam2"
           colSpan={7}
         >
           some code4
