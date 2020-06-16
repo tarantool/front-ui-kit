@@ -6,7 +6,6 @@ import {
   DropdownItem,
   DropdownDivider,
   Button,
-  Scrollbar,
   IconChevron,
   IconSearch
 } from '../../index';
@@ -32,27 +31,18 @@ const DropdownControlIcon = ({ className }) => (
 
 const dropdownExample = (
   <DropdownButton
-    items={(
-      <Scrollbar className={css`height: 200px; width: 10em;`}>
-        {
-          [
-            'Healthy',
-            'Unhealthy',
-          ].map(getDropdownOption('status'))
-        }
-        <DropdownDivider />
-        {
-          [
-            'Stateful Connector',
-            'Input_processor',
-            'Connector',
-            'Scheduler',
-            'Storage',
-            'Task_runner',
-          ].map(getDropdownOption('role'))
-        }
-      </Scrollbar>
-    )}
+    items={[
+      ...['Healthy', 'Unhealthy'].map(getDropdownOption('status')),
+      <DropdownDivider />,
+      ...[
+        'Stateful Connector',
+        'Input_processor',
+        'Connector',
+        'Scheduler',
+        'Storage',
+        'Task_runner',
+      ].map(getDropdownOption('role'))
+    ]}
     intent='secondary'
     iconRight={DropdownControlIcon}
   >
