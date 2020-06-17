@@ -80,7 +80,6 @@ export type withDropdownProps = {
 type withDropdownState = {
   isOpen: boolean,
   left: number,
-  minWidth: number,
   top: number,
   useScroll: boolean
 };
@@ -96,7 +95,6 @@ export const withDropdown = (
     state = {
       isOpen: false,
       left: 0,
-      minWidth: 0,
       top: 0,
       useScroll: false
     };
@@ -140,6 +138,7 @@ export const withDropdown = (
         const wrapperRect = wrapperElement.getBoundingClientRect();
         const popoverRect = popoverElement.getBoundingClientRect();
         const wrapperBottomSpace = window.innerHeight - wrapperRect.top - wrapperRect.height;
+        const useScroll = popoverRect.height >= window.innerHeight;
 
         // will show popover upside toggler;
         const upside = popoverElement.offsetHeight > wrapperBottomSpace
@@ -153,7 +152,7 @@ export const withDropdown = (
         const leftside = wrapperRect.left > (bodyWidth / 2);
 
         let left = leftside
-          ? Math.max(window.scrollX + wrapperRect.left + wrapperRect.width - popoverElement.offsetWidth, 0)
+          ? Math.max(window.scrollX + wrapperRect.left + wrapperRect.width - popoverRect.width, 0)
           : Math.max(window.scrollX + wrapperRect.left, 0);
 
         let top = shiftVertical
@@ -168,24 +167,23 @@ export const withDropdown = (
             ? window.scrollX - left
             : 0;
 
-        const useScroll = popoverRect.height >= window.innerHeight;
         this.scrollablePopoverWidth = this.state.useScroll
           ? popoverRect.width
           : popoverRect.width + SCROLLBAR_WIDTH;
 
         left += horizontalShift;
+        left -= !this.state.useScroll && useScroll ? SCROLLBAR_WIDTH : 0;
 
         this.setState({
           top,
           left,
-          minWidth: wrapperRect.width,
           useScroll
         });
       }
     }
 
-    // 33 approximately equals 2 frames with 60fps
-    throttledRecalcPosition = throttle(this.recalcPosition, 33);
+    // 16 approximately equals 2 frames with 60fps
+    throttledRecalcPosition = throttle(this.recalcPosition, 16);
 
     handleClick = (event: MouseEvent) => {
       const { onClick } = this.props;
@@ -226,7 +224,12 @@ export const withDropdown = (
 
     renderPopover = () => {
       const { popoverClassName } = this.props;
-      const { left, minWidth, top, useScroll } = this.state;
+      const { left, top, useScroll } = this.state;
+      const { wrapperRef } = this;
+      const minWidth = wrapperRef && wrapperRef.current
+        ? wrapperRef.current.getBoundingClientRect().width
+        : 0;
+
       const ScrollableWrap = useScroll
         ? ({ children }) => (
           <Scrollbar className={styles.scrollable}>{children}</Scrollbar>
