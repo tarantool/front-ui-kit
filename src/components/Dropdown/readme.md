@@ -39,8 +39,8 @@ const menuLengthPresets = [5, 10, 15, 25, 45, 100];
 const menuItemWidthPresets = [1, 3, 10, 30];
 
 const initialState = {
-  customMenuContent: false,
-  rows: 5,
+  customMenuContent: true,
+  rows: 100,
   width: 1,
   modalOpened: false
 };
@@ -114,12 +114,17 @@ const DropdownButton = withDropdown(Button);
     <Dropdown items={itemsCollection}>
       Alternative wide wide trigger
     </Dropdown>
-    <Dropdown items={itemsCollection} className={css`position: absolute; right: 0;`}>
-      <Button
-        icon={IconMore}
-        intent='secondary'
-      />
-    </Dropdown>
+    <div className={css`position: absolute; right: 0;`}>
+      <Dropdown items={itemsCollection}>
+        <Button
+          icon={IconMore}
+          intent='secondary'
+        />
+      </Dropdown>
+      <Dropdown items={itemsCollection}>
+        Wide wide wide trigger
+      </Dropdown>
+    </div>
   </div>
 
   <div className={styles.scrollableBox}>
