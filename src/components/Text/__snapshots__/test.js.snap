@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly 1`] = `
+Array [
+  <h1
+    className="css-zhgo2q"
+    title="Text title"
+  >
+    Heading 1 - 24px, 38px, 600, spacing 0.48px
+  </h1>,
+  <h2
+    className="css-i0fkfa"
+  >
+    Heading 2 - 20px, 28px, 600, spacing 0.4px
+  </h2>,
+  <h3
+    className="css-1p88ng4"
+  >
+    Heading 3 - 16px, 24px, 600, spacing 0.32px
+  </h3>,
+  <h4
+    className="css-e3tefd"
+  >
+    Heading 4 - 16px, 24px, 600, spacing 0.32px
+  </h4>,
+  <h5
+    className="css-1f6lfe2"
+  >
+    Heading 5 - 12px, 22px, 400, spacing 0.24px
+  </h5>,
+  <p
+    className="css-1d6m8in"
+  >
+    paragraph - 12px, 20px, 400, spacing: 0.28px
+  </p>,
+  <span
+    className="css-wrln3n"
+  >
+    basic - 14px, 22px, 400
+  </span>,
+  <code
+    className="css-1vp37ry"
+  >
+    code - 14px, 22px, 400
+  </code>,
+  <span
+    className="css-1p88ng4"
+  >
+    H3 styled span
+  </span>,
+  <span
+    className="css-e3tefd"
+  >
+    H4 styled span
+  </span>,
+]
+`;
