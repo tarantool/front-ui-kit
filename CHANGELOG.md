@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
-- Fix Markdown code blocks layout
+- Fix Markdown code blocks layout.
+
+- Added icons:
+
+  - IconStopped
+  - IconTrash
 
 ## [0.18.1] - 2020-06-17
 
