@@ -141,5 +141,43 @@ Array [
       Field is required
     </p>
   </label>,
+  <label
+    className="css-kf3i1p"
+  >
+    <div
+      className="css-13kfgn1"
+    >
+      <span
+        className="css-rkd6q9"
+      >
+        Multiline labeled input
+        :
+      </span>
+      <span
+        className="css-1cp4gbh"
+      >
+        Sub title
+      </span>
+    </div>
+    <div
+      className="css-ctsodi"
+      title="Input"
+    >
+      <textarea
+        className="css-1yq8nnk"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Placeholder"
+        rows={4}
+        value="qwertyuiop"
+      />
+    </div>
+    <p
+      className="css-194ftfm"
+    >
+      Field is required
+    </p>
+  </label>,
 ]
 `;

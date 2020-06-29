@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { LabeledInput } from './index';
 import { InputPassword } from '../InputPassword';
+import { TextArea } from '../TextArea';
 
 const testValue = 'qwertyuiop';
 
@@ -34,6 +35,17 @@ it('LabeledInput renders correctly', () => {
         subTitle='Sub title'
         message='Field is required'
         value={testValue}
+        placeholder='Placeholder'
+        onChange={handleChange}
+        title='Input'
+      />
+      <LabeledInput
+        label='Multiline labeled input'
+        subTitle='Sub title'
+        message='Field is required'
+        inputComponent={TextArea}
+        value={testValue}
+        rows={4}
         placeholder='Placeholder'
         onChange={handleChange}
         title='Input'
