@@ -199,19 +199,19 @@ exports[`Modal renders modal with tabs 1`] = `
           className="css-0"
         >
           <button
-            className="css-1yr71tr"
+            className="css-1x4d7qt"
             onClick={[Function]}
           >
             Create Replica Set
           </button>
           <button
-            className="css-1t5pnnu"
+            className="css-1xb0ngy"
             onClick={[Function]}
           >
             Join Replica Set
           </button>
           <button
-            className="css-1t5pnnu"
+            className="css-1xb0ngy"
             onClick={[Function]}
           >
             Bad example tab

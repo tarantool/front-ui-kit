@@ -8,6 +8,10 @@
     {
       label: 'Another tab',
       content: 'Another tab content'
+    },
+    {
+      label: 'Third tab',
+      content: 'Third tab content'
     }
   ]}
 />
