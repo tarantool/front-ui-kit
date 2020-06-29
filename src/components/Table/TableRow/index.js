@@ -49,7 +49,7 @@ const get2RowFromStr = (str: string) => {
 };
 
 function TableRow({
-  row, rowClassName, codeClassName, onClickCodeRow, codeRowKey, onClickRow
+  row, rowClassName, codeClassName, onCodeRowClick, codeRowKey, onRowClick
 }: RowProps & { row: Row}) {
   const rowProps = row.getRowProps();
   const codeRow = codeRowKey && row.original[codeRowKey];
@@ -60,9 +60,9 @@ function TableRow({
       <tr
         onMouseOver={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        onClick={() => onClickRow ? onClickRow(row) : null}
+        onClick={() => onRowClick ? onRowClick(row) : null}
         className={
-          cx(styles.rowBackground, { [styles.row]: !codeRow, [styles.hoverRow]: isHover, [styles.pointer]: onClickRow })
+          cx(styles.rowBackground, { [styles.row]: !codeRow, [styles.hoverRow]: isHover, [styles.pointer]: onRowClick })
         }
         {...rowProps}
       >
@@ -87,9 +87,9 @@ function TableRow({
               styles.codeRow,
               styles.row,
               codeClassName,
-              { [styles.hoverRow]: isHover, [styles.pointer]: onClickCodeRow })
+              { [styles.hoverRow]: isHover, [styles.pointer]: onCodeRowClick })
           }
-          onClick={() => onClickCodeRow ? onClickCodeRow(row) : null}
+          onClick={() => onCodeRowClick ? onCodeRowClick(row) : null}
         >
           <Text
             tag="td"
