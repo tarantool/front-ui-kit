@@ -47,3 +47,5 @@ export * from './icons/IconFailed';
 export * from './icons/IconPlay';
 export * from './icons/IconStop';
 export * from './icons/IconTask';
+export * from './icons/IconStopped';
+export * from './icons/IconTrash';
