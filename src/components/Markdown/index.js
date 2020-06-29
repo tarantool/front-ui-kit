@@ -8,6 +8,8 @@ import { Text } from '../Text';
 
 const styles = {
   wrap: css`
+    display: block;
+
     & code {
       padding: 3px;
       border-radius: 3px;
@@ -21,6 +23,7 @@ const styles = {
       padding: 16px;
       margin-bottom: 16px;
       border-radius: 4px;
+      overflow: auto;
       background-color: ${colors.codeBg};
       color: white;
 
@@ -61,13 +64,12 @@ const overrides = {
   ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>
 };
 
+const options = { overrides, forceBlock: true };
+
 export const Markdown = ({
   text
 }) => (
-  <MD
-    className={styles.wrap}
-    options={{ overrides }}
-  >
-    {text}
-  </MD>
+  <div className={styles.wrap}>
+    <MD options={options}>{text}</MD>
+  </div>
 );

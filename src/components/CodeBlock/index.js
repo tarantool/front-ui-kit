@@ -27,11 +27,15 @@ export class CodeBlock extends React.Component<CodeBlockProps> {
   ref = createRef<HTMLElement>();
 
   componentDidMount() {
-    Prism.highlightElement(this.ref.current);
+    if (this.ref.current) {
+      Prism.highlightElement(this.ref.current);
+    }
   }
 
   componentDidUpdate() {
-    Prism.highlightElement(this.ref.current);
+    if (this.ref.current) {
+      Prism.highlightElement(this.ref.current);
+    }
   }
 
   render() {

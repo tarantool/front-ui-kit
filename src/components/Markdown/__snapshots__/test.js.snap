@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown renders code block 1`] = `
+<div
+  className="css-1fcvszc"
+>
+  <pre>
+    <code
+      className="css-1vp37ry"
+    >
+      Code block
+    </code>
+  </pre>
+</div>
+`;
+
+exports[`Markdown renders code inline 1`] = `
+<div
+  className="css-1fcvszc"
+>
+  <p
+    className="css-gl6g3w"
+  >
+    <code
+      className="css-1vp37ry"
+    >
+      Code line
+    </code>
+  </p>
+</div>
+`;
+
+exports[`Markdown renders mixed content 1`] = `
+<div
+  className="css-1fcvszc"
+>
+  <div>
+    <h2
+      className="css-17v1evm"
+      id="connect-to-tarantool-cartridge-using-python-clienthttpsgithubcomtarantooltarantool-python"
+    >
+      Connect to Tarantool Cartridge using 
+      <a
+        className="css-kzn11m"
+        href="https://github.com/tarantool/tarantool-python"
+        target="_blank"
+      >
+        python client
+      </a>
+    </h2>
+    <p
+      className="css-gl6g3w"
+    >
+      First, 
+      <strong>
+        install
+      </strong>
+       
+      <em>
+        tarantool
+      </em>
+       package using 
+      <em>
+        pip3
+      </em>
+      :
+    </p>
+    <pre>
+      <code
+        className="language-bash css-sfydpi"
+      >
+        pip3 install tarantool
+      </code>
+    </pre>
+    <p
+      className="css-gl6g3w"
+    >
+      Create a file example.py with the code to get started:
+    </p>
+    <pre>
+      <code
+        className="language-python css-sfydpi"
+      >
+        from tarantool import Connection
+c = Connection(
+    "try-cartridge.tarantool.io", 
+    10300, 
+    user='admin', 
+    password='npngatmwsf'
+)
+result = c.insert("examples", (333, 'Value', 'Value'))
+space = c.space("examples")
+results = space.select(333)
+print(results)
+      </code>
+    </pre>
+    <p
+      className="css-gl6g3w"
+    >
+      Run the script
+    </p>
+    <pre>
+      <code
+        className="language-bash css-sfydpi"
+      >
+        python3 example.py
+      </code>
+    </pre>
+  </div>
+</div>
+`;
