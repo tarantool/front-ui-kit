@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
-- Fix Markdown code blocks layout.
+- Fixed Markdown code blocks layout.
 
 - Added icons:
 
@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated focus state in Tabbed component.
 
 - Added TextArea component.
+
+- Updated Table props. Added new props for onCLick on table row.
 
 ## [0.18.1] - 2020-06-17
 

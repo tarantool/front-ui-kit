@@ -162,7 +162,12 @@ const data = React.useMemo(
   []
 );
 <div style={{ backgroundColor: '#F0F2F5', padding: '20px' }}>
-  <Table columns={columns} data={data} codeRowKey='code' />
+  <Table
+    columns={columns}
+    data={data}
+    codeRowKey='code'
+    onCodeRowClick={r => console.log('code row clicked', r)}
+  />
 </div>
 ```
 
@@ -519,6 +524,13 @@ const data = React.useMemo(
 );
 const onSelectedRowsChange = (rows) => console.log(rows);
 <div style={{ backgroundColor: '#F0F2F5', padding: '20px' }}>
-  <Table columns={columns} data={data} codeRowKey='code' pagination onSelectedRowsChange={onSelectedRowsChange}  />
+  <Table
+    columns={columns}
+    data={data}
+    codeRowKey='code'
+    pagination
+    onSelectedRowsChange={onSelectedRowsChange}
+    onRowClick={r => console.log('row clicked', r)}
+  />
 </div>
 ```
