@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - IconStopped
   - IconTrash
 
+- Updated focus state in Tabbed component.
+
 ## [0.18.1] - 2020-06-17
 
 - Dropdown hotfix.

@@ -24,19 +24,10 @@ const styles = {
     outline: none;
     cursor: pointer;
 
+    &:hover,
     &:focus {
       z-index: ${zIndex.inline};
-    }
-
-    &:focus::before {
-      content: '';
-      position: absolute;
-      top: -1px;
-      left: -2px;
-      right: -2px;
-      bottom: -4px;
-      border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
-      border-radius: 3px;
+      border-bottom-color: ${rgba(colors.activeAction, 0.5)};
     }
   `,
   activeTab: css`
