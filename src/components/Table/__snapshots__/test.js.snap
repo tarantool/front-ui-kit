@@ -379,6 +379,7 @@ exports[`Table renders simple 1`] = `
   >
     <tr
       className="css-b02ryf"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -422,6 +423,7 @@ exports[`Table renders simple 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -465,6 +467,7 @@ exports[`Table renders simple 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -508,6 +511,7 @@ exports[`Table renders simple 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -668,6 +672,7 @@ exports[`Table renders with code row 1`] = `
   >
     <tr
       className="css-14r34si"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -710,7 +715,7 @@ exports[`Table renders with code row 1`] = `
       </td>
     </tr>
     <tr
-      className="css-y47bfa"
+      className="css-mtqmtr"
       onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
@@ -732,6 +737,7 @@ exports[`Table renders with code row 1`] = `
     </tr>
     <tr
       className="css-14r34si"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -774,7 +780,7 @@ exports[`Table renders with code row 1`] = `
       </td>
     </tr>
     <tr
-      className="css-y47bfa"
+      className="css-mtqmtr"
       onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
@@ -796,6 +802,7 @@ exports[`Table renders with code row 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -839,6 +846,7 @@ exports[`Table renders with code row 1`] = `
     </tr>
     <tr
       className="css-14r34si"
+      onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
@@ -881,7 +889,7 @@ exports[`Table renders with code row 1`] = `
       </td>
     </tr>
     <tr
-      className="css-y47bfa"
+      className="css-mtqmtr"
       onClick={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
@@ -1016,6 +1024,7 @@ Array [
     >
       <tr
         className="css-14r34si"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1058,7 +1067,7 @@ Array [
         </td>
       </tr>
       <tr
-        className="css-y47bfa"
+        className="css-mtqmtr"
         onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
@@ -1080,6 +1089,7 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1122,7 +1132,7 @@ Array [
         </td>
       </tr>
       <tr
-        className="css-y47bfa"
+        className="css-mtqmtr"
         onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
@@ -1144,6 +1154,7 @@ Array [
       </tr>
       <tr
         className="css-b02ryf"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1187,6 +1198,7 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1229,7 +1241,7 @@ Array [
         </td>
       </tr>
       <tr
-        className="css-y47bfa"
+        className="css-mtqmtr"
         onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
@@ -1480,6 +1492,7 @@ Array [
     >
       <tr
         className="css-14r34si"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1551,7 +1564,7 @@ Array [
         </td>
       </tr>
       <tr
-        className="css-y47bfa"
+        className="css-mtqmtr"
         onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
@@ -1573,6 +1586,7 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1644,7 +1658,7 @@ Array [
         </td>
       </tr>
       <tr
-        className="css-y47bfa"
+        className="css-mtqmtr"
         onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
@@ -1666,6 +1680,7 @@ Array [
       </tr>
       <tr
         className="css-b02ryf"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1738,6 +1753,7 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
+        onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
@@ -1809,7 +1825,7 @@ Array [
         </td>
       </tr>
       <tr
-        className="css-y47bfa"
+        className="css-mtqmtr"
         onClick={[Function]}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
