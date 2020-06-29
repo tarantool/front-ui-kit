@@ -53,6 +53,7 @@ export type RowProps = {
   rowClassName?: string,
   codeClassName?: string,
   codeRowKey?: string,
+  onClickRow?: (row: Row) => void;
   onClickCodeRow?: (row: Row) => void;
   pagination?: boolean;
   onSelectedRowsChange?: (selectedFlatRows: Row[]) => void;
@@ -151,6 +152,7 @@ export function Table(props: TableProps) {
                 rowClassName={rowClassName}
                 codeClassName={codeClassName}
                 onClickCodeRow={props.onClickCodeRow}
+                onClickRow={props.onClickRow}
                 codeRowKey={props.codeRowKey}
               />
             )

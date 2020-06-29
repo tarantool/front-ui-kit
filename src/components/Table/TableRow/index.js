@@ -23,7 +23,6 @@ const styles = {
   `,
   codeRow: css`
     background-color: #FAFAFA;
-    cursor: pointer;
   `,
   code: css`
     position: relative;
@@ -32,6 +31,9 @@ const styles = {
   `,
   hoverRow: css`
     background-color: #EFEFEF;
+  `,
+  pointer: css`
+    cursor: pointer;
   `,
   moreIcon: css`
     position: absolute;
@@ -47,7 +49,7 @@ const get2RowFromStr = (str: string) => {
 };
 
 function TableRow({
-  row, rowClassName, codeClassName, onClickCodeRow, codeRowKey
+  row, rowClassName, codeClassName, onClickCodeRow, codeRowKey, onClickRow
 }: RowProps & { row: Row}) {
   const rowProps = row.getRowProps();
   const codeRow = codeRowKey && row.original[codeRowKey];
@@ -58,7 +60,10 @@ function TableRow({
       <tr
         onMouseOver={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        className={cx(styles.rowBackground, { [styles.row]: !codeRow, [styles.hoverRow]: isHover } )}
+        onClick={() => onClickRow ? onClickRow(row) : null}
+        className={
+          cx(styles.rowBackground, { [styles.row]: !codeRow, [styles.hoverRow]: isHover, [styles.pointer]: onClickRow })
+        }
         {...rowProps}
       >
         {row.cells.map(cell => {
@@ -77,7 +82,13 @@ function TableRow({
         <tr
           onMouseOver={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          className={cx(styles.codeRow, styles.row, codeClassName, { [styles.hoverRow]: isHover })}
+          className={
+            cx(
+              styles.codeRow,
+              styles.row,
+              codeClassName,
+              { [styles.hoverRow]: isHover, [styles.pointer]: onClickCodeRow })
+          }
           onClick={() => onClickCodeRow ? onClickCodeRow(row) : null}
         >
           <Text
