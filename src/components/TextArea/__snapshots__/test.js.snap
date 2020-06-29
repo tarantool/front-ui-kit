@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders correctly 1`] = `
+Array [
+  <div
+    className="css-b4lojo"
+  >
+    <textarea
+      className="css-1yq8nnk"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      value="Example text"
+    />
+  </div>,
+  <div
+    className="css-tnhd2i"
+  >
+    <textarea
+      className="css-1yq8nnk"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      value="Example text"
+    />
+  </div>,
+  <div
+    className="css-101xu0e"
+  >
+    <textarea
+      className="css-1yq8nnk"
+      disabled={true}
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      value="Example text"
+    />
+  </div>,
+  <div
+    className="css-b4lojo"
+  >
+    <textarea
+      className="css-1yq8nnk"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      rows={5}
+      value="Example text"
+    />
+  </div>,
+]
+`;
