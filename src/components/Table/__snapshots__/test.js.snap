@@ -379,43 +379,49 @@ exports[`Table renders simple 1`] = `
   >
     <tr
       className="css-b02ryf"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         spiders
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         profession
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         15
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         55
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         complicated
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         66
@@ -423,43 +429,49 @@ exports[`Table renders simple 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         spiders
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         profession
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         15
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         55
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         complicated
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         66
@@ -467,43 +479,49 @@ exports[`Table renders simple 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         profit
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         quiet
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         8
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         79
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         complicated
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         9
@@ -511,37 +529,42 @@ exports[`Table renders simple 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         hat
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         jelly
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         7
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         56
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         <button
@@ -553,6 +576,7 @@ exports[`Table renders simple 1`] = `
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         67
@@ -672,43 +696,49 @@ exports[`Table renders with code row 1`] = `
   >
     <tr
       className="css-14r34si"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         spiders
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         profession
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         15
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         55
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         complicated
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         66
@@ -737,43 +767,49 @@ exports[`Table renders with code row 1`] = `
     </tr>
     <tr
       className="css-14r34si"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         spiders
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         profession
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         15
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         55
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         complicated
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         66
@@ -802,43 +838,49 @@ exports[`Table renders with code row 1`] = `
     </tr>
     <tr
       className="css-b02ryf"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         profit
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         quiet
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         8
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         79
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         complicated
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         9
@@ -846,43 +888,49 @@ exports[`Table renders with code row 1`] = `
     </tr>
     <tr
       className="css-14r34si"
-      onClick={[Function]}
+      onClick={null}
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
       role="row"
     >
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         hat
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         jelly
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         7
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         56
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         relationship
       </td>
       <td
         className="css-1cixjav"
+        onClick={null}
         role="cell"
       >
         67
@@ -1024,43 +1072,49 @@ Array [
     >
       <tr
         className="css-14r34si"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           spiders
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           profession
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           15
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           55
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           complicated
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           66
@@ -1089,43 +1143,49 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           spiders
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           profession
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           15
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           55
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           complicated
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           66
@@ -1154,43 +1214,49 @@ Array [
       </tr>
       <tr
         className="css-b02ryf"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           profit
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           quiet
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           8
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           79
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           complicated
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           9
@@ -1198,43 +1264,49 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           hat
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           jelly
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           7
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           56
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           relationship
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           67
@@ -1492,24 +1564,23 @@ Array [
     >
       <tr
         className="css-14r34si"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={[Function]}
           role="cell"
         >
           <label
             className="css-759u60"
-            title="Toggle Row Selected"
           >
             <input
               checked={false}
               className="css-1y12ua6"
               disabled={false}
-              onChange={[Function]}
               type="checkbox"
             />
             <div
@@ -1528,36 +1599,42 @@ Array [
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           spiders
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           profession
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           15
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           55
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           complicated
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           66
@@ -1586,24 +1663,23 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={[Function]}
           role="cell"
         >
           <label
             className="css-759u60"
-            title="Toggle Row Selected"
           >
             <input
               checked={false}
               className="css-1y12ua6"
               disabled={false}
-              onChange={[Function]}
               type="checkbox"
             />
             <div
@@ -1622,36 +1698,42 @@ Array [
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           spiders
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           profession
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           15
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           55
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           complicated
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           66
@@ -1680,24 +1762,23 @@ Array [
       </tr>
       <tr
         className="css-b02ryf"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={[Function]}
           role="cell"
         >
           <label
             className="css-759u60"
-            title="Toggle Row Selected"
           >
             <input
               checked={false}
               className="css-1y12ua6"
               disabled={false}
-              onChange={[Function]}
               type="checkbox"
             />
             <div
@@ -1716,36 +1797,42 @@ Array [
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           profit
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           quiet
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           8
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           79
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           complicated
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           9
@@ -1753,24 +1840,23 @@ Array [
       </tr>
       <tr
         className="css-14r34si"
-        onClick={[Function]}
+        onClick={null}
         onMouseLeave={[Function]}
         onMouseOver={[Function]}
         role="row"
       >
         <td
           className="css-1cixjav"
+          onClick={[Function]}
           role="cell"
         >
           <label
             className="css-759u60"
-            title="Toggle Row Selected"
           >
             <input
               checked={false}
               className="css-1y12ua6"
               disabled={false}
-              onChange={[Function]}
               type="checkbox"
             />
             <div
@@ -1789,36 +1875,42 @@ Array [
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           hat
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           jelly
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           7
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           56
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           relationship
         </td>
         <td
           className="css-1cixjav"
+          onClick={null}
           role="cell"
         >
           67

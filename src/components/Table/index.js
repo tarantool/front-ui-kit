@@ -106,7 +106,10 @@ export function Table(props: TableProps) {
         {
           id: 'selection',
           Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
-          Cell: ({ row }) => <Checkbox {...row.getToggleRowSelectedProps()} />
+          Cell: ({ row }) => {
+            const { checked } = row.getToggleRowSelectedProps();
+            return <Checkbox checked={checked} />
+          }
         },
         ...columns
       ])

@@ -60,23 +60,30 @@ function TableRow({
       <tr
         onMouseOver={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        onClick={() => onRowClick ? onRowClick(row) : null}
+        onClick={onRowClick ? () => onRowClick(row) : null}
         className={
           cx(styles.rowBackground, { [styles.row]: !codeRow, [styles.hoverRow]: isHover, [styles.pointer]: onRowClick })
         }
         {...rowProps}
       >
-        {row.cells.map(cell => {
-          return (
-            <Text
-              tag="td"
-              className={cx(styles.col, styles.colText, rowClassName)}
-              {...cell.getCellProps()}
-            >
-              {cell.render('Cell')}
-            </Text>
-          );
-        })}
+        {row.cells.map(cell => (
+          <Text
+            tag="td"
+            className={cx(styles.col, styles.colText, rowClassName)}
+            onClick={
+              cell.column.id === 'selection'
+                ? e => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  cell.row.toggleRowSelected(!cell.row.isSelected);
+                }
+                : null
+            }
+            {...cell.getCellProps()}
+          >
+            {cell.render('Cell')}
+          </Text>
+        ))}
       </tr>
       {codeRow && (
         <tr
