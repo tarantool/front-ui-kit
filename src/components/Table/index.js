@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import * as React from 'react';
 import {
   useTable, useSortBy, usePagination, useRowSelect, useMountedLayoutEffect,
   type UseTableOptions, Row, ColumnInstance, UseSortByColumnProps
@@ -8,11 +8,12 @@ import {
 
 import { css, cx } from 'emotion';
 import { Text } from '../Text';
+import { Spin } from '../Spin';
 import { NonIdealState } from '../NonIdealState';
 import TableRow from './TableRow';
 import { IconSortable } from './IconSortable';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
-import { Pagination } from '../Pagination';
+import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
 
 
@@ -55,11 +56,23 @@ export type RowProps = {
   codeRowKey?: string,
   onRowClick?: (row: Row) => void;
   onCodeRowClick?: (row: Row) => void;
-  pagination?: boolean;
-  onSelectedRowsChange?: (selectedFlatRows: Row[]) => void;
 }
 
-type TableProps = UseTableOptions & RowProps;
+export type ManualPagination = {
+  page: number,
+  pageSize: number,
+  onChangePage: (page: number) => void,
+  onChangePageSize: (pageSize: number) => void,
+}
+
+type TableProps = UseTableOptions & RowProps & {
+  pagination?: boolean;
+  loading?: boolean;
+  manualPagination?: ManualPagination;
+  onSelectedRowsChange?: (selectedFlatRows: Row[], selectedRowIds: any[]) => void,
+  tableKey?: string;
+  initialSelectedRowIds?: any[],
+};
 
 function getSortDirection(isSortedDesc?: boolean) {
   if (isSortedDesc === true) {
@@ -76,8 +89,22 @@ function getSortDirection(isSortedDesc?: boolean) {
 
 export function Table(props: TableProps) {
   const {
-    rowClassName, codeClassName, columns = [], data = [], pagination, onSelectedRowsChange
+    rowClassName,
+    codeClassName,
+    columns = [],
+    data = [],
+    pagination,
+    onSelectedRowsChange,
+    tableKey,
+    initialSelectedRowIds = [],
+    manualPagination,
+    loading = false
   } = props;
+
+  const getRowId = React.useCallback((row, index) => {
+    return tableKey && row[tableKey] ? row[tableKey] : index;
+  }, []);
+
 
   const {
     getTableProps,
@@ -91,11 +118,15 @@ export function Table(props: TableProps) {
     gotoPage,
     setPageSize,
     selectedFlatRows,
-    state: { pageIndex, pageSize }
+    state: { pageIndex, pageSize, selectedRowIds }
   } = useTable(
     {
       columns,
-      data
+      data,
+      getRowId,
+      initialState: { selectedRowIds: initialSelectedRowIds },
+      manualPagination: !!manualPagination,
+      autoResetSelectedRows: !manualPagination
     },
     useSortBy,
     usePagination,
@@ -119,68 +150,79 @@ export function Table(props: TableProps) {
   useMountedLayoutEffect(() => {
     if (onSelectedRowsChange) {
       const selectedRows = selectedFlatRows.map(row => row.original);
-      onSelectedRowsChange(selectedRows);
+      onSelectedRowsChange(selectedRows, Object.keys(selectedRowIds));
     }
-  }, [onSelectedRowsChange, selectedFlatRows]);
+  }, [selectedFlatRows]);
 
   const dataRows = pagination ? page : rows;
   return (
     <>
-      <table {...getTableProps()} className={cx(styles.table)}>
-        <thead>
-          {headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => (
-                <Text
-                  tag="th"
-                  className={cx(styles.head)}
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                >
-                  {column.render('Header')}
-                  {column.canSort && (
-                    <IconSortable className={cx(styles.sortIcon)} sort={getSortDirection(column.isSortedDesc)} />
-                  )}
-                </Text>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {dataRows.map(row => {
-            prepareRow(row);
-            return (
-              <TableRow
-                key={row.getRowProps().key}
-                row={row}
-                rowClassName={rowClassName}
-                codeClassName={codeClassName}
-                onCodeRowClick={props.onCodeRowClick}
-                onRowClick={props.onRowClick}
-                codeRowKey={props.codeRowKey}
-              />
-            )
-          })}
-          {!rows.length && (
-            <tr>
-              <td colSpan={visibleColumns.length}>
-                <NonIdealState className={cx(styles.noData)} image={image}>
-                  <Text className={styles.noDataText}>The list is empty</Text>
-                </NonIdealState>
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
-      {pagination && rows.length > 0 && <div className={styles.pagination}>
-        <Pagination
-          page={pageIndex}
-          pageSize={pageSize}
-          items={rows.length}
-          onPageChange={gotoPage}
-          setPageSize={setPageSize}
-          showTotal
-        />
-      </div>}
+      <Spin enable={loading}>
+        <table {...getTableProps()} className={cx(styles.table)}>
+          <thead>
+            {headerGroups.map(headerGroup => (
+              <tr {...headerGroup.getHeaderGroupProps()}>
+                {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => (
+                  <Text
+                    tag="th"
+                    className={cx(styles.head)}
+                    {...column.getHeaderProps(column.getSortByToggleProps())}
+                  >
+                    {column.render('Header')}
+                    {column.canSort && (
+                      <IconSortable className={cx(styles.sortIcon)} sort={getSortDirection(column.isSortedDesc)} />
+                    )}
+                  </Text>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody {...getTableBodyProps()}>
+            {dataRows.map(row => {
+              prepareRow(row);
+              return (
+                <TableRow
+                  key={row.getRowProps().key}
+                  row={row}
+                  rowClassName={rowClassName}
+                  codeClassName={codeClassName}
+                  onCodeRowClick={props.onCodeRowClick}
+                  onRowClick={props.onRowClick}
+                  codeRowKey={props.codeRowKey}
+                />
+              )
+            })}
+            {!rows.length && (
+              <tr>
+                <td colSpan={visibleColumns.length}>
+                  <NonIdealState className={cx(styles.noData)} image={image}>
+                    <Text className={styles.noDataText}>The list is empty</Text>
+                  </NonIdealState>
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+        {pagination && rows.length > 0 && <div className={styles.pagination}>
+          <Pagination
+            page={pageIndex}
+            pageSize={pageSize}
+            items={rows.length}
+            onPageChange={gotoPage}
+            setPageSize={setPageSize}
+            showTotal
+          />
+        </div>}
+        {manualPagination && <div className={styles.pagination}>
+          <PaginationControlled
+            page={manualPagination.page}
+            pageSize={manualPagination.pageSize}
+            countPageItems={rows.length}
+            onPageChange={manualPagination.onChangePage}
+            setPageSize={manualPagination.onChangePageSize}
+          />
+        </div>}
+      </Spin>
     </>
   );
 }

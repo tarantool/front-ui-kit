@@ -1,4 +1,5 @@
 ```js
+import { PaginationControlled } from './PaginationControlled';
 initialState = { pageIndex: 20, pageSize: 10 };
 
 const changePage = (pageIndex) => setState({ pageIndex });
@@ -30,6 +31,16 @@ const setPageSize = (pageSize) => setState({ pageSize });
    page={state.pageIndex}
    pageSize={state.pageSize}
    items={300}
+   onPageChange={changePage}
+  />
+
+  <br />
+  <br />
+    
+  <PaginationControlled
+   page={state.pageIndex}
+   pageSize={state.pageSize}
+   countPageItems={9}
    onPageChange={changePage}
   />
 </div>
