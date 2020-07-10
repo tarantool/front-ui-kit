@@ -32,6 +32,18 @@ const styles = {
     padding: 4px;
     margin: 0 4px;
   `,
+  activePage: css`
+    min-width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 18px;
+    padding: 4px;
+    margin: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `,
   dropDown: css`
     margin-left: 12px;
     min-width: 120px;
@@ -45,7 +57,7 @@ const IconChevronDownBlack = () => <IconChevronDown className={styles.chevronIco
 type PaginationControlledProps = {
   page: number,
   pageSize: number,
-  countPageItems: number,
+  disableNextPageButton: boolean,
   onPageChange: (pageIndex: number) => void,
   setPageSize?: (pageSize: number) => void,
   pageSizeOptions: number[],
@@ -82,7 +94,7 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
   ));
 
   render() {
-    const { setPageSize, countPageItems, page, pageSize } = this.props;
+    const { setPageSize, disableNextPageButton, page, pageSize } = this.props;
     const activePage = page + 1;
 
     return (
@@ -95,19 +107,14 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
             icon={IconChevronLeftBlack}
           />
         </div>
-        <div>
-          <Button
-            className={cx(styles.button)}
-            disabled={true}
-          >
-            {activePage}
-          </Button>
+        <div className={styles.activePage}>
+          {activePage}
         </div>
         <div>
           <Button
             className={styles.button}
             onClick={this.changePage(activePage + 1)}
-            disabled={countPageItems < pageSize}
+            disabled={disableNextPageButton}
             icon={IconChevronRightBlack}
           />
         </div>

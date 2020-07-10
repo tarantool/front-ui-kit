@@ -948,7 +948,7 @@ console.log('onSelectedRowsChange', rows, rowsIds)
     loading={loading}
     tableKey={'id'}
     onSelectedRowsChange={onSelectedRowsChange}
-    manualPagination={{ page, pageSize, onChangePage, onChangePageSize }}
+    manualPagination={{ page, pageSize, onChangePage, onChangePageSize, disableNextPageButton: rows.length < pageSize }}
   />
 </div>
 ```

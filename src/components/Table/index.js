@@ -23,6 +23,12 @@ const styles = {
     width: 100%;
     border-spacing: initial;
   `,
+  spin: css`
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  `,
   head: css`
     color: #000000a6;
     font-weight: 600;
@@ -63,6 +69,7 @@ export type ManualPagination = {
   pageSize: number,
   onChangePage: (page: number) => void,
   onChangePageSize: (pageSize: number) => void,
+  disableNextPageButton: boolean,
 }
 
 type TableProps = UseTableOptions & RowProps & {
@@ -217,7 +224,7 @@ export function Table(props: TableProps) {
           <PaginationControlled
             page={manualPagination.page}
             pageSize={manualPagination.pageSize}
-            countPageItems={rows.length}
+            disableNextPageButton={manualPagination.disableNextPageButton}
             onPageChange={manualPagination.onChangePage}
             setPageSize={manualPagination.onChangePageSize}
           />

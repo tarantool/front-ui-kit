@@ -40,7 +40,7 @@ const setPageSize = (pageSize) => setState({ pageSize });
   <PaginationControlled
    page={state.pageIndex}
    pageSize={state.pageSize}
-   countPageItems={9}
+   disableNextPageButton={false}
    onPageChange={changePage}
   />
 </div>

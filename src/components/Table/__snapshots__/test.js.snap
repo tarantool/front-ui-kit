@@ -1542,19 +1542,14 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             </svg>
           </button>
         </div>
-        <div>
-          <button
-            className="css-6wne7q"
-            disabled={true}
-            type="button"
-          >
-            1
-          </button>
+        <div
+          className="css-1wiccey"
+        >
+          1
         </div>
         <div>
           <button
-            className="css-1kyfbge"
-            disabled={true}
+            className="css-dn2100"
             onClick={[Function]}
             type="button"
           >

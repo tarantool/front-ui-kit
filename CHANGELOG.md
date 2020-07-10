@@ -14,7 +14,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     - add initial selected state
     - add manual pagination
     
-- Add controlled simple pagination    
+- Add controlled simple pagination 
+
+- Update spinner icon for component Spin   
 
 ## [0.19.1] - 2020-06-30
 
