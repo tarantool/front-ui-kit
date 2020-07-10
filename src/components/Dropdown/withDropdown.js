@@ -1,10 +1,25 @@
 // @flow
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';
 import { throttle } from 'lodash';
 import { DropdownPopoverWithRef } from './DropdownPopover';
 
 const SCROLLBAR_WIDTH = 28;
+
+const popoverCloseKeyCodes = [9, 13, 27];
+
+const focusFirstInteractiveElement = (containerEl: HTMLElement) => {
+  const firstInteractiveElement = containerEl
+    && containerEl.querySelector(INTERACTIVE_ELEMENT_SELECTOR);
+
+  if (firstInteractiveElement) {
+    firstInteractiveElement.focus();
+  } else if (containerEl) {
+    containerEl.focus();
+  }
+}
+
 
 export type withDropdownProps = {
   className?: string, // trigger wrapper class
@@ -119,7 +134,7 @@ export const withDropdown = (
       }
     }
 
-    // 16 approximately equals 2 frames with 60fps
+    // 16 approximately equals 1 frame with 60fps
     throttledRecalcPosition = throttle(this.recalcPosition, 16);
 
     handleClick = (event: MouseEvent) => {
@@ -157,6 +172,13 @@ export const withDropdown = (
 
     handlePopoverMouseDown = (event: MouseEvent)=> event.stopPropagation();
 
+    handlePopoverKeyDown = (event: KeyboardEvent)=> {
+      if (popoverCloseKeyCodes.includes(event.keyCode)) {
+        this.toggleDropdown();
+        this.wrapperRef.current && focusFirstInteractiveElement(this.wrapperRef.current);
+      }
+    };
+
     toggleDropdown = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen, useScroll: false }));
 
     renderPopover = () => {
@@ -172,6 +194,7 @@ export const withDropdown = (
           className={popoverClassName}
           items={this.props.items}
           onClick={this.handlePopoverClick}
+          onKeyDownCapture={this.handlePopoverKeyDown}
           onMouseDown={this.handlePopoverMouseDown}
           style={{
             left,

@@ -47,3 +47,5 @@ export const zIndex = {
   dropdownMenu: 150,
   tooltip: 200
 };
+
+export const INTERACTIVE_ELEMENT_SELECTOR = 'a, button, input, select, textarea, [tabindex="0"]';
