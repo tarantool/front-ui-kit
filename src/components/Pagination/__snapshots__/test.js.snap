@@ -429,3 +429,106 @@ exports[`Pagination renders with total 1`] = `
   </div>
 </div>
 `;
+
+exports[`PaginationControlled render simple 1`] = `
+<div
+  className="css-k008qs"
+>
+  <button
+    className="css-1666qfh"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="css-1hsbuls"
+      viewBox="0 0 14 14"
+    >
+      <use
+        xlinkHref="#chevron-up"
+      />
+    </svg>
+  </button>
+  <span
+    className="css-1rys4on"
+  >
+    3
+  </span>
+  <button
+    className="css-1666qfh"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="css-oiyldh"
+      viewBox="0 0 14 14"
+    >
+      <use
+        xlinkHref="#chevron-up"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`PaginationControlled renders with page size changer 1`] = `
+<div
+  className="css-k008qs"
+>
+  <button
+    className="css-1666qfh"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="css-1hsbuls"
+      viewBox="0 0 14 14"
+    >
+      <use
+        xlinkHref="#chevron-up"
+      />
+    </svg>
+  </button>
+  <span
+    className="css-1rys4on"
+  >
+    3
+  </span>
+  <button
+    className="css-1666qfh"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      className="css-oiyldh"
+      viewBox="0 0 14 14"
+    >
+      <use
+        xlinkHref="#chevron-up"
+      />
+    </svg>
+  </button>
+  <div
+    className="css-1vkrryt"
+    onClick={[Function]}
+  >
+    <button
+      className="css-xhnfgx"
+      type="button"
+    >
+      10 / page 
+      <svg
+        className="css-ok8b0z"
+        viewBox="0 0 14 14"
+      >
+        <use
+          xlinkHref="#chevron-up"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

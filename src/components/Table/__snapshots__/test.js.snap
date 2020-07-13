@@ -1525,44 +1525,40 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
       <div
         className="css-k008qs"
       >
-        <div>
-          <button
-            className="css-1kyfbge"
-            disabled={true}
-            onClick={[Function]}
-            type="button"
+        <button
+          className="css-l1feir"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="css-1hsbuls"
+            viewBox="0 0 14 14"
           >
-            <svg
-              className="css-1hsbuls"
-              viewBox="0 0 14 14"
-            >
-              <use
-                xlinkHref="#chevron-up"
-              />
-            </svg>
-          </button>
-        </div>
-        <div
-          className="css-1wiccey"
+            <use
+              xlinkHref="#chevron-up"
+            />
+          </svg>
+        </button>
+        <span
+          className="css-1rys4on"
         >
           1
-        </div>
-        <div>
-          <button
-            className="css-dn2100"
-            onClick={[Function]}
-            type="button"
+        </span>
+        <button
+          className="css-1666qfh"
+          onClick={[Function]}
+          type="button"
+        >
+          <svg
+            className="css-oiyldh"
+            viewBox="0 0 14 14"
           >
-            <svg
-              className="css-oiyldh"
-              viewBox="0 0 14 14"
-            >
-              <use
-                xlinkHref="#chevron-up"
-              />
-            </svg>
-          </button>
-        </div>
+            <use
+              xlinkHref="#chevron-up"
+            />
+          </svg>
+        </button>
         <div
           className="css-1vkrryt"
           onClick={[Function]}

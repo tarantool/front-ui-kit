@@ -1,9 +1,10 @@
 // @flow
 
 import * as React from 'react';
-import { css, cx } from 'emotion';
+import { css } from 'emotion';
 import { Button } from '../Button';
 import { Dropdown, DropdownItem } from '../Dropdown';
+import { Text } from '../Text';
 import { IconChevronLeft, IconChevronRight, IconChevronDown } from '../Icon/icons/IconChevron';
 
 const styles = {
@@ -20,6 +21,7 @@ const styles = {
    fill: rgba(0,0,0, .65);
   `,
   button: css`
+    display: block;
     min-width: 32px;
     height: 32px;
     background: #FFFFFF;
@@ -37,7 +39,6 @@ const styles = {
     height: 32px;
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.65);
-    font-size: 18px;
     padding: 4px;
     margin: 0 4px;
     display: flex;
@@ -99,25 +100,19 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
 
     return (
       <div className={styles.pagination}>
-        <div>
-          <Button
-            className={styles.button}
-            onClick={this.changePage(activePage - 1)}
-            disabled={activePage === 1}
-            icon={IconChevronLeftBlack}
-          />
-        </div>
-        <div className={styles.activePage}>
-          {activePage}
-        </div>
-        <div>
-          <Button
-            className={styles.button}
-            onClick={this.changePage(activePage + 1)}
-            disabled={disableNextPageButton}
-            icon={IconChevronRightBlack}
-          />
-        </div>
+        <Button
+          className={styles.button}
+          onClick={this.changePage(activePage - 1)}
+          disabled={activePage === 1}
+          icon={IconChevronLeftBlack}
+        />
+        <Text className={styles.activePage}>{activePage}</Text>
+        <Button
+          className={styles.button}
+          onClick={this.changePage(activePage + 1)}
+          disabled={disableNextPageButton}
+          icon={IconChevronRightBlack}
+        />
         {setPageSize && (
           <Dropdown className={styles.dropDown} items={this.getDropDownItems()}>
             <Button text={`${pageSize} / page `} iconRight={IconChevronDownBlack}/>
