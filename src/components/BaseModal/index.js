@@ -137,7 +137,7 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
 
   focusFirstInteractiveElement = () => {
     const modal = this.modalRef.current;
-    const firstInteractiveElement = modal && modal.querySelector('a, button, input, select, textarea');
+    const firstInteractiveElement = modal && modal.querySelector('a, button, input, select, textarea, [tabindex="0"]');
 
     if (firstInteractiveElement) {
       firstInteractiveElement.focus();

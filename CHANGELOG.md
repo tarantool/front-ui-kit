@@ -9,14 +9,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Table component changes:
 
-    - add loading state
-    - add table row key
-    - add initial selected state
-    - add manual pagination
-    
-- Add controlled simple pagination 
+  - add loading state
+  - add table row key
+  - add initial selected state
+  - add manual pagination
 
-- Update spinner icon for component Spin   
+- Add controlled simple pagination.
+
+- Update spinner icon for component Spin.
+
+- Add keyboard control to Dropdown.
 
 ## [0.19.1] - 2020-06-30
 
