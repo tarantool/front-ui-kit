@@ -227,4 +227,62 @@ describe('Table', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with controlled pagination and selected rows', () => {
+    const data = [
+      {
+        firstName: 'spiders',
+        lastName: 'profession',
+        age: 15,
+        visits: 55,
+        progress: 66,
+        status: 'complicated',
+        code: 'some code1'
+      },
+      {
+        firstName: 'spiders',
+        lastName: 'profession',
+        age: 15,
+        visits: 55,
+        progress: 66,
+        status: 'complicated',
+        code: 'some code2'
+      },
+      {
+        firstName: 'profit',
+        lastName: 'quiet',
+        age: 8,
+        visits: 79,
+        progress: 9,
+        status: 'complicated'
+      },
+      {
+        firstName: 'hat',
+        lastName: 'jelly',
+        age: 7,
+        visits: 56,
+        progress: 67,
+        status: 'relationship',
+        code: 'some code4'
+      }
+    ];
+
+    const tree = renderer.create(
+      <Table
+        columns={columns}
+        data={data}
+        tableKey={'id'}
+        codeRowKey='code'
+        onSelectedRowsChange={() => {}}
+        manualPagination={{
+          page: 0,
+          pageSize: 10,
+          onChangePage: () => {},
+          onChangePageSize: () => {}
+        }}
+      />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

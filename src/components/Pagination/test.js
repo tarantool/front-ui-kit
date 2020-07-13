@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Pagination } from './index';
+import { Pagination, PaginationControlled } from './index';
 
 
 const changePage = () => {};
@@ -58,6 +58,36 @@ describe('Pagination', () => {
         pageSize={10}
         items={300}
         onPageChange={changePage}
+        setPageSize={setPageSize}
+      />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('PaginationControlled', () => {
+  it('render simple', () => {
+    const tree = renderer.create(
+      <PaginationControlled
+        page={2}
+        pageSize={10}
+        disableNextPageButton={false}
+        onPageChange={changePage}
+      />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders with page size changer', () => {
+    const tree = renderer.create(
+      <PaginationControlled
+        page={2}
+        pageSize={10}
+        disableNextPageButton={false}
+        onPageChange={changePage}
+        pageSizeOptions={[10, 25, 75, 110]}
         setPageSize={setPageSize}
       />
     ).toJSON();
