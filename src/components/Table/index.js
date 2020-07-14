@@ -172,7 +172,7 @@ export function Table(props: TableProps) {
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
                   const sortColumn = () => {
-                    column.toggleSortBy(!column.isSortedDesc, false);
+                    column.toggleSortBy && column.toggleSortBy(!column.isSortedDesc, false);
                   };
                   return (
                     <Text
