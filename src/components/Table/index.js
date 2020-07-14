@@ -133,7 +133,8 @@ export function Table(props: TableProps) {
       getRowId,
       initialState: { selectedRowIds: initialSelectedRowIds },
       manualPagination: !!manualPagination,
-      autoResetSelectedRows: !manualPagination
+      autoResetSelectedRows: !manualPagination,
+      autoResetSortBy: !manualPagination
     },
     useSortBy,
     usePagination,
@@ -169,18 +170,25 @@ export function Table(props: TableProps) {
           <thead>
             {headerGroups.map(headerGroup => (
               <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => (
-                  <Text
-                    tag="th"
-                    className={cx(styles.head)}
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
-                  >
-                    {column.render('Header')}
-                    {column.canSort && (
-                      <IconSortable className={cx(styles.sortIcon)} sort={getSortDirection(column.isSortedDesc)} />
-                    )}
-                  </Text>
-                ))}
+                {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
+                  const sortColumn = () => {
+                    column.toggleSortBy(!column.isSortedDesc, false);
+                  };
+                  return (
+                    <Text
+                      tag="th"
+                      className={cx(styles.head)}
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                      onClick={sortColumn}
+                    >
+                      {column.render('Header')}
+                      {column.canSort && (
+                        <IconSortable className={cx(styles.sortIcon)} sort={getSortDirection(column.isSortedDesc)} />
+                      )}
+                    </Text>
+                  )
+                }
+                )}
               </tr>
             ))}
           </thead>
