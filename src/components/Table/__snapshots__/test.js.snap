@@ -19,6 +19,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -31,6 +32,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -43,6 +45,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -55,6 +58,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -67,6 +71,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -159,6 +164,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -171,6 +177,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -183,6 +190,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -195,6 +203,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -207,6 +216,7 @@ Array [
             <th
               className="css-4oxon4"
               colSpan={1}
+              onClick={[Function]}
               role="columnheader"
               style={
                 Object {
@@ -303,6 +313,7 @@ exports[`Table renders simple 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -315,6 +326,7 @@ exports[`Table renders simple 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -327,6 +339,7 @@ exports[`Table renders simple 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -339,6 +352,7 @@ exports[`Table renders simple 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -351,6 +365,7 @@ exports[`Table renders simple 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -628,6 +643,7 @@ exports[`Table renders with code row 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -640,6 +656,7 @@ exports[`Table renders with code row 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -652,6 +669,7 @@ exports[`Table renders with code row 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -664,6 +682,7 @@ exports[`Table renders with code row 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -676,6 +695,7 @@ exports[`Table renders with code row 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1011,6 +1031,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1046,6 +1067,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1058,6 +1080,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1070,6 +1093,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1082,6 +1106,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1094,6 +1119,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1602,6 +1628,7 @@ exports[`Table renders with pagination 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1614,6 +1641,7 @@ exports[`Table renders with pagination 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1626,6 +1654,7 @@ exports[`Table renders with pagination 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1638,6 +1667,7 @@ exports[`Table renders with pagination 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -1650,6 +1680,7 @@ exports[`Table renders with pagination 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -2065,6 +2096,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -2100,6 +2132,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -2112,6 +2145,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -2124,6 +2158,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -2136,6 +2171,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
@@ -2148,6 +2184,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           <th
             className="css-4oxon4"
             colSpan={1}
+            onClick={[Function]}
             role="columnheader"
             style={
               Object {
