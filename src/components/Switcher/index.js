@@ -20,8 +20,12 @@ const styles = {
       left: -3px;
       right: -3px;
       bottom: -3px;
-      border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
+      border: solid 1px rgba(255, 255, 255, 0);
       border-radius: 15px;
+    }
+
+    &:focus + div::before {
+      border-color: ${rgba(colors.intentPrimary, 0.55)};
     }
   `,
   switcher: css`

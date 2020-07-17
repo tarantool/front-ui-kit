@@ -1045,7 +1045,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
@@ -1185,7 +1185,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
@@ -1284,7 +1284,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
@@ -1383,7 +1383,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
@@ -1461,7 +1461,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
@@ -2110,7 +2110,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
@@ -2250,7 +2250,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
@@ -2349,7 +2349,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
@@ -2448,7 +2448,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
@@ -2526,7 +2526,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             >
               <input
                 checked={false}
-                className="css-1y12ua6"
+                className="css-1rbhmzp"
                 disabled={false}
                 type="checkbox"
               />
