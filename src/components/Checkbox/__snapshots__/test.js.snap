@@ -8,7 +8,7 @@ Array [
   >
     <input
       checked={false}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
@@ -36,7 +36,7 @@ Array [
   >
     <input
       checked={true}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
@@ -65,7 +65,7 @@ Array [
   >
     <input
       checked={true}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
@@ -93,7 +93,7 @@ Array [
   >
     <input
       checked={false}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
@@ -121,7 +121,7 @@ Array [
   >
     <input
       checked={true}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
@@ -149,7 +149,7 @@ Array [
   >
     <input
       checked={false}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
@@ -177,7 +177,7 @@ Array [
   >
     <input
       checked={true}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
@@ -205,7 +205,7 @@ Array [
   >
     <input
       checked={false}
-      className="css-1y12ua6"
+      className="css-1rbhmzp"
       disabled={true}
       onChange={[Function]}
       type="checkbox"

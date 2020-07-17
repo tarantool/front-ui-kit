@@ -28,15 +28,19 @@ const styles = {
     height: 1px;
     margin: -1px;
 
-    &:focus + div::before {
+    & + div::before {
       content: '';
       position: absolute;
       top: -2px;
       left: -2px;
       right: -2px;
       bottom: -2px;
-      border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
+      border: solid 1px rgba(255, 255, 255, 0);
       border-radius: 50%;
+    }
+
+    &:focus + div::before {
+      border-color: ${rgba(colors.intentPrimary, 0.55)};
     }
   `,
   label: css`
