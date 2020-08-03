@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import { useRef, useEffect } from 'react';
 import { css, cx } from 'emotion';
 import { rgba } from 'emotion-rgba';
 import { colors } from '../../variables';
@@ -73,30 +74,42 @@ export const Checkbox = ({
   title,
   value
 }:
-CheckboxProps) => (
-  <label className={cx(styles.label, className)} title={title}>
-    <input
-      checked={checked}
-      className={styles.input}
-      disabled={disabled}
-      type='checkbox'
-      onChange={onChange}
-      name={name}
-      value={value}
-    />
-    <div
-      className={cx(
-        styles.iconWrap,
-        { [styles.childrenMargin]: children }
-      )}
-    >
-      <IconCheckbox
-        className={styles.icon}
+CheckboxProps) => {
+  const inputRef = useRef(null);
+
+  useEffect(
+    () => {
+      inputRef.current && (inputRef.current.indeterminate = indeterminate)
+    },
+    [indeterminate]
+  );
+
+  return (
+    <label className={cx(styles.label, className)} title={title}>
+      <input
         checked={checked}
-        indeterminate={indeterminate}
+        className={styles.input}
         disabled={disabled}
+        type='checkbox'
+        onChange={onChange}
+        name={name}
+        value={value}
+        ref={inputRef}
       />
-    </div>
-    {typeof children === 'string' ? <Text>{children}</Text> : children}
-  </label>
-);
+      <div
+        className={cx(
+          styles.iconWrap,
+          { [styles.childrenMargin]: children }
+        )}
+      >
+        <IconCheckbox
+          className={styles.icon}
+          checked={checked}
+          indeterminate={indeterminate}
+          disabled={disabled}
+        />
+      </div>
+      {typeof children === 'string' ? <Text>{children}</Text> : children}
+    </label>
+  );
+};
