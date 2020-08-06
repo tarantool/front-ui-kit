@@ -29,29 +29,23 @@ export class ResizeSensor extends React.PureComponent<ResizeSensorProps> {
   }
 
   render() {
-    // pass-through render of single child
     return React.Children.only(this.props.children);
   }
 
   observeElement(force: boolean = false) {
     const element = this.getElement();
     if (!(element instanceof Element)) {
-      // stop everything if not defined
       this.observer.disconnect();
       return;
     }
 
     if (element === this.element && !force) {
-      // quit if given same element -- nothing to update (unless forced)
       return;
     } else {
-      // clear observer list if new element
       this.observer.disconnect();
-      // remember element reference for next time
       this.element = element;
     }
 
-    // observer callback is invoked immediately when observing new elements
     this.observer.observe(element);
 
     if (this.props.observeParents) {

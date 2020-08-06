@@ -12,7 +12,11 @@ export type BreadcrumbItem = {
   link?: string,
 }
 
-type BreadcrumbProps = {
+export type ActionsBreadCrumbs = {
+  onLinkClick: (link: string) => void
+}
+
+type BreadcrumbProps = ActionsBreadCrumbs & {
   breadcrumbs: BreadcrumbItem[],
   appName?: string,
 }
@@ -93,11 +97,14 @@ export class Breadcrumb extends React.Component<BreadcrumbProps>{
   }
 
   renderOverflow = (items: any[]) => {
+    const { onLinkClick } = this.props;
     const itemsCollection = (
         <>
-          {items.map(item => (<DropdownItem onClick={console.log}>
-            <Text className={styles.overflowButton}>{item.title}</Text>
-          </DropdownItem>))}
+          {items.map(item => (
+            <DropdownItem onClick={() => onLinkClick(item.link)}>
+              <Text className={styles.overflowButton}>{item.title}</Text>
+            </DropdownItem>
+          ))}
         </>
     );
 
@@ -114,12 +121,13 @@ export class Breadcrumb extends React.Component<BreadcrumbProps>{
   };
 
   renderBreadcrumbWrapper = (props: BreadcrumbItem, index: number) => {
+    const { onLinkClick } = this.props;
     return (
       <React.Fragment>
         <Text tag="span" className={cx(styles.breadcrumbDelimeter, styles.breadcrumbElement)}>
           /
         </Text>
-        <BreadcrumbItemComponent key={index} title={props.title} link={props.link} />
+        <BreadcrumbItemComponent key={index} title={props.title} link={props.link} onLinkClick={onLinkClick} />
       </React.Fragment>
     )
   };

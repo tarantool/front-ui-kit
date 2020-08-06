@@ -4,7 +4,7 @@ import { cx, css } from 'emotion';
 import { Link } from '../../../Link';
 import { Text } from '../../../Text';
 
-import type { BreadcrumbItem }  from '../../index';
+import type { BreadcrumbItem, ActionsBreadCrumbs } from '../../index';
 
 const styles = {
   breadcrumbElement: css`
@@ -15,27 +15,38 @@ const styles = {
   `,
   breadcrumbLinkElement: css`
     cursor: pointer:
-  
+    color: #686D77;
+    
+    &:hover,
+    &:focus,
+    a:link,
+    a:visited,
+    &:active {
+      color: #686D77;
+    }
+    
     &:hover {
       text-decoration: underline;
     }
   `
 }
 
-export default class BreadcrumbItemComponent extends React.Component<BreadcrumbItem>{
+export default class BreadcrumbItemComponent extends React.Component<BreadcrumbItem & ActionsBreadCrumbs>{
   render() {
-    const { title, link } = this.props;
-    if (link) {
+    const { title, link, onLinkClick } = this.props;
+    if (link && onLinkClick) {
 
       return (
         <Link
           href={link}
           onClick={e => {
             e.preventDefault();
+            onLinkClick(link)
           }}
-          className={cx(styles.breadcrumbElement, styles.breadcrumbLinkElement)}
+          className={cx(styles.breadcrumbLinkElement, styles.breadcrumbElement)}
+          variant="basic"
         >
-          <Text>{title}</Text>
+          {title}
         </Link>
       )
     }

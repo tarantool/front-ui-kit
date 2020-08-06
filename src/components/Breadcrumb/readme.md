@@ -1,61 +1,36 @@
 ```js
 const breadcrumbs = [{
-  title: 'Settings',
+  title: '@tarantool.io/ui-kit',
+  link: '/tarantool'
 },
 {
-  title: 'Roles',
+  title: 'UI Components',
+  link: '/section-ui-components'
 },
 {
-  title: 'Roles',
+  title: 'Breadcrumb',
+  link: '/breadcrumb'
 },
 {
-  title: 'Roles',
+  title: 'OverflowList',
+  link: '/overflow-list'
 },
 {
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Roles',
-},
-{
-  title: 'Create role',
+  title: 'ResizeSensor',
+  link: '/resize-sensor'
 }];
+const onLinkClick = (link) => console.log('link', link);
 <div>
 <Breadcrumb
- breadcrumbs={breadcrumbs}
- appName={'Project name-2948474770249-999-20299547789'}
+  breadcrumbs={breadcrumbs}
+  appName={'Project name-2948474770249-999-20299547789'}
+  onLinkClick={onLinkClick}
  />
 
 <Breadcrumb
- breadcrumbs={breadcrumbs}
- appName={'Project name'}
+  breadcrumbs={breadcrumbs}
+  appName={'Project name'}
+  onLinkClick={onLinkClick}
  />
 </div>
 
