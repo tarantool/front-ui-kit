@@ -14,7 +14,7 @@ exports[`Modal renders modal with form 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-pi59ny"
+      className="css-1x3jdys"
     >
       Configure server
     </h2>
@@ -37,7 +37,7 @@ exports[`Modal renders modal with form 1`] = `
           className="css-13kfgn1"
         >
           <span
-            className="css-rkd6q9"
+            className="css-dpor9z"
           >
             First input
             :
@@ -53,7 +53,7 @@ exports[`Modal renders modal with form 1`] = `
           />
         </div>
         <p
-          className="css-194ftfm"
+          className="css-5ut22t"
         />
       </label>
     </div>
@@ -106,7 +106,7 @@ exports[`Modal renders modal with large text 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-pi59ny"
+      className="css-1x3jdys"
     >
       Configure server
     </h2>
@@ -176,7 +176,7 @@ exports[`Modal renders modal with tabs 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-pi59ny"
+      className="css-1x3jdys"
     >
       Configure server
     </h2>
@@ -276,7 +276,7 @@ exports[`Modal renders simple modal 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-pi59ny"
+      className="css-1x3jdys"
     >
       Simple Modal
     </h2>

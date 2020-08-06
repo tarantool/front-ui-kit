@@ -1,10 +1,10 @@
 ```
-<Text variant='h1' title='Text title'>Heading 1 - 24px, 38px, 600, spacing 0.48px</Text>
-<Text variant='h2'>Heading 2 - 20px, 28px, 600, spacing 0.4px</Text>
-<Text variant='h3'>Heading 3 - 16px, 24px, 600, spacing 0.32px</Text>
-<Text variant='h4'>Heading 4 - 16px, 24px, 600, spacing 0.32px</Text>
-<Text variant='h5'>Heading 5 - 12px, 22px, 400, spacing 0.24px</Text>
-<Text variant='p'>paragraph - 12px, 20px, 400, spacing: 0.28px</Text>
+<Text variant='h1' title='Text title'>Heading 1 - 24/40, 600</Text>
+<Text variant='h2'>Heading 2 - 20/28, 600</Text>
+<Text variant='h3'>Heading 3 - 16/24, 600</Text>
+<Text variant='h4'>Heading 4 - 14/22, 600</Text>
+<Text variant='h5'>Tags and budges - 600 uppercase 11/22, letter spacing 0.01em</Text>
+<Text variant='p'>paragraph - 12px, 20px, 400</Text>
 <Text>basic - 14px, 22px, 400</Text>
 <br />
 <Text variant='code'>code - 14px, 22px, 400</Text>

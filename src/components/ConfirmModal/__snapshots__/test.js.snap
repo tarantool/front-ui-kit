@@ -13,7 +13,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-pi59ny"
+      className="css-1x3jdys"
     >
       Please confirm
     </h2>
@@ -93,7 +93,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
     tabIndex={0}
   >
     <h2
-      className="css-pi59ny"
+      className="css-1x3jdys"
     >
       Please confirm
     </h2>

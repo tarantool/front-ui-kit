@@ -9,7 +9,7 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-rkd6q9"
+        className="css-dpor9z"
       >
         Label
         :
@@ -45,7 +45,7 @@ Array [
       />
     </div>
     <p
-      className="css-1awbkhz"
+      className="css-1ddecx1"
     >
       Field is required
     </p>
@@ -57,13 +57,13 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-rkd6q9"
+        className="css-dpor9z"
       >
         Label
         :
       </span>
       <span
-        className="css-1cp4gbh"
+        className="css-1ablzzc"
       >
         Sub title
       </span>
@@ -101,7 +101,7 @@ Array [
       </div>
     </div>
     <p
-      className="css-194ftfm"
+      className="css-5ut22t"
     />
   </label>,
   <label
@@ -111,13 +111,13 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-rkd6q9"
+        className="css-dpor9z"
       >
         Label
         :
       </span>
       <span
-        className="css-1cp4gbh"
+        className="css-1ablzzc"
       >
         Sub title
       </span>
@@ -136,7 +136,7 @@ Array [
       />
     </div>
     <p
-      className="css-194ftfm"
+      className="css-5ut22t"
     >
       Field is required
     </p>
@@ -148,13 +148,13 @@ Array [
       className="css-13kfgn1"
     >
       <span
-        className="css-rkd6q9"
+        className="css-dpor9z"
       >
         Multiline labeled input
         :
       </span>
       <span
-        className="css-1cp4gbh"
+        className="css-1ablzzc"
       >
         Sub title
       </span>
@@ -174,7 +174,7 @@ Array [
       />
     </div>
     <p
-      className="css-194ftfm"
+      className="css-5ut22t"
     >
       Field is required
     </p>
