@@ -8,11 +8,10 @@ export const textStyles = {
     margin: 0;
     font-family: ${baseFontFamily};
     font-size: 24px;
-    line-height: 38px;
+    line-height: 40px;
     font-weight: 600;
-    letter-spacing: 0.48px;
-    text-transform: uppercase;
-    color: #000000;
+    color: ${colors.baseHeading};
+    -webkit-font-smoothing: antialiased;
   `,
   h2: css`
     margin: 0;
@@ -20,9 +19,8 @@ export const textStyles = {
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    color: #000000;
+    color: ${colors.baseHeading};
+    -webkit-font-smoothing: antialiased;
   `,
   h3: css`
     margin: 0;
@@ -30,25 +28,28 @@ export const textStyles = {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    letter-spacing: 0.32px;
-    text-transform: uppercase;
-    color: ${colors.activeAction};
+    color: ${colors.baseHeading};
+    -webkit-font-smoothing: antialiased;
   `,
   h4: css`
     margin: 0;
     font-family: ${baseFontFamily};
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
     font-weight: 600;
-    letter-spacing: 0.32px;
-    color: #000000;
+    color: ${colors.baseHeading};
+    -webkit-font-smoothing: antialiased;
   `,
   h5: css`
     margin: 0;
     font-family: ${baseFontFamily};
     font-size: 12px;
     line-height: 22px;
-    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: ${colors.baseHeading};
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
   `,
   p: css`
     margin: 0;
@@ -56,6 +57,7 @@ export const textStyles = {
     font-size: 12px;
     line-height: 20px;
     color: #000000;
+    -webkit-font-smoothing: antialiased;
   `,
   code: css`
     margin: 0;
@@ -63,6 +65,7 @@ export const textStyles = {
     font-size: 14px;
     line-height: 22px;
     color: #000000;
+    -webkit-font-smoothing: antialiased;
     b {
       font-weight: 600;
     }
@@ -73,6 +76,7 @@ export const textStyles = {
     font-size: 14px;
     line-height: 22px;
     color: #000000;
+    -webkit-font-smoothing: antialiased;
     b {
       font-weight: 600;
     }
@@ -85,6 +89,9 @@ export const textStyles = {
   `
 };
 
+export type TextStyleVariants =
+  | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'basic' | 'code'
+
 type TextProps = {
   className?: string,
   children?: React.Node,
@@ -92,21 +99,21 @@ type TextProps = {
   upperCase?: boolean,
   noCase?: boolean,
   title?: string,
-  variant?:
-    |'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'basic' | 'code',
+  variant?: TextStyleVariants,
   // colorVariant?: 'inherit' | 'primary' | 'secondary' | 'disabled' | 'white' | 'error',
 };
 
-export const Text = ({
-  className,
-  children,
-  tag,
-  upperCase,
-  noCase,
-  variant = 'basic',
-  ...props
-}:
-                       TextProps) => {
+export const Text = (
+  {
+    className,
+    children,
+    tag,
+    upperCase,
+    noCase,
+    variant = 'basic',
+    ...props
+  }: TextProps
+) => {
   const Element = tag || (variant === 'basic' ? 'span' : variant);
 
   return (

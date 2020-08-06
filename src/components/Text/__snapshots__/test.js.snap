@@ -3,53 +3,53 @@
 exports[`Text renders correctly 1`] = `
 Array [
   <h1
-    className="css-zhgo2q"
+    className="css-1b2tio5"
     title="Text title"
   >
     Heading 1 - 24px, 38px, 600, spacing 0.48px
   </h1>,
   <h2
-    className="css-i0fkfa"
+    className="css-1w3lc29"
   >
     Heading 2 - 20px, 28px, 600, spacing 0.4px
   </h2>,
   <h3
-    className="css-1p88ng4"
+    className="css-1ayss2c"
   >
     Heading 3 - 16px, 24px, 600, spacing 0.32px
   </h3>,
   <h4
-    className="css-e3tefd"
+    className="css-115iv0u"
   >
     Heading 4 - 16px, 24px, 600, spacing 0.32px
   </h4>,
   <h5
-    className="css-1f6lfe2"
+    className="css-1lh30e5"
   >
     Heading 5 - 12px, 22px, 400, spacing 0.24px
   </h5>,
   <p
-    className="css-1d6m8in"
+    className="css-1w6kemg"
   >
     paragraph - 12px, 20px, 400, spacing: 0.28px
   </p>,
   <span
-    className="css-wrln3n"
+    className="css-1ggp6x0"
   >
     basic - 14px, 22px, 400
   </span>,
   <code
-    className="css-1vp37ry"
+    className="css-19aciib"
   >
     code - 14px, 22px, 400
   </code>,
   <span
-    className="css-1p88ng4"
+    className="css-1ayss2c"
   >
     H3 styled span
   </span>,
   <span
-    className="css-e3tefd"
+    className="css-115iv0u"
   >
     H4 styled span
   </span>,

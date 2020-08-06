@@ -210,7 +210,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
   className="css-k008qs"
 >
   <div
-    className="css-lf2s8g"
+    className="css-1dmgfvu"
   >
     21
     -
@@ -332,7 +332,7 @@ exports[`Pagination renders with total 1`] = `
   className="css-k008qs"
 >
   <div
-    className="css-lf2s8g"
+    className="css-1dmgfvu"
   >
     21
     -
@@ -450,7 +450,7 @@ exports[`PaginationControlled render simple 1`] = `
     </svg>
   </button>
   <span
-    className="css-1rys4on"
+    className="css-1w2ms9p"
   >
     3
   </span>
@@ -492,7 +492,7 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     </svg>
   </button>
   <span
-    className="css-1rys4on"
+    className="css-1w2ms9p"
   >
     3
   </span>

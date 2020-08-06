@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders correctly 1`] = `
+Array [
+  <span
+    className="css-1ggp6x0"
+  >
+    Are you 
+    <a
+      className="css-kzn11m"
+      href="/"
+    >
+      here
+    </a>
+    ?
+  </span>,
+  <a
+    className="css-1ilpxn0"
+    href="/"
+  >
+    Go there
+  </a>,
+  <a
+    className="css-vmtu8u"
+    href="/"
+  >
+    Go there
+  </a>,
+]
+`;

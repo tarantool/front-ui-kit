@@ -3,6 +3,7 @@ import * as React from 'react';
 import { css, cx } from 'emotion';
 import { rgba } from 'emotion-rgba';
 import { colors } from '../../variables';
+import { textStyles, type TextStyleVariants } from '../Text';
 
 const styles = {
   link: css`
@@ -26,7 +27,8 @@ type LinkProps = {
   href: string,
   onClick?: (e: MouseEvent) => void,
   target?: string,
-  title?: string
+  title?: string,
+  variant?: TextStyleVariants
 };
 
 export const Link = (
@@ -36,12 +38,15 @@ export const Link = (
     href,
     onClick,
     target,
-    title
+    title,
+    variant
   }: LinkProps
 ) => {
+  const textStyle = (variant && textStyles[variant]) || null;
+
   return (
     <a
-      className={cx(styles.link, className)}
+      className={cx(textStyle, styles.link, className)}
       href={href}
       onClick={onClick}
       target={target}

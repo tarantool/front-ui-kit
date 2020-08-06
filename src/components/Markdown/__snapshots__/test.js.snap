@@ -6,7 +6,7 @@ exports[`Markdown renders code block 1`] = `
 >
   <pre>
     <code
-      className="css-1vp37ry"
+      className="css-19aciib"
     >
       Code block
     </code>
@@ -19,10 +19,10 @@ exports[`Markdown renders code inline 1`] = `
   className="css-1fcvszc"
 >
   <p
-    className="css-gl6g3w"
+    className="css-1eitoz7"
   >
     <code
-      className="css-1vp37ry"
+      className="css-19aciib"
     >
       Code line
     </code>
@@ -36,7 +36,7 @@ exports[`Markdown renders mixed content 1`] = `
 >
   <div>
     <h2
-      className="css-17v1evm"
+      className="css-v70fzj"
       id="connect-to-tarantool-cartridge-using-python-clienthttpsgithubcomtarantooltarantool-python"
     >
       Connect to Tarantool Cartridge using 
@@ -49,7 +49,7 @@ exports[`Markdown renders mixed content 1`] = `
       </a>
     </h2>
     <p
-      className="css-gl6g3w"
+      className="css-1eitoz7"
     >
       First, 
       <strong>
@@ -67,19 +67,19 @@ exports[`Markdown renders mixed content 1`] = `
     </p>
     <pre>
       <code
-        className="language-bash css-sfydpi"
+        className="language-bash css-3fhyop"
       >
         pip3 install tarantool
       </code>
     </pre>
     <p
-      className="css-gl6g3w"
+      className="css-1eitoz7"
     >
       Create a file example.py with the code to get started:
     </p>
     <pre>
       <code
-        className="language-python css-sfydpi"
+        className="language-python css-3fhyop"
       >
         from tarantool import Connection
 c = Connection(
@@ -95,13 +95,13 @@ print(results)
       </code>
     </pre>
     <p
-      className="css-gl6g3w"
+      className="css-1eitoz7"
     >
       Run the script
     </p>
     <pre>
       <code
-        className="language-bash css-sfydpi"
+        className="language-bash css-3fhyop"
       >
         python3 example.py
       </code>

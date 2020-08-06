@@ -30,6 +30,8 @@ export const colors = {
   intentSuccessBg: '#f6ffee',
   intentSuccessBorder: '#b5ec8e',
 
+  baseHeading: '#040b1d',
+  baseBg: '#f0f2f5',
   scrollbar: '#e8e8e8',
   codeBg: '#1e2537'
 };
