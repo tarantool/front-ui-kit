@@ -40,7 +40,6 @@ exports[`Modal renders modal with form 1`] = `
             className="css-dpor9z"
           >
             First input
-            :
           </span>
         </div>
         <div

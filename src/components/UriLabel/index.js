@@ -35,7 +35,7 @@ export const UriLabel = ({ className, icon, title, uri }: UriLabelProps) => {
   return (
     <div className={cx(styles.uriWrap, className)} title={title}>
       <Icon className={styles.uriIcon} />
-      <Text className={styles.uri} variant='h5' tag='span'>{uri}</Text>
+      <Text className={styles.uri} variant='p' tag='span'>{uri}</Text>
     </div>
   );
 }

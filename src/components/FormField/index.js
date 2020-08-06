@@ -59,7 +59,7 @@ FormFieldProps) => (
   <div className={cx(styles.wrap, className)}>
     <div className={styles.headingPane}>
       {label && (
-        <Text className={styles.label} variant='h4' tag='span'>{label}:
+        <Text className={styles.label} variant='h4' tag='span'>{label}
           {info && (
             <Tooltip className={styles.tooltip} content={info}>
               <IconInfo />
@@ -67,7 +67,7 @@ FormFieldProps) => (
           )}
         </Text>
       )}
-      {subTitle && <Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>}
+      {subTitle && <Text className={styles.subTitle} variant='p' tag='span'>{subTitle}</Text>}
       {topRightControls && <ControlsPanel className={styles.topRightControls} controls={topRightControls} />}
     </div>
     <InputGroup columns={columns} itemClassName={itemClassName} verticalSort={verticalSort}>{children}</InputGroup>

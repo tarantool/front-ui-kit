@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 import { BaseModal, type BaseModalProps } from '../BaseModal';
 import { Text } from '../Text';
 import logo from './images/tarantool-logo.svg';
@@ -16,7 +17,7 @@ const styles = {
     overflow: hidden;
   `,
   shim: css`
-    background-color: #f0f2f5;
+    background-color: ${colors.baseBg};
   `,
   subTitleWrap: css`
     margin: 16px 0 48px 0;
@@ -72,10 +73,10 @@ export const SplashModal = (
       <SVGImage glyph={logo} className={styles.logo} />
     </div>
     <div className={styles.formContainer}>
-      {title && (<Text variant={'h1'}>{title}</Text>)}
+      {title && (<Text variant='h1'>{title}</Text>)}
       {subTitle && (
         <div className={styles.subTitleWrap}>
-          <Text variant={'basic'} className={styles.subTitle}>{subTitle}</Text>
+          <Text variant='basic' className={styles.subTitle}>{subTitle}</Text>
         </div>
       )}
       {children}

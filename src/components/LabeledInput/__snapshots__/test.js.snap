@@ -12,7 +12,6 @@ Array [
         className="css-dpor9z"
       >
         Label
-        :
         <div
           className="css-vj79ep"
           onMouseEnter={[Function]}
@@ -60,10 +59,9 @@ Array [
         className="css-dpor9z"
       >
         Label
-        :
       </span>
       <span
-        className="css-1ablzzc"
+        className="css-1dhlryp"
       >
         Sub title
       </span>
@@ -114,10 +112,9 @@ Array [
         className="css-dpor9z"
       >
         Label
-        :
       </span>
       <span
-        className="css-1ablzzc"
+        className="css-1dhlryp"
       >
         Sub title
       </span>
@@ -151,10 +148,9 @@ Array [
         className="css-dpor9z"
       >
         Multiline labeled input
-        :
       </span>
       <span
-        className="css-1ablzzc"
+        className="css-1dhlryp"
       >
         Sub title
       </span>

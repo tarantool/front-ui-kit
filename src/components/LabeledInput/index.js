@@ -71,7 +71,7 @@ export const LabeledInput = ({
 LabeledInputProps) => (
   <label className={cx(styles.wrap, className)}>
     <div className={styles.headingPane}>
-      <Text className={styles.label} variant='h4' tag='span'>{label}:
+      <Text className={styles.label} variant='h4' tag='span'>{label}
         {!!info && (
           <Tooltip className={styles.tooltip} content={info}>
             <IconInfo />
@@ -79,7 +79,7 @@ LabeledInputProps) => (
         )}
       </Text>
       {!!subTitle && (
-        <Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>
+        <Text className={styles.subTitle} variant='p' tag='span'>{subTitle}</Text>
       )}
       {topRightControls && (
         <ControlsPanel className={styles.topRightControls} controls={topRightControls} />
