@@ -13,7 +13,7 @@ export type BreadcrumbItem = {
 }
 
 export type ActionsBreadCrumbs = {
-  onLinkClick: (link: string) => void
+  onLinkClick?: (link: string) => void
 }
 
 type BreadcrumbProps = ActionsBreadCrumbs & {
@@ -101,7 +101,7 @@ export class Breadcrumb extends React.Component<BreadcrumbProps>{
     const itemsCollection = (
         <>
           {items.map(item => (
-            <DropdownItem onClick={() => onLinkClick(item.link)}>
+            <DropdownItem onClick={() => onLinkClick && onLinkClick(item.link)}>
               <Text className={styles.overflowButton}>{item.title}</Text>
             </DropdownItem>
           ))}
