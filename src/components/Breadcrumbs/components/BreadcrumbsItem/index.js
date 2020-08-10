@@ -4,7 +4,7 @@ import { cx, css } from 'emotion';
 import { Link } from '../../../Link';
 import { Text } from '../../../Text';
 
-import type { BreadcrumbItem, ActionsBreadCrumbs } from '../../index';
+import type { BreadcrumbsItem, ActionsBreadCrumbs } from '../../index';
 
 const styles = {
   breadcrumbElement: css`
@@ -31,7 +31,7 @@ const styles = {
   `
 }
 
-export default class BreadcrumbItemComponent extends React.Component<BreadcrumbItem & ActionsBreadCrumbs>{
+export default class BreadcrumbsItemComponent extends React.Component<BreadcrumbsItem & ActionsBreadCrumbs>{
   render() {
     const { title, link, onLinkClick } = this.props;
     if (link && onLinkClick) {

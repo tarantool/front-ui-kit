@@ -5,9 +5,9 @@ import { Text } from '../Text';
 import { OverflowList } from '../OverflowList';
 import { DropdownItem, Dropdown } from '../Dropdown';
 
-import BreadcrumbItemComponent from './components/BreadcrumbItem';
+import BreadcrumbsItemComponent from './components/BreadcrumbsItem';
 
-export type BreadcrumbItem = {
+export type BreadcrumbsItem = {
   title: string,
   link?: string,
 }
@@ -16,8 +16,8 @@ export type ActionsBreadCrumbs = {
   onLinkClick?: (link: string) => void
 }
 
-type BreadcrumbProps = ActionsBreadCrumbs & {
-  breadcrumbs: BreadcrumbItem[],
+type BreadcrumbsProps = ActionsBreadCrumbs & {
+  breadcrumbs: BreadcrumbsItem[],
   appName?: string,
 }
 
@@ -67,7 +67,7 @@ const styles = {
 
 const MAX_APP_NAME_LENGTH = 40;
 
-export class Breadcrumb extends React.Component<BreadcrumbProps>{
+export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
   render() {
     const { breadcrumbs, appName } = this.props;
     const isLongAppName = (appName: string) => appName.length > MAX_APP_NAME_LENGTH;
@@ -120,14 +120,14 @@ export class Breadcrumb extends React.Component<BreadcrumbProps>{
     )
   };
 
-  renderBreadcrumbWrapper = (props: BreadcrumbItem, index: number) => {
+  renderBreadcrumbWrapper = (props: BreadcrumbsItem, index: number) => {
     const { onLinkClick } = this.props;
     return (
       <React.Fragment>
         <Text tag="span" className={cx(styles.breadcrumbDelimeter, styles.breadcrumbElement)}>
           /
         </Text>
-        <BreadcrumbItemComponent key={index} title={props.title} link={props.link} onLinkClick={onLinkClick} />
+        <BreadcrumbsItemComponent key={index} title={props.title} link={props.link} onLinkClick={onLinkClick} />
       </React.Fragment>
     )
   };

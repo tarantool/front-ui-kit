@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Breadcrumb } from '../Breadcrumb';
+import { Breadcrumbs } from '../Breadcrumbs';
 
-describe('Breadcrumb', () => {
+describe('Breadcrumbs', () => {
   const breadcrumbs = [{
     title: '@tarantool.io/ui-kit',
     link: '/tarantool'
@@ -28,7 +28,7 @@ describe('Breadcrumb', () => {
   it('renders correctly', () => {
     const tree = renderer.create(
       <>
-        <Breadcrumb
+        <Breadcrumbs
           breadcrumbs={breadcrumbs}
           appName={'Project name'}
           onLinkClick={onLinkClick}
@@ -43,7 +43,7 @@ describe('Breadcrumb', () => {
   it('renders correctly long name', () => {
     const tree = renderer.create(
       <>
-        <Breadcrumb
+        <Breadcrumbs
           breadcrumbs={breadcrumbs}
           appName={'Project name-2948474770249-999-20299547789123123141'}
           onLinkClick={onLinkClick}
@@ -58,7 +58,7 @@ describe('Breadcrumb', () => {
     const tree = renderer.create(
       <>
         <div style={{ width: '300px' }}>
-          <Breadcrumb
+          <Breadcrumbs
             breadcrumbs={breadcrumbs}
             appName={'Project name-2948474770249-999-20299547789123123141'}
             onLinkClick={onLinkClick}
