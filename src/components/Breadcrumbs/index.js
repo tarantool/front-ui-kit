@@ -9,11 +9,11 @@ import BreadcrumbsItemComponent from './components/BreadcrumbsItem';
 
 export type BreadcrumbsItem = {
   title: string,
-  link?: string,
+  path?: string,
 }
 
 export type ActionsBreadCrumbs = {
-  onLinkClick?: (link: string) => void
+  onLinkClick?: (path: string) => void
 }
 
 type BreadcrumbsProps = ActionsBreadCrumbs & {
@@ -101,7 +101,7 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
     const itemsCollection = (
         <>
           {items.map(item => (
-            <DropdownItem onClick={() => onLinkClick && onLinkClick(item.link)}>
+            <DropdownItem onClick={() => onLinkClick && onLinkClick(item.path)}>
               <Text className={styles.overflowButton}>{item.title}</Text>
             </DropdownItem>
           ))}
@@ -127,7 +127,7 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
         <Text tag="span" className={cx(styles.breadcrumbDelimeter, styles.breadcrumbElement)}>
           /
         </Text>
-        <BreadcrumbsItemComponent key={index} title={props.title} link={props.link} onLinkClick={onLinkClick} />
+        <BreadcrumbsItemComponent key={index} title={props.title} path={props.path} onLinkClick={onLinkClick} />
       </React.Fragment>
     )
   };

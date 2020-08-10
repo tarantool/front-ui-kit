@@ -33,15 +33,15 @@ const styles = {
 
 export default class BreadcrumbsItemComponent extends React.Component<BreadcrumbsItem & ActionsBreadCrumbs>{
   render() {
-    const { title, link, onLinkClick } = this.props;
-    if (link && onLinkClick) {
+    const { title, path, onLinkClick } = this.props;
+    if (path && onLinkClick) {
 
       return (
         <Link
-          href={link}
+          href={path}
           onClick={e => {
             e.preventDefault();
-            onLinkClick(link)
+            onLinkClick(path)
           }}
           className={cx(styles.breadcrumbLinkElement, styles.breadcrumbElement)}
           variant="basic"

@@ -1,23 +1,23 @@
 ```js
 const breadcrumbs = [{
   title: '@tarantool.io/ui-kit',
-  link: '/tarantool'
+  path: '/tarantool'
 },
 {
   title: 'UI Components',
-  link: '/section-ui-components'
+  path: '/section-ui-components'
 },
 {
   title: 'Breadcrumb',
-  link: '/breadcrumb'
+  path: '/breadcrumb'
 },
 {
   title: 'OverflowList',
-  link: '/overflow-list'
+  path: '/overflow-list'
 },
 {
   title: 'ResizeSensor',
-  link: '/resize-sensor'
+  path: '/resize-sensor'
 }];
 const onLinkClick = (link) => console.log('link', link);
 <div>
