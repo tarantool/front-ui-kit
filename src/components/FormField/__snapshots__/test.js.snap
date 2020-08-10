@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField renders correctly 1`] = `
+<div
+  className="css-i3pbo"
+>
+  <div
+    className="css-14sxn20"
+  >
+    <span
+      className="css-dpor9z"
+    >
+      VShard group
+      <div
+        className="css-vj79ep"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onScroll={[Function]}
+        placement="top"
+      >
+        <svg
+          className="css-n25ly7"
+          viewBox="0 0 12 12"
+        >
+          <use
+            xlinkHref="#info"
+          />
+        </svg>
+      </div>
+    </span>
+    <span
+      className="css-1dhlryp"
+    >
+      Subtitle
+    </span>
+    <div
+      className="css-84nudp"
+    >
+      <div
+        className="css-13w52vd"
+      >
+        <button
+          className="css-xhnfgx"
+          type="button"
+        >
+          Right
+        </button>
+      </div>
+      <div
+        className="css-13w52vd"
+      >
+        <button
+          className="css-xhnfgx"
+          type="button"
+        >
+          Contorls
+        </button>
+      </div>
+      <div
+        className="css-13w52vd"
+      >
+        <button
+          className="css-xhnfgx"
+          type="button"
+        >
+          Pane
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-1w9b8ff"
+  >
+    <div
+      className="css-1tsv2r7"
+    >
+      <label
+        className="css-759u60"
+      >
+        <input
+          checked={false}
+          className="css-z04bz7"
+          name="vshard_group"
+          onChange={[MockFunction]}
+          type="radio"
+          value="group 1"
+        />
+        <div
+          className="css-1ysxw4w"
+        >
+          <svg
+            className="css-e2f20o"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#radio"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-cwc1xz"
+        >
+          group 1
+        </span>
+      </label>
+    </div>
+    <div
+      className="css-1tsv2r7"
+    >
+      <label
+        className="css-759u60"
+      >
+        <input
+          checked={true}
+          className="css-z04bz7"
+          name="vshard_group"
+          onChange={[MockFunction]}
+          type="radio"
+          value="group 2"
+        />
+        <div
+          className="css-1ysxw4w"
+        >
+          <svg
+            className="css-e2f20o"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#radio-checked"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-cwc1xz"
+        >
+          group 2
+        </span>
+      </label>
+    </div>
+    <div
+      className="css-1tsv2r7"
+    >
+      <label
+        className="css-759u60"
+      >
+        <input
+          checked={false}
+          className="css-z04bz7"
+          name="vshard_group"
+          onChange={[MockFunction]}
+          type="radio"
+          value="group 3"
+        />
+        <div
+          className="css-1ysxw4w"
+        >
+          <svg
+            className="css-e2f20o"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#radio"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-cwc1xz"
+        >
+          group 3
+        </span>
+      </label>
+    </div>
+    <div
+      className="css-1tsv2r7"
+    >
+      <label
+        className="css-759u60"
+      >
+        <input
+          checked={false}
+          className="css-z04bz7"
+          name="vshard_group"
+          onChange={[MockFunction]}
+          type="radio"
+          value="group 4"
+        />
+        <div
+          className="css-1ysxw4w"
+        >
+          <svg
+            className="css-e2f20o"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#radio"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-cwc1xz"
+        >
+          group 4
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;

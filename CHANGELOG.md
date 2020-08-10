@@ -12,9 +12,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix passing `indeterminate` prop to input element in Checkbox.
 
 - Add new components:
-    - ResizeSensor
-    - OverflowList
-    - Breadcrumbs
+  - ResizeSensor
+  - OverflowList
+  - Breadcrumbs
+
+- Update styles in following components:
+  - UriLabel
+  - TiledList
+  - PageSection
+  - PageLayout
+  - LabeledInput
+  - FormField
 
 ## [0.20.1] - 2020-07-15
 

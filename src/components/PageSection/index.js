@@ -7,7 +7,7 @@ import { Text } from '../Text';
 
 const styles = {
   section: css`
-    margin: 0 0 48px;
+    margin: 0 0 40px;
   `,
   headingPane: css`
     display: flex;
@@ -15,7 +15,7 @@ const styles = {
     align-items: baseline;
   `,
   headingPaneMargin: css`
-    margin-bottom: 24px;
+    margin-bottom: 15px;
   `,
   heading: css`
     /* display: inline; */
@@ -56,7 +56,7 @@ PageSectionProps) => {
           )}
         >
           {title && (<Text className={styles.heading} variant='h2'>{title}</Text>)}
-          {subTitle && (<Text className={styles.subTitle} variant='h5' tag='span' upperCase>{subTitle}</Text>)}
+          {subTitle && (<Text className={styles.subTitle} variant='p' tag='span'>{subTitle}</Text>)}
           {topRightControls && <ControlsPanel className={styles.topRightControls} controls={topRightControls} />}
         </div>
       )}

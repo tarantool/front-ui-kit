@@ -16,6 +16,7 @@ const vshard_groups = [
 <FormField
   label='VShard group'
   info='Extended text description'
+  subTitle='Subtitle'
   topRightControls={[
     <Button text='Right' />,
     <Button text='Contorls' />,
