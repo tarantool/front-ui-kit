@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { cx, css } from 'emotion';
+import { colors } from '../../../../variables';
 import { Link } from '../../../Link';
 import { Text } from '../../../Text';
 
@@ -8,21 +9,21 @@ import type { BreadcrumbsItem, ActionsBreadCrumbs } from '../../index';
 
 const styles = {
   breadcrumbElement: css`
-    color: #686D77;
+    color: ${colors.dark40};
     font-size: 16px;
     line-height: 22px;
     white-space: nowrap;
   `,
   breadcrumbLinkElement: css`
     cursor: pointer:
-    color: #686D77;
+    color: ${colors.dark40};
     
     &:hover,
     &:focus,
     a:link,
     a:visited,
     &:active {
-      color: #686D77;
+      color: ${colors.dark40};
     }
     
     &:hover {

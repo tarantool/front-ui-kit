@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../variables';
 import { Text } from '../Text';
 import { OverflowList } from '../OverflowList';
 import { DropdownItem, Dropdown } from '../Dropdown';
@@ -33,7 +34,7 @@ const styles = {
   `,
   breadcrumbDelimeter: css`
     margin: 0 6px;
-    color: #686D77;
+    color: ${colors.dark40};
     font-size: 16px;
     line-height: 22px;
     white-space: nowrap;
@@ -102,7 +103,7 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
         <>
           {items.map(item => (
             <DropdownItem onClick={() => onLinkClick && onLinkClick(item.path)}>
-              <Text className={styles.overflowButton}>{item.title}</Text>
+              {item.title}
             </DropdownItem>
           ))}
         </>
