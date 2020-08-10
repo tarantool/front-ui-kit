@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb block with small width 1`] = `
+<div
+  style={
+    Object {
+      "width": "300px",
+    }
+  }
+>
+  <div
+    className="css-k008qs"
+  >
+    <span
+      className="css-1u31squ"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+    >
+      Project name-2948474770249-999-202995477...
+    </span>
+    <div
+      className="css-vzwfet"
+    >
+      <span
+        className="css-1tb5g3v"
+      >
+        /
+      </span>
+      <a
+        className="css-g4sqw9"
+        href="/tarantool"
+        onClick={[Function]}
+      >
+        @tarantool.io/ui-kit
+      </a>
+      <span
+        className="css-1tb5g3v"
+      >
+        /
+      </span>
+      <a
+        className="css-g4sqw9"
+        href="/section-ui-components"
+        onClick={[Function]}
+      >
+        UI Components
+      </a>
+      <span
+        className="css-1tb5g3v"
+      >
+        /
+      </span>
+      <a
+        className="css-g4sqw9"
+        href="/breadcrumb"
+        onClick={[Function]}
+      >
+        Breadcrumb
+      </a>
+      <span
+        className="css-1tb5g3v"
+      >
+        /
+      </span>
+      <a
+        className="css-g4sqw9"
+        href="/overflow-list"
+        onClick={[Function]}
+      >
+        OverflowList
+      </a>
+      <span
+        className="css-1tb5g3v"
+      >
+        /
+      </span>
+      <a
+        className="css-g4sqw9"
+        href="/resize-sensor"
+        onClick={[Function]}
+      >
+        ResizeSensor
+      </a>
+      <div
+        className="css-11rp940"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Breadcrumb renders correctly 1`] = `
+<div
+  className="css-k008qs"
+>
+  <span
+    className="css-4haz1u"
+  >
+    Project name
+  </span>
+  <div
+    className="css-vzwfet"
+  >
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/tarantool"
+      onClick={[Function]}
+    >
+      @tarantool.io/ui-kit
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/section-ui-components"
+      onClick={[Function]}
+    >
+      UI Components
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/breadcrumb"
+      onClick={[Function]}
+    >
+      Breadcrumb
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/overflow-list"
+      onClick={[Function]}
+    >
+      OverflowList
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/resize-sensor"
+      onClick={[Function]}
+    >
+      ResizeSensor
+    </a>
+    <div
+      className="css-11rp940"
+    />
+  </div>
+</div>
+`;
+
+exports[`Breadcrumb renders correctly long name 1`] = `
+<div
+  className="css-k008qs"
+>
+  <span
+    className="css-1u31squ"
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+  >
+    Project name-2948474770249-999-202995477...
+  </span>
+  <div
+    className="css-vzwfet"
+  >
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/tarantool"
+      onClick={[Function]}
+    >
+      @tarantool.io/ui-kit
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/section-ui-components"
+      onClick={[Function]}
+    >
+      UI Components
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/breadcrumb"
+      onClick={[Function]}
+    >
+      Breadcrumb
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/overflow-list"
+      onClick={[Function]}
+    >
+      OverflowList
+    </a>
+    <span
+      className="css-1tb5g3v"
+    >
+      /
+    </span>
+    <a
+      className="css-g4sqw9"
+      href="/resize-sensor"
+      onClick={[Function]}
+    >
+      ResizeSensor
+    </a>
+    <div
+      className="css-11rp940"
+    />
+  </div>
+</div>
+`;

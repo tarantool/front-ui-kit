@@ -33,7 +33,12 @@ export const colors = {
   baseHeading: '#040b1d',
   baseBg: '#f0f2f5',
   scrollbar: '#e8e8e8',
-  codeBg: '#1e2537'
+  codeBg: '#1e2537',
+  dark2: '#fafafa',
+  dark10: '#e6e7e8',
+  dark40: '#8e9199',
+  dark65: '#5c606c',
+  dark: '#040b1d'
 };
 
 export const navItemHeight = '40px';

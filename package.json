@@ -38,6 +38,7 @@
     "react-scrollbars-custom": "4.0.20",
     "react-table": "^7.1.0",
     "react-test-renderer": "16.13.1",
+    "resize-observer-polyfill": "^1.5.1",
     "rollup-plugin-auto-external": "2.0.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-svg-sprite-loader": "1.0.2"
