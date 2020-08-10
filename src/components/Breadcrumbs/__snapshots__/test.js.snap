@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Breadcrumb block with small width 1`] = `
+exports[`Breadcrumbs block with small width 1`] = `
 <div
   style={
     Object {
@@ -22,60 +22,60 @@ exports[`Breadcrumb block with small width 1`] = `
       className="css-vzwfet"
     >
       <span
-        className="css-1tb5g3v"
+        className="css-1skplp5"
       >
         /
       </span>
       <a
-        className="css-g4sqw9"
+        className="css-1k58u8w"
         href="/tarantool"
         onClick={[Function]}
       >
         @tarantool.io/ui-kit
       </a>
       <span
-        className="css-1tb5g3v"
+        className="css-1skplp5"
       >
         /
       </span>
       <a
-        className="css-g4sqw9"
+        className="css-1k58u8w"
         href="/section-ui-components"
         onClick={[Function]}
       >
         UI Components
       </a>
       <span
-        className="css-1tb5g3v"
+        className="css-1skplp5"
       >
         /
       </span>
       <a
-        className="css-g4sqw9"
+        className="css-1k58u8w"
         href="/breadcrumb"
         onClick={[Function]}
       >
         Breadcrumb
       </a>
       <span
-        className="css-1tb5g3v"
+        className="css-1skplp5"
       >
         /
       </span>
       <a
-        className="css-g4sqw9"
+        className="css-1k58u8w"
         href="/overflow-list"
         onClick={[Function]}
       >
         OverflowList
       </a>
       <span
-        className="css-1tb5g3v"
+        className="css-1skplp5"
       >
         /
       </span>
       <a
-        className="css-g4sqw9"
+        className="css-1k58u8w"
         href="/resize-sensor"
         onClick={[Function]}
       >
@@ -89,7 +89,7 @@ exports[`Breadcrumb block with small width 1`] = `
 </div>
 `;
 
-exports[`Breadcrumb renders correctly 1`] = `
+exports[`Breadcrumbs renders correctly 1`] = `
 <div
   className="css-k008qs"
 >
@@ -102,60 +102,60 @@ exports[`Breadcrumb renders correctly 1`] = `
     className="css-vzwfet"
   >
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/tarantool"
       onClick={[Function]}
     >
       @tarantool.io/ui-kit
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/section-ui-components"
       onClick={[Function]}
     >
       UI Components
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/breadcrumb"
       onClick={[Function]}
     >
       Breadcrumb
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/overflow-list"
       onClick={[Function]}
     >
       OverflowList
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/resize-sensor"
       onClick={[Function]}
     >
@@ -168,7 +168,7 @@ exports[`Breadcrumb renders correctly 1`] = `
 </div>
 `;
 
-exports[`Breadcrumb renders correctly long name 1`] = `
+exports[`Breadcrumbs renders correctly long name 1`] = `
 <div
   className="css-k008qs"
 >
@@ -183,60 +183,60 @@ exports[`Breadcrumb renders correctly long name 1`] = `
     className="css-vzwfet"
   >
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/tarantool"
       onClick={[Function]}
     >
       @tarantool.io/ui-kit
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/section-ui-components"
       onClick={[Function]}
     >
       UI Components
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/breadcrumb"
       onClick={[Function]}
     >
       Breadcrumb
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/overflow-list"
       onClick={[Function]}
     >
       OverflowList
     </a>
     <span
-      className="css-1tb5g3v"
+      className="css-1skplp5"
     >
       /
     </span>
     <a
-      className="css-g4sqw9"
+      className="css-1k58u8w"
       href="/resize-sensor"
       onClick={[Function]}
     >
