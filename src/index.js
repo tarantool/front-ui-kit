@@ -24,6 +24,7 @@ export * from './components/LeaderFlag';
 export * from './components/LeaderFlagSmall';
 export * from './components/Link';
 export * from './components/Markdown';
+export * from './components/Menu';
 export * from './components/Modal';
 export * from './components/NonIdealState';
 export * from './components/NotificationSplash';
