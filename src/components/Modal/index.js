@@ -12,7 +12,7 @@ const styles = {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 30px;
     margin: 0 auto auto;
     overflow: hidden;
   `,
@@ -22,24 +22,19 @@ const styles = {
   `,
   title: css`
     flex-shrink: 0;
-    padding-bottom: 16px;
     padding-right: 24px;
-    border-bottom: 1px solid ${colors.intentBaseBg};
-    margin-bottom: 16px;
-    padding-left: 16px;
+    padding-bottom: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   `,
   closeIcon: css`
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 30px;
+    right: 30px;
   `,
   children: css`
     flex-grow: 1;
-    padding-left: 16px;
-    padding-right: 16px;
   `,
   childrenThin: css`
     padding-left: 0;
