@@ -32,6 +32,7 @@ const styles = {
     position: absolute;
     top: 30px;
     right: 30px;
+    fill: ${colors.dark40};
   `,
   children: css`
     flex-grow: 1;
