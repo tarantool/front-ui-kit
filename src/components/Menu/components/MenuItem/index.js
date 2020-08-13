@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import { css, cx } from 'react-emotion'
 import { MenuIcon } from '../MenuIcon'
@@ -11,7 +13,7 @@ const handleClick: handleClickType = (event, handler, ...args) => {
     event.preventDefault()
     handler(...args)
   }
-}
+};
 
 const styles = {
   item: css`
@@ -187,8 +189,7 @@ export const MenuItem = ({
         className={cx(styles.item, {
           [styles.itemSelected]: selected,
           [styles.subItemSelected]: selected && isSubitem,
-          [styles.collapse]: isCollapse,
-          [styles.expanded]: expanded
+          [styles.collapse]: isCollapse
         })}
         href={pathPrefix + path}
         onClick={

@@ -1,6 +1,7 @@
 // @flow
 
-import React, { useState } from 'react'
+import * as React from 'react';
+import { useState } from 'react';
 import { css, keyframes, cx } from 'react-emotion'
 import { MenuItem } from './components/MenuItem'
 import { Scrollbar } from '../Scrollbar'
@@ -28,7 +29,6 @@ const styles = {
     padding: 0;
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 0 6px 0 rgba(0, 21, 41, 0.35);
   `,
   shortContainer: css`
     width: 62px;
