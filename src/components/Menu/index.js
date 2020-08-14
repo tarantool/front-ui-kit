@@ -7,8 +7,9 @@ import { MenuItem } from './components/MenuItem'
 import { Scrollbar } from '../Scrollbar'
 import { SVGImage } from '../SVGImage'
 import { tarantoolLogoShort, tarantoolLogoFull } from '../../images'
-import { IconArrow, IconInfo } from '../Icon';
+import { IconArrow } from '../Icon';
 import { colors } from '../../variables';
+import * as R from 'ramda';
 
 const translateFromRight = keyframes`
   from{
@@ -155,6 +156,7 @@ const styles = {
   `
 };
 
+
 export type MenuItemType = {|
   label: string,
   path: string,
@@ -162,7 +164,9 @@ export type MenuItemType = {|
   expanded: boolean,
   loading: boolean,
   icon: string | Object,
-  items?: Array<MenuItemType>
+  items?: Array<MenuItemType>,
+  type?: 'internal' | 'external',
+  pinBottom?: boolean,
 |}
 
 type MenuProps = {
@@ -180,6 +184,14 @@ export function Menu(props: MenuProps) {
   } = props;
   const [isShort, setIsShort] = useState(false)
 
+  const topMenu = menu.filter((item: MenuItemType) => !item.pinBottom);
+
+  const getPinnedElement = () => {
+    const pinnedMenu = menu.filter((item: MenuItemType) => item.pinBottom);
+
+    return R.last(pinnedMenu);
+  };
+
   const onClick = (evt, path) => {
     evt.preventDefault();
     onMenuItemClick(path);
@@ -193,6 +205,8 @@ export function Menu(props: MenuProps) {
     toggleExpand(path, expanded);
   };
 
+  const pinnedMenuItem = getPinnedElement();
+
   return (
     <div className={cx(styles.container, { [styles.shortContainer]: isShort }, className)}>
       <div className={cx(styles.logoContainer, { [styles.logoCenter]: isShort })}>
@@ -203,24 +217,25 @@ export function Menu(props: MenuProps) {
       </div>
       <Scrollbar track={'#212121'}>
         <div className={styles.menuList}>
-          {menu.map((x, i) => (
+          {topMenu.map((x, i) => (
             <MenuItem key={i} {...x} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort} />
           ))}
         </div>
       </Scrollbar>
       <div className={styles.bottomButtons}>
-        <MenuItem
-          pathPrefix
-          key={'documentation'}
-          icon={<IconInfo className={styles.iconStyle} />}
-          label={'Documentation'}
-          onClick={(evt, path) => window.open(path, '_blank')}
-          short={isShort}
-          path={'https://www.tarantool.io/en/doc'}
-        />
+        {pinnedMenuItem && (
+          <MenuItem
+            key={'pinned-element'}
+            {...pinnedMenuItem}
+            onClick={onClick}
+            expand={onExpand}
+            pathPrefix={pathPrefix}
+            short={isShort}
+          />
+        )}
         <MenuItem
           key={'collapse'}
-          isCollapse={true}
+          isCollapse
           icon={
             <IconArrow direction={isShort ? 'right' : 'left'} />
           }

@@ -112,23 +112,16 @@ const styles = {
     transform: translateY(-50%) rotate(180deg);
   `,
   submenuList: css`
-    padding: 4px 0;
     background: rgba(255, 255, 255, 0.05);
   `,
   titleSelected: css`
     font-weight: 600;
   `,
   collapse: css`
-    opacity: 0.65;
-    background: #212121;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: .65;
     &:hover {
       opacity: 1;
-    }
-  `,
-  expanded: css`
-    cursor: default;
-    &:hover {
-      background: none;
     }
   `
 }
@@ -137,7 +130,6 @@ export const MenuItem = ({
   path,
   selected,
   label,
-  loading,
   expanded,
   items = [],
   onClick,
@@ -200,8 +192,7 @@ export const MenuItem = ({
         {isSubitem ? null : <MenuIcon icon={icon} className={styles.icon} />}
         <span
           className={cx(styles.title, {
-            [styles.titleSelected]: selected,
-            [styles.expanded]: expanded
+            [styles.titleSelected]: selected
           })}
         >
           {label}

@@ -1,5 +1,5 @@
 ```js
-import { IconSuccess, IconTrash } from '../Icon';
+import { IconSuccess, IconTrash, IconInfo } from '../Icon';
 const menu = [
                 {
                    "selected":false,
@@ -16,7 +16,7 @@ const menu = [
                    "expanded":true,
                    "loading":false,
                    "items":[{
-                                               "selected":false,
+                                               "selected":true,
                                                "expanded": false,
                                                "loading":false,
                                                "items":[],
@@ -26,7 +26,7 @@ const menu = [
                                                "namespace":"mytest"
                                             },
                                             {
-                                               "selected":true,
+                                               "selected":false,
                                                "expanded":false,
                                                "loading":false,
                                                "items":[],
@@ -71,7 +71,7 @@ const menu = [
                    "namespace":"other"
                 },
                 {
-                   "selected":true,
+                   "selected":false,
                    "expanded":false,
                    "loading":false,
                    "items":[],
@@ -79,13 +79,25 @@ const menu = [
                    "label":"Other4",
                    "path":"/other/test3",
                    "namespace":"other"
+                },
+                {
+                   "selected":false,
+                   "expanded":false,
+                   "loading":false,
+                   "items":[],
+                   "icon": <IconInfo />,
+                   "label":"Documentation",
+                   "path":"/other/test3",
+                   "namespace":"doc",
+                   "type": 'external',
+                   "pinBottom": true,
                 }
              ]; 
 
 const onMenuItemClick = (path) => console.log(path);
 const toggleExpand = (path, expanded) => console.log(path, expanded);
 
-<div style={{ height: '90vh' }}>
+<div style={{ height: '80vh' }}>
   <Menu 
     menu={menu}
     path={'/'}
