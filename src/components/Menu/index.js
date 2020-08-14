@@ -157,6 +157,8 @@ const styles = {
 };
 
 
+type MenuItemTypes = 'internal' | 'external'
+
 export type MenuItemType = {|
   label: string,
   path: string,
@@ -165,14 +167,15 @@ export type MenuItemType = {|
   loading: boolean,
   icon: string | Object,
   items?: Array<MenuItemType>,
-  type?: 'internal' | 'external',
+  type?: MenuItemTypes,
   pinBottom?: boolean,
 |}
+
 
 type MenuProps = {
   menu: MenuItemType[],
   path: string,
-  onMenuItemClick: (path: string) => void,
+  onMenuItemClick: (path: string, type: MenuItemTypes) => void,
   toggleExpand: (path: string, expanded: boolean) => void,
   className?: string,
   pathPrefix?: string,
@@ -192,12 +195,12 @@ export function Menu(props: MenuProps) {
     return R.last(pinnedMenu);
   };
 
-  const onClick = (evt, path) => {
+  const onClick = (evt: MouseEvent, path: string, type: MenuItemTypes) => {
     evt.preventDefault();
-    onMenuItemClick(path);
+    onMenuItemClick(path, type);
   };
 
-  const onExpand = (evt, path, expanded) => {
+  const onExpand = (evt: MouseEvent, path: string, expanded: boolean) => {
     evt.preventDefault();
     if (isShort) {
       setIsShort(false)

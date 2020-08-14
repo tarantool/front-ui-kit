@@ -5,6 +5,7 @@ import { css, cx } from 'react-emotion'
 import { MenuIcon } from '../MenuIcon'
 import { Text } from '../../../Text';
 import { IconChevronDown } from '../../../Icon';
+import type { MenuItemType } from '../../index';
 
 type handleClickType = (event: MouseEvent, handler: (T) => void, ...args: T) => void
 
@@ -138,8 +139,9 @@ export const MenuItem = ({
   short,
   expand,
   isCollapse,
-  pathPrefix
-}) => {
+  pathPrefix,
+  type = 'internal'
+}: MenuItemType) => {
   const tag = path ? 'a' : 'button'
 
   if (short) {
@@ -148,7 +150,9 @@ export const MenuItem = ({
         tag={tag}
         className={cx(styles.shortItem, { [styles.itemSelected]: selected || (items && items.find(x => x.selected)) })}
         onClick={
-          items && items.length ? evt => expand(evt, path, !expanded) : evt => handleClick(evt, onClick, evt, path)
+          items && items.length
+            ? evt => expand(evt, path, !expanded)
+            : evt => handleClick(evt, onClick, evt, path, type)
         }
         href={pathPrefix + path}
         title={label}
@@ -185,7 +189,9 @@ export const MenuItem = ({
         })}
         href={pathPrefix + path}
         onClick={
-          items && items.length ? evt => expand(evt, path, !expanded) : evt => handleClick(evt, onClick, evt, path)
+          items && items.length
+            ? evt => expand(evt, path, !expanded)
+            : evt => handleClick(evt, onClick, evt, path, type)
         }
         title={label}
       >
