@@ -4,21 +4,21 @@ exports[`ConfirmModal renders correctly hidden state 1`] = `null`;
 
 exports[`ConfirmModal renders correctly loading state 1`] = `
 <div
-  className="css-yhrqyo"
+  className="css-fp900x"
   onMouseDown={[Function]}
 >
   <div
-    className="css-jj4e43"
+    className="css-xynqqq"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-1x3jdys"
+      className="css-34jfdi"
     >
       Please confirm
     </h2>
     <svg
-      className="css-1lko8op"
+      className="css-1t4o2sh"
       onClick={[MockFunction]}
       viewBox="0 0 16 16"
     >
@@ -27,12 +27,12 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
       />
     </svg>
     <div
-      className="css-13osoup"
+      className="css-i9gxme"
     >
       Removing user John Appleseed
     </div>
     <div
-      className="css-lwqd8y"
+      className="css-vtqncq"
     >
       <div
         className="css-99wgdf"
@@ -84,21 +84,21 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
 
 exports[`ConfirmModal renders correctly visible state 1`] = `
 <div
-  className="css-yhrqyo"
+  className="css-fp900x"
   onMouseDown={[Function]}
 >
   <div
-    className="css-jj4e43"
+    className="css-xynqqq"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-1x3jdys"
+      className="css-34jfdi"
     >
       Please confirm
     </h2>
     <svg
-      className="css-1lko8op"
+      className="css-1t4o2sh"
       onClick={[MockFunction]}
       viewBox="0 0 16 16"
     >
@@ -107,12 +107,12 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
       />
     </svg>
     <div
-      className="css-13osoup"
+      className="css-i9gxme"
     >
       Removing user John Appleseed
     </div>
     <div
-      className="css-lwqd8y"
+      className="css-vtqncq"
     >
       <div
         className="css-99wgdf"

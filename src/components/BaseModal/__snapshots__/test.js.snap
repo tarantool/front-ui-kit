@@ -4,7 +4,7 @@ exports[`BaseModal renders closed 1`] = `null`;
 
 exports[`BaseModal renders opened 1`] = `
 <div
-  className="css-yhrqyo"
+  className="css-fp900x"
   onMouseDown={[Function]}
 >
   <div

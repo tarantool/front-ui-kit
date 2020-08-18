@@ -9,14 +9,14 @@ const styles = {
   wrap: css`
     width: 100%;
     height: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
     overflow: hidden;
   `,
   scrollableWrap: css`
     height: 100%;
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -30px;
+    margin-right: -30px;
   `,
   scrollableBody: css`
     padding-left: 32px;

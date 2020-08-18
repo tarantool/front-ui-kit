@@ -7,7 +7,8 @@ const styles = {
   wrap: css`
     flex-shrink: 0;
     display: flex;
-    padding: 8px 16px;
+    padding: 0;
+    margin: 20px 0 0;
   `,
   controls: css`
     padding-left: 16px;

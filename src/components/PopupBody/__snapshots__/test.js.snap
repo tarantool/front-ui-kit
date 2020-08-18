@@ -2,7 +2,7 @@
 
 exports[`PopupBody renders with scrollbars 1`] = `
 <div
-  className="css-17w6qdz external-class"
+  className="css-nqy40l external-class"
 >
   <div
     className="css-1wzifj2"
@@ -14,7 +14,7 @@ exports[`PopupBody renders with scrollbars 1`] = `
 
 exports[`PopupBody renders without scrollbars 1`] = `
 <div
-  className="css-100xp3y external-class"
+  className="css-1j7f3i8 external-class"
 >
   content
 </div>
