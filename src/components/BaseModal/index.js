@@ -2,8 +2,9 @@
 import * as React from 'react';
 import { createRef } from 'react';
 import * as ReactDOM from 'react-dom';
+import { rgba } from 'emotion-rgba';
 import { css, cx } from 'emotion';
-import { zIndex } from '../../variables';
+import { colors, zIndex } from '../../variables';
 
 export const styles = {
   lockedBody: css`
@@ -20,7 +21,7 @@ export const styles = {
     flex-direction: column;
     padding: 40px 16px;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: ${rgba(colors.dark, 0.15)};
     justify-content: flex-start;
     align-items: center;
   `,

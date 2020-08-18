@@ -4,7 +4,7 @@ exports[`ConfirmModal renders correctly hidden state 1`] = `null`;
 
 exports[`ConfirmModal renders correctly loading state 1`] = `
 <div
-  className="css-yhrqyo"
+  className="css-fp900x"
   onMouseDown={[Function]}
 >
   <div
@@ -32,7 +32,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
       Removing user John Appleseed
     </div>
     <div
-      className="css-lwqd8y"
+      className="css-vtqncq"
     >
       <div
         className="css-99wgdf"
@@ -84,7 +84,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
 
 exports[`ConfirmModal renders correctly visible state 1`] = `
 <div
-  className="css-yhrqyo"
+  className="css-fp900x"
   onMouseDown={[Function]}
 >
   <div
@@ -112,7 +112,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
       Removing user John Appleseed
     </div>
     <div
-      className="css-lwqd8y"
+      className="css-vtqncq"
     >
       <div
         className="css-99wgdf"

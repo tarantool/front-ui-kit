@@ -1,6 +1,8 @@
 There are two ways to use modals: with scroll and without it.
 
-In first case modal will fit to content.
+In first case modal will fit to content. It's recommended to use modals this way.
+
+*Scrolling inside modals is unstable and not recommended to use.*
 
 But if you put large content in modal it might need scrollbars in some cases.
 To enable scrollbars in body, you should set `fit` prop and `max-height` for Modal and use PopupBody with `scrollable` prop. In this mode modal won't fit to content size.
@@ -19,6 +21,7 @@ import { PopupBody } from '../PopupBody';
 import { PopupFooter } from '../PopupFooter';
 import { Input } from '../Input';
 import { LabeledInput } from '../LabeledInput';
+import { Text } from '../Text';
 
 initialState = { opened: null };
 
@@ -36,20 +39,20 @@ const tabs = [
   {
     label: 'Create Replica Set',
     content: <PopupBody className={tabStyles} scrollable>
-      {sampleText.repeat(10)}
+      <Text>{sampleText.repeat(10)}</Text>
     </PopupBody>
   },
   {
     label: 'Join Replica Set',
     content: <PopupBody className={tabStyles} scrollable>
-      {sampleText.repeat(40)}
+      <Text>{sampleText.repeat(40)}</Text>
     </PopupBody>
   },
   {
     label: 'Bad example tab',
     content: <PopupBody className={tabStyles}>
       Bad example (without scroll).
-      {sampleText.repeat(40)}
+      <Text>{sampleText.repeat(40)}</Text>
     </PopupBody>
   }
 ];
@@ -59,6 +62,7 @@ const tabs = [
     controls={[
       <Button onClick={() => openModal('simple')} text='simple Modal' />,
       <Button onClick={() => openModal('wide')} text='Wide Modal' />,
+      <Button onClick={() => openModal('wide-scrollable')} text='Wide scrollable Modal' />,
       <Button onClick={() => openModal('tabbed')} text='Wide Modal with scrollable body' />,
       <Button onClick={() => openModal('form')} text='Modal with form' />
     ]}
@@ -66,26 +70,44 @@ const tabs = [
   <Modal
     footerControls={[
       <Button intent='primary' text='Accept' />,
-      <Button text='Decline' />
+      <Button text='Decline' onClick={closeModal} />
     ]}
     title='Simple Modal'
     visible={state.opened === 'simple'}
     onClose={closeModal}
   >
-    {sampleText}
+    <Text>{sampleText}</Text>
   </Modal>
   <Modal
     footerControls={[
       <Button intent='primary' text='Accept' />,
-      <Button text='Decline' />
+      <Button text='Decline' onClick={closeModal} />
     ]}
     title='Configure server'
     visible={state.opened === 'wide'}
     onClose={closeModal}
     wide
   >
-    {sampleText.repeat(40)}
+    <Text>{sampleText.repeat(40)}</Text>
   </Modal>
+
+  <Modal
+    footerControls={[
+      <Button intent='primary' text='Accept' />,
+      <Button text='Decline' onClick={closeModal} />
+    ]}
+    title='Configure server'
+    visible={state.opened === 'wide-scrollable'}
+    onClose={closeModal}
+    fit
+    thinBorders
+    wide
+  >
+    <PopupBody scrollable>
+      <Text>{sampleText.repeat(40)}</Text>
+    </PopupBody>
+  </Modal>
+
   <Modal
     title='Configure server'
     visible={state.opened === 'tabbed'}
@@ -98,7 +120,7 @@ const tabs = [
     <PopupFooter
       controls={[
         <Button intent='primary' text='Accept' />,
-        <Button text='Decline' />
+        <Button text='Decline' onClick={closeModal} />
       ]}
     />
   </Modal>

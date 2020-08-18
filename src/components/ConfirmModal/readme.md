@@ -1,5 +1,6 @@
 ```js
 import { Button } from '../Button';
+import { Text } from '../Text';
 
 initialState = { loading: false, opened: false };
 
@@ -20,7 +21,7 @@ const apply = () => {
     confirmText="Remove"
     confirmPreloader={state.loading}
   >
-    Removing user John Appleseed
+    <Text>Removing user John Appleseed</Text>
   </ConfirmModal>
 </>
 ```
