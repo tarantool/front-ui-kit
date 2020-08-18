@@ -25,6 +25,7 @@ type BreadcrumbsProps = ActionsBreadCrumbs & {
 const styles = {
   breadcrumbs: css`
     display: flex;
+    align-items: baseline;
   `,
   breadcrumbElement: css`
     white-space: nowrap;
@@ -36,7 +37,7 @@ const styles = {
     margin: 0 6px;
     color: ${colors.dark40};
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     white-space: nowrap;
   `,
   appName: css`
@@ -57,7 +58,7 @@ const styles = {
   overflowButton: css`
     cursor: pointer;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     color: #8E9199;
     
     &:hover {
