@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeaderFlag renders correctly 1`] = `
+Array [
+  <div
+    className="css-3u7751"
+    title="Good"
+  >
+    <svg
+      className="css-10nodp4"
+      viewBox="0 0 14 59"
+    >
+      <use
+        xlinkHref="#flag"
+      />
+    </svg>
+  </div>,
+  <div
+    className="css-3u7751"
+    title="Bad"
+  >
+    <svg
+      className="css-1g6e4c2"
+      viewBox="0 0 14 59"
+    >
+      <use
+        xlinkHref="#flag-light"
+      />
+    </svg>
+  </div>,
+  <div
+    className="css-3u7751"
+    title="Bad"
+  >
+    <svg
+      className="css-j89nl8"
+      viewBox="0 0 14 59"
+    >
+      <use
+        xlinkHref="#flag"
+      />
+    </svg>
+  </div>,
+]
+`;
