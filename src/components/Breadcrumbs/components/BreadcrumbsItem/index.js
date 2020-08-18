@@ -11,7 +11,7 @@ const styles = {
   breadcrumbElement: css`
     color: ${colors.dark40};
     font-size: 16px;
-    line-height: 22px;
+    line-height: 24px;
     white-space: nowrap;
   `,
   breadcrumbLinkElement: css`
