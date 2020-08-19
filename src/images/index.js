@@ -4,8 +4,6 @@ import TarantoolLogoFull from './tarantool-logo-full.svg';
 import windowDeadSvg from './window-dead.svg';
 import windowNoNetworkSvg from './window-no-network.svg';
 import windowShockedSvg from './window-shocked.svg';
-import tarantoolLogoFull from './logo_full.svg';
-import tarantoolLogoShort from './logo_short.svg';
 
 export {
   splashGenericErrorSvg,
@@ -13,7 +11,5 @@ export {
   TarantoolLogoFull,
   windowDeadSvg,
   windowNoNetworkSvg,
-  windowShockedSvg,
-  tarantoolLogoFull,
-  tarantoolLogoShort
+  windowShockedSvg
 };

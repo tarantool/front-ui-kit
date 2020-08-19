@@ -6,7 +6,6 @@ import { css, keyframes, cx } from 'react-emotion'
 import { MenuItem } from './components/MenuItem'
 import { Scrollbar } from '../Scrollbar'
 import { SVGImage } from '../SVGImage'
-import { tarantoolLogoShort, tarantoolLogoFull } from '../../images'
 import { IconArrow } from '../Icon';
 import { colors } from '../../variables';
 import * as R from 'ramda';
@@ -177,13 +176,15 @@ type MenuProps = {
   path: string,
   onMenuItemClick: (path: string, type: MenuItemTypes) => void,
   toggleExpand: (path: string, expanded: boolean) => void,
+  fullLogo: HTMLElement,
+  shortLogo: HTMLElement,
   className?: string,
   pathPrefix?: string,
 }
 
 export function Menu(props: MenuProps) {
   const {
-    menu, className, onMenuItemClick, toggleExpand, pathPrefix
+    menu, className, onMenuItemClick, toggleExpand, pathPrefix, fullLogo, shortLogo
   } = props;
   const [isShort, setIsShort] = useState(false)
 
@@ -213,15 +214,21 @@ export function Menu(props: MenuProps) {
   return (
     <div className={cx(styles.container, { [styles.shortContainer]: isShort }, className)}>
       <div className={cx(styles.logoContainer, { [styles.logoCenter]: isShort })}>
-        <SVGImage
-          glyph={isShort ? tarantoolLogoShort : tarantoolLogoFull }
-          className={isShort ? styles.shortLogo : styles.logo}
-        />
+        {isShort && shortLogo && (
+          <SVGImage
+            glyph={shortLogo}
+            className={styles.shortLogo}
+          />)}
+        {!isShort && fullLogo && (
+          <SVGImage
+            glyph={fullLogo}
+            className={styles.logo}
+          />)}
       </div>
       <Scrollbar track={'#212121'}>
         <div className={styles.menuList}>
           {topMenu.map((x, i) => (
-            <MenuItem key={i} {...x} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort} />
+            <MenuItem key={i} {...x} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
           ))}
         </div>
       </Scrollbar>
@@ -240,7 +247,7 @@ export function Menu(props: MenuProps) {
           key={'collapse'}
           isCollapse
           icon={
-            <IconArrow direction={isShort ? 'right' : 'left'} />
+            <IconArrow direction={isShort ? 'right' : 'left'}/>
           }
           label={'Collapse menu'}
           onClick={e => {
