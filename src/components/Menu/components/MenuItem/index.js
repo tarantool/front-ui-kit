@@ -7,7 +7,7 @@ import { Text } from '../../../Text';
 import { IconChevronDown } from '../../../Icon';
 import type { MenuItemType, MenuItemTypes } from '../../index';
 
-type handleClickType = (event: MouseEvent, handler: (data: any) => void, ...args: any) => void
+type handleClickType = (event: MouseEvent, handler: (...params: any) => void, ...args: any) => void
 
 const handleClick: handleClickType = (event, handler, ...args) => {
   if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
@@ -127,15 +127,6 @@ const styles = {
   `
 }
 
-type MenuItemProps = {
-  isCollapse?: boolean,
-  expanded?: boolean,
-  short: boolean,
-  onClick: (evt: MouseEvent, path: string, type: MenuItemTypes) => void,
-  pathPrefix?: string,
-  expand?: (evt: MouseEvent, path: string, expanded: boolean) => void,
-} & MenuItemProps;
-
 export const MenuItem = ({
   path,
   selected,
@@ -144,13 +135,13 @@ export const MenuItem = ({
   items = [],
   onClick,
   isSubitem = false,
-  icon = 'hdd',
+  icon,
   short,
   expand,
   isCollapse,
   pathPrefix,
   type = 'internal'
-}: MenuItemProps ) => {
+}: MenuItemType) => {
   const tag = path ? 'a' : 'button'
 
   if (short) {
@@ -163,7 +154,7 @@ export const MenuItem = ({
             ? evt => expand && expand(evt, path, !expanded)
             : evt => handleClick(evt, onClick, evt, path, type)
         }
-        href={pathPrefix + path}
+        href={pathPrefix ? pathPrefix + path: path}
         title={label}
       >
         <MenuIcon icon={icon} className={styles.icon} />
@@ -176,7 +167,7 @@ export const MenuItem = ({
     subItems = (
       <div className={styles.submenuList}>
         {items.map(x => (
-          <MenuItem key={x.path} {...x} onClick={onClick} isSubitem={true} />
+          <MenuItem {...x} key={x.path} onClick={onClick} isSubitem={true} />
         ))}
       </div>
     )
@@ -196,7 +187,7 @@ export const MenuItem = ({
           [styles.subItemSelected]: selected && isSubitem,
           [styles.collapse]: isCollapse
         })}
-        href={pathPrefix + path}
+        href={pathPrefix ? pathPrefix + path: path}
         onClick={
           items && items.length
             ? evt => expand && expand(evt, path, !expanded)

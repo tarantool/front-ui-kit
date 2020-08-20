@@ -149,16 +149,23 @@ const styles = {
 
 export type MenuItemTypes = 'internal' | 'external'
 
-export type MenuItemType = {|
+export type MenuItemType = {
   label: string,
   path: string,
   selected: boolean,
   expanded: boolean,
   icon: string | Object,
-  items?: Array<MenuItemType>,
+  items: Array<MenuItemType>,
   type?: MenuItemTypes,
   pinBottom?: boolean,
-|}
+  pathPrefix?: string,
+  onClick: (evt: MouseEvent, path: string, type: MenuItemTypes) => void,
+  short?: boolean,
+  isSubitem?: boolean,
+  isCollapse?: boolean,
+  expand?: (evt: MouseEvent, path: string, expanded: boolean) => void,
+  pathPrefix?: string,
+}
 
 
 type MenuProps = {
@@ -166,7 +173,7 @@ type MenuProps = {
   path: string,
   onMenuItemClick: (path: string, type: MenuItemTypes) => void,
   toggleExpand: (path: string, expanded: boolean) => void,
-  renderMenuLogo: (isShort: boolean) => React.Node,
+  renderMenuLogo?: (isShort: boolean) => React.Node,
   className?: string,
   pathPrefix?: string,
 }
@@ -207,8 +214,8 @@ export function Menu(props: MenuProps) {
       </div>
       <Scrollbar track={'#212121'}>
         <div className={styles.menuList}>
-          {topMenu.map((x, i) => (
-            <MenuItem key={i} {...x} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
+          {topMenu.map((x: MenuItemType, i) => (
+            <MenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
           ))}
         </div>
       </Scrollbar>
@@ -225,9 +232,11 @@ export function Menu(props: MenuProps) {
         )}
         <MenuItem
           key={'collapse'}
+          items={[]}
           path={''}
           isCollapse
           selected={false}
+          expanded={false}
           icon={
             <IconArrow direction={isShort ? 'right' : 'left'}/>
           }
