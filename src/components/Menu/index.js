@@ -147,14 +147,13 @@ const styles = {
 };
 
 
-type MenuItemTypes = 'internal' | 'external'
+export type MenuItemTypes = 'internal' | 'external'
 
 export type MenuItemType = {|
   label: string,
   path: string,
   selected: boolean,
   expanded: boolean,
-  loading: boolean,
   icon: string | Object,
   items?: Array<MenuItemType>,
   type?: MenuItemTypes,
@@ -167,7 +166,7 @@ type MenuProps = {
   path: string,
   onMenuItemClick: (path: string, type: MenuItemTypes) => void,
   toggleExpand: (path: string, expanded: boolean) => void,
-  renderMenuLogo: (isShort: boolean) => HTMLElement,
+  renderMenuLogo: (isShort: boolean) => React.Node,
   className?: string,
   pathPrefix?: string,
 }
@@ -204,7 +203,7 @@ export function Menu(props: MenuProps) {
   return (
     <div className={cx(styles.container, { [styles.shortContainer]: isShort }, className)}>
       <div className={cx(styles.logoContainer, { [styles.logoCenter]: isShort })}>
-        {renderMenuLogo && renderMenuLogo(isShort)}
+        {renderMenuLogo ? renderMenuLogo(isShort) : null}
       </div>
       <Scrollbar track={'#212121'}>
         <div className={styles.menuList}>
@@ -226,7 +225,9 @@ export function Menu(props: MenuProps) {
         )}
         <MenuItem
           key={'collapse'}
+          path={''}
           isCollapse
+          selected={false}
           icon={
             <IconArrow direction={isShort ? 'right' : 'left'}/>
           }

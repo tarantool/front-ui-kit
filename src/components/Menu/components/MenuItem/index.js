@@ -5,9 +5,9 @@ import { css, cx } from 'react-emotion'
 import { MenuIcon } from '../MenuIcon'
 import { Text } from '../../../Text';
 import { IconChevronDown } from '../../../Icon';
-import type { MenuItemType } from '../../index';
+import type { MenuItemType, MenuItemTypes } from '../../index';
 
-type handleClickType = (event: MouseEvent, handler: (T) => void, ...args: T) => void
+type handleClickType = (event: MouseEvent, handler: (data: any) => void, ...args: any) => void
 
 const handleClick: handleClickType = (event, handler, ...args) => {
   if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
@@ -127,6 +127,15 @@ const styles = {
   `
 }
 
+type MenuItemProps = {
+  isCollapse?: boolean,
+  expanded?: boolean,
+  short: boolean,
+  onClick: (evt: MouseEvent, path: string, type: MenuItemTypes) => void,
+  pathPrefix?: string,
+  expand?: (evt: MouseEvent, path: string, expanded: boolean) => void,
+} & MenuItemProps;
+
 export const MenuItem = ({
   path,
   selected,
@@ -141,7 +150,7 @@ export const MenuItem = ({
   isCollapse,
   pathPrefix,
   type = 'internal'
-}: MenuItemType) => {
+}: MenuItemProps ) => {
   const tag = path ? 'a' : 'button'
 
   if (short) {
@@ -151,7 +160,7 @@ export const MenuItem = ({
         className={cx(styles.shortItem, { [styles.itemSelected]: selected || (items && items.find(x => x.selected)) })}
         onClick={
           items && items.length
-            ? evt => expand(evt, path, !expanded)
+            ? evt => expand && expand(evt, path, !expanded)
             : evt => handleClick(evt, onClick, evt, path, type)
         }
         href={pathPrefix + path}
@@ -190,7 +199,7 @@ export const MenuItem = ({
         href={pathPrefix + path}
         onClick={
           items && items.length
-            ? evt => expand(evt, path, !expanded)
+            ? evt => expand && expand(evt, path, !expanded)
             : evt => handleClick(evt, onClick, evt, path, type)
         }
         title={label}
