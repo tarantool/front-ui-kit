@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased 
+## Unreleased
 
 - Global updates in Button styles.
 
@@ -14,6 +14,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated PageLayout controls.
 
 - Updated SplashModal.
+
+- Updated sort icons for table.
+
+- IconHelper components group is separated into a discrete entity.
+
+- Add component Menu.
 
 ## [0.22.0] - 2020-08-25
 
@@ -26,10 +32,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added orange LeaderFlag.
 
 - Fixed bug in PageLayout with `wide` prop.
-
-- Updated sort icons for table.
-
-- IconHelper components group is separated into a discrete entity.
 
 ## [0.21.0] - 2020-08-11
 

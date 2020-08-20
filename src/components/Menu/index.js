@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { css, keyframes, cx } from 'react-emotion'
 import { MenuItem } from './components/MenuItem'
 import { Scrollbar } from '../Scrollbar'
-import { SVGImage } from '../SVGImage'
 import { IconArrow } from '../Icon';
 import { colors } from '../../variables';
 import * as R from 'ramda';
@@ -132,14 +131,6 @@ const styles = {
   logoContainer: css`
     padding: 24px 0 32px 0;
   `,
-  logo: css`
-    width: 210px;
-    height: 28px;
-  `,
-  shortLogo: css`
-    width: 46px;
-    height: 28px;
-  `,
   logoCenter: css`
     text-align: center;
   `,
@@ -176,17 +167,16 @@ type MenuProps = {
   path: string,
   onMenuItemClick: (path: string, type: MenuItemTypes) => void,
   toggleExpand: (path: string, expanded: boolean) => void,
-  fullLogo: HTMLElement,
-  shortLogo: HTMLElement,
+  renderMenuLogo: (isShort: boolean) => HTMLElement,
   className?: string,
   pathPrefix?: string,
 }
 
 export function Menu(props: MenuProps) {
   const {
-    menu, className, onMenuItemClick, toggleExpand, pathPrefix, fullLogo, shortLogo
+    menu, className, onMenuItemClick, toggleExpand, pathPrefix, renderMenuLogo
   } = props;
-  const [isShort, setIsShort] = useState(false)
+  const [isShort, setIsShort] = useState(false);
 
   const topMenu = menu.filter((item: MenuItemType) => !item.pinBottom);
 
@@ -214,16 +204,7 @@ export function Menu(props: MenuProps) {
   return (
     <div className={cx(styles.container, { [styles.shortContainer]: isShort }, className)}>
       <div className={cx(styles.logoContainer, { [styles.logoCenter]: isShort })}>
-        {isShort && shortLogo && (
-          <SVGImage
-            glyph={shortLogo}
-            className={styles.shortLogo}
-          />)}
-        {!isShort && fullLogo && (
-          <SVGImage
-            glyph={fullLogo}
-            className={styles.logo}
-          />)}
+        {renderMenuLogo && renderMenuLogo(isShort)}
       </div>
       <Scrollbar track={'#212121'}>
         <div className={styles.menuList}>
