@@ -1,9 +1,10 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import greenFlag from './flag.svg';
-import redFlag from './flag-red.svg';
+import flag from './flag.svg';
+import flagLight from './flag-light.svg';
 import { SVGImage } from '../SVGImage';
+import { colors } from '../../variables';
 
 const styles = {
   wrap: css`
@@ -24,19 +25,26 @@ const styles = {
   `
 };
 
+const intentions = {
+  good: css`fill: ${colors.intentSuccessBorder};`,
+  bad: css`fill: ${colors.intentDanger};`,
+  warning: css`fill: ${colors.intentWarning};`
+};
+
 type LeaderFlagProps = {
   className?: string,
-  fail?: boolean,
+  state: 'warning' | 'good' | 'bad',
   title?: string
 };
 
-export const LeaderFlag = ({ className, fail, title }: LeaderFlagProps) => {
-  const glyph = fail ? redFlag : greenFlag;
+export const LeaderFlag = ({ className, state = 'bad', title }: LeaderFlagProps) => {
+  const glyph = state === 'bad' ? flagLight : flag;
+
   return (
     <div className={cx(styles.wrap, className)} title={title}>
       <SVGImage
         glyph={glyph}
-        className={styles.flag}
+        className={cx(styles.flag, intentions[state])}
       />
     </div>
   )
