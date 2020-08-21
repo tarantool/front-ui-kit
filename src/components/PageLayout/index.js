@@ -14,7 +14,7 @@ const styles = {
     margin: 30px auto 30px;
   `,
   wide: css`
-    max-width: auto;
+    max-width: none;
   `,
   headingPanel: css`
     display: flex;

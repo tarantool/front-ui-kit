@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added orange LeaderFlag.
 
+- Fixed bug in PageLayout with `wide` prop.
+
 ## [0.21.0] - 2020-08-11
 
 - Fix crashes in Chromium when checkbox was clicked fast three times in a row.
