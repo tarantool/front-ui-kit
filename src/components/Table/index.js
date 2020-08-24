@@ -49,7 +49,7 @@ const styles = {
   `,
   noData: css`
     background-color: #FFFFFF;
-    padding: 25psx;
+    padding: 25px;
   `,
   noDataText: css`
     margin-top: 16px;
