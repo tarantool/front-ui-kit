@@ -17,7 +17,7 @@ Array [
             role="row"
           >
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -30,7 +30,7 @@ Array [
               First Name
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -43,7 +43,7 @@ Array [
               Last Name
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -56,7 +56,7 @@ Array [
               Age
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -69,7 +69,7 @@ Array [
               Visits
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -82,7 +82,7 @@ Array [
               Status
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -94,26 +94,14 @@ Array [
               title="Toggle SortBy"
             >
               Profile Progress
-              <span
-                className="css-1x6dtcs"
+              <svg
+                className="css-8f2wk3"
+                viewBox="0 0 16 10"
               >
-                <svg
-                  className="css-1j1sb4k"
-                  viewBox="0 0 6 4"
-                >
-                  <use
-                    xlinkHref="#sortUp"
-                  />
-                </svg>
-                <svg
-                  className="css-1j1sb4k"
-                  viewBox="0 0 6 4"
-                >
-                  <use
-                    xlinkHref="#sortDown"
-                  />
-                </svg>
-              </span>
+                <use
+                  xlinkHref="#sortAsc"
+                />
+              </svg>
             </th>
           </tr>
         </thead>
@@ -125,7 +113,7 @@ Array [
               colSpan={6}
             >
               <div
-                className="css-1unytjj"
+                className="css-9deek"
               >
                 <svg
                   className="css-1mla397"
@@ -162,7 +150,7 @@ Array [
             role="row"
           >
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -175,7 +163,7 @@ Array [
               First Name
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -188,7 +176,7 @@ Array [
               Last Name
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -201,7 +189,7 @@ Array [
               Age
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -214,7 +202,7 @@ Array [
               Visits
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -227,7 +215,7 @@ Array [
               Status
             </th>
             <th
-              className="css-2rf623"
+              className="css-1bpu65y"
               colSpan={1}
               onClick={[Function]}
               role="columnheader"
@@ -239,26 +227,14 @@ Array [
               title="Toggle SortBy"
             >
               Profile Progress
-              <span
-                className="css-1x6dtcs"
+              <svg
+                className="css-8f2wk3"
+                viewBox="0 0 16 10"
               >
-                <svg
-                  className="css-1j1sb4k"
-                  viewBox="0 0 6 4"
-                >
-                  <use
-                    xlinkHref="#sortUp"
-                  />
-                </svg>
-                <svg
-                  className="css-1j1sb4k"
-                  viewBox="0 0 6 4"
-                >
-                  <use
-                    xlinkHref="#sortDown"
-                  />
-                </svg>
-              </span>
+                <use
+                  xlinkHref="#sortAsc"
+                />
+              </svg>
             </th>
           </tr>
         </thead>
@@ -270,7 +246,7 @@ Array [
               colSpan={6}
             >
               <div
-                className="css-1unytjj"
+                className="css-9deek"
               >
                 <svg
                   className="css-1mla397"
@@ -311,7 +287,7 @@ exports[`Table renders simple 1`] = `
           role="row"
         >
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -324,7 +300,7 @@ exports[`Table renders simple 1`] = `
             First Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -337,7 +313,7 @@ exports[`Table renders simple 1`] = `
             Last Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -350,7 +326,7 @@ exports[`Table renders simple 1`] = `
             Age
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -363,7 +339,7 @@ exports[`Table renders simple 1`] = `
             Visits
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -376,7 +352,7 @@ exports[`Table renders simple 1`] = `
             Status
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -388,26 +364,14 @@ exports[`Table renders simple 1`] = `
             title="Toggle SortBy"
           >
             Profile Progress
-            <span
-              className="css-1x6dtcs"
+            <svg
+              className="css-8f2wk3"
+              viewBox="0 0 16 10"
             >
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortUp"
-                />
-              </svg>
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortDown"
-                />
-              </svg>
-            </span>
+              <use
+                xlinkHref="#sortAsc"
+              />
+            </svg>
           </th>
         </tr>
       </thead>
@@ -641,7 +605,7 @@ exports[`Table renders with code row 1`] = `
           role="row"
         >
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -654,7 +618,7 @@ exports[`Table renders with code row 1`] = `
             First Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -667,7 +631,7 @@ exports[`Table renders with code row 1`] = `
             Last Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -680,7 +644,7 @@ exports[`Table renders with code row 1`] = `
             Age
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -693,7 +657,7 @@ exports[`Table renders with code row 1`] = `
             Visits
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -706,7 +670,7 @@ exports[`Table renders with code row 1`] = `
             Status
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -718,26 +682,14 @@ exports[`Table renders with code row 1`] = `
             title="Toggle SortBy"
           >
             Profile Progress
-            <span
-              className="css-1x6dtcs"
+            <svg
+              className="css-8f2wk3"
+              viewBox="0 0 16 10"
             >
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortUp"
-                />
-              </svg>
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortDown"
-                />
-              </svg>
-            </span>
+              <use
+                xlinkHref="#sortAsc"
+              />
+            </svg>
           </th>
         </tr>
       </thead>
@@ -1029,7 +981,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           role="row"
         >
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1065,7 +1017,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             </label>
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1078,7 +1030,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             First Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1091,7 +1043,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             Last Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1104,7 +1056,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             Age
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1117,7 +1069,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             Visits
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1130,7 +1082,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             Status
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1142,26 +1094,14 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             title="Toggle SortBy"
           >
             Profile Progress
-            <span
-              className="css-1x6dtcs"
+            <svg
+              className="css-8f2wk3"
+              viewBox="0 0 16 10"
             >
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortUp"
-                />
-              </svg>
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortDown"
-                />
-              </svg>
-            </span>
+              <use
+                xlinkHref="#sortAsc"
+              />
+            </svg>
           </th>
         </tr>
       </thead>
@@ -1626,7 +1566,7 @@ exports[`Table renders with pagination 1`] = `
           role="row"
         >
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1639,7 +1579,7 @@ exports[`Table renders with pagination 1`] = `
             First Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1652,7 +1592,7 @@ exports[`Table renders with pagination 1`] = `
             Last Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1665,7 +1605,7 @@ exports[`Table renders with pagination 1`] = `
             Age
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1678,7 +1618,7 @@ exports[`Table renders with pagination 1`] = `
             Visits
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1691,7 +1631,7 @@ exports[`Table renders with pagination 1`] = `
             Status
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -1703,26 +1643,14 @@ exports[`Table renders with pagination 1`] = `
             title="Toggle SortBy"
           >
             Profile Progress
-            <span
-              className="css-1x6dtcs"
+            <svg
+              className="css-8f2wk3"
+              viewBox="0 0 16 10"
             >
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortUp"
-                />
-              </svg>
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortDown"
-                />
-              </svg>
-            </span>
+              <use
+                xlinkHref="#sortAsc"
+              />
+            </svg>
           </th>
         </tr>
       </thead>
@@ -2094,7 +2022,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           role="row"
         >
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -2130,7 +2058,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             </label>
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -2143,7 +2071,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             First Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -2156,7 +2084,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             Last Name
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -2169,7 +2097,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             Age
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -2182,7 +2110,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             Visits
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -2195,7 +2123,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             Status
           </th>
           <th
-            className="css-2rf623"
+            className="css-1bpu65y"
             colSpan={1}
             onClick={[Function]}
             role="columnheader"
@@ -2207,26 +2135,14 @@ exports[`Table renders with pagination and selected rows 1`] = `
             title="Toggle SortBy"
           >
             Profile Progress
-            <span
-              className="css-1x6dtcs"
+            <svg
+              className="css-8f2wk3"
+              viewBox="0 0 16 10"
             >
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortUp"
-                />
-              </svg>
-              <svg
-                className="css-1j1sb4k"
-                viewBox="0 0 6 4"
-              >
-                <use
-                  xlinkHref="#sortDown"
-                />
-              </svg>
-            </span>
+              <use
+                xlinkHref="#sortAsc"
+              />
+            </svg>
           </th>
         </tr>
       </thead>
