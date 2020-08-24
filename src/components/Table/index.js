@@ -15,6 +15,7 @@ import { IconSortable } from './IconSortable';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
 import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
+import { colors } from '../../variables';
 
 
 const styles = {
@@ -30,18 +31,25 @@ const styles = {
     transform: translate3d(-50%, -50%, 0);
   `,
   head: css`
-    color: #000000a6;
+    color: ${colors.dark65};
     font-weight: 600;
     font-size: 14px;
     padding: 12px 16px;
     text-align: left;
   `,
   sortIcon: css`
-    margin-left: 12px;
+    padding: 7px 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+    &:hover {
+      background: #D9DADD;
+      border-radius: 2px;
+      fill: ${colors.dark65}
+    }
   `,
   noData: css`
     background-color: #FFFFFF;
-    padding: 25px;
+    padding: 25psx;
   `,
   noDataText: css`
     margin-top: 16px;

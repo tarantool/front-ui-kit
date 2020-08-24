@@ -1,35 +1,22 @@
 // @flow
-
 import * as React from 'react';
 import { css, cx } from 'emotion';
+import { colors } from '../../../../variables';
 import { SVGImage } from '../../../SVGImage';
-import sortUp from '../sortUp.svg';
-import sortDown from '../sortDown.svg';
+import sortUp from '../sortAsc.svg';
 import type { IconSortableStyleProps } from '../index';
 
 const styles = {
   icon: css`
-    display: inline-flex;
-    flex-direction: column;
-    vertical-align: middle;
-  `,
-  baseIcon: css`
-    width: 6px;
-    height: 4px;
-    fill: #000000a6;
-    margin: 1px;
+    width: 16px;
+    height: 10px;
+    fill: ${colors.dark10};
   `
 };
 
 export const IconSortableNone = ({ className }: IconSortableStyleProps) => (
-  <span className={cx(styles.icon, className)}>
-    <SVGImage
-      className={cx(styles.baseIcon)}
-      glyph={sortUp}
-    />
-    <SVGImage
-      className={cx(styles.baseIcon)}
-      glyph={sortDown}
-    />
-  </span>
+  <SVGImage
+    className={cx(styles.icon, className)}
+    glyph={sortUp}
+  />
 );
