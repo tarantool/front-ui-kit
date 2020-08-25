@@ -4,7 +4,6 @@ import { css, cx } from 'emotion';
 import { colors } from '../../variables';
 import { BaseModal, type BaseModalProps } from '../BaseModal';
 import { Text } from '../Text';
-import logo from './images/tarantool-logo.svg';
 import { SVGImage } from '../SVGImage';
 
 const styles = {
@@ -13,14 +12,15 @@ const styles = {
     flex-direction: row;
     flex-shrink: 0;
     min-height: 250px;
-    border-radius: 2px;
+    border-radius: 6px;
     overflow: hidden;
+    box-shadow: 0px 15px 15px rgba(4, 11, 29, 0.05);
   `,
   shim: css`
     background-color: ${colors.baseBg};
   `,
   subTitleWrap: css`
-    margin: 16px 0 48px 0;
+    margin: 15px 0 30px 0;
   `,
   subTitle: css`
     color: rgba(0, 0, 0, 0.65);
@@ -29,7 +29,7 @@ const styles = {
     width: 68px;
     flex-grow: 0;
     flex-shrink: 0;
-    background: #000;
+    background: ${colors.baseHeading};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,14 +44,15 @@ const styles = {
   `,
   formContainer: css`
     flex-grow: 1;
-    padding: 24px 32px;
+    padding: 30px;
   `
 };
 
 
 export type SplashModalProps = BaseModalProps & {
   title: string,
-  subTitle: string
+  subTitle: string,
+  logo?: React.Node
 };
 
 export const SplashModal = (
@@ -61,6 +62,7 @@ export const SplashModal = (
     shimClassName,
     subTitle,
     title,
+    logo,
     ...props
   }: SplashModalProps
 ) => (
@@ -69,9 +71,9 @@ export const SplashModal = (
     className={cx(styles.modal, className)}
     shimClassName={cx(styles.shim, shimClassName)}
   >
-    <div className={styles.logoContainer}>
+    {logo && <div className={styles.logoContainer}>
       <SVGImage glyph={logo} className={styles.logo} />
-    </div>
+    </div>}
     <div className={styles.formContainer}>
       {title && (<Text variant='h1'>{title}</Text>)}
       {subTitle && (
