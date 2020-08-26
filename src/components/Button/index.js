@@ -258,6 +258,7 @@ const intentActiveStyles = {
     }
 
     &:active {
+      background-color: ${colors.dark10};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
@@ -269,6 +270,7 @@ const intentActiveStyles = {
     }
 
     &:active {
+      background-color: ${localColors.intentDarkHover};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
@@ -280,6 +282,7 @@ const intentActiveStyles = {
     }
 
     &:active {
+      background-color: ${localColors.intentPrimaryDark};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
@@ -291,6 +294,7 @@ const intentActiveStyles = {
     }
 
     &:active {
+      background-color: ${localColors.darkHover};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
