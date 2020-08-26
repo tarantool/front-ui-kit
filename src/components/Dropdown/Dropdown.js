@@ -15,7 +15,7 @@ const styles = {
 export const Dropdown = withDropdown(React.forwardRef((
   {
     className,
-    children = <Button icon={IconMore} intent='iconic' />,
+    children = <Button icon={IconMore} intent='base' />,
     ...props
   },
   ref
