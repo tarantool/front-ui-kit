@@ -11,11 +11,12 @@ export const colors = {
   // navActiveItemEdge: '#FF272C',
   // navFont: '#ffffff',
 
-  activeAction: '#cf1322',
+  activeAction: '#d01d26',
 
   intentPrimary: '#f5222d',
   intentPrimaryDisabled: '#fcc8cb',
   intentPrimary45: '#fb9dac',
+  intentPrimary50: '#f28a91',
   intentPrimary65: '#f96f83',
 
   intentDanger: '#f5222d',
@@ -23,7 +24,7 @@ export const colors = {
   intentDangerBorder: '#fea39e',
   intentDanger65: '#f96f83',
 
-  intentBase: '#d9d9d9',
+  intentBase: '#d9dadd',
   intentBaseActive: '#fafafa',
   intentBaseBg: '#f3f3f3',
 
@@ -41,6 +42,7 @@ export const colors = {
   dark10: '#e6e7e8',
   dark25: '#c9cace',
   dark40: '#8e9199',
+  dark60: '#797d86',
   dark65: '#5c606c',
   dark: '#040b1d'
 };

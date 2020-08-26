@@ -5,14 +5,6 @@ import { css, cx } from 'react-emotion'
 import { baseFontFamily, colors } from '../../variables';
 import { IconSpinner } from '../Icon';
 
-const localColors = {
-  intentPrimaryDark: '#d01d26',
-  intentPrimaryLight: '#f28a91',
-  intentSecondaryDisabledText: '#d9dadd',
-  intentDarkHover: '#797d86',
-  darkHover: '#c4c6ca'
-}
-
 const styles = {
   button: css`
     border: none;
@@ -87,7 +79,8 @@ const styles = {
 
     &:disabled {
       padding: 8px 19px;
-      border: solid 1px ${localColors.intentSecondaryDisabledText};
+      border-width: 1px;
+      border-style: solid;
     }
   `,
 
@@ -96,7 +89,8 @@ const styles = {
 
     &:disabled {
       padding: 4px 15px;
-      border: solid 1px ${localColors.intentSecondaryDisabledText};
+      border-width: 1px;
+      border-style: solid;
     }
   `,
 
@@ -105,7 +99,8 @@ const styles = {
 
     &:disabled {
       padding: 0 15px;
-      border: solid 1px ${localColors.intentSecondaryDisabledText};
+      border-width: 1px;
+      border-style: solid;
     }
   `,
 
@@ -116,7 +111,8 @@ const styles = {
 
     &:disabled {
       padding: 0 8px;
-      border: solid 1px ${localColors.intentSecondaryDisabledText};
+      border-width: 1px;
+      border-style: solid;
     }
   `,
 
@@ -125,7 +121,8 @@ const styles = {
 
     &:disabled {
       padding: 4px 8px;
-      border: solid 1px ${localColors.intentSecondaryDisabledText};
+      border-width: 1px;
+      border-style: solid;
     }
   `,
 
@@ -134,7 +131,8 @@ const styles = {
 
     &:disabled {
       padding: 0 4px;
-      border: solid 1px ${localColors.intentSecondaryDisabledText};
+      border-width: 1px;
+      border-style: solid;
     }
   `
 };
@@ -148,7 +146,7 @@ const intentStyles = {
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      color: ${localColors.intentSecondaryDisabledText};
+      color: ${colors.intentBase};
       background-color: ${colors.intentBaseActive};
       box-shadow: none;
       cursor: default;
@@ -159,7 +157,7 @@ const intentStyles = {
     }
 
     &:disabled svg {
-      fill: ${localColors.intentSecondaryDisabledText};
+      fill: ${colors.intentBase};
     }
   `,
 
@@ -171,7 +169,7 @@ const intentStyles = {
     &:disabled:active,
     &:disabled:hover {
       background-color: ${colors.intentBaseActive};
-      color: ${localColors.intentSecondaryDisabledText};
+      color: ${colors.intentBase};
       cursor: default;
     }
 
@@ -180,7 +178,7 @@ const intentStyles = {
     }
 
     &:disabled svg {
-      fill: ${localColors.intentSecondaryDisabledText};
+      fill: ${colors.intentBase};
     }
   `,
 
@@ -191,8 +189,8 @@ const intentStyles = {
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      background-color: ${localColors.intentPrimaryLight};
-      border-color: ${localColors.intentPrimaryLight};
+      background-color: ${colors.intentPrimary50};
+      border-color: ${colors.intentPrimary50};
       color: #ffffff;
       cursor: default;
     }
@@ -214,7 +212,7 @@ const intentStyles = {
     &:disabled:active,
     &:disabled:hover {
       background-color: ${colors.intentBaseActive};
-      color: ${localColors.intentSecondaryDisabledText};
+      color: ${colors.intentBase};
       cursor: default;
     }
 
@@ -223,7 +221,7 @@ const intentStyles = {
     }
 
     &:disabled svg {
-      fill: ${localColors.intentSecondaryDisabledText};
+      fill: ${colors.intentBase};
     }
   `,
 
@@ -236,7 +234,7 @@ const intentStyles = {
     &:disabled:active,
     &:disabled:hover {
       background-color: ${colors.intentBaseActive};
-      color: ${localColors.intentSecondaryDisabledText};
+      color: ${colors.intentBase};
       cursor: default;
     }
 
@@ -245,7 +243,7 @@ const intentStyles = {
     }
 
     &:disabled svg {
-      fill: ${localColors.intentSecondaryDisabledText};
+      fill: ${colors.intentBase};
     }
   `
 };
@@ -266,11 +264,11 @@ const intentActiveStyles = {
   dark: css`
     &:focus,
     &:hover {
-      background-color: ${localColors.intentDarkHover};
+      background-color: ${colors.dark60};
     }
 
     &:active {
-      background-color: ${localColors.intentDarkHover};
+      background-color: ${colors.dark60};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
@@ -278,11 +276,11 @@ const intentActiveStyles = {
   primary: css`
     &:focus,
     &:hover {
-      background-color: ${localColors.intentPrimaryDark};
+      background-color: ${colors.activeAction};
     }
 
     &:active {
-      background-color: ${localColors.intentPrimaryDark};
+      background-color: ${colors.activeAction};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
@@ -290,11 +288,11 @@ const intentActiveStyles = {
   secondary: css`
     &:focus,
     &:hover {
-      background-color: ${localColors.darkHover};
+      background-color: ${colors.dark25};
     }
 
     &:active {
-      background-color: ${localColors.darkHover};
+      background-color: ${colors.dark25};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
