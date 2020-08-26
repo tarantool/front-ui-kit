@@ -2,7 +2,6 @@
 import * as React from 'react'
 import type { ComponentType } from 'react'
 import { css, cx } from 'react-emotion'
-import { rgba } from 'emotion-rgba';
 import { baseFontFamily, colors } from '../../variables';
 import { IconSpinner } from '../Icon';
 
@@ -10,6 +9,7 @@ const localColors = {
   intentPrimaryDark: '#d01d26',
   intentPrimaryLight: '#f28a91',
   intentSecondaryDisabledText: '#d9dadd',
+  intentDarkHover: '#797d86',
   darkHover: '#c4c6ca'
 }
 
@@ -163,6 +163,27 @@ const intentStyles = {
     }
   `,
 
+  dark: css`
+    background-color: ${colors.dark40};
+    color: #ffffff;
+
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      background-color: ${colors.intentBaseActive};
+      color: ${localColors.intentSecondaryDisabledText};
+      cursor: default;
+    }
+
+    & svg {
+      fill: #ffffff;
+    }
+
+    &:disabled svg {
+      fill: ${localColors.intentSecondaryDisabledText};
+    }
+  `,
+
   primary: css`
     background-color: ${colors.intentPrimary};
     color: #ffffff;
@@ -241,6 +262,17 @@ const intentActiveStyles = {
     }
   `,
 
+  dark: css`
+    &:focus,
+    &:hover {
+      background-color: ${localColors.intentDarkHover};
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+    }
+  `,
+
   primary: css`
     &:focus,
     &:hover {
@@ -278,7 +310,7 @@ export type ButtonProps = {
   disabled?: boolean,
   icon?: ComponentType<any>,
   iconRight?: ComponentType<any>,
-  intent?: 'primary' | 'secondary' | 'base' | 'plain',
+  intent?: 'primary' | 'secondary' | 'base' | 'plain' | 'dark',
   onClick?: (MouseEvent) => void,
   loading?: boolean,
   size?: 'l' | 's' | 'xs' | 'm',

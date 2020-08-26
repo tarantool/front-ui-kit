@@ -43,7 +43,7 @@ const dropdownExample = (
         'Task_runner',
       ].map(getDropdownOption('role'))
     ]}
-    intent='secondary'
+    intent='dark'
     iconRight={DropdownControlIcon}
   >
     Filter

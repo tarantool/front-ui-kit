@@ -1,7 +1,7 @@
 Button example:
 
 ```js
-import { css, cx } from 'emotion';
+import { css } from 'emotion';
 import {
   ControlsPanel,
   FormField,
@@ -20,14 +20,9 @@ const styles = {
 
 const label = 'Button';
 const sizes = ['l', 'm', 's', 'xs'];
-const intentions = ['primary', 'secondary', 'base', 'plain'];
+const intentions = ['primary', 'secondary', 'base', 'plain', 'dark'];
 
-const DropdownControlIcon = ({ className }) => (
-  <IconChevron
-    direction='down'
-    className={cx(className, css`fill: rgba(245, 34, 45, 0.65);`)}
-  />
-);
+const DropdownControlIcon = props => <IconChevron direction='down' {...props} />;
 
 initialState = {
   buttonText: true,
@@ -66,7 +61,7 @@ const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
             ...acc,
             <Button
               icon={state.leftIcon && IconBucket}
-              iconRight={state.rightIcon && (intent === 'primary' ? IconChevron : DropdownControlIcon)}
+              iconRight={state.rightIcon && DropdownControlIcon}
               intent={intent}
               loading={state.loading}
               size={size}
@@ -75,7 +70,7 @@ const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
             />,
             <Button
               icon={state.leftIcon && IconBucket}
-              iconRight={state.rightIcon && (intent === 'primary' ? IconChevron : DropdownControlIcon)}
+              iconRight={state.rightIcon && DropdownControlIcon}
               intent={intent}
               loading={state.loading}
               size={size}
