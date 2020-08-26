@@ -52,7 +52,7 @@ const switchFill = () => setState({ fill: !state.fill });
 const switchBg = () => setState({ background: !state.background });
 
 const listBackground = state.background ? css`background-color: #e8e8e8;` : '';
-const fill = state.fill ? css`fill: #0044aa; fill-opacity: 0.65;` : '';
+const fill = state.fill ? css`fill: #0044aa;` : '';
 
 const renderAllIcons = () => {
   const [Icon, ...inconNames] = Object.keys(icons);

@@ -8,8 +8,7 @@ import image from './edit.svg';
 const styles = css`
   width: 12px;
   height: 12px;
-  fill: ${colors.intentPrimary};
-  fill-opacity: 0.65;
+  fill: ${colors.intentPrimary65};
 `;
 
 export const IconEdit = ({ className, onClick }: GenericIconProps) => (

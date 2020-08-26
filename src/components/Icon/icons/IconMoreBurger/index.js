@@ -8,8 +8,7 @@ import image from './moreBurger.svg';
 const styles = css`
   width: 16px;
   height: 16px;
-  fill: ${colors.intentPrimary};
-  fill-opacity: 0.65;
+  fill: ${colors.intentPrimary65};
 `;
 
 export const IconMoreBurger = ({ className }: GenericIconProps) => (

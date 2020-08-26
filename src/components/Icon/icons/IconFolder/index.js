@@ -2,12 +2,12 @@
 import * as React from 'react';
 import { css, cx } from 'emotion';
 import { Icon, type GenericIconProps } from '../../Icon';
+import { colors } from '../../../../variables';
 import folder from './folder.svg';
 import folderOpened from './folder-opened.svg';
 
 const styles = css`
-  fill: #000;
-  fill-opacity: 0.65;
+  fill: ${colors.dark65};
 `;
 
 type IconFolderProps = {

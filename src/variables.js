@@ -15,10 +15,13 @@ export const colors = {
 
   intentPrimary: '#f5222d',
   intentPrimaryDisabled: '#fcc8cb',
+  intentPrimary45: '#fb9dac',
+  intentPrimary65: '#f96f83',
 
   intentDanger: '#f5222d',
   intentDangerBg: '#fff1f0',
   intentDangerBorder: '#fea39e',
+  intentDanger65: '#f96f83',
 
   intentBase: '#d9d9d9',
   intentBaseActive: '#fafafa',
@@ -36,6 +39,7 @@ export const colors = {
   codeBg: '#1e2537',
   dark2: '#fafafa',
   dark10: '#e6e7e8',
+  dark25: '#c9cace',
   dark40: '#8e9199',
   dark65: '#5c606c',
   dark: '#040b1d'
