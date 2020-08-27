@@ -95,11 +95,11 @@ Array [
             >
               Profile Progress
               <svg
-                className="css-8f2wk3"
-                viewBox="0 0 16 10"
+                className="css-1dm1qhi"
+                viewBox="0 0 16 16"
               >
                 <use
-                  xlinkHref="#sortAsc"
+                  xlinkHref="#sortDesc"
                 />
               </svg>
             </th>
@@ -113,7 +113,7 @@ Array [
               colSpan={6}
             >
               <div
-                className="css-9deek"
+                className="css-1unytjj"
               >
                 <svg
                   className="css-1mla397"
@@ -228,11 +228,11 @@ Array [
             >
               Profile Progress
               <svg
-                className="css-8f2wk3"
-                viewBox="0 0 16 10"
+                className="css-1dm1qhi"
+                viewBox="0 0 16 16"
               >
                 <use
-                  xlinkHref="#sortAsc"
+                  xlinkHref="#sortDesc"
                 />
               </svg>
             </th>
@@ -246,7 +246,7 @@ Array [
               colSpan={6}
             >
               <div
-                className="css-9deek"
+                className="css-1unytjj"
               >
                 <svg
                   className="css-1mla397"
@@ -365,11 +365,11 @@ exports[`Table renders simple 1`] = `
           >
             Profile Progress
             <svg
-              className="css-8f2wk3"
-              viewBox="0 0 16 10"
+              className="css-1dm1qhi"
+              viewBox="0 0 16 16"
             >
               <use
-                xlinkHref="#sortAsc"
+                xlinkHref="#sortDesc"
               />
             </svg>
           </th>
@@ -683,11 +683,11 @@ exports[`Table renders with code row 1`] = `
           >
             Profile Progress
             <svg
-              className="css-8f2wk3"
-              viewBox="0 0 16 10"
+              className="css-1dm1qhi"
+              viewBox="0 0 16 16"
             >
               <use
-                xlinkHref="#sortAsc"
+                xlinkHref="#sortDesc"
               />
             </svg>
           </th>
@@ -1095,11 +1095,11 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           >
             Profile Progress
             <svg
-              className="css-8f2wk3"
-              viewBox="0 0 16 10"
+              className="css-1dm1qhi"
+              viewBox="0 0 16 16"
             >
               <use
-                xlinkHref="#sortAsc"
+                xlinkHref="#sortDesc"
               />
             </svg>
           </th>
@@ -1644,11 +1644,11 @@ exports[`Table renders with pagination 1`] = `
           >
             Profile Progress
             <svg
-              className="css-8f2wk3"
-              viewBox="0 0 16 10"
+              className="css-1dm1qhi"
+              viewBox="0 0 16 16"
             >
               <use
-                xlinkHref="#sortAsc"
+                xlinkHref="#sortDesc"
               />
             </svg>
           </th>
@@ -2136,11 +2136,11 @@ exports[`Table renders with pagination and selected rows 1`] = `
           >
             Profile Progress
             <svg
-              className="css-8f2wk3"
-              viewBox="0 0 16 10"
+              className="css-1dm1qhi"
+              viewBox="0 0 16 16"
             >
               <use
-                xlinkHref="#sortAsc"
+                xlinkHref="#sortDesc"
               />
             </svg>
           </th>
