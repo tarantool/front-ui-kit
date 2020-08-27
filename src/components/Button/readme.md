@@ -1,7 +1,7 @@
 Button example:
 
 ```js
-import { css } from 'emotion';
+import { css, cx } from 'emotion';
 import {
   ControlsPanel,
   FormField,
@@ -12,8 +12,10 @@ import {
 } from '../../index';
 
 const styles = {
-  bg: css`
+  wrapper: css`
     padding: 10px;
+  `,
+  bg: css`
     background-color: #f0f2f5;
   `
 };
@@ -26,11 +28,13 @@ const DropdownControlIcon = props => <IconChevron direction='down' {...props} />
 
 initialState = {
   buttonText: true,
+  darkBg: false,
   loading: false,
   leftIcon: false,
   rightIcon: false
 };
 
+const toggleBg = () => setState({ darkBg: !state.darkBg });
 const toggleText = () => setState({
   buttonText: !state.buttonText,
   leftIcon: state.buttonText ? true : state.leftIcon
@@ -42,14 +46,14 @@ const toggleLeftIcon = () => setState({
 const toggleLoading = () => setState({ loading: !state.loading });
 const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
 
-<div className={styles.bg}>
+<div className={cx(styles.wrapper, { [styles.bg]: state.darkBg })}>
   <ControlsPanel
-    className={styles.wrapped}
     controls={[
       <Switcher onChange={toggleText} checked={state.buttonText}>Button text</Switcher>,
       <Switcher onChange={toggleLoading} checked={state.loading}>Loading state</Switcher>,
       <Switcher onChange={toggleLeftIcon} checked={state.leftIcon}>Icon</Switcher>,
-      <Switcher onChange={toggleRightIcon} checked={state.rightIcon}>Right icon</Switcher>
+      <Switcher onChange={toggleRightIcon} checked={state.rightIcon}>Right icon</Switcher>,
+      <Switcher onChange={toggleBg} checked={state.darkBg}>Background</Switcher>
     ]}
   />
 
@@ -85,7 +89,7 @@ const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
     </FormField>
   ))}
   {(state.leftIcon || state.rightIcon) && (
-    <Text className={styles.wrapped} tag='p'>The style guide doesn't recommend to use icons in 'xs' sized buttons.</Text>
+    <Text tag='p'>The style guide doesn't recommend to use icons in 'xs' sized buttons.</Text>
   )}
 </div>
 ```

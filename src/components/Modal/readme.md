@@ -69,8 +69,8 @@ const tabs = [
   />
   <Modal
     footerControls={[
-      <Button intent='primary' text='Accept' />,
-      <Button text='Decline' onClick={closeModal} />
+      <Button intent='primary' size='l' text='Accept' />,
+      <Button size='l' text='Decline' onClick={closeModal} />
     ]}
     title='Simple Modal'
     visible={state.opened === 'simple'}
@@ -80,8 +80,8 @@ const tabs = [
   </Modal>
   <Modal
     footerControls={[
-      <Button intent='primary' text='Accept' />,
-      <Button text='Decline' onClick={closeModal} />
+      <Button intent='primary' size='l' text='Accept' />,
+      <Button size='l' text='Decline' onClick={closeModal} />
     ]}
     title='Configure server'
     visible={state.opened === 'wide'}
@@ -93,8 +93,8 @@ const tabs = [
 
   <Modal
     footerControls={[
-      <Button intent='primary' text='Accept' />,
-      <Button text='Decline' onClick={closeModal} />
+      <Button intent='primary' size='l' text='Accept' />,
+      <Button size='l' text='Decline' onClick={closeModal} />
     ]}
     title='Configure server'
     visible={state.opened === 'wide-scrollable'}
@@ -119,8 +119,8 @@ const tabs = [
     <Tabbed tabs={tabs} />
     <PopupFooter
       controls={[
-        <Button intent='primary' text='Accept' />,
-        <Button text='Decline' onClick={closeModal} />
+        <Button intent='primary' size='l' text='Accept' />,
+        <Button size='l' text='Decline' onClick={closeModal} />
       ]}
     />
   </Modal>
@@ -130,8 +130,8 @@ const tabs = [
     onClose={closeModal}
     onSubmit={() => console.log('submit')}
     footerControls={[
-      <Button intent='primary' text='Accept' type='submit' />,
-      <Button text='Decline' onClick={closeModal} />
+      <Button intent='primary' size='l' text='Accept' type='submit' />,
+      <Button size='l' text='Decline' onClick={closeModal} />
     ]}
   >
     <LabeledInput label='First input' />

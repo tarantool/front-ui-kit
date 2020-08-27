@@ -2,7 +2,7 @@
 <CopyToClipboard
   content='Hello, I`m copied text'
   size='s'
-  intent='iconic'
+  intent='secondary'
 >
 Copy
 </CopyToClipboard>

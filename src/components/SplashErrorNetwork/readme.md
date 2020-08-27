@@ -24,7 +24,7 @@ import { CopyToClipboard } from "../CopyToClipboard";
   <SplashErrorNetwork
     description={"Let's use <CopyToClipboard> component as an example of `children` prop"}
   >
-    <CopyToClipboard content="Hello, I`m copied text" size="s" intent="iconic">
+    <CopyToClipboard content="Hello, I`m copied text" size="s">
       Copy to Clipboard
     </CopyToClipboard>
   </SplashErrorNetwork>

@@ -25,8 +25,21 @@ export const ConfirmModal = (
       {...props}
       onClose={onCancel}
       footerControls={[
-        <Button intent={'base'} onClick={onCancel}>Cancel</Button>,
-        <Button intent={'primary'} loading={confirmPreloader || false} onClick={onConfirm}>{confirmText}</Button>
+        <Button
+          intent='base'
+          size='l'
+          onClick={onCancel}
+        >
+          Cancel
+        </Button>,
+        <Button
+          intent='primary'
+          size='l'
+          loading={confirmPreloader || false}
+          onClick={onConfirm}
+        >
+          {confirmText}
+        </Button>
       ]}
     />
   )

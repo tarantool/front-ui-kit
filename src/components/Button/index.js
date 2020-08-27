@@ -8,6 +8,8 @@ import { IconSpinner } from '../Icon';
 const styles = {
   button: css`
     border: none;
+    border-style: solid;
+    border-width: 1px;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: ${baseFontFamily};
@@ -15,19 +17,26 @@ const styles = {
     line-height: 22px;
     transition-timing-function: ease-in-out;
     transition-duration: 0.05s;
-    transition-property: border, background-color, color, box-shadow;
+    transition-property: border-color, background-color, color, box-shadow;
     outline: none;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
 
+    &:hover, &:focus, &:active {
+      border-width: 0;
+    }
+
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
+      border-width: 1px;
       cursor: default;
     }
   `,
 
   icon: css`
+    width: 16px;
+    height: 16px;
     margin-bottom: 2px;
   `,
 
@@ -44,9 +53,7 @@ const styles = {
     color: rgba(0, 0, 0, 0);
     transition: none;
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover, &:focus, &:active {
       cursor: default;
       color: rgba(0, 0, 0, 0);
     }
@@ -75,80 +82,89 @@ const styles = {
   `,
 
   l: css`
-    padding: 9px 20px;
+    padding: 8px 19px;
+
+    &:hover, &:focus, &:active {
+      padding: 9px 20px;
+    }
 
     &:disabled {
       padding: 8px 19px;
-      border-width: 1px;
-      border-style: solid;
     }
   `,
 
   m: css`
-    padding: 5px 16px;
+    padding: 4px 15px;
+
+    &:hover, &:focus, &:active {
+      padding: 5px 16px;
+    }
 
     &:disabled {
       padding: 4px 15px;
-      border-width: 1px;
-      border-style: solid;
     }
   `,
 
   s: css`
-    padding: 1px 16px;
+    padding: 0 15px;
+
+    &:hover, &:focus, &:active {
+      padding: 1px 16px;
+    }
 
     &:disabled {
       padding: 0 15px;
-      border-width: 1px;
-      border-style: solid;
     }
   `,
 
   xs: css`
-    padding: 1px 9px;
+    padding: 0 8px;
+    &:hover, &:focus, &:active {
+      padding: 1px 9px;
+    }
     line-height: 18px;
     font-size: 12px;
 
     &:disabled {
       padding: 0 8px;
-      border-width: 1px;
-      border-style: solid;
     }
   `,
 
   iconicM: css`
-    padding: 5px 9px;
+    padding: 4px 7px;
+    &:hover, &:focus, &:active {
+      padding: 5px 8px;
+    }
 
     &:disabled {
-      padding: 4px 8px;
-      border-width: 1px;
-      border-style: solid;
+      padding: 4px 7px;
     }
   `,
 
   iconicS: css`
-    padding: 1px 5px;
+    padding: 0 3px;
+    &:hover, &:focus, &:active {
+      padding: 1px 4px;
+    }
 
     &:disabled {
-      padding: 0 4px;
-      border-width: 1px;
-      border-style: solid;
+      padding: 0 3px;
     }
   `
 };
 
 const intentStyles = {
   base: css`
-    border-color: ${colors.intentBase};
+    border-color: ${colors.baseBg};
     background-color: white;
     color: ${colors.dark65};
 
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
+      border-color: ${colors.intentBase};
       color: ${colors.intentBase};
       background-color: ${colors.intentBaseActive};
-      box-shadow: none;
       cursor: default;
     }
 
@@ -162,14 +178,16 @@ const intentStyles = {
   `,
 
   dark: css`
+    border-color: ${colors.dark40};
     background-color: ${colors.dark40};
     color: #ffffff;
 
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      background-color: ${colors.intentBaseActive};
+      border-color: ${colors.intentBase};
       color: ${colors.intentBase};
+      background-color: ${colors.intentBaseActive};
       cursor: default;
     }
 
@@ -183,6 +201,7 @@ const intentStyles = {
   `,
 
   primary: css`
+    border-color: ${colors.intentPrimary};
     background-color: ${colors.intentPrimary};
     color: #ffffff;
 
@@ -205,6 +224,7 @@ const intentStyles = {
   `,
 
   secondary: css`
+    border-color: ${colors.dark10};
     background-color: ${colors.dark10};
     color: ${colors.dark65};
 
@@ -313,7 +333,7 @@ export type ButtonProps = {
   icon?: ComponentType<any>,
   iconRight?: ComponentType<any>,
   intent?: 'primary' | 'secondary' | 'base' | 'plain' | 'dark',
-  onClick?: (MouseEvent) => void,
+  onClick?: (e: MouseEvent) => void,
   loading?: boolean,
   size?: 'l' | 's' | 'xs' | 'm',
   text?: string,
