@@ -11,7 +11,7 @@ import { Text } from '../Text';
 import { Spin } from '../Spin';
 import { NonIdealState } from '../NonIdealState';
 import TableRow from './TableRow';
-import { IconSortable } from '../Icon/icons/IconSortable';
+import { IconSortable } from '../Icon';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
 import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
