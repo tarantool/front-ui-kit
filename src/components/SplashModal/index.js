@@ -52,7 +52,7 @@ const styles = {
 export type SplashModalProps = BaseModalProps & {
   title: string,
   subTitle: string,
-  logo?: React.Node
+  logo?: SVGGlyph
 };
 
 export const SplashModal = (
