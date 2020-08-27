@@ -39,6 +39,7 @@ export * from './icons/IconRadio';
 export * from './icons/IconRefresh';
 export * from './icons/IconSchema';
 export * from './icons/IconSearch';
+export * from './icons/IconSortable';
 export * from './icons/IconSpinner';
 export * from './icons/IconUser';
 export * from './icons/IconUsers';

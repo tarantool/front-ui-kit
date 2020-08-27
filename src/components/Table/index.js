@@ -11,7 +11,7 @@ import { Text } from '../Text';
 import { Spin } from '../Spin';
 import { NonIdealState } from '../NonIdealState';
 import TableRow from './TableRow';
-import { IconSortable } from './IconSortable';
+import { IconSortable } from '../Icon/icons/IconSortable';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
 import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
@@ -38,7 +38,7 @@ const styles = {
     text-align: left;
   `,
   sortIcon: css`
-    padding: 7px 4px;
+    padding: 4px;
     margin-left: 8px;
     vertical-align: middle;
     &:hover {
