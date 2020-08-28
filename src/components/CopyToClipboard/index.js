@@ -54,11 +54,15 @@ export const withCopyToClipboard = (
   />
 );
 
-type CopyToClipboardProps = {
+type CopyToClipboardProps = {|
+  ...$Exact<$Rest<
+    ButtonProps,
+    { onClick: (e: MouseEvent) => void }
+  >>,
   content: string,
   tooltipContent?: string,
-  tooltipContentCopied?: string
-} & $Rest<ButtonProps, {| onClick: () => void |}>
+  tooltipContentCopied?: string,
+|}
 
 type CopyToClipboardState = {
   clicked: boolean
@@ -99,18 +103,20 @@ export class CopyToClipboard extends React.Component<CopyToClipboardProps, CopyT
 
   render() {
     const {
+      icon,
       tooltipContent,
       tooltipContentCopied,
       content,
       ...props
     } = this.props;
+
     const { clicked } = this.state;
 
     return (
       <ButtonWithTooltip
         {...props}
         tooltipContent={clicked ? tooltipContentCopied : tooltipContent}
-        icon={IconNewWindow}
+        icon={icon || IconNewWindow}
         onClick={this.handleClick}
         onMouseLeave={this.resetClickedState}
       />

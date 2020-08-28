@@ -31,7 +31,7 @@ export class InputPassword extends React.Component<InputProps, InputPasswordStat
         {...this.props}
         type={hidden ? 'password' : 'text'}
         rightIcon={(
-          <Button className={styles.innerButton} size='xs' intent='iconic' onClick={this.toggleState}>
+          <Button className={styles.innerButton} size='xs' intent='plain' onClick={this.toggleState}>
             <Icon className={styles.icon} />
           </Button>
         )}

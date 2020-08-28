@@ -8,8 +8,7 @@ import image from './refresh.svg';
 const styles = css`
   width: 12px;
   height: 12px;
-  fill: ${colors.intentPrimary};
-  fill-opacity: 0.45;
+  fill: ${colors.intentPrimary45};
 `;
 
 export const IconRefresh = ({ className }: GenericIconProps) => (

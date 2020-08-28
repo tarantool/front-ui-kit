@@ -41,7 +41,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-xhnfgx"
+            className="css-ujymom"
             onClick={[MockFunction]}
             type="button"
           >
@@ -52,7 +52,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-ohrz5q"
+            className="css-1y5mbya"
             onClick={[MockFunction]}
             type="button"
           >
@@ -61,7 +61,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
               className="css-9lvo7z"
             >
               <svg
-                className="css-1xsffl2"
+                className="css-2ujzs2"
                 viewBox="0 0 128 128"
               >
                 <use
@@ -121,7 +121,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-xhnfgx"
+            className="css-ujymom"
             onClick={[MockFunction]}
             type="button"
           >
@@ -132,7 +132,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-fz07pv"
+            className="css-j3kymm"
             onClick={[MockFunction]}
             type="button"
           >

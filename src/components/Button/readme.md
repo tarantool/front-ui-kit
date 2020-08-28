@@ -2,68 +2,94 @@ Button example:
 
 ```js
 import { css, cx } from 'emotion';
-import { ControlsPanel, IconOk, IconChevron, Switcher, Text } from '../../index';
+import {
+  ControlsPanel,
+  FormField,
+  IconBucket,
+  IconChevron,
+  Switcher,
+  Text
+} from '../../index';
 
-const wrapped = css`margin: 12px;`;
+const styles = {
+  wrapper: css`
+    padding: 10px;
+  `,
+  bg: css`
+    background-color: #f0f2f5;
+  `
+};
+
 const label = 'Button';
-const sizes = ['m', 's', 'xs'];
-const intentions = ['primary', 'secondary', 'base', 'iconic', 'plain'];
+const sizes = ['l', 'm', 's', 'xs'];
+const intentions = ['primary', 'secondary', 'base', 'plain', 'dark'];
 
-const DropdownControlIcon = ({ className }) => (
-  <IconChevron
-    direction='down'
-    className={cx(className, css`fill: rgba(245, 34, 45, 0.65);`)}
-  />
-);
+const DropdownControlIcon = props => <IconChevron direction='down' {...props} />;
 
 initialState = {
+  buttonText: true,
+  darkBg: false,
   loading: false,
   leftIcon: false,
   rightIcon: false
 };
 
+const toggleBg = () => setState({ darkBg: !state.darkBg });
+const toggleText = () => setState({
+  buttonText: !state.buttonText,
+  leftIcon: state.buttonText ? true : state.leftIcon
+});
+const toggleLeftIcon = () => setState({
+  leftIcon: !state.leftIcon,
+  buttonText: state.leftIcon ? true : state.buttonText
+});
 const toggleLoading = () => setState({ loading: !state.loading });
-const toggleLeftIcon = () => setState({ leftIcon: !state.leftIcon });
 const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
 
-<>
+<div className={cx(styles.wrapper, { [styles.bg]: state.darkBg })}>
   <ControlsPanel
-    className={wrapped}
     controls={[
+      <Switcher onChange={toggleText} checked={state.buttonText}>Button text</Switcher>,
       <Switcher onChange={toggleLoading} checked={state.loading}>Loading state</Switcher>,
-      <Switcher onChange={toggleLeftIcon} checked={state.leftIcon}>Left icon</Switcher>,
-      <Switcher onChange={toggleRightIcon} checked={state.rightIcon}>Right icon</Switcher>
+      <Switcher onChange={toggleLeftIcon} checked={state.leftIcon}>Icon</Switcher>,
+      <Switcher onChange={toggleRightIcon} checked={state.rightIcon}>Right icon</Switcher>,
+      <Switcher onChange={toggleBg} checked={state.darkBg}>Background</Switcher>
     ]}
   />
 
-  {sizes.map(size => (
-    <div>
-      {intentions.map(intent => (
-        <Button
-          className={wrapped}
-          icon={state.leftIcon && IconOk}
-          iconRight={state.rightIcon && (intent === 'primary' ? IconChevron : DropdownControlIcon)}
-          intent={intent}
-          loading={state.loading}
-          size={size}
-          text={label}
-          title='Click me right meow!'
-        />
-      ))}
-      <Button
-        className={wrapped}
-        disabled
-        icon={state.leftIcon && IconOk}
-        iconRight={state.rightIcon && DropdownControlIcon}
-        loading={state.loading}
-        size={size}
-        text={label}
-        title='Click me right meow!'
-      />
-    </div>
+  {intentions.map(intent => (
+    <FormField label={intent} verticalSort={false} columns={31}>
+      {sizes.reduce(
+        (acc, size) => (
+          [
+            ...acc,
+            <Button
+              icon={state.leftIcon && IconBucket}
+              iconRight={state.rightIcon && DropdownControlIcon}
+              intent={intent}
+              loading={state.loading}
+              size={size}
+              text={state.buttonText && label}
+              title='Click me right meow!'
+            />,
+            <Button
+              icon={state.leftIcon && IconBucket}
+              iconRight={state.rightIcon && DropdownControlIcon}
+              intent={intent}
+              loading={state.loading}
+              size={size}
+              text={state.buttonText && label}
+              title='Click me right meow!'
+              disabled
+            />
+          ]
+        ),
+        []
+      )}
+    </FormField>
   ))}
   {(state.leftIcon || state.rightIcon) && (
-    <Text className={wrapped} tag='p'>The style guide doesn't recommend to use icons in 'xs' sized buttons.</Text>
+    <Text tag='p'>The style guide doesn't recommend to use icons in 'xs' sized buttons.</Text>
   )}
-</>
+</div>
 ```

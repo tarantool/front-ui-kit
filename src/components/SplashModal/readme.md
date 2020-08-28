@@ -20,18 +20,14 @@ const controlsStyle = css`justify-content: flex-end;`;
     subTitle='Please, input your credentials'
     onClose={closeModal}
   >
-    <LabeledInput label='Your account ID'>
-      <Input placeholder='Johnny Appleseed' />
-    </LabeledInput>
-    <LabeledInput label='Password'>
-      <Input type='password' placeholder='qwertyuiop' />
-    </LabeledInput>
+    <LabeledInput label='Your account ID' placeholder='Johnny Appleseed' />
+    <LabeledInput label='Password' type='password' placeholder='qwertyuiop' />
     <ControlsPanel
       className={controlsStyle}
       thin
       controls={[
-        <Button text='Close' intent='secondary' onClick={closeModal} />,
-        <Button text='Log in' intent='primary' />
+        <Button text='Close' intent='base' size='l' onClick={closeModal} />,
+        <Button text='Log in' intent='primary' size='l' />
       ]}
     />
   </SplashModal>

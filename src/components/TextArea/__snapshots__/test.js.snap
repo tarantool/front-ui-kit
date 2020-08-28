@@ -3,7 +3,7 @@
 exports[`TextArea renders correctly 1`] = `
 Array [
   <div
-    className="css-b4lojo"
+    className="css-rnhzxe"
   >
     <textarea
       className="css-1yq8nnk"
@@ -14,7 +14,7 @@ Array [
     />
   </div>,
   <div
-    className="css-tnhd2i"
+    className="css-7jkww9"
   >
     <textarea
       className="css-1yq8nnk"
@@ -25,7 +25,7 @@ Array [
     />
   </div>,
   <div
-    className="css-101xu0e"
+    className="css-j40sy7"
   >
     <textarea
       className="css-1yq8nnk"
@@ -37,7 +37,7 @@ Array [
     />
   </div>,
   <div
-    className="css-b4lojo"
+    className="css-rnhzxe"
   >
     <textarea
       className="css-1yq8nnk"

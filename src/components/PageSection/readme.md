@@ -6,7 +6,6 @@ import { Button } from '../Button';
     title='First section'
     topRightControls={[
       <Button
-        size='m'
         text='Configure selected'
       />
     ]}
@@ -24,7 +23,6 @@ import { Button } from '../Button';
     title='Second section'
     topRightControls={[
       <Button
-        size='m'
         text='Configure selected'
       />
     ]}

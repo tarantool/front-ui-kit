@@ -3,7 +3,7 @@
 exports[`Input simple 1`] = `
 Array [
   <div
-    className="css-1magbpr"
+    className="css-4adaeg"
     title="Input"
   >
     <input
@@ -16,7 +16,7 @@ Array [
     />
   </div>,
   <div
-    className="css-1magbpr"
+    className="css-4adaeg"
   >
     <input
       className="css-1kkc718"
@@ -30,7 +30,7 @@ Array [
       className="css-jgwfcl"
     >
       <svg
-        className="css-31a2qf"
+        className="css-p78i9h"
         viewBox="0 0 16 16"
       >
         <use
@@ -45,16 +45,16 @@ Array [
 exports[`Input with left-/rightElement 1`] = `
 Array [
   <div
-    className="css-t0xct3"
+    className="css-1mr8eo6"
   >
     <button
-      className="css-r22usi"
+      className="css-ukk37f"
       onClick={[Function]}
       type="button"
     >
       Filter
       <svg
-        className="css-1nldcbc"
+        className="css-p9abg5"
         viewBox="0 0 14 14"
       >
         <use
@@ -85,7 +85,7 @@ Array [
     </div>
   </div>,
   <div
-    className="css-zqsia"
+    className="css-1ofuyr8"
   >
     <input
       className="css-19jk83v"
@@ -99,7 +99,7 @@ Array [
       className="css-jgwfcl"
     >
       <svg
-        className="css-31a2qf"
+        className="css-p78i9h"
         viewBox="0 0 16 16"
       >
         <use
@@ -108,13 +108,13 @@ Array [
       </svg>
     </div>
     <button
-      className="css-r22usi"
+      className="css-ukk37f"
       onClick={[Function]}
       type="button"
     >
       Filter
       <svg
-        className="css-1nldcbc"
+        className="css-p9abg5"
         viewBox="0 0 14 14"
       >
         <use

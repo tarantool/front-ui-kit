@@ -12,7 +12,7 @@ const toggle = () => setState({ visible: !state.visible });
 
   <NotificationSplashFixed
     controls={[
-      <Button intent='secondary' text='I understand, dont touch me again' />
+      <Button text='I understand, dont touch me again' />
     ]}
     onClose={toggle}
     visible={state.visible}

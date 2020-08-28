@@ -19,9 +19,9 @@ const styles = {
     color: rgba(0, 0, 0, 0.65);
   `,
   icon: css`
-    width: 32px;
-    height: 32px;
-    margin: 0 4px;
+    width: 16px;
+    height: 16px;
+    margin: 8px 8px;
     fill: rgba(0,0,0, .65);
   `,
   chevronIcon: css`
@@ -39,6 +39,11 @@ const styles = {
     text-align: center;
     padding: 4px;
     margin: 0 4px;
+    box-shadow: none;
+
+    &:focus, &:hover, &:active {
+      box-shadow: none;
+    }
   `,
   buttonActive: css`
     color: #CF1322;

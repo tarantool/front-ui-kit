@@ -11,7 +11,7 @@ const wrap = css`
   <div className={wrap}>
     <NotificationSplash
       controls={[
-        <Button intent='secondary' text='I understand, dont touch me again' />
+        <Button text='I understand, dont touch me again' />
       ]}
     >
       Unathorized web-panel access is open! Please consider enabling authorization (you need to create a user and login to do it).
@@ -20,7 +20,7 @@ const wrap = css`
   <div className={wrap}>
     <NotificationSplash
       controls={[
-        <Button intent='secondary' text='Yeah' />
+        <Button text='Yeah' />
       ]}
       onClose={console.log}
     >
@@ -31,7 +31,7 @@ const wrap = css`
     <NotificationSplash
       controls={[
         <Button intent='primary' text='Agree' />,
-        <Button intent='secondary' text='Discard' />,
+        <Button text='Discard' />,
         <Switcher>Remember</Switcher>
       ]}
     >

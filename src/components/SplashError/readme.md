@@ -25,7 +25,7 @@ import { CopyToClipboard } from "../CopyToClipboard";
     title="With `children` prop"
     description={"Let's use <CopyToClipboard> component as an example"}
   >
-    <CopyToClipboard content="Hello, I`m copied text" size="s" intent="iconic">
+    <CopyToClipboard content="Hello, I`m copied text" size="s">
       Copy to Clipboard
     </CopyToClipboard>
   </SplashError>

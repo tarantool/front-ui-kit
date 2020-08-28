@@ -5,8 +5,8 @@ import { Button } from '../Button';
 
 <PopupFooter
   controls={([
-    <Button type='button'>Cancel</Button>,
-    <Button intent='primary' type='button'>Create replica set</Button>
+    <Button size='l' type='button'>Cancel</Button>,
+    <Button size='l' intent='primary' type='button'>Create replica set</Button>
   ])}
 >
   Children content

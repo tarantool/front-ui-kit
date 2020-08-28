@@ -2,13 +2,12 @@
 import * as React from 'react'
 import type { ComponentType } from 'react'
 import { css, cx } from 'react-emotion'
-import { rgba } from 'emotion-rgba';
 import { baseFontFamily, colors } from '../../variables';
 import { IconSpinner } from '../Icon';
 
 const styles = {
   button: css`
-    border: solid 1px;
+    border: none;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: ${baseFontFamily};
@@ -16,27 +15,25 @@ const styles = {
     line-height: 22px;
     transition-timing-function: ease-in-out;
     transition-duration: 0.07s;
-    transition-property: border, background-color, color, box-shadow;
+    transition-property: background-color, color;
     outline: none;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
 
+    &:hover, &:focus, &:active {
+      transition-property: background-color, color, box-shadow;
+    }
+
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      border-color: ${colors.intentBase};
-      color: #bfbfbf;
-      background-color: ${colors.intentBaseBg};
-      box-shadow: none;
       cursor: default;
-    }
-
-    &:disabled svg {
-      filter: grayscale(1) brightness(1.5);
     }
   `,
 
   icon: css`
+    width: 16px;
+    height: 16px;
     margin-bottom: 2px;
   `,
 
@@ -53,12 +50,9 @@ const styles = {
     color: rgba(0, 0, 0, 0);
     transition: none;
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover, &:focus, &:active {
       cursor: default;
       color: rgba(0, 0, 0, 0);
-      box-shadow: none;
     }
 
     & > *,
@@ -84,167 +78,193 @@ const styles = {
     align-items: center;
   `,
 
+  l: css`
+    padding: 9px 20px;
+  `,
+
   m: css`
-    padding: 4px 15px;
+    padding: 5px 16px;
   `,
 
   s: css`
-    padding: 0px 15px;
+    padding: 1px 16px;
   `,
 
   xs: css`
-    padding: 0 8px;
+    padding: 1px 9px;
     line-height: 18px;
     font-size: 12px;
   `,
 
   iconicM: css`
-    padding: 4px 7px;
+    padding: 5px 8px;
   `,
 
   iconicS: css`
-    padding: 0px 3px;
+    padding: 1px 4px;
   `
 };
 
 const intentStyles = {
   base: css`
-    border-color: ${colors.intentBase};
     background-color: white;
-    color: rgba(0, 0, 0, 0.65);
+    color: ${colors.dark65};
+    box-shadow: inset 0 0 0 1px ${colors.baseBg};
 
-    &:focus,
-    &:hover {
-      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      color: ${colors.intentBase};
+      background-color: ${colors.intentBaseActive};
+      box-shadow: inset 0 0 0 1px ${colors.intentBase};
+    }
+
+    & svg {
+      fill: ${colors.dark65};
+    }
+
+    &:disabled svg {
+      fill: ${colors.intentBase};
+    }
+  `,
+
+  dark: css`
+    background-color: ${colors.dark40};
+    color: #ffffff;
+
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      color: ${colors.intentBase};
+      background-color: ${colors.intentBaseActive};
+    }
+
+    & svg {
+      fill: #ffffff;
+    }
+
+    &:disabled svg {
+      fill: ${colors.intentBase};
     }
   `,
 
   primary: css`
-    border-color: ${colors.intentPrimary};
     background-color: ${colors.intentPrimary};
     color: #ffffff;
 
-    &:focus,
-    &:hover {
-      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      background-color: ${colors.intentPrimary50};
+      color: #ffffff;
+    }
+
+    & svg {
+      fill: #ffffff;
+    }
+
+    &:disabled svg {
+      fill: #ffffff;
     }
   `,
 
   secondary: css`
-    border-color: ${rgba(colors.intentPrimary, 0.25)};
-    background-color: white;
-    color: ${rgba(colors.intentPrimary, 0.65)};
+    background-color: ${colors.dark10};
+    color: ${colors.dark65};
 
-    &:focus,
-    &:hover {
-      border-color: ${colors.intentPrimary};
-      color: ${colors.intentPrimary};
-      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      background-color: ${colors.intentBaseActive};
+      color: ${colors.intentBase};
+      box-shadow: inset 0 0 0 1px ${colors.intentBase};
     }
-  `,
 
-  iconic: css`
-    border-color: transparent;
-    background-color: transparent;
-    color: ${rgba(colors.intentPrimary, 0.65)};
+    & svg {
+      fill: ${colors.dark65};
+    }
 
-    &:focus,
-    &:hover {
-      border-color: ${rgba(colors.intentBase, 0.45)};
-      color: ${colors.intentPrimary};
-      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
+    &:disabled svg {
+      fill: ${colors.intentBase};
     }
   `,
 
   plain: css`
-    border-color: transparent;
     background-color: transparent;
-    color: ${rgba(colors.intentPrimary, 0.65)};
+    color: ${colors.dark65};
 
-    &:focus,
-    &:hover {
-      border-color: ${colors.intentPrimary};
-      color: ${colors.intentPrimary};
-      box-shadow: 0px 10px 15px ${rgba(colors.intentPrimary, 0.15)};
+    &:disabled,
+    &:disabled:active,
+    &:disabled:hover {
+      background-color: ${colors.intentBaseActive};
+      color: ${colors.intentBase};
+    }
+
+    & svg {
+      fill: ${colors.dark65};
+    }
+
+    &:disabled svg {
+      fill: ${colors.intentBase};
     }
   `
 };
 
 const intentActiveStyles = {
   base: css`
-    &:active {
-      border-color: ${rgba(colors.intentBase, 0.45)};
-      background-color: ${colors.intentBaseActive};
-      color: rgba(0, 0, 0, 0.65);
+    &:focus,
+    &:hover {
+      background-color: ${colors.dark10};
       box-shadow: none;
+    }
+
+    &:active {
+      background-color: ${colors.dark10};
+      box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+    }
+  `,
+
+  dark: css`
+    &:focus,
+    &:hover {
+      background-color: ${colors.dark60};
+    }
+
+    &:active {
+      background-color: ${colors.dark60};
+      box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
 
   primary: css`
-    &:active {
-      border-color: ${colors.activeAction};
+    &:focus,
+    &:hover {
       background-color: ${colors.activeAction};
-      box-shadow: none;
+    }
+
+    &:active {
+      background-color: ${colors.activeAction};
+      box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
 
   secondary: css`
-    &:active {
-      border-color: ${colors.activeAction};
-      color: ${colors.activeAction};
-      box-shadow: none;
+    &:focus,
+    &:hover {
+      background-color: ${colors.dark25};
     }
-  `,
 
-  iconic: css`
     &:active {
-      border-color: ${colors.intentBaseActive};
-      background-color: ${colors.intentBaseActive};
-      color: ${colors.activeAction};
-      box-shadow: none;
+      background-color: ${colors.dark25};
+      box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,
 
   plain: css`
-    &:active {
-      border-color: ${colors.activeAction};
-      color: ${colors.activeAction};
-      box-shadow: none;
+    &:focus,
+    &:hover {
+      background-color: ${colors.dark10};
     }
-  `
-}
-
-const intentLoadingStyles = {
-  base: css`
-    border-color: ${colors.intentBase};
-  `,
-  primary: css``,
-  secondary: css`
-    border-color: ${colors.intentPrimary};
-  `,
-  iconic: css`
-    border-color: ${rgba(colors.intentBase, 0.45)};
-  `,
-  plain: css`
-    border-color: ${colors.intentPrimary};
-  `
-};
-
-const spinnerStyles = {
-  base: css`
-    fill: rgba(0, 0, 0, 0.65);
-  `,
-  primary: css`
-    fill: #ffffff;
-  `,
-  secondary: css`
-    fill: ${colors.activeAction};
-  `,
-  iconic: css`
-    fill: ${colors.activeAction};
-  `,
-  plain: css`
-    fill: ${colors.activeAction};
   `
 };
 
@@ -255,10 +275,10 @@ export type ButtonProps = {
   disabled?: boolean,
   icon?: ComponentType<any>,
   iconRight?: ComponentType<any>,
-  intent?: 'primary' | 'secondary' | 'base' | 'iconic' | 'plain',
-  onClick?: (MouseEvent) => void,
+  intent?: 'primary' | 'secondary' | 'base' | 'plain' | 'dark',
+  onClick?: (e: MouseEvent) => void,
   loading?: boolean,
-  size?: 's' | 'xs' | 'm',
+  size?: 'l' | 's' | 'xs' | 'm',
   text?: string,
   title?: string,
   type?: 'button' | 'submit'
@@ -317,7 +337,7 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
   if (loading && !disabled) {
     content.push(
       <div className={styles.loadingWrap}>
-        <IconSpinner className={spinnerStyles[intent]} />
+        <IconSpinner />
       </div>
     );
   }
@@ -328,16 +348,18 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
       autoFocus={autoFocus}
       className={cx(
         styles.button,
-        intentStyles[intent],
         {
           [styles.iconicM]: isOnlyIcon && size === 'm',
           [styles.iconicS]: isOnlyIcon && size === 's',
+          [styles.l]: size === 'l',
           [styles.m]: !isOnlyIcon && size === 'm',
           [styles.s]: !isOnlyIcon && size === 's',
-          [styles.xs]: !isOnlyIcon && size === 'xs',
-          [intentLoadingStyles[intent]]: loading && !disabled,
-          [styles.loading]: loading && !disabled,
+          [styles.xs]: size === 'xs',
           [intentActiveStyles[intent]]: !loading && !disabled
+        },
+        intentStyles[intent],
+        {
+          [styles.loading]: loading && !disabled
         },
         className
       )}

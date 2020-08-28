@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Button } from '../Button';
+import { Text } from '../Text';
 import { PageLayout } from './index';
 
 it('PageLayout renders succesfully', () => {
@@ -8,11 +9,14 @@ it('PageLayout renders succesfully', () => {
     <>
       <PageLayout
         heading='Cluster'
-        headingContent={<Button text='Details' />}
+        headingContent={<Text>Heading content</Text>}
       />
       <PageLayout
         heading='Cluster'
-        headingContent={<Button text='Details' />}
+        controls={[
+          <Button text='Details' />,
+          <Button text='Issues' />
+        ]}
         wide
       />
     </>
