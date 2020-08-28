@@ -48,7 +48,7 @@ export const PageLayout = ({
       <div className={styles.headingPanel}>
         {heading && <Text className={styles.heading} variant='h1'>{heading}</Text>}
         {headingContent}
-        {controls && <ControlsPanel controls={controls} />}
+        {controls && <ControlsPanel controls={controls} thin />}
       </div>
     )}
     {children}
