@@ -8,28 +8,25 @@ import { IconSpinner } from '../Icon';
 const styles = {
   button: css`
     border: none;
-    border-style: solid;
-    border-width: 1px;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: ${baseFontFamily};
     font-size: 14px;
     line-height: 22px;
     transition-timing-function: ease-in-out;
-    transition-duration: 0.05s;
-    transition-property: border-color, background-color, color, box-shadow;
+    transition-duration: 0.07s;
+    transition-property: background-color, color;
     outline: none;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
 
     &:hover, &:focus, &:active {
-      border-width: 0;
+      transition-property: background-color, color, box-shadow;
     }
 
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      border-width: 1px;
       cursor: default;
     }
   `,
@@ -82,90 +79,44 @@ const styles = {
   `,
 
   l: css`
-    padding: 8px 19px;
-
-    &:hover, &:focus, &:active {
-      padding: 9px 20px;
-    }
-
-    &:disabled {
-      padding: 8px 19px;
-    }
+    padding: 9px 20px;
   `,
 
   m: css`
-    padding: 4px 15px;
-
-    &:hover, &:focus, &:active {
-      padding: 5px 16px;
-    }
-
-    &:disabled {
-      padding: 4px 15px;
-    }
+    padding: 5px 16px;
   `,
 
   s: css`
-    padding: 0 15px;
-
-    &:hover, &:focus, &:active {
-      padding: 1px 16px;
-    }
-
-    &:disabled {
-      padding: 0 15px;
-    }
+    padding: 1px 16px;
   `,
 
   xs: css`
-    padding: 0 8px;
-    &:hover, &:focus, &:active {
-      padding: 1px 9px;
-    }
+    padding: 1px 9px;
     line-height: 18px;
     font-size: 12px;
-
-    &:disabled {
-      padding: 0 8px;
-    }
   `,
 
   iconicM: css`
-    padding: 4px 7px;
-    &:hover, &:focus, &:active {
-      padding: 5px 8px;
-    }
-
-    &:disabled {
-      padding: 4px 7px;
-    }
+    padding: 5px 8px;
   `,
 
   iconicS: css`
-    padding: 0 3px;
-    &:hover, &:focus, &:active {
-      padding: 1px 4px;
-    }
-
-    &:disabled {
-      padding: 0 3px;
-    }
+    padding: 1px 4px;
   `
 };
 
 const intentStyles = {
   base: css`
-    border-color: ${colors.baseBg};
     background-color: white;
     color: ${colors.dark65};
+    box-shadow: inset 0 0 0 1px ${colors.baseBg};
 
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      border-color: ${colors.intentBase};
       color: ${colors.intentBase};
       background-color: ${colors.intentBaseActive};
-      cursor: default;
+      box-shadow: inset 0 0 0 1px ${colors.intentBase};
     }
 
     & svg {
@@ -178,17 +129,14 @@ const intentStyles = {
   `,
 
   dark: css`
-    border-color: ${colors.dark40};
     background-color: ${colors.dark40};
     color: #ffffff;
 
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      border-color: ${colors.intentBase};
       color: ${colors.intentBase};
       background-color: ${colors.intentBaseActive};
-      cursor: default;
     }
 
     & svg {
@@ -201,7 +149,6 @@ const intentStyles = {
   `,
 
   primary: css`
-    border-color: ${colors.intentPrimary};
     background-color: ${colors.intentPrimary};
     color: #ffffff;
 
@@ -209,9 +156,7 @@ const intentStyles = {
     &:disabled:active,
     &:disabled:hover {
       background-color: ${colors.intentPrimary50};
-      border-color: ${colors.intentPrimary50};
       color: #ffffff;
-      cursor: default;
     }
 
     & svg {
@@ -224,7 +169,6 @@ const intentStyles = {
   `,
 
   secondary: css`
-    border-color: ${colors.dark10};
     background-color: ${colors.dark10};
     color: ${colors.dark65};
 
@@ -233,7 +177,7 @@ const intentStyles = {
     &:disabled:hover {
       background-color: ${colors.intentBaseActive};
       color: ${colors.intentBase};
-      cursor: default;
+      box-shadow: inset 0 0 0 1px ${colors.intentBase};
     }
 
     & svg {
@@ -246,7 +190,6 @@ const intentStyles = {
   `,
 
   plain: css`
-    border-color: transparent;
     background-color: transparent;
     color: ${colors.dark65};
 
@@ -255,7 +198,6 @@ const intentStyles = {
     &:disabled:hover {
       background-color: ${colors.intentBaseActive};
       color: ${colors.intentBase};
-      cursor: default;
     }
 
     & svg {
@@ -273,6 +215,7 @@ const intentActiveStyles = {
     &:focus,
     &:hover {
       background-color: ${colors.dark10};
+      box-shadow: none;
     }
 
     &:active {
