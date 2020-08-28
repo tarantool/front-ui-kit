@@ -66,7 +66,7 @@ exports[`Modal renders modal with form 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-4vd2f5"
+            className="css-1d0donb"
             type="submit"
           >
             Accept
@@ -76,7 +76,7 @@ exports[`Modal renders modal with form 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-1m15gz7"
+            className="css-1swuuzl"
             onClick={[Function]}
             type="button"
           >
@@ -136,7 +136,7 @@ exports[`Modal renders modal with large text 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-4vd2f5"
+              className="css-1d0donb"
               type="button"
             >
               Accept
@@ -146,7 +146,7 @@ exports[`Modal renders modal with large text 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-1m15gz7"
+              className="css-1swuuzl"
               type="button"
             >
               Decline
@@ -236,7 +236,7 @@ exports[`Modal renders modal with tabs 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-4vd2f5"
+              className="css-1d0donb"
               type="button"
             >
               Accept
@@ -246,7 +246,7 @@ exports[`Modal renders modal with tabs 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-1m15gz7"
+              className="css-1swuuzl"
               type="button"
             >
               Decline
@@ -306,7 +306,7 @@ exports[`Modal renders simple modal 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-4vd2f5"
+              className="css-1d0donb"
               type="button"
             >
               Accept
@@ -316,7 +316,7 @@ exports[`Modal renders simple modal 1`] = `
             className="css-12ibiio"
           >
             <button
-              className="css-1m15gz7"
+              className="css-1swuuzl"
               type="button"
             >
               Decline

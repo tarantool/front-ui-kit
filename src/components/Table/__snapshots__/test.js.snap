@@ -605,7 +605,7 @@ exports[`Table renders simple 1`] = `
             role="cell"
           >
             <button
-              className="css-rjh0b8"
+              className="css-j9i291"
               type="button"
             >
               Refresh
@@ -1552,7 +1552,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
         className="css-k008qs"
       >
         <button
-          className="css-1of6zyi"
+          className="css-mw98cs"
           disabled={true}
           onClick={[Function]}
           type="button"
@@ -1572,7 +1572,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           1
         </span>
         <button
-          className="css-hb8p8t"
+          className="css-36ax3b"
           onClick={[Function]}
           type="button"
         >
@@ -1590,7 +1590,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           onClick={[Function]}
         >
           <button
-            className="css-1m15gz7"
+            className="css-1swuuzl"
             type="button"
           >
             10 / page 
@@ -2012,7 +2012,7 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-1l7s6o2"
+            className="css-13t7awv"
             disabled={true}
             onClick={[Function]}
             type="button"
@@ -2029,7 +2029,7 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-4kprtb"
+            className="css-q5blha"
             onClick={[Function]}
             type="button"
           >
@@ -2038,7 +2038,7 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-1l7s6o2"
+            className="css-13t7awv"
             disabled={true}
             onClick={[Function]}
             type="button"
@@ -2058,7 +2058,7 @@ exports[`Table renders with pagination 1`] = `
           onClick={[Function]}
         >
           <button
-            className="css-1m15gz7"
+            className="css-1swuuzl"
             type="button"
           >
             10 / page 
@@ -2628,7 +2628,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-1l7s6o2"
+            className="css-13t7awv"
             disabled={true}
             onClick={[Function]}
             type="button"
@@ -2645,7 +2645,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-4kprtb"
+            className="css-q5blha"
             onClick={[Function]}
             type="button"
           >
@@ -2654,7 +2654,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-1l7s6o2"
+            className="css-13t7awv"
             disabled={true}
             onClick={[Function]}
             type="button"
@@ -2674,7 +2674,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           onClick={[Function]}
         >
           <button
-            className="css-1m15gz7"
+            className="css-1swuuzl"
             type="button"
           >
             10 / page 
