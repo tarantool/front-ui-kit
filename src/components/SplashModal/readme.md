@@ -4,7 +4,7 @@ import { Button } from '../Button';
 import { ControlsPanel } from '../ControlsPanel';
 import { LabeledInput } from '../LabeledInput';
 import { InputPassword } from '../InputPassword';
-import logo from './images/logo_full.svg';
+import logo from '../../images/tarantool-logo-full.svg';
 
 initialState = { opened: false };
 
@@ -36,8 +36,8 @@ const controlsStyle = css`justify-content: flex-end;`;
       className={controlsStyle}
       thin
       controls={[
-        <Button text='Close' intent='base' size='l' onClick={closeModal} />,
-        <Button text='Log in' intent='primary' size='l' />
+        <Button text='Close' key='close' size='l' onClick={closeModal} />,
+        <Button text='Log in' key='login' size='l' intent='primary' />
       ]}
     />
   </SplashModal>
