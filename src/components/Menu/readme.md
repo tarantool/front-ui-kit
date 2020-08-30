@@ -1,12 +1,16 @@
 ```js
-import { IconSuccess, IconTrash, IconInfo } from '../Icon';
+import { css } from 'emotion';
+import { IconSuccess, IconCluster, IconCode, IconTrash, IconInfo } from '../Icon';
+
+const IconSuccessGreen = ({ className, ...props }) => <IconSuccess {...props} />
+
 const menu = [
     {
       'selected': false,
       'expanded': false,
       'loading': false,
       'items': [],
-      'icon': <IconSuccess/>,
+      'icon': IconSuccessGreen,
       'label': 'My Test',
       'path': '/mytest/test',
       'namespace': 'mytest'
@@ -20,7 +24,6 @@ const menu = [
         'expanded': false,
         'loading': false,
         'items': [],
-        'icon': <IconSuccess/>,
         'label': 'My Test',
         'path': '/mytest/test',
         'namespace': 'mytest'
@@ -50,12 +53,11 @@ const menu = [
         'expanded': false,
         'loading': false,
         'items': [],
-        'icon': <IconTrash/>,
         'label': 'Other4',
         'path': '/other/test3',
         'namespace': 'other'
       }],
-      'icon': '',
+      'icon': IconCode,
       'label': 'Other',
       'path': '/other/test',
       'namespace': 'other'
@@ -65,7 +67,7 @@ const menu = [
       'expanded': false,
       'loading': false,
       'items': [],
-      'icon': '',
+      'icon': IconCluster,
       'label': 'Other2',
       'path': '/other/test2',
       'namespace': 'other'
@@ -75,7 +77,7 @@ const menu = [
       'expanded': false,
       'loading': false,
       'items': [],
-      'icon': <IconTrash/>,
+      'icon': IconTrash,
       'label': 'Other4',
       'path': '/other/test3',
       'namespace': 'other'
@@ -85,7 +87,7 @@ const menu = [
       'expanded': false,
       'loading': false,
       'items': [],
-      'icon': <IconInfo/>,
+      'icon': IconInfo,
       'label': 'Documentation',
       'path': '/other/test3',
       'namespace': 'doc',
@@ -98,9 +100,9 @@ const onMenuItemClick = (path, type) => console.log(path, type);
 const toggleExpand = (path, expanded) => console.log(path, expanded);
 
 <div style={{ height: '80vh' }}>
-  <Menu 
+  <Menu
     menu={menu}
-    path={'/'}
+    path='/'
     onMenuItemClick={onMenuItemClick}
     toggleExpand={toggleExpand}
 />

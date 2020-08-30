@@ -1,11 +1,11 @@
 // @flow
 
-import React from 'react'
-import { css, cx } from 'react-emotion'
-import { MenuIcon } from '../MenuIcon'
+import React from 'react';
+import { css, cx } from 'react-emotion';
+import { MenuIcon } from '../MenuIcon';
 import { Text } from '../../../Text';
 import { IconChevronDown } from '../../../Icon';
-import type { MenuItemType, MenuItemTypes } from '../../index';
+import type { MenuItemType } from '../../index';
 
 type handleClickType = (event: MouseEvent, handler: (...params: any) => void, ...args: any) => void
 
@@ -28,11 +28,6 @@ const styles = {
     text-decoration: none;
     background: transparent;
     outline: none;
-    user-select: none; /* supported by Chrome and Opera */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
 
     &:hover,
     &:focus {
@@ -88,20 +83,18 @@ const styles = {
       color: #fff;
     }
   `,
-  icon: css`
+  iconWrap: css`
     position: absolute;
     left: 24px;
-    top: calc(50% - 7px);
+    top: calc(50% - 8px);
     display: flex;
-    height: 14px;
-    width: 14px;
-    font-size: 14px;
-    color: #fff;
-    user-select: none; /* supported by Chrome and Opera */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
+    justify-content: center;
+    align-items: center;
+    height: 16px;
+    width: 16px;
+  `,
+  icon: css`
+    fill: #ffffff;
   `,
   expandButton: css`
     position: absolute;
@@ -114,6 +107,9 @@ const styles = {
   `,
   submenuList: css`
     background: rgba(255, 255, 255, 0.05);
+  `,
+  subItemTitle: css`
+    left: 60px;
   `,
   titleSelected: css`
     font-weight: 600;
@@ -157,7 +153,9 @@ export const MenuItem = ({
         href={pathPrefix ? pathPrefix + path: path}
         title={label}
       >
-        <MenuIcon icon={icon} className={styles.icon} />
+        <div className={styles.iconWrap}>
+          <MenuIcon icon={icon} className={styles.icon} />
+        </div>
       </Text>
     )
   }
@@ -195,9 +193,14 @@ export const MenuItem = ({
         }
         title={label}
       >
-        {isSubitem ? null : <MenuIcon icon={icon} className={styles.icon} />}
+        {isSubitem ? null : (
+          <div className={styles.iconWrap}>
+            <MenuIcon icon={icon} className={styles.icon} />
+          </div>
+        )}
         <span
           className={cx(styles.title, {
+            [styles.subItemTitle]: isSubitem,
             [styles.titleSelected]: selected
           })}
         >

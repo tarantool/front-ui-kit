@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { css, keyframes, cx } from 'react-emotion'
 import { MenuItem } from './components/MenuItem'
 import { Scrollbar } from '../Scrollbar'
-import { IconArrow } from '../Icon';
+import { IconArrowLeft, IconArrowRight } from '../Icon';
 import { colors } from '../../variables';
 import * as R from 'ramda';
 
@@ -28,6 +28,11 @@ const styles = {
     padding: 0;
     display: flex;
     flex-direction: column;
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
   `,
   shortContainer: css`
     width: 62px;
@@ -212,7 +217,7 @@ export function Menu(props: MenuProps) {
       <div className={cx(styles.logoContainer, { [styles.logoCenter]: isShort })}>
         {renderMenuLogo ? renderMenuLogo(isShort) : null}
       </div>
-      <Scrollbar track={'#212121'}>
+      <Scrollbar track='#212121'>
         <div className={styles.menuList}>
           {topMenu.map((x: MenuItemType, i) => (
             <MenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
@@ -222,7 +227,7 @@ export function Menu(props: MenuProps) {
       <div className={styles.bottomButtons}>
         {pinnedMenuItem && (
           <MenuItem
-            key={'pinned-element'}
+            key='pinned-element'
             {...pinnedMenuItem}
             onClick={onClick}
             expand={onExpand}
@@ -231,16 +236,14 @@ export function Menu(props: MenuProps) {
           />
         )}
         <MenuItem
-          key={'collapse'}
+          key='collapse'
           items={[]}
-          path={''}
+          path=''
           isCollapse
           selected={false}
           expanded={false}
-          icon={
-            <IconArrow direction={isShort ? 'right' : 'left'}/>
-          }
-          label={'Collapse menu'}
+          icon={isShort ? IconArrowRight : IconArrowLeft}
+          label='Collapse menu'
           onClick={e => {
             e.preventDefault();
             setIsShort(!isShort)

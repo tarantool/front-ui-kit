@@ -1,10 +1,15 @@
 import React from 'react'
 
-export const MenuIcon = ({ icon, className }) => {
-  if (typeof icon === 'string') {
+export const MenuIcon = ({ icon: IconComponent, className }) => {
+  // console.log(typeof IconComponent, IconComponent);
 
+  if (typeof IconComponent === 'string') {
     return null
   }
 
-  return <div className={className}>{icon}</div>
+  if (typeof IconComponent === 'function') {
+    return <IconComponent className={className} />
+  }
+
+  return <div className={className}>{IconComponent}</div>;
 }
