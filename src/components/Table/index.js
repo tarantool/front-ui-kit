@@ -11,10 +11,11 @@ import { Text } from '../Text';
 import { Spin } from '../Spin';
 import { NonIdealState } from '../NonIdealState';
 import TableRow from './TableRow';
-import { IconSortable } from './IconSortable';
+import { IconHelperSortable } from '../IconHelper';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
 import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
+import { colors } from '../../variables';
 
 
 const styles = {
@@ -30,14 +31,21 @@ const styles = {
     transform: translate3d(-50%, -50%, 0);
   `,
   head: css`
-    color: #000000a6;
+    color: ${colors.dark65};
     font-weight: 600;
     font-size: 14px;
     padding: 12px 16px;
     text-align: left;
   `,
   sortIcon: css`
-    margin-left: 12px;
+    padding: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+    &:hover {
+      background: #D9DADD;
+      border-radius: 2px;
+      fill: ${colors.dark65}
+    }
   `,
   noData: css`
     background-color: #FFFFFF;
@@ -176,14 +184,17 @@ export function Table(props: TableProps) {
                   };
                   return (
                     <Text
-                      tag="th"
+                      tag='th'
                       className={cx(styles.head)}
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                       onClick={sortColumn}
                     >
                       {column.render('Header')}
                       {column.canSort && (
-                        <IconSortable className={cx(styles.sortIcon)} sort={getSortDirection(column.isSortedDesc)} />
+                        <IconHelperSortable
+                          className={cx(styles.sortIcon)}
+                          sort={getSortDirection(column.isSortedDesc)}
+                        />
                       )}
                     </Text>
                   )

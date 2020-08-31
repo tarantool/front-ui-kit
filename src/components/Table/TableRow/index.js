@@ -68,7 +68,7 @@ function TableRow({
       >
         {row.cells.map(cell => (
           <Text
-            tag="td"
+            tag='td'
             className={cx(styles.col, styles.colText, rowClassName)}
             onClick={
               cell.column.id === 'selection'
@@ -99,8 +99,8 @@ function TableRow({
           onClick={() => onCodeRowClick ? onCodeRowClick(row) : null}
         >
           <Text
-            tag="td"
-            variant="code"
+            tag='td'
+            variant='code'
             className={cx(styles.code, styles.colText)}
             colSpan={row.cells.length}
           >
