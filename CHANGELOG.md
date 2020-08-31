@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased 
 
-- Updated Button styles.
+- Global updates in Button styles.
+
+- Got rid of transparency in Icon.
+
+- Updated PageLayout controls.
+
+- Updated SplashModal.
 
 ## [0.22.0] - 2020-08-25
 

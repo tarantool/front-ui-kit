@@ -209,7 +209,10 @@ export class Input extends React.Component<InputProps, InputState> {
     );
   }
 
-  handleInputFocus = () => this.setState({ focused: true });
+  handleInputFocus = (e: Object) => {
+    this.setState({ focused: true });
+    this.props.onFocus && this.props.onFocus(e);
+  };
 
   handleInputBlur = (e: Object) => {
     this.setState({ focused: false });
