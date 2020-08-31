@@ -1,26 +1,29 @@
 // @flow
-import React from 'react';
-import { IconSortableNone } from './IconSortableNone';
-import { IconSortableAsc } from './IconSortableAsc';
-import { IconSortableDesc } from './IconSortableDesc';
+import * as React from 'react';
+import { css, cx } from 'emotion';
+import { colors } from '../../../../variables';
+import { Icon, type GenericIconProps } from '../../Icon';
+import sortUp from './icon-sort-desc.svg';
 
-export type IconSortableStyleProps = {
-  className?: string
-}
-
-type IconSortableProps = IconSortableStyleProps & {
-  sort?: 'asc' | 'desc',
-}
-
-export const IconSortable = ({ sort, ...props }: IconSortableProps) => {
-  switch (sort) {
-    case 'asc':
-      return <IconSortableAsc {...props} />;
-    case 'desc':
-      return <IconSortableDesc {...props} />;
-    default:
-      return <IconSortableNone {...props} />;
-  }
+const styles = {
+  icon: css`
+    width: 16px;
+    height: 16px;
+    fill: ${colors.dark65};
+  `,
+  asc: css`transform: rotateX(180deg);`
 };
 
-export { IconSortableNone, IconSortableAsc, IconSortableDesc }
+export const IconSortableDesc = ({ className }: GenericIconProps) => (
+  <Icon
+    className={cx(styles.icon, className)}
+    glyph={sortUp}
+  />
+);
+
+export const IconSortableAsc = ({ className }: GenericIconProps) => (
+  <Icon
+    className={cx(styles.icon, styles.asc, className)}
+    glyph={sortUp}
+  />
+);

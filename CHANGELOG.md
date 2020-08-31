@@ -27,7 +27,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Fixed bug in PageLayout with `wide` prop.
 
-- Updated sort icons for table
+- Updated sort icons for table.
+
+- IconHelper components group is separated into a discrete entity.
 
 ## [0.21.0] - 2020-08-11
 

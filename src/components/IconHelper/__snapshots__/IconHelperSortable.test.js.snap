@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconHelperSortable renders correctly 1`] = `
+Array [
+  <svg
+    className="css-5llpeb"
+    viewBox="0 0 16 16"
+  >
+    <use
+      xlinkHref="#icon-sort-desc"
+    />
+  </svg>,
+  <svg
+    className="css-1fn93nz"
+    viewBox="0 0 16 16"
+  >
+    <use
+      xlinkHref="#icon-sort-desc"
+    />
+  </svg>,
+  <svg
+    className="css-fdfbz8"
+    viewBox="0 0 16 16"
+  >
+    <use
+      xlinkHref="#icon-sort-desc"
+    />
+  </svg>,
+]
+`;

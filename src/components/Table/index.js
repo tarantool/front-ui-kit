@@ -11,7 +11,7 @@ import { Text } from '../Text';
 import { Spin } from '../Spin';
 import { NonIdealState } from '../NonIdealState';
 import TableRow from './TableRow';
-import { IconSortable } from '../Icon';
+import { IconHelperSortable } from '../IconHelper';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
 import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
@@ -184,14 +184,17 @@ export function Table(props: TableProps) {
                   };
                   return (
                     <Text
-                      tag="th"
+                      tag='th'
                       className={cx(styles.head)}
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                       onClick={sortColumn}
                     >
                       {column.render('Header')}
                       {column.canSort && (
-                        <IconSortable className={cx(styles.sortIcon)} sort={getSortDirection(column.isSortedDesc)} />
+                        <IconHelperSortable
+                          className={cx(styles.sortIcon)}
+                          sort={getSortDirection(column.isSortedDesc)}
+                        />
                       )}
                     </Text>
                   )
