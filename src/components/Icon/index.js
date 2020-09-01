@@ -2,6 +2,7 @@
 export * from './Icon';
 export * from './icons/IconAttach';
 export * from './icons/IconAttention';
+export * from './icons/IconArrow';
 export * from './icons/IconBox';
 export * from './icons/IconBoxNoData';
 export * from './icons/IconBucket';

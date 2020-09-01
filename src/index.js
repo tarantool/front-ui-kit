@@ -39,6 +39,7 @@ export * from './components/ProgressBar';
 export * from './components/RadioButton';
 export * from './components/ResizeSensor';
 export * from './components/Scrollbar';
+export * from './components/SideMenu';
 export * from './components/SplashModal';
 export * from './components/Spin';
 export * from './components/SVGImage';
