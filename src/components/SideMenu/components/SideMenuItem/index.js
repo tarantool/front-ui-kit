@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { css, cx } from 'react-emotion';
-import { MenuIcon } from '../MenuIcon';
+import { SideMenuIcon } from '../SideMenuIcon';
 import { Text } from '../../../Text';
 import { IconChevronDown } from '../../../Icon';
-import type { MenuItemType } from '../../index';
+import type { SideMenuItemType } from '../../index';
 
 type handleClickType = (event: MouseEvent, handler: (...params: any) => void, ...args: any) => void
 
@@ -123,7 +123,7 @@ const styles = {
   `
 }
 
-export const MenuItem = ({
+export const SideMenuItem = ({
   path,
   selected,
   label,
@@ -137,7 +137,7 @@ export const MenuItem = ({
   isCollapse,
   pathPrefix,
   type = 'internal'
-}: MenuItemType) => {
+}: SideMenuItemType) => {
   const tag = path ? 'a' : 'button'
 
   if (short) {
@@ -154,7 +154,7 @@ export const MenuItem = ({
         title={label}
       >
         <div className={styles.iconWrap}>
-          <MenuIcon icon={icon} className={styles.icon} />
+          <SideMenuIcon icon={icon} className={styles.icon} />
         </div>
       </Text>
     )
@@ -165,7 +165,7 @@ export const MenuItem = ({
     subItems = (
       <div className={styles.submenuList}>
         {items.map(x => (
-          <MenuItem {...x} key={x.path} onClick={onClick} isSubitem={true} />
+          <SideMenuItem {...x} key={x.path} onClick={onClick} isSubitem={true} />
         ))}
       </div>
     )
@@ -195,7 +195,7 @@ export const MenuItem = ({
       >
         {isSubitem ? null : (
           <div className={styles.iconWrap}>
-            <MenuIcon icon={icon} className={styles.icon} />
+            <SideMenuIcon icon={icon} className={styles.icon} />
           </div>
         )}
         <span

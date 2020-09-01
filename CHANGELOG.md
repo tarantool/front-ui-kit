@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - IconHelper components group is separated into a discrete entity.
 
-- Add component Menu.
+- Add component SideMenu.
 
 ## [0.22.0] - 2020-08-25
 

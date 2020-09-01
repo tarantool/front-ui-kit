@@ -1,8 +1,6 @@
 import React from 'react'
 
-export const MenuIcon = ({ icon: IconComponent, className }) => {
-  // console.log(typeof IconComponent, IconComponent);
-
+export const SideMenuIcon = ({ icon: IconComponent, className }) => {
   if (typeof IconComponent === 'string') {
     return null
   }

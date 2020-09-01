@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { css, keyframes, cx } from 'react-emotion'
-import { MenuItem } from './components/MenuItem'
+import { SideMenuItem } from './components/SideMenuItem'
 import { Scrollbar } from '../Scrollbar'
 import { IconArrowLeft, IconArrowRight } from '../Icon';
 import { colors } from '../../variables';
@@ -152,19 +152,19 @@ const styles = {
 };
 
 
-export type MenuItemTypes = 'internal' | 'external'
+export type SideMenuItemTypes = 'internal' | 'external'
 
-export type MenuItemType = {
+export type SideMenuItemType = {
   label: string,
   path: string,
   selected: boolean,
   expanded: boolean,
   icon: string | Object,
-  items: Array<MenuItemType>,
-  type?: MenuItemTypes,
+  items: Array<SideMenuItemType>,
+  type?: SideMenuItemTypes,
   pinBottom?: boolean,
   pathPrefix?: string,
-  onClick: (evt: MouseEvent, path: string, type: MenuItemTypes) => void,
+  onClick: (evt: MouseEvent, path: string, type: SideMenuItemTypes) => void,
   short?: boolean,
   isSubitem?: boolean,
   isCollapse?: boolean,
@@ -173,31 +173,31 @@ export type MenuItemType = {
 }
 
 
-type MenuProps = {
-  menu: MenuItemType[],
+type SideMenuProps = {
+  menu: SideMenuItemType[],
   path: string,
-  onMenuItemClick: (path: string, type: MenuItemTypes) => void,
+  onMenuItemClick: (path: string, type: SideMenuItemTypes) => void,
   toggleExpand: (path: string, expanded: boolean) => void,
   renderMenuLogo?: (isShort: boolean) => React.Node,
   className?: string,
   pathPrefix?: string,
 }
 
-export function Menu(props: MenuProps) {
+export function SideMenu(props: SideMenuProps) {
   const {
     menu, className, onMenuItemClick, toggleExpand, pathPrefix, renderMenuLogo
   } = props;
   const [isShort, setIsShort] = useState(false);
 
-  const topMenu = menu.filter((item: MenuItemType) => !item.pinBottom);
+  const topMenu = menu.filter((item: SideMenuItemType) => !item.pinBottom);
 
   const getPinnedElement = () => {
-    const pinnedMenu = menu.filter((item: MenuItemType) => item.pinBottom);
+    const pinnedMenu = menu.filter((item: SideMenuItemType) => item.pinBottom);
 
     return R.last(pinnedMenu);
   };
 
-  const onClick = (evt: MouseEvent, path: string, type: MenuItemTypes) => {
+  const onClick = (evt: MouseEvent, path: string, type: SideMenuItemTypes) => {
     evt.preventDefault();
     onMenuItemClick(path, type);
   };
@@ -219,14 +219,14 @@ export function Menu(props: MenuProps) {
       </div>
       <Scrollbar track='#212121'>
         <div className={styles.menuList}>
-          {topMenu.map((x: MenuItemType, i) => (
-            <MenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
+          {topMenu.map((x: SideMenuItemType, i) => (
+            <SideMenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
           ))}
         </div>
       </Scrollbar>
       <div className={styles.bottomButtons}>
         {pinnedMenuItem && (
-          <MenuItem
+          <SideMenuItem
             key='pinned-element'
             {...pinnedMenuItem}
             onClick={onClick}
@@ -235,7 +235,7 @@ export function Menu(props: MenuProps) {
             short={isShort}
           />
         )}
-        <MenuItem
+        <SideMenuItem
           key='collapse'
           items={[]}
           path=''

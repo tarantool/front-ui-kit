@@ -100,7 +100,7 @@ const onMenuItemClick = (path, type) => console.log(path, type);
 const toggleExpand = (path, expanded) => console.log(path, expanded);
 
 <div style={{ height: '80vh' }}>
-  <Menu
+  <SideMenu
     menu={menu}
     path='/'
     onMenuItemClick={onMenuItemClick}
