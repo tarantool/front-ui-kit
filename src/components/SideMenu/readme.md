@@ -1,8 +1,17 @@
 ```js
 import { css } from 'emotion';
 import { IconSuccess, IconCluster, IconCode, IconTrash, IconInfo } from '../Icon';
+import { SVGImage } from '../SVGImage';
+import { TarantoolLogoCompact, TarantoolLogoFull } from '../../images';
 
+const logoStyle = css`margin-left: 24px;`;
 const IconSuccessGreen = ({ className, ...props }) => <IconSuccess {...props} />
+const renderLogo = collapsed => (
+  <SVGImage
+    className={!collapsed && logoStyle}
+    glyph={collapsed ? TarantoolLogoCompact : TarantoolLogoFull}
+  />
+);
 
 const menu = [
     {
@@ -105,6 +114,7 @@ const toggleExpand = (path, expanded) => console.log(path, expanded);
     path='/'
     onMenuItemClick={onMenuItemClick}
     toggleExpand={toggleExpand}
+    renderMenuLogo={renderLogo}
 />
 </div>
 ```
