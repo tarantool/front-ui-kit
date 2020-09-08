@@ -31,11 +31,11 @@ Array [
       </span>
     </div>
     <div
-      className="css-w03906"
+      className="css-1yj7u74"
       title="Input"
     >
       <input
-        className="css-1ssefzq"
+        className="css-17erkce"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -67,11 +67,11 @@ Array [
       </span>
     </div>
     <div
-      className="css-1prx3ty"
+      className="css-4zb4"
       title="Input"
     >
       <input
-        className="css-1kkc718"
+        className="css-16fuuzx"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -80,7 +80,7 @@ Array [
         value="qwertyuiop"
       />
       <div
-        className="css-jgwfcl"
+        className="css-qidtvj"
       >
         <button
           className="css-11dc419"
@@ -88,7 +88,7 @@ Array [
           type="button"
         >
           <svg
-            className="css-1v31moo"
+            className="css-197j0b9"
             viewBox="0 0 16 16"
           >
             <use
@@ -120,11 +120,11 @@ Array [
       </span>
     </div>
     <div
-      className="css-1prx3ty"
+      className="css-4zb4"
       title="Input"
     >
       <input
-        className="css-1ssefzq"
+        className="css-17erkce"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -160,7 +160,7 @@ Array [
       title="Input"
     >
       <textarea
-        className="css-1yq8nnk"
+        className="css-17erkce"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}

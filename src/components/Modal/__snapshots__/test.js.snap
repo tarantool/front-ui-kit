@@ -43,10 +43,10 @@ exports[`Modal renders modal with form 1`] = `
           </span>
         </div>
         <div
-          className="css-1prx3ty"
+          className="css-4zb4"
         >
           <input
-            className="css-1ssefzq"
+            className="css-17erkce"
             onBlur={[Function]}
             onFocus={[Function]}
           />

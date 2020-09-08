@@ -2,30 +2,10 @@
 import * as React from 'react';
 import { createRef } from 'react';
 import { css, cx } from 'react-emotion';
-import { rgba } from 'emotion-rgba';
-import { baseFontFamily, colors } from '../../variables';
+import { commonInputStyles, commonInputSizes } from './commonStyles';
 import { IconCancel } from '../Icon';
 
 const styles = {
-  outer: css`
-    display: flex;
-    height: 32px;
-    border: solid 1px ${colors.intentBase};
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: #ffffff;
-  `,
-  disabled: css`
-    background-color: ${colors.intentBaseBg};
-  `,
-  focused: css`
-    border-color: rgba(0, 0, 0, 0.26);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.24);
-  `,
-  error: css`
-    border-color: ${colors.intentDanger};
-    box-shadow: 0px 0px 3px ${rgba(colors.intentDanger, 0.65)};
-  `,
   outerWithAddition: css`
     display: flex;
   `,
@@ -33,28 +13,11 @@ const styles = {
     width: auto;
     flex-grow: 1;
   `,
-  input: css`
-    display: block;
-    align-self: stretch;
-    width: 100%;
-    min-width: 0;
-    height: 100%;
-    border: 0;
-    padding: 5px 16px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    font-family: ${baseFontFamily};
-    font-size: 14px;
-    line-height: 22px;
-    color: rgba(0, 0, 0, 0.65);
-    background-color: transparent;
-    outline: none;
-  `,
   inputWithIcon: css`
-    padding: 5px 8px 5px 16px;
+    padding-left: 15px;
+    padding-right: 8px;
   `,
   iconWrap: css`
-    margin-right: 7px;
     display: flex;
     align-items: center;
   `,
@@ -76,6 +39,16 @@ const styles = {
       border-bottom-left-radius: 0;
     }
   `
+};
+
+const wrapSizes = {
+  m: css`height: 32px;`,
+  l: css`height: 40px;`
+};
+
+const iconWrapSizes = {
+  m: css`margin-right: 7px;`,
+  l: css`margin-right: 15px;`
 };
 
 export type InputProps = {
@@ -101,6 +74,7 @@ export type InputProps = {
   type?: 'text' | 'password' | 'email' | 'number',
   value?: string,
   placeholder?: string,
+  size?: 'm' | 'l',
   leftElement: React.Node,
   rightElement: React.Node
 };
@@ -146,6 +120,7 @@ export class Input extends React.Component<InputProps, InputState> {
       type,
       value,
       placeholder,
+      size,
       leftElement,
       rightElement,
       ...props
@@ -157,11 +132,12 @@ export class Input extends React.Component<InputProps, InputState> {
     return (
       <div
         className={cx(
-          styles.outer,
+          commonInputStyles.outer,
+          wrapSizes[size || 'l'],
           {
-            [styles.disabled]: disabled,
-            [styles.focused]: focused,
-            [styles.error]: error,
+            [commonInputStyles.disabled]: disabled,
+            [commonInputStyles.focused]: focused,
+            [commonInputStyles.error]: error,
             [styles.outerWithAddition]: hasAddition,
             [styles.withLeftElement]: !!leftElement,
             [styles.withRightElement]: !!rightElement
@@ -175,10 +151,14 @@ export class Input extends React.Component<InputProps, InputState> {
           {...props}
           autoFocus={autoFocus}
           autoComplete={autoComplete}
-          className={cx(styles.input, {
-            [styles.inputWithAddition]: hasAddition,
-            [styles.inputWithIcon]: rightIcon || onClearClick
-          })}
+          className={cx(
+            commonInputStyles.input,
+            commonInputSizes[size || 'l'],
+            {
+              [styles.inputWithAddition]: hasAddition,
+              [styles.inputWithIcon]: rightIcon || onClearClick
+            },
+          )}
           disabled={disabled}
           name={name}
           onChange={onChange}
@@ -197,7 +177,7 @@ export class Input extends React.Component<InputProps, InputState> {
           ref={this.elementRef}
         />
         {(onClearClick || rightIcon) && (
-          <div className={styles.iconWrap}>
+          <div className={cx(styles.iconWrap, iconWrapSizes[size || 'l'])}>
             {onClearClick && (!rightIcon || value)
               ? <IconCancel onClick={(!(disabled || readOnly) && this.handleClearClick) || noop} />
               : rightIcon}
