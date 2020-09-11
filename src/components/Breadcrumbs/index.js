@@ -17,15 +17,18 @@ export type ActionsBreadCrumbs = {
   onLinkClick?: (path: string) => void
 }
 
-type BreadcrumbsProps = ActionsBreadCrumbs & {
-  breadcrumbs: BreadcrumbsItem[],
+export type BreadcrumbsProps = ActionsBreadCrumbs & {
   appName?: string,
+  items: BreadcrumbsItem[],
+  className?: string
 }
 
 const styles = {
   breadcrumbs: css`
     display: flex;
     align-items: baseline;
+    width: 100%;
+    overflow: hidden;
   `,
   breadcrumbElement: css`
     white-space: nowrap;
@@ -71,10 +74,10 @@ const MAX_APP_NAME_LENGTH = 40;
 
 export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
   render() {
-    const { breadcrumbs, appName } = this.props;
+    const { items, appName, className } = this.props;
     const isLongAppName = (appName: string) => appName.length > MAX_APP_NAME_LENGTH;
     return (
-      <div className={styles.breadcrumbs}>
+      <div className={cx(styles.breadcrumbs, className)}>
         {appName &&
         (isLongAppName(appName)
           ? <AppName appName={appName} />
@@ -89,7 +92,7 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
         }
         <OverflowList
           minVisibleItems={1}
-          items={breadcrumbs}
+          items={items}
           className={styles.breadcrumbsList}
           overflowRenderer={this.renderOverflow}
           visibleItemRenderer={this.renderBreadcrumbWrapper}

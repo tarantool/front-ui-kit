@@ -9,7 +9,7 @@ exports[`Breadcrumbs block with small width 1`] = `
   }
 >
   <div
-    className="css-x1sij0"
+    className="css-8vahvp"
   >
     <span
       className="css-1u31squ"
@@ -91,7 +91,7 @@ exports[`Breadcrumbs block with small width 1`] = `
 
 exports[`Breadcrumbs renders correctly 1`] = `
 <div
-  className="css-x1sij0"
+  className="css-8vahvp"
 >
   <span
     className="css-4haz1u"
@@ -170,7 +170,7 @@ exports[`Breadcrumbs renders correctly 1`] = `
 
 exports[`Breadcrumbs renders correctly long name 1`] = `
 <div
-  className="css-x1sij0"
+  className="css-8vahvp"
 >
   <span
     className="css-1u31squ"

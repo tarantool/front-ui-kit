@@ -22,13 +22,13 @@ const breadcrumbs = [{
 const onLinkClick = (link) => console.log('link', link);
 <div>
 <Breadcrumbs
-  breadcrumbs={breadcrumbs}
+  items={breadcrumbs}
   appName={'Project name-2948474770249-999-20299547789'}
   onLinkClick={onLinkClick}
  />
 
 <Breadcrumbs
-  breadcrumbs={breadcrumbs}
+  items={breadcrumbs}
   appName={'Project name'}
   onLinkClick={onLinkClick}
  />
