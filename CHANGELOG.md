@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added Tarantool compact logo image.
 
+- Updated components:
+
+  - Input
+  - InputPassword
+  - TextArea
+
+- Updated icons:
+
+  - IconEyeClosed
+  - IconEyeOpened
+
 ## [0.23.0] - 2020-09-01
 
 - Global updates in Button styles.

@@ -57,6 +57,7 @@ const dropdownExample = (
       placeholder='Placeholder'
       onChange={handleChange}
       title='Input'
+      size='l'
     />
   </div>
 
@@ -75,6 +76,7 @@ const dropdownExample = (
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       rightIcon={<IconSearch />}
+      size='m'
     />
   </div>
 

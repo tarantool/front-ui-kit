@@ -8,7 +8,7 @@ import image from './icon-eye-opened.svg';
 const styles = css`
   width: 16px;
   height: 16px;
-  fill: ${colors.intentPrimary};
+  fill: ${colors.dark65};
 `;
 
 export const IconEyeOpened = ({ className, onClick }: GenericIconProps) => (

@@ -6,7 +6,7 @@ Array [
     className="css-rnhzxe"
   >
     <textarea
-      className="css-1yq8nnk"
+      className="css-17erkce"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -14,10 +14,10 @@ Array [
     />
   </div>,
   <div
-    className="css-7jkww9"
+    className="css-3h7zp9"
   >
     <textarea
-      className="css-1yq8nnk"
+      className="css-17erkce"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -25,10 +25,10 @@ Array [
     />
   </div>,
   <div
-    className="css-j40sy7"
+    className="css-o72vjl"
   >
     <textarea
-      className="css-1yq8nnk"
+      className="css-17erkce"
       disabled={true}
       onBlur={[Function]}
       onChange={[MockFunction]}
@@ -40,7 +40,53 @@ Array [
     className="css-rnhzxe"
   >
     <textarea
-      className="css-1yq8nnk"
+      className="css-17erkce"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      rows={5}
+      value="Example text"
+    />
+  </div>,
+  <div
+    className="css-rnhzxe"
+  >
+    <textarea
+      className="css-ot5b0e"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      value="Example text"
+    />
+  </div>,
+  <div
+    className="css-3h7zp9"
+  >
+    <textarea
+      className="css-ot5b0e"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      value="Example text"
+    />
+  </div>,
+  <div
+    className="css-o72vjl"
+  >
+    <textarea
+      className="css-ot5b0e"
+      disabled={true}
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onFocus={[Function]}
+      value="Example text"
+    />
+  </div>,
+  <div
+    className="css-rnhzxe"
+  >
+    <textarea
+      className="css-ot5b0e"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
