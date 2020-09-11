@@ -11,6 +11,11 @@ it('TextArea renders correctly', () => {
       <TextArea onChange={updateState} value='Example text' error />
       <TextArea onChange={updateState} value='Example text' disabled />
       <TextArea onChange={updateState} value='Example text' rows={5} />
+
+      <TextArea onChange={updateState} size='m' value='Example text' />
+      <TextArea onChange={updateState} size='m' value='Example text' error />
+      <TextArea onChange={updateState} size='m' value='Example text' disabled />
+      <TextArea onChange={updateState} size='m' value='Example text' rows={5} />
     </>
   ).toJSON();
 
