@@ -9,8 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added Tarantool compact logo image.
 
+- Added AppLayout, AppHeader components.
+
 - Updated components:
 
+  - Alert
   - Input
   - InputPassword
   - TextArea
@@ -21,8 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - IconEyeClosed
   - IconEyeOpened
   - IconBell
-
-- Added AppLayout, AppHeader components.
+  - IconBox
 
 ## [0.23.0] - 2020-09-01
 

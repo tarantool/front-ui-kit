@@ -3,12 +3,12 @@ import * as React from 'react';
 import { css, cx } from 'emotion';
 import { Icon, type GenericIconProps } from '../../Icon';
 import { colors } from '../../../../variables';
-import image from './empty-box.svg';
+import image from './icon-box.svg';
 
 const styles = css`
-  width: 48px;
-  height: 48px;
-  fill: ${colors.intentPrimary};
+  width: 16px;
+  height: 16px;
+  fill: ${colors.dark65};
 `;
 
 export const IconBox = ({ className }: GenericIconProps) => (
