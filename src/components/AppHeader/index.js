@@ -3,9 +3,10 @@ import * as React from 'react';
 import { css, cx } from 'react-emotion';
 import {
   Breadcrumbs,
-  type BreadcrumbsProps,
-  ControlsPanel
-} from '../../index';
+  type ActionsBreadCrumbs,
+  type BreadcrumbsItem
+} from '../Breadcrumbs';
+import { ControlsPanel } from '../ControlsPanel';
 
 const styles = {
   header: css`
@@ -40,7 +41,9 @@ const styles = {
 }
 
 type AppHeaderProps = {
-  ...BreadcrumbsProps,
+  ...ActionsBreadCrumbs,
+  appName?: string,
+  breadcrumbs: BreadcrumbsItem[],
   className?: string,
   controls?: React.Node[]
 }
@@ -49,7 +52,6 @@ export const AppHeader = (
   {
     appName,
     breadcrumbs,
-    children,
     className,
     controls,
     onLinkClick
