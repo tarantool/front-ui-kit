@@ -1,25 +1,65 @@
-```js
+import React from 'react';
 import { css } from 'emotion';
-import { IconSuccess, IconCluster, IconCode, IconTrash, IconInfo } from '../Icon';
-import { SVGImage } from '../SVGImage';
-import { TarantoolLogoCompact, TarantoolLogoFull } from '../../images';
+import renderer from 'react-test-renderer';
+import {
+  AppHeader,
+  AppLayout,
+  Button,
+  IconCluster,
+  IconCode,
+  IconTrash,
+  IconInfo,
+  IconSearch,
+  SideMenu,
+  SVGImage,
+  TarantoolLogoCompact,
+  TarantoolLogoFull
+} from '../../index';
 
-const logoStyle = css`margin-left: 24px;`;
-const IconSuccessGreen = ({ className, ...props }) => <IconSuccess {...props} />
-const renderLogo = collapsed => (
-  <SVGImage
-    className={!collapsed && logoStyle}
-    glyph={collapsed ? TarantoolLogoCompact : TarantoolLogoFull}
-  />
+jest.mock(
+  '../Scrollbar/index.js',
+  () => ({
+    Scrollbar: ({ children, className }) => <div className={className}>{children}</div>
+  })
 );
 
-const menu = [
+it('AppLayout renders correctly', () => {
+  const onLinkClick = jest.fn();
+  const onMenuItemClick = jest.fn();
+  const toggleExpand = jest.fn();
+
+  const logoStyle = css`margin-left: 24px;`;
+
+  const breadcrumbs = [
+    {
+      title: '@tarantool.io/ui-kit',
+      path: '/tarantool'
+    },
+    {
+      title: 'UI Components',
+      path: '/section-ui-components'
+    },
+    {
+      title: 'Breadcrumb',
+      path: '/breadcrumb'
+    },
+    {
+      title: 'OverflowList',
+      path: '/overflow-list'
+    },
+    {
+      title: 'ResizeSensor',
+      path: '/resize-sensor'
+    }
+  ];
+
+  const menuItems = [
     {
       'selected': false,
       'expanded': false,
       'loading': false,
       'items': [],
-      'icon': IconSuccessGreen,
+      'icon': IconInfo,
       'label': 'My Test',
       'path': '/mytest/test',
       'namespace': 'mytest'
@@ -105,16 +145,37 @@ const menu = [
     }
   ];
 
-const onMenuItemClick = (path, type) => console.log(path, type);
-const toggleExpand = (path, expanded) => console.log(path, expanded);
+  const renderLogo = collapsed => (
+    <SVGImage
+      className={!collapsed && logoStyle}
+      glyph={collapsed ? TarantoolLogoCompact : TarantoolLogoFull}
+    />
+  );
 
-<div style={{ height: '80vh' }}>
-  <SideMenu
-    menu={menu}
-    path='/'
-    onMenuItemClick={onMenuItemClick}
-    toggleExpand={toggleExpand}
-    renderMenuLogo={renderLogo}
-  />
-</div>
-```
+  const PreconfiguredSideMenu = () => (
+    <SideMenu
+      menu={menuItems}
+      path='/'
+      onMenuItemClick={onMenuItemClick}
+      toggleExpand={toggleExpand}
+      renderMenuLogo={renderLogo}
+    />
+  );
+
+  const tree = renderer.create(
+    <AppLayout sidebarComponent={PreconfiguredSideMenu}>
+      <AppHeader
+        appName='Sample app'
+        breadcrumbs={breadcrumbs}
+        controls={[
+          <Button title='Search' intent='plain' icon={IconSearch} />,
+          <Button text='Log in' />
+        ]}
+        onLinkClick={onLinkClick}
+      />
+      Content
+    </AppLayout>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});

@@ -29,7 +29,7 @@ describe('Breadcrumbs', () => {
     const tree = renderer.create(
       <>
         <Breadcrumbs
-          breadcrumbs={breadcrumbs}
+          items={breadcrumbs}
           appName={'Project name'}
           onLinkClick={onLinkClick}
         />
@@ -44,7 +44,7 @@ describe('Breadcrumbs', () => {
     const tree = renderer.create(
       <>
         <Breadcrumbs
-          breadcrumbs={breadcrumbs}
+          items={breadcrumbs}
           appName={'Project name-2948474770249-999-20299547789123123141'}
           onLinkClick={onLinkClick}
         />
@@ -59,7 +59,7 @@ describe('Breadcrumbs', () => {
       <>
         <div style={{ width: '300px' }}>
           <Breadcrumbs
-            breadcrumbs={breadcrumbs}
+            items={breadcrumbs}
             appName={'Project name-2948474770249-999-20299547789123123141'}
             onLinkClick={onLinkClick}
           />

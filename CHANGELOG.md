@@ -14,11 +14,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Input
   - InputPassword
   - TextArea
+  - Breadcrumbs
 
 - Updated icons:
 
   - IconEyeClosed
   - IconEyeOpened
+  - IconBell
+
+- Added AppLayout, AppHeader components.
 
 ## [0.23.0] - 2020-09-01
 
