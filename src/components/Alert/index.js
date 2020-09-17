@@ -11,15 +11,16 @@ const styles = {
     border-radius: 4px;
     margin-top: 16px;
     margin-bottom: 16px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   `,
   success: css`
     border-color: ${colors.intentSuccessBorder};
     background-color: ${colors.intentSuccessBg};
+    color: ${colors.intentSuccess};
   `,
   error: css`
     border-color: ${colors.intentDangerBorder};
     background-color: ${colors.intentDangerBg};
+    color: ${colors.intentDanger};
   `
 };
 
