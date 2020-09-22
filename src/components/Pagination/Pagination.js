@@ -39,11 +39,6 @@ const styles = {
     text-align: center;
     padding: 4px;
     margin: 0 4px;
-    box-shadow: none;
-
-    &:focus, &:hover, &:active {
-      box-shadow: none;
-    }
   `,
   buttonActive: css`
     color: #CF1322;

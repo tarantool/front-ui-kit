@@ -92,6 +92,7 @@ const dropdownExample = (
       onClearClick={handleClear}
       rightIcon={<IconSearch />}
       leftElement={dropdownExample}
+      size='m'
     />
   </div>
 
@@ -102,6 +103,7 @@ const dropdownExample = (
       onChange={handleChange}
       rightIcon={<IconSearch />}
       rightElement={dropdownExample}
+      size='m'
     />
   </div>
 
@@ -112,6 +114,7 @@ const dropdownExample = (
       onChange={handleChange}
       rightIcon={<IconSearch />}
       rightElement={dropdownExample}
+      size='m'
     />
   </div>
 </>

@@ -12,14 +12,15 @@ const styles = {
     margin-right: -16px;
   `,
   input: css`
-    margin: 0 16px 16px;
+    margin: 6px 16px 6px;
   `,
   column: css`
     align-self: stretch;
     margin: 0 16px;
   `,
   columnInput: css`
-    margin-bottom: 16px;
+    margin-top: 6px;
+    margin-bottom: 6px;
   `,
   columns: [
     css`flex-basis: 100%;`,
@@ -29,7 +30,7 @@ const styles = {
 };
 
 type InputGroupProps = {
-  children?: React.Node,
+  children?: React.Node[] | React.Node,
   className?: string,
   columns?: 1 | 2 | 3,
   itemClassName?: string,
