@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import { rgba } from 'emotion-rgba';
-import { baseFontFamily, colors, zIndex } from '../../variables';
+import { textStyles } from '../Text';
+import { colors, zIndex } from '../../variables';
 
 const styles = {
   wrap: css`
@@ -12,14 +12,12 @@ const styles = {
   `,
   tab: css`
     position: relative;
-    padding: 16px;
+    padding: 14px 0;
     border: none;
+    margin-right: 30px;
+    margin-bottom: -1px;
     border-bottom: solid 2px transparent;
-    font-family: ${baseFontFamily};
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.65);
+    color: ${colors.dark40};
     background-color: transparent;
     outline: none;
     cursor: pointer;
@@ -27,14 +25,20 @@ const styles = {
     &:hover,
     &:focus {
       z-index: ${zIndex.inline};
-      border-bottom-color: ${rgba(colors.activeAction, 0.5)};
+      color: ${colors.dark65};
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   `,
   activeTab: css`
-    color: ${colors.activeAction};
-    border-bottom-color: ${colors.activeAction};
+    color: ${colors.baseHeading};
+    border-bottom-color: ${colors.baseHeading};
   `,
-  tabs: css``
+  tabs: css`
+    border-bottom: solid 1px ${colors.intentBase};
+  `
 };
 
 type Tab = {
@@ -66,6 +70,7 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
           {tabs && tabs.map(({ label }, i) => (
             <button
               className={cx(
+                textStyles.h3,
                 styles.tab,
                 { [styles.activeTab]: activeTab === i }
               )}
