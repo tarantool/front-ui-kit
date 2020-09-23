@@ -2,13 +2,15 @@ Maximum content width is 1280px. To break this limit use prop `wide`.
 
 ```js
 import { css, cx } from 'emotion';
-import { Alert } from '../Alert';
-import { Button } from '../Button';
-import { Checkbox } from '../Checkbox';
-import { IconSearch } from '../Icon';
-import { Input } from '../Input';
-import { InputGroup } from '../InputGroup';
-import { Text } from '../Text';
+import {
+  Alert,
+  Button,
+  Checkbox,
+  IconSearch,
+  Input,
+  InputGroup,
+  Text
+} from '../../index';
 
 const initialState = {
   leftControls: false,

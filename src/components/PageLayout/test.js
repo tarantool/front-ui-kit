@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import {
+  Alert,
   Button,
   IconSearch,
   Input,
@@ -25,6 +26,9 @@ it('PageLayout renders succesfully', () => {
       />
       <PageLayout
         heading='Reports list'
+        aboveComponent={({ className }) => (
+          <Alert className={className} type='error'>Hello, I'm error!</Alert>
+        )}
         topLeftControls={[
           <Input rightIcon={<IconSearch />} />,
           <Button text='Info' size='l' />
