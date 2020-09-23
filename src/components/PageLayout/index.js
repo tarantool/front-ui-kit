@@ -13,8 +13,15 @@ const styles = {
     padding: 0 30px;
     margin: 30px auto 30px;
   `,
+  pageWithAbovePanel: css`
+    margin-top: 20px;
+  `,
   wide: css`
     max-width: none;
+  `,
+  aboveHeadingPanel: css`
+    flex-shrink: 0;
+    margin: 0 0 20px;
   `,
   headingPanel: css`
     display: flex;
@@ -39,6 +46,7 @@ type PageLayoutProps = {
   className?: string,
   topLeftControls?: React.Node[],
   topRightControls?: React.Node[],
+  aboveComponent?: React.AbstractComponent<{ className: string }>,
   heading?: string,
   headingContent?: React.Node,
   wide?: boolean
@@ -47,13 +55,26 @@ type PageLayoutProps = {
 export const PageLayout = ({
   children,
   className,
-  topLeftControls,
-  topRightControls,
   heading,
   headingContent,
+  aboveComponent: AboveComponent,
+  topLeftControls,
+  topRightControls,
   wide
 }: PageLayoutProps) => (
-  <div className={cx(styles.page, { [styles.wide]: wide }, className)}>
+  <div
+    className={cx(
+      styles.page,
+      {
+        [styles.wide]: wide,
+        [styles.pageWithAbovePanel]: !!AboveComponent
+      },
+      className
+    )}
+  >
+    {!!AboveComponent && (
+      <AboveComponent className={styles.aboveHeadingPanel} />
+    )}
     {(heading || topRightControls || headingContent) && (
       <div className={styles.headingPanel}>
         {heading && (
