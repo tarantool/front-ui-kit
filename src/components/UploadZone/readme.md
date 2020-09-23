@@ -1,6 +1,6 @@
 ```js
 <UploadZone
   handler={console.log}
-  label='Second string'
+  subTitle='Second string'
 />
 ```

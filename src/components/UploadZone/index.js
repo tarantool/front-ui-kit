@@ -50,23 +50,25 @@ type UploadZoneProps = {
   name: string,
   multiple?: boolean,
   className?: string,
-  label?: string,
+  title?: string,
+  subTitle?: string,
   loading?: bool,
   files?: Array<File>
 }
 
-export default function UploadZone(
+export const UploadZone = (
   {
     accept = '',
     handler,
     name,
     multiple,
     className,
-    label,
+    title,
+    subTitle,
     loading,
     files
   }: UploadZoneProps
-) {
+) => {
   const Icon = loading ? IconSpinner : IconBox;
 
   const {
@@ -93,9 +95,9 @@ export default function UploadZone(
         <Text variant='h3' tag='span'>
           {loading
             ? 'Uploading...'
-            : 'Click or drag file to this area to upload'}
+            : title || 'Click or drag file to this area to upload'}
         </Text>
-        {!!label && !loading && <Text className={styles.notice}>{label}</Text>}
+        {!!subTitle && !loading && <Text className={styles.notice}>{subTitle}</Text>}
       </Container>
     </div>
   );
