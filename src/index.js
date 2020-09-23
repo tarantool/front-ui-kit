@@ -54,6 +54,7 @@ export * from './components/Text';
 export * from './components/TextArea';
 export * from './components/TiledList';
 export * from './components/Tooltip';
+export * from './components/UploadZone';
 export * from './components/UriLabel';
 export * from './images';
 export * from './variables';
