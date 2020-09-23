@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   Prop `controls` replaced with `topLeftControls` and `topRightControls`.
   Also added `aboveComponent` to show panels above heading.
 
+- Added UploadZone.
+
 ## [0.24.0] - 2020-09-18
 
 - Added Tarantool compact logo image.
