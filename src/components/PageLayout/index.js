@@ -19,9 +19,17 @@ const styles = {
   headingPanel: css`
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
     margin-bottom: 15px;
   `,
-  heading: css`
+  leftControls: css`
+    align-self: center;
+    margin-left: 40px;
+  `,
+  rightControls: css`
+    align-self: center;
+  `,
+  divider: css`
     margin-right: auto;
   `
 };
@@ -29,7 +37,8 @@ const styles = {
 type PageLayoutProps = {
   children: React.Node,
   className?: string,
-  controls?: React.Node[],
+  topLeftControls?: React.Node[],
+  topRightControls?: React.Node[],
   heading?: string,
   headingContent?: React.Node,
   wide?: boolean
@@ -38,17 +47,38 @@ type PageLayoutProps = {
 export const PageLayout = ({
   children,
   className,
-  controls,
+  topLeftControls,
+  topRightControls,
   heading,
   headingContent,
   wide
 }: PageLayoutProps) => (
   <div className={cx(styles.page, { [styles.wide]: wide }, className)}>
-    {(heading || controls || headingContent) && (
+    {(heading || topRightControls || headingContent) && (
       <div className={styles.headingPanel}>
-        {heading && <Text className={styles.heading} variant='h1'>{heading}</Text>}
+        {heading && (
+          <Text
+            className={cx({ [styles.divider]: !topLeftControls })}
+            variant='h1'
+          >
+            {heading}
+          </Text>
+        )}
+        {topLeftControls && (
+          <ControlsPanel
+            className={cx(styles.leftControls, styles.divider)}
+            controls={topLeftControls}
+            thin
+          />
+        )}
         {headingContent}
-        {controls && <ControlsPanel controls={controls} thin />}
+        {topRightControls && (
+          <ControlsPanel
+            className={styles.rightControls}
+            controls={topRightControls}
+            thin
+          />
+        )}
       </div>
     )}
     {children}

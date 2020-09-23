@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated Tabbed component.
 
+- Added left controls bar to heading panel in PageLayout.
+  Prop `controls` replaced with `topLeftControls` and `topRightControls`.
+
 ## [0.24.0] - 2020-09-18
 
 - Added Tarantool compact logo image.

@@ -1,8 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Button } from '../Button';
-import { Text } from '../Text';
-import { PageLayout } from './index';
+import {
+  Button,
+  IconSearch,
+  Input,
+  Text,
+  PageLayout
+} from '../../index';
 
 it('PageLayout renders succesfully', () => {
   const tree = renderer.create(
@@ -13,9 +17,29 @@ it('PageLayout renders succesfully', () => {
       />
       <PageLayout
         heading='Cluster'
-        controls={[
+        topRightControls={[
           <Button text='Details' />,
           <Button text='Issues' />
+        ]}
+        wide
+      />
+      <PageLayout
+        heading='Reports list'
+        topLeftControls={[
+          <Input rightIcon={<IconSearch />} />,
+          <Button text='Info' size='l' />
+        ]}
+        wide
+      />
+      <PageLayout
+        heading='Reports list'
+        topLeftControls={[
+          <Input rightIcon={<IconSearch />} />,
+          <Button text='Info' size='l' />
+        ]}
+        topRightControls={[
+          <Button text='Details' size='l' />,
+          <Button text='Info' size='l' />
         ]}
         wide
       />
