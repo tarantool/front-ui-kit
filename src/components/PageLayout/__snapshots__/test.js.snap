@@ -6,7 +6,7 @@ Array [
     className="css-1tgvd0c"
   >
     <div
-      className="css-pyr5ve"
+      className="css-1d2sanl"
     >
       <h1
         className="css-1xisb9e"
@@ -24,7 +24,7 @@ Array [
     className="css-13d9vqf"
   >
     <div
-      className="css-pyr5ve"
+      className="css-1d2sanl"
     >
       <h1
         className="css-1xisb9e"
@@ -32,7 +32,7 @@ Array [
         Cluster
       </h1>
       <div
-        className="css-70qvj9"
+        className="css-13bort8"
       >
         <div
           className="css-12ibiio"
@@ -52,6 +52,139 @@ Array [
             type="button"
           >
             Issues
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-2657uu"
+  >
+    <div
+      className="css-g2m2eb"
+    >
+      Hello, I'm error!
+    </div>
+    <div
+      className="css-1d2sanl"
+    >
+      <h1
+        className="css-1b2tio5"
+      >
+        Reports list
+      </h1>
+      <div
+        className="css-1uz0go"
+      >
+        <div
+          className="css-12ibiio"
+        >
+          <div
+            className="css-8o7sw6"
+          >
+            <input
+              className="css-16fuuzx"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            />
+            <div
+              className="css-qidtvj"
+            >
+              <svg
+                className="css-p78i9h"
+                viewBox="0 0 16 16"
+              >
+                <use
+                  xlinkHref="#search"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ujymom"
+            type="button"
+          >
+            Info
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-13d9vqf"
+  >
+    <div
+      className="css-1d2sanl"
+    >
+      <h1
+        className="css-1b2tio5"
+      >
+        Reports list
+      </h1>
+      <div
+        className="css-1uz0go"
+      >
+        <div
+          className="css-12ibiio"
+        >
+          <div
+            className="css-8o7sw6"
+          >
+            <input
+              className="css-16fuuzx"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            />
+            <div
+              className="css-qidtvj"
+            >
+              <svg
+                className="css-p78i9h"
+                viewBox="0 0 16 16"
+              >
+                <use
+                  xlinkHref="#search"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ujymom"
+            type="button"
+          >
+            Info
+          </button>
+        </div>
+      </div>
+      <div
+        className="css-13bort8"
+      >
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ujymom"
+            type="button"
+          >
+            Details
+          </button>
+        </div>
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ujymom"
+            type="button"
+          >
+            Info
           </button>
         </div>
       </div>

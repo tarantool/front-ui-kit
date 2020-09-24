@@ -13,15 +13,30 @@ const styles = {
     padding: 0 30px;
     margin: 30px auto 30px;
   `,
+  pageWithAbovePanel: css`
+    margin-top: 20px;
+  `,
   wide: css`
     max-width: none;
+  `,
+  aboveHeadingPanel: css`
+    flex-shrink: 0;
+    margin: 0 0 20px;
   `,
   headingPanel: css`
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
     margin-bottom: 15px;
   `,
-  heading: css`
+  leftControls: css`
+    align-self: center;
+    margin-left: 40px;
+  `,
+  rightControls: css`
+    align-self: center;
+  `,
+  divider: css`
     margin-right: auto;
   `
 };
@@ -29,7 +44,9 @@ const styles = {
 type PageLayoutProps = {
   children: React.Node,
   className?: string,
-  controls?: React.Node[],
+  topLeftControls?: React.Node[],
+  topRightControls?: React.Node[],
+  aboveComponent?: React.AbstractComponent<{ className: string }>,
   heading?: string,
   headingContent?: React.Node,
   wide?: boolean
@@ -38,17 +55,51 @@ type PageLayoutProps = {
 export const PageLayout = ({
   children,
   className,
-  controls,
   heading,
   headingContent,
+  aboveComponent: AboveComponent,
+  topLeftControls,
+  topRightControls,
   wide
 }: PageLayoutProps) => (
-  <div className={cx(styles.page, { [styles.wide]: wide }, className)}>
-    {(heading || controls || headingContent) && (
+  <div
+    className={cx(
+      styles.page,
+      {
+        [styles.wide]: wide,
+        [styles.pageWithAbovePanel]: !!AboveComponent
+      },
+      className
+    )}
+  >
+    {!!AboveComponent && (
+      <AboveComponent className={styles.aboveHeadingPanel} />
+    )}
+    {(heading || topRightControls || headingContent) && (
       <div className={styles.headingPanel}>
-        {heading && <Text className={styles.heading} variant='h1'>{heading}</Text>}
+        {heading && (
+          <Text
+            className={cx({ [styles.divider]: !topLeftControls })}
+            variant='h1'
+          >
+            {heading}
+          </Text>
+        )}
+        {topLeftControls && (
+          <ControlsPanel
+            className={cx(styles.leftControls, styles.divider)}
+            controls={topLeftControls}
+            thin
+          />
+        )}
         {headingContent}
-        {controls && <ControlsPanel controls={controls} thin />}
+        {topRightControls && (
+          <ControlsPanel
+            className={styles.rightControls}
+            controls={topRightControls}
+            thin
+          />
+        )}
       </div>
     )}
     {children}
