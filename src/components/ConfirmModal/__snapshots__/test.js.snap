@@ -41,7 +41,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-ujymom"
+            className="css-4ti3f3"
             onClick={[MockFunction]}
             type="button"
           >
@@ -121,7 +121,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-ujymom"
+            className="css-4ti3f3"
             onClick={[MockFunction]}
             type="button"
           >
