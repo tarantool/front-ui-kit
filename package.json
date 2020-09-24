@@ -32,7 +32,7 @@
     "jest": "25.4.0",
     "lodash": "4.17.15",
     "markdown-to-jsx": "6.10.3",
-    "prismjs": "1.19.0",
+    "prismjs": "1.21.0",
     "ramda": "0.26.1",
     "react-dropzone": "11.2.0",
     "react-emotion": "9.2.6",
