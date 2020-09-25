@@ -7,7 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
-- Updated Tabbed component.
+- Updated components & improved documentation in:
+
+  - Tabbed
+  - LabeledInput
+  - FormField
+  - InputGroup
 
 - Added left controls bar to heading panel in PageLayout.
   Prop `controls` replaced with `topLeftControls` and `topRightControls`.
