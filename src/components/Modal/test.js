@@ -138,7 +138,7 @@ describe('Modal', () => {
           <Button text='Decline' onClick={action} />
         ]}
       >
-        <LabeledInput label='First input' />
+        <LabeledInput label='First input' id='first-input' />
       </Modal>
     ).toJSON();
 

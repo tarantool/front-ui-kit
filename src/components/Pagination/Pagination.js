@@ -39,11 +39,6 @@ const styles = {
     text-align: center;
     padding: 4px;
     margin: 0 4px;
-    box-shadow: none;
-
-    &:focus, &:hover, &:active {
-      box-shadow: none;
-    }
   `,
   buttonActive: css`
     color: #CF1322;
@@ -175,6 +170,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
             onClick={this.changePage(activePage - 1)}
             disabled={activePage === 1}
             icon={IconChevronLeftBlack}
+            intent='plain'
           />
         </div>
         <div>
@@ -187,6 +183,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
                 )}
                 <Button
                   className={cx(styles.button,  { [styles.buttonActive]: activePage === visiblePage })}
+                  intent='plain'
                   onClick={this.changePage(visiblePage)}
                 >
                   {visiblePage}
@@ -201,6 +198,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
             onClick={this.changePage(activePage + 1)}
             disabled={activePage === this.getPages(items)}
             icon={IconChevronRightBlack}
+            intent='plain'
           />
         </div>
         {setPageSize && (

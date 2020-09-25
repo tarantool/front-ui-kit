@@ -30,31 +30,30 @@ exports[`Modal renders modal with form 1`] = `
     <div
       className="css-i9gxme"
     >
-      <label
-        className="css-kf3i1p"
+      <div
+        className="css-1r2f04i"
       >
         <div
-          className="css-13kfgn1"
+          className="css-1v2kmxl"
         >
-          <span
+          <label
             className="css-dpor9z"
+            for="first-input"
           >
             First input
-          </span>
+          </label>
         </div>
         <div
-          className="css-4zb4"
+          className="css-u5wcni"
         >
           <input
             className="css-17erkce"
+            id="first-input"
             onBlur={[Function]}
             onFocus={[Function]}
           />
         </div>
-        <p
-          className="css-5ut22t"
-        />
-      </label>
+      </div>
     </div>
     <div
       className="css-vtqncq"

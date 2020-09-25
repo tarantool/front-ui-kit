@@ -2,40 +2,42 @@
 
 exports[`LabeledInput renders correctly 1`] = `
 Array [
-  <label
-    className="css-kf3i1p"
+  <div
+    className="css-1r2f04i"
   >
     <div
-      className="css-13kfgn1"
+      className="css-1v2kmxl"
     >
-      <span
+      <label
         className="css-dpor9z"
+        for="1"
       >
         Label
-        <div
-          className="css-vj79ep"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onScroll={[Function]}
-          placement="top"
+      </label>
+      <div
+        className="css-vj79ep"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onScroll={[Function]}
+        placement="top"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
         >
-          <svg
-            className="css-n25ly7"
-            viewBox="0 0 12 12"
-          >
-            <use
-              xlinkHref="#info"
-            />
-          </svg>
-        </div>
-      </span>
+          <use
+            xlinkHref="#info"
+          />
+        </svg>
+      </div>
     </div>
     <div
-      className="css-1yj7u74"
+      className="css-kha4rs"
       title="Input"
     >
       <input
         className="css-17erkce"
+        id="1"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -48,18 +50,19 @@ Array [
     >
       Field is required
     </p>
-  </label>,
-  <label
-    className="css-kf3i1p"
+  </div>,
+  <div
+    className="css-1r2f04i"
   >
     <div
-      className="css-13kfgn1"
+      className="css-1v2kmxl"
     >
-      <span
+      <label
         className="css-dpor9z"
+        for="2"
       >
         Label
-      </span>
+      </label>
       <span
         className="css-1dhlryp"
       >
@@ -67,11 +70,12 @@ Array [
       </span>
     </div>
     <div
-      className="css-4zb4"
+      className="css-u5wcni"
       title="Input"
     >
       <input
         className="css-16fuuzx"
+        id="2"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -98,21 +102,19 @@ Array [
         </button>
       </div>
     </div>
-    <p
-      className="css-5ut22t"
-    />
-  </label>,
-  <label
-    className="css-kf3i1p"
+  </div>,
+  <div
+    className="css-1r2f04i"
   >
     <div
-      className="css-13kfgn1"
+      className="css-1v2kmxl"
     >
-      <span
+      <label
         className="css-dpor9z"
+        for="3"
       >
         Label
-      </span>
+      </label>
       <span
         className="css-1dhlryp"
       >
@@ -120,11 +122,12 @@ Array [
       </span>
     </div>
     <div
-      className="css-4zb4"
+      className="css-u5wcni"
       title="Input"
     >
       <input
         className="css-17erkce"
+        id="3"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -137,18 +140,19 @@ Array [
     >
       Field is required
     </p>
-  </label>,
-  <label
-    className="css-kf3i1p"
+  </div>,
+  <div
+    className="css-1r2f04i"
   >
     <div
-      className="css-13kfgn1"
+      className="css-1v2kmxl"
     >
-      <span
+      <label
         className="css-dpor9z"
+        for="4"
       >
         Multiline labeled input
-      </span>
+      </label>
       <span
         className="css-1dhlryp"
       >
@@ -156,11 +160,12 @@ Array [
       </span>
     </div>
     <div
-      className="css-1izkox9"
+      className="css-15clmjk"
       title="Input"
     >
       <textarea
         className="css-17erkce"
+        id="4"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -174,6 +179,6 @@ Array [
     >
       Field is required
     </p>
-  </label>,
+  </div>,
 ]
 `;

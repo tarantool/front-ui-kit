@@ -2,15 +2,19 @@
 
 exports[`FormField renders correctly 1`] = `
 <div
-  className="css-i3pbo"
+  className="css-1r2f04i"
 >
   <div
-    className="css-14sxn20"
+    className="css-1v2kmxl"
   >
-    <span
-      className="css-dpor9z"
+    <div
+      className="css-15ums5i"
     >
-      VShard group
+      <span
+        className="css-dpor9z"
+      >
+        VShard group
+      </span>
       <div
         className="css-vj79ep"
         onMouseEnter={[Function]}
@@ -19,20 +23,20 @@ exports[`FormField renders correctly 1`] = `
         placement="top"
       >
         <svg
-          className="css-n25ly7"
-          viewBox="0 0 12 12"
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
         >
           <use
             xlinkHref="#info"
           />
         </svg>
       </div>
-    </span>
-    <span
-      className="css-1dhlryp"
-    >
-      Subtitle
-    </span>
+      <span
+        className="css-1dhlryp"
+      >
+        Subtitle
+      </span>
+    </div>
     <div
       className="css-84nudp"
     >
@@ -72,7 +76,7 @@ exports[`FormField renders correctly 1`] = `
     className="css-1w9b8ff"
   >
     <div
-      className="css-1tsv2r7"
+      className="css-1dkz5j9"
     >
       <label
         className="css-759u60"
@@ -105,7 +109,7 @@ exports[`FormField renders correctly 1`] = `
       </label>
     </div>
     <div
-      className="css-1tsv2r7"
+      className="css-1dkz5j9"
     >
       <label
         className="css-759u60"
@@ -138,7 +142,7 @@ exports[`FormField renders correctly 1`] = `
       </label>
     </div>
     <div
-      className="css-1tsv2r7"
+      className="css-1dkz5j9"
     >
       <label
         className="css-759u60"
@@ -171,7 +175,7 @@ exports[`FormField renders correctly 1`] = `
       </label>
     </div>
     <div
-      className="css-1tsv2r7"
+      className="css-1dkz5j9"
     >
       <label
         className="css-759u60"
