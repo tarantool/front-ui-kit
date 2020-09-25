@@ -105,6 +105,7 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
           onClick={this.changePage(activePage - 1)}
           disabled={activePage === 1}
           icon={IconChevronLeftBlack}
+          intent='plain'
         />
         <Text className={styles.activePage}>{activePage}</Text>
         <Button
@@ -112,6 +113,7 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
           onClick={this.changePage(activePage + 1)}
           disabled={disableNextPageButton}
           icon={IconChevronRightBlack}
+          intent='plain'
         />
         {setPageSize && (
           <Dropdown className={styles.dropDown} items={this.getDropDownItems()}>
