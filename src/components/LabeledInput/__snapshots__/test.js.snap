@@ -10,7 +10,7 @@ Array [
     >
       <label
         className="css-dpor9z"
-        for="bR9BrQpDLK-A0JmD"
+        for="1"
       >
         Label
       </label>
@@ -37,7 +37,7 @@ Array [
     >
       <input
         className="css-17erkce"
-        id="bR9BrQpDLK-A0JmD"
+        id="1"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -59,7 +59,7 @@ Array [
     >
       <label
         className="css-dpor9z"
-        for="GNVJM8CCwmhBHrun"
+        for="2"
       >
         Label
       </label>
@@ -75,7 +75,7 @@ Array [
     >
       <input
         className="css-16fuuzx"
-        id="GNVJM8CCwmhBHrun"
+        id="2"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -111,7 +111,7 @@ Array [
     >
       <label
         className="css-dpor9z"
-        for="mV1CiThrTi3PkER9"
+        for="3"
       >
         Label
       </label>
@@ -127,7 +127,7 @@ Array [
     >
       <input
         className="css-17erkce"
-        id="mV1CiThrTi3PkER9"
+        id="3"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -149,7 +149,7 @@ Array [
     >
       <label
         className="css-dpor9z"
-        for="sQfGI2phCcjH2Eup"
+        for="4"
       >
         Multiline labeled input
       </label>
@@ -165,7 +165,7 @@ Array [
     >
       <textarea
         className="css-17erkce"
-        id="sQfGI2phCcjH2Eup"
+        id="4"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}

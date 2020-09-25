@@ -13,6 +13,7 @@ it('LabeledInput renders correctly', () => {
     <>
       <LabeledInput
         label='Label'
+        id='1'
         info='Info LabeledInput component'
         message='Field is required'
         value={testValue}
@@ -24,6 +25,7 @@ it('LabeledInput renders correctly', () => {
       <LabeledInput
         inputComponent={InputPassword}
         label='Label'
+        id='2'
         subTitle='Sub title'
         value={testValue}
         placeholder='Placeholder'
@@ -32,6 +34,7 @@ it('LabeledInput renders correctly', () => {
       />
       <LabeledInput
         label='Label'
+        id='3'
         subTitle='Sub title'
         message='Field is required'
         value={testValue}
@@ -41,6 +44,7 @@ it('LabeledInput renders correctly', () => {
       />
       <LabeledInput
         label='Multiline labeled input'
+        id='4'
         subTitle='Sub title'
         message='Field is required'
         inputComponent={TextArea}

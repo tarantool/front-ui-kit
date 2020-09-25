@@ -38,7 +38,7 @@ exports[`Modal renders modal with form 1`] = `
         >
           <label
             className="css-dpor9z"
-            for="P3x8ZB7FBK-FMznD"
+            for="first-input"
           >
             First input
           </label>
@@ -48,7 +48,7 @@ exports[`Modal renders modal with form 1`] = `
         >
           <input
             className="css-17erkce"
-            id="P3x8ZB7FBK-FMznD"
+            id="first-input"
             onBlur={[Function]}
             onFocus={[Function]}
           />
