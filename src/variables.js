@@ -1,6 +1,9 @@
 // @flow
 
-export const marginSmall = '4px';
+export const appLayoutTopPanelHeight = 68;
+
+export const pageLayoutMinWidth = 922;
+export const pageLayoutMaxWidth = 1420; /* 1360 + 30 + 30 */
 
 export const baseFontFamily = `Inter, Arial, sans-serif`;
 export const monoFontFamily = `'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace`;
