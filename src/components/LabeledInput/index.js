@@ -3,7 +3,7 @@ import * as React from 'react';
 import { css, cx } from 'emotion';
 import nanoid from '../../utils/nanoid';
 import { colors } from '../../variables';
-import { Input } from '../Input';
+import { Input, type InputProps } from '../Input';
 import { Text } from '../Text';
 import { Tooltip } from '../Tooltip';
 import { IconInfo } from '../Icon';
@@ -24,6 +24,7 @@ const styles = {
 };
 
 type LabeledInputProps = {
+  ...InputProps,
   inputComponent?: React.AbstractComponent<any>,
   inputClassName?: string,
   className?: string,
