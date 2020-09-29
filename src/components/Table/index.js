@@ -5,17 +5,18 @@ import {
   useTable, useSortBy, usePagination, useRowSelect, useMountedLayoutEffect,
   type UseTableOptions, Row, ColumnInstance, UseSortByColumnProps
 } from 'react-table';
-
 import { css, cx } from 'emotion';
+
 import { Text } from '../Text';
+import { Button } from '../Button';
 import { Spin } from '../Spin';
 import { NonIdealState } from '../NonIdealState';
-import TableRow from './TableRow';
 import { IconHelperSortable } from '../IconHelper';
 import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
 import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
 import { colors } from '../../variables';
+import TableRow from './TableRow';
 
 
 const styles = {
@@ -24,12 +25,6 @@ const styles = {
     width: 100%;
     border-spacing: initial;
   `,
-  spin: css`
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  `,
   head: css`
     color: ${colors.dark65};
     font-weight: 600;
@@ -37,14 +32,24 @@ const styles = {
     padding: 12px 16px;
     text-align: left;
   `,
-  sortIcon: css`
-    padding: 4px;
-    margin-left: 8px;
-    vertical-align: middle;
+  buttonSort: css`
+    background-color: transparent;
+    box-shadow: none;
+    margin-left: 4px;
     &:hover {
-      background: #D9DADD;
+      background-color: ${colors.intentBase};
+    }
+  `,
+  columnSorted: css`
+    display: inline-block;
+    padding: 1px 6px;
+    &:hover {
       border-radius: 2px;
-      fill: ${colors.dark65}
+      background-color: ${colors.intentBase};
+      
+      svg {
+        fill: ${colors.dark65} !important;
+      }
     }
   `,
   noData: css`
@@ -87,6 +92,7 @@ type TableProps = UseTableOptions & RowProps & {
   onSelectedRowsChange?: (selectedFlatRows: Row[], selectedRowIds: any[]) => void,
   tableKey?: string;
   initialSelectedRowIds?: any[],
+  initialSortBy?: Array<{ id: string, desc: boolean }>
 };
 
 function getSortDirection(isSortedDesc?: boolean) {
@@ -112,6 +118,7 @@ export function Table(props: TableProps) {
     onSelectedRowsChange,
     tableKey,
     initialSelectedRowIds = [],
+    initialSortBy = [],
     manualPagination,
     loading = false
   } = props;
@@ -139,7 +146,7 @@ export function Table(props: TableProps) {
       columns,
       data,
       getRowId,
-      initialState: { selectedRowIds: initialSelectedRowIds },
+      initialState: { selectedRowIds: initialSelectedRowIds, sortBy: initialSortBy },
       manualPagination: !!manualPagination,
       autoResetSelectedRows: !manualPagination,
       autoResetSortBy: !manualPagination
@@ -188,14 +195,23 @@ export function Table(props: TableProps) {
                       className={cx(styles.head)}
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                       onClick={sortColumn}
+                      title=""
                     >
-                      {column.render('Header')}
-                      {column.canSort && (
-                        <IconHelperSortable
-                          className={cx(styles.sortIcon)}
-                          sort={getSortDirection(column.isSortedDesc)}
-                        />
-                      )}
+                      <div className={cx({ [styles.columnSorted]: column.canSort })}>
+                        {column.render('Header')}
+                        {column.canSort && (
+                          <Button
+                            size="s"
+                            className={styles.buttonSort}
+                            icon={props => (
+                              <IconHelperSortable
+                                {...props}
+                                sort={getSortDirection(column.isSortedDesc)}
+                              />
+                            )}
+                          />
+                        )}
+                      </div>
                     </Text>
                   )
                 }

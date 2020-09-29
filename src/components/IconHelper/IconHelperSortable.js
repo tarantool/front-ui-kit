@@ -6,7 +6,7 @@ import { IconSortableAsc, IconSortableDesc, type GenericIconProps } from '../Ico
 
 type IconSortableProps = $Exact<GenericIconProps & { sort?: 'asc' | 'desc' }>
 
-const indeterminateStyle = css`fill: ${colors.dark10};`;
+const indeterminateStyle = css`fill: ${colors.dark10} !important;`;
 
 export const IconHelperSortable = ({ sort, className, ...props }: IconSortableProps) => {
   switch (sort) {
