@@ -104,13 +104,13 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
   renderOverflow = (items: any[]) => {
     const { onLinkClick } = this.props;
     const itemsCollection = (
-        <>
-          {items.map(item => (
-            <DropdownItem onClick={() => onLinkClick && onLinkClick(item.path)}>
-              {item.title}
-            </DropdownItem>
-          ))}
-        </>
+      <>
+        {items.map(item => (
+          <DropdownItem onClick={() => onLinkClick && onLinkClick(item.path)}>
+            {item.title}
+          </DropdownItem>
+        ))}
+      </>
     );
 
     return (
