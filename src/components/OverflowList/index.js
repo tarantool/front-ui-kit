@@ -110,7 +110,7 @@ export class OverflowList<T> extends React.Component<IOverflowListProps<T>, IOve
       overflow,
       this.state.visible.map(visibleItemRenderer),
       null,
-      <div className={styles.overflowListSpacer} ref={ref => (this.spacer = ref)}/>,
+      <div className={styles.overflowListSpacer} ref={ref => (this.spacer = ref)}/>
     );
 
     return (

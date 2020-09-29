@@ -118,7 +118,7 @@ export function Table(props: TableProps) {
 
   const getRowId = React.useCallback((row, index) => {
     return tableKey && row[tableKey] ? row[tableKey] : index;
-  }, []);
+  }, [tableKey]);
 
 
   const {

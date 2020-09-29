@@ -157,7 +157,7 @@ export class Input extends React.Component<InputProps, InputState> {
             {
               [styles.inputWithAddition]: hasAddition,
               [styles.inputWithIcon]: rightIcon || onClearClick
-            },
+            }
           )}
           disabled={disabled}
           name={name}
