@@ -52,8 +52,7 @@ type UploadZoneProps = {
   className?: string,
   title?: string,
   subTitle?: string,
-  loading?: bool,
-  files?: Array<File>
+  loading?: bool
 }
 
 export const UploadZone = (
@@ -65,8 +64,7 @@ export const UploadZone = (
     className,
     title,
     subTitle,
-    loading,
-    files
+    loading
   }: UploadZoneProps
 ) => {
   const Icon = loading ? IconSpinner : IconBox;
