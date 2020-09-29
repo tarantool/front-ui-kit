@@ -3,97 +3,91 @@
 exports[`UploadZone renders correctly 1`] = `
 Array [
   <div
-    className="css-k008qs"
+    className="css-1lprqfg"
+    isDragAccept={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
   >
-    <div
-      className="css-9zwmpv e1iml2wq0"
-      onBlur={[Function]}
+    <input
+      accept=""
+      autoComplete="off"
+      multiple={true}
+      onChange={[Function]}
       onClick={[Function]}
-      onDragEnter={[Function]}
-      onDragLeave={[Function]}
-      onDragOver={[Function]}
-      onDrop={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={0}
-    >
-      <input
-        accept=""
-        autoComplete="off"
-        multiple={true}
-        onChange={[Function]}
-        onClick={[Function]}
-        style={
-          Object {
-            "display": "none",
-          }
+      style={
+        Object {
+          "display": "none",
         }
-        tabIndex={-1}
-        type="file"
+      }
+      tabIndex={-1}
+      type="file"
+    />
+    <svg
+      className="css-1s394po"
+      viewBox="0 0 48 48"
+    >
+      <use
+        xlinkHref="#icon-box"
       />
-      <svg
-        className="css-1s394po"
-        viewBox="0 0 48 48"
-      >
-        <use
-          xlinkHref="#icon-box"
-        />
-      </svg>
-      <span
-        className="css-1ayss2c"
-      >
-        Click or drag file to this area to upload
-      </span>
-    </div>
+    </svg>
+    <span
+      className="css-1ayss2c"
+    >
+      Click or drag file to this area to upload
+    </span>
   </div>,
   <div
-    className="css-k008qs"
+    className="css-1lprqfg"
+    isDragAccept={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
   >
-    <div
-      className="css-9zwmpv e1iml2wq0"
-      onBlur={[Function]}
+    <input
+      accept=""
+      autoComplete="off"
+      multiple={true}
+      onChange={[Function]}
       onClick={[Function]}
-      onDragEnter={[Function]}
-      onDragLeave={[Function]}
-      onDragOver={[Function]}
-      onDrop={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={0}
-    >
-      <input
-        accept=""
-        autoComplete="off"
-        multiple={true}
-        onChange={[Function]}
-        onClick={[Function]}
-        style={
-          Object {
-            "display": "none",
-          }
+      style={
+        Object {
+          "display": "none",
         }
-        tabIndex={-1}
-        type="file"
+      }
+      tabIndex={-1}
+      type="file"
+    />
+    <svg
+      className="css-1s394po"
+      viewBox="0 0 48 48"
+    >
+      <use
+        xlinkHref="#icon-box"
       />
-      <svg
-        className="css-1s394po"
-        viewBox="0 0 48 48"
-      >
-        <use
-          xlinkHref="#icon-box"
-        />
-      </svg>
-      <span
-        className="css-1ayss2c"
-      >
-        Main title
-      </span>
-      <span
-        className="css-1ucgzvb"
-      >
-        Second title
-      </span>
-    </div>
+    </svg>
+    <span
+      className="css-1ayss2c"
+    >
+      Main title
+    </span>
+    <span
+      className="css-1vbnrud"
+    >
+      Second title
+    </span>
   </div>,
 ]
 `;
