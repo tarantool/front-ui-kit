@@ -26,8 +26,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              First Name
+              <div
+                className=""
+              >
+                First Name
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -39,8 +44,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Last Name
+              <div
+                className=""
+              >
+                Last Name
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -52,8 +62,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Age
+              <div
+                className=""
+              >
+                Age
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -65,8 +80,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Visits
+              <div
+                className=""
+              >
+                Visits
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -78,8 +98,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Status
+              <div
+                className=""
+              >
+                Status
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -91,17 +116,26 @@ Array [
                   "cursor": "pointer",
                 }
               }
-              title="Toggle SortBy"
+              title=""
             >
-              Profile Progress
-              <svg
-                className="css-isnvrk"
-                viewBox="0 0 16 16"
+              <div
+                className="css-1wo1t9g"
               >
-                <use
-                  xlinkHref="#icon-sort-desc"
-                />
-              </svg>
+                Profile Progress
+                <button
+                  className="css-1fqqyqz"
+                  type="button"
+                >
+                  <svg
+                    className="css-101sf4d"
+                    viewBox="0 0 16 16"
+                  >
+                    <use
+                      xlinkHref="#icon-sort-desc"
+                    />
+                  </svg>
+                </button>
+              </div>
             </th>
           </tr>
         </thead>
@@ -159,8 +193,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              First Name
+              <div
+                className=""
+              >
+                First Name
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -172,8 +211,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Last Name
+              <div
+                className=""
+              >
+                Last Name
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -185,8 +229,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Age
+              <div
+                className=""
+              >
+                Age
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -198,8 +247,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Visits
+              <div
+                className=""
+              >
+                Visits
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -211,8 +265,13 @@ Array [
                   "cursor": undefined,
                 }
               }
+              title=""
             >
-              Status
+              <div
+                className=""
+              >
+                Status
+              </div>
             </th>
             <th
               className="css-1bpu65y"
@@ -224,17 +283,26 @@ Array [
                   "cursor": "pointer",
                 }
               }
-              title="Toggle SortBy"
+              title=""
             >
-              Profile Progress
-              <svg
-                className="css-isnvrk"
-                viewBox="0 0 16 16"
+              <div
+                className="css-1wo1t9g"
               >
-                <use
-                  xlinkHref="#icon-sort-desc"
-                />
-              </svg>
+                Profile Progress
+                <button
+                  className="css-1fqqyqz"
+                  type="button"
+                >
+                  <svg
+                    className="css-101sf4d"
+                    viewBox="0 0 16 16"
+                  >
+                    <use
+                      xlinkHref="#icon-sort-desc"
+                    />
+                  </svg>
+                </button>
+              </div>
             </th>
           </tr>
         </thead>
@@ -296,8 +364,13 @@ exports[`Table renders simple 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            First Name
+            <div
+              className=""
+            >
+              First Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -309,8 +382,13 @@ exports[`Table renders simple 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Last Name
+            <div
+              className=""
+            >
+              Last Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -322,8 +400,13 @@ exports[`Table renders simple 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Age
+            <div
+              className=""
+            >
+              Age
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -335,8 +418,13 @@ exports[`Table renders simple 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Visits
+            <div
+              className=""
+            >
+              Visits
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -348,8 +436,13 @@ exports[`Table renders simple 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Status
+            <div
+              className=""
+            >
+              Status
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -361,17 +454,26 @@ exports[`Table renders simple 1`] = `
                 "cursor": "pointer",
               }
             }
-            title="Toggle SortBy"
+            title=""
           >
-            Profile Progress
-            <svg
-              className="css-isnvrk"
-              viewBox="0 0 16 16"
+            <div
+              className="css-1wo1t9g"
             >
-              <use
-                xlinkHref="#icon-sort-desc"
-              />
-            </svg>
+              Profile Progress
+              <button
+                className="css-1fqqyqz"
+                type="button"
+              >
+                <svg
+                  className="css-101sf4d"
+                  viewBox="0 0 16 16"
+                >
+                  <use
+                    xlinkHref="#icon-sort-desc"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
@@ -614,8 +716,13 @@ exports[`Table renders with code row 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            First Name
+            <div
+              className=""
+            >
+              First Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -627,8 +734,13 @@ exports[`Table renders with code row 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Last Name
+            <div
+              className=""
+            >
+              Last Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -640,8 +752,13 @@ exports[`Table renders with code row 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Age
+            <div
+              className=""
+            >
+              Age
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -653,8 +770,13 @@ exports[`Table renders with code row 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Visits
+            <div
+              className=""
+            >
+              Visits
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -666,8 +788,13 @@ exports[`Table renders with code row 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Status
+            <div
+              className=""
+            >
+              Status
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -679,17 +806,26 @@ exports[`Table renders with code row 1`] = `
                 "cursor": "pointer",
               }
             }
-            title="Toggle SortBy"
+            title=""
           >
-            Profile Progress
-            <svg
-              className="css-isnvrk"
-              viewBox="0 0 16 16"
+            <div
+              className="css-1wo1t9g"
             >
-              <use
-                xlinkHref="#icon-sort-desc"
-              />
-            </svg>
+              Profile Progress
+              <button
+                className="css-1fqqyqz"
+                type="button"
+              >
+                <svg
+                  className="css-101sf4d"
+                  viewBox="0 0 16 16"
+                >
+                  <use
+                    xlinkHref="#icon-sort-desc"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
@@ -990,31 +1126,36 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            <label
-              className="css-759u60"
-              title="Toggle All Rows Selected"
+            <div
+              className=""
             >
-              <input
-                checked={false}
-                className="css-1rbhmzp"
-                disabled={false}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <div
-                className="css-79elbk"
+              <label
+                className="css-759u60"
+                title="Toggle All Rows Selected"
               >
-                <svg
-                  className="css-1v31moo"
-                  viewBox="0 0 16 16"
+                <input
+                  checked={false}
+                  className="css-1rbhmzp"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="css-79elbk"
                 >
-                  <use
-                    xlinkHref="#checkbox"
-                  />
-                </svg>
-              </div>
-            </label>
+                  <svg
+                    className="css-1v31moo"
+                    viewBox="0 0 16 16"
+                  >
+                    <use
+                      xlinkHref="#checkbox"
+                    />
+                  </svg>
+                </div>
+              </label>
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1026,8 +1167,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            First Name
+            <div
+              className=""
+            >
+              First Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1039,8 +1185,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Last Name
+            <div
+              className=""
+            >
+              Last Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1052,8 +1203,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Age
+            <div
+              className=""
+            >
+              Age
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1065,8 +1221,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Visits
+            <div
+              className=""
+            >
+              Visits
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1078,8 +1239,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Status
+            <div
+              className=""
+            >
+              Status
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1091,17 +1257,26 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
                 "cursor": "pointer",
               }
             }
-            title="Toggle SortBy"
+            title=""
           >
-            Profile Progress
-            <svg
-              className="css-isnvrk"
-              viewBox="0 0 16 16"
+            <div
+              className="css-1wo1t9g"
             >
-              <use
-                xlinkHref="#icon-sort-desc"
-              />
-            </svg>
+              Profile Progress
+              <button
+                className="css-1fqqyqz"
+                type="button"
+              >
+                <svg
+                  className="css-101sf4d"
+                  viewBox="0 0 16 16"
+                >
+                  <use
+                    xlinkHref="#icon-sort-desc"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
@@ -1575,8 +1750,13 @@ exports[`Table renders with pagination 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            First Name
+            <div
+              className=""
+            >
+              First Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1588,8 +1768,13 @@ exports[`Table renders with pagination 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Last Name
+            <div
+              className=""
+            >
+              Last Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1601,8 +1786,13 @@ exports[`Table renders with pagination 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Age
+            <div
+              className=""
+            >
+              Age
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1614,8 +1804,13 @@ exports[`Table renders with pagination 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Visits
+            <div
+              className=""
+            >
+              Visits
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1627,8 +1822,13 @@ exports[`Table renders with pagination 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Status
+            <div
+              className=""
+            >
+              Status
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -1640,17 +1840,26 @@ exports[`Table renders with pagination 1`] = `
                 "cursor": "pointer",
               }
             }
-            title="Toggle SortBy"
+            title=""
           >
-            Profile Progress
-            <svg
-              className="css-isnvrk"
-              viewBox="0 0 16 16"
+            <div
+              className="css-1wo1t9g"
             >
-              <use
-                xlinkHref="#icon-sort-desc"
-              />
-            </svg>
+              Profile Progress
+              <button
+                className="css-1fqqyqz"
+                type="button"
+              >
+                <svg
+                  className="css-101sf4d"
+                  viewBox="0 0 16 16"
+                >
+                  <use
+                    xlinkHref="#icon-sort-desc"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
@@ -2031,31 +2240,36 @@ exports[`Table renders with pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            <label
-              className="css-759u60"
-              title="Toggle All Rows Selected"
+            <div
+              className=""
             >
-              <input
-                checked={false}
-                className="css-1rbhmzp"
-                disabled={false}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <div
-                className="css-79elbk"
+              <label
+                className="css-759u60"
+                title="Toggle All Rows Selected"
               >
-                <svg
-                  className="css-1v31moo"
-                  viewBox="0 0 16 16"
+                <input
+                  checked={false}
+                  className="css-1rbhmzp"
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="css-79elbk"
                 >
-                  <use
-                    xlinkHref="#checkbox"
-                  />
-                </svg>
-              </div>
-            </label>
+                  <svg
+                    className="css-1v31moo"
+                    viewBox="0 0 16 16"
+                  >
+                    <use
+                      xlinkHref="#checkbox"
+                    />
+                  </svg>
+                </div>
+              </label>
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -2067,8 +2281,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            First Name
+            <div
+              className=""
+            >
+              First Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -2080,8 +2299,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Last Name
+            <div
+              className=""
+            >
+              Last Name
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -2093,8 +2317,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Age
+            <div
+              className=""
+            >
+              Age
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -2106,8 +2335,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Visits
+            <div
+              className=""
+            >
+              Visits
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -2119,8 +2353,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
                 "cursor": undefined,
               }
             }
+            title=""
           >
-            Status
+            <div
+              className=""
+            >
+              Status
+            </div>
           </th>
           <th
             className="css-1bpu65y"
@@ -2132,17 +2371,26 @@ exports[`Table renders with pagination and selected rows 1`] = `
                 "cursor": "pointer",
               }
             }
-            title="Toggle SortBy"
+            title=""
           >
-            Profile Progress
-            <svg
-              className="css-isnvrk"
-              viewBox="0 0 16 16"
+            <div
+              className="css-1wo1t9g"
             >
-              <use
-                xlinkHref="#icon-sort-desc"
-              />
-            </svg>
+              Profile Progress
+              <button
+                className="css-1fqqyqz"
+                type="button"
+              >
+                <svg
+                  className="css-101sf4d"
+                  viewBox="0 0 16 16"
+                >
+                  <use
+                    xlinkHref="#icon-sort-desc"
+                  />
+                </svg>
+              </button>
+            </div>
           </th>
         </tr>
       </thead>
