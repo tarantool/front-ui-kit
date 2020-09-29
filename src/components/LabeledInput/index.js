@@ -40,7 +40,7 @@ type LabeledInputProps = {
 };
 
 export class LabeledInput extends React.Component<LabeledInputProps> {
-  defaultProps = {
+  static defaultProps = {
     preserveMessageSpace: true
   };
 
