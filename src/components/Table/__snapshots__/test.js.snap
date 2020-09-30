@@ -19,123 +19,44 @@ Array [
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                First Name
-              </div>
+              First Name
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Last Name
-              </div>
+              Last Name
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Age
-              </div>
+              Age
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Visits
-              </div>
+              Visits
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Status
-              </div>
+              Status
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": "pointer",
-                }
-              }
-              title=""
             >
-              <div
-                className="css-1wo1t9g"
-              >
-                Profile Progress
-                <button
-                  className="css-1fqqyqz"
-                  type="button"
-                >
-                  <svg
-                    className="css-101sf4d"
-                    viewBox="0 0 16 16"
-                  >
-                    <use
-                      xlinkHref="#icon-sort-desc"
-                    />
-                  </svg>
-                </button>
-              </div>
+              Profile Progress
             </th>
           </tr>
         </thead>
@@ -186,123 +107,44 @@ Array [
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                First Name
-              </div>
+              First Name
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Last Name
-              </div>
+              Last Name
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Age
-              </div>
+              Age
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Visits
-              </div>
+              Visits
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": undefined,
-                }
-              }
-              title=""
             >
-              <div
-                className=""
-              >
-                Status
-              </div>
+              Status
             </th>
             <th
               className="css-1bpu65y"
               colSpan={1}
-              onClick={[Function]}
               role="columnheader"
-              style={
-                Object {
-                  "cursor": "pointer",
-                }
-              }
-              title=""
             >
-              <div
-                className="css-1wo1t9g"
-              >
-                Profile Progress
-                <button
-                  className="css-1fqqyqz"
-                  type="button"
-                >
-                  <svg
-                    className="css-101sf4d"
-                    viewBox="0 0 16 16"
-                  >
-                    <use
-                      xlinkHref="#icon-sort-desc"
-                    />
-                  </svg>
-                </button>
-              </div>
+              Profile Progress
             </th>
           </tr>
         </thead>
@@ -357,123 +199,58 @@ exports[`Table renders simple 1`] = `
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              First Name
-            </div>
+            First Name
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Last Name
-            </div>
+            Last Name
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Age
-            </div>
+            Age
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Visits
-            </div>
+            Visits
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Status
-            </div>
+            Status
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            title=""
           >
-            <div
-              className="css-1wo1t9g"
+            <button
+              className="css-1sadpum"
+              onClick={[Function]}
+              type="button"
             >
               Profile Progress
-              <button
-                className="css-1fqqyqz"
-                type="button"
+              <svg
+                className="css-65v3cp"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-101sf4d"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#icon-sort-desc"
-                  />
-                </svg>
-              </button>
-            </div>
+                <use
+                  xlinkHref="#icon-sort-desc"
+                />
+              </svg>
+            </button>
           </th>
         </tr>
       </thead>
@@ -709,123 +486,58 @@ exports[`Table renders with code row 1`] = `
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              First Name
-            </div>
+            First Name
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Last Name
-            </div>
+            Last Name
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Age
-            </div>
+            Age
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Visits
-            </div>
+            Visits
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Status
-            </div>
+            Status
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            title=""
           >
-            <div
-              className="css-1wo1t9g"
+            <button
+              className="css-1sadpum"
+              onClick={[Function]}
+              type="button"
             >
               Profile Progress
-              <button
-                className="css-1fqqyqz"
-                type="button"
+              <svg
+                className="css-65v3cp"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-101sf4d"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#icon-sort-desc"
-                  />
-                </svg>
-              </button>
-            </div>
+                <use
+                  xlinkHref="#icon-sort-desc"
+                />
+              </svg>
+            </button>
           </th>
         </tr>
       </thead>
@@ -1119,164 +831,88 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
+            <label
+              className="css-759u60"
+              title="Toggle All Rows Selected"
             >
-              <label
-                className="css-759u60"
-                title="Toggle All Rows Selected"
-              >
-                <input
-                  checked={false}
-                  className="css-1rbhmzp"
-                  disabled={false}
-                  onChange={[Function]}
-                  type="checkbox"
-                />
-                <div
-                  className="css-79elbk"
-                >
-                  <svg
-                    className="css-1v31moo"
-                    viewBox="0 0 16 16"
-                  >
-                    <use
-                      xlinkHref="#checkbox"
-                    />
-                  </svg>
-                </div>
-              </label>
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              First Name
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Last Name
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Age
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Visits
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Status
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            title=""
-          >
-            <div
-              className="css-1wo1t9g"
-            >
-              Profile Progress
-              <button
-                className="css-1fqqyqz"
-                type="button"
+              <input
+                checked={false}
+                className="css-1rbhmzp"
+                disabled={false}
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <div
+                className="css-79elbk"
               >
                 <svg
-                  className="css-101sf4d"
+                  className="css-1v31moo"
                   viewBox="0 0 16 16"
                 >
                   <use
-                    xlinkHref="#icon-sort-desc"
+                    xlinkHref="#checkbox"
                   />
                 </svg>
-              </button>
-            </div>
+              </div>
+            </label>
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            First Name
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Last Name
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Age
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Visits
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Status
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            <button
+              className="css-1sadpum"
+              onClick={[Function]}
+              type="button"
+            >
+              Profile Progress
+              <svg
+                className="css-65v3cp"
+                viewBox="0 0 16 16"
+              >
+                <use
+                  xlinkHref="#icon-sort-desc"
+                />
+              </svg>
+            </button>
           </th>
         </tr>
       </thead>
@@ -1743,123 +1379,58 @@ exports[`Table renders with pagination 1`] = `
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              First Name
-            </div>
+            First Name
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Last Name
-            </div>
+            Last Name
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Age
-            </div>
+            Age
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Visits
-            </div>
+            Visits
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
-            >
-              Status
-            </div>
+            Status
           </th>
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            title=""
           >
-            <div
-              className="css-1wo1t9g"
+            <button
+              className="css-1sadpum"
+              onClick={[Function]}
+              type="button"
             >
               Profile Progress
-              <button
-                className="css-1fqqyqz"
-                type="button"
+              <svg
+                className="css-65v3cp"
+                viewBox="0 0 16 16"
               >
-                <svg
-                  className="css-101sf4d"
-                  viewBox="0 0 16 16"
-                >
-                  <use
-                    xlinkHref="#icon-sort-desc"
-                  />
-                </svg>
-              </button>
-            </div>
+                <use
+                  xlinkHref="#icon-sort-desc"
+                />
+              </svg>
+            </button>
           </th>
         </tr>
       </thead>
@@ -2233,164 +1804,88 @@ exports[`Table renders with pagination and selected rows 1`] = `
           <th
             className="css-1bpu65y"
             colSpan={1}
-            onClick={[Function]}
             role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
           >
-            <div
-              className=""
+            <label
+              className="css-759u60"
+              title="Toggle All Rows Selected"
             >
-              <label
-                className="css-759u60"
-                title="Toggle All Rows Selected"
-              >
-                <input
-                  checked={false}
-                  className="css-1rbhmzp"
-                  disabled={false}
-                  onChange={[Function]}
-                  type="checkbox"
-                />
-                <div
-                  className="css-79elbk"
-                >
-                  <svg
-                    className="css-1v31moo"
-                    viewBox="0 0 16 16"
-                  >
-                    <use
-                      xlinkHref="#checkbox"
-                    />
-                  </svg>
-                </div>
-              </label>
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              First Name
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Last Name
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Age
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Visits
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": undefined,
-              }
-            }
-            title=""
-          >
-            <div
-              className=""
-            >
-              Status
-            </div>
-          </th>
-          <th
-            className="css-1bpu65y"
-            colSpan={1}
-            onClick={[Function]}
-            role="columnheader"
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            title=""
-          >
-            <div
-              className="css-1wo1t9g"
-            >
-              Profile Progress
-              <button
-                className="css-1fqqyqz"
-                type="button"
+              <input
+                checked={false}
+                className="css-1rbhmzp"
+                disabled={false}
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <div
+                className="css-79elbk"
               >
                 <svg
-                  className="css-101sf4d"
+                  className="css-1v31moo"
                   viewBox="0 0 16 16"
                 >
                   <use
-                    xlinkHref="#icon-sort-desc"
+                    xlinkHref="#checkbox"
                   />
                 </svg>
-              </button>
-            </div>
+              </div>
+            </label>
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            First Name
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Last Name
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Age
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Visits
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            Status
+          </th>
+          <th
+            className="css-1bpu65y"
+            colSpan={1}
+            role="columnheader"
+          >
+            <button
+              className="css-1sadpum"
+              onClick={[Function]}
+              type="button"
+            >
+              Profile Progress
+              <svg
+                className="css-65v3cp"
+                viewBox="0 0 16 16"
+              >
+                <use
+                  xlinkHref="#icon-sort-desc"
+                />
+              </svg>
+            </button>
           </th>
         </tr>
       </thead>
