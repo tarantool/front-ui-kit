@@ -33,18 +33,7 @@ const styles = {
     text-align: left;
   `,
   buttonSort: css`
-    background-color: transparent;
-    box-shadow: none;
-    margin-left: 4px;
     &:hover {
-      background-color: ${colors.intentBase};
-    }
-  `,
-  columnSorted: css`
-    display: inline-block;
-    padding: 1px 6px;
-    &:hover {
-      border-radius: 2px;
       background-color: ${colors.intentBase};
       
       svg {
@@ -192,26 +181,27 @@ export function Table(props: TableProps) {
                   return (
                     <Text
                       tag='th'
-                      className={cx(styles.head)}
-                      {...column.getHeaderProps(column.getSortByToggleProps())}
-                      onClick={sortColumn}
-                      title=""
+                      className={styles.head}
+                      {...column.getHeaderProps()}
                     >
-                      <div className={cx({ [styles.columnSorted]: column.canSort })}>
-                        {column.render('Header')}
-                        {column.canSort && (
+                      {
+                        column.canSort && dataRows.length > 0
+                          ?
                           <Button
-                            size="s"
+                            intent="plain"
                             className={styles.buttonSort}
-                            icon={props => (
+                            onClick={dataRows.length > 0 ? sortColumn : undefined}
+                            iconRight={props => (
                               <IconHelperSortable
                                 {...props}
                                 sort={getSortDirection(column.isSortedDesc)}
                               />
                             )}
-                          />
-                        )}
-                      </div>
+                          >
+                            {column.render('Header')}
+                          </Button>
+                          : column.render('Header')
+                      }
                     </Text>
                   )
                 }
