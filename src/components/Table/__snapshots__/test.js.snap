@@ -237,7 +237,7 @@ exports[`Table renders simple 1`] = `
             role="columnheader"
           >
             <button
-              className="css-1sadpum"
+              className="css-12bcu2p"
               onClick={[Function]}
               type="button"
             >
@@ -524,7 +524,7 @@ exports[`Table renders with code row 1`] = `
             role="columnheader"
           >
             <button
-              className="css-1sadpum"
+              className="css-12bcu2p"
               onClick={[Function]}
               type="button"
             >
@@ -899,7 +899,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             role="columnheader"
           >
             <button
-              className="css-1sadpum"
+              className="css-12bcu2p"
               onClick={[Function]}
               type="button"
             >
@@ -1417,7 +1417,7 @@ exports[`Table renders with pagination 1`] = `
             role="columnheader"
           >
             <button
-              className="css-1sadpum"
+              className="css-12bcu2p"
               onClick={[Function]}
               type="button"
             >
@@ -1872,7 +1872,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             role="columnheader"
           >
             <button
-              className="css-1sadpum"
+              className="css-12bcu2p"
               onClick={[Function]}
               type="button"
             >

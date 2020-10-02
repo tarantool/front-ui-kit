@@ -33,6 +33,12 @@ const styles = {
     text-align: left;
   `,
   buttonSort: css`
+    margin-left: -16px;
+    font-weight: 600;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.07s;
+    transition-property: fill;
+
     &:hover {
       background-color: ${colors.intentBase};
       
