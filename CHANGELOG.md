@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added default sorting in Table, improved table sorting UX.
 
+- Updated IconDownload.
+
 ## [0.25.1] - 2020-09-29
 
 - LabeledInput hotfix.
