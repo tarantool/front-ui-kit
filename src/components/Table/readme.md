@@ -167,6 +167,9 @@ const data = React.useMemo(
     data={data}
     codeRowKey='code'
     onCodeRowClick={r => console.log('code row clicked', r)}
+    initialSortBy={[
+      { id: 'progress', desc: false },
+    ]}
   />
 </div>
 ```
