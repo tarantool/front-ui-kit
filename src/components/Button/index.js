@@ -7,6 +7,7 @@ import { IconSpinner } from '../Icon';
 
 const styles = {
   button: css`
+    white-space: nowrap;
     border: none;
     border-radius: 4px;
     box-sizing: border-box;
