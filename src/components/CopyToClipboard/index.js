@@ -39,38 +39,18 @@ export const copyToClipboard = (str: string) => {
 };
 
 type withCopyToClipboardProps = {
-  content: string
-}
-
-// TODO: improve HOC with tooltop from CopyToClipboard
-export const withCopyToClipboard = (
-  Component: React.AbstractComponent<any>
-) => (
-  { content, ...props }: withCopyToClipboardProps
-) => (
-  <Component
-    {...props}
-    onClick={() => copyToClipboard(content)}
-  />
-);
-
-type CopyToClipboardProps = {|
-  ...$Exact<$Rest<
-    ButtonProps,
-    { onClick: (e: MouseEvent) => void }
-  >>,
   content: string,
   tooltipContent?: string,
-  tooltipContentCopied?: string,
-|}
+  tooltipContentCopied?: string
+}
 
 type CopyToClipboardState = {
   clicked: boolean
 }
 
-const ButtonWithTooltip = withTooltip(Button);
-
-export class CopyToClipboard extends React.Component<CopyToClipboardProps, CopyToClipboardState> {
+export const withCopyToClipboard = (
+  Component: React.AbstractComponent<any>
+) => class extends React.Component<withCopyToClipboardProps, CopyToClipboardState> {
   static defaultProps = {
     tooltipContent: 'Copy to clipboard',
     tooltipContentCopied: 'Copied'
@@ -103,23 +83,44 @@ export class CopyToClipboard extends React.Component<CopyToClipboardProps, CopyT
 
   render() {
     const {
-      icon,
+      content,
       tooltipContent,
       tooltipContentCopied,
-      content,
-      ...props
+      ...restProps
     } = this.props;
-
     const { clicked } = this.state;
 
+    const ComponentWithTooltip = withTooltip(Component);
+
     return (
-      <ButtonWithTooltip
-        {...props}
+      <ComponentWithTooltip
+        {...restProps}
         tooltipContent={clicked ? tooltipContentCopied : tooltipContent}
-        icon={icon || IconNewWindow}
         onClick={this.handleClick}
         onMouseLeave={this.resetClickedState}
       />
     );
   }
 }
+
+type CopyToClipboardProps = {|
+  ...$Exact<$Rest<
+    ButtonProps,
+    { onClick: (e: MouseEvent) => void }
+  >>,
+  ...$Exact<withCopyToClipboardProps>
+|}
+
+const CopyButton = withCopyToClipboard(Button);
+
+export const CopyToClipboard = (
+  {
+    icon,
+    ...rest
+  }: CopyToClipboardProps
+) => (
+  <CopyButton
+    {...rest}
+    icon={icon || IconNewWindow}
+  />
+);

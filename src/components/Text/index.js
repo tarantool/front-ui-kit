@@ -103,7 +103,7 @@ type TextProps = {
   // colorVariant?: 'inherit' | 'primary' | 'secondary' | 'disabled' | 'white' | 'error',
 };
 
-export const Text = (
+export const Text = React.forwardRef<TextProps, HTMLElement>((
   {
     className,
     children,
@@ -112,7 +112,8 @@ export const Text = (
     noCase,
     variant = 'basic',
     ...props
-  }: TextProps
+  }: TextProps,
+  ref
 ) => {
   const Element = tag || (variant === 'basic' ? 'span' : variant);
 
@@ -127,8 +128,9 @@ export const Text = (
         },
         className
       )}
+      ref={ref}
     >
       {children}
     </Element>
   );
-};
+});
