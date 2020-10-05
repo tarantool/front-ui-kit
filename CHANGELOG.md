@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated IconDownload.
 
+- withCopyToClipboard HOC always shows tooltip.
+
 ## [0.25.1] - 2020-09-29
 
 - LabeledInput hotfix.
