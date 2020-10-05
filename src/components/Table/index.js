@@ -38,7 +38,8 @@ const styles = {
     transition-timing-function: ease-in-out;
     transition-duration: 0.07s;
     transition-property: fill;
-
+    white-space: nowrap;
+    
     &:hover {
       background-color: ${colors.intentBase};
       
