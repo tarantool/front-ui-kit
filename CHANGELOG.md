@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Hotfix for tooltip in withCopyToClipboard HOC.
 
+- Fix unexpected wrapping in Button.
+
 ## [0.26.0] - 2020-10-05
 
 - Updated dependencies.
