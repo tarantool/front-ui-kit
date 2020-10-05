@@ -50,11 +50,13 @@ type CopyToClipboardState = {
 
 export const withCopyToClipboard = (
   Component: React.AbstractComponent<any, any>
-) => class extends React.Component<withCopyToClipboardProps, CopyToClipboardState> {
+) => class extends React.PureComponent<withCopyToClipboardProps, CopyToClipboardState> {
   static defaultProps = {
     tooltipContent: 'Copy to clipboard',
     tooltipContentCopied: 'Copied'
   }
+
+  ComponentWithTooltip = withTooltip(Component);
 
   state = { clicked: false };
 
@@ -89,8 +91,7 @@ export const withCopyToClipboard = (
       ...restProps
     } = this.props;
     const { clicked } = this.state;
-
-    const ComponentWithTooltip = withTooltip(Component);
+    const { ComponentWithTooltip } = this;
 
     return (
       <ComponentWithTooltip
