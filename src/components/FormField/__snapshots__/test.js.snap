@@ -44,7 +44,7 @@ exports[`FormField renders correctly 1`] = `
         className="css-13w52vd"
       >
         <button
-          className="css-evzklt"
+          className="css-ixus2c"
           type="button"
         >
           Right
@@ -54,7 +54,7 @@ exports[`FormField renders correctly 1`] = `
         className="css-13w52vd"
       >
         <button
-          className="css-evzklt"
+          className="css-ixus2c"
           type="button"
         >
           Contorls
@@ -64,7 +64,7 @@ exports[`FormField renders correctly 1`] = `
         className="css-13w52vd"
       >
         <button
-          className="css-evzklt"
+          className="css-ixus2c"
           type="button"
         >
           Pane

@@ -323,7 +323,7 @@ exports[`AppLayout renders correctly 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-elh82z"
+            className="css-6zj69m"
             title="Search"
             type="button"
           >
@@ -341,7 +341,7 @@ exports[`AppLayout renders correctly 1`] = `
           className="css-12ibiio"
         >
           <button
-            className="css-evzklt"
+            className="css-ixus2c"
             type="button"
           >
             Log in
