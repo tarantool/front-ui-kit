@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added "copy to clipboard" feature in CodeBlock and Markdown code blocks.
 
-- Updated Table styles.
+- Updated Table and Link components styles.
 
 - Improved PageLayout behavior for vertical-stretched pages.
 

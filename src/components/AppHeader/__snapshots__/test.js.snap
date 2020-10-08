@@ -21,7 +21,7 @@ exports[`AppHeader renders correctly 1`] = `
         /
       </span>
       <a
-        className="css-1gpforn"
+        className="css-1994ztc"
         href="/tarantool"
         onClick={[Function]}
       >
@@ -33,7 +33,7 @@ exports[`AppHeader renders correctly 1`] = `
         /
       </span>
       <a
-        className="css-1gpforn"
+        className="css-1994ztc"
         href="/section-ui-components"
         onClick={[Function]}
       >
@@ -45,7 +45,7 @@ exports[`AppHeader renders correctly 1`] = `
         /
       </span>
       <a
-        className="css-1gpforn"
+        className="css-1994ztc"
         href="/breadcrumb"
         onClick={[Function]}
       >
@@ -57,7 +57,7 @@ exports[`AppHeader renders correctly 1`] = `
         /
       </span>
       <a
-        className="css-1gpforn"
+        className="css-1994ztc"
         href="/overflow-list"
         onClick={[Function]}
       >
@@ -69,7 +69,7 @@ exports[`AppHeader renders correctly 1`] = `
         /
       </span>
       <a
-        className="css-1gpforn"
+        className="css-1994ztc"
         href="/resize-sensor"
         onClick={[Function]}
       >
@@ -81,7 +81,7 @@ exports[`AppHeader renders correctly 1`] = `
         /
       </span>
       <a
-        className="css-1gpforn"
+        className="css-1994ztc"
         href="/resize-sensor-again"
         onClick={[Function]}
       >

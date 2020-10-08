@@ -61,7 +61,7 @@ exports[`Markdown renders mixed content 1`] = `
     >
       Connect to Tarantool Cartridge using 
       <a
-        className="css-n4diq8"
+        className="css-k47rv5"
         href="https://github.com/tarantool/tarantool-python"
         target="_blank"
       >

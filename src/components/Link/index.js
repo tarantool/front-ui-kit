@@ -1,22 +1,22 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import { rgba } from 'emotion-rgba';
-import { colors } from '../../variables';
 import { textStyles, type TextStyleVariants } from '../Text';
 
+// TODO: Add focused state
 const styles = {
   link: css`
-    color: ${rgba(colors.intentPrimary, 0.65)};
-    text-decoration: none;
+    color: inherit;
+    text-decoration: underline;
+
+    /* &:focus {
+      outline: solid 1px;
+      outline-offset: 2px;
+    } */
 
     &:hover,
-    &:focus {
-      color: ${colors.intentPrimary};
-    }
-
     &:active {
-      color: ${colors.activeAction};
+      text-decoration: none;
     }
   `
 };
@@ -34,25 +34,17 @@ type LinkProps = {
 export const Link = (
   {
     className,
-    children,
-    href,
-    onClick,
-    target,
-    title,
-    variant
+    variant,
+    ...props
   }: LinkProps
 ) => {
   const textStyle = (variant && textStyles[variant]) || null;
 
+  /* eslint-disable jsx-a11y/anchor-has-content */
   return (
     <a
+      {...props}
       className={cx(textStyle, styles.link, className)}
-      href={href}
-      onClick={onClick}
-      target={target}
-      title={title}
-    >
-      {children}
-    </a>
+    />
   )
 };
