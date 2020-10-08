@@ -1,8 +1,14 @@
+Preferred way to create tooltip is `withTootip` HOC
+because `Tooltip` component produces one extra DOM node.
+
+Orange tooltip used just to show, how you can pass your custom styles into tooltip.
+In the most cases you should use default styles.
+
+Prop `largePaddings` makes big multiline tooltips looking better.
+
 ```js
 import { css } from 'emotion';
-import { Button } from '../Button';
-import { Input } from '../Input';
-import { Tooltip, withTooltip } from './index';
+import { Button, Input, Text, Tooltip, withTooltip } from '../../index';
 
 const styles = {
   toRight: css`
@@ -18,7 +24,9 @@ const styles = {
     text-decoration: underline;
   `,
   blueTip: css`
-    padding: 20px;
+    background-color: orange;
+    &::after { border-top-color: orange; }
+    &::before { border-bottom-color: orange; }
   `
 };
 
@@ -26,21 +34,38 @@ const largeText = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lib
 
 const InputWithTooltip = withTooltip(Input);
 const ButtonWithTooltip = withTooltip(Button);
+const TextWithTooltip = withTooltip(Text);
 
 <>
+  <Text variant='h3'>Examples of withTooltip HOC usage</Text>
+  <InputWithTooltip
+    tooltipContent='Tooltip content'
+    className={styles.toLeft}
+    placeholder='withTooltip HOC'
+  />
+  <ButtonWithTooltip
+    tooltipContent={largeText}
+    largePadding
+    size='l'
+    text='withTooltip HOC'
+  />
+  <TextWithTooltip
+    className={styles.toLeft}
+    popoverClassName={styles.blueTip}
+    tooltipContent={largeText}
+    largePadding
+  >
+    Tooltip on text
+  </TextWithTooltip>
+  <Text variant='h3'>Examples of Tooltip component usage</Text>
   <div>
     {'Lorem ipsum dolor sit amet, consectetur adipisicing elit. '}
     <Tooltip className={styles.inText} content='Tooltip content' tag='span'>Tooltip on text.</Tooltip>
     {' Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}
   </div>
-  <Tooltip className={styles.toLeft} content={largeText}>
-    Tooltip on text
-  </Tooltip>
-  <Tooltip className={styles.toRight} content={largeText} popoverClassName={styles.blueTip}>
+  <Tooltip className={styles.toRight} content='Tooltip content'>
     <Input placeholder='Text area' />
   </Tooltip>
-  <InputWithTooltip tooltipContent={largeText} className={styles.toLeft} placeholder='withTooltip HOC' />
-  <ButtonWithTooltip tooltipContent={largeText} popoverClassName={styles.blueTip}>withTooltip HOC</ButtonWithTooltip>
 </>
 ```
 

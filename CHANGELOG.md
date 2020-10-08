@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
-- Couple of small updates in Modal.
+- Couple of small updates in Tooltip and Modal.
 
 ## [0.26.1] - 2020-10-05
 
