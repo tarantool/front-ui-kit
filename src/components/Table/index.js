@@ -32,6 +32,9 @@ const styles = {
     padding: 12px 16px;
     text-align: left;
   `,
+  tbody: css`
+    background-color: #FFFFFF;
+  `,
   buttonSort: css`
     margin-left: -16px;
     font-weight: 600;
@@ -215,7 +218,7 @@ export function Table(props: TableProps) {
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
+          <tbody className={styles.tbody} {...getTableBodyProps()}>
             {dataRows.map(row => {
               prepareRow(row);
               return (
