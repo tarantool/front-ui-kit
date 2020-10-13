@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added "copy to clipboard" feature in CodeBlock and Markdown code blocks.
 
+- Updated Table styles.
+
 ## [0.26.1] - 2020-10-05
 
 - Hotfix for tooltip in withCopyToClipboard HOC.

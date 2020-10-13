@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import { type Row } from 'react-table';
-
 import { css, cx } from 'emotion';
+import { rgba } from 'emotion-rgba';
 import { Text } from '../../Text';
 import type { RowProps } from '../index';
-import { IconMoreBurger } from '../../Icon';
+import { colors } from '../../../variables';
 
 const styles = {
   col: css`
@@ -15,14 +15,8 @@ const styles = {
   colText: css`
     color: #000000a6;
   `,
-  rowBackground: css`
-    background-color: #FFFFFF;
-  `,
   row: css`
     box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  `,
-  codeRow: css`
-    background-color: #FAFAFA;
   `,
   code: css`
     position: relative;
@@ -30,16 +24,10 @@ const styles = {
     white-space: pre-wrap;
   `,
   hoverRow: css`
-    background-color: #EFEFEF;
+    background-color: ${rgba(colors.baseBg, 0.3)};
   `,
   pointer: css`
     cursor: pointer;
-  `,
-  moreIcon: css`
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translate(0,-50%);
   `
 };
 const get2RowFromStr = (str: string) => {
@@ -62,7 +50,7 @@ function TableRow({
         onMouseLeave={() => setHover(false)}
         onClick={onRowClick ? () => onRowClick(row) : null}
         className={
-          cx(styles.rowBackground, { [styles.row]: !codeRow, [styles.hoverRow]: isHover, [styles.pointer]: onRowClick })
+          cx({ [styles.row]: !codeRow, [styles.hoverRow]: isHover, [styles.pointer]: onRowClick })
         }
         {...rowProps}
       >
@@ -91,7 +79,6 @@ function TableRow({
           onMouseLeave={() => setHover(false)}
           className={
             cx(
-              styles.codeRow,
               styles.row,
               codeClassName,
               { [styles.hoverRow]: isHover, [styles.pointer]: onCodeRowClick })
@@ -105,7 +92,6 @@ function TableRow({
             colSpan={row.cells.length}
           >
             {get2RowFromStr(codeRow)}
-            <IconMoreBurger className={styles.moreIcon} />
           </Text>
         </tr>
       )}
