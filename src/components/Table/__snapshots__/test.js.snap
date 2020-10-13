@@ -601,7 +601,7 @@ exports[`Table renders with code row 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={6}
           >
             some code1
@@ -672,7 +672,7 @@ exports[`Table renders with code row 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={6}
           >
             some code2
@@ -793,7 +793,7 @@ exports[`Table renders with code row 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={6}
           >
             some code4
@@ -1004,7 +1004,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={7}
           >
             some code1
@@ -1103,7 +1103,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={7}
           >
             some code2
@@ -1280,7 +1280,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={7}
           >
             some code4
@@ -1494,7 +1494,7 @@ exports[`Table renders with pagination 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={6}
           >
             some code1
@@ -1565,7 +1565,7 @@ exports[`Table renders with pagination 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={6}
           >
             some code2
@@ -1686,7 +1686,7 @@ exports[`Table renders with pagination 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={6}
           >
             some code4
@@ -1977,7 +1977,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={7}
           >
             some code1
@@ -2076,7 +2076,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={7}
           >
             some code2
@@ -2253,7 +2253,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           onMouseOver={[Function]}
         >
           <td
-            className="css-1gsmhgp"
+            className="css-1pwfef4"
             colSpan={7}
           >
             some code4

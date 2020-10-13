@@ -2,11 +2,31 @@
 
 exports[`Markdown renders code block 1`] = `
 <div
-  className="css-1fcvszc"
+  className="css-1u5zjlz"
 >
-  <pre>
+  <pre
+    className="css-1spfbkh"
+  >
+    <button
+      className="css-1wgtjha"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onScroll={[Function]}
+      placement="top"
+      type="button"
+    >
+      <svg
+        className="css-1jsrbro"
+        viewBox="0 0 16 16"
+      >
+        <use
+          xlinkHref="#icon-copy"
+        />
+      </svg>
+    </button>
     <code
-      className="css-19aciib"
+      className="css-rt1r54"
     >
       Code block
     </code>
@@ -16,13 +36,13 @@ exports[`Markdown renders code block 1`] = `
 
 exports[`Markdown renders code inline 1`] = `
 <div
-  className="css-1fcvszc"
+  className="css-1u5zjlz"
 >
   <p
     className="css-1eitoz7"
   >
     <code
-      className="css-19aciib"
+      className="css-rt1r54"
     >
       Code line
     </code>
@@ -32,7 +52,7 @@ exports[`Markdown renders code inline 1`] = `
 
 exports[`Markdown renders mixed content 1`] = `
 <div
-  className="css-1fcvszc"
+  className="css-1u5zjlz"
 >
   <div>
     <h2
@@ -65,9 +85,29 @@ exports[`Markdown renders mixed content 1`] = `
       </em>
       :
     </p>
-    <pre>
+    <pre
+      className="css-1spfbkh"
+    >
+      <button
+        className="css-1wgtjha"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onScroll={[Function]}
+        placement="top"
+        type="button"
+      >
+        <svg
+          className="css-1jsrbro"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#icon-copy"
+          />
+        </svg>
+      </button>
       <code
-        className="language-bash css-3fhyop"
+        className="language-bash css-fkp2zu"
       >
         pip3 install tarantool
       </code>
@@ -77,9 +117,29 @@ exports[`Markdown renders mixed content 1`] = `
     >
       Create a file example.py with the code to get started:
     </p>
-    <pre>
+    <pre
+      className="css-1spfbkh"
+    >
+      <button
+        className="css-1wgtjha"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onScroll={[Function]}
+        placement="top"
+        type="button"
+      >
+        <svg
+          className="css-1jsrbro"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#icon-copy"
+          />
+        </svg>
+      </button>
       <code
-        className="language-python css-3fhyop"
+        className="language-python css-fkp2zu"
       >
         from tarantool import Connection
 c = Connection(
@@ -99,9 +159,29 @@ print(results)
     >
       Run the script
     </p>
-    <pre>
+    <pre
+      className="css-1spfbkh"
+    >
+      <button
+        className="css-1wgtjha"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onScroll={[Function]}
+        placement="top"
+        type="button"
+      >
+        <svg
+          className="css-1jsrbro"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#icon-copy"
+          />
+        </svg>
+      </button>
       <code
-        className="language-bash css-3fhyop"
+        className="language-bash css-fkp2zu"
       >
         python3 example.py
       </code>

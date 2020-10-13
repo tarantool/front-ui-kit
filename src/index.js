@@ -46,6 +46,7 @@ export * from './components/SplashModal';
 export * from './components/Spin';
 export * from './components/SVGImage';
 export * from './components/Switcher';
+export * from './components/SyntaxHighlight';
 export * from './components/Tabbed';
 export * from './components/Table';
 export * from './components/Tag';

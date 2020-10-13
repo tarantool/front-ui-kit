@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated Scrollbar block styles.
 
+- Icon IconWindow replaced with IconCopy.
+
+- Added "copy to clipboard" feature in CodeBlock and Markdown code blocks.
+
 ## [0.26.1] - 2020-10-05
 
 - Hotfix for tooltip in withCopyToClipboard HOC.
