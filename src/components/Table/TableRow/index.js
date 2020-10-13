@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import { type Row } from 'react-table';
-
 import { css, cx } from 'emotion';
+import { rgba } from 'emotion-rgba';
 import { Text } from '../../Text';
 import type { RowProps } from '../index';
+import { colors } from '../../../variables';
 
 const styles = {
   col: css`
@@ -23,7 +24,7 @@ const styles = {
     white-space: pre-wrap;
   `,
   hoverRow: css`
-    background-color: rgba(240, 242, 245, 0.3);
+    background-color: ${rgba(colors.baseBg, 0.3)};
   `,
   pointer: css`
     cursor: pointer;

@@ -61,6 +61,7 @@ Array [
           </tr>
         </thead>
         <tbody
+          className="css-14r34si"
           role="rowgroup"
         >
           <tr>
@@ -149,6 +150,7 @@ Array [
           </tr>
         </thead>
         <tbody
+          className="css-14r34si"
           role="rowgroup"
         >
           <tr>
@@ -255,10 +257,11 @@ exports[`Table renders simple 1`] = `
         </tr>
       </thead>
       <tbody
+        className="css-14r34si"
         role="rowgroup"
       >
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -308,7 +311,7 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -358,7 +361,7 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -408,7 +411,7 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -542,10 +545,11 @@ exports[`Table renders with code row 1`] = `
         </tr>
       </thead>
       <tbody
+        className="css-14r34si"
         role="rowgroup"
       >
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -595,7 +599,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -605,18 +609,10 @@ exports[`Table renders with code row 1`] = `
             colSpan={6}
           >
             some code1
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -666,7 +662,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -676,18 +672,10 @@ exports[`Table renders with code row 1`] = `
             colSpan={6}
           >
             some code2
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -737,7 +725,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -787,7 +775,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -797,14 +785,6 @@ exports[`Table renders with code row 1`] = `
             colSpan={6}
           >
             some code4
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
       </tbody>
@@ -917,10 +897,11 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
         </tr>
       </thead>
       <tbody
+        className="css-14r34si"
         role="rowgroup"
       >
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -998,7 +979,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1008,18 +989,10 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             colSpan={7}
           >
             some code1
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1097,7 +1070,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1107,18 +1080,10 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             colSpan={7}
           >
             some code2
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1196,7 +1161,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1274,7 +1239,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1284,14 +1249,6 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             colSpan={7}
           >
             some code4
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
       </tbody>
@@ -1435,10 +1392,11 @@ exports[`Table renders with pagination 1`] = `
         </tr>
       </thead>
       <tbody
+        className="css-14r34si"
         role="rowgroup"
       >
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1488,7 +1446,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1498,18 +1456,10 @@ exports[`Table renders with pagination 1`] = `
             colSpan={6}
           >
             some code1
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1559,7 +1509,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1569,18 +1519,10 @@ exports[`Table renders with pagination 1`] = `
             colSpan={6}
           >
             some code2
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1630,7 +1572,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1680,7 +1622,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1690,14 +1632,6 @@ exports[`Table renders with pagination 1`] = `
             colSpan={6}
           >
             some code4
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
       </tbody>
@@ -1890,10 +1824,11 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </tr>
       </thead>
       <tbody
+        className="css-14r34si"
         role="rowgroup"
       >
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1971,7 +1906,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1981,18 +1916,10 @@ exports[`Table renders with pagination and selected rows 1`] = `
             colSpan={7}
           >
             some code1
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2070,7 +1997,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2080,18 +2007,10 @@ exports[`Table renders with pagination and selected rows 1`] = `
             colSpan={7}
           >
             some code2
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
         <tr
-          className="css-b02ryf"
+          className="css-15lj9l6"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2169,7 +2088,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-14r34si"
+          className=""
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2247,7 +2166,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-mtqmtr"
+          className="css-15lj9l6"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2257,14 +2176,6 @@ exports[`Table renders with pagination and selected rows 1`] = `
             colSpan={7}
           >
             some code4
-            <svg
-              className="css-1c9u8eu"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#moreBurger"
-              />
-            </svg>
           </td>
         </tr>
       </tbody>
