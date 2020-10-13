@@ -2,8 +2,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { css, cx } from 'emotion';
+import { rgba } from 'emotion-rgba';
 import { textStyles } from '../Text';
-import { zIndex } from '../../variables';
+import { colors, zIndex } from '../../variables';
 
 const CORNER_HEIGHT = 8;
 
@@ -12,9 +13,9 @@ const styles = {
     position: absolute;
     z-index: ${zIndex.tooltip};
     max-width: 400px;
-    padding: 5px 16px;
+    padding: 5px 8px;
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.65) !important;
+    background: ${rgba(colors.dark, 0.8)};
     border-radius: 4px;
 
     &::after {
@@ -25,17 +26,27 @@ const styles = {
       border: solid 0 transparent;
       border-left: solid ${CORNER_HEIGHT}px transparent;
       border-right: solid ${CORNER_HEIGHT}px transparent;
-      border-top: solid ${CORNER_HEIGHT}px rgba(0, 0, 0, 0.65);
+      border-top: solid ${CORNER_HEIGHT}px ${rgba(colors.dark, 0.8)};
     }
-  `,
-  cornerUp: css`
-    &::after {
+
+    &::before {
+      position: absolute;
+      left: calc(${cornerPositionX}px - 8px);
       top: -${CORNER_HEIGHT}px;
-      bottom: auto;
       border: solid 0 transparent;
       border-left: solid ${CORNER_HEIGHT}px transparent;
       border-right: solid ${CORNER_HEIGHT}px transparent;
-      border-bottom: solid ${CORNER_HEIGHT}px rgba(0, 0, 0, 0.65);
+      border-bottom: solid ${CORNER_HEIGHT}px ${rgba(colors.dark, 0.8)};
+    }
+  `,
+  largePadding: css`padding: 16px;`,
+  cornerUp: css`
+    &::after {
+      content: none;
+    }
+
+    &::before {
+      content: '';
     }
   `,
   wrapper: css`
@@ -47,6 +58,7 @@ type TooltipProps = {
   children: React.Node,
   className?: string,
   content?: React.Node,
+  largePadding?: bool,
   tag?: string,
   popoverClassName?: string
 };
@@ -54,6 +66,7 @@ type TooltipProps = {
 type withTooltipProps = {
   children?: React.Node,
   className?: string,
+  largePadding?: bool,
   onMouseEnter?: (e: MouseEvent) => void,
   onMouseLeave?: (e: MouseEvent) => void,
   onScroll?: (e: MouseEvent) => void,
@@ -161,7 +174,14 @@ export const withTooltip = (
   }
 
   render() {
-    const { children, className, tooltipContent, ...props } = this.props;
+    const {
+      children,
+      className,
+      largePadding,
+      popoverClassName,
+      tooltipContent,
+      ...props
+    } = this.props;
 
     return (
       <>
@@ -181,7 +201,7 @@ export const withTooltip = (
   }
 
   renderTooltip() {
-    const { tooltipContent, popoverClassName } = this.props;
+    const { largePadding, tooltipContent, popoverClassName } = this.props;
     const { cornerPositionX, left, top, topPlacement } = this.state;
 
     return (
@@ -189,7 +209,10 @@ export const withTooltip = (
         className={cx(
           textStyles.p,
           styles.tooltip({ cornerPositionX }),
-          { [styles.cornerUp]: !topPlacement },
+          {
+            [styles.cornerUp]: !topPlacement,
+            [styles.largePadding]: largePadding
+          },
           popoverClassName
         )}
         style={{
@@ -243,6 +266,7 @@ export const Tooltip = (
     children,
     className,
     content,
+    largePadding,
     tag,
     popoverClassName
   }: TooltipProps
@@ -252,6 +276,7 @@ export const Tooltip = (
   return (
     <Component
       className={cx(styles.wrapper, className)}
+      largePadding={largePadding}
       tooltipContent={content}
       popoverClassName={popoverClassName}
     >

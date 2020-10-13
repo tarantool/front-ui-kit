@@ -33,6 +33,13 @@ const styles = {
     top: 30px;
     right: 30px;
     fill: ${colors.dark40};
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.12s;
+    transition-property: fill;
+
+    &:hover {
+      fill: ${colors.dark25};
+    }
   `,
   children: css`
     flex-grow: 1;
