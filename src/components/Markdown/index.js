@@ -2,7 +2,8 @@ import * as React from 'react';
 import MD from 'markdown-to-jsx';
 import { css } from 'emotion';
 import { colors, monoFontFamily } from '../../variables';
-import { CodeBlock } from '../CodeBlock';
+import { CodeBlockWrap } from '../CodeBlock';
+import { SyntaxHighlight } from '../SyntaxHighlight';
 import { Link } from '../Link';
 import { Text } from '../Text';
 
@@ -17,21 +18,14 @@ const styles = {
       color: white;
       font-family: ${monoFontFamily};
     }
+  `,
+  pre: css`
+    margin-bottom: 16px;
 
-    & pre {
-      display: block;
-      padding: 16px;
-      margin-bottom: 16px;
-      border-radius: 4px;
-      overflow: auto;
-      background-color: ${colors.codeBg};
-      color: white;
-
-      & > code {
-        padding: 0;
-        border-radius: 0;
-        background-color: transparent;
-      }
+    & > code {
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
     }
   `,
   h: css`
@@ -58,9 +52,13 @@ const overrides = {
   a: ({ children, ...props }) => <Link {...props} target='_blank'>{children}</Link>,
   code: ({ children, className, ...props }) => (
     className && className.indexOf('lang-') === 0
-      ? <CodeBlock language={className.substr(5)} text={children} />
+      ? <SyntaxHighlight language={className.substr(5)} text={children} />
       : <Text {...props} variant='code'>{children}</Text>
   ),
+  pre: ({ children, ...props }) => {
+    const { props: { children: childrenText } = {} } = children;
+    return <CodeBlockWrap className={styles.pre} textToCopy={childrenText}>{children}</CodeBlockWrap>
+  },
   ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>
 };
 

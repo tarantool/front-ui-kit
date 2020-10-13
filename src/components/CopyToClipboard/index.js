@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { Button, type ButtonProps } from '../Button';
 import { withTooltip } from '../Tooltip';
-import { IconNewWindow } from '../Icon';
+import { IconCopy } from '../Icon';
 
 export const copyToClipboard = (str: string) => {
   if (!document.body) {
@@ -122,6 +122,6 @@ export const CopyToClipboard = (
 ) => (
   <CopyButton
     {...rest}
-    icon={icon || IconNewWindow}
+    icon={icon || IconCopy}
   />
 );

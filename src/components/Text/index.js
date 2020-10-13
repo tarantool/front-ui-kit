@@ -63,7 +63,7 @@ export const textStyles = {
     margin: 0;
     font-family: ${monoFontFamily};
     font-size: 14px;
-    line-height: 22px;
+    line-height: 20px;
     color: #000000;
     -webkit-font-smoothing: antialiased;
     b {

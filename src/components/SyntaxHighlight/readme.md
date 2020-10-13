@@ -1,9 +1,13 @@
-```js
-import { CodeBlock } from '../../index';
+Used inside `Markdown` and `CodeBlock`. Be careful to use directly.
 
-<CodeBlock
-  language='jsx'
-  text={`export const Alert = ({
+```js
+import { css } from 'emotion';
+const blockStyle = css`background-color: #444444;`;
+
+<pre className={blockStyle}>
+  <SyntaxHighlight
+    language='jsx'
+    text={`export const Alert = ({
   className,
   children,
   type
@@ -22,33 +26,39 @@ import { CodeBlock } from '../../index';
   );
 }
 `}
-/>
+  />
+</pre>
 ```
 
 ### Lua
 
 ```js
-import { CodeBlock } from '../../index';
+import { css } from 'emotion';
+const blockStyle = css`background-color: #444444;`;
 
-<CodeBlock
-  language='lua'
-  text={`local function customer_add(customer_id, fullname)
+<pre className={blockStyle}>
+  <SyntaxHighlight
+    language='lua'
+    text={`local function customer_add(customer_id, fullname)
 checks('number', 'string')
 return box.space.customer:insert(
   {customer_id, fullname}
 )
 end`}
-/>
+  />
+</pre>
 ```
 
 ### Python
 
 ```js
-import { CodeBlock } from '../../index';
+import { css } from 'emotion';
+const blockStyle = css`background-color: #444444;`;
 
-<CodeBlock
-  language='python'
-  text={`from tarantool import Connection
+<pre className={blockStyle}>
+  <SyntaxHighlight
+    language='python'
+    text={`from tarantool import Connection
 c = Connection(
   "try-cartridge.tarantool.io", 
   12032,
@@ -59,17 +69,20 @@ result = c.insert("customer", (332, 'John Smith'))
 space = c.space("customer")
 results = space.select()
 print(results)`}
-/>
+  />
+</pre>
 ```
 
 ### PHP
 
 ```js
-import { CodeBlock } from '../../index';
+import { css } from 'emotion';
+const blockStyle = css`background-color: #444444;`;
 
-<CodeBlock
-  language='php'
-  text={`<?php
+<pre className={blockStyle}>
+  <SyntaxHighlight
+    language='php'
+    text={`<?php
 include_once('vendor/autoload.php');
 use Tarantool\\Client\\Client;
 use Tarantool\\Client\\Schema\\Criteria;
@@ -81,17 +94,20 @@ $result = $space->select(Criteria::index(0));
 
 print_r($result);
 ?>`}
-/>
+  />
+</pre>
 ```
 
 ### Go
 
 ```js
-import { CodeBlock } from '../../index';
+import { css } from 'emotion';
+const blockStyle = css`background-color: #444444;`;
 
-<CodeBlock
-  language='go'
-  text={`package main
+<pre className={blockStyle}>
+  <SyntaxHighlight
+    language='go'
+    text={`package main
 
 import (
      "fmt"
@@ -111,47 +127,20 @@ func main() {
      fmt.Println("Code", resp.Code)
    }
 }`}
-/>
+  />
+</pre>
 ```
 
 ### Ruby
 
 ```js
-import { CodeBlock } from '../../index';
+import { css } from 'emotion';
+const blockStyle = css`background-color: #444444;`;
 
-<CodeBlock
-  language='ruby'
-  text={`require 'tarantool16'
-
-db = Tarantool16.new host:'localhost:33013'
-
-# select from '_space' space info about 'test' table
-# returns array of tuples as an array
-tar.get(272, ['test'], index: 2)
-
-# same, but return tuples as a hashes
-tar.get(272, ['test'], index: 2, hash: true)
-
-# same with names
-# Names and index descriptions are fetched from tarantool.
-# Index is autodetected by key names
-tar.get(:_space, {name: 'test'})
-
-# get all spaces
-tar.select(:_space, nil, iterator: :all)
-tar.select(:_space, nil, iterator: :all, hash: true)
-
-tar.select(:_space, [512], index: 0, iterator: :>=, hash: true)`}
-/>
-```
-
-### Plain text
-
-```js
-import { CodeBlock } from '../../index';
-
-<CodeBlock
-  text={`require 'tarantool16'
+<pre className={blockStyle}>
+  <SyntaxHighlight
+    language='ruby'
+    text={`require 'tarantool16'
 
 db = Tarantool16.new host:'localhost:33013'
 
@@ -172,5 +161,6 @@ tar.select(:_space, nil, iterator: :all)
 tar.select(:_space, nil, iterator: :all, hash: true)
 
 tar.select(:_space, [512], index: 0, iterator: :>=, hash: true)`}
-/>
+  />
+</pre>
 ```
