@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Couple of small updates in Tooltip and Modal.
 
+- Updated Scrollbar block styles.
+
 ## [0.26.1] - 2020-10-05
 
 - Hotfix for tooltip in withCopyToClipboard HOC.
