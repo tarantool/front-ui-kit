@@ -7,10 +7,15 @@ import {
   type BreadcrumbsItem
 } from '../Breadcrumbs';
 import { ControlsPanel } from '../ControlsPanel';
+import {
+  appLayoutTopPanelHeight,
+  pageLayoutMinWidth
+} from '../../variables';
 
 const styles = {
   header: css`
-    height: 68px;
+    height: ${appLayoutTopPanelHeight}px;
+    min-width: ${pageLayoutMinWidth}px;
     background: #ffffff;
     width: 100%;
     display: flex;

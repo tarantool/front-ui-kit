@@ -3,15 +3,22 @@ import * as React from 'react';
 import { css, cx } from 'emotion';
 import { ControlsPanel } from '../ControlsPanel';
 import { Text } from '../Text';
+import {
+  appLayoutTopPanelHeight,
+  pageLayoutMinWidth,
+  pageLayoutMaxWidth
+} from '../../variables';
 
 const styles = {
   page: css`
     display: flex;
     flex-direction: column;
-    max-width: 1420px; /* 1360 + 30 + 30 */
-    min-width: 922px;
+    max-width: ${pageLayoutMaxWidth}px;
+    min-width: ${pageLayoutMinWidth}px;
+    min-height: calc(100% - ${appLayoutTopPanelHeight}px - 60px);
     padding: 0 30px;
     margin: 30px auto 30px;
+    box-sizing: border-box;
   `,
   pageWithAbovePanel: css`
     margin-top: 20px;

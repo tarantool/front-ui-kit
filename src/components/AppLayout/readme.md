@@ -10,6 +10,7 @@ import {
   IconTrash,
   IconInfo,
   IconSearch,
+  PageLayout,
   SideMenu,
   SVGImage,
   TarantoolLogoCompact,
@@ -143,8 +144,9 @@ const renderLogo = collapsed => (
   />
 );
 
-const PreconfiguredSideMenu = () => (
+const PreconfiguredSideMenu = ({ className }) => (
   <SideMenu
+    className={className}
     menu={menuItems}
     path='/'
     onMenuItemClick={onMenuItemClick}
@@ -165,6 +167,8 @@ const onLinkClick = (link) => console.log('link', link);
     ]}
     onLinkClick={onLinkClick}
   />
-  Content
+  <PageLayout heading='Page header'>
+    <div style={{ backgroundColor: 'rgba(120, 123, 223, 0.4)', flexGrow: 1 }}>Content</div>
+  </PageLayout>
 </AppLayout>
 ```
