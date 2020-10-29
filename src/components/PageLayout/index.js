@@ -48,7 +48,7 @@ const styles = {
   `
 };
 
-type PageLayoutProps = {
+export type PageLayoutProps = {
   children: React.Node,
   className?: string,
   topLeftControls?: React.Node[],
