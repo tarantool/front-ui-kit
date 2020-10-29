@@ -97,6 +97,10 @@ const styles = {
     font-size: 12px;
   `,
 
+  iconicL: css`
+    padding: 9px 12px;
+  `,
+
   iconicM: css`
     padding: 5px 8px;
   `,
@@ -350,9 +354,10 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
       className={cx(
         styles.button,
         {
+          [styles.iconicL]: isOnlyIcon && size === 'l',
           [styles.iconicM]: isOnlyIcon && size === 'm',
           [styles.iconicS]: isOnlyIcon && size === 's',
-          [styles.l]: size === 'l',
+          [styles.l]: !isOnlyIcon && size === 'l',
           [styles.m]: !isOnlyIcon && size === 'm',
           [styles.s]: !isOnlyIcon && size === 's',
           [styles.xs]: size === 'xs',
