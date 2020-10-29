@@ -84,6 +84,7 @@ export type ManualPagination = {
 }
 
 type TableProps = UseTableOptions & RowProps & {
+  className?: string,
   pagination?: boolean;
   loading?: boolean;
   manualPagination?: ManualPagination;
@@ -111,6 +112,7 @@ export function Table(props: TableProps) {
     rowClassName,
     codeClassName,
     columns = [],
+    className,
     data = [],
     pagination,
     onSelectedRowsChange,
@@ -179,7 +181,7 @@ export function Table(props: TableProps) {
   return (
     <>
       <Spin enable={loading}>
-        <table {...getTableProps()} className={cx(styles.table)}>
+        <table {...getTableProps()} className={cx(styles.table, className)}>
           <thead>
             {headerGroups.map(headerGroup => (
               <tr {...headerGroup.getHeaderGroupProps()}>
