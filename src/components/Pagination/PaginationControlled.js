@@ -1,10 +1,11 @@
 // @flow
 
 import * as React from 'react';
-import { css } from 'emotion';
+import { css, cx } from 'emotion';
 import { Button } from '../Button';
 import { Dropdown, DropdownItem } from '../Dropdown';
 import { Text } from '../Text';
+import { colors } from '../../variables';
 import { IconChevronLeft, IconChevronRight, IconChevronDown } from '../Icon/icons/IconChevron';
 
 const styles = {
@@ -15,39 +16,45 @@ const styles = {
     width: 32px;
     height: 32px;
     margin: 0 4px;
-    fill: rgba(0,0,0, .65);
+    fill: ${colors.dark65};
   `,
   chevronIcon: css`
-   fill: rgba(0,0,0, .65);
+   fill: ${colors.dark65};
   `,
-  button: css`
-    display: block;
+  btn: css`
     min-width: 32px;
     height: 32px;
-    background: #FFFFFF;
-    border: 1px solid #D9D9D9;
-    box-sizing: border-box;
     border-radius: 4px;
-    color: rgba(0, 0, 0, 0.65);
+    box-sizing: border-box;
+    padding: 4px;
+    margin: 0 4px;
+    border: 1px solid ${colors.intentBase};
+  `,
+  buttonArrow: css`
+    display: block;
+    background: #FFFFFF;
+    color: ${colors.dark65};
     font-size: 14px;
     text-align: center;
-    padding: 4px;
-    margin: 0 4px;
+    &:hover {
+      background: ${colors.intentBase};
+    }
   `,
   activePage: css`
-    min-width: 32px;
-    height: 32px;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.65);
-    padding: 4px;
-    margin: 0 4px;
     display: flex;
+    color: ${colors.intentBase};
+    background: ${colors.intentBaseActive};
     align-items: center;
     justify-content: center;
   `,
   dropDown: css`
     margin-left: 12px;
     min-width: 120px;
+  `,
+  dropDownBtn: css`
+    &:hover {
+      background: ${colors.intentBase};
+    }
   `
 };
 
@@ -101,15 +108,15 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
     return (
       <div className={styles.pagination}>
         <Button
-          className={styles.button}
+          className={cx(styles.btn, styles.buttonArrow)}
           onClick={this.changePage(activePage - 1)}
           disabled={activePage === 1}
           icon={IconChevronLeftBlack}
           intent='plain'
         />
-        <Text className={styles.activePage}>{activePage}</Text>
+        <Text className={cx(styles.btn, styles.activePage)}>{activePage}</Text>
         <Button
-          className={styles.button}
+          className={cx(styles.btn, styles.buttonArrow)}
           onClick={this.changePage(activePage + 1)}
           disabled={disableNextPageButton}
           icon={IconChevronRightBlack}
@@ -117,7 +124,7 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
         />
         {setPageSize && (
           <Dropdown className={styles.dropDown} items={this.getDropDownItems()}>
-            <Button text={`${pageSize} / page `} iconRight={IconChevronDownBlack}/>
+            <Button className={styles.dropDownBtn} text={`${pageSize} / page `} iconRight={IconChevronDownBlack}/>
           </Dropdown>
         )}
       </div>
