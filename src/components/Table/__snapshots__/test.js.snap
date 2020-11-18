@@ -1164,13 +1164,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
         className="css-k008qs"
       >
         <button
-          className="css-40mvwn"
+          className="css-1qbz1gj"
           disabled={true}
           onClick={[Function]}
           type="button"
         >
           <svg
-            className="css-1hsbuls"
+            className="css-1p2t8zf"
             viewBox="0 0 14 14"
           >
             <use
@@ -1179,17 +1179,17 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </svg>
         </button>
         <span
-          className="css-1w2ms9p"
+          className="css-u8kjm9"
         >
           1
         </span>
         <button
-          className="css-g6s81t"
+          className="css-q25dw3"
           onClick={[Function]}
           type="button"
         >
           <svg
-            className="css-oiyldh"
+            className="css-kwp0os"
             viewBox="0 0 14 14"
           >
             <use
@@ -1202,12 +1202,12 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           onClick={[Function]}
         >
           <button
-            className="css-ixus2c"
+            className="css-ypl1wq"
             type="button"
           >
             10 / page 
             <svg
-              className="css-ok8b0z"
+              className="css-lmyslo"
               viewBox="0 0 14 14"
             >
               <use
@@ -1547,7 +1547,7 @@ exports[`Table renders with pagination 1`] = `
         className="css-k008qs"
       >
         <div
-          className="css-1dmgfvu"
+          className="css-1dob6jq"
         >
           1
           -
@@ -1558,13 +1558,13 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-1km9hdz"
+            className="css-1stu4n5"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-1hsbuls"
+              className="css-1p2t8zf"
               viewBox="0 0 14 14"
             >
               <use
@@ -1575,7 +1575,7 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-sj5i2d"
+            className="css-1k3cu11"
             onClick={[Function]}
             type="button"
           >
@@ -1584,13 +1584,13 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-1km9hdz"
+            className="css-1stu4n5"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-oiyldh"
+              className="css-kwp0os"
               viewBox="0 0 14 14"
             >
               <use
@@ -1609,7 +1609,7 @@ exports[`Table renders with pagination 1`] = `
           >
             10 / page 
             <svg
-              className="css-ok8b0z"
+              className="css-lmyslo"
               viewBox="0 0 14 14"
             >
               <use
@@ -2091,7 +2091,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
         className="css-k008qs"
       >
         <div
-          className="css-1dmgfvu"
+          className="css-1dob6jq"
         >
           1
           -
@@ -2102,13 +2102,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-1km9hdz"
+            className="css-1stu4n5"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-1hsbuls"
+              className="css-1p2t8zf"
               viewBox="0 0 14 14"
             >
               <use
@@ -2119,7 +2119,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-sj5i2d"
+            className="css-1k3cu11"
             onClick={[Function]}
             type="button"
           >
@@ -2128,13 +2128,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-1km9hdz"
+            className="css-1stu4n5"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-oiyldh"
+              className="css-kwp0os"
               viewBox="0 0 14 14"
             >
               <use
@@ -2153,7 +2153,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           >
             10 / page 
             <svg
-              className="css-ok8b0z"
+              className="css-lmyslo"
               viewBox="0 0 14 14"
             >
               <use
