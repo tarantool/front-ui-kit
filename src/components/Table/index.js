@@ -182,7 +182,7 @@ export function Table(props: TableProps) {
     <>
       <Spin enable={loading}>
         <table {...getTableProps()} className={cx(styles.table, className)}>
-          <thead>
+          {rows.length > 0 && <thead>
             {headerGroups.map(headerGroup => (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
@@ -219,7 +219,7 @@ export function Table(props: TableProps) {
                 )}
               </tr>
             ))}
-          </thead>
+          </thead>}
           <tbody className={styles.tbody} {...getTableBodyProps()}>
             {dataRows.map(row => {
               prepareRow(row);
