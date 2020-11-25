@@ -71,6 +71,9 @@ export type RowProps = {
   rowClassName?: string,
   codeClassName?: string,
   codeRowKey?: string,
+  topRowClassName?: string,
+  topRowKey?: string,
+  topRowStickySide?: number,
   onRowClick?: (row: Row) => void;
   onCodeRowClick?: (row: Row) => void;
 }
@@ -232,6 +235,9 @@ export function Table(props: TableProps) {
                   onCodeRowClick={props.onCodeRowClick}
                   onRowClick={props.onRowClick}
                   codeRowKey={props.codeRowKey}
+                  topRowClassName={props.topRowClassName}
+                  topRowKey={props.topRowKey}
+                  topRowStickySide={props.topRowStickySide}
                 />
               )
             })}
