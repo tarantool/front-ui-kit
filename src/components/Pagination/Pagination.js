@@ -5,7 +5,7 @@ import { css, cx } from 'emotion';
 import { Button } from '../Button';
 import { Text } from '../Text';
 import { Dropdown, DropdownItem } from '../Dropdown';
-import { IconMore } from '../Icon/icons/IconMore';
+import { colors } from '../../variables';
 import { IconChevronLeft, IconChevronRight, IconChevronDown } from '../Icon/icons/IconChevron';
 
 const styles = {
@@ -16,43 +16,49 @@ const styles = {
     display: flex;
     align-items: center;
     margin-right: 12px;
-    color: rgba(0, 0, 0, 0.65);
+    color: ${colors.dark65};
   `,
   icon: css`
     width: 16px;
     height: 16px;
     margin: 8px 8px;
-    fill: rgba(0,0,0, .65);
+    fill: ${colors.dark65};
   `,
   chevronIcon: css`
-   fill: rgba(0,0,0, .65);
+   fill: ${colors.dark65};
   `,
   button: css`
     min-width: 32px;
     height: 32px;
     background: #FFFFFF;
-    border: 1px solid #D9D9D9;
+    border: 1px solid ${colors.intentBase};
     box-sizing: border-box;
     border-radius: 4px;
-    color: rgba(0, 0, 0, 0.65);
+    color: ${colors.dark65};
     font-size: 14px;
     text-align: center;
     padding: 4px;
     margin: 0 4px;
+    &:focus,
+    &:hover {
+      background: ${colors.intentBase};
+    }
   `,
   buttonActive: css`
-    color: #CF1322;
-    border: 1px solid #CF1322;
+    color: #fff;
+    border: 1px solid ${colors.dark40};
+    background: ${colors.dark40};
+    &:focus,
+    &:hover {
+      border: 1px solid ${colors.dark40};
+      background: ${colors.dark40};
+    }
   `,
   dropDown: css`
     margin-left: 12px;
     min-width: 120px;
   `
 };
-
-const IconChevronRightBlack = () => <IconChevronRight className={styles.chevronIcon} />
-const IconChevronLeftBlack = () => <IconChevronLeft className={styles.chevronIcon} />
-const IconChevronDownBlack = () => <IconChevronDown className={styles.chevronIcon} />
 
 type PaginationProps = {
   items: number,
@@ -169,7 +175,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
             className={styles.button}
             onClick={this.changePage(activePage - 1)}
             disabled={activePage === 1}
-            icon={IconChevronLeftBlack}
+            icon={IconChevronLeft}
             intent='plain'
           />
         </div>
@@ -179,7 +185,13 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
             return (
               <React.Fragment key={visiblePage}>
                 {needElipsis && (
-                  <IconMore className={styles.icon}  />
+                  <Button
+                    className={cx(styles.button)}
+                    intent='plain'
+                    onClick={this.changePage(array[index - 1] < activePage ? activePage - 5 : activePage + 5 )}
+                  >
+                    ...
+                  </Button>
                 )}
                 <Button
                   className={cx(styles.button,  { [styles.buttonActive]: activePage === visiblePage })}
@@ -197,13 +209,13 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
             className={styles.button}
             onClick={this.changePage(activePage + 1)}
             disabled={activePage === this.getPages(items)}
-            icon={IconChevronRightBlack}
+            icon={IconChevronRight}
             intent='plain'
           />
         </div>
         {setPageSize && (
           <Dropdown className={styles.dropDown} items={this.getDropDownItems()}>
-            <Button text={`${pageSize} / page `} iconRight={IconChevronDownBlack}/>
+            <Button text={`${pageSize} / page `} iconRight={IconChevronDown}/>
           </Dropdown>
         )}
       </div>
