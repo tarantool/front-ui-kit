@@ -12,7 +12,7 @@ exports[`Pagination render simple 1`] = `
       type="button"
     >
       <svg
-        className="css-1p2t8zf"
+        className="css-1gcl23y"
         viewBox="0 0 14 14"
       >
         <use
@@ -80,7 +80,7 @@ exports[`Pagination render simple 1`] = `
       type="button"
     >
       <svg
-        className="css-kwp0os"
+        className="css-14x0fwm"
         viewBox="0 0 14 14"
       >
         <use
@@ -104,7 +104,7 @@ exports[`Pagination renders with page size changer 1`] = `
       type="button"
     >
       <svg
-        className="css-1p2t8zf"
+        className="css-1gcl23y"
         viewBox="0 0 14 14"
       >
         <use
@@ -172,7 +172,7 @@ exports[`Pagination renders with page size changer 1`] = `
       type="button"
     >
       <svg
-        className="css-kwp0os"
+        className="css-14x0fwm"
         viewBox="0 0 14 14"
       >
         <use
@@ -191,7 +191,7 @@ exports[`Pagination renders with page size changer 1`] = `
     >
       10 / page 
       <svg
-        className="css-lmyslo"
+        className="css-t1im82"
         viewBox="0 0 14 14"
       >
         <use
@@ -225,7 +225,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
       type="button"
     >
       <svg
-        className="css-1p2t8zf"
+        className="css-1gcl23y"
         viewBox="0 0 14 14"
       >
         <use
@@ -293,7 +293,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
       type="button"
     >
       <svg
-        className="css-kwp0os"
+        className="css-14x0fwm"
         viewBox="0 0 14 14"
       >
         <use
@@ -312,7 +312,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
     >
       10 / page 
       <svg
-        className="css-lmyslo"
+        className="css-t1im82"
         viewBox="0 0 14 14"
       >
         <use
@@ -346,7 +346,7 @@ exports[`Pagination renders with total 1`] = `
       type="button"
     >
       <svg
-        className="css-1p2t8zf"
+        className="css-1gcl23y"
         viewBox="0 0 14 14"
       >
         <use
@@ -414,7 +414,7 @@ exports[`Pagination renders with total 1`] = `
       type="button"
     >
       <svg
-        className="css-kwp0os"
+        className="css-14x0fwm"
         viewBox="0 0 14 14"
       >
         <use
@@ -437,7 +437,7 @@ exports[`PaginationControlled render simple 1`] = `
     type="button"
   >
     <svg
-      className="css-1p2t8zf"
+      className="css-1gcl23y"
       viewBox="0 0 14 14"
     >
       <use
@@ -457,7 +457,7 @@ exports[`PaginationControlled render simple 1`] = `
     type="button"
   >
     <svg
-      className="css-kwp0os"
+      className="css-14x0fwm"
       viewBox="0 0 14 14"
     >
       <use
@@ -479,7 +479,7 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     type="button"
   >
     <svg
-      className="css-1p2t8zf"
+      className="css-1gcl23y"
       viewBox="0 0 14 14"
     >
       <use
@@ -499,7 +499,7 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     type="button"
   >
     <svg
-      className="css-kwp0os"
+      className="css-14x0fwm"
       viewBox="0 0 14 14"
     >
       <use
@@ -517,7 +517,7 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     >
       10 / page 
       <svg
-        className="css-lmyslo"
+        className="css-t1im82"
         viewBox="0 0 14 14"
       >
         <use

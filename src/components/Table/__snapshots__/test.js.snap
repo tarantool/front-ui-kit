@@ -1170,7 +1170,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           type="button"
         >
           <svg
-            className="css-1p2t8zf"
+            className="css-1gcl23y"
             viewBox="0 0 14 14"
           >
             <use
@@ -1189,7 +1189,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           type="button"
         >
           <svg
-            className="css-kwp0os"
+            className="css-14x0fwm"
             viewBox="0 0 14 14"
           >
             <use
@@ -1207,7 +1207,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           >
             10 / page 
             <svg
-              className="css-lmyslo"
+              className="css-t1im82"
               viewBox="0 0 14 14"
             >
               <use
@@ -1564,7 +1564,7 @@ exports[`Table renders with pagination 1`] = `
             type="button"
           >
             <svg
-              className="css-1p2t8zf"
+              className="css-1gcl23y"
               viewBox="0 0 14 14"
             >
               <use
@@ -1590,7 +1590,7 @@ exports[`Table renders with pagination 1`] = `
             type="button"
           >
             <svg
-              className="css-kwp0os"
+              className="css-14x0fwm"
               viewBox="0 0 14 14"
             >
               <use
@@ -1609,7 +1609,7 @@ exports[`Table renders with pagination 1`] = `
           >
             10 / page 
             <svg
-              className="css-lmyslo"
+              className="css-t1im82"
               viewBox="0 0 14 14"
             >
               <use
@@ -2108,7 +2108,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             type="button"
           >
             <svg
-              className="css-1p2t8zf"
+              className="css-1gcl23y"
               viewBox="0 0 14 14"
             >
               <use
@@ -2134,7 +2134,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
             type="button"
           >
             <svg
-              className="css-kwp0os"
+              className="css-14x0fwm"
               viewBox="0 0 14 14"
             >
               <use
@@ -2153,7 +2153,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           >
             10 / page 
             <svg
-              className="css-lmyslo"
+              className="css-t1im82"
               viewBox="0 0 14 14"
             >
               <use

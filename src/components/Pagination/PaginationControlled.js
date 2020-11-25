@@ -58,10 +58,6 @@ const styles = {
   `
 };
 
-const IconChevronRightBlack = () => <IconChevronRight className={styles.chevronIcon} />
-const IconChevronLeftBlack = () => <IconChevronLeft className={styles.chevronIcon} />
-const IconChevronDownBlack = () => <IconChevronDown className={styles.chevronIcon} />
-
 type PaginationControlledProps = {
   page: number,
   pageSize: number,
@@ -111,7 +107,7 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
           className={cx(styles.btn, styles.buttonArrow)}
           onClick={this.changePage(activePage - 1)}
           disabled={activePage === 1}
-          icon={IconChevronLeftBlack}
+          icon={IconChevronLeft}
           intent='plain'
         />
         <Text className={cx(styles.btn, styles.activePage)}>{activePage}</Text>
@@ -119,12 +115,12 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
           className={cx(styles.btn, styles.buttonArrow)}
           onClick={this.changePage(activePage + 1)}
           disabled={disableNextPageButton}
-          icon={IconChevronRightBlack}
+          icon={IconChevronRight}
           intent='plain'
         />
         {setPageSize && (
           <Dropdown className={styles.dropDown} items={this.getDropDownItems()}>
-            <Button className={styles.dropDownBtn} text={`${pageSize} / page `} iconRight={IconChevronDownBlack}/>
+            <Button className={styles.dropDownBtn} text={`${pageSize} / page `} iconRight={IconChevronDown}/>
           </Dropdown>
         )}
       </div>
