@@ -12,54 +12,6 @@ Array [
         className="css-1sbsopn"
         role="table"
       >
-        <thead>
-          <tr
-            role="row"
-          >
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              First Name
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Last Name
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Age
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Visits
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Status
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Profile Progress
-            </th>
-          </tr>
-        </thead>
         <tbody
           className="css-14r34si"
           role="rowgroup"
@@ -101,54 +53,6 @@ Array [
         className="css-1sbsopn"
         role="table"
       >
-        <thead>
-          <tr
-            role="row"
-          >
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              First Name
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Last Name
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Age
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Visits
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Status
-            </th>
-            <th
-              className="css-1bpu65y"
-              colSpan={1}
-              role="columnheader"
-            >
-              Profile Progress
-            </th>
-          </tr>
-        </thead>
         <tbody
           className="css-14r34si"
           role="rowgroup"
