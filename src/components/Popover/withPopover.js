@@ -144,6 +144,17 @@ export const withPopover = (
       }
     }
 
+    handlePopoverClick = (event: MouseEvent)=> {
+      event.stopPropagation();
+      const ref = this.popoverRef && this.popoverRef.current;
+
+      if (ref && ref !== event.target) {
+        this.toggleDropdown();
+      }
+    }
+
+    handlePopoverMouseDown = (event: MouseEvent)=> event.stopPropagation();
+
     handlePopoverKeyDown = (event: KeyboardEvent)=> {
       if (event.keyCode === 27) {
         this.toggleDropdown();
@@ -164,8 +175,9 @@ export const withPopover = (
       return (
         <DropdownPopoverWithRef
           className={popoverClassName}
+          onClick={this.handlePopoverClick}
           onKeyDownCapture={this.handlePopoverKeyDown}
-          // onMouseDown={this.handlePopoverMouseDown}
+          onMouseDown={this.handlePopoverMouseDown}
           style={{
             left,
             top,
@@ -189,7 +201,12 @@ export const withPopover = (
     }
 
     render() {
-      const { className, popoverContent, ...props } = this.props;
+      const {
+        className,
+        popoverContent,
+        popoverClassName,
+        ...props
+      } = this.props;
       const { isOpen } = this.state;
 
       return (
