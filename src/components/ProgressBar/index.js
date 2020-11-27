@@ -7,7 +7,7 @@ import { colors } from '../../variables';
 
 const COLORS = {
   success: colors.intentSuccess,
-  warning: colors.intentWarning,
+  warning: colors.intentWarningAccent,
   danger: colors.intentDanger
 };
 

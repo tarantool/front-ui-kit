@@ -32,6 +32,7 @@ export const colors = {
   intentBaseBg: '#f3f3f3',
 
   intentWarning: '#faad14',
+  intentWarningAccent: '#ff272c',
 
   intentSuccess: '#52c41a',
   intentSuccessBg: '#f6ffee',
