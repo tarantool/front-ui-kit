@@ -4,7 +4,7 @@ exports[`Modal renders closed 1`] = `null`;
 
 exports[`Modal renders modal with form 1`] = `
 <div
-  className="css-fp900x"
+  className="css-18615gn"
   onMouseDown={[Function]}
 >
   <form
@@ -98,7 +98,7 @@ exports[`Modal renders modal with form 1`] = `
 
 exports[`Modal renders modal with large text 1`] = `
 <div
-  className="css-fp900x"
+  className="css-18615gn"
   onMouseDown={[Function]}
 >
   <div
@@ -168,7 +168,7 @@ exports[`Modal renders modal with large text 1`] = `
 
 exports[`Modal renders modal with tabs 1`] = `
 <div
-  className="css-fp900x"
+  className="css-18615gn"
   onMouseDown={[Function]}
 >
   <div
@@ -268,7 +268,7 @@ exports[`Modal renders modal with tabs 1`] = `
 
 exports[`Modal renders simple modal 1`] = `
 <div
-  className="css-fp900x"
+  className="css-18615gn"
   onMouseDown={[Function]}
 >
   <div
