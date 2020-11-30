@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated Pagination styles.
 
+- Added intentWarningAccent color.
+
+- PageLayout fix for percent height layouts.
+
+- Popover closing on click fix.
+
 ## [0.28.0] - 2020-10-29
 
 - Fixed `className` prop in Table.

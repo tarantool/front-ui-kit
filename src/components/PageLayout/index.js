@@ -15,7 +15,7 @@ const styles = {
     flex-direction: column;
     max-width: ${pageLayoutMaxWidth}px;
     min-width: ${pageLayoutMinWidth}px;
-    min-height: calc(100% - ${appLayoutTopPanelHeight}px - 60px);
+    height: calc(100% - ${appLayoutTopPanelHeight}px - 60px);
     padding: 0 30px;
     margin: 30px auto 30px;
     box-sizing: border-box;

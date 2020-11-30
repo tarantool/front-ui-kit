@@ -21,7 +21,7 @@ export const styles = {
     flex-direction: column;
     padding: 40px 16px;
     overflow: auto;
-    background-color: ${rgba(colors.dark, 0.15)};
+    background-color: ${rgba(colors.dark, 0.65)};
     justify-content: flex-start;
     align-items: center;
   `,
