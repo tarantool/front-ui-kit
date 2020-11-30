@@ -12,6 +12,7 @@ const styles = {
     width: 1px;
     height: 1px;
     margin: -1px;
+    appearance: none;
 
     &:focus + div::before {
       content: '';
@@ -111,6 +112,7 @@ type SwitcherProps = {
   children?: React.Node,
   className?: string,
   disabled?: boolean,
+  name?: string,
   onChange?: (MouseEvent) => void,
   title?: string
 };
@@ -120,6 +122,7 @@ export const Switcher = ({
   children,
   className,
   disabled,
+  name,
   onChange,
   title
 }:
@@ -129,6 +132,7 @@ SwitcherProps) => (
       checked={checked}
       className={styles.input}
       disabled={disabled}
+      name={name}
       type='checkbox'
       onChange={onChange}
     />
