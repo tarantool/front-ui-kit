@@ -3,7 +3,7 @@
 exports[`PageLayout renders succesfully 1`] = `
 Array [
   <div
-    className="css-jhnhgu"
+    className="css-1br8pp4"
   >
     <div
       className="css-1d2sanl"
@@ -21,7 +21,7 @@ Array [
     </div>
   </div>,
   <div
-    className="css-ba9e2d"
+    className="css-bd53i6"
   >
     <div
       className="css-1d2sanl"
@@ -58,7 +58,7 @@ Array [
     </div>
   </div>,
   <div
-    className="css-mhbu45"
+    className="css-y9opr3"
   >
     <div
       className="css-g2m2eb"
@@ -115,7 +115,7 @@ Array [
     </div>
   </div>,
   <div
-    className="css-ba9e2d"
+    className="css-bd53i6"
   >
     <div
       className="css-1d2sanl"
