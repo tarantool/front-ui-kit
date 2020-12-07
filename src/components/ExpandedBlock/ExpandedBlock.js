@@ -3,7 +3,7 @@
 import React from 'react';
 import { css, cx } from 'emotion';
 import { Text } from '../Text';
-import { IconChevronDown } from '../Icon';
+import { IconChevronDown, IconChevron } from '../Icon';
 import { Button } from '../Button';
 
 type ExpandedBlockProps = {
@@ -40,7 +40,7 @@ export const ExpandedBlock = (props: ExpandedBlockProps) => {
   const splitedContent: string[] = props.content.split('\n');
   const countTextLines: number = splitedContent.length;
 
-  if ((countTextLines <= props.visibleLines) || fullIsShowing) {
+  if ((countTextLines <= props.visibleLines)) {
     return (
       <Text className={cx(textStyle, props.className)}>
         {props.content}
@@ -48,16 +48,27 @@ export const ExpandedBlock = (props: ExpandedBlockProps) => {
     )
   }
 
+  const content = fullIsShowing
+    ? props.content
+    : splitedContent.slice(0, props.visibleLines).join('\n');
+
   return (
     <>
-      <Text tag="div" className={cx(textOverflowStyle, textStyle, props.className)}>
-        {splitedContent.slice(0, props.visibleLines).join('\n')}
+      <Text
+        tag="div"
+        className={cx(
+          { [textOverflowStyle]: !fullIsShowing },
+          textStyle,
+          props.className
+        )}
+      >
+        {content}
       </Text>
       <Button
-        onClick={setShowFull.bind(undefined, true)}
-        iconRight={IconChevronDown}
+        onClick={setShowFull.bind(undefined, !fullIsShowing)}
+        iconRight={fullIsShowing ? IconChevron : IconChevronDown}
         className={btnStyle}
-        text="more"
+        text={fullIsShowing ? 'less' : 'more'}
         intent="plain"
       />
     </>
