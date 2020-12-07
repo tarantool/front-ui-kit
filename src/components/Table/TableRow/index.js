@@ -68,7 +68,7 @@ function TableRow({
             className={
               cx(
                 styles.topRow,
-                { [styles.sticky(topRowStickySide)]: Number.isNaN(Number(topRowStickySide)) },
+                { [styles.sticky(topRowStickySide)]: !Number.isNaN(Number(topRowStickySide)) },
                 topRowClassName
               )
             }
