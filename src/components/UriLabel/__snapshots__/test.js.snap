@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly 1`] = `
+Array [
+  <div
+    className="css-70qvj9"
+    title="UriLabel"
+  >
+    <svg
+      className="css-1bd58bw"
+      viewBox="0 0 14 14"
+    >
+      <use
+        xlinkHref="#link"
+      />
+    </svg>
+    <span
+      className="css-18j7qsr"
+    >
+      jh74gvr3-ec3-datacenter-southern.awa132.com
+    </span>
+  </div>,
+  <div
+    className="css-70qvj9"
+    title="UriLabel"
+  >
+    <svg
+      className="css-1skwa1l"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#icon-bold-arrow-right"
+      />
+    </svg>
+    <span
+      className="css-18j7qsr"
+    >
+      jh74gvr3-ec3-datacenter-southern.awa132.com
+    </span>
+  </div>,
+  <div
+    className="css-70qvj9"
+    title="UriLabel"
+  >
+    <svg
+      className="css-13p6rp0"
+      viewBox="0 0 14 14"
+    >
+      <use
+        xlinkHref="#geo-pin"
+      />
+    </svg>
+    <span
+      className="css-18j7qsr"
+    >
+      jh74gvr3-ec3-datacenter-southern.awa132.com
+    </span>
+  </div>,
+]
+`;
