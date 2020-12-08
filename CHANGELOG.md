@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.30.0] - 2020-12-08
 
 - Updated IconRefresh.
 
@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Add extra row "topRow" before some in Table component, which have "topRowKey".
 
-- Add new component ExpandableBlock
+- Add new component ExpandableBlock.
 
 ## [0.29.0] - 2020-11-30
 
