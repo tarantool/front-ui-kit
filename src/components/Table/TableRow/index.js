@@ -42,6 +42,7 @@ const styles = {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: ${topRowStickySide}px;
+    z-index: 1;
   `
 };
 const get2RowFromStr = (str: string) => {
