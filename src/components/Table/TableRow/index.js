@@ -38,10 +38,9 @@ const styles = {
     line-height: 18px;
     text-align: center;
   `,
-  sticky: (topRowStickySide: number) => css`
+  sticky: css`
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: ${topRowStickySide}px;
     z-index: 1;
   `
 };
@@ -69,10 +68,11 @@ function TableRow({
             className={
               cx(
                 styles.topRow,
-                { [styles.sticky(topRowStickySide)]: !Number.isNaN(Number(topRowStickySide)) },
+                { [styles.sticky]: !Number.isNaN(Number(topRowStickySide)) },
                 topRowClassName
               )
             }
+            style={{ top: topRowStickySide }}
           >
             {topRow}
           </Text>
