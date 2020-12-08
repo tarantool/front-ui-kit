@@ -1301,8 +1301,13 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
       >
         <tr>
           <td
-            className="css-1ruz9jk"
+            className="css-3v046q"
             colSpan={6}
+            style={
+              Object {
+                "top": 0,
+              }
+            }
           >
             23.11.2020
           </td>
