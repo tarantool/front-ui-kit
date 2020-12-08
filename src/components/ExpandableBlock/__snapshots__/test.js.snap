@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders with more btm 1`] = `
+Array [
+  <div
+    className="css-1xbh4t6"
+  >
+    Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
+function_call_error: [string "bad_task"]:1: failure
+stack traceback:
+	[string "bad_task"]:1: in main chunk
+  </div>,
+  <button
+    className="css-17yels4"
+    onClick={[Function]}
+    type="button"
+  >
+    more
+    <svg
+      className="css-t1im82"
+      viewBox="0 0 14 14"
+    >
+      <use
+        xlinkHref="#chevron-up"
+      />
+    </svg>
+  </button>,
+]
+`;
+
+exports[`Table renders without more btm 1`] = `
+<span
+  className="css-wk8ak3"
+>
+  Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
+function_call_error: [string "bad_task"]:1: failure
+stack traceback:
+	[string "bad_task"]:1: in main chunk
+	[C]: in function 'xpcall'
+	.../errors.lua:148: in function 'pcall'
+	.../init.lua:109: in function 'call'
+	.../pipeline/init.lua:21: in function 'call_function'
+	...pipeline/init.lua:63: in function 'run'
+	.../runner/server.lua:70: in function &lt;.../runner/server.lua:68&gt;
+stack traceback:
+	.../pipeline/init.lua:25: in function 'call_function'
+	.../pipeline/init.lua:63: in function 'run'
+	.../runner/server.lua:70: in function &lt;...s/runner/server.lua:68&gt;
+</span>
+`;
