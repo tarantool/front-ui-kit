@@ -6,7 +6,7 @@ import { Text } from '../Text';
 import { IconChevronDown, IconChevron } from '../Icon';
 import { Button } from '../Button';
 
-type ExpandedBlockProps = {
+type ExpandableBlockProps = {
   content: string,
   visibleLines: number,
   className?: string,
@@ -34,7 +34,7 @@ const btnStyle = css`
  display: block;
 `;
 
-export const ExpandedBlock = (props: ExpandedBlockProps) => {
+export const ExpandableBlock = (props: ExpandableBlockProps) => {
   const [ fullIsShowing, setShowFull ] = React.useState(false);
 
   const splitedContent: string[] = props.content.split('\n');

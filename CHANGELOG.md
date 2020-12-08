@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Add extra row "topRow" before some in Table component, which have "topRowKey".
 
-- Add new component ExpandedBlock
+- Add new component ExpandableBlock
 
 ## [0.29.0] - 2020-11-30
 
