@@ -285,4 +285,51 @@ describe('Table', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+
+  it('renders with controlled pagination and selected rows', () => {
+    const data = [
+      {
+        firstName: 'spiders',
+        lastName: 'profession',
+        age: 15,
+        visits: 55,
+        progress: 66,
+        status: 'complicated',
+        code: 'some code1'
+      },
+      {
+        firstName: 'spiders',
+        lastName: 'profession',
+        age: 15,
+        visits: 55,
+        progress: 66,
+        status: 'complicated'
+      },
+      {
+        firstName: 'profit',
+        lastName: 'quiet',
+        age: 8,
+        visits: 79,
+        progress: 9,
+        status: 'complicated',
+        date: '23.11.2020'
+      }
+    ];
+
+    const tree = renderer.create(
+      <Table
+        columns={columns}
+        data={data}
+        codeRowKey='code'
+        topRowKey='date'
+        topRowStickySide={0}
+        initialSortBy={[
+          { id: 'progress', desc: false }
+        ]}
+      />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

@@ -28,6 +28,20 @@ const styles = {
   `,
   pointer: css`
     cursor: pointer;
+  `,
+  topRow: css`
+    color: ${colors.dark40};
+    background-color: ${colors.baseBg};
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  `,
+  sticky: css`
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    z-index: 1;
   `
 };
 const get2RowFromStr = (str: string) => {
@@ -37,14 +51,33 @@ const get2RowFromStr = (str: string) => {
 };
 
 function TableRow({
-  row, rowClassName, codeClassName, onCodeRowClick, codeRowKey, onRowClick
+  row, rowClassName, codeClassName, onCodeRowClick, codeRowKey, onRowClick, topRowKey, topRowClassName, topRowStickySide
 }: RowProps & { row: Row}) {
+  const [ isHover, setHover ] = useState(false);
   const rowProps = row.getRowProps();
   const codeRow = codeRowKey && row.original[codeRowKey];
-  const [ isHover, setHover ] = useState(false);
+  const topRow = topRowKey && row.original[topRowKey];
 
   return (
     <React.Fragment>
+      {topRow && (
+        <tr>
+          <Text
+            tag='td'
+            colSpan={row.cells.length}
+            className={
+              cx(
+                styles.topRow,
+                { [styles.sticky]: !Number.isNaN(Number(topRowStickySide)) },
+                topRowClassName
+              )
+            }
+            style={{ top: topRowStickySide }}
+          >
+            {topRow}
+          </Text>
+        </tr>
+      )}
       <tr
         onMouseOver={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
