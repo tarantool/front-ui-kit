@@ -82,7 +82,7 @@ function TableRow({
                 topRowClassName
               )
             }
-            style={{ top: isSafari ? topRowStickySide - headHeight : topRowStickySide }}
+            style={{ top: isSafari ? Number(topRowStickySide) - headHeight : topRowStickySide }}
           >
             {topRow}
           </Text>
