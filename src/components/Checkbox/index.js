@@ -28,6 +28,7 @@ const styles = {
     width: 1px;
     height: 1px;
     margin: -1px;
+    appearance: none;
 
     & + div::before {
       content: '';

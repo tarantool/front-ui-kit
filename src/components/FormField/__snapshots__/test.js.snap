@@ -83,7 +83,7 @@ exports[`FormField renders correctly 1`] = `
       >
         <input
           checked={false}
-          className="css-z04bz7"
+          className="css-1gif6wy"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
@@ -116,7 +116,7 @@ exports[`FormField renders correctly 1`] = `
       >
         <input
           checked={true}
-          className="css-z04bz7"
+          className="css-1gif6wy"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
@@ -149,7 +149,7 @@ exports[`FormField renders correctly 1`] = `
       >
         <input
           checked={false}
-          className="css-z04bz7"
+          className="css-1gif6wy"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
@@ -182,7 +182,7 @@ exports[`FormField renders correctly 1`] = `
       >
         <input
           checked={false}
-          className="css-z04bz7"
+          className="css-1gif6wy"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
