@@ -7,6 +7,7 @@ import { rgba } from 'emotion-rgba';
 import { Text } from '../../Text';
 import type { RowProps } from '../index';
 import { colors } from '../../../variables';
+import { isSafari } from '../../../utils/browser';
 
 const styles = {
   col: css`
@@ -16,7 +17,7 @@ const styles = {
     color: #000000a6;
   `,
   row: css`
-    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #E5E5E5;
   `,
   code: css`
     position: relative;
@@ -51,8 +52,17 @@ const get2RowFromStr = (str: string) => {
 };
 
 function TableRow({
-  row, rowClassName, codeClassName, onCodeRowClick, codeRowKey, onRowClick, topRowKey, topRowClassName, topRowStickySide
-}: RowProps & { row: Row}) {
+  row,
+  rowClassName,
+  codeClassName,
+  onCodeRowClick,
+  codeRowKey,
+  onRowClick,
+  topRowKey,
+  topRowClassName,
+  topRowStickySide,
+  headHeight
+}: RowProps & { row: Row, headHeight: number }) {
   const [ isHover, setHover ] = useState(false);
   const rowProps = row.getRowProps();
   const codeRow = codeRowKey && row.original[codeRowKey];
@@ -72,7 +82,7 @@ function TableRow({
                 topRowClassName
               )
             }
-            style={{ top: topRowStickySide }}
+            style={{ top: isSafari ? topRowStickySide - headHeight : topRowStickySide }}
           >
             {topRow}
           </Text>

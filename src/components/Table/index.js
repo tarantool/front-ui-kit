@@ -24,6 +24,7 @@ const styles = {
     background-color: transparent;
     width: 100%;
     border-spacing: initial;
+    border-collapse: collapse;
   `,
   head: css`
     color: ${colors.dark65};
@@ -129,7 +130,11 @@ export function Table(props: TableProps) {
   const getRowId = React.useCallback((row, index) => {
     return tableKey && row[tableKey] ? row[tableKey] : index;
   }, [tableKey]);
-
+  const [ theadHeight, setTHeadHeight ] = React.useState<number>(0);
+  const theadRef = React.useRef(null);
+  React.useEffect(() => {
+    setTHeadHeight(theadRef.current ? theadRef.current.clientHeight : 0);
+  }, [ theadRef ]);
 
   const {
     getTableProps,
@@ -185,7 +190,7 @@ export function Table(props: TableProps) {
     <>
       <Spin enable={loading}>
         <table {...getTableProps()} className={cx(styles.table, className)}>
-          {rows.length > 0 && <thead>
+          {rows.length > 0 && <thead ref={theadRef}>
             {headerGroups.map(headerGroup => (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
@@ -238,6 +243,7 @@ export function Table(props: TableProps) {
                   topRowClassName={props.topRowClassName}
                   topRowKey={props.topRowKey}
                   topRowStickySide={props.topRowStickySide}
+                  headHeight={theadHeight}
                 />
               )
             })}
