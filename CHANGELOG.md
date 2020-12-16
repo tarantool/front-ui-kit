@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added `name` prop to Switcher.
 
+- Updated ExpandableBlock.
+
 ## [0.30.0] - 2020-12-08
 
 - Updated IconRefresh.

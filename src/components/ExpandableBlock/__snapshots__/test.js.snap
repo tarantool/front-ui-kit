@@ -1,31 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders with more btm 1`] = `
-Array [
-  <div
-    className="css-1xbh4t6"
-  >
-    Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
+<div
+  className="css-mtitt"
+  onClick={[Function]}
+>
+  Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
 function_call_error: [string "bad_task"]:1: failure
 stack traceback:
 	[string "bad_task"]:1: in main chunk
-  </div>,
-  <button
-    className="css-17yels4"
-    onClick={[Function]}
-    type="button"
-  >
-    more
-    <svg
-      className="css-t1im82"
-      viewBox="0 0 14 14"
-    >
-      <use
-        xlinkHref="#chevron-up"
-      />
-    </svg>
-  </button>,
-]
+</div>
 `;
 
 exports[`Table renders without more btm 1`] = `

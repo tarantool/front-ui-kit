@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { css, cx } from 'emotion';
+import { noop } from 'lodash';
 import { Text } from '../Text';
-import { IconChevronDown, IconChevron } from '../Icon';
+import { IconChevron } from '../Icon';
 import { Button } from '../Button';
 
 type ExpandableBlockProps = {
@@ -18,6 +19,7 @@ const textStyle = css`
 
 const textOverflowStyle = css`
     position: relative;
+    cursor: pointer;
     &::after {
       content: '';
       position: absolute;
@@ -56,6 +58,7 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
     <>
       <Text
         tag="div"
+        onClick={!fullIsShowing ? setShowFull.bind(undefined, true) : noop}
         className={cx(
           { [textOverflowStyle]: !fullIsShowing },
           textStyle,
@@ -64,13 +67,15 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
       >
         {content}
       </Text>
-      <Button
-        onClick={setShowFull.bind(undefined, !fullIsShowing)}
-        iconRight={fullIsShowing ? IconChevron : IconChevronDown}
-        className={btnStyle}
-        text={fullIsShowing ? 'less' : 'more'}
-        intent="plain"
-      />
+      {fullIsShowing &&
+        <Button
+          onClick={setShowFull.bind(undefined, false)}
+          iconRight={IconChevron}
+          className={btnStyle}
+          text="less"
+          intent="plain"
+        />
+      }
     </>
   )
 };
