@@ -9,7 +9,7 @@ Array [
       className="css-907xkp"
     >
       <table
-        className="css-1sbsopn"
+        className="css-1c1gq12"
         role="table"
       >
         <tbody
@@ -50,7 +50,7 @@ Array [
       className="css-907xkp"
     >
       <table
-        className="css-1sbsopn"
+        className="css-1c1gq12"
         role="table"
       >
         <tbody
@@ -95,7 +95,7 @@ exports[`Table renders simple 1`] = `
     className="css-907xkp"
   >
     <table
-      className="css-1sbsopn"
+      className="css-1c1gq12"
       role="table"
     >
       <thead>
@@ -165,7 +165,7 @@ exports[`Table renders simple 1`] = `
         role="rowgroup"
       >
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -215,7 +215,7 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -265,7 +265,7 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -315,7 +315,7 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -383,7 +383,7 @@ exports[`Table renders with code row 1`] = `
     className="css-907xkp"
   >
     <table
-      className="css-1sbsopn"
+      className="css-1c1gq12"
       role="table"
     >
       <thead>
@@ -503,7 +503,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -566,7 +566,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -579,7 +579,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -679,7 +679,7 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -705,7 +705,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
     className="css-907xkp"
   >
     <table
-      className="css-1sbsopn"
+      className="css-1c1gq12"
       role="table"
     >
       <thead>
@@ -883,7 +883,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -974,7 +974,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -987,7 +987,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1143,7 +1143,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1230,7 +1230,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
     className="css-907xkp"
   >
     <table
-      className="css-1sbsopn"
+      className="css-1c1gq12"
       role="table"
     >
       <thead>
@@ -1313,7 +1313,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1413,7 +1413,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1426,7 +1426,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1489,7 +1489,7 @@ exports[`Table renders with pagination 1`] = `
     className="css-907xkp"
   >
     <table
-      className="css-1sbsopn"
+      className="css-1c1gq12"
       role="table"
     >
       <thead>
@@ -1609,7 +1609,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1672,7 +1672,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1685,7 +1685,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1785,7 +1785,7 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -1891,7 +1891,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
     className="css-907xkp"
   >
     <table
-      className="css-1sbsopn"
+      className="css-1c1gq12"
       role="table"
     >
       <thead>
@@ -2069,7 +2069,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2160,7 +2160,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2173,7 +2173,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={null}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
@@ -2329,7 +2329,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-15lj9l6"
+          className="css-18uvckh"
           onClick={[Function]}
           onMouseLeave={[Function]}
           onMouseOver={[Function]}
