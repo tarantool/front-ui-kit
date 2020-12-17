@@ -10,32 +10,24 @@ export const copyToClipboard = (str: string) => {
   }
   // for Flow: prevent the refinement from invalidating
   const body = document.body;
+  const range = new Range();
+  const currentSelection = window.getSelection();
+  const el = document.createElement('span');
 
-  const el = document.createElement('textarea');
-  el.value = str;
+  el.innerText = str;
   el.setAttribute('readonly', '');
   el.style.position = 'absolute';
   el.style.left = '-9999px';
   body.appendChild(el);
 
-  const currentSelection = document.getSelection();
-  const selected = (currentSelection && currentSelection.rangeCount > 0)
-    ? currentSelection.getRangeAt(0)
-    : false;
-  el.select();
-  document.execCommand('copy');
-  body.removeChild(el);
-  if (selected) {
-    let currentSelection = document.getSelection();
-    if (currentSelection) {
-      currentSelection.removeAllRanges();
-    }
+  range.selectNodeContents(el);
+  currentSelection.removeAllRanges();
+  currentSelection.addRange(range);
 
-    currentSelection = document.getSelection();
-    if (currentSelection) {
-      currentSelection.addRange(selected);
-    }
-  }
+  document.execCommand('copy');
+
+  currentSelection.removeAllRanges();
+  body.removeChild(el);
 };
 
 type withCopyToClipboardProps = {
