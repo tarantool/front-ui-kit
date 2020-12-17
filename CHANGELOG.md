@@ -12,8 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated ExpandableBlock.
 
 - Fix Table bugs:
-    - borders in Safari
-    - position sticky row in safari
+  - borders in Safari;
+  - position sticky row in safari.
+
+- Fixed copying to clipboard in Popover.
 
 ## [0.30.0] - 2020-12-08
 
