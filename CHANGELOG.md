@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added "copy to clipboard" feature in ExpandableBlock.
 
+- Scrollbars component marked as deprecated.
+
+- Added native scrollbars styles.
+
 ## [0.32.0] - 2020-12-30
 
 - Fixed disabled state in Input and TextArea components.
