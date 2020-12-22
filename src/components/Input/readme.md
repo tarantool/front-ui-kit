@@ -1,20 +1,26 @@
 ```js
 import { css, cx } from 'emotion';
 import {
-  Text,
-  withDropdown,
+  ControlsPanel,
   DropdownItem,
   DropdownDivider,
   Button,
   IconChevron,
-  IconSearch
+  IconSearch,
+  Switcher,
+  Text,
+  withDropdown
 } from '../../index';
 
-initialState = { value: 'Value' };
+initialState = {
+  disabled: false,
+  value: 'Value'
+};
 
 const handleChange = e => setState({ value: e.target.value });
 const handleClear = () => setState({ value: '' });
 const handleSelect = value => setState({ value });
+const toggleDisabled = () => setState(({ disabled }) => ({ disabled: !disabled }));
 
 const DropdownButton = withDropdown(Button);
 
@@ -51,8 +57,15 @@ const dropdownExample = (
 );
 
 <>
+  <ControlsPanel
+    controls={[
+      <Switcher checked={state.disabled} onChange={toggleDisabled}>Disabled</Switcher>
+    ]}
+  />
+
   <div style={{ margin: '12px' }}>
     <Input
+      disabled={state.disabled}
       value={state.value}
       placeholder='Placeholder'
       onChange={handleChange}
@@ -63,6 +76,7 @@ const dropdownExample = (
 
   <div style={{ margin: '12px' }}>
     <Input
+      disabled={state.disabled}
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
@@ -72,6 +86,7 @@ const dropdownExample = (
 
   <div style={{ width: '250px', margin: '12px' }}>
     <Input
+      disabled={state.disabled}
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
@@ -86,6 +101,7 @@ const dropdownExample = (
 
   <div style={{ margin: '12px' }}>
     <Input
+      disabled={state.disabled}
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
@@ -98,6 +114,7 @@ const dropdownExample = (
 
   <div style={{ margin: '12px' }}>
     <Input
+      disabled={state.disabled}
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
@@ -109,6 +126,7 @@ const dropdownExample = (
 
   <div style={{ width: '250px', margin: '12px' }}>
     <Input
+      disabled={state.disabled}
       value={state.value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}

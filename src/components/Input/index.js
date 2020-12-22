@@ -3,6 +3,7 @@ import * as React from 'react';
 import { createRef } from 'react';
 import { css, cx } from 'react-emotion';
 import { commonInputStyles, commonInputSizes } from './commonStyles';
+import { colors } from '../../variables';
 import { IconCancel } from '../Icon';
 
 const styles = {
@@ -20,6 +21,9 @@ const styles = {
   iconWrap: css`
     display: flex;
     align-items: center;
+  `,
+  clearIcon: css`
+    fill: ${colors.dark65};
   `,
   withLeftElement: css`
     & > :first-child {
@@ -135,7 +139,7 @@ export class Input extends React.Component<InputProps, InputState> {
           commonInputStyles.outer,
           wrapSizes[size || 'l'],
           {
-            [commonInputStyles.disabled]: disabled,
+            [commonInputStyles.disabledOuter]: disabled,
             [commonInputStyles.focused]: focused,
             [commonInputStyles.error]: error,
             [styles.outerWithAddition]: hasAddition,
@@ -156,7 +160,8 @@ export class Input extends React.Component<InputProps, InputState> {
             commonInputSizes[size || 'l'],
             {
               [styles.inputWithAddition]: hasAddition,
-              [styles.inputWithIcon]: rightIcon || onClearClick
+              [styles.inputWithIcon]: rightIcon || onClearClick,
+              [commonInputStyles.disabled]: disabled
             }
           )}
           disabled={disabled}
@@ -179,7 +184,12 @@ export class Input extends React.Component<InputProps, InputState> {
         {(onClearClick || rightIcon) && (
           <div className={cx(styles.iconWrap, iconWrapSizes[size || 'l'])}>
             {onClearClick && (!rightIcon || value)
-              ? <IconCancel onClick={(!(disabled || readOnly) && this.handleClearClick) || noop} />
+              ? (
+                <IconCancel
+                  className={styles.clearIcon}
+                  onClick={(!(disabled || readOnly) && this.handleClearClick) || noop}
+                />
+              )
               : rightIcon}
           </div>
         )}
