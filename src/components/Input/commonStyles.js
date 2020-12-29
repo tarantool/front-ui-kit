@@ -11,6 +11,9 @@ export const commonInputStyles = {
     background-color: #ffffff;
   `,
   disabled: css`
+    color: ${colors.intentBase};
+  `,
+  disabledOuter: css`
     background-color: ${colors.dark2};
   `,
   focused: css`

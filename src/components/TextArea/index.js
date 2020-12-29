@@ -76,7 +76,7 @@ export class TextArea extends React.Component<TextAreaProps, TextAreaState> {
         className={cx(
           commonInputStyles.outer,
           {
-            [commonInputStyles.disabled]: disabled,
+            [commonInputStyles.disabledOuter]: disabled,
             [commonInputStyles.focused]: focused,
             [commonInputStyles.error]: error
           },
@@ -88,7 +88,11 @@ export class TextArea extends React.Component<TextAreaProps, TextAreaState> {
           {...props}
           autoFocus={autoFocus}
           autoComplete={autoComplete}
-          className={cx(commonInputStyles.input, commonInputSizes[size || 'l'])}
+          className={cx(
+            commonInputStyles.input,
+            commonInputSizes[size || 'l'],
+            { [commonInputStyles.disabled]: disabled }
+          )}
           disabled={disabled}
           name={name}
           onChange={onChange}
