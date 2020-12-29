@@ -47,10 +47,11 @@ const styles = {
 
 type Props = {
   className?: string,
+  overrides?: { [key: string]: React.Component<any, any> },
   text: string
 }
 
-const overrides = {
+const components = {
   h1: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h1'>{children}</Text>,
   h2: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h2'>{children}</Text>,
   h3: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h3'>{children}</Text>,
@@ -73,15 +74,18 @@ const overrides = {
   img: props => <img {...props} className={styles.img} />
 };
 
-const options = { overrides, forceBlock: true };
-
 export const Markdown = (
   {
     className,
+    overrides,
     text
   }: Props
-) => (
-  <div className={cx(styles.wrap, className)}>
-    <MD options={options}>{text}</MD>
-  </div>
-);
+) => {
+  const options = { overrides: Object.assign({}, components, overrides), forceBlock: true };
+
+  return (
+    <div className={cx(styles.wrap, className)}>
+      <MD options={options}>{text}</MD>
+    </div>
+  );
+}
