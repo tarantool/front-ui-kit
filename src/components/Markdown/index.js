@@ -1,6 +1,7 @@
+// @flow
 import * as React from 'react';
 import MD from 'markdown-to-jsx';
-import { css } from 'emotion';
+import { css, cx } from 'emotion';
 import { colors, monoFontFamily } from '../../variables';
 import { CodeBlockWrap } from '../CodeBlock';
 import { SyntaxHighlight } from '../SyntaxHighlight';
@@ -38,8 +39,16 @@ const styles = {
   ul: css`
     padding-left: 24px;
     margin-bottom: 20px;
+  `,
+  img: css`
+    max-width: 100%;
   `
 };
+
+type Props = {
+  className?: string,
+  text: string
+}
 
 const overrides = {
   h1: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h1'>{children}</Text>,
@@ -59,15 +68,20 @@ const overrides = {
     const { props: { children: childrenText } = {} } = children;
     return <CodeBlockWrap className={styles.pre} textToCopy={childrenText}>{children}</CodeBlockWrap>
   },
-  ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>
+  ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>,
+  // eslint-disable-next-line jsx-a11y/alt-text
+  img: props => <img {...props} className={styles.img} />
 };
 
 const options = { overrides, forceBlock: true };
 
-export const Markdown = ({
-  text
-}) => (
-  <div className={styles.wrap}>
+export const Markdown = (
+  {
+    className,
+    text
+  }: Props
+) => (
+  <div className={cx(styles.wrap, className)}>
     <MD options={options}>{text}</MD>
   </div>
 );
