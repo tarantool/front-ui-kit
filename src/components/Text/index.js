@@ -10,7 +10,7 @@ export const textStyles = {
     font-size: 24px;
     line-height: 40px;
     font-weight: 600;
-    color: ${colors.baseHeading};
+    color: ${colors.dark};
     -webkit-font-smoothing: antialiased;
   `,
   h2: css`
@@ -19,7 +19,7 @@ export const textStyles = {
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    color: ${colors.baseHeading};
+    color: ${colors.dark};
     -webkit-font-smoothing: antialiased;
   `,
   h3: css`
@@ -28,7 +28,7 @@ export const textStyles = {
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    color: ${colors.baseHeading};
+    color: ${colors.dark};
     -webkit-font-smoothing: antialiased;
   `,
   h4: css`
@@ -37,7 +37,7 @@ export const textStyles = {
     font-size: 14px;
     line-height: 22px;
     font-weight: 600;
-    color: ${colors.baseHeading};
+    color: ${colors.dark};
     -webkit-font-smoothing: antialiased;
   `,
   h5: css`
@@ -47,7 +47,7 @@ export const textStyles = {
     line-height: 22px;
     text-transform: uppercase;
     letter-spacing: 0.01em;
-    color: ${colors.baseHeading};
+    color: ${colors.dark};
     font-weight: 600;
     -webkit-font-smoothing: antialiased;
   `,
