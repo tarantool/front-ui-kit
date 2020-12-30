@@ -7,8 +7,10 @@ import { colors } from '../../variables';
 
 const styles = {
   block: css`
+    max-width: 100%;
     padding: 20px;
     border-radius: 10px;
+    overflow: auto;
     background-color: ${colors.dark};
     color: white;
   `,

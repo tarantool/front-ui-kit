@@ -56,4 +56,31 @@ python3 example.py
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with built-in component overriding', () => {
+    const md =
+`
+# Bee careful
+
+Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+
+* Create file
+* Rename file
+* Save file
+`;
+
+    const tree = renderer.create(
+      <Markdown
+        overrides={{
+          ul: ({ children, ...props }) => (
+            <ul {...props} className='iAmOverridedComponent'>{children}</ul>
+          )
+        }}
+        text={md}
+      />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
 });

@@ -82,3 +82,36 @@ Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium dolo
 * Save file
 `} />
 ```
+
+## Built-in components overriding
+
+```js
+import { css } from 'emotion';
+import { Text } from '../../index';
+
+const styles = {
+  ul: css`
+    padding-left: 0;
+    list-style: armenian inside;
+  `
+};
+
+const md = `
+# Bee careful
+
+Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+
+* Create file
+* Rename file
+* Save file
+`;
+
+<Markdown
+  overrides={{
+    ul: ({ children, ...props }) => (
+      <ul {...props} className={styles.ul}>{children}</ul>
+    )
+  }}
+  text={md}
+/>
+```

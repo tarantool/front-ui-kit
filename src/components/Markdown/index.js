@@ -1,6 +1,7 @@
+// @flow
 import * as React from 'react';
 import MD from 'markdown-to-jsx';
-import { css } from 'emotion';
+import { css, cx } from 'emotion';
 import { colors, monoFontFamily } from '../../variables';
 import { CodeBlockWrap } from '../CodeBlock';
 import { SyntaxHighlight } from '../SyntaxHighlight';
@@ -38,10 +39,19 @@ const styles = {
   ul: css`
     padding-left: 24px;
     margin-bottom: 20px;
+  `,
+  img: css`
+    max-width: 100%;
   `
 };
 
-const overrides = {
+type Props = {
+  className?: string,
+  overrides?: { [key: string]: React.Component<any, any> },
+  text: string
+}
+
+const components = {
   h1: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h1'>{children}</Text>,
   h2: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h2'>{children}</Text>,
   h3: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h3'>{children}</Text>,
@@ -59,15 +69,23 @@ const overrides = {
     const { props: { children: childrenText } = {} } = children;
     return <CodeBlockWrap className={styles.pre} textToCopy={childrenText}>{children}</CodeBlockWrap>
   },
-  ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>
+  ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>,
+  // eslint-disable-next-line jsx-a11y/alt-text
+  img: props => <img {...props} className={styles.img} />
 };
 
-const options = { overrides, forceBlock: true };
+export const Markdown = (
+  {
+    className,
+    overrides,
+    text
+  }: Props
+) => {
+  const options = { overrides: Object.assign({}, components, overrides), forceBlock: true };
 
-export const Markdown = ({
-  text
-}) => (
-  <div className={styles.wrap}>
-    <MD options={options}>{text}</MD>
-  </div>
-);
+  return (
+    <div className={cx(styles.wrap, className)}>
+      <MD options={options}>{text}</MD>
+    </div>
+  );
+}
