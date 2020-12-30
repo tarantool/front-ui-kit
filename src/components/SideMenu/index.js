@@ -23,7 +23,7 @@ const styles = {
     border-top: none;
     overflow: hidden;
     width: 256px;
-    background: ${colors.baseHeading};
+    background: ${colors.dark};
     height: 100%;
     padding: 0;
     display: flex;

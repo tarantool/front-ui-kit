@@ -33,8 +33,8 @@ const styles = {
     }
   `,
   activeTab: css`
-    color: ${colors.baseHeading};
-    border-bottom-color: ${colors.baseHeading};
+    color: ${colors.dark};
+    border-bottom-color: ${colors.dark};
   `,
   tabs: css`
     border-bottom: solid 1px ${colors.intentBase};
