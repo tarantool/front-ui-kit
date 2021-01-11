@@ -1,5 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Table renders with copy btn 1`] = `
+<div
+  className="css-79elbk"
+>
+  <button
+    className="css-196xw4s"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onScroll={[Function]}
+    placement="top"
+    type="button"
+  >
+    <svg
+      className="css-1swpe5a"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#icon-copy"
+      />
+    </svg>
+  </button>
+  <div
+    className="css-jj6lbp"
+    onClick={[Function]}
+  >
+    Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
+function_call_error: [string "bad_task"]:1: failure
+stack traceback:
+	[string "bad_task"]:1: in main chunk
+  </div>
+</div>
+`;
+
 exports[`Table renders with more btm 1`] = `
 <div
   className="css-mtitt"
