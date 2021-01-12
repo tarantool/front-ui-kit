@@ -12,7 +12,7 @@ type ExpandableBlockProps = {
   content: string,
   visibleLines: number,
   className?: string,
-  textToCopy?: ?string,
+  showCopyBtn?: boolean,
 }
 
 const styles = {
@@ -95,18 +95,18 @@ const ExpandableBlockContent = (props: ExpandableBlockProps) => {
 
 export const ExpandableBlock = (props: ExpandableBlockProps) => {
 
-  if (props.textToCopy) {
+  if (props.showCopyBtn) {
     return (
       <div
         className={cx(
           styles.withBtn
         )}
       >
-        {props.textToCopy && (
+        {props.showCopyBtn && (
           <CopyToClipboard
             className={styles.copyBtn}
             intent='plain'
-            content={props.textToCopy}
+            content={props.content}
             size='s'
           />
         )}

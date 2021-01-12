@@ -38,7 +38,7 @@ describe('Table', () => {
       <ExpandableBlock
         content={content}
         visibleLines={4}
-        textToCopy={content}
+        showCopyBtn
       />
     ).toJSON();
 
