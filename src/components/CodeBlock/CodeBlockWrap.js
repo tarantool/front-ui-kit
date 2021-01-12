@@ -10,9 +10,11 @@ const styles = {
     max-width: 100%;
     padding: 20px;
     border-radius: 10px;
-    overflow: auto;
     background-color: ${colors.dark};
     color: white;
+  `,
+  inner: css`
+    overflow: auto;
   `,
   withBtn: css`
     position: relative;
@@ -47,6 +49,6 @@ export const CodeBlockWrap = ({ className, children, textToCopy }: CodeBlockWrap
     {!!textToCopy && (
       <CopyToClipboard className={styles.copyBtn} icon={Icon} intent='plain' content={textToCopy} size='s' />
     )}
-    {children}
+    <div className={styles.inner}>{children}</div>
   </pre>
 );
