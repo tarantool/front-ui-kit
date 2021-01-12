@@ -5,7 +5,7 @@ exports[`Markdown renders code block 1`] = `
   className="css-1u5zjlz"
 >
   <pre
-    className="css-alniq0"
+    className="css-h3y5cn"
   >
     <button
       className="css-1wgtjha"
@@ -25,11 +25,15 @@ exports[`Markdown renders code block 1`] = `
         />
       </svg>
     </button>
-    <code
-      className="css-rt1r54"
+    <div
+      className="css-1v8x7dw"
     >
-      Code block
-    </code>
+      <code
+        className="css-rt1r54"
+      >
+        Code block
+      </code>
+    </div>
   </pre>
 </div>
 `;
@@ -86,7 +90,7 @@ exports[`Markdown renders mixed content 1`] = `
       :
     </p>
     <pre
-      className="css-alniq0"
+      className="css-h3y5cn"
     >
       <button
         className="css-1wgtjha"
@@ -106,11 +110,15 @@ exports[`Markdown renders mixed content 1`] = `
           />
         </svg>
       </button>
-      <code
-        className="language-bash css-fkp2zu"
+      <div
+        className="css-1v8x7dw"
       >
-        pip3 install tarantool
-      </code>
+        <code
+          className="language-bash css-fkp2zu"
+        >
+          pip3 install tarantool
+        </code>
+      </div>
     </pre>
     <p
       className="css-1eitoz7"
@@ -118,7 +126,7 @@ exports[`Markdown renders mixed content 1`] = `
       Create a file example.py with the code to get started:
     </p>
     <pre
-      className="css-alniq0"
+      className="css-h3y5cn"
     >
       <button
         className="css-1wgtjha"
@@ -138,10 +146,13 @@ exports[`Markdown renders mixed content 1`] = `
           />
         </svg>
       </button>
-      <code
-        className="language-python css-fkp2zu"
+      <div
+        className="css-1v8x7dw"
       >
-        from tarantool import Connection
+        <code
+          className="language-python css-fkp2zu"
+        >
+          from tarantool import Connection
 c = Connection(
     "try-cartridge.tarantool.io", 
     10300, 
@@ -152,7 +163,8 @@ result = c.insert("examples", (333, 'Value', 'Value'))
 space = c.space("examples")
 results = space.select(333)
 print(results)
-      </code>
+        </code>
+      </div>
     </pre>
     <p
       className="css-1eitoz7"
@@ -160,7 +172,7 @@ print(results)
       Run the script
     </p>
     <pre
-      className="css-alniq0"
+      className="css-h3y5cn"
     >
       <button
         className="css-1wgtjha"
@@ -180,11 +192,15 @@ print(results)
           />
         </svg>
       </button>
-      <code
-        className="language-bash css-fkp2zu"
+      <div
+        className="css-1v8x7dw"
       >
-        python3 example.py
-      </code>
+        <code
+          className="language-bash css-fkp2zu"
+        >
+          python3 example.py
+        </code>
+      </div>
     </pre>
   </div>
 </div>
