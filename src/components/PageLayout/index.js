@@ -34,6 +34,7 @@ const styles = {
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
+    flex-shrink: 0;
     margin-bottom: 15px;
   `,
   leftControls: css`
