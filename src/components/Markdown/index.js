@@ -15,7 +15,7 @@ const styles = {
     & code {
       padding: 3px;
       border-radius: 3px;
-      background-color: ${colors.codeBg};
+      background-color: ${colors.dark};
       color: white;
       font-family: ${monoFontFamily};
     }
@@ -29,16 +29,25 @@ const styles = {
       background-color: transparent;
     }
   `,
+  blockquote: css`
+    padding: 10px 40px 1px;
+    border-radius: 4px;
+    margin: 10px 0 20px;
+    background-color: ${colors.baseBg};
+  `,
   h: css`
-    margin-bottom: 16px;
+    margin: 20px 0 10px;
     color: #000;
   `,
   p: css`
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
   `,
   ul: css`
     padding-left: 24px;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
+  `,
+  li: css`
+    margin: 10px 0;
   `,
   img: css`
     max-width: 100%;
@@ -60,6 +69,7 @@ const components = {
   h6: ({ children, ...props }) => <Text {...props} className={styles.h} variant='h6'>{children}</Text>,
   p: ({ children, ...props }) => <Text {...props} className={styles.p} variant='basic' tag='p'>{children}</Text>,
   a: ({ children, ...props }) => <Link {...props} target='_blank'>{children}</Link>,
+  blockquote: ({ children, ...props }) => <blockquote {...props} className={styles.blockquote}>{children}</blockquote>,
   code: ({ children, className, ...props }) => (
     className && className.indexOf('lang-') === 0
       ? <SyntaxHighlight language={className.substr(5)} text={children} />
@@ -70,6 +80,7 @@ const components = {
     return <CodeBlockWrap className={styles.pre} textToCopy={childrenText}>{children}</CodeBlockWrap>
   },
   ul: ({ children, ...props }) => <Text {...props} className={styles.ul} tag='ul'>{children}</Text>,
+  li: ({ children, ...props }) => <li {...props} className={styles.li}>{children}</li>,
   // eslint-disable-next-line jsx-a11y/alt-text
   img: props => <img {...props} className={styles.img} />
 };

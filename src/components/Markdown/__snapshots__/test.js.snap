@@ -2,7 +2,7 @@
 
 exports[`Markdown renders code block 1`] = `
 <div
-  className="css-1u5zjlz"
+  className="css-1dvqj0j"
 >
   <pre
     className="css-h3y5cn"
@@ -40,10 +40,10 @@ exports[`Markdown renders code block 1`] = `
 
 exports[`Markdown renders code inline 1`] = `
 <div
-  className="css-1u5zjlz"
+  className="css-1dvqj0j"
 >
   <p
-    className="css-1eitoz7"
+    className="css-1hlw7zz"
   >
     <code
       className="css-rt1r54"
@@ -56,11 +56,11 @@ exports[`Markdown renders code inline 1`] = `
 
 exports[`Markdown renders mixed content 1`] = `
 <div
-  className="css-1u5zjlz"
+  className="css-1dvqj0j"
 >
   <div>
     <h2
-      className="css-v70fzj"
+      className="css-13lsgy9"
       id="connect-to-tarantool-cartridge-using-python-clienthttpsgithubcomtarantooltarantool-python"
     >
       Connect to Tarantool Cartridge using 
@@ -73,7 +73,7 @@ exports[`Markdown renders mixed content 1`] = `
       </a>
     </h2>
     <p
-      className="css-1eitoz7"
+      className="css-1hlw7zz"
     >
       First, 
       <strong>
@@ -121,7 +121,7 @@ exports[`Markdown renders mixed content 1`] = `
       </div>
     </pre>
     <p
-      className="css-1eitoz7"
+      className="css-1hlw7zz"
     >
       Create a file example.py with the code to get started:
     </p>
@@ -167,7 +167,7 @@ print(results)
       </div>
     </pre>
     <p
-      className="css-1eitoz7"
+      className="css-1hlw7zz"
     >
       Run the script
     </p>
@@ -208,30 +208,45 @@ print(results)
 
 exports[`Markdown renders with built-in component overriding 1`] = `
 <div
-  className="css-1u5zjlz"
+  className="css-1dvqj0j"
 >
   <div>
     <h1
-      className="css-qlllac"
+      className="css-1nfljoo"
       id="bee-careful"
     >
       Bee careful
     </h1>
     <p
-      className="css-1eitoz7"
+      className="css-1hlw7zz"
     >
       Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
     </p>
+    <blockquote
+      className="css-1gmsj2n"
+    >
+      <p
+        className="css-1hlw7zz"
+      >
+        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+      </p>
+    </blockquote>
     <ul
       className="iAmOverridedComponent"
     >
-      <li>
+      <li
+        className="css-1tx38fa"
+      >
         Create file
       </li>
-      <li>
+      <li
+        className="css-1tx38fa"
+      >
         Rename file
       </li>
-      <li>
+      <li
+        className="css-1tx38fa"
+      >
         Save file
       </li>
     </ul>

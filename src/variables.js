@@ -40,7 +40,6 @@ export const colors = {
 
   baseBg: '#f0f2f5',
   scrollbar: '#e8e8e8',
-  codeBg: '#1e2537',
   dark2: '#fafafa',
   dark10: '#e6e7e8',
   dark25: '#c9cace',

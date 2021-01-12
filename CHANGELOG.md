@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Fixed horizontal scrolling bug with copy button in CodeBlock.
 
+- Updated Markdown text styles.
+
 ## [0.32.0] - 2020-12-30
 
 - Fixed disabled state in Input and TextArea components.
