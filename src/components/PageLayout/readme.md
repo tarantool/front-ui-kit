@@ -1,5 +1,7 @@
 Maximum content width is 1280px. To break this limit use prop `wide`.
 
+Also you can use `PageLayoutWithRef` to access component's root DOM element.
+
 ```js
 import { css, cx } from 'emotion';
 import {

@@ -6,7 +6,8 @@ import {
   IconSearch,
   Input,
   Text,
-  PageLayout
+  PageLayout,
+  PageLayoutWithRef
 } from '../../index';
 
 it('PageLayout renders succesfully', () => {
@@ -46,6 +47,35 @@ it('PageLayout renders succesfully', () => {
           <Button text='Info' size='l' />
         ]}
         wide
+      />
+    </>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+
+it('PageLayoutWithRef renders succesfully', () => {
+  const ref = React.createRef();
+
+  const tree = renderer.create(
+    <>
+      <PageLayoutWithRef
+        heading='Cluster'
+        headingContent={<Text>Heading content</Text>}
+        ref={ref}
+        topRightControls={[
+          <Button text='Details' />,
+          <Button text='Issues' />
+        ]}
+      />
+      <PageLayoutWithRef
+        heading='Cluster'
+        headingContent={<Text>Heading content</Text>}
+        topRightControls={[
+          <Button text='Details' />,
+          <Button text='Issues' />
+        ]}
       />
     </>
   ).toJSON();
