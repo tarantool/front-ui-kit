@@ -192,3 +192,92 @@ Array [
   </div>,
 ]
 `;
+
+exports[`PageLayoutWithRef renders succesfully 1`] = `
+Array [
+  <div
+    className="css-1br8pp4"
+  >
+    <div
+      className="css-3v25n"
+    >
+      <h1
+        className="css-1xisb9e"
+      >
+        Cluster
+      </h1>
+      <span
+        className="css-1ggp6x0"
+      >
+        Heading content
+      </span>
+      <div
+        className="css-13bort8"
+      >
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ixus2c"
+            type="button"
+          >
+            Details
+          </button>
+        </div>
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ixus2c"
+            type="button"
+          >
+            Issues
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="css-1br8pp4"
+  >
+    <div
+      className="css-3v25n"
+    >
+      <h1
+        className="css-1xisb9e"
+      >
+        Cluster
+      </h1>
+      <span
+        className="css-1ggp6x0"
+      >
+        Heading content
+      </span>
+      <div
+        className="css-13bort8"
+      >
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ixus2c"
+            type="button"
+          >
+            Details
+          </button>
+        </div>
+        <div
+          className="css-12ibiio"
+        >
+          <button
+            className="css-ixus2c"
+            type="button"
+          >
+            Issues
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

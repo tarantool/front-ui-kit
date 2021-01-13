@@ -82,7 +82,7 @@ export const PageLayout = (
       },
       className
     )}
-    ref={ref}
+    ref={ref && 'current' in ref ? ref : null}
   >
     {!!AboveComponent && (
       <AboveComponent className={styles.aboveHeadingPanel} />
@@ -117,3 +117,5 @@ export const PageLayout = (
     {children}
   </div>
 );
+
+export const PageLayoutWithRef = React.forwardRef<PageLayoutProps, HTMLElement>(PageLayout);
