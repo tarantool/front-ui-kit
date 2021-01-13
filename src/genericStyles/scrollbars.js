@@ -12,6 +12,7 @@ export const systemIndependentScrollbars = css`
 
   &::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
     margin-right: 3px;
   }
 

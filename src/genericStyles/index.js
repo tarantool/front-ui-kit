@@ -1,6 +1,6 @@
 // @flow
-import * as scrollbar from './scrollbar';
+import * as scrollbars from './scrollbars';
 
 export const genericStyles = {
-  ...scrollbar
+  ...scrollbars
 };
