@@ -14,7 +14,8 @@ const styles = {
     color: white;
   `,
   inner: css`
-    overflow: auto;
+    overflow: hidden;
+    overflow-x: auto;
   `,
   withBtn: css`
     position: relative;
