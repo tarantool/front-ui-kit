@@ -17,8 +17,6 @@ import {
   TarantoolLogoFull
 } from '../../index';
 
-const logoStyle = css`margin-left: 24px;`;
-
 const breadcrumbs = [
   {
     title: '@tarantool.io/ui-kit',
@@ -134,12 +132,23 @@ const menuItems = [
   }
 ];
 
+const styles = {
+  content: css`
+    height: 1000px;
+    background-color: rgba(120, 123, 223, 0.4);
+    flex-grow: 1;
+    flex-shrink: 0;
+  `,
+  logo: css`margin-left: 24px;`,
+  wrap: css`height: 500px;`
+};
+
 const onMenuItemClick = (path, type) => console.log(path, type);
 const toggleExpand = (path, expanded) => console.log(path, expanded);
 
 const renderLogo = collapsed => (
   <SVGImage
-    className={!collapsed && logoStyle}
+    className={!collapsed && styles.logo}
     glyph={collapsed ? TarantoolLogoCompact : TarantoolLogoFull}
   />
 );
@@ -157,7 +166,7 @@ const PreconfiguredSideMenu = ({ className }) => (
 
 const onLinkClick = (link) => console.log('link', link);
 
-<AppLayout sidebarComponent={PreconfiguredSideMenu}>
+<AppLayout sidebarComponent={PreconfiguredSideMenu} className={styles.wrap}>
   <AppHeader
     appName='Sample app'
     breadcrumbs={breadcrumbs}
@@ -168,7 +177,7 @@ const onLinkClick = (link) => console.log('link', link);
     onLinkClick={onLinkClick}
   />
   <PageLayout heading='Page header'>
-    <div style={{ backgroundColor: 'rgba(120, 123, 223, 0.4)', flexGrow: 1 }}>Content</div>
+    <div className={styles.content}>Content</div>
   </PageLayout>
 </AppLayout>
 ```

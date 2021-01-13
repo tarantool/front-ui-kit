@@ -1,4 +1,10 @@
-```js
+> *Do not use this component!*
+>
+> `<Scrollbar />` imposes bad practices and will be deleted very soon.
+> Use native CSS-styled scrollbars instead of it.
+> We'll add this styles in UI-Kit later.
+
+<!-- ```js
 import { css } from 'emotion';
 
 const style = css`height: 300px;`;
@@ -12,4 +18,4 @@ the master-builder of human happiness.';
   {sampleText.repeat(20)}
 </Scrollbar>
 
-```
+``` -->

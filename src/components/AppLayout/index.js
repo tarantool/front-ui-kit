@@ -1,7 +1,8 @@
 // @flow
-import * as React from 'react'
-import { css, cx } from 'emotion'
-import { colors } from '../../variables'
+import * as React from 'react';
+import { css, cx } from 'emotion';
+import { colors } from '../../variables';
+import { genericStyles } from '../../genericStyles';
 
 const styles = {
   main: css`
@@ -41,7 +42,7 @@ type AppLayoutProps = {
 export const AppLayout = ({ children, className, sidebarComponent: Sidebar }: AppLayoutProps) => (
   <div className={cx(styles.main, className)}>
     <Sidebar className={styles.sidebar} />
-    <div className={styles.content}>
+    <div className={cx(styles.content, genericStyles.scrollbars)}>
       {children}
     </div>
   </div>
