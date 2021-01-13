@@ -60,16 +60,19 @@ export type PageLayoutProps = {
   wide?: boolean
 };
 
-export const PageLayout = ({
-  children,
-  className,
-  heading,
-  headingContent,
-  aboveComponent: AboveComponent,
-  topLeftControls,
-  topRightControls,
-  wide
-}: PageLayoutProps) => (
+export const PageLayout = (
+  {
+    children,
+    className,
+    heading,
+    headingContent,
+    aboveComponent: AboveComponent,
+    topLeftControls,
+    topRightControls,
+    wide
+  }: PageLayoutProps,
+  ref: Function
+) => (
   <div
     className={cx(
       styles.page,
@@ -79,6 +82,7 @@ export const PageLayout = ({
       },
       className
     )}
+    ref={ref}
   >
     {!!AboveComponent && (
       <AboveComponent className={styles.aboveHeadingPanel} />
