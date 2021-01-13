@@ -4,7 +4,7 @@ import { rgba } from 'emotion-rgba';
 import { getOS } from '../utils/getOS';
 import { colors } from '../variables';
 
-export const scrollbars = css`
+export const systemIndependentScrollbars = css`
   & {
     scrollbar-width: thin;
     scrollbar-color: ${rgba(colors.dark65, 0.5)} transparent;
@@ -27,4 +27,4 @@ export const scrollbars = css`
 
 const isScrollbarStyleRequired = ['Mac OS', 'iOS', 'Android'].indexOf(getOS()) === -1;
 
-export const OSDependScrollbars = isScrollbarStyleRequired ? scrollbars : '';
+export const scrollbars = isScrollbarStyleRequired ? systemIndependentScrollbars : '';

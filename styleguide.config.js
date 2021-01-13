@@ -15,6 +15,10 @@ module.exports = {
       components: 'src/components/*/index.js'
     },
     {
+      name: 'Generic styles',
+      content: 'src/genericStyles/readme.md'
+    },
+    {
       name: 'GitHub',
       href: 'https://github.com/tarantool/front-ui-kit',
       external: true
