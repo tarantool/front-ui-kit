@@ -6,18 +6,23 @@ import { noop } from 'lodash';
 import { Text } from '../Text';
 import { IconChevron } from '../Icon';
 import { Button } from '../Button';
+import { CopyToClipboard } from '../CopyToClipboard';
 
 type ExpandableBlockProps = {
   content: string,
   visibleLines: number,
   className?: string,
+  showCopyBtn?: boolean,
 }
 
-const textStyle = css`
-  white-space: pre-wrap;
-`;
-
-const textOverflowStyle = css`
+const styles = {
+  textStyle: css`
+    white-space: pre-wrap;
+  `,
+  btnStyle: css`
+    display: block;
+  `,
+  textOverflowStyle: css`
     position: relative;
     cursor: pointer;
     &::after {
@@ -30,13 +35,21 @@ const textOverflowStyle = css`
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
       pointer-events: none;
     }
-`;
+  `,
+  withBtn: css`
+    position: relative;
+  `,
+  copyBtn: css`
+    position: absolute;
+    top: 0;
+    right: 0px;
+  `,
+  contentWrapper: css`
+    margin-right: 30px;
+  `
+};
 
-const btnStyle = css`
- display: block;
-`;
-
-export const ExpandableBlock = (props: ExpandableBlockProps) => {
+const ExpandableBlockContent = (props: ExpandableBlockProps) => {
   const [ fullIsShowing, setShowFull ] = React.useState(false);
 
   const splitedContent: string[] = props.content.split('\n');
@@ -44,7 +57,7 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
 
   if ((countTextLines <= props.visibleLines)) {
     return (
-      <Text className={cx(textStyle, props.className)}>
+      <Text className={cx(styles.textStyle, props.className)}>
         {props.content}
       </Text>
     )
@@ -60,8 +73,8 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
         tag="div"
         onClick={!fullIsShowing ? setShowFull.bind(undefined, true) : noop}
         className={cx(
-          { [textOverflowStyle]: !fullIsShowing },
-          textStyle,
+          { [styles.textOverflowStyle]: !fullIsShowing },
+          styles.textStyle,
           props.className
         )}
       >
@@ -71,11 +84,36 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
         <Button
           onClick={setShowFull.bind(undefined, false)}
           iconRight={IconChevron}
-          className={btnStyle}
+          className={styles.btnStyle}
           text="less"
           intent="plain"
         />
       }
     </>
   )
+};
+
+export const ExpandableBlock = (props: ExpandableBlockProps) => {
+
+  if (props.showCopyBtn) {
+    return (
+      <div
+        className={cx(
+          styles.withBtn
+        )}
+      >
+        {props.showCopyBtn && (
+          <CopyToClipboard
+            className={styles.copyBtn}
+            intent='plain'
+            content={props.content}
+            size='s'
+          />
+        )}
+        <ExpandableBlockContent {...props} className={cx(styles.contentWrapper, props.className)} />
+      </div>
+    )
+  }
+
+  return <ExpandableBlockContent {...props} />;
 };

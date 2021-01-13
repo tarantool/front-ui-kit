@@ -5,5 +5,13 @@ const content = "Pipeline execution failed: Function \"bad_task\" in pipeline \"
     visibleLines={4}
     content={content}
  />
+<br />
+<br />
+<br />
+  <ExpandableBlock
+    visibleLines={4}
+    content={content}
+    showCopyBtn={true}
+ />
 </>
 ```

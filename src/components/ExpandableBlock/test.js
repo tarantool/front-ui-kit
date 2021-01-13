@@ -31,4 +31,17 @@ describe('Table', () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it('renders with copy btn', () => {
+
+    const tree = renderer.create(
+      <ExpandableBlock
+        content={content}
+        visibleLines={4}
+        showCopyBtn
+      />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
