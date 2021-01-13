@@ -26,7 +26,7 @@ exports[`Markdown renders code block 1`] = `
       </svg>
     </button>
     <div
-      className="css-1v8x7dw"
+      className="css-pmzqvx"
     >
       <code
         className="css-rt1r54"
@@ -111,7 +111,7 @@ exports[`Markdown renders mixed content 1`] = `
         </svg>
       </button>
       <div
-        className="css-1v8x7dw"
+        className="css-pmzqvx"
       >
         <code
           className="language-bash css-fkp2zu"
@@ -147,7 +147,7 @@ exports[`Markdown renders mixed content 1`] = `
         </svg>
       </button>
       <div
-        className="css-1v8x7dw"
+        className="css-pmzqvx"
       >
         <code
           className="language-python css-fkp2zu"
@@ -193,7 +193,7 @@ print(results)
         </svg>
       </button>
       <div
-        className="css-1v8x7dw"
+        className="css-pmzqvx"
       >
         <code
           className="language-bash css-fkp2zu"
