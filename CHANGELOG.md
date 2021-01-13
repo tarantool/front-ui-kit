@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated Markdown text styles.
 
+- Added ref-forwarding support in PageLayout.
+
 ## [0.32.0] - 2020-12-30
 
 - Fixed disabled state in Input and TextArea components.
