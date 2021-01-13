@@ -1,6 +1,6 @@
 ```js
 <UploadZone
   handler={console.log}
-  subTitle='Second string'
+  subTitle='Support for a single or bulk upload. \nStrictly prohibit from uploading company data or other band files.'
 />
 ```
