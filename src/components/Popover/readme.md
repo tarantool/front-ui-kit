@@ -1,5 +1,7 @@
-It is highly recommended to use the `withPopover` HOC.
-The `Dropdown` component adds an additional `<div>` wrap and may be removed in the future.
+> *Do not pass React.Node to popoverContent*
+>
+> This type has been kept for compatibility reasons
+> and will be deleted soon.
 
 ```js
 import { css } from 'emotion';
@@ -39,7 +41,7 @@ const PopoverButton = withPopover(Button);
 <ControlsPanel
   controls={[
     <PopoverButton
-      popoverContent={<>
+      popoverContent={() => <>
         <div className={styles.row}>
           <Text className={styles.leftCell}>subject ID</Text>
           <Text className={styles.rightCell}>—</Text>
@@ -62,8 +64,8 @@ const PopoverButton = withPopover(Button);
     </PopoverButton>,
     <PopoverButton
       icon={IconMore}
-      popoverContent={<>
-        <Button text='Click me twice' />
+      popoverContent={({ closePopover }) => <>
+        <Button text='Click me twice' onClick={closePopover} />
         <Input type='text' />
         <Checkbox>Accept agreement</Checkbox>
         <Text>I'm text inside popover.</Text>

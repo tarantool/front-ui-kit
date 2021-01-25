@@ -16,12 +16,16 @@ const focusFirstInteractiveElement = (containerEl: HTMLElement) => {
   }
 }
 
+type PopoverMethods = {
+  closePopover: () => void
+}
+
 export type withPopoverProps = {
   className?: string, // trigger wrapper class
   popoverClassName?: string,
   onClick?: (e: MouseEvent) => void,
   component?: React.AbstractComponent<any>,
-  popoverContent?: React.Node
+  popoverContent?: React.Node | (PopoverMethods) => React.Node
 };
 
 type withPopoverState = {
@@ -164,6 +168,10 @@ export const withPopover = (
 
     toggleDropdown = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
 
+    popoverMethods = {
+      closePopover: this.toggleDropdown
+    }
+
     renderPopover = () => {
       const { popoverClassName, popoverContent } = this.props;
       const { left, top } = this.state;
@@ -175,7 +183,7 @@ export const withPopover = (
       return (
         <DropdownPopoverWithRef
           className={popoverClassName}
-          onClick={this.handlePopoverClick}
+          onClick={typeof popoverContent === 'function' ? null : this.handlePopoverClick}
           onKeyDownCapture={this.handlePopoverKeyDown}
           onMouseDown={this.handlePopoverMouseDown}
           style={{
@@ -185,7 +193,7 @@ export const withPopover = (
           }}
           ref={this.popoverRef}
         >
-          {popoverContent}
+          {typeof popoverContent === 'function' ? popoverContent(this.popoverMethods) : popoverContent}
         </DropdownPopoverWithRef>
       );
     };

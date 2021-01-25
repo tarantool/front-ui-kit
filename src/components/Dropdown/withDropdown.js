@@ -219,7 +219,12 @@ export const withDropdown = (
     }
 
     render() {
-      const { className, items, ...props } = this.props;
+      const {
+        className,
+        items,
+        popoverClassName,
+        ...props
+      } = this.props;
       const { isOpen } = this.state;
 
       return (

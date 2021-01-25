@@ -70,6 +70,11 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
     innerRef.current && focusFirstInteractiveElement(innerRef.current);
   }
 
+  focusPopover = () => {
+    const { innerRef } = this.props;
+    innerRef.current && innerRef.current.focus();
+  }
+
   handleFocusOutside = (evt: FocusEvent) => {
     if (!this.isFocusInside()) {
       this.focusFirstInteractiveElement();
@@ -77,7 +82,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   }
 
   componentDidMount() {
-    this.focusFirstInteractiveElement();
+    this.focusPopover();
     document.addEventListener('focus', this.handleFocusOutside, true);
   }
 
@@ -87,7 +92,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
 
   componentDidUpdate() {
     if (!this.isFocusInside()) {
-      this.focusFirstInteractiveElement();
+      this.focusPopover();
     }
   }
 
