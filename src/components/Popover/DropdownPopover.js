@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { css, cx } from 'emotion';
 import { colors, zIndex, INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';
+import { isFocusInsideRef } from '../../utils/isFocusInside';
 
 const styles = {
   popover: css`
@@ -53,18 +54,6 @@ type DropdownPopoverProps = {
 }
 
 export class DropdownPopover extends React.Component<DropdownPopoverProps> {
-  isFocusInside() {
-    const focused = document.activeElement;
-    const { innerRef } = this.props;
-
-    return innerRef
-      && innerRef.current
-      && (
-        innerRef.current.contains(focused)
-        || innerRef.current === focused
-      );
-  }
-
   focusFirstInteractiveElement = () => {
     const { innerRef } = this.props;
     innerRef.current && focusFirstInteractiveElement(innerRef.current);
@@ -76,7 +65,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   }
 
   handleFocusOutside = (evt: FocusEvent) => {
-    if (!this.isFocusInside()) {
+    if (!isFocusInsideRef(this.props.innerRef)) {
       this.focusFirstInteractiveElement();
     }
   }
@@ -91,7 +80,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   }
 
   componentDidUpdate() {
-    if (!this.isFocusInside()) {
+    if (!isFocusInsideRef(this.props.innerRef)) {
       this.focusPopover();
     }
   }
