@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+- Changed Popover API: prop `popoverContent` accepts function,
+  which returns `React.Node` instead of plain `React.Node`.
+
+- Focusing popups box element (dropdowns, modals)
+  instead of first interactive element.
+
+- Autofocus OK button when ConfirmModal opened.
+
 ## [0.33.0] - 2021-01-13
 
 - Fixed PageLayout heading shrinking bug.

@@ -35,7 +35,6 @@ const styles = {
     white-space: pre-wrap;
   `
 };
-console.log(genericStyles);
 
 <>
   <div className={styles.layout}>

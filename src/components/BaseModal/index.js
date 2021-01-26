@@ -5,6 +5,7 @@ import * as ReactDOM from 'react-dom';
 import { rgba } from 'emotion-rgba';
 import { css, cx } from 'emotion';
 import { colors, zIndex } from '../../variables';
+import { isFocusInsideRef } from '../../utils/isFocusInside';
 
 export const styles = {
   lockedBody: css`
@@ -72,17 +73,22 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
     body && body.classList.remove(styles.lockedBody);
   }
 
+  afterModalOpen() {
+    this.lockBodyScroll();
+    if (this.modalRef && !isFocusInsideRef(this.modalRef)) {
+      this.focusModal();
+    }
+  }
+
   componentDidMount() {
     if (this.isModalVisible()) {
-      this.focusFirstInteractiveElement();
-      this.lockBodyScroll();
+      this.afterModalOpen();
     }
   }
 
   componentDidUpdate(prevProps: BaseModalProps) {
     if (prevProps.visible === false && this.isModalVisible()) {
-      this.focusFirstInteractiveElement();
-      this.lockBodyScroll();
+      this.afterModalOpen();
     } else if (prevProps.visible === true && !this.isModalVisible()) {
       this.releaseBodyScroll();
     }
@@ -145,6 +151,11 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
     } else if (modal) {
       modal.focus();
     }
+  }
+
+  focusModal = () => {
+    const modal = this.modalRef.current;
+    modal && modal.focus();
   }
 
   isModalVisible = (): boolean => {

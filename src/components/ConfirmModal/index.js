@@ -33,6 +33,7 @@ export const ConfirmModal = (
           Cancel
         </Button>,
         <Button
+          autoFocus
           intent='primary'
           size='l'
           loading={confirmPreloader || false}
