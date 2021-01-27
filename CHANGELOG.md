@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added SectionPreloader component.
 
+- Fixed copy button background in CodeBlock.
+
 ## [0.33.0] - 2021-01-13
 
 - Fixed PageLayout heading shrinking bug.
