@@ -19,30 +19,76 @@ exports[`AppLayout renders correctly 1`] = `
         />
       </svg>
     </div>
-    <div>
+    <div
+      className="css-1pp54io"
+    >
+      <a
+        className="css-1rgrxmh"
+        href="/mytest/test"
+        onClick={[Function]}
+        title="My Test"
+      >
+        <div
+          className="css-ya0za5"
+        >
+          <svg
+            className="css-1wacbef"
+            viewBox="0 0 16 16"
+          >
+            <use
+              xlinkHref="#info"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-lbwipx"
+        >
+          My Test
+        </span>
+      </a>
+      <a
+        className="css-1rgrxmh"
+        href="/other/test"
+        onClick={[Function]}
+        title="Other"
+      >
+        <div
+          className="css-ya0za5"
+        >
+          <svg
+            className="css-7r35aj"
+            viewBox="0 0 14 14"
+          >
+            <use
+              xlinkHref="#code"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-lbwipx"
+        >
+          Other
+        </span>
+        <svg
+          className="css-1kzudc7"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#chevron-up"
+          />
+        </svg>
+      </a>
       <div
-        className="css-ndu8ol"
+        className="css-11ep6t5"
       >
         <a
-          className="css-1rgrxmh"
+          className="css-vp64rp"
           href="/mytest/test"
           onClick={[Function]}
           title="My Test"
         >
-          <div
-            className="css-ya0za5"
-          >
-            <svg
-              className="css-1wacbef"
-              viewBox="0 0 16 16"
-            >
-              <use
-                xlinkHref="#info"
-              />
-            </svg>
-          </div>
           <span
-            className="css-lbwipx"
+            className="css-hgsklg"
           >
             My Test
           </span>
@@ -53,104 +99,20 @@ exports[`AppLayout renders correctly 1`] = `
           onClick={[Function]}
           title="Other"
         >
-          <div
-            className="css-ya0za5"
-          >
-            <svg
-              className="css-7r35aj"
-              viewBox="0 0 14 14"
-            >
-              <use
-                xlinkHref="#code"
-              />
-            </svg>
-          </div>
           <span
-            className="css-lbwipx"
+            className="css-133b1yf"
           >
             Other
           </span>
-          <svg
-            className="css-1kzudc7"
-            viewBox="0 0 14 14"
-          >
-            <use
-              xlinkHref="#chevron-up"
-            />
-          </svg>
         </a>
-        <div
-          className="css-11ep6t5"
-        >
-          <a
-            className="css-vp64rp"
-            href="/mytest/test"
-            onClick={[Function]}
-            title="My Test"
-          >
-            <span
-              className="css-hgsklg"
-            >
-              My Test
-            </span>
-          </a>
-          <a
-            className="css-1rgrxmh"
-            href="/other/test"
-            onClick={[Function]}
-            title="Other"
-          >
-            <span
-              className="css-133b1yf"
-            >
-              Other
-            </span>
-          </a>
-          <a
-            className="css-1rgrxmh"
-            href="/other/test2"
-            onClick={[Function]}
-            title="Other2"
-          >
-            <span
-              className="css-133b1yf"
-            >
-              Other2
-            </span>
-          </a>
-          <a
-            className="css-1rgrxmh"
-            href="/other/test3"
-            onClick={[Function]}
-            title="Other4"
-          >
-            <span
-              className="css-133b1yf"
-            >
-              Other4
-            </span>
-          </a>
-        </div>
         <a
           className="css-1rgrxmh"
           href="/other/test2"
           onClick={[Function]}
           title="Other2"
         >
-          <div
-            className="css-ya0za5"
-          >
-            <svg
-              className="css-q9ewss"
-              viewBox="0 0 14 14"
-            >
-              <use
-                xlinkHref="#cluster"
-              />
-            </svg>
-          </div>
           <span
-            className="css-lbwipx"
+            className="css-133b1yf"
           >
             Other2
           </span>
@@ -161,25 +123,61 @@ exports[`AppLayout renders correctly 1`] = `
           onClick={[Function]}
           title="Other4"
         >
-          <div
-            className="css-ya0za5"
-          >
-            <svg
-              className="css-1hub4lj"
-              viewBox="0 0 12 14"
-            >
-              <use
-                xlinkHref="#trash"
-              />
-            </svg>
-          </div>
           <span
-            className="css-lbwipx"
+            className="css-133b1yf"
           >
             Other4
           </span>
         </a>
       </div>
+      <a
+        className="css-1rgrxmh"
+        href="/other/test2"
+        onClick={[Function]}
+        title="Other2"
+      >
+        <div
+          className="css-ya0za5"
+        >
+          <svg
+            className="css-q9ewss"
+            viewBox="0 0 14 14"
+          >
+            <use
+              xlinkHref="#cluster"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-lbwipx"
+        >
+          Other2
+        </span>
+      </a>
+      <a
+        className="css-1rgrxmh"
+        href="/other/test3"
+        onClick={[Function]}
+        title="Other4"
+      >
+        <div
+          className="css-ya0za5"
+        >
+          <svg
+            className="css-1hub4lj"
+            viewBox="0 0 12 14"
+          >
+            <use
+              xlinkHref="#trash"
+            />
+          </svg>
+        </div>
+        <span
+          className="css-lbwipx"
+        >
+          Other4
+        </span>
+      </a>
     </div>
     <div
       className="css-1ecuton"
