@@ -17,8 +17,12 @@ const styles = {
   `,
   icon: css`
     width: 200px;
-    height: 182px;
+    height: 74px;
     fill: rgba(0, 0, 0, 0.25);
+  `,
+  image: css`
+    width: 200px;
+    height: 74px;
   `,
   iconMargin: css`
     margin-bottom: 24px;
@@ -64,7 +68,7 @@ export const NonIdealState = (
       ? (
         <SVGImage
           glyph={image}
-          className={cx({ [styles.iconMargin]: title || description })}
+          className={cx(styles.icon, { [styles.iconMargin]: title || description })}
         />
       )
       : null}

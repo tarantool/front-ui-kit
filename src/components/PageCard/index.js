@@ -2,7 +2,6 @@
 import * as React from 'react';
 import { css, cx } from 'react-emotion'
 import { colors } from '../../variables';
-import { Spin } from '../Spin';
 import { Text } from '../Text';
 import { IconClose } from '../Icon';
 
@@ -32,7 +31,6 @@ type PageCardProps = {
   children?: React.Node,
   showCorner?: boolean,
   onClose?: (e: MouseEvent) => void,
-  loading?: boolean,
   title?: string
 };
 
@@ -41,7 +39,6 @@ export const PageCard = ({
   children,
   showCorner, // TODO: implement
   onClose,
-  loading = false,
   title = ''
 }: PageCardProps) => (
   <div
@@ -51,10 +48,8 @@ export const PageCard = ({
       className
     )}
   >
-    <Spin enable={loading}>
-      <Text className={styles.cardHead} variant='h2'>{title}</Text>
-      {onClose && <IconClose className={styles.closeIcon} onClick={onClose} />}
-      <div>{children}</div>
-    </Spin>
+    <Text className={styles.cardHead} variant='h2'>{title}</Text>
+    {onClose && <IconClose className={styles.closeIcon} onClick={onClose} />}
+    <div>{children}</div>
   </div>
 );

@@ -1,15 +1,17 @@
 ```js
 import { Button } from '../Button';
-import { IconSpinner } from '../Icon';
 import {
   splashGenericErrorSvg,
-  splashSelectFileSvg
+  splashSelectFileSvg,
 } from '../../images';
-import { NonIdealState, NonIdealStateAction } from './index';
+import { NonIdealState, NonIdealStateAction, TarantoolLogoSpinner } from '../../index';
+
+console.log(NonIdealState);
+console.log(TarantoolLogoSpinner);
 
 <>
   <NonIdealState
-    icon={IconSpinner}
+    icon={TarantoolLogoSpinner}
     title='Loading...'
   />
 

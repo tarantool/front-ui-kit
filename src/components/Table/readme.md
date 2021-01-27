@@ -76,11 +76,11 @@ const data = React.useMemo(
 
 <>
   <div style={{ padding: '20px' }}>
-    <Table columns={columns} />
+    <Table columns={columns} loading />
   </div>
 
   <div style={{ padding: '20px' }}>
-    <Table columns={columns} data={data} />
+    <Table columns={columns} data={data} loading />
   </div>
 </>
 ```
