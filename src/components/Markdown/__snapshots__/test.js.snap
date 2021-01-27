@@ -8,7 +8,7 @@ exports[`Markdown renders code block 1`] = `
     className="css-h3y5cn"
   >
     <button
-      className="css-1wgtjha"
+      className="css-jen7vt"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -93,7 +93,7 @@ exports[`Markdown renders mixed content 1`] = `
       className="css-h3y5cn"
     >
       <button
-        className="css-1wgtjha"
+        className="css-jen7vt"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -129,7 +129,7 @@ exports[`Markdown renders mixed content 1`] = `
       className="css-h3y5cn"
     >
       <button
-        className="css-1wgtjha"
+        className="css-jen7vt"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -175,7 +175,7 @@ print(results)
       className="css-h3y5cn"
     >
       <button
-        className="css-1wgtjha"
+        className="css-jen7vt"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}

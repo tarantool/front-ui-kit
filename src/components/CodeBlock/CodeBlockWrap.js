@@ -25,6 +25,7 @@ const styles = {
     position: absolute;
     top: 16px;
     right: 16px;
+    background-color: ${colors.dark};
   `,
   copyIcon: css`
     fill: white;
