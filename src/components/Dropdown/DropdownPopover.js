@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
 import { colors, zIndex, INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';
-import { Scrollbar } from '../Scrollbar';
 import { isFocusInsideRef } from '../../utils/isFocusInside';
+import { genericStyles } from '../../genericStyles';
 
 const styles = {
   popover: css`
@@ -28,9 +28,7 @@ const styles = {
   `,
   popoverScrollable: css`
     height: 100%;
-  `,
-  scrollable: css`
-    height: 100%;
+    overflow: auto;
   `
 }
 
@@ -116,6 +114,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
       <div
         className={cx(
           styles.popover,
+          genericStyles.scrollbars,
           { [styles.popoverScrollable]: useScroll },
           className
         )}
@@ -126,9 +125,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
         ref={innerRef}
         tabIndex={0}
       >
-        <ScrollableWrap useScroll={useScroll}>
-          {items}
-        </ScrollableWrap>
+        {items}
       </div>
     );
   }
