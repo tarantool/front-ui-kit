@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Autofocus OK button when ConfirmModal opened.
 
+- Use native styled scrollbars in TextArea and SideMenu.
+
 ## [0.33.0] - 2021-01-13
 
 - Fixed PageLayout heading shrinking bug.

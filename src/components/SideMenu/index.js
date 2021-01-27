@@ -2,12 +2,12 @@
 
 import * as React from 'react';
 import { useState } from 'react';
-import { css, keyframes, cx } from 'react-emotion'
-import { SideMenuItem } from './components/SideMenuItem'
-import { Scrollbar } from '../Scrollbar'
+import { css, keyframes, cx } from 'react-emotion';
+import { SideMenuItem } from './components/SideMenuItem';
 import { IconArrowLeft, IconArrowRight } from '../Icon';
 import { colors } from '../../variables';
 import * as R from 'ramda';
+import { genericStyles } from '../../genericStyles';
 
 const translateFromRight = keyframes`
   from{
@@ -46,7 +46,7 @@ const styles = {
   `,
   menuList: css`
     flex-grow: 1;
-    overflow: hidden;
+    overflow: auto;
   `,
   item: css`
     height: 40px;
@@ -217,13 +217,11 @@ export function SideMenu(props: SideMenuProps) {
       <div className={cx(styles.logoContainer, { [styles.logoCenter]: isShort })}>
         {renderMenuLogo ? renderMenuLogo(isShort) : null}
       </div>
-      <Scrollbar track='#212121'>
-        <div className={styles.menuList}>
-          {topMenu.map((x: SideMenuItemType, i) => (
-            <SideMenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
-          ))}
-        </div>
-      </Scrollbar>
+      <div className={cx(styles.menuList, genericStyles.scrollbars)}>
+        {topMenu.map((x: SideMenuItemType, i) => (
+          <SideMenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
+        ))}
+      </div>
       <div className={styles.bottomButtons}>
         {pinnedMenuItem && (
           <SideMenuItem

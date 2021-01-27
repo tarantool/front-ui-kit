@@ -3,6 +3,7 @@ import * as React from 'react';
 import { createRef } from 'react';
 import { cx } from 'react-emotion';
 import { commonInputStyles, commonInputSizes } from '../Input/commonStyles';
+import { genericStyles } from '../../genericStyles';
 
 export type TextAreaProps = {
   autoComplete?: 'on' | 'off',  // ?
@@ -91,6 +92,7 @@ export class TextArea extends React.Component<TextAreaProps, TextAreaState> {
           className={cx(
             commonInputStyles.input,
             commonInputSizes[size || 'l'],
+            genericStyles.scrollbars,
             { [commonInputStyles.disabled]: disabled }
           )}
           disabled={disabled}
