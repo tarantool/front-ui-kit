@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Use native styled scrollbars in TextArea and SideMenu.
 
+- New branded preloader instead of spinner.
+
+- Added SectionPreloader component.
+
 ## [0.33.0] - 2021-01-13
 
 - Fixed PageLayout heading shrinking bug.

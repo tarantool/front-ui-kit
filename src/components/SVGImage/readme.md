@@ -34,8 +34,8 @@ const toggleBg = () => setState({ darkBg: !state.darkBg });
   />
   <SVGImage glyph={splashGenericErrorSvg} />
   <SVGImage glyph={splashSelectFileSvg} />
-  <SVGImage glyph={TarantoolLogoFull} />
   <SVGImage glyph={TarantoolLogoCompact} />
+  <SVGImage glyph={TarantoolLogoFull} />
   <SVGImage glyph={windowDeadSvg} />
   <SVGImage glyph={windowNoNetworkSvg} />
   <SVGImage glyph={windowShockedSvg} />

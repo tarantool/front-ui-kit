@@ -1,8 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import { IconSpinner } from '../Icon';
-
+import { TarantoolLogoSpinner } from '../TarantoolLogoSpinner';
 
 const styles = {
   wrap: css`
@@ -17,8 +16,8 @@ const styles = {
   `,
 
   icon: css`
-    width: 200px;
-    height: 182px;
+    width: 100px;
+    height: 74px;
     fill: rgba(0, 0, 0, 0.25);
   `,
 
@@ -57,7 +56,7 @@ export class Spin extends React.Component<SpinProps> {
 
   renderSpin(){
     return <div className={styles.spin}>
-      <IconSpinner className={styles.icon} />
+      <TarantoolLogoSpinner className={styles.icon} />
     </div>;
   }
 }

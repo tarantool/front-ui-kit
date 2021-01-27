@@ -3,7 +3,8 @@ import React from 'react';
 import styled from 'react-emotion';
 import { css, cx } from 'emotion';
 import { useDropzone } from 'react-dropzone';
-import { IconBox, IconSpinner } from '../Icon';
+import { IconBox } from '../Icon';
+import { TarantoolLogoSpinner } from '../TarantoolLogoSpinner';
 import { Text } from '../Text';
 import { colors } from '../../variables';
 
@@ -16,6 +17,11 @@ const styles = {
     height: 48px;
     margin-bottom: 16px;
     fill: ${colors.intentBase};
+  `,
+  preloader: css`
+    width: 68px;
+    height: 48px;
+    margin-bottom: 16px;
   `,
   notice: css`
     margin-top: 10px;
@@ -69,8 +75,6 @@ export const UploadZone = (
     files
   }: UploadZoneProps
 ) => {
-  const Icon = loading ? IconSpinner : IconBox;
-
   const {
     getRootProps,
     getInputProps,
@@ -91,7 +95,9 @@ export const UploadZone = (
         {...rootProps}
       >
         <input {...getInputProps()} name={name}/>
-        <Icon className={styles.icon} />
+        {loading
+          ? <TarantoolLogoSpinner className={styles.preloader} />
+          : <IconBox className={styles.icon} />}
         <Text variant='h3' tag='span'>
           {loading
             ? 'Uploading...'
