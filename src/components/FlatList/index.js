@@ -29,49 +29,33 @@ const styles = {
   `
 };
 
-type FlatListItemProps = {
+type FlatListProps = {
   className?: string,
-  corners?: 'hard' | 'soft',
-  item: any,
-  render: (any) => React.Node
+  children?: React.Node
 };
 
-const FlatListItem = ({ className, item, render }: FlatListItemProps) => (
+export const FlatList = ({
+  className,
+  children
+}:
+FlatListProps) => (
+  <ul className={cx(styles.outer, className)}>
+    {children}
+  </ul>
+);
+
+type FlatListItemProps = {
+  className?: string,
+  children?: React.Node
+};
+
+export const FlatListItem = ({ className, children }: FlatListItemProps) => (
   <li
     className={cx(
       styles.item,
       className
     )}
   >
-    {render(item)}
+    {children}
   </li>
-);
-
-type FlatListProps = {
-  className?: string,
-  corners?: 'hard' | 'soft',
-  itemClassName?: string,
-  itemKey: string,
-  items?: any[],
-  itemRender: any => React.Node
-};
-
-export const FlatList = ({
-  className,
-  itemClassName,
-  itemKey,
-  items,
-  itemRender
-}:
-FlatListProps) => (
-  <ul className={cx(styles.outer, className)}>
-    {items && items.map(item => (
-      <FlatListItem
-        className={itemClassName}
-        item={item}
-        key={item[itemKey]}
-        render={itemRender}
-      />
-    ))}
-  </ul>
 );

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlatList renders correctly 1`] = `
+<ul
+  className="css-zmcgmm"
+>
+  <li
+    className="css-1pkilt6"
+  >
+    <span
+      className="css-1ggp6x0"
+    >
+      John
+    </span>
+    <span
+      className="css-1lh30e5"
+    >
+      $200
+    </span>
+  </li>
+  <li
+    className="css-1pkilt6"
+  >
+    <span
+      className="css-1ggp6x0"
+    >
+      Emily
+    </span>
+    <span
+      className="css-1lh30e5"
+    >
+      $1500
+    </span>
+  </li>
+  <li
+    className="css-1pkilt6"
+  >
+    <span
+      className="css-1ggp6x0"
+    >
+      Michael
+    </span>
+    <span
+      className="css-1lh30e5"
+    >
+      $500
+    </span>
+  </li>
+</ul>
+`;
