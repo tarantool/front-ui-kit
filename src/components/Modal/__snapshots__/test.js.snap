@@ -19,7 +19,7 @@ exports[`Modal renders modal with form 1`] = `
       Configure server
     </h2>
     <svg
-      className="css-pjnldn"
+      className="css-mzwhr0"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -112,7 +112,7 @@ exports[`Modal renders modal with large text 1`] = `
       Configure server
     </h2>
     <svg
-      className="css-pjnldn"
+      className="css-mzwhr0"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -182,7 +182,7 @@ exports[`Modal renders modal with tabs 1`] = `
       Configure server
     </h2>
     <svg
-      className="css-pjnldn"
+      className="css-mzwhr0"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -282,7 +282,7 @@ exports[`Modal renders simple modal 1`] = `
       Simple Modal
     </h2>
     <svg
-      className="css-pjnldn"
+      className="css-mzwhr0"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >

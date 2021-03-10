@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconHelperClose renders correctly 1`] = `
+<svg
+  className="css-bwu5np"
+  viewBox="0 0 16 16"
+>
+  <use
+    xlinkHref="#close"
+  />
+</svg>
+`;
