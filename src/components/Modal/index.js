@@ -1,8 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from 'emotion';
-import { colors } from '../../variables';
-import { IconClose } from '../Icon';
+import { IconHelperClose } from '../IconHelper';
 import { PopupFooter } from '../PopupFooter';
 import { Text } from '../Text';
 import { type BaseModalProps, BaseModal, styles as baseStyles } from '../BaseModal';
@@ -32,14 +31,6 @@ const styles = {
     position: absolute;
     top: 30px;
     right: 30px;
-    fill: ${colors.dark40};
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.12s;
-    transition-property: fill;
-
-    &:hover {
-      fill: ${colors.dark25};
-    }
   `,
   children: css`
     flex-grow: 1;
@@ -96,7 +87,7 @@ export class Modal extends BaseModal<ModalProps> {
           onSubmit={onSubmit}
         >
           <Text className={styles.title} variant='h2'>{title}</Text>
-          {onClose && <IconClose className={styles.closeIcon} onClick={onClose} />}
+          {onClose && <IconHelperClose className={styles.closeIcon} onClick={onClose} />}
           <div
             className={cx(
               styles.children,

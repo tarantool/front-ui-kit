@@ -3,10 +3,11 @@ import * as React from 'react';
 import { css, cx } from 'react-emotion'
 import { colors } from '../../variables';
 import { Text } from '../Text';
-import { IconClose } from '../Icon';
+import { IconHelperClose } from '../IconHelper';
 
 const styles = {
   container: css`
+    position: relative;
     padding: 16px;
     border: 1px solid #e8e8e8;
     border-radius: 4px;
@@ -21,8 +22,8 @@ const styles = {
   `,
   closeIcon: css`
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 16px;
+    right: 16px;
   `
 };
 
@@ -49,7 +50,7 @@ export const PageCard = ({
     )}
   >
     <Text className={styles.cardHead} variant='h2'>{title}</Text>
-    {onClose && <IconClose className={styles.closeIcon} onClick={onClose} />}
+    {onClose && <IconHelperClose className={styles.closeIcon} onClick={onClose} />}
     <div>{children}</div>
   </div>
 );
