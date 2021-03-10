@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Added IconHelperClose component.
+
 - Fixed close icon in PageCard.
 
-- Added IconHelperClose component.
+- Fixed bug in CheckBox with scrollable containers.
 
 ## [0.34.0] - 2021-01-27
 

@@ -23,10 +23,9 @@ const styles = {
     margin-right: 8px;
   `,
   input: css`
-    position: absolute;
     clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
+    width: 0;
+    height: 0;
     margin: -1px;
     appearance: none;
 
