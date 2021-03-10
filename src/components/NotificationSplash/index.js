@@ -3,7 +3,7 @@ import * as React from 'react'
 import { css, cx } from 'emotion'
 import { colors } from '../../variables';
 import { ControlsPanel } from '../ControlsPanel';
-import { IconClose } from '../Icon';
+import { IconHelperClose } from '../IconHelper';
 import { Text } from '../Text';
 
 const styles = {
@@ -68,6 +68,6 @@ export const NotificationSplash = (
       )}
       controls={controls}
     />
-    {onClose && <IconClose className={styles.close} onClick={onClose} />}
+    {onClose && <IconHelperClose className={styles.close} onClick={onClose} />}
   </div>
 );

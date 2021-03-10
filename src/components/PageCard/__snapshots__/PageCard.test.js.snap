@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageCard renders with close button 1`] = `
+<div
+  className="css-pb1zll"
+>
+  <h2
+    className="css-19t58j"
+  >
+    Bootstrap vshard
+  </h2>
+  <svg
+    className="css-14qwf54"
+    onClick={[Function]}
+    viewBox="0 0 16 16"
+  >
+    <use
+      xlinkHref="#close"
+    />
+  </svg>
+  <div>
+    <h4
+      className="css-115iv0u"
+    >
+      When you finish edition topology. To render storages operable.
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`PageCard renders without close button 1`] = `
+<div
+  className="css-pb1zll"
+>
+  <h2
+    className="css-19t58j"
+  >
+    Bootstrap vshard
+  </h2>
+  <div>
+    <span
+      className="css-1ggp6x0"
+    >
+      Afterwards, any change in topology will trigger data rebalancing
+    </span>
+  </div>
+</div>
+`;

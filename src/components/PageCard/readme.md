@@ -1,4 +1,4 @@
-```
+```js
 import { IconOk, IconCancel } from '../Icon';
 import { Text } from '../Text';
 

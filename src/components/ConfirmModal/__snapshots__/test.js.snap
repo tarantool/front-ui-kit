@@ -18,7 +18,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
       Please confirm
     </h2>
     <svg
-      className="css-pjnldn"
+      className="css-mzwhr0"
       onClick={[MockFunction]}
       viewBox="0 0 16 16"
     >
@@ -99,7 +99,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
       Please confirm
     </h2>
     <svg
-      className="css-pjnldn"
+      className="css-mzwhr0"
       onClick={[MockFunction]}
       viewBox="0 0 16 16"
     >
