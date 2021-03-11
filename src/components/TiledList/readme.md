@@ -1,6 +1,6 @@
 ```js
 import { css } from 'emotion';
-import { Text } from '../Text';
+import { TiledList, TiledListItem, Text } from '../../index';
 
 const styles = {
   row: css`
@@ -13,31 +13,21 @@ const styles = {
   `
 };
 
+const items = [
+  { name: 'John', balance: 200 },
+  { name: 'Emily', balance: 1500 },
+  { name: 'Michael', balance: 500 }
+];
+
 <div className={styles.wrap}>
   <Text>Text outside</Text>
-  <TiledList
-    itemClassName={styles.row}
-    items={[
-      {
-        name: 'John',
-        balance: 200
-      },
-      {
-        name: 'Emily',
-        balance: 1500
-      },
-      {
-        name: 'Michael',
-        balance: 500
-      }
-    ]}
-    itemKey='name'
-    itemRender={item => (
-      <>
+  <TiledList>
+    {items.map(item => (
+      <TiledListItem className={styles.row} key={item.name} corners='soft'>
         <Text>{item.name}</Text>
         <Text variant='h5' tag='span'>{`$${item.balance}`}</Text>
-      </>
-    )}
-  />
+      </TiledListItem>
+    ))}
+  </TiledList>
 </div>
 ```

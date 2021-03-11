@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Added IconHelperClose component.
 
-- Changed FlatList props (Breaking change).
+- Changed FlatList and TiledList props (Breaking change).
 
 - Fixed close icon in PageCard.
 
