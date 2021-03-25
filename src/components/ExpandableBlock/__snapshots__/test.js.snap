@@ -6,7 +6,9 @@ exports[`Table renders with copy btn 1`] = `
 >
   <button
     className="css-196xw4s"
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onScroll={[Function]}
