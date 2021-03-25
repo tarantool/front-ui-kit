@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { css, cx } from 'emotion';
 import { rgba } from 'emotion-rgba';
+import memoize from 'lodash/memoize';
 import { textStyles } from '../Text';
 import { colors, zIndex } from '../../variables';
 
@@ -54,14 +55,8 @@ const styles = {
   `
 };
 
-type TooltipProps = {
-  children: React.Node,
-  className?: string,
-  content?: React.Node,
-  largePadding?: bool,
-  tag?: string,
-  popoverClassName?: string
-};
+type ComponentRef = { elementRef: { current: ?HTMLElement } };
+type WrapperRefElement = HTMLElement | React.Component<any>;
 
 type withTooltipProps = {
   children?: React.Node,
@@ -82,17 +77,11 @@ type withTooltipState = {
   topPlacement: boolean
 };
 
-type ComponentRef = { elementRef: { current: ?HTMLElement } };
-type WrapperRefElement = HTMLElement | React.Component<any>;
-
 export const withTooltip = (
   //@TODO Fix type: in fact, withTooltip() accepts
   // only DOM intrinsics and specific class component (and no functional component)
   Component: React.AbstractComponent<any, WrapperRefElement> | string
-) => class extends React.Component<
-  withTooltipProps,
-  withTooltipState
-> {
+) => class extends React.Component<withTooltipProps, withTooltipState> {
   state = {
     cornerPositionX: 0,
     visible: false,
@@ -108,21 +97,23 @@ export const withTooltip = (
   wrapperRef = React.createRef<WrapperRefElement>();
   tooltipRef = React.createRef<HTMLElement>();
 
-  componentDidUpdate(prevProps: withTooltipProps, prevState: withTooltipState) {
-    const {
-      visible
-    } = this.state;
-
-    const { wrapperRef, tooltipRef } = this;
-
-    const tooltipElement = tooltipRef.current;
+  getWrapperElement(): ?HTMLElement {
+    const { wrapperRef } = this;
 
     const componentRef = wrapperRef.current && ((wrapperRef.current: any): ComponentRef).elementRef;
     const domNodeRef = ((wrapperRef: any): { current: HTMLElement });
 
-    const wrapperElement: ?HTMLElement = componentRef
+    return componentRef
       ? componentRef.current
       : domNodeRef.current;
+  }
+
+
+  componentDidUpdate(prevProps: withTooltipProps, prevState: withTooltipState) {
+    const { visible } = this.state;
+    const { tooltipRef } = this;
+    const tooltipElement = tooltipRef.current;
+    const wrapperElement = this.getWrapperElement();
 
     if (((visible && !prevState.visible) || (prevProps !== this.props)) && tooltipElement && wrapperElement) {
       const bodyWidth = document.body ? document.body.clientWidth : 0;
@@ -188,6 +179,8 @@ export const withTooltip = (
         <Component
           {...props}
           className={cx(styles.wrapper, className)}
+          onBlur={this.handleMouseLeave}
+          onFocus={this.handleMouseEnter}
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
           onScroll={this.handleScroll}
@@ -227,7 +220,7 @@ export const withTooltip = (
   }
 
   renderTooltipPortal = () => {
-    if (this.state.visible) {
+    if (this.state.visible && this.props.tooltipContent) {
       const root = document.body;
 
       if (root) {
@@ -261,6 +254,17 @@ export const withTooltip = (
   }
 };
 
+type TooltipProps = {
+  children: React.Node,
+  className?: string,
+  content?: React.Node,
+  largePadding?: bool,
+  tag?: string,
+  popoverClassName?: string
+};
+
+const withTooltipMemoized = memoize(tag => withTooltip(tag));
+
 export const Tooltip = (
   {
     children,
@@ -271,7 +275,7 @@ export const Tooltip = (
     popoverClassName
   }: TooltipProps
 ) => {
-  const Component = withTooltip(tag || 'div');
+  const Component = withTooltipMemoized(tag || 'div');
 
   return (
     <Component

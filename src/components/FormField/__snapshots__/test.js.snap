@@ -17,6 +17,8 @@ exports[`FormField renders correctly 1`] = `
       </span>
       <div
         className="css-vj79ep"
+        onBlur={[Function]}
+        onFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onScroll={[Function]}

@@ -9,7 +9,9 @@ exports[`Markdown renders code block 1`] = `
   >
     <button
       className="css-jen7vt"
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onScroll={[Function]}
@@ -94,7 +96,9 @@ exports[`Markdown renders mixed content 1`] = `
     >
       <button
         className="css-jen7vt"
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onScroll={[Function]}
@@ -130,7 +134,9 @@ exports[`Markdown renders mixed content 1`] = `
     >
       <button
         className="css-jen7vt"
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onScroll={[Function]}
@@ -176,7 +182,9 @@ print(results)
     >
       <button
         className="css-jen7vt"
+        onBlur={[Function]}
         onClick={[Function]}
+        onFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onScroll={[Function]}
