@@ -1,25 +1,30 @@
-```js
-import { Button } from '../Button';
-import { Text } from '../Text';
+```jsx
+import { useState } from 'react';
+import { Button, ConfirmModal, Text } from '@tarantool.io/ui-kit';
 
-initialState = { loading: false, opened: false };
+const [opened, setOpened] = useState(false);
+const [loading, setLoading] = useState(false);
 
-const openModal = () => setState({ opened: true });
-const closeModal = () => setState({ opened: false });
+const openModal = () => setOpened(true);
+const closeModal = () => setOpened(false);
+
 const apply = () => {
-  setState({ loading: true });
-  setTimeout(() => setState({ loading: false, opened: false }), 1200);
+  setLoading(true);
+  setTimeout(
+    () => { setLoading(false); setOpened(false); },
+    1200
+  );
 };
 
 <>
   <Button onClick={openModal} text='Open ConfirmModal' />
   <ConfirmModal
     title="Please confirm"
-    visible={state.opened}
+    visible={opened}
     onCancel={closeModal}
     onConfirm={apply}
     confirmText="Remove"
-    confirmPreloader={state.loading}
+    confirmPreloader={loading}
   >
     <Text>Removing user John Appleseed</Text>
   </ConfirmModal>

@@ -1,5 +1,5 @@
 ```js
-import { Button } from '../Button';
+import { Button, Table } from '@tarantool.io/ui-kit';
 
 const columns = React.useMemo(
   () => [

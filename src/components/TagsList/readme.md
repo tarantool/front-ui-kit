@@ -1,4 +1,6 @@
-```
+Deprecated component. It's not recommended to use.
+
+```jsx
 <TagsList
   values={[
     'Tag 1',

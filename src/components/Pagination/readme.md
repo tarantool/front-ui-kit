@@ -1,7 +1,12 @@
 ```js
+import { useState } from 'react';
 import { css, cx } from 'emotion';
-import { ControlsPanel, Switcher } from '../../index';
-import { PaginationControlled } from './PaginationControlled';
+import {
+  ControlsPanel,
+  Switcher,
+  Pagination,
+  PaginationControlled
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   wrapper: css`
@@ -12,16 +17,16 @@ const styles = {
   `
 };
 
-initialState = { darkBg: false, pageIndex: 20, pageSize: 10 };
+const [darkBg, setDarkBg] = useState(false);
+const [pageIndex, setPageIndex] = useState(20);
+const [pageSize, setPageSize] = useState(10);
 
-const toggleBg = () => setState({ darkBg: !state.darkBg });
-const changePage = (pageIndex) => setState({ pageIndex });
-const setPageSize = (pageSize) => setState({ pageSize });
+const toggleBg = () => setDarkBg(!darkBg);
 
-<div className={cx(styles.wrapper, { [styles.bg]: state.darkBg })}>
+<div className={cx(styles.wrapper, { [styles.bg]: darkBg })}>
   <ControlsPanel
     controls={[
-      <Switcher onChange={toggleBg} checked={state.darkBg}>Background</Switcher>
+      <Switcher onChange={toggleBg} checked={darkBg}>Background</Switcher>
     ]}
   />
 
@@ -29,10 +34,10 @@ const setPageSize = (pageSize) => setState({ pageSize });
   <br />
 
   <Pagination
-    page={state.pageIndex}
-    pageSize={state.pageSize}
+    page={pageIndex}
+    pageSize={pageSize}
     items={300}
-    onPageChange={changePage}
+    onPageChange={setPageIndex}
     setPageSize={setPageSize}
   />
 
@@ -41,11 +46,11 @@ const setPageSize = (pageSize) => setState({ pageSize });
 
   <Pagination
     showTotal
-    page={state.pageIndex}
-    pageSize={state.pageSize}
+    page={pageIndex}
+    pageSize={pageSize}
     items={300}
     pageSizeOptions={[10, 25, 75, 100]}
-    onPageChange={changePage}
+    onPageChange={setPageIndex}
     setPageSize={setPageSize}
   />
 
@@ -53,30 +58,30 @@ const setPageSize = (pageSize) => setState({ pageSize });
   <br />
 
   <Pagination
-    page={state.pageIndex}
-    pageSize={state.pageSize}
+    page={pageIndex}
+    pageSize={pageSize}
     items={300}
-    onPageChange={changePage}
+    onPageChange={setPageIndex}
   />
 
   <br />
   <br />
 
   <PaginationControlled
-    page={state.pageIndex}
-    pageSize={state.pageSize}
+    page={pageIndex}
+    pageSize={pageSize}
     disableNextPageButton={false}
-    onPageChange={changePage}
+    onPageChange={setPageIndex}
   />
 
   <br />
   <br />
 
   <PaginationControlled
-    page={state.pageIndex}
-    pageSize={state.pageSize}
+    page={pageIndex}
+    pageSize={pageSize}
     disableNextPageButton={false}
-    onPageChange={changePage}
+    onPageChange={setPageIndex}
     pageSizeOptions={[10, 25, 75, 110]}
     setPageSize={setPageSize}
   />

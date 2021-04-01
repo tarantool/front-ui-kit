@@ -1,5 +1,5 @@
 ```js
-import { IconGeoPin } from '../Icon';
+import { IconGeoPin, UriLabel } from '@tarantool.io/ui-kit';
 
 <>
   <UriLabel

@@ -1,7 +1,6 @@
 ```js
 import { css } from 'emotion';
-import { Button } from '../Button';
-import { Switcher } from '../Switcher';
+import { Button, NotificationSplash, Switcher } from '@tarantool.io/ui-kit';
 
 const wrap = css`
   padding: 12px;

@@ -1,4 +1,4 @@
-Used inside `Markdown` and `CodeBlock`. Be careful to use directly.
+Used inside `Markdown` and `CodeBlock`. It's not recommended to use directly.
 
 ```js
 import { css } from 'emotion';

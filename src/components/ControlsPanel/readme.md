@@ -1,8 +1,7 @@
 Use thin style in modals.
 
 ```js
-import { Button } from '../Button';
-import { Switcher } from '../Switcher';
+import { Button, ControlsPanel, Switcher } from '@tarantool.io/ui-kit';
 
 <>
   <ControlsPanel

@@ -12,18 +12,22 @@ To enable scrollbars in body, you should set `fit` prop and `max-height` for Mod
 To create popup forms easy way use prop `onSubmit` and pass button with `type='submit'` to `footerControls`.
 Additional `<form>` don't need.
 
-```js
+```jsx
+import { useState } from 'react';
 import { css } from 'emotion';
-import { Button } from '../Button';
-import { Tabbed } from '../Tabbed';
-import { ControlsPanel } from '../ControlsPanel';
-import { PopupBody } from '../PopupBody';
-import { PopupFooter } from '../PopupFooter';
-import { Input } from '../Input';
-import { LabeledInput } from '../LabeledInput';
-import { Text } from '../Text';
+import {
+  Button,
+  ControlsPanel,
+  Input,
+  LabeledInput,
+  Modal,
+  PopupBody,
+  PopupFooter,
+  Tabbed,
+  Text
+} from '@tarantool.io/ui-kit';
 
-initialState = { opened: null };
+const [opened, setOpened] = useState(null);
 
 const sampleText = 'But I must explain to you how all this mistaken idea of denouncing \
 pleasure and praising pain was born and I will give you a complete account of the system, \
@@ -32,8 +36,8 @@ the master-builder of human happiness.';
 
 const tabStyles = css`padding: 24px 0 0;`;
 
-const openModal = (modalName) => setState({ opened: modalName });
-const closeModal = () => setState({ opened: null });
+const openModal = (modalName) => setOpened(modalName);
+const closeModal = () => setOpened(null);
 
 const tabs = [
   {
@@ -73,7 +77,7 @@ const tabs = [
       <Button size='l' text='Decline' onClick={closeModal} />
     ]}
     title='Simple Modal'
-    visible={state.opened === 'simple'}
+    visible={opened === 'simple'}
     onClose={closeModal}
   >
     <Text>{sampleText}</Text>
@@ -84,7 +88,7 @@ const tabs = [
       <Button size='l' text='Decline' onClick={closeModal} />
     ]}
     title='Configure server'
-    visible={state.opened === 'wide'}
+    visible={opened === 'wide'}
     onClose={closeModal}
     wide
   >
@@ -97,7 +101,7 @@ const tabs = [
       <Button size='l' text='Decline' onClick={closeModal} />
     ]}
     title='Configure server'
-    visible={state.opened === 'wide-scrollable'}
+    visible={opened === 'wide-scrollable'}
     onClose={closeModal}
     fit
     thinBorders
@@ -110,7 +114,7 @@ const tabs = [
 
   <Modal
     title='Configure server'
-    visible={state.opened === 'tabbed'}
+    visible={opened === 'tabbed'}
     onClose={closeModal}
     wide
     fit
@@ -126,7 +130,7 @@ const tabs = [
   </Modal>
   <Modal
     title='Configure server'
-    visible={state.opened === 'form'}
+    visible={opened === 'form'}
     onClose={closeModal}
     onSubmit={() => console.log('submit')}
     footerControls={[
@@ -134,7 +138,7 @@ const tabs = [
       <Button size='l' text='Decline' onClick={closeModal} />
     ]}
   >
-    <LabeledInput label='First input' />
+    <LabeledInput label='First input' autoFocus />
   </Modal>
 </>
 ```

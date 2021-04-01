@@ -1,9 +1,20 @@
-const { name, version } = require('./package');
+const path = require('path');
+const { version } = require('./package');
 
 module.exports = {
+  getComponentPathLine: componentPath => {
+    const exceptions = ['Icon'];
+    const dir = path.dirname(componentPath);
+    const fileName = path.basename(componentPath, '.js');
+    const name = fileName === 'index' ? dir.slice(dir.lastIndexOf('/') + 1) : fileName;
+
+    if (exceptions.includes(name)) return;
+    return `import { ${name} } from '@tarantool.io/ui-kit';`;
+  },
+  ignore: ['src/components/SyntaxHighlight/*'],
   sections: [
     {
-      name: 'Readme',
+      name: 'Intro',
       content: './readme.md'
     },
     {
@@ -12,7 +23,9 @@ module.exports = {
     },
     {
       name: 'UI Components',
-      components: 'src/components/*/index.js'
+      content: './components.md',
+      components: 'src/components/*/index.js',
+      sectionDepth: 1
     },
     {
       name: 'Generic styles',
@@ -34,10 +47,15 @@ module.exports = {
       ]
     }
   },
-  title: name,
+  exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
+  moduleAliases: {
+    '@tarantool.io/ui-kit': path.resolve(__dirname, 'src')
+  },
+  pagePerSection: true,
   // skipComponentsWithoutExample: true,
-  exampleMode: 'collapse', // 'hide' | 'collapse' | 'expand'
-  usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
   styleguideDir: 'docs',
+  title: 'Tarantool UI-Kit',
+  // tocMode: 'expand',
+  usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
   version
 };

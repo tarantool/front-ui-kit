@@ -1,4 +1,5 @@
 ```js
+import { useState } from 'react';
 import { css, cx } from 'emotion';
 import {
   ControlsPanel,
@@ -7,20 +8,19 @@ import {
   Button,
   IconChevron,
   IconSearch,
+  Input,
   Switcher,
   Text,
   withDropdown
-} from '../../index';
+} from '@tarantool.io/ui-kit';
 
-initialState = {
-  disabled: false,
-  value: 'Value'
-};
+const [disabled, setDisabled] = useState(false);
+const [value, setValue] = useState('Value');
 
-const handleChange = e => setState({ value: e.target.value });
-const handleClear = () => setState({ value: '' });
-const handleSelect = value => setState({ value });
-const toggleDisabled = () => setState(({ disabled }) => ({ disabled: !disabled }));
+const handleChange = e => setValue(e.target.value);
+const handleClear = () => setValue('');
+const handleSelect = value => setValue(value);
+const toggleDisabled = () => setDisabled(!disabled);
 
 const DropdownButton = withDropdown(Button);
 
@@ -59,14 +59,14 @@ const dropdownExample = (
 <>
   <ControlsPanel
     controls={[
-      <Switcher checked={state.disabled} onChange={toggleDisabled}>Disabled</Switcher>
+      <Switcher checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
     ]}
   />
 
   <div style={{ margin: '12px' }}>
     <Input
-      disabled={state.disabled}
-      value={state.value}
+      disabled={disabled}
+      value={value}
       placeholder='Placeholder'
       onChange={handleChange}
       title='Input'
@@ -76,8 +76,8 @@ const dropdownExample = (
 
   <div style={{ margin: '12px' }}>
     <Input
-      disabled={state.disabled}
-      value={state.value}
+      disabled={disabled}
+      value={value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       rightIcon={<IconSearch />}
@@ -86,8 +86,8 @@ const dropdownExample = (
 
   <div style={{ width: '250px', margin: '12px' }}>
     <Input
-      disabled={state.disabled}
-      value={state.value}
+      disabled={disabled}
+      value={value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       rightIcon={<IconSearch />}
@@ -101,8 +101,8 @@ const dropdownExample = (
 
   <div style={{ margin: '12px' }}>
     <Input
-      disabled={state.disabled}
-      value={state.value}
+      disabled={disabled}
+      value={value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       onClearClick={handleClear}
@@ -114,8 +114,8 @@ const dropdownExample = (
 
   <div style={{ margin: '12px' }}>
     <Input
-      disabled={state.disabled}
-      value={state.value}
+      disabled={disabled}
+      value={value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       rightIcon={<IconSearch />}
@@ -126,8 +126,8 @@ const dropdownExample = (
 
   <div style={{ width: '250px', margin: '12px' }}>
     <Input
-      disabled={state.disabled}
-      value={state.value}
+      disabled={disabled}
+      value={value}
       placeholder={'Filter by uri, uuid, role, alias or labels'}
       onChange={handleChange}
       rightIcon={<IconSearch />}

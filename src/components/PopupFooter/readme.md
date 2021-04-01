@@ -1,7 +1,7 @@
-Use PopupFooter and PopupBody to keep modals good-looking.
+Use PopupFooter to keep modals good-looking.
 
 ```js
-import { Button } from '../Button';
+import { Button, PopupFooter } from '@tarantool.io/ui-kit';
 
 <PopupFooter
   controls={([

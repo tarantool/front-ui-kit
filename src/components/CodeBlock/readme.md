@@ -1,6 +1,4 @@
 ```js
-import { CodeBlock } from '../../index';
-
 <CodeBlock
   language='jsx'
   text={`export const Alert = ({
@@ -28,8 +26,6 @@ import { CodeBlock } from '../../index';
 ### Lua
 
 ```js
-import { CodeBlock } from '../../index';
-
 <CodeBlock
   language='lua'
   text={`local function customer_add(customer_id, fullname)
@@ -44,8 +40,6 @@ end`}
 ### Python
 
 ```js
-import { CodeBlock } from '../../index';
-
 <CodeBlock
   language='python'
   text={`from tarantool import Connection
@@ -65,8 +59,6 @@ print(results)`}
 ### PHP
 
 ```js
-import { CodeBlock } from '../../index';
-
 <CodeBlock
   language='php'
   text={`<?php
@@ -87,8 +79,6 @@ print_r($result);
 ### Go
 
 ```js
-import { CodeBlock } from '../../index';
-
 <CodeBlock
   language='go'
   text={`package main
@@ -117,8 +107,6 @@ func main() {
 ### Ruby
 
 ```js
-import { CodeBlock } from '../../index';
-
 <CodeBlock
   language='ruby'
   text={`require 'tarantool16'
@@ -148,8 +136,6 @@ tar.select(:_space, [512], index: 0, iterator: :>=, hash: true)`}
 ### Plain text
 
 ```js
-import { CodeBlock } from '../../index';
-
 <CodeBlock
   text={`require 'tarantool16'
 

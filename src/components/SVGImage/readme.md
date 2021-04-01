@@ -1,17 +1,20 @@
 Universal wrapper component to insert bundled SVG images everywhere.
 
 ```js
+import { useState } from 'react';
 import { css, cx } from 'emotion';
-import { ControlsPanel, Switcher } from '../../index';
 import {
+  ControlsPanel,
   splashGenericErrorSvg,
   splashSelectFileSvg,
+  SVGImage,
+  Switcher,
   TarantoolLogoCompact,
   TarantoolLogoFull,
   windowDeadSvg,
   windowNoNetworkSvg,
   windowShockedSvg
-} from '../../images';
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   wrapper: css`
@@ -22,14 +25,14 @@ const styles = {
   `
 };
 
-initialState = { darkBg: false };
+const [darkBg, setDarkBg] = useState(false);
 
-const toggleBg = () => setState({ darkBg: !state.darkBg });
+const toggleBg = () => setDarkBg(!darkBg);
 
-<div className={cx(styles.wrapper, { [styles.bg]: state.darkBg })}>
+<div className={cx(styles.wrapper, { [styles.bg]: darkBg })}>
   <ControlsPanel
     controls={[
-      <Switcher onChange={toggleBg} checked={state.darkBg}>Background</Switcher>
+      <Switcher onChange={toggleBg} checked={darkBg}>Background</Switcher>
     ]}
   />
   <SVGImage glyph={splashGenericErrorSvg} />

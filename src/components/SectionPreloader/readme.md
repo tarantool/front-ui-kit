@@ -22,6 +22,7 @@ Preview:
 
 ```jsx
 import { css } from 'emotion';
+import { SectionPreloader } from '@tarantool.io/ui-kit';
 
 <div className={css`height: 400px;`}>
   <SectionPreloader />

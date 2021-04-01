@@ -2,10 +2,11 @@
 import { css } from 'emotion';
 import {
   Button,
+  CopyToClipboard,
   Text,
   copyToClipboard,
   withCopyToClipboard
-} from '../../index';
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   wrap: css`
