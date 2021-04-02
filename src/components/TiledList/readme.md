@@ -1,6 +1,6 @@
 ```js
 import { css } from 'emotion';
-import { TiledList, TiledListItem, Text } from '../../index';
+import { TiledList, TiledListItem, Text } from '@tarantool.io/ui-kit';
 
 const styles = {
   row: css`

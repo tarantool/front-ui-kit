@@ -1,6 +1,5 @@
 ```js
-import { IconOk, IconCancel } from '../Icon';
-import { Text } from '../Text';
+import { IconOk, IconCancel, PageCard, Text } from '@tarantool.io/ui-kit';
 
 <PageCard title="Bootstrap vshard" onClose={() => console.log('Close clicked')}>
   <Text variant='h4'>When you finish edition topology. To render storages operable.</Text>

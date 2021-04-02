@@ -3,6 +3,7 @@ Maximum content width is 1280px. To break this limit use prop `wide`.
 Also you can use `PageLayoutWithRef` to access component's root DOM element.
 
 ```js
+import { useState } from 'react';
 import { css, cx } from 'emotion';
 import {
   Alert,
@@ -11,18 +12,19 @@ import {
   IconSearch,
   Input,
   InputGroup,
+  PageLayout,
   Text
-} from '../../index';
+} from '@tarantool.io/ui-kit';
 
-const initialState = {
+const [flags, setFlags] = useState({
   leftControls: false,
   rightControls: false,
   aboveComponent: false,
   wide: false,
   fullPage: false
-};
+});
 
-const toggle = key => () => setState(state => ({ [key]: !state[key]}));
+const toggle = key => () => setFlags({ ...flags, [key]: !flags[key] });
 
 const styles = {
   wrap: css`
@@ -32,31 +34,32 @@ const styles = {
     background-color: #fff;
     outline: 1px solid black;
     outline-offset: -1px;
+    z-index: 1;
   `
 };
 
-<div className={cx({ [styles.wrap]: state.fullPage })}>
+<div className={cx({ [styles.wrap]: flags.fullPage })}>
   <PageLayout
-    aboveComponent={state.aboveComponent ? ({ className }) => <Alert className={className} type='error'>Hello, I'm error!</Alert> : undefined}
+    aboveComponent={flags.aboveComponent ? ({ className }) => <Alert className={className} type='error'>Hello, I'm error!</Alert> : undefined}
     heading='Reports list'
-    topLeftControls={state.leftControls && [
+    topLeftControls={flags.leftControls && [
       <Input rightIcon={<IconSearch />} />,
       <Button text='Info' size='l' />
     ]}
-    topRightControls={state.rightControls &&[
+    topRightControls={flags.rightControls &&[
       <Button text='Details' size='l' />,
       <Button text='Info' size='l' />
     ]}
-    wide={state.wide}
+    wide={flags.wide}
   >
     <Text>Content</Text>
     <InputGroup>
       {[
-        <Checkbox onChange={toggle('leftControls')} checked={state.leftControls}>Show controls on the left</Checkbox>,
-        <Checkbox onChange={toggle('rightControls')} checked={state.rightControls}>Show controls on the right</Checkbox>,
-        <Checkbox onChange={toggle('aboveComponent')} checked={state.aboveComponent}>Show aboveComponent</Checkbox>,
-        <Checkbox onChange={toggle('wide')} checked={state.wide}>Use wide prop</Checkbox>,
-        <Checkbox onChange={toggle('fullPage')} checked={state.fullPage}>Place on all page</Checkbox>
+        <Checkbox onChange={toggle('leftControls')} checked={flags.leftControls}>Show controls on the left</Checkbox>,
+        <Checkbox onChange={toggle('rightControls')} checked={flags.rightControls}>Show controls on the right</Checkbox>,
+        <Checkbox onChange={toggle('aboveComponent')} checked={flags.aboveComponent}>Show aboveComponent</Checkbox>,
+        <Checkbox onChange={toggle('wide')} checked={flags.wide}>Use wide prop</Checkbox>,
+        <Checkbox onChange={toggle('fullPage')} checked={flags.fullPage}>Place on all page</Checkbox>
       ]}
     </InputGroup>
   </PageLayout>

@@ -12,9 +12,10 @@ import {
   IconMore,
   Input,
   Checkbox,
+  Popover,
   Text,
   colors
-} from '../../index';
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   row: css`

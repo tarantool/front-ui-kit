@@ -1,14 +1,17 @@
+Deprecated component. It's not recommended to use.
+
 ```js
-import { Checkbox } from '../Checkbox';
+import { useState } from 'react';
+import { Checkbox, Spin } from '@tarantool.io/ui-kit';
 
-initialState = { spin: false };
+const [spin, setSpin] = useState(false);
 
-const changeState = () => setState({ spin: !state.spin });
+const changeState = () => setSpin(!spin);
 
 <>
-  <Checkbox checked={state.spin} onChange={changeState}>spin</Checkbox>
+  <Checkbox checked={spin} onChange={changeState}>spin</Checkbox>
   <div style={{ height: 200 }}>
-    <Spin enable={state.spin}>
+    <Spin enable={spin}>
       Spin content
     </Spin>
   </div>

@@ -8,7 +8,13 @@ Prop `largePaddings` makes big multiline tooltips looking better.
 
 ```js
 import { css } from 'emotion';
-import { Button, Input, Text, Tooltip, withTooltip } from '../../index';
+import {
+  Button,
+  Input,
+  Text,
+  Tooltip,
+  withTooltip
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   toRight: css`

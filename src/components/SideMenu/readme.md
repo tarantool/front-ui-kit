@@ -1,8 +1,16 @@
 ```js
 import { css } from 'emotion';
-import { IconSuccess, IconCluster, IconCode, IconTrash, IconInfo } from '../Icon';
-import { SVGImage } from '../SVGImage';
-import { TarantoolLogoCompact, TarantoolLogoFull } from '../../images';
+import {
+  IconSuccess,
+  IconCluster,
+  IconCode,
+  IconTrash,
+  IconInfo,
+  SideMenu,
+  SVGImage,
+  TarantoolLogoCompact,
+  TarantoolLogoFull
+} from '@tarantool.io/ui-kit';
 
 const logoStyle = css`margin-left: 24px;`;
 const IconSuccessGreen = ({ className, ...props }) => <IconSuccess {...props} />

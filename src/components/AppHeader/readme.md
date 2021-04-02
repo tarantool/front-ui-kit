@@ -1,5 +1,6 @@
 ```js
 import {
+  AppHeader,
   Button,
   IconSearch
 } from '../../index';

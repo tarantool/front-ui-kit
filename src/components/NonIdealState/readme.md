@@ -3,8 +3,10 @@ import { Button } from '../Button';
 import {
   splashGenericErrorSvg,
   splashSelectFileSvg,
-} from '../../images';
-import { NonIdealState, NonIdealStateAction, TarantoolLogoSpinner } from '../../index';
+  NonIdealState,
+  NonIdealStateAction,
+  TarantoolLogoSpinner
+} from '@tarantool.io/ui-kit';
 
 console.log(NonIdealState);
 console.log(TarantoolLogoSpinner);

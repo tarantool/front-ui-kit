@@ -1,11 +1,10 @@
 ```js
-import { Button } from '../Button';
-import { Text } from '../Text';
-import { RadioButton } from '../RadioButton';
+import { useState } from 'react';
+import { Button, Text, RadioButton } from '@tarantool.io/ui-kit';
 
-initialState = { value: null };
+const [value, setValue] = useState(null);
 
-const handleChange = value => setState({ value });
+const handleChange = value => setValue(value);
 
 const vshard_groups = [
   { name: 'group 1' },
@@ -21,7 +20,7 @@ const renderRadioButtons = () => vshard_groups.map(({ name }) => (
     onChange={() => handleChange(name)}
     name='vshard_group'
     value={name}
-    checked={name === state.value}
+    checked={name === value}
   >
     {name}
   </RadioButton>

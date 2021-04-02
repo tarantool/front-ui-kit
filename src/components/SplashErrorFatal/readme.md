@@ -1,5 +1,5 @@
 ```js
-import { CopyToClipboard } from "../CopyToClipboard";
+import { CopyToClipboard, SplashErrorFatal } from "@tarantool.io/ui-kit";
 
 <>
   <SplashErrorFatal

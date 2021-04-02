@@ -1,9 +1,9 @@
 Checkbox example:
 
 ```js
+import { useState } from 'react';
 import { css } from 'emotion';
-import { ControlsPanel } from '../ControlsPanel';
-import { Text } from '../Text';
+import { Checkbox, ControlsPanel, Text } from '@tarantool.io/ui-kit';
 
 const variants = [
   { indeterminate: true, disabled: false },
@@ -14,20 +14,20 @@ const variants = [
   { indeterminate: false, disabled: true }
 ];
 
-initialState = { checked: [false, true, false, false, true, false] };
+const [checked, setChecked] = useState([false, true, false, false, true, false]);
 
-const changeState = i => () => setState(({ checked }) => {
+const changeState = i => () => {
   checked[i] = !checked[i];
-  return { checked: [...checked] };
-});
+  setChecked([...checked]);
+};
 
 <>
-<ControlsPanel
-  className={css`display: flex;`}
-  controls={variants.map((props, i) => (
-    <Checkbox {...props} checked={state.checked[i]} onChange={changeState(i)} title={`Checkbox ${i} title`}>{`Checkbox ${i}`}</Checkbox>
-  ))}
-/>
-<Text variant='code'>{JSON.stringify(state, null, 2)}</Text>
+  <ControlsPanel
+    className={css`display: flex;`}
+    controls={variants.map((props, i) => (
+      <Checkbox {...props} checked={checked[i]} onChange={changeState(i)} title={`Checkbox ${i} title`}>{`Checkbox ${i}`}</Checkbox>
+    ))}
+  />
+  <Text variant='code'>{JSON.stringify(checked, null, 2)}</Text>
 </>
 ```

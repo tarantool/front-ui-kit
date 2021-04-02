@@ -1,15 +1,16 @@
-```js
-import { Button } from '../Button';
+```jsx
+import { useState } from 'react';
+import { BaseModal, Button } from '@tarantool.io/ui-kit';
 
-initialState = { opened: false };
+const [opened, setOpened] = useState(false);
 
-const openModal = () => setState({ opened: true });
-const closeModal = () => setState({ opened: false });
+const openModal = () => setOpened(true);
+const closeModal = () => setOpened(false);
 
 <>
   <Button onClick={openModal} text='Open BaseModal' />
   <BaseModal
-    visible={state.opened}
+    visible={opened}
     onClose={closeModal}
   />
 </>

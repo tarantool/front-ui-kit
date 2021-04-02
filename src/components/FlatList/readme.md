@@ -1,6 +1,6 @@
 ```jsx
 import { css } from 'emotion';
-import { FlatList, FlatListItem, Text } from '../../index';
+import { FlatList, FlatListItem, Text } from '@tarantool.io/ui-kit';
 
 const styles = {
   row: css`display: flex; justify-content: space-between;`,

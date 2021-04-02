@@ -3,8 +3,7 @@ Before adding a new color, make sure that it is necessary. Probably the color yo
 
 ```js
 import { css, cx } from 'emotion';
-import { colors } from './src/variables';
-import { Text } from './src';
+import { colors, Text } from '@tarantool.io/ui-kit';
 
 const styles = {
   colorWrap: css`

@@ -18,13 +18,17 @@ Use `IconChevron` as a reference. Basic concepts:
 
 ### Icons set
 
-```js
+```jsx noeditor
+import { useState } from 'react';
 import { css, cx } from 'emotion';
-import { colors } from '../../variables';
 import * as icons from './index';
-import { ControlsPanel } from '../ControlsPanel';
-import { Text } from '../Text';
-import { Switcher } from '../Switcher';
+import {
+  ControlsPanel,
+  colors,
+  Switcher,
+  Text,
+  withCopyToClipboard
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   list: css`
@@ -46,23 +50,26 @@ const styles = {
   `
 };
 
-initialState = { fill: false, background: false };
+const [fill, setFill] = useState(false);
+const [background, setBackground] = useState(false);
 
-const switchFill = () => setState({ fill: !state.fill });
-const switchBg = () => setState({ background: !state.background });
+const switchFill = () => setFill(!fill);
+const switchBg = () => setBackground(!background);
 
-const listBackground = state.background ? css`background-color: #e8e8e8;` : '';
-const fill = state.fill ? css`fill: #0044aa;` : '';
+const listBackgroundStyle = background ? css`background-color: #e8e8e8;` : '';
+const fillStyle = fill ? css`fill: #0044aa;` : '';
+
+const CopyText = withCopyToClipboard(Text);
 
 const renderAllIcons = () => {
-  const [Icon, ...inconNames] = Object.keys(icons);
+  const [Icon, ...iconNames] = Object.keys(icons);
 
-  return inconNames.map(iconName => {
+  return iconNames.map(iconName => {
     const IconComponent = icons[iconName];
     return (
       <li className={styles.listItem}>
-        <IconComponent className={cx(styles.icon, fill)} />
-        <Text>{iconName}</Text>
+        <IconComponent className={cx(styles.icon, fillStyle)} />
+        <CopyText content={iconName}>{iconName}</CopyText>
       </li>
     );
   });
@@ -71,10 +78,10 @@ const renderAllIcons = () => {
 <>
   <ControlsPanel
     controls={[
-      <Switcher checked={state.fill} onChange={switchFill}>Custom fill</Switcher>,
-      <Switcher checked={state.background} onChange={switchBg}>Gray bg</Switcher>
+      <Switcher checked={fill} onChange={switchFill}>Custom fill</Switcher>,
+      <Switcher checked={background} onChange={switchBg}>Gray bg</Switcher>
     ]}
   />
-  <ul className={cx(styles.list, listBackground)}>{renderAllIcons()}</ul>
+  <ul className={cx(styles.list, listBackgroundStyle)}>{renderAllIcons()}</ul>
 </>
 ```

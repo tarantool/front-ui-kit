@@ -4,6 +4,7 @@ Root component to compose default Tarantool applications layout.
 import { css } from 'emotion';
 import {
   AppHeader,
+  AppLayout,
   Button,
   IconCluster,
   IconCode,

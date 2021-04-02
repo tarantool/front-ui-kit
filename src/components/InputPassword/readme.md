@@ -1,20 +1,21 @@
 ```js
+import { useState } from 'react';
 import { css } from 'emotion';
-import { Input } from '../Input';
+import { Input, InputPassword } from '@tarantool.io/ui-kit';
 
-initialState = { value: 'Value' };
+const [value, setValue] = useState('Value');
 
-handleChange = e => setState({ value: e.target.value });
+const handleChange = e => setValue(e.target.value);
 
 <div className={css`display: flex;`}>
   <InputPassword
-    value={state.value}
+    value={value}
     placeholder='Placeholder'
     onChange={handleChange}
     title='InputPassword'
   />
   <InputPassword
-    value={state.value}
+    value={value}
     placeholder='Placeholder'
     onChange={handleChange}
     title='InputPassword'

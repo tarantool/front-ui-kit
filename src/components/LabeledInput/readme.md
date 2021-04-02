@@ -2,13 +2,16 @@ It's not recommended to use `topRightControls` without `largeMargins`.
 To keep good looking UI, pass to `message` text which can fit at one row.
 
 ```js
+import { useState } from 'react';
 import { css } from 'emotion';
-import { Button } from '../Button';
-import { InputPassword } from '../InputPassword';
-import { TextArea } from '../TextArea';
-import { InputGroup } from '../InputGroup';
-import { Switcher } from '../Switcher';
-import { colors } from '../../variables';
+import {
+  Button,
+  colors,
+  InputPassword,
+  InputGroup,
+  Switcher,
+  TextArea
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   wrap: css`
@@ -25,47 +28,47 @@ const styles = {
   `
 };
 
-initialState = {
+const [value, setValue] = useState('');
+const [flags, setFlags] = useState({
   info: false,
   largeMargins: false,
   preserveMessageSpace: true,
   rightControls: false,
-  subtitle: false,
-  value: ''
-};
+  subtitle: false
+});
 
-const handleChange = e => setState({ value: e.target.value });
-const toggle = key => () => setState(state => ({ [key]: !state[key] }));
+const handleChange = e => setValue(e.target.value);
+const toggle = key => () => setFlags({ ...flags, [key]: !flags[key] });
 
 <div className={styles.wrap}>
   <InputGroup className={styles.controls}>
     {[
       <Switcher
-        checked={state.info}
+        checked={flags.info}
         onChange={toggle('info')}
       >
         Info tooltip
       </Switcher>,
       <Switcher
-        checked={state.largeMargins}
+        checked={flags.largeMargins}
         onChange={toggle('largeMargins')}
       >
         Large margins
       </Switcher>,
       <Switcher
-        checked={state.rightControls}
+        checked={flags.rightControls}
         onChange={toggle('rightControls')}
       >
         Right controls
       </Switcher>,
       <Switcher
-        checked={state.preserveMessageSpace}
+        checked={flags.preserveMessageSpace}
         onChange={toggle('preserveMessageSpace')}
       >
         Preserve message space
       </Switcher>,
       <Switcher
-        checked={state.subtitle}
+        checked={flags.subtitle}
         onChange={toggle('subtitle')}
       >
         Subtitle
@@ -75,14 +78,14 @@ const toggle = key => () => setState(state => ({ [key]: !state[key] }));
   <div className={styles.demoPanel}>
     <LabeledInput
       label='Label'
-      info={state.info && 'Extended text description'}
-      subTitle={state.subtitle && 'Subtitle'}
+      info={flags.info && 'Extended text description'}
+      subTitle={flags.subtitle && 'Subtitle'}
       message='Field is required'
-      preserveMessageSpace={state.preserveMessageSpace}
-      value={state.value}
-      largeMargins={state.largeMargins}
+      preserveMessageSpace={flags.preserveMessageSpace}
+      value={value}
+      largeMargins={flags.largeMargins}
       placeholder='Placeholder'
-      topRightControls={state.rightControls && [
+      topRightControls={flags.rightControls && [
         <Button text='Right' intent='secondary' />,
         <Button text='Contorls' intent='secondary' />,
         <Button text='Pane' intent='secondary' />
@@ -94,13 +97,13 @@ const toggle = key => () => setState(state => ({ [key]: !state[key] }));
     <LabeledInput
       inputComponent={InputPassword}
       label='Label'
-      info={state.info && 'Extended text description'}
-      subTitle={state.subtitle && 'Subtitle'}
-      preserveMessageSpace={state.preserveMessageSpace}
-      value={state.value}
-      largeMargins={state.largeMargins}
+      info={flags.info && 'Extended text description'}
+      subTitle={flags.subtitle && 'Subtitle'}
+      preserveMessageSpace={flags.preserveMessageSpace}
+      value={value}
+      largeMargins={flags.largeMargins}
       placeholder='Placeholder'
-      topRightControls={state.rightControls && [
+      topRightControls={flags.rightControls && [
         <Button text='Right' intent='secondary' />,
         <Button text='Contorls' intent='secondary' />,
         <Button text='Pane' intent='secondary' />
@@ -110,14 +113,14 @@ const toggle = key => () => setState(state => ({ [key]: !state[key] }));
     />
     <LabeledInput
       label='Label'
-      info={state.info && 'Extended text description'}
-      subTitle={state.subtitle && 'Subtitle'}
+      info={flags.info && 'Extended text description'}
+      subTitle={flags.subtitle && 'Subtitle'}
       message='Field is required'
-      preserveMessageSpace={state.preserveMessageSpace}
-      value={state.value}
-      largeMargins={state.largeMargins}
+      preserveMessageSpace={flags.preserveMessageSpace}
+      value={value}
+      largeMargins={flags.largeMargins}
       placeholder='Placeholder'
-      topRightControls={state.rightControls && [
+      topRightControls={flags.rightControls && [
         <Button text='Right' intent='secondary' />,
         <Button text='Contorls' intent='secondary' />,
         <Button text='Pane' intent='secondary' />
@@ -127,16 +130,16 @@ const toggle = key => () => setState(state => ({ [key]: !state[key] }));
     />
     <LabeledInput
       label='Multiline labeled input'
-      info={state.info && 'Extended text description'}
-      subTitle={state.subtitle && 'Subtitle'}
+      info={flags.info && 'Extended text description'}
+      subTitle={flags.subtitle && 'Subtitle'}
       message='Field is required'
       inputComponent={TextArea}
-      preserveMessageSpace={state.preserveMessageSpace}
-      value={state.value}
-      largeMargins={state.largeMargins}
+      preserveMessageSpace={flags.preserveMessageSpace}
+      value={value}
+      largeMargins={flags.largeMargins}
       rows={4}
       placeholder='Placeholder'
-      topRightControls={state.rightControls && [
+      topRightControls={flags.rightControls && [
         <Button text='Right' intent='secondary' />,
         <Button text='Contorls' intent='secondary' />,
         <Button text='Pane' intent='secondary' />

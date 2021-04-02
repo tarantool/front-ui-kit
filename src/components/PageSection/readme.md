@@ -1,5 +1,5 @@
 ```js
-import { Button } from '../Button';
+import { Button, PageSection } from '@tarantool.io/ui-kit';
 
 <div>
   <PageSection

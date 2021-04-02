@@ -1,12 +1,15 @@
 ```js
-initialState = { checked: false };
+import { useState } from 'react';
+import { Switcher } from '@tarantool.io/ui-kit';
 
-handleChange = () => setState(({ checked }) => ({ checked: !checked }));
+const [checked, setChecked] = useState(false);
+
+handleChange = () => setChecked(!checked);
 
 <>
-  <Switcher title='First switcher' onChange={handleChange} checked={state.checked}>Unchecked</Switcher>
+  <Switcher title='First switcher' onChange={handleChange} checked={checked}>Unchecked</Switcher>
   <br />
-  <Switcher onChange={handleChange} checked={!state.checked}>Checked</Switcher>
+  <Switcher onChange={handleChange} checked={!checked}>Checked</Switcher>
   <br />
   <Switcher disabled>Disabled</Switcher>
   <br />

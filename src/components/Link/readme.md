@@ -3,7 +3,7 @@ It's useful for inline links in text.
 
 ```js
 import { css } from 'emotion';
-import { Text } from '../Text';
+import { Link, Text } from '@tarantool.io/ui-kit';
 
 const customTextStyle = css`
   color: darkblue;

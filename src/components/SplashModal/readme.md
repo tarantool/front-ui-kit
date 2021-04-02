@@ -1,27 +1,30 @@
-```js
+```jsx
+import { useState } from 'react';
 import { css } from 'emotion';
-import { Button } from '../Button';
-import { ControlsPanel } from '../ControlsPanel';
-import { LabeledInput } from '../LabeledInput';
-import { InputPassword } from '../InputPassword';
-import logo from '../../images/tarantool-logo-full.svg';
+import {
+  Button,
+  ControlsPanel,
+  InputPassword,
+  LabeledInput,
+  SplashModal,
+  TarantoolLogoFull
+} from '@tarantool.io/ui-kit';
 
-initialState = { opened: false };
+const [opened, setOpened] = useState(false);
 
-const openModal = () => setState({ opened: true });
-const closeModal = () => setState({ opened: false });
+const openModal = () => setOpened(true);
+const closeModal = () => setOpened(false);
 
 const controlsStyle = css`justify-content: flex-end;`;
-
 
 <>
   <Button onClick={openModal} text='Open SplashModal' />
   <SplashModal
-    visible={state.opened}
+    visible={opened}
     title='Authorization'
     subTitle='Please, input your credentials'
     onClose={closeModal}
-    logo={logo}
+    logo={TarantoolLogoFull}
   >
   <LabeledInput
     label='Your account ID'

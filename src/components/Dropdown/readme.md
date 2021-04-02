@@ -1,16 +1,22 @@
 It is highly recommended to use the `withDropdown` HOC.
 The `Dropdown` component adds an additional `<div>` wrap and may be removed in the future.
 
-```js
+```jsx
 import { css } from 'emotion';
 import * as R from 'ramda';
-import { Dropdown, DropdownItem, DropdownDivider, withDropdown } from './index';
-import { Button } from '../Button';
-import { Checkbox } from '../Checkbox';
-import { ControlsPanel } from '../ControlsPanel';
-import { Modal } from '../Modal';
-import { IconMore } from '../Icon';
-import { colors } from '../../variables';
+import { useState } from 'react';
+import {
+  Button,
+  Checkbox,
+  ControlsPanel,
+  colors,
+  Dropdown,
+  DropdownItem,
+  DropdownDivider,
+  IconMore,
+  Modal,
+  withDropdown
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   scrollableBox: css`
@@ -38,12 +44,12 @@ const styles = {
 const menuLengthPresets = [5, 10, 15, 25, 45, 100];
 const menuItemWidthPresets = [1, 3, 10, 30];
 
-const initialState = {
+const [state, setState] = useState({
   customMenuContent: true,
   rows: 100,
   width: 1,
   modalOpened: false
-};
+});
 
 const getStateValueNatural = key => {
   let value = parseInt(state[key]);
@@ -53,9 +59,8 @@ const getStateValueNatural = key => {
   return value;
 };
 
-const setStateKey = key => value => setState({ [key]: value });
-
-const toggleState = key => () => setState(prevState => ({ [key]: !prevState[key] }));
+const setStateKey = key => value => setState({ ...state, [key]: value });
+const toggleState = key => () => setState({ ...state, [key]: !state[key] });
 
 const itemsCollection = state.customMenuContent
   ? R.times(

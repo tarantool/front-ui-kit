@@ -89,7 +89,7 @@ Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium dolo
 
 ```js
 import { css } from 'emotion';
-import { Text } from '../../index';
+import { Markdown } from '@tarantool.io/ui-kit';
 
 const styles = {
   ul: css`

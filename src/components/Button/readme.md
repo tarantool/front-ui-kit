@@ -1,15 +1,17 @@
 Button example:
 
 ```js
+import { useState } from 'react';
 import { css, cx } from 'emotion';
 import {
+  Button,
   ControlsPanel,
   FormField,
   IconBucket,
   IconChevron,
   Switcher,
   Text
-} from '../../index';
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   wrapper: css`
@@ -26,34 +28,35 @@ const intentions = ['primary', 'secondary', 'base', 'plain', 'dark'];
 
 const DropdownControlIcon = props => <IconChevron direction='down' {...props} />;
 
-initialState = {
-  buttonText: true,
-  darkBg: false,
-  loading: false,
-  leftIcon: false,
-  rightIcon: false
+const [buttonText, setButtonText] = useState(true);
+const [darkBg, setDarkBg] = useState(false);
+const [loading, setLoading] = useState(false);
+const [leftIcon, setLeftIcon] = useState(false);
+const [rightIcon, setRightIcon] = useState(false);
+
+const toggleBg = () => setDarkBg(!darkBg);
+
+const toggleText = () => {
+  setButtonText(!buttonText);
+  setLeftIcon(buttonText ? true : leftIcon);
 };
 
-const toggleBg = () => setState({ darkBg: !state.darkBg });
-const toggleText = () => setState({
-  buttonText: !state.buttonText,
-  leftIcon: state.buttonText ? true : state.leftIcon
-});
-const toggleLeftIcon = () => setState({
-  leftIcon: !state.leftIcon,
-  buttonText: state.leftIcon ? true : state.buttonText
-});
-const toggleLoading = () => setState({ loading: !state.loading });
-const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
+const toggleLeftIcon = () => {
+  setLeftIcon(!leftIcon);
+  setButtonText(leftIcon ? true : buttonText);
+};
 
-<div className={cx(styles.wrapper, { [styles.bg]: state.darkBg })}>
+const toggleLoading = () => setLoading(!loading);
+const toggleRightIcon = () => setRightIcon(!rightIcon);
+
+<div className={cx(styles.wrapper, { [styles.bg]: darkBg })}>
   <ControlsPanel
     controls={[
-      <Switcher onChange={toggleText} checked={state.buttonText}>Button text</Switcher>,
-      <Switcher onChange={toggleLoading} checked={state.loading}>Loading state</Switcher>,
-      <Switcher onChange={toggleLeftIcon} checked={state.leftIcon}>Icon</Switcher>,
-      <Switcher onChange={toggleRightIcon} checked={state.rightIcon}>Right icon</Switcher>,
-      <Switcher onChange={toggleBg} checked={state.darkBg}>Background</Switcher>
+      <Switcher onChange={toggleText} checked={buttonText}>Button text</Switcher>,
+      <Switcher onChange={toggleLoading} checked={loading}>Loading state</Switcher>,
+      <Switcher onChange={toggleLeftIcon} checked={leftIcon}>Icon</Switcher>,
+      <Switcher onChange={toggleRightIcon} checked={rightIcon}>Right icon</Switcher>,
+      <Switcher onChange={toggleBg} checked={darkBg}>Background</Switcher>
     ]}
   />
 
@@ -64,21 +67,21 @@ const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
           [
             ...acc,
             <Button
-              icon={state.leftIcon && IconBucket}
-              iconRight={state.rightIcon && DropdownControlIcon}
+              icon={leftIcon && IconBucket}
+              iconRight={rightIcon && DropdownControlIcon}
               intent={intent}
-              loading={state.loading}
+              loading={loading}
               size={size}
-              text={state.buttonText && label}
+              text={buttonText && label}
               title='Click me right meow!'
             />,
             <Button
-              icon={state.leftIcon && IconBucket}
-              iconRight={state.rightIcon && DropdownControlIcon}
+              icon={leftIcon && IconBucket}
+              iconRight={rightIcon && DropdownControlIcon}
               intent={intent}
-              loading={state.loading}
+              loading={loading}
               size={size}
-              text={state.buttonText && label}
+              text={buttonText && label}
               title='Click me right meow!'
               disabled
             />
@@ -88,7 +91,7 @@ const toggleRightIcon = () => setState({ rightIcon: !state.rightIcon });
       )}
     </FormField>
   ))}
-  {(state.leftIcon || state.rightIcon) && (
+  {(leftIcon || rightIcon) && (
     <Text tag='p'>The style guide doesn't recommend to use icons in 'xs' sized buttons.</Text>
   )}
 </div>

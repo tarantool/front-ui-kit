@@ -1,10 +1,12 @@
 ```jsx
+import { useState } from 'react';
 import { css } from 'emotion';
 import {
   ControlsPanel,
   Switcher,
   Text,
-} from '../../index';
+  TextArea
+} from '@tarantool.io/ui-kit';
 
 const styles = {
   wrap: css`display: flex;`,
@@ -15,18 +17,16 @@ const styles = {
   margin: css`margin: 8px 0;`
 };
 
-initialState = {
-  disabled: false,
-  value: 'Value'
-};
+const [disabled, setDisabled] = useState(false);
+const [value, setValue] = useState('Value');
 
-const updateState = e => setState({ value: e.target.value });
-const toggleDisabled = () => setState(({ disabled }) => ({ disabled: !disabled }));
+const updateState = e => setValue(e.target.value);
+const toggleDisabled = () => setDisabled(!disabled);
 
 <>
   <ControlsPanel
     controls={[
-      <Switcher checked={state.disabled} onChange={toggleDisabled}>Disabled</Switcher>
+      <Switcher checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
     ]}
   />
 
@@ -34,67 +34,67 @@ const toggleDisabled = () => setState(({ disabled }) => ({ disabled: !disabled }
     <div className={styles.column}>
       <Text variant='h3'>Size L (default)</Text>
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         />
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         disabled />
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         error />
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         rows={5} />
     </div>
     <div className={styles.column}>
       <Text variant='h3'>Size M</Text>
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         size='m'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         />
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         size='m'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         disabled />
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         size='m'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         error />
       <TextArea
-        disabled={state.disabled}
+        disabled={disabled}
         placeholder='Type here'
         size='m'
         className={styles.margin}
         onChange={updateState}
-        value={state.value}
+        value={value}
         rows={5} />
     </div>
   </div>

@@ -13,6 +13,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
   - Creation of new instance of popover on every render.
 
+- Improves in components display:
+
+  - Updated `styleguidist` from 10 to 11.
+
+  - Individual page per component instead of one long page.
+
+  - Fast copyable code to import component.
+
+  - Actual external import paths in code examples.
+
 ## [0.35.0] - 2021-03-11
 
 - Added IconHelperClose component.
