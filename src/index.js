@@ -11,6 +11,7 @@ export * from './components/ControlsPanel';
 export * from './components/CopyToClipboard';
 export * from './components/DotIndicator';
 export * from './components/DraggableList';
+export * from './components/DraggableTable';
 export * from './components/Dropdown';
 export * from './components/ExpandableBlock';
 export * from './components/FlatList';
