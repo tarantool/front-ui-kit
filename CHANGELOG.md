@@ -22,6 +22,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Fast copyable code to import component.
 
   - Actual external import paths in code examples.
+  
+- Add new components:
+
+  - DraggableList
+  - DraggableTable     
 
 - Added control state from parent component in Tabbed.
 
