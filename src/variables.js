@@ -1,4 +1,6 @@
 // @flow
+import { keyframes } from 'emotion';
+
 
 export const appLayoutTopPanelHeight = 68;
 
@@ -65,3 +67,10 @@ export const zIndex = {
 };
 
 export const INTERACTIVE_ELEMENT_SELECTOR = 'a, button, input, select, textarea, [tabindex="0"]';
+
+export const keyFrames = {
+  fadeIn: keyframes`
+    from { opacity: 0; }
+    to { opacity: 1; }
+  `
+};
