@@ -8,8 +8,8 @@
 [lints]
 
 [options]
+esproposal.optional_chaining=enable
 module.system.node.resolve_dirname=node_modules
-
 module.name_mapper.extension='svg' -> '<PROJECT_ROOT>/src/SVGFlowStub.js'
 
 [strict]

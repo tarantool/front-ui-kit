@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DraggableList renders correctly 1`] = `
+<div
+  className=""
+>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 0
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 0
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 1
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 1
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 2
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 2
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 3
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 3
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 4
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 4
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 5
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 5
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 6
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 6
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 7
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 7
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 8
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 8
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className=""
+  >
+    <div>
+      <div
+        className="css-1ggp6x0"
+      >
+        <svg
+          className="css-1fn93nz"
+          viewBox="0 0 16 16"
+        >
+          <use
+            xlinkHref="#burger"
+          />
+        </svg>
+        alias 9
+      </div>
+      <svg
+        className="css-e7nc70"
+        viewBox="0 0 42 8"
+      >
+        <use
+          xlinkHref="#flagSmall"
+        />
+      </svg>
+      <div
+        className="css-70qvj9"
+      >
+        <svg
+          className="css-1bd58bw"
+          viewBox="0 0 14 14"
+        >
+          <use
+            xlinkHref="#link"
+          />
+        </svg>
+        <span
+          className="css-18j7qsr"
+        >
+          uri 9
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
