@@ -37,6 +37,7 @@ export * from './components/Pagination';
 export * from './components/Popover';
 export * from './components/PopupBody';
 export * from './components/PopupFooter';
+export * from './components/PopupNotificationList';
 export * from './components/ProgressBar';
 export * from './components/RadioButton';
 export * from './components/ResizeSensor';
