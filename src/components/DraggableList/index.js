@@ -3,10 +3,11 @@
 import * as React from 'react';
 import { sortableContainer, sortableElement } from 'react-sortable-hoc';
 import { css } from 'react-emotion';
+import { zIndex } from '../../variables';
 
 const styles = {
   helper: css`
-    z-index: 120;
+    z-index: ${zIndex.dragNDrop};
   `
 };
 

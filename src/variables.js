@@ -63,7 +63,8 @@ export const zIndex = {
   modal: 100,
   notification: 150,
   dropdownMenu: 200,
-  tooltip: 250
+  tooltip: 250,
+  dragNDrop: 300
 };
 
 export const INTERACTIVE_ELEMENT_SELECTOR = 'a, button, input, select, textarea, [tabindex="0"]';

@@ -6,10 +6,10 @@ import { DraggableListItem, DraggableListContainer } from '../DraggableList';
 import { IconBurger } from '../Icon';
 import { Checkbox } from '../Checkbox';
 import { Text } from '../Text';
-import { colors } from '../../variables';
+import { colors, zIndex } from '../../variables';
 const styles = {
   helper: css`
-    z-index: 120;
+    z-index: ${zIndex.dragNDrop};
     width: 100%;
     visible: hidden;
   `,

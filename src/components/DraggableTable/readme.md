@@ -1,8 +1,8 @@
 ```js
 import { useState } from 'react';
 import { arrayMove } from 'react-sortable-hoc';
+import { DraggableTable } from '@tarantool.io/ui-kit';
 
-import { DraggableTable } from './index';
 const columns = [
   {
     header: 'Field',

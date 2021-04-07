@@ -9,7 +9,8 @@ import {
   UriLabel,
   DraggableList,
   DraggableListItem
- } from '@tarantool.io/ui-kit';
+} from '@tarantool.io/ui-kit';
+
 const styles = {
   alias: css`
     flex-basis: 404px;
