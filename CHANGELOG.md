@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Fast copyable code to import component.
 
   - Actual external import paths in code examples.
+  
+- Update Tabbed component. Add control state from parent component.  
 
 ## [0.35.0] - 2021-03-11
 

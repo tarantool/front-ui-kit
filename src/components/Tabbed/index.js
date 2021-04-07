@@ -49,6 +49,8 @@ type Tab = {
 type TabbedProps = {
   tabs?: Tab[],
   className?: string,
+  activeTab?: number,
+  handleTabChange?: (i: number) => void
 };
 
 type TabbedState = {
@@ -61,8 +63,9 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
   };
 
   render() {
-    const { className, tabs = [] } = this.props;
+    const { className, tabs = [], activeTab: activeTabProps } = this.props;
     const { activeTab } = this.state;
+    const tabIndex = activeTabProps ?? activeTab;
 
     return (
       <div className={cx(styles.wrap, className)}>
@@ -72,7 +75,7 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
               className={cx(
                 textStyles.h3,
                 styles.tab,
-                { [styles.activeTab]: activeTab === i }
+                { [styles.activeTab]: tabIndex === i }
               )}
               onClick={() => this.handleTabChange(i)}
             >
@@ -80,12 +83,13 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
             </button>
           ))}
         </div>
-        {tabs[activeTab].content}
+        {tabs[tabIndex].content}
       </div>
     );
   }
 
   handleTabChange(i: number) {
     this.setState({ activeTab: i })
+    this.props?.handleTabChange?.(i);
   }
 }
