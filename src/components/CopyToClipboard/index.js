@@ -12,7 +12,7 @@ export const copyToClipboard = (str: string) => {
   const body = document.body;
   const range = new Range();
   const currentSelection = window.getSelection();
-  const el = document.createElement('span');
+  const el = document.createElement('pre');
 
   el.innerText = str;
   el.setAttribute('readonly', '');
