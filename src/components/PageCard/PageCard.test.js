@@ -3,10 +3,12 @@ import renderer from 'react-test-renderer';
 import { Text } from '../Text';
 import { PageCard } from './index';
 
+const cb = jest.fn();
+
 it('PageCard renders with close button', () => {
   const tree = renderer.create(
     <>
-      <PageCard title="Bootstrap vshard" onClose={() => console.log('Close clicked')}>
+      <PageCard title="Bootstrap vshard" onClose={cb}>
         <Text variant='h4'>When you finish edition topology. To render storages operable.</Text>
       </PageCard>
     </>
