@@ -11,7 +11,7 @@ it('DraggableList renders correctly', () => {
     key: index,
     uuid: index,
     alias: `alias ${index}`,
-    uri: `uri ${index}`,
+    uri: `uri ${index}`
   }));
 
   const items = data.map((item, index) => (

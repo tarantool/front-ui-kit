@@ -11,7 +11,7 @@ it('DraggableTable renders correctly', () => {
     {
       header: 'Type',
       accessor: 'type'
-    },
+    }
   ];
 
   const data = Array.apply(null, { length: 10 }).map((_, index) => ({
@@ -19,7 +19,7 @@ it('DraggableTable renders correctly', () => {
     uuid: index,
     field: `field ${index}`,
     type: `type ${index}`,
-    selected: index % 2,
+    selected: index % 2
   }));
 
 

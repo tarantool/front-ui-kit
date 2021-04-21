@@ -11,7 +11,7 @@ exports[`PageCard renders with close button 1`] = `
   </h2>
   <svg
     className="css-14qwf54"
-    onClick={[Function]}
+    onClick={[MockFunction]}
     viewBox="0 0 16 16"
   >
     <use
