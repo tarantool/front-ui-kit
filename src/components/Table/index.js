@@ -2,8 +2,15 @@
 
 import * as React from 'react';
 import {
-  useTable, useSortBy, usePagination, useRowSelect, useMountedLayoutEffect,
-  type UseTableOptions, Row, ColumnInstance, UseSortByColumnProps
+  useTable,
+  useSortBy,
+  usePagination,
+  useRowSelect,
+  useMountedLayoutEffect,
+  type UseTableOptions,
+  type Row,
+  type ColumnInstance,
+  type UseSortByColumnProps
 } from 'react-table';
 import { css, cx } from 'emotion';
 
