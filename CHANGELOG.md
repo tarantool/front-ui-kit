@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Fixed bug in CopyToClipboard with lost indentations.
 
+- Fixed wrong color in ProgressBar.
+
 ## [0.36.0] - 2021-04-07
 
 - Fixes in Tooltip:
