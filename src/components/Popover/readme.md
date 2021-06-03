@@ -4,7 +4,7 @@
 > and will be deleted soon.
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   withPopover,
   Button,

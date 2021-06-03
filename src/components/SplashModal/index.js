@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { colors } from '../../variables';
 import { BaseModal, type BaseModalProps } from '../BaseModal';
 import { Text } from '../Text';

@@ -1,6 +1,6 @@
 ```js
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Input, InputPassword } from '@tarantool.io/ui-kit';
 
 const [value, setValue] = useState('Value');

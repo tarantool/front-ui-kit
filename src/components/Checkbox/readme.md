@@ -2,7 +2,7 @@ Checkbox example:
 
 ```js
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Checkbox, ControlsPanel, Text } from '@tarantool.io/ui-kit';
 
 const variants = [

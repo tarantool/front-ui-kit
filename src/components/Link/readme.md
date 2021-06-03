@@ -2,7 +2,7 @@ By default link inherit text styles from parent node.
 It's useful for inline links in text.
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Link, Text } from '@tarantool.io/ui-kit';
 
 const customTextStyle = css`

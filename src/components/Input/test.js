@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import {
   Button,
   DropdownItem,

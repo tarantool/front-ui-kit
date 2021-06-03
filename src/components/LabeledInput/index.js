@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import nanoid from '../../utils/nanoid';
 import { colors } from '../../variables';
 import { Input, type InputProps } from '../Input';

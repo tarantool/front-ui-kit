@@ -1,6 +1,6 @@
 ```js
 import { useState } from 'react';
-import { css, cx } from 'react-emotion';
+import { css, cx } from '@emotion/css';
 import { arrayMove } from 'react-sortable-hoc';
 import {
   IconBurger,

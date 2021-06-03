@@ -7,7 +7,7 @@ In the most cases you should use default styles.
 Prop `largePaddings` makes big multiline tooltips looking better.
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   Button,
   Input,

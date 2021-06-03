@@ -1,5 +1,5 @@
 // @flow
-import { css } from 'react-emotion';
+import { css } from '@emotion/css';
 import { baseFontFamily, colors } from '../../variables';
 
 export const commonInputStyles = {

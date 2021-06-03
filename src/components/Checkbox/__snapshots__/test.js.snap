@@ -3,21 +3,21 @@
 exports[`Checkbox renders correctly 1`] = `
 Array [
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
     title="Indeterminate"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-1v31moo"
+        className="css-vbxk2i"
         viewBox="0 0 16 16"
       >
         <use
@@ -32,20 +32,20 @@ Array [
     </span>
   </label>,
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-1v31moo"
+        className="css-vbxk2i"
         viewBox="0 0 16 16"
       >
         <use
@@ -60,21 +60,21 @@ Array [
     </span>
   </label>,
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
     title="Initial"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-1v31moo"
+        className="css-vbxk2i"
         viewBox="0 0 16 16"
       >
         <use
@@ -89,20 +89,20 @@ Array [
     </span>
   </label>,
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-1v31moo"
+        className="css-vbxk2i"
         viewBox="0 0 16 16"
       >
         <use
@@ -117,20 +117,20 @@ Array [
     </span>
   </label>,
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-17jpq69"
+        className="css-fwdqz1"
         viewBox="0 0 16 16"
       >
         <use
@@ -145,20 +145,20 @@ Array [
     </span>
   </label>,
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-17jpq69"
+        className="css-fwdqz1"
         viewBox="0 0 16 16"
       >
         <use
@@ -173,20 +173,20 @@ Array [
     </span>
   </label>,
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-17jpq69"
+        className="css-fwdqz1"
         viewBox="0 0 16 16"
       >
         <use
@@ -201,20 +201,20 @@ Array [
     </span>
   </label>,
   <label
-    className="css-759u60"
+    className="css-1uoamx5"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="css-ojip76"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="css-qqecie"
     >
       <svg
-        className="css-17jpq69"
+        className="css-fwdqz1"
         viewBox="0 0 16 16"
       >
         <use

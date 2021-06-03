@@ -2,7 +2,7 @@ Universal wrapper component to insert bundled SVG images everywhere.
 
 ```js
 import { useState } from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import {
   ControlsPanel,
   splashGenericErrorSvg,

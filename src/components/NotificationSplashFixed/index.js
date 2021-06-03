@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import * as ReactDOM from 'react-dom';
-import { css, cx } from 'emotion'
+import { css, cx } from '@emotion/css'
 import { NotificationSplash, type NotificationSplashProps } from '../NotificationSplash';
 import { zIndex } from '../../variables';
 

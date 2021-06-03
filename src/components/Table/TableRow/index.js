@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { type Row } from 'react-table';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
 import { Text } from '../../Text';
 import type { RowProps } from '../index';

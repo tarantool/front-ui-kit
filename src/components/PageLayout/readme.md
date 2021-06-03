@@ -4,7 +4,7 @@ Also you can use `PageLayoutWithRef` to access component's root DOM element.
 
 ```js
 import { useState } from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import {
   Alert,
   Button,

@@ -8,18 +8,18 @@ exports[`Modal renders modal with form 1`] = `
   onMouseDown={[Function]}
 >
   <form
-    className="css-xynqqq"
+    className="css-hm23lf"
     onKeyDown={[Function]}
     onSubmit={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-34jfdi"
+      className="css-vf0gu5"
     >
       Configure server
     </h2>
     <svg
-      className="css-mzwhr0"
+      className="css-uue8s9"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -28,57 +28,57 @@ exports[`Modal renders modal with form 1`] = `
       />
     </svg>
     <div
-      className="css-i9gxme"
+      className="css-1ff36h2"
     >
       <div
-        className="css-1r2f04i"
+        className="css-pr10xp"
       >
         <div
-          className="css-1v2kmxl"
+          className="css-1fg5of0"
         >
           <label
-            className="css-dpor9z"
+            className="css-1vk0mui"
             for="first-input"
           >
             First input
           </label>
         </div>
         <div
-          className="css-u5wcni"
+          className="css-17d8w0x"
         >
           <input
-            className="css-17erkce"
+            className="css-dmlzt9"
             id="first-input"
             onBlur={[Function]}
             onFocus={[Function]}
           />
         </div>
         <p
-          className="css-5ut22t"
+          className="css-1j6ql58"
         />
       </div>
     </div>
     <div
-      className="css-vtqncq"
+      className="css-1414iyd"
     >
       <div
-        className="css-99wgdf"
+        className="css-99c7t3"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-1i99uin"
+            className="css-1e4zgmm"
             type="submit"
           >
             Accept
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             onClick={[Function]}
             type="button"
           >
@@ -88,7 +88,7 @@ exports[`Modal renders modal with form 1`] = `
       </div>
     </div>
     <div
-      className="css-vnc1z7"
+      className="css-alng9s"
       onFocus={[Function]}
       tabIndex="0"
     />
@@ -102,17 +102,17 @@ exports[`Modal renders modal with large text 1`] = `
   onMouseDown={[Function]}
 >
   <div
-    className="css-8ieuwu"
+    className="css-19is4js"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-34jfdi"
+      className="css-vf0gu5"
     >
       Configure server
     </h2>
     <svg
-      className="css-mzwhr0"
+      className="css-uue8s9"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -121,34 +121,34 @@ exports[`Modal renders modal with large text 1`] = `
       />
     </svg>
     <div
-      className="css-i9gxme"
+      className="css-1ff36h2"
     >
       <div
-        className="css-1j7f3i8"
+        className="css-ug0wwi"
       >
         But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
       </div>
       <div
-        className="css-vtqncq"
+        className="css-1414iyd"
       >
         <div
-          className="css-99wgdf"
+          className="css-99c7t3"
         >
           <div
-            className="css-12ibiio"
+            className="css-1zje6z"
           >
             <button
-              className="css-1i99uin"
+              className="css-1e4zgmm"
               type="button"
             >
               Accept
             </button>
           </div>
           <div
-            className="css-12ibiio"
+            className="css-1zje6z"
           >
             <button
-              className="css-ixus2c"
+              className="css-1mocbyz"
               type="button"
             >
               Decline
@@ -158,7 +158,7 @@ exports[`Modal renders modal with large text 1`] = `
       </div>
     </div>
     <div
-      className="css-vnc1z7"
+      className="css-alng9s"
       onFocus={[Function]}
       tabIndex="0"
     />
@@ -172,17 +172,17 @@ exports[`Modal renders modal with tabs 1`] = `
   onMouseDown={[Function]}
 >
   <div
-    className="css-e8de1g"
+    className="css-1f6pklh"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-34jfdi"
+      className="css-vf0gu5"
     >
       Configure server
     </h2>
     <svg
-      className="css-mzwhr0"
+      className="css-uue8s9"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -191,64 +191,64 @@ exports[`Modal renders modal with tabs 1`] = `
       />
     </svg>
     <div
-      className="css-i9gxme"
+      className="css-1ff36h2"
     >
       <div
-        className="css-1g4yje1"
+        className="css-13ku56z"
       >
         <div
           className="css-1cfjzc4"
         >
           <button
-            className="css-ciblrv"
+            className="css-1fhlilz"
             onClick={[Function]}
           >
             Create Replica Set
           </button>
           <button
-            className="css-qxml5d"
+            className="css-36krrg"
             onClick={[Function]}
           >
             Join Replica Set
           </button>
           <button
-            className="css-qxml5d"
+            className="css-36krrg"
             onClick={[Function]}
           >
             Bad example tab
           </button>
         </div>
         <div
-          className="css-3nlq3p"
+          className="css-11hw1zo"
         >
           <div
-            className="css-1wzifj2"
+            className="css-14447ek"
           >
             But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
           </div>
         </div>
       </div>
       <div
-        className="css-vtqncq"
+        className="css-1414iyd"
       >
         <div
-          className="css-99wgdf"
+          className="css-99c7t3"
         >
           <div
-            className="css-12ibiio"
+            className="css-1zje6z"
           >
             <button
-              className="css-1i99uin"
+              className="css-1e4zgmm"
               type="button"
             >
               Accept
             </button>
           </div>
           <div
-            className="css-12ibiio"
+            className="css-1zje6z"
           >
             <button
-              className="css-ixus2c"
+              className="css-1mocbyz"
               type="button"
             >
               Decline
@@ -258,7 +258,7 @@ exports[`Modal renders modal with tabs 1`] = `
       </div>
     </div>
     <div
-      className="css-vnc1z7"
+      className="css-alng9s"
       onFocus={[Function]}
       tabIndex="0"
     />
@@ -272,17 +272,17 @@ exports[`Modal renders simple modal 1`] = `
   onMouseDown={[Function]}
 >
   <div
-    className="css-xynqqq"
+    className="css-hm23lf"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-34jfdi"
+      className="css-vf0gu5"
     >
       Simple Modal
     </h2>
     <svg
-      className="css-mzwhr0"
+      className="css-uue8s9"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -291,34 +291,34 @@ exports[`Modal renders simple modal 1`] = `
       />
     </svg>
     <div
-      className="css-i9gxme"
+      className="css-1ff36h2"
     >
       <div
-        className="css-1j7f3i8"
+        className="css-ug0wwi"
       >
         But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
       </div>
       <div
-        className="css-vtqncq"
+        className="css-1414iyd"
       >
         <div
-          className="css-99wgdf"
+          className="css-99c7t3"
         >
           <div
-            className="css-12ibiio"
+            className="css-1zje6z"
           >
             <button
-              className="css-1i99uin"
+              className="css-1e4zgmm"
               type="button"
             >
               Accept
             </button>
           </div>
           <div
-            className="css-12ibiio"
+            className="css-1zje6z"
           >
             <button
-              className="css-ixus2c"
+              className="css-1mocbyz"
               type="button"
             >
               Decline
@@ -328,7 +328,7 @@ exports[`Modal renders simple modal 1`] = `
       </div>
     </div>
     <div
-      className="css-vnc1z7"
+      className="css-alng9s"
       onFocus={[Function]}
       tabIndex="0"
     />

@@ -2,7 +2,7 @@ It is highly recommended to use the `withDropdown` HOC.
 The `Dropdown` component adds an additional `<div>` wrap and may be removed in the future.
 
 ```jsx
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import * as R from 'ramda';
 import { useState } from 'react';
 import {

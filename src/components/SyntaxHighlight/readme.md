@@ -1,7 +1,7 @@
 Used inside `Markdown` and `CodeBlock`. It's not recommended to use directly.
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
@@ -33,7 +33,7 @@ const blockStyle = css`background-color: #444444;`;
 ### Lua
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
@@ -52,7 +52,7 @@ end`}
 ### Python
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
@@ -76,7 +76,7 @@ print(results)`}
 ### PHP
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
@@ -101,7 +101,7 @@ print_r($result);
 ### Go
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
@@ -134,7 +134,7 @@ func main() {
 ### Ruby
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>

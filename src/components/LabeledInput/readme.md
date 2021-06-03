@@ -3,7 +3,7 @@ To keep good looking UI, pass to `message` text which can fit at one row.
 
 ```js
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   Button,
   colors,

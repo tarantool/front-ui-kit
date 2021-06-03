@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { IconHelperClose } from '../IconHelper';
 import { PopupFooter } from '../PopupFooter';
 import { Text } from '../Text';

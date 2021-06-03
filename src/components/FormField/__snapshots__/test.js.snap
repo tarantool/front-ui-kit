@@ -2,21 +2,21 @@
 
 exports[`FormField renders correctly 1`] = `
 <div
-  className="css-1r2f04i"
+  className="css-pr10xp"
 >
   <div
-    className="css-1v2kmxl"
+    className="css-1fg5of0"
   >
     <div
-      className="css-15ums5i"
+      className="css-1blnrmq"
     >
       <span
-        className="css-dpor9z"
+        className="css-1vk0mui"
       >
         VShard group
       </span>
       <div
-        className="css-vj79ep"
+        className="css-1ke4fav"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseEnter={[Function]}
@@ -25,7 +25,7 @@ exports[`FormField renders correctly 1`] = `
         placement="top"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -34,19 +34,19 @@ exports[`FormField renders correctly 1`] = `
         </svg>
       </div>
       <span
-        className="css-1dhlryp"
+        className="css-xy38qa"
       >
         Subtitle
       </span>
     </div>
     <div
-      className="css-84nudp"
+      className="css-wb214m"
     >
       <div
         className="css-13w52vd"
       >
         <button
-          className="css-ixus2c"
+          className="css-1mocbyz"
           type="button"
         >
           Right
@@ -56,7 +56,7 @@ exports[`FormField renders correctly 1`] = `
         className="css-13w52vd"
       >
         <button
-          className="css-ixus2c"
+          className="css-1mocbyz"
           type="button"
         >
           Contorls
@@ -66,7 +66,7 @@ exports[`FormField renders correctly 1`] = `
         className="css-13w52vd"
       >
         <button
-          className="css-ixus2c"
+          className="css-1mocbyz"
           type="button"
         >
           Pane
@@ -75,27 +75,27 @@ exports[`FormField renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="css-1w9b8ff"
+    className="css-17bfre1"
   >
     <div
-      className="css-1dkz5j9"
+      className="css-1m4nrnu"
     >
       <label
-        className="css-759u60"
+        className="css-1uoamx5"
       >
         <input
           checked={false}
-          className="css-1gif6wy"
+          className="css-ve0h83"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 1"
         />
         <div
-          className="css-1ysxw4w"
+          className="css-qqecie"
         >
           <svg
-            className="css-e2f20o"
+            className="css-6i3pkg"
             viewBox="0 0 16 16"
           >
             <use
@@ -104,31 +104,31 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="css-1ybmbi2"
         >
           group 1
         </span>
       </label>
     </div>
     <div
-      className="css-1dkz5j9"
+      className="css-1m4nrnu"
     >
       <label
-        className="css-759u60"
+        className="css-1uoamx5"
       >
         <input
           checked={true}
-          className="css-1gif6wy"
+          className="css-ve0h83"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 2"
         />
         <div
-          className="css-1ysxw4w"
+          className="css-qqecie"
         >
           <svg
-            className="css-e2f20o"
+            className="css-6i3pkg"
             viewBox="0 0 16 16"
           >
             <use
@@ -137,31 +137,31 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="css-1ybmbi2"
         >
           group 2
         </span>
       </label>
     </div>
     <div
-      className="css-1dkz5j9"
+      className="css-1m4nrnu"
     >
       <label
-        className="css-759u60"
+        className="css-1uoamx5"
       >
         <input
           checked={false}
-          className="css-1gif6wy"
+          className="css-ve0h83"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 3"
         />
         <div
-          className="css-1ysxw4w"
+          className="css-qqecie"
         >
           <svg
-            className="css-e2f20o"
+            className="css-6i3pkg"
             viewBox="0 0 16 16"
           >
             <use
@@ -170,31 +170,31 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="css-1ybmbi2"
         >
           group 3
         </span>
       </label>
     </div>
     <div
-      className="css-1dkz5j9"
+      className="css-1m4nrnu"
     >
       <label
-        className="css-759u60"
+        className="css-1uoamx5"
       >
         <input
           checked={false}
-          className="css-1gif6wy"
+          className="css-ve0h83"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 4"
         />
         <div
-          className="css-1ysxw4w"
+          className="css-qqecie"
         >
           <svg
-            className="css-e2f20o"
+            className="css-6i3pkg"
             viewBox="0 0 16 16"
           >
             <use
@@ -203,7 +203,7 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="css-1ybmbi2"
         >
           group 4
         </span>
