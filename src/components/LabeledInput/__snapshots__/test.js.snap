@@ -3,19 +3,19 @@
 exports[`LabeledInput renders correctly 1`] = `
 Array [
   <div
-    className="css-1r2f04i"
+    className="css-pr10xp"
   >
     <div
-      className="css-1v2kmxl"
+      className="css-1fg5of0"
     >
       <label
-        className="css-dpor9z"
+        className="css-1vk0mui"
         for="1"
       >
         Label
       </label>
       <div
-        className="css-vj79ep"
+        className="css-1ke4fav"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseEnter={[Function]}
@@ -24,7 +24,7 @@ Array [
         placement="top"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -34,11 +34,11 @@ Array [
       </div>
     </div>
     <div
-      className="css-kha4rs"
+      className="css-px7a5l"
       title="Input"
     >
       <input
-        className="css-17erkce"
+        className="css-dmlzt9"
         id="1"
         onBlur={[Function]}
         onChange={[Function]}
@@ -48,35 +48,35 @@ Array [
       />
     </div>
     <p
-      className="css-1ddecx1"
+      className="css-1vtzz6h"
     >
       Field is required
     </p>
   </div>,
   <div
-    className="css-1r2f04i"
+    className="css-pr10xp"
   >
     <div
-      className="css-1v2kmxl"
+      className="css-1fg5of0"
     >
       <label
-        className="css-dpor9z"
+        className="css-1vk0mui"
         for="2"
       >
         Label
       </label>
       <span
-        className="css-1dhlryp"
+        className="css-xy38qa"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-u5wcni"
+      className="css-17d8w0x"
       title="Input"
     >
       <input
-        className="css-16fuuzx"
+        className="css-18swi04"
         id="2"
         onBlur={[Function]}
         onChange={[Function]}
@@ -86,15 +86,15 @@ Array [
         value="qwertyuiop"
       />
       <div
-        className="css-qidtvj"
+        className="css-6kpmax"
       >
         <button
-          className="css-gl759r"
+          className="css-1dpgl5i"
           onClick={[Function]}
           type="button"
         >
           <svg
-            className="css-197j0b9"
+            className="css-dtcung"
             viewBox="0 0 16 16"
           >
             <use
@@ -105,33 +105,33 @@ Array [
       </div>
     </div>
     <p
-      className="css-5ut22t"
+      className="css-1j6ql58"
     />
   </div>,
   <div
-    className="css-1r2f04i"
+    className="css-pr10xp"
   >
     <div
-      className="css-1v2kmxl"
+      className="css-1fg5of0"
     >
       <label
-        className="css-dpor9z"
+        className="css-1vk0mui"
         for="3"
       >
         Label
       </label>
       <span
-        className="css-1dhlryp"
+        className="css-xy38qa"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-u5wcni"
+      className="css-17d8w0x"
       title="Input"
     >
       <input
-        className="css-17erkce"
+        className="css-dmlzt9"
         id="3"
         onBlur={[Function]}
         onChange={[Function]}
@@ -141,35 +141,35 @@ Array [
       />
     </div>
     <p
-      className="css-5ut22t"
+      className="css-1j6ql58"
     >
       Field is required
     </p>
   </div>,
   <div
-    className="css-1r2f04i"
+    className="css-pr10xp"
   >
     <div
-      className="css-1v2kmxl"
+      className="css-1fg5of0"
     >
       <label
-        className="css-dpor9z"
+        className="css-1vk0mui"
         for="4"
       >
         Multiline labeled input
       </label>
       <span
-        className="css-1dhlryp"
+        className="css-xy38qa"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-15clmjk"
+      className="css-1swvflj"
       title="Input"
     >
       <textarea
-        className="css-172ew6"
+        className="css-eycqmr"
         id="4"
         onBlur={[Function]}
         onChange={[Function]}
@@ -180,7 +180,7 @@ Array [
       />
     </div>
     <p
-      className="css-5ut22t"
+      className="css-1j6ql58"
     >
       Field is required
     </p>

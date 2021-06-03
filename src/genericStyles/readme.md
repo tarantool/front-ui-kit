@@ -11,7 +11,7 @@ For most use-cases suggested method is using `genericStyles.scrollbars` class.
 <!-- UI Kit components already use it. -->
 
 ```js
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { genericStyles, Text } from '..';
 
 const styles = {

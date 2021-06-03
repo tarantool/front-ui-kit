@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 import { ResizeSensor } from '../ResizeSensor';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { shallowCompareKeys } from './utils';
 import type { Entries } from '../ResizeSensor';
 

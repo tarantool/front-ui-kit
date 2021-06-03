@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import * as R from 'ramda';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 
 const styles = {
   wrap: css`

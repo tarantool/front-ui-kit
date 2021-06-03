@@ -3,7 +3,7 @@
 exports[`UploadZone renders correctly 1`] = `
 Array [
   <div
-    className="css-k008qs"
+    className="css-zjik7"
   >
     <div
       className="css-9zwmpv e1iml2wq0"
@@ -47,7 +47,7 @@ Array [
     </div>
   </div>,
   <div
-    className="css-k008qs"
+    className="css-zjik7"
   >
     <div
       className="css-9zwmpv e1iml2wq0"
@@ -89,7 +89,7 @@ Array [
         Main title
       </span>
       <span
-        className="css-1ucgzvb"
+        className="css-pp78jc"
       >
         Second title
       </span>

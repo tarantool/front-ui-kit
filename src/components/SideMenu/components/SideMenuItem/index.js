@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { css, cx } from 'react-emotion';
+import { css, cx } from '@emotion/css';
 import { SideMenuIcon } from '../SideMenuIcon';
 import { Text } from '../../../Text';
 import { IconChevronDown } from '../../../Icon';

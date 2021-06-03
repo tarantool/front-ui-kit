@@ -3,11 +3,11 @@
 exports[`Input simple 1`] = `
 Array [
   <div
-    className="css-8o7sw6"
+    className="css-jwj6c2"
     title="Input"
   >
     <input
-      className="css-17erkce"
+      className="css-dmlzt9"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -16,10 +16,10 @@ Array [
     />
   </div>,
   <div
-    className="css-8o7sw6"
+    className="css-jwj6c2"
   >
     <input
-      className="css-16fuuzx"
+      className="css-18swi04"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -27,10 +27,10 @@ Array [
       value="value"
     />
     <div
-      className="css-qidtvj"
+      className="css-6kpmax"
     >
       <svg
-        className="css-p78i9h"
+        className="css-1oq5xej"
         viewBox="0 0 16 16"
       >
         <use
@@ -45,16 +45,16 @@ Array [
 exports[`Input with left-/rightElement 1`] = `
 Array [
   <div
-    className="css-djig4t"
+    className="css-12xfqjm"
   >
     <button
-      className="css-v6zhl2"
+      className="css-97f1p9"
       onClick={[Function]}
       type="button"
     >
       Filter
       <svg
-        className="css-p9abg5"
+        className="css-97hv11"
         viewBox="0 0 14 14"
       >
         <use
@@ -63,7 +63,7 @@ Array [
       </svg>
     </button>
     <input
-      className="css-6lzrz7"
+      className="css-1g5zltl"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -71,10 +71,10 @@ Array [
       value="value"
     />
     <div
-      className="css-qidtvj"
+      className="css-6kpmax"
     >
       <svg
-        className="css-10o6dkz"
+        className="css-1au9vdq"
         onClick={[Function]}
         viewBox="0 0 16 16"
       >
@@ -85,10 +85,10 @@ Array [
     </div>
   </div>,
   <div
-    className="css-118hru8"
+    className="css-1swyuyu"
   >
     <input
-      className="css-6lzrz7"
+      className="css-1g5zltl"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -96,10 +96,10 @@ Array [
       value="value"
     />
     <div
-      className="css-qidtvj"
+      className="css-6kpmax"
     >
       <svg
-        className="css-p78i9h"
+        className="css-1oq5xej"
         viewBox="0 0 16 16"
       >
         <use
@@ -108,13 +108,13 @@ Array [
       </svg>
     </div>
     <button
-      className="css-v6zhl2"
+      className="css-97f1p9"
       onClick={[Function]}
       type="button"
     >
       Filter
       <svg
-        className="css-p9abg5"
+        className="css-97hv11"
         viewBox="0 0 14 14"
       >
         <use

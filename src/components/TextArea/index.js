@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { createRef } from 'react';
-import { cx } from 'react-emotion';
+import { cx } from '@emotion/css';
 import { commonInputStyles, commonInputSizes } from '../Input/commonStyles';
 import { genericStyles } from '../../genericStyles';
 

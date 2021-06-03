@@ -2,7 +2,7 @@ It's not recommended to use `topRightControls` without `largeMargins`.
 
 ```js
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   Button,
   InputGroup,

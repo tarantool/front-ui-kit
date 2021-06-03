@@ -2,17 +2,17 @@
 
 exports[`Pagination render simple 1`] = `
 <div
-  className="css-k008qs"
+  className="css-zjik7"
 >
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1gcl23y"
+        className="css-1jwstkt"
         viewBox="0 0 14 14"
       >
         <use
@@ -23,49 +23,49 @@ exports[`Pagination render simple 1`] = `
   </div>
   <div>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-1k3cu11"
+      className="css-s5x2y9"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
@@ -74,13 +74,13 @@ exports[`Pagination render simple 1`] = `
   </div>
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-14x0fwm"
+        className="css-1qr49le"
         viewBox="0 0 14 14"
       >
         <use
@@ -94,17 +94,17 @@ exports[`Pagination render simple 1`] = `
 
 exports[`Pagination renders with page size changer 1`] = `
 <div
-  className="css-k008qs"
+  className="css-zjik7"
 >
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1gcl23y"
+        className="css-1jwstkt"
         viewBox="0 0 14 14"
       >
         <use
@@ -115,49 +115,49 @@ exports[`Pagination renders with page size changer 1`] = `
   </div>
   <div>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-1k3cu11"
+      className="css-s5x2y9"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
@@ -166,13 +166,13 @@ exports[`Pagination renders with page size changer 1`] = `
   </div>
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-14x0fwm"
+        className="css-1qr49le"
         viewBox="0 0 14 14"
       >
         <use
@@ -182,16 +182,16 @@ exports[`Pagination renders with page size changer 1`] = `
     </button>
   </div>
   <div
-    className="css-1vkrryt"
+    className="css-17vatmo"
     onClick={[Function]}
   >
     <button
-      className="css-ixus2c"
+      className="css-1mocbyz"
       type="button"
     >
       10 / page 
       <svg
-        className="css-t1im82"
+        className="css-10s1w"
         viewBox="0 0 14 14"
       >
         <use
@@ -205,10 +205,10 @@ exports[`Pagination renders with page size changer 1`] = `
 
 exports[`Pagination renders with page size changer and total 1`] = `
 <div
-  className="css-k008qs"
+  className="css-zjik7"
 >
   <div
-    className="css-1dob6jq"
+    className="css-1obq1rs"
   >
     21
     -
@@ -219,13 +219,13 @@ exports[`Pagination renders with page size changer and total 1`] = `
   </div>
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1gcl23y"
+        className="css-1jwstkt"
         viewBox="0 0 14 14"
       >
         <use
@@ -236,49 +236,49 @@ exports[`Pagination renders with page size changer and total 1`] = `
   </div>
   <div>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-1k3cu11"
+      className="css-s5x2y9"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
@@ -287,13 +287,13 @@ exports[`Pagination renders with page size changer and total 1`] = `
   </div>
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-14x0fwm"
+        className="css-1qr49le"
         viewBox="0 0 14 14"
       >
         <use
@@ -303,16 +303,16 @@ exports[`Pagination renders with page size changer and total 1`] = `
     </button>
   </div>
   <div
-    className="css-1vkrryt"
+    className="css-17vatmo"
     onClick={[Function]}
   >
     <button
-      className="css-ixus2c"
+      className="css-1mocbyz"
       type="button"
     >
       10 / page 
       <svg
-        className="css-t1im82"
+        className="css-10s1w"
         viewBox="0 0 14 14"
       >
         <use
@@ -326,10 +326,10 @@ exports[`Pagination renders with page size changer and total 1`] = `
 
 exports[`Pagination renders with total 1`] = `
 <div
-  className="css-k008qs"
+  className="css-zjik7"
 >
   <div
-    className="css-1dob6jq"
+    className="css-1obq1rs"
   >
     21
     -
@@ -340,13 +340,13 @@ exports[`Pagination renders with total 1`] = `
   </div>
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1gcl23y"
+        className="css-1jwstkt"
         viewBox="0 0 14 14"
       >
         <use
@@ -357,49 +357,49 @@ exports[`Pagination renders with total 1`] = `
   </div>
   <div>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-1k3cu11"
+      className="css-s5x2y9"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-piqsuo"
+      className="css-1x4gift"
       onClick={[Function]}
       type="button"
     >
@@ -408,13 +408,13 @@ exports[`Pagination renders with total 1`] = `
   </div>
   <div>
     <button
-      className="css-1d1m824"
+      className="css-nbfjew"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-14x0fwm"
+        className="css-1qr49le"
         viewBox="0 0 14 14"
       >
         <use
@@ -428,16 +428,16 @@ exports[`Pagination renders with total 1`] = `
 
 exports[`PaginationControlled render simple 1`] = `
 <div
-  className="css-k008qs"
+  className="css-zjik7"
 >
   <button
-    className="css-q25dw3"
+    className="css-53w1bj"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-1gcl23y"
+      className="css-1jwstkt"
       viewBox="0 0 14 14"
     >
       <use
@@ -446,18 +446,18 @@ exports[`PaginationControlled render simple 1`] = `
     </svg>
   </button>
   <span
-    className="css-u8kjm9"
+    className="css-xqrn7q"
   >
     3
   </span>
   <button
-    className="css-q25dw3"
+    className="css-53w1bj"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-14x0fwm"
+      className="css-1qr49le"
       viewBox="0 0 14 14"
     >
       <use
@@ -470,16 +470,16 @@ exports[`PaginationControlled render simple 1`] = `
 
 exports[`PaginationControlled renders with page size changer 1`] = `
 <div
-  className="css-k008qs"
+  className="css-zjik7"
 >
   <button
-    className="css-q25dw3"
+    className="css-53w1bj"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-1gcl23y"
+      className="css-1jwstkt"
       viewBox="0 0 14 14"
     >
       <use
@@ -488,18 +488,18 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     </svg>
   </button>
   <span
-    className="css-u8kjm9"
+    className="css-xqrn7q"
   >
     3
   </span>
   <button
-    className="css-q25dw3"
+    className="css-53w1bj"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-14x0fwm"
+      className="css-1qr49le"
       viewBox="0 0 14 14"
     >
       <use
@@ -508,16 +508,16 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     </svg>
   </button>
   <div
-    className="css-1vkrryt"
+    className="css-17vatmo"
     onClick={[Function]}
   >
     <button
-      className="css-ypl1wq"
+      className="css-b3lbo0"
       type="button"
     >
       10 / page 
       <svg
-        className="css-t1im82"
+        className="css-10s1w"
         viewBox="0 0 14 14"
       >
         <use

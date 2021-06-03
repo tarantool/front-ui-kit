@@ -3,78 +3,78 @@
 exports[`Switcher renders correctly 1`] = `
 Array [
   <label
-    className="css-70qvj9"
+    className="css-s5xdrg"
     title="Initial"
   >
     <input
       checked={true}
-      className="css-1lit629"
+      className="css-8j4tix"
       name="switcherChecked"
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1jkpnb"
+      className="css-6l8wcs"
     />
     <span
-      className="css-cwc1xz"
+      className="css-1ybmbi2"
     >
       Checked
     </span>
   </label>,
   <label
-    className="css-70qvj9"
+    className="css-s5xdrg"
   >
     <input
-      className="css-1lit629"
+      className="css-8j4tix"
       name="switcher"
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1kah4zo"
+      className="css-znp835"
     />
     <span
-      className="css-cwc1xz"
+      className="css-1ybmbi2"
     >
       Initial
     </span>
   </label>,
   <label
-    className="css-70qvj9"
+    className="css-s5xdrg"
   >
     <input
       checked={true}
-      className="css-1lit629"
+      className="css-8j4tix"
       disabled={true}
       name="switcherCheckedDisabled"
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-xnkqaq"
+      className="css-1tnggdq"
     />
     <span
-      className="css-cwc1xz"
+      className="css-1ybmbi2"
     >
       Checked disabled
     </span>
   </label>,
   <label
-    className="css-70qvj9"
+    className="css-s5xdrg"
   >
     <input
-      className="css-1lit629"
+      className="css-8j4tix"
       disabled={true}
       name="switcherDisabled"
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-fli92z"
+      className="css-pc19o9"
     />
     <span
-      className="css-cwc1xz"
+      className="css-1ybmbi2"
     >
       Disabled
     </span>

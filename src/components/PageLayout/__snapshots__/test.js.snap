@@ -6,10 +6,10 @@ Array [
     className="css-1br8pp4"
   >
     <div
-      className="css-3v25n"
+      className="css-1stuufb"
     >
       <h1
-        className="css-1xisb9e"
+        className="css-1vvherk"
       >
         Cluster
       </h1>
@@ -21,34 +21,34 @@ Array [
     </div>
   </div>,
   <div
-    className="css-bd53i6"
+    className="css-18mq3p9"
   >
     <div
-      className="css-3v25n"
+      className="css-1stuufb"
     >
       <h1
-        className="css-1xisb9e"
+        className="css-1vvherk"
       >
         Cluster
       </h1>
       <div
-        className="css-13bort8"
+        className="css-1tr219l"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             type="button"
           >
             Issues
@@ -58,15 +58,15 @@ Array [
     </div>
   </div>,
   <div
-    className="css-y9opr3"
+    className="css-pujxu8"
   >
     <div
-      className="css-g2m2eb"
+      className="css-1e77lro"
     >
       Hello, I'm error!
     </div>
     <div
-      className="css-3v25n"
+      className="css-1stuufb"
     >
       <h1
         className="css-1b2tio5"
@@ -74,24 +74,24 @@ Array [
         Reports list
       </h1>
       <div
-        className="css-1uz0go"
+        className="css-t9oodn"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <div
-            className="css-8o7sw6"
+            className="css-jwj6c2"
           >
             <input
-              className="css-16fuuzx"
+              className="css-18swi04"
               onBlur={[Function]}
               onFocus={[Function]}
             />
             <div
-              className="css-qidtvj"
+              className="css-6kpmax"
             >
               <svg
-                className="css-p78i9h"
+                className="css-1oq5xej"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -102,10 +102,10 @@ Array [
           </div>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-1oap1v"
+            className="css-y3htlr"
             type="button"
           >
             Info
@@ -115,10 +115,10 @@ Array [
     </div>
   </div>,
   <div
-    className="css-bd53i6"
+    className="css-18mq3p9"
   >
     <div
-      className="css-3v25n"
+      className="css-1stuufb"
     >
       <h1
         className="css-1b2tio5"
@@ -126,24 +126,24 @@ Array [
         Reports list
       </h1>
       <div
-        className="css-1uz0go"
+        className="css-t9oodn"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <div
-            className="css-8o7sw6"
+            className="css-jwj6c2"
           >
             <input
-              className="css-16fuuzx"
+              className="css-18swi04"
               onBlur={[Function]}
               onFocus={[Function]}
             />
             <div
-              className="css-qidtvj"
+              className="css-6kpmax"
             >
               <svg
-                className="css-p78i9h"
+                className="css-1oq5xej"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -154,10 +154,10 @@ Array [
           </div>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-1oap1v"
+            className="css-y3htlr"
             type="button"
           >
             Info
@@ -165,23 +165,23 @@ Array [
         </div>
       </div>
       <div
-        className="css-13bort8"
+        className="css-1tr219l"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-1oap1v"
+            className="css-y3htlr"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-1oap1v"
+            className="css-y3htlr"
             type="button"
           >
             Info
@@ -199,10 +199,10 @@ Array [
     className="css-1br8pp4"
   >
     <div
-      className="css-3v25n"
+      className="css-1stuufb"
     >
       <h1
-        className="css-1xisb9e"
+        className="css-1vvherk"
       >
         Cluster
       </h1>
@@ -212,23 +212,23 @@ Array [
         Heading content
       </span>
       <div
-        className="css-13bort8"
+        className="css-1tr219l"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             type="button"
           >
             Issues
@@ -241,10 +241,10 @@ Array [
     className="css-1br8pp4"
   >
     <div
-      className="css-3v25n"
+      className="css-1stuufb"
     >
       <h1
-        className="css-1xisb9e"
+        className="css-1vvherk"
       >
         Cluster
       </h1>
@@ -254,23 +254,23 @@ Array [
         Heading content
       </span>
       <div
-        className="css-13bort8"
+        className="css-1tr219l"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             type="button"
           >
             Issues

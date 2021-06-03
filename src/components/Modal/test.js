@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Modal } from './index';
 import { Button } from '../Button';
 import { Tabbed } from '../Tabbed';

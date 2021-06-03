@@ -12,7 +12,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -30,10 +30,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -41,7 +41,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 0
         </span>
@@ -56,7 +56,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -74,10 +74,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -85,7 +85,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 1
         </span>
@@ -100,7 +100,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -118,10 +118,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -129,7 +129,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 2
         </span>
@@ -144,7 +144,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -162,10 +162,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -173,7 +173,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 3
         </span>
@@ -188,7 +188,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -206,10 +206,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -217,7 +217,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 4
         </span>
@@ -232,7 +232,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -250,10 +250,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -261,7 +261,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 5
         </span>
@@ -276,7 +276,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -294,10 +294,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -305,7 +305,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 6
         </span>
@@ -320,7 +320,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -338,10 +338,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -349,7 +349,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 7
         </span>
@@ -364,7 +364,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -382,10 +382,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -393,7 +393,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 8
         </span>
@@ -408,7 +408,7 @@ exports[`DraggableList renders correctly 1`] = `
         className="css-1ggp6x0"
       >
         <svg
-          className="css-1fn93nz"
+          className="css-1f5lesb"
           viewBox="0 0 16 16"
         >
           <use
@@ -426,10 +426,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-70qvj9"
+        className="css-s5xdrg"
       >
         <svg
-          className="css-1bd58bw"
+          className="css-1l8frzb"
           viewBox="0 0 14 14"
         >
           <use
@@ -437,7 +437,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-18j7qsr"
+          className="css-1ezwu69"
         >
           uri 9
         </span>

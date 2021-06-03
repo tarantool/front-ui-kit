@@ -5,106 +5,106 @@ exports[`AppHeader renders correctly 1`] = `
   className="css-1r0gly9"
 >
   <div
-    className="css-vbwxsy"
+    className="css-pavhyf"
   >
     <span
-      className="css-4haz1u"
+      className="css-10mai1l"
     >
       Project name
     </span>
     <div
-      className="css-vzwfet"
+      className="css-1xzbk8"
     >
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/tarantool"
         onClick={[Function]}
       >
         @tarantool.io/ui-kit
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/section-ui-components"
         onClick={[Function]}
       >
         UI Components
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/breadcrumb"
         onClick={[Function]}
       >
         Breadcrumb
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/overflow-list"
         onClick={[Function]}
       >
         OverflowList
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/resize-sensor"
         onClick={[Function]}
       >
         ResizeSensor
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/resize-sensor-again"
         onClick={[Function]}
       >
         ResizeSensor again
       </a>
       <div
-        className="css-11rp940"
+        className="css-18izngs"
       />
     </div>
   </div>
   <div
-    className="css-1p3wnpi"
+    className="css-ljifeg"
   >
     <div
-      className="css-12ibiio"
+      className="css-1zje6z"
     >
       <button
-        className="css-6zj69m"
+        className="css-lot513"
         title="Search"
         type="button"
       >
         <svg
-          className="css-1t0dl15"
+          className="css-10tmi9z"
           viewBox="0 0 16 16"
         >
           <use
@@ -114,10 +114,10 @@ exports[`AppHeader renders correctly 1`] = `
       </button>
     </div>
     <div
-      className="css-12ibiio"
+      className="css-1zje6z"
     >
       <button
-        className="css-ixus2c"
+        className="css-1mocbyz"
         type="button"
       >
         Log in

@@ -8,13 +8,13 @@ exports[`BaseModal renders opened 1`] = `
   onMouseDown={[Function]}
 >
   <div
-    className="css-1vn41o3"
+    className="css-1vj4vbw"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     Modal content
     <div
-      className="css-vnc1z7"
+      className="css-alng9s"
       onFocus={[Function]}
       tabIndex="0"
     />

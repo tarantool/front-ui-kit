@@ -5,10 +5,10 @@ exports[`Markdown renders code block 1`] = `
   className="css-1dvqj0j"
 >
   <pre
-    className="css-h3y5cn"
+    className="css-12mjsgr"
   >
     <button
-      className="css-jen7vt"
+      className="css-1ncsxxj"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -19,7 +19,7 @@ exports[`Markdown renders code block 1`] = `
       type="button"
     >
       <svg
-        className="css-1jsrbro"
+        className="css-1gvvjb9"
         viewBox="0 0 16 16"
       >
         <use
@@ -28,7 +28,7 @@ exports[`Markdown renders code block 1`] = `
       </svg>
     </button>
     <div
-      className="css-pmzqvx"
+      className="css-ol9sdx"
     >
       <code
         className="css-rt1r54"
@@ -45,7 +45,7 @@ exports[`Markdown renders code inline 1`] = `
   className="css-1dvqj0j"
 >
   <p
-    className="css-1hlw7zz"
+    className="css-v3brij"
   >
     <code
       className="css-rt1r54"
@@ -62,7 +62,7 @@ exports[`Markdown renders mixed content 1`] = `
 >
   <div>
     <h2
-      className="css-13lsgy9"
+      className="css-lxw08g"
       id="connect-to-tarantool-cartridge-using-python-clienthttpsgithubcomtarantooltarantool-python"
     >
       Connect to Tarantool Cartridge using 
@@ -75,7 +75,7 @@ exports[`Markdown renders mixed content 1`] = `
       </a>
     </h2>
     <p
-      className="css-1hlw7zz"
+      className="css-v3brij"
     >
       First, 
       <strong>
@@ -92,10 +92,10 @@ exports[`Markdown renders mixed content 1`] = `
       :
     </p>
     <pre
-      className="css-h3y5cn"
+      className="css-12mjsgr"
     >
       <button
-        className="css-jen7vt"
+        className="css-1ncsxxj"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -106,7 +106,7 @@ exports[`Markdown renders mixed content 1`] = `
         type="button"
       >
         <svg
-          className="css-1jsrbro"
+          className="css-1gvvjb9"
           viewBox="0 0 16 16"
         >
           <use
@@ -115,25 +115,25 @@ exports[`Markdown renders mixed content 1`] = `
         </svg>
       </button>
       <div
-        className="css-pmzqvx"
+        className="css-ol9sdx"
       >
         <code
-          className="language-bash css-fkp2zu"
+          className="language-bash css-t2sxou"
         >
           pip3 install tarantool
         </code>
       </div>
     </pre>
     <p
-      className="css-1hlw7zz"
+      className="css-v3brij"
     >
       Create a file example.py with the code to get started:
     </p>
     <pre
-      className="css-h3y5cn"
+      className="css-12mjsgr"
     >
       <button
-        className="css-jen7vt"
+        className="css-1ncsxxj"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -144,7 +144,7 @@ exports[`Markdown renders mixed content 1`] = `
         type="button"
       >
         <svg
-          className="css-1jsrbro"
+          className="css-1gvvjb9"
           viewBox="0 0 16 16"
         >
           <use
@@ -153,10 +153,10 @@ exports[`Markdown renders mixed content 1`] = `
         </svg>
       </button>
       <div
-        className="css-pmzqvx"
+        className="css-ol9sdx"
       >
         <code
-          className="language-python css-fkp2zu"
+          className="language-python css-t2sxou"
         >
           from tarantool import Connection
 c = Connection(
@@ -173,15 +173,15 @@ print(results)
       </div>
     </pre>
     <p
-      className="css-1hlw7zz"
+      className="css-v3brij"
     >
       Run the script
     </p>
     <pre
-      className="css-h3y5cn"
+      className="css-12mjsgr"
     >
       <button
-        className="css-jen7vt"
+        className="css-1ncsxxj"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -192,7 +192,7 @@ print(results)
         type="button"
       >
         <svg
-          className="css-1jsrbro"
+          className="css-1gvvjb9"
           viewBox="0 0 16 16"
         >
           <use
@@ -201,10 +201,10 @@ print(results)
         </svg>
       </button>
       <div
-        className="css-pmzqvx"
+        className="css-ol9sdx"
       >
         <code
-          className="language-bash css-fkp2zu"
+          className="language-bash css-t2sxou"
         >
           python3 example.py
         </code>
@@ -220,13 +220,13 @@ exports[`Markdown renders with built-in component overriding 1`] = `
 >
   <div>
     <h1
-      className="css-1nfljoo"
+      className="css-nyhrv2"
       id="bee-careful"
     >
       Bee careful
     </h1>
     <p
-      className="css-1hlw7zz"
+      className="css-v3brij"
     >
       Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
     </p>
@@ -234,7 +234,7 @@ exports[`Markdown renders with built-in component overriding 1`] = `
       className="css-1gmsj2n"
     >
       <p
-        className="css-1hlw7zz"
+        className="css-v3brij"
       >
         Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
       </p>
@@ -243,17 +243,17 @@ exports[`Markdown renders with built-in component overriding 1`] = `
       className="iAmOverridedComponent"
     >
       <li
-        className="css-1tx38fa"
+        className="css-45bbqm"
       >
         Create file
       </li>
       <li
-        className="css-1tx38fa"
+        className="css-45bbqm"
       >
         Rename file
       </li>
       <li
-        className="css-1tx38fa"
+        className="css-45bbqm"
       >
         Save file
       </li>

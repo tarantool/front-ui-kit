@@ -10,7 +10,7 @@ import {
   type UseTableOptions,
   type Row
 } from 'react-table';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 
 import { Text } from '../Text';
 import { Spin } from '../Spin';

@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { IconEyeClosed, IconEyeOpened } from '../Icon';
 import { Input, type InputProps } from '../Input';
 import { Button } from '../Button';

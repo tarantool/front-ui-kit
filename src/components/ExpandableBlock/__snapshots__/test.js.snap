@@ -2,10 +2,10 @@
 
 exports[`Table renders with copy btn 1`] = `
 <div
-  className="css-79elbk"
+  className="css-bjn8wh"
 >
   <button
-    className="css-196xw4s"
+    className="css-10x8jwt"
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -16,7 +16,7 @@ exports[`Table renders with copy btn 1`] = `
     type="button"
   >
     <svg
-      className="css-1swpe5a"
+      className="css-9x2r60"
       viewBox="0 0 16 16"
     >
       <use
@@ -25,7 +25,7 @@ exports[`Table renders with copy btn 1`] = `
     </svg>
   </button>
   <div
-    className="css-jj6lbp"
+    className="css-19omcb5"
     onClick={[Function]}
   >
     Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
@@ -38,7 +38,7 @@ stack traceback:
 
 exports[`Table renders with more btm 1`] = `
 <div
-  className="css-mtitt"
+  className="css-zb26jy"
   onClick={[Function]}
 >
   Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
@@ -50,7 +50,7 @@ stack traceback:
 
 exports[`Table renders without more btm 1`] = `
 <span
-  className="css-wk8ak3"
+  className="css-tkwdse"
 >
   Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
 function_call_error: [string "bad_task"]:1: failure

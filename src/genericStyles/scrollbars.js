@@ -1,5 +1,5 @@
 // @flow
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
 import { getOS } from '../utils/getOS';
 import { colors } from '../variables';

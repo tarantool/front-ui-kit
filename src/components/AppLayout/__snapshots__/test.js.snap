@@ -2,16 +2,16 @@
 
 exports[`AppLayout renders correctly 1`] = `
 <div
-  className="css-zrw58x"
+  className="css-ww59jg"
 >
   <div
     className="css-1d4yvnq"
   >
     <div
-      className="css-9xd5uu"
+      className="css-7s3tqb"
     >
       <svg
-        className="css-2k1hl9"
+        className="css-1d43lrb"
         viewBox="0 0 154 28"
       >
         <use
@@ -20,19 +20,19 @@ exports[`AppLayout renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="css-1pp54io"
+      className="css-htil7a"
     >
       <a
-        className="css-1rgrxmh"
+        className="css-1e2guak"
         href="/mytest/test"
         onClick={[Function]}
         title="My Test"
       >
         <div
-          className="css-ya0za5"
+          className="css-ja26we"
         >
           <svg
-            className="css-1wacbef"
+            className="css-sffbkr"
             viewBox="0 0 16 16"
           >
             <use
@@ -47,16 +47,16 @@ exports[`AppLayout renders correctly 1`] = `
         </span>
       </a>
       <a
-        className="css-1rgrxmh"
+        className="css-1e2guak"
         href="/other/test"
         onClick={[Function]}
         title="Other"
       >
         <div
-          className="css-ya0za5"
+          className="css-ja26we"
         >
           <svg
-            className="css-7r35aj"
+            className="css-1nnk27v"
             viewBox="0 0 14 14"
           >
             <use
@@ -70,7 +70,7 @@ exports[`AppLayout renders correctly 1`] = `
           Other
         </span>
         <svg
-          className="css-1kzudc7"
+          className="css-8mr8c5"
           viewBox="0 0 14 14"
         >
           <use
@@ -79,68 +79,68 @@ exports[`AppLayout renders correctly 1`] = `
         </svg>
       </a>
       <div
-        className="css-11ep6t5"
+        className="css-2fcw72"
       >
         <a
-          className="css-vp64rp"
+          className="css-1ssciey"
           href="/mytest/test"
           onClick={[Function]}
           title="My Test"
         >
           <span
-            className="css-hgsklg"
+            className="css-bw2ld4"
           >
             My Test
           </span>
         </a>
         <a
-          className="css-1rgrxmh"
+          className="css-1e2guak"
           href="/other/test"
           onClick={[Function]}
           title="Other"
         >
           <span
-            className="css-133b1yf"
+            className="css-oabgn6"
           >
             Other
           </span>
         </a>
         <a
-          className="css-1rgrxmh"
+          className="css-1e2guak"
           href="/other/test2"
           onClick={[Function]}
           title="Other2"
         >
           <span
-            className="css-133b1yf"
+            className="css-oabgn6"
           >
             Other2
           </span>
         </a>
         <a
-          className="css-1rgrxmh"
+          className="css-1e2guak"
           href="/other/test3"
           onClick={[Function]}
           title="Other4"
         >
           <span
-            className="css-133b1yf"
+            className="css-oabgn6"
           >
             Other4
           </span>
         </a>
       </div>
       <a
-        className="css-1rgrxmh"
+        className="css-1e2guak"
         href="/other/test2"
         onClick={[Function]}
         title="Other2"
       >
         <div
-          className="css-ya0za5"
+          className="css-ja26we"
         >
           <svg
-            className="css-q9ewss"
+            className="css-1e8hhk8"
             viewBox="0 0 14 14"
           >
             <use
@@ -155,16 +155,16 @@ exports[`AppLayout renders correctly 1`] = `
         </span>
       </a>
       <a
-        className="css-1rgrxmh"
+        className="css-1e2guak"
         href="/other/test3"
         onClick={[Function]}
         title="Other4"
       >
         <div
-          className="css-ya0za5"
+          className="css-ja26we"
         >
           <svg
-            className="css-1hub4lj"
+            className="css-1ok0ieg"
             viewBox="0 0 12 14"
           >
             <use
@@ -180,19 +180,19 @@ exports[`AppLayout renders correctly 1`] = `
       </a>
     </div>
     <div
-      className="css-1ecuton"
+      className="css-7yk45v"
     >
       <a
-        className="css-1rgrxmh"
+        className="css-1e2guak"
         href="/other/test3"
         onClick={[Function]}
         title="Documentation"
       >
         <div
-          className="css-ya0za5"
+          className="css-ja26we"
         >
           <svg
-            className="css-1wacbef"
+            className="css-sffbkr"
             viewBox="0 0 16 16"
           >
             <use
@@ -207,16 +207,16 @@ exports[`AppLayout renders correctly 1`] = `
         </span>
       </a>
       <button
-        className="css-rw56qd"
+        className="css-1x7zhyv"
         href=""
         onClick={[Function]}
         title="Collapse menu"
       >
         <div
-          className="css-ya0za5"
+          className="css-ja26we"
         >
           <svg
-            className="css-1y2gfc9"
+            className="css-1l69dq4"
             viewBox="0 0 14 14"
           >
             <use
@@ -233,100 +233,100 @@ exports[`AppLayout renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="css-11ovkva"
+    className="css-aqdqdm"
   >
     <div
       className="css-1r0gly9"
     >
       <div
-        className="css-vbwxsy"
+        className="css-pavhyf"
       >
         <span
-          className="css-4haz1u"
+          className="css-10mai1l"
         >
           Sample app
         </span>
         <div
-          className="css-vzwfet"
+          className="css-1xzbk8"
         >
           <span
-            className="css-sw5zrb"
+            className="css-1pfwcw7"
           >
             /
           </span>
           <a
-            className="css-1994ztc"
+            className="css-2w80i4"
             href="/tarantool"
             onClick={[Function]}
           >
             @tarantool.io/ui-kit
           </a>
           <span
-            className="css-sw5zrb"
+            className="css-1pfwcw7"
           >
             /
           </span>
           <a
-            className="css-1994ztc"
+            className="css-2w80i4"
             href="/section-ui-components"
             onClick={[Function]}
           >
             UI Components
           </a>
           <span
-            className="css-sw5zrb"
+            className="css-1pfwcw7"
           >
             /
           </span>
           <a
-            className="css-1994ztc"
+            className="css-2w80i4"
             href="/breadcrumb"
             onClick={[Function]}
           >
             Breadcrumb
           </a>
           <span
-            className="css-sw5zrb"
+            className="css-1pfwcw7"
           >
             /
           </span>
           <a
-            className="css-1994ztc"
+            className="css-2w80i4"
             href="/overflow-list"
             onClick={[Function]}
           >
             OverflowList
           </a>
           <span
-            className="css-sw5zrb"
+            className="css-1pfwcw7"
           >
             /
           </span>
           <a
-            className="css-1994ztc"
+            className="css-2w80i4"
             href="/resize-sensor"
             onClick={[Function]}
           >
             ResizeSensor
           </a>
           <div
-            className="css-11rp940"
+            className="css-18izngs"
           />
         </div>
       </div>
       <div
-        className="css-1p3wnpi"
+        className="css-ljifeg"
       >
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-6zj69m"
+            className="css-lot513"
             title="Search"
             type="button"
           >
             <svg
-              className="css-1t0dl15"
+              className="css-10tmi9z"
               viewBox="0 0 16 16"
             >
               <use
@@ -336,10 +336,10 @@ exports[`AppLayout renders correctly 1`] = `
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="css-1zje6z"
         >
           <button
-            className="css-ixus2c"
+            className="css-1mocbyz"
             type="button"
           >
             Log in

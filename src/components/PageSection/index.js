@@ -1,7 +1,7 @@
 // @flow
 // TODO: move to uikit
 import * as React from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { ControlsPanel } from '../ControlsPanel';
 import { Text } from '../Text';
 

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { useState } from 'react';
-import { css, keyframes, cx } from 'react-emotion';
+import { css, keyframes, cx } from '@emotion/css';
 import { SideMenuItem } from './components/SideMenuItem';
 import { IconArrowLeft, IconArrowRight } from '../Icon';
 import { colors } from '../../variables';

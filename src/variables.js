@@ -1,5 +1,5 @@
 // @flow
-import { keyframes } from 'emotion';
+import { keyframes } from '@emotion/css';
 
 
 export const appLayoutTopPanelHeight = 68;

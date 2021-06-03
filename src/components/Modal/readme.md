@@ -14,7 +14,7 @@ Additional `<form>` don't need.
 
 ```jsx
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   Button,
   ControlsPanel,

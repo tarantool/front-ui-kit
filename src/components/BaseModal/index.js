@@ -3,7 +3,7 @@ import * as React from 'react';
 import { createRef } from 'react';
 import * as ReactDOM from 'react-dom';
 import { rgba } from 'emotion-rgba';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { colors, zIndex } from '../../variables';
 import { isFocusInsideRef } from '../../utils/isFocusInside';
 
