@@ -34,7 +34,7 @@
     "lodash": "4.17.21",
     "markdown-to-jsx": "7.0.0",
     "postcss": "8.3.0",
-    "prismjs": "1.23.0",
+    "prismjs": "1.24.0",
     "ramda": "0.26.1",
     "react-dropzone": "11.2.0",
     "react-emotion": "9.2.6",
