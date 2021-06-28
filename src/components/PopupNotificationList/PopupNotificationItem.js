@@ -6,6 +6,8 @@ import { Text } from '../Text';
 import { IconHelperClose } from '../IconHelper';
 import { keyFrames } from '../../variables';
 
+import type { Notification } from './index';
+
 const styles = {
   wrap: css`
     position: relative;
@@ -15,6 +17,7 @@ const styles = {
     box-sizing: border-box;
     border-radius: 10px;
     animation: 0.2s linear ${keyFrames.fadeIn};
+    cursor: pointer;
   `,
   closeBtn: css`
     position: absolute;
@@ -58,15 +61,6 @@ const intentStyles = {
   }
 };
 
-type Props = {
-  heading: string,
-  text?: string,
-  children?: React.Node,
-  className?: string,
-  intent: 'error' | 'success',
-  onClose: (e: MouseEvent) => void
-};
-
 export const PopupNotificationItem = (
   {
     heading,
@@ -74,8 +68,10 @@ export const PopupNotificationItem = (
     children,
     className,
     intent = 'success',
-    onClose
-  }: Props
+    onClose,
+    onMouseEnter,
+    onMouseLeave
+  }: Notification
 ) => (
   <div
     className={cx(
@@ -83,6 +79,9 @@ export const PopupNotificationItem = (
       intentStyles[intent].wrap,
       className
     )}
+    onClick={onClose}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
   >
     <Text className={cx(styles.heading, intentStyles[intent].heading)} variant='h4' tag='span'>{heading}</Text>
     <Text className={cx(styles.text, { [styles.btmMargin]: !!children })}>{text}</Text>

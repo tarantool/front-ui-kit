@@ -42,7 +42,9 @@ const addNotification = ({
     notifications={notifications.map(
       item => ({
         ...item,
-        onClose: () => closeNotification(item.key)
+        onClose: () => closeNotification(item.key),
+        onMouseEnter: () => console.log('onMouseEnter', item.key),
+        onMouseLeave: () => console.log('onMouseLeave', item.key)
       })
     )}
   />
@@ -55,7 +57,7 @@ const addNotification = ({
       <Button
         text='Add error notification'
         onClick={() => addNotification({
-          details: <Button text='Details' />,
+          details: <Button onClick={e => e.stopPropagation()} text='Details' />,
           heading: 'Error',
           intent: 'error',
           text: 'NetboxError: GraphQL error: "localhost:3303": Connection refused'
