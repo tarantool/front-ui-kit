@@ -6,8 +6,6 @@ import { Text } from '../Text';
 import { IconHelperClose } from '../IconHelper';
 import { keyFrames } from '../../variables';
 
-import type { Notification } from './index';
-
 const styles = {
   wrap: css`
     position: relative;
@@ -61,6 +59,17 @@ const intentStyles = {
   }
 };
 
+type Props = {
+  heading: string,
+  text?: string,
+  children?: React.Node,
+  className?: string,
+  intent: 'error' | 'success',
+  onClose: (e: MouseEvent) => void,
+  onMouseEnter?: (e: MouseEvent) => void,
+  onMouseLeave?: (e: MouseEvent) => void
+};
+
 export const PopupNotificationItem = (
   {
     heading,
@@ -71,7 +80,7 @@ export const PopupNotificationItem = (
     onClose,
     onMouseEnter,
     onMouseLeave
-  }: Notification
+  }: Props
 ) => (
   <div
     className={cx(
