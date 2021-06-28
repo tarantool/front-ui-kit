@@ -15,6 +15,7 @@ const styles = {
     box-sizing: border-box;
     border-radius: 10px;
     animation: 0.2s linear ${keyFrames.fadeIn};
+    cursor: pointer;
   `,
   closeBtn: css`
     position: absolute;
@@ -64,7 +65,9 @@ type Props = {
   children?: React.Node,
   className?: string,
   intent: 'error' | 'success',
-  onClose: (e: MouseEvent) => void
+  onClose: (e: MouseEvent) => void,
+  onMouseEnter?: (e: MouseEvent) => void,
+  onMouseLeave?: (e: MouseEvent) => void
 };
 
 export const PopupNotificationItem = (
@@ -74,7 +77,9 @@ export const PopupNotificationItem = (
     children,
     className,
     intent = 'success',
-    onClose
+    onClose,
+    onMouseEnter,
+    onMouseLeave
   }: Props
 ) => (
   <div
@@ -83,6 +88,9 @@ export const PopupNotificationItem = (
       intentStyles[intent].wrap,
       className
     )}
+    onClick={onClose}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
   >
     <Text className={cx(styles.heading, intentStyles[intent].heading)} variant='h4' tag='span'>{heading}</Text>
     <Text className={cx(styles.text, { [styles.btmMargin]: !!children })}>{text}</Text>

@@ -17,7 +17,7 @@ const styles = {
   item: css`
     margin-bottom: 35px;
   `
-}
+};
 
 export type Notification = {
   heading: string,
@@ -25,7 +25,9 @@ export type Notification = {
   details?: React.Node,
   intent: 'error' | 'success',
   key?: string | number,
-  onClose: (e: MouseEvent) => void
+  onClose: (e: MouseEvent) => void,
+  onMouseEnter?: (e: MouseEvent) => void,
+  onMouseLeave?: (e: MouseEvent) => void
 };
 
 type Props = {
@@ -41,7 +43,9 @@ export const PopupNotificationList = ({ className, notifications }: Props) => (
       onClose,
       heading,
       intent,
-      key
+      key,
+      onMouseEnter,
+      onMouseLeave
     }) => (
       <PopupNotificationItem
         className={styles.item}
@@ -50,6 +54,8 @@ export const PopupNotificationList = ({ className, notifications }: Props) => (
         onClose={onClose}
         text={text}
         key={key}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         {details}
       </PopupNotificationItem>
