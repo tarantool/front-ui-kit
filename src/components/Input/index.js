@@ -79,8 +79,8 @@ export type InputProps = {
   value?: string,
   placeholder?: string,
   size?: 'm' | 'l',
-  leftElement: React.Node,
-  rightElement: React.Node
+  leftElement?: React.Node,
+  rightElement?: React.Node
 };
 
 type InputState = {

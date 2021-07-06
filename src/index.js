@@ -45,6 +45,7 @@ export * from './components/RadioButton';
 export * from './components/ResizeSensor';
 export * from './components/Scrollbar';
 export * from './components/SectionPreloader';
+export * from './components/Select';
 export * from './components/SideMenu';
 export * from './components/SplashError';
 export * from './components/SplashErrorFatal';

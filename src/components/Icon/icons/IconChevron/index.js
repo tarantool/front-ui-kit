@@ -21,11 +21,11 @@ const styles = {
 
 type IconChevronProps = {
   ...$Exact<GenericIconProps>,
-  direction: 'up' | 'down' | 'left' | 'right'
+  direction?: 'up' | 'down' | 'left' | 'right'
 }
 
 export const IconChevron = (props: IconChevronProps) => {
-  const { direction, className, ...otherProps } = props;
+  const { direction = 'up', className, ...otherProps } = props;
 
   return (
     <Icon

@@ -18,7 +18,7 @@ const focusFirstInteractiveElement = (containerEl: HTMLElement) => {
   } else if (containerEl) {
     containerEl.focus();
   }
-}
+};
 
 
 export type withDropdownProps = {
@@ -26,7 +26,10 @@ export type withDropdownProps = {
   popoverClassName?: string,
   onClick?: (e: MouseEvent) => void,
   component?: React.AbstractComponent<any>,
-  items?: React.Node
+  items?: React.Node,
+  onDropdownVisibleChange?: (visible: boolean) => void,
+  autoFocus?: boolean,
+  disabled?: boolean
 };
 
 type withDropdownState = {
@@ -40,6 +43,10 @@ export const withDropdown = (
   Component:  React.AbstractComponent<any, HTMLElement> | string
 ) =>
   class Dropdown extends React.PureComponent<withDropdownProps, withDropdownState> {
+    static defaultProps = {
+      autoFocus: true
+    };
+
     popoverRef = React.createRef<HTMLElement>();
     wrapperRef = React.createRef<HTMLElement>();
     scrollablePopoverWidth = 0;
@@ -60,6 +67,10 @@ export const withDropdown = (
 
     componentDidUpdate(prevProps: withDropdownProps, prevState: withDropdownState) {
       const { isOpen } = this.state;
+
+      if (prevState.isOpen !== isOpen) {
+        this.props.onDropdownVisibleChange && this.props.onDropdownVisibleChange(isOpen);
+      }
 
       if (!prevState.isOpen && isOpen) {
         document.addEventListener('scroll', this.throttledRecalcPosition, { capture: true });
@@ -132,16 +143,20 @@ export const withDropdown = (
           useScroll
         });
       }
-    }
+    };
 
     // 16 approximately equals 1 frame with 60fps
     throttledRecalcPosition = throttle(this.recalcPosition, 16);
 
     handleClick = (event: MouseEvent) => {
-      const { onClick } = this.props;
+      const { onClick, autoFocus } = this.props;
+      const { isOpen } = this.state;
+      if (!autoFocus && isOpen) {
+        return
+      }
       this.toggleDropdown();
       onClick && onClick(event);
-    }
+    };
 
     handleMouseDownOutside = (event: MouseEvent) => {
       const { isOpen } = this.state;
@@ -159,7 +174,7 @@ export const withDropdown = (
       ) {
         this.toggleDropdown();
       }
-    }
+    };
 
     handlePopoverClick = (event: MouseEvent)=> {
       event.stopPropagation();
@@ -168,21 +183,21 @@ export const withDropdown = (
       if (ref && ref !== event.target) {
         this.toggleDropdown();
       }
-    }
+    };
 
     handlePopoverMouseDown = (event: MouseEvent)=> event.stopPropagation();
 
     handlePopoverKeyDown = (event: KeyboardEvent)=> {
       if (popoverCloseKeyCodes.includes(event.keyCode)) {
         this.toggleDropdown();
-        this.wrapperRef.current && focusFirstInteractiveElement(this.wrapperRef.current);
+        this.wrapperRef.current && this.props.autoFocus && focusFirstInteractiveElement(this.wrapperRef.current);
       }
     };
 
     toggleDropdown = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen, useScroll: false }));
 
     renderPopover = () => {
-      const { popoverClassName } = this.props;
+      const { popoverClassName, autoFocus } = this.props;
       const { left, top, useScroll } = this.state;
       const { wrapperRef } = this;
       const minWidth = wrapperRef && wrapperRef.current
@@ -193,6 +208,7 @@ export const withDropdown = (
         <DropdownPopoverWithRef
           className={popoverClassName}
           items={this.props.items}
+          autoFocus={autoFocus}
           onClick={this.handlePopoverClick}
           onKeyDownCapture={this.handlePopoverKeyDown}
           onMouseDown={this.handlePopoverMouseDown}
@@ -223,6 +239,9 @@ export const withDropdown = (
         className,
         items,
         popoverClassName,
+        onDropdownVisibleChange,
+        autoFocus,
+        disabled,
         ...props
       } = this.props;
       const { isOpen } = this.state;
@@ -232,10 +251,10 @@ export const withDropdown = (
           <Component
             {...props}
             className={className}
-            onClick={this.handleClick}
+            onClick={!disabled && this.handleClick}
             ref={this.wrapperRef}
           />
-          {isOpen && items && this.renderPortal()}
+          {isOpen && items && !disabled && this.renderPortal()}
         </>
       )
     }
