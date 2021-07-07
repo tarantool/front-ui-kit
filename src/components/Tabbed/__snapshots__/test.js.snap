@@ -38,7 +38,7 @@ exports[`Tabbed Tabbed small renders correctly 1`] = `
     className="css-17jvrcz"
   >
     <button
-      className="css-1uph33b"
+      className="css-yfjdt9"
       onClick={[Function]}
     >
       Create Replica Set
