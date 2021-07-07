@@ -11,7 +11,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
         
     - Add new props: `onDropdownVisibleChange`, `autoFocus`.
 
-- Add new component `Select`    
+- Add new component `Select`
+
+- Update Tabbed component:
+    
+    - Add new prop `size`    
     
 ## [0.38.0] - 2021-06-28
 
