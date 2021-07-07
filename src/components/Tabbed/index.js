@@ -77,7 +77,7 @@ const styles = {
       justify-content: space-around;
       padding 7px 8px;
       background-color: ${colors.baseBg};
-      bordergit -radius: 4px;
+      border-radius: 4px;
     `
   }
 };
