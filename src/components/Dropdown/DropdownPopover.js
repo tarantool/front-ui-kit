@@ -41,13 +41,14 @@ type DropdownPopoverProps = {
   innerRef?: (n: Node) => void,
   onClick: MouseEvent,
   onKeyDownCapture?: KeyboardEvent,
-  onMouseDown: MouseEvent
+  onMouseDown: MouseEvent,
+  autoFocus: boolean
 }
 
 export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   focus() {
-    const { innerRef } = this.props;
-    innerRef.current && innerRef.current.focus();
+    const { innerRef, autoFocus } = this.props;
+    autoFocus && innerRef.current && innerRef.current.focus();
   }
 
   handleKeyDown = (e: KeyboardEvent) => {

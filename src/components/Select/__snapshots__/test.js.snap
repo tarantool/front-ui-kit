@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Render empty 1`] = `
+<div
+  className="css-1gomreu"
+  onClick={[Function]}
+>
+  <div
+    className="css-1ondgiw"
+  >
+    <input
+      autocomplete="new-password"
+      className="css-16fuuzx"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+    />
+    <div
+      className="css-qidtvj"
+    >
+      <svg
+        className="css-1ews5mj"
+        viewBox="0 0 14 14"
+      >
+        <use
+          xlinkHref="#chevron-up"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Render with data 1`] = `
+<div
+  className="css-1gomreu"
+  onClick={[Function]}
+>
+  <div
+    className="css-1ondgiw"
+  >
+    <input
+      autocomplete="new-password"
+      className="css-16fuuzx"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      value="Male"
+    />
+    <div
+      className="css-qidtvj"
+    >
+      <svg
+        className="css-1ews5mj"
+        viewBox="0 0 14 14"
+      >
+        <use
+          xlinkHref="#chevron-up"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Render with data and allow search 1`] = `
+<div
+  className="css-1gomreu"
+  onClick={[Function]}
+>
+  <div
+    className="css-8o7sw6"
+  >
+    <input
+      autocomplete="new-password"
+      className="css-16fuuzx"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      value="Male"
+    />
+    <div
+      className="css-qidtvj"
+    >
+      <svg
+        className="css-1ews5mj"
+        viewBox="0 0 14 14"
+      >
+        <use
+          xlinkHref="#chevron-up"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
