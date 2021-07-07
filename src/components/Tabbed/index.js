@@ -70,6 +70,7 @@ const styles = {
     `,
     activeTab: css`
       background-color: #fff !important;
+      box-shadow: 0px 2px 2px rgba(4, 11, 29, 0.05);
     `,
     tabs: css`
       display: flex;
