@@ -3,7 +3,7 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { css, cx } from 'emotion';
 import { Input } from '../Input';
 import { Dropdown, DropdownItem } from '../Dropdown';
-import { IconChevronDown, IconChevron, IconBoxNoData } from '../Icon';
+import { IconChevronDown, IconChevron } from '../Icon';
 import { colors } from '../../variables';
 
 const styles = {
@@ -88,7 +88,6 @@ export const Select = (props: SelectProps) => {
           )
         ) : (
           <DropdownItem className={styles.noData}>
-            <IconBoxNoData />
             No data
           </DropdownItem>
         )
