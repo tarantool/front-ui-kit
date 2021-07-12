@@ -123,7 +123,7 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
                 styles[size].tab,
                 { [styles[size].activeTab]: tabIndex === i }
               )}
-              onClick={e => this.handleTabChange(e, i)}
+              onClick={e => this.handleTabChange(i, e)}
             >
               {label}
             </button>

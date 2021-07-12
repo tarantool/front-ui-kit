@@ -1,11 +1,19 @@
 ```js
 import { useState } from 'react';
+import { css } from 'emotion';
 import {
   Select,
   ControlsPanel,
   Switcher,
   Text
 } from '@tarantool.io/ui-kit';
+const styles = {
+  w100: css`
+    width: 100%;
+  `
+}
+
+
 
 const [disabled, setDisabled] = useState(false);
 const toggleDisabled = () => setDisabled(!disabled);
@@ -46,6 +54,7 @@ const options = [
   <div style={{ margin: '12px' }}>
     <Select
       options={options}
+      className={styles.w100}
       value={value}
       onChange={setValue}
       disabled={disabled}

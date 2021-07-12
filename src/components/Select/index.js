@@ -35,6 +35,7 @@ type SelectProps = {
   value: string,
   onChange: (value: any, option: Option) => void,
   className?: string,
+  inputClassName?: string,
   dropdownClassName?: string,
   allowSearch?: boolean,
   disabled?: boolean,
@@ -73,6 +74,7 @@ export const Select = (props: SelectProps) => {
     <Dropdown
       popoverClassName={props.dropdownClassName}
       disabled={props.disabled}
+      className={props.className}
       onDropdownVisibleChange={setDropdownVisible}
       autoFocus={!props.allowSearch}
       items={
@@ -98,7 +100,7 @@ export const Select = (props: SelectProps) => {
         placeholder={props.allowSearch && dropdownVisible ? getLabel() : ''}
         onChange={onChangeInput}
         disabled={props.disabled}
-        className={cx({ [styles.input]: !props.allowSearch }, props.className)}
+        className={cx({ [styles.input]: !props.allowSearch && !props.disabled }, props.inputClassName)}
         autocomplete="new-password"
         rightIcon={<Icon className={styles.icon} />}
         {...props.inputProps}
