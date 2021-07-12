@@ -91,7 +91,7 @@ type TabbedProps = {
   tabs?: Tab[],
   className?: string,
   activeTab?: number,
-  handleTabChange?: (i: number) => void,
+  handleTabChange?: (i: number, e: MouseEvent) => void,
   size: 'default' | 'small'
 };
 
@@ -123,7 +123,7 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
                 styles[size].tab,
                 { [styles[size].activeTab]: tabIndex === i }
               )}
-              onClick={() => this.handleTabChange(i)}
+              onClick={e => this.handleTabChange(i, e)}
             >
               {label}
             </button>
@@ -134,8 +134,9 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
     );
   }
 
-  handleTabChange(i: number) {
-    this.setState({ activeTab: i })
-    this.props?.handleTabChange?.(i);
+  handleTabChange(i: number, e: MouseEvent) {
+    e.preventDefault();
+    this.setState({ activeTab: i });
+    this.props?.handleTabChange?.(i, e);
   }
 }
