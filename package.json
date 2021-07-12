@@ -1,6 +1,6 @@
 {
   "name": "@tarantool.io/ui-kit",
-  "version": "0.39.0",
+  "version": "0.39.1",
   "description": "UI component library for Tarantool",
   "homepage": "https://tarantool.github.io/front-ui-kit/#section-readme",
   "source": "src/index.js",
