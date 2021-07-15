@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import MD from 'markdown-to-jsx';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { colors, monoFontFamily } from '../../variables';
 import { CodeBlockWrap } from '../CodeBlock';
 import { SyntaxHighlight } from '../SyntaxHighlight';

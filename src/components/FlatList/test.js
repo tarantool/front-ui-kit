@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { FlatList, FlatListItem, Text } from '../../index';
 
 describe('FlatList', () => {

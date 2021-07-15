@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 /**
  * based on original okaidia theme from prismjs

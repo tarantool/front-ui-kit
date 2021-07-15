@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { createRef } from 'react';
-import { cx } from 'emotion';
+import { cx } from '@emotion/css';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-go';
 import 'prismjs/components/prism-lua';

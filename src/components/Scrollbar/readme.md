@@ -5,7 +5,7 @@
 > We'll add this styles in UI-Kit later.
 
 <!-- ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 const style = css`height: 300px;`;
 

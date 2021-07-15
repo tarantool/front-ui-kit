@@ -1,6 +1,6 @@
 ```jsx
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Button, NotificationSplashFixed, Switcher } from '@tarantool.io/ui-kit';
 
 const [visible, setVisible] = useState(false);

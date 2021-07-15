@@ -12,7 +12,7 @@ import {
   type ColumnInstance,
   type UseSortByColumnProps
 } from 'react-table';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 
 import { Text } from '../Text';
 import { Button } from '../Button';

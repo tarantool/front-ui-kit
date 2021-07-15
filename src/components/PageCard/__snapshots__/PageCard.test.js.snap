@@ -2,15 +2,15 @@
 
 exports[`PageCard renders with close button 1`] = `
 <div
-  className="css-pb1zll"
+  className="css-iqq7hm"
 >
   <h2
-    className="css-19t58j"
+    className="css-3a27n7"
   >
     Bootstrap vshard
   </h2>
   <svg
-    className="css-14qwf54"
+    className="css-1ksex0o"
     onClick={[MockFunction]}
     viewBox="0 0 16 16"
   >
@@ -30,10 +30,10 @@ exports[`PageCard renders with close button 1`] = `
 
 exports[`PageCard renders without close button 1`] = `
 <div
-  className="css-pb1zll"
+  className="css-iqq7hm"
 >
   <h2
-    className="css-19t58j"
+    className="css-3a27n7"
   >
     Bootstrap vshard
   </h2>

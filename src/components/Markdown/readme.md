@@ -88,7 +88,7 @@ Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium dolo
 ## Built-in components overriding
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Markdown } from '@tarantool.io/ui-kit';
 
 const styles = {

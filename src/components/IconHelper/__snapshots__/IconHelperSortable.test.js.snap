@@ -3,7 +3,7 @@
 exports[`IconHelperSortable renders correctly 1`] = `
 Array [
   <svg
-    className="css-5llpeb"
+    className="css-13315y1"
     viewBox="0 0 16 16"
   >
     <use
@@ -11,7 +11,7 @@ Array [
     />
   </svg>,
   <svg
-    className="css-1fn93nz"
+    className="css-1f5lesb"
     viewBox="0 0 16 16"
   >
     <use
@@ -19,7 +19,7 @@ Array [
     />
   </svg>,
   <svg
-    className="css-t9c9gh"
+    className="css-e7m7g3"
     viewBox="0 0 16 16"
   >
     <use

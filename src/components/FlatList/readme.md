@@ -1,5 +1,5 @@
 ```jsx
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { FlatList, FlatListItem, Text } from '@tarantool.io/ui-kit';
 
 const styles = {

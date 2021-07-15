@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import ReactScroll from 'react-scrollbars-custom';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { colors } from '../../variables';
 
 const Track = styled.div`

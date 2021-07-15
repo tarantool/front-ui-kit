@@ -9,80 +9,80 @@ exports[`Breadcrumbs block with small width 1`] = `
   }
 >
   <div
-    className="css-8vahvp"
+    className="css-1hoshla"
   >
     <span
-      className="css-1u31squ"
+      className="css-j17uv3"
       onMouseLeave={[Function]}
       onMouseOver={[Function]}
     >
       Project name-2948474770249-999-202995477...
     </span>
     <div
-      className="css-vzwfet"
+      className="css-1xzbk8"
     >
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/tarantool"
         onClick={[Function]}
       >
         @tarantool.io/ui-kit
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/section-ui-components"
         onClick={[Function]}
       >
         UI Components
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/breadcrumb"
         onClick={[Function]}
       >
         Breadcrumb
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/overflow-list"
         onClick={[Function]}
       >
         OverflowList
       </a>
       <span
-        className="css-sw5zrb"
+        className="css-1pfwcw7"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="css-2w80i4"
         href="/resize-sensor"
         onClick={[Function]}
       >
         ResizeSensor
       </a>
       <div
-        className="css-11rp940"
+        className="css-18izngs"
       />
     </div>
   </div>
@@ -91,78 +91,78 @@ exports[`Breadcrumbs block with small width 1`] = `
 
 exports[`Breadcrumbs renders correctly 1`] = `
 <div
-  className="css-8vahvp"
+  className="css-1hoshla"
 >
   <span
-    className="css-4haz1u"
+    className="css-10mai1l"
   >
     Project name
   </span>
   <div
-    className="css-vzwfet"
+    className="css-1xzbk8"
   >
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/tarantool"
       onClick={[Function]}
     >
       @tarantool.io/ui-kit
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/section-ui-components"
       onClick={[Function]}
     >
       UI Components
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/breadcrumb"
       onClick={[Function]}
     >
       Breadcrumb
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/overflow-list"
       onClick={[Function]}
     >
       OverflowList
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/resize-sensor"
       onClick={[Function]}
     >
       ResizeSensor
     </a>
     <div
-      className="css-11rp940"
+      className="css-18izngs"
     />
   </div>
 </div>
@@ -170,80 +170,80 @@ exports[`Breadcrumbs renders correctly 1`] = `
 
 exports[`Breadcrumbs renders correctly long name 1`] = `
 <div
-  className="css-8vahvp"
+  className="css-1hoshla"
 >
   <span
-    className="css-1u31squ"
+    className="css-j17uv3"
     onMouseLeave={[Function]}
     onMouseOver={[Function]}
   >
     Project name-2948474770249-999-202995477...
   </span>
   <div
-    className="css-vzwfet"
+    className="css-1xzbk8"
   >
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/tarantool"
       onClick={[Function]}
     >
       @tarantool.io/ui-kit
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/section-ui-components"
       onClick={[Function]}
     >
       UI Components
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/breadcrumb"
       onClick={[Function]}
     >
       Breadcrumb
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/overflow-list"
       onClick={[Function]}
     >
       OverflowList
     </a>
     <span
-      className="css-sw5zrb"
+      className="css-1pfwcw7"
     >
       /
     </span>
     <a
-      className="css-1994ztc"
+      className="css-2w80i4"
       href="/resize-sensor"
       onClick={[Function]}
     >
       ResizeSensor
     </a>
     <div
-      className="css-11rp940"
+      className="css-18izngs"
     />
   </div>
 </div>

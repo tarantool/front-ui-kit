@@ -1,5 +1,5 @@
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Button, NotificationSplash, Switcher } from '@tarantool.io/ui-kit';
 
 const wrap = css`

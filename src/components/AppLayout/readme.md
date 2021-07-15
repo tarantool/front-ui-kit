@@ -1,7 +1,7 @@
 Root component to compose default Tarantool applications layout.
 
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   AppHeader,
   AppLayout,
