@@ -25,20 +25,16 @@ const styles = {
     height: 74px;
   `,
   iconMargin: css`
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   `,
   description: css`
     margin-bottom: 16px;
-    color: rgba(0, 0, 0, 0.65);
+    color: ${colors.dark65};
     text-align: center;
   `,
   title: css`
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.65);
-  `,
-  error: css`
-    color: ${colors.intentDanger};
   `
 };
 
@@ -48,8 +44,7 @@ type NonIdealStateProps = {
   icon?: ComponentType<any>, // deprecated
   image?: SVGGlyph, // will be reqired
   title?: string,
-  description?: string,
-  isError?: bool,
+  description?: string
 };
 
 export const NonIdealState = (
@@ -59,8 +54,7 @@ export const NonIdealState = (
     icon: Icon,
     image,
     title,
-    description,
-    isError
+    description
   }: NonIdealStateProps
 ) => (
   <div className={cx(styles.wrap, className)}>
@@ -76,7 +70,7 @@ export const NonIdealState = (
       ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description })} />
       : null
     }
-    {title && <Text variant='h2' className={cx(styles.title, { [styles.error]: isError })}>{title}</Text>}
+    {title && <Text variant='h2' className={styles.title}>{title}</Text>}
     {description && <Text className={styles.description}>{description}</Text>}
 
     {children}
@@ -91,7 +85,6 @@ type NonIdealStateActionProps = {
   description?: string,
   icon?: ComponentType<any>, // deprecated
   image?: SVGGlyph, // will be reqired
-  isError?: bool,
   onActionClick: (e: MouseEvent) => void,
   title: string,
 };
@@ -103,7 +96,6 @@ export const NonIdealStateAction = (
     description,
     icon,
     image,
-    isError,
     onActionClick,
     title
   }: NonIdealStateActionProps
@@ -113,7 +105,6 @@ export const NonIdealStateAction = (
     description={description}
     icon={icon}
     image={image}
-    isError={isError}
     title={title}
   >
     <Button autoFocus text={actionText} onClick={onActionClick} />
