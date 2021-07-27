@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Update styles component `NonIdealState`. Remove `isError` prop
 
+- Update component `UploadZone` use new icon
+
 ## [0.39.1] - 2021-07-12
 
 - Update prop `handleTabChange` in `Tabbed` component;
