@@ -15,10 +15,10 @@ const styles = {
     padding: 16px;
     background: ${colors.intentDangerBg};
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.11);
-    color: ${colors.intentDanger};
+    color: ${colors.intentWarningAccent};
   `,
   children: css`
-    color: ${colors.intentDanger};
+    color: ${colors.intentWarningAccent};
   `,
   close: css`
     position: absolute;

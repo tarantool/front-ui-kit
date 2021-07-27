@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { NonIdealState, NonIdealStateAction } from '../NonIdealState';
-import defaultImage from '../../images/window-shocked.svg';
+import { windowErrorSvg } from '../../images';
 import { Button } from '../Button'
 import { Modal } from '../Modal';
 import { Text } from '../Text';
@@ -32,8 +32,7 @@ export const SplashError = (
   const onCloseClick = () => setShowDetails(false);
 
   const commonProps = {
-    isError: true,
-    image: image || defaultImage,
+    image: image || windowErrorSvg,
     title,
     description,
     children
