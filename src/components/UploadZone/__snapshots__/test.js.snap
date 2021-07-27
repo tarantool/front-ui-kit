@@ -32,11 +32,11 @@ Array [
         type="file"
       />
       <svg
-        className="css-1s394po"
-        viewBox="0 0 48 48"
+        className="css-1mp790d"
+        viewBox="0 0 100 80"
       >
         <use
-          xlinkHref="#icon-box"
+          xlinkHref="#icon-drag-file"
         />
       </svg>
       <span
@@ -76,11 +76,11 @@ Array [
         type="file"
       />
       <svg
-        className="css-1s394po"
-        viewBox="0 0 48 48"
+        className="css-1mp790d"
+        viewBox="0 0 100 80"
       >
         <use
-          xlinkHref="#icon-box"
+          xlinkHref="#icon-drag-file"
         />
       </svg>
       <span
