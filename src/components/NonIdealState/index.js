@@ -42,7 +42,8 @@ type NonIdealStateProps = {
   children?: React.Node,
   className?: string,
   icon?: ComponentType<any>, // deprecated
-  image?: SVGGlyph, // will be reqired
+  image?: SVGGlyph, // will be required
+  imageClassName?: string,
   title?: string,
   description?: string
 };
@@ -53,6 +54,7 @@ export const NonIdealState = (
     className,
     icon: Icon,
     image,
+    imageClassName,
     title,
     description
   }: NonIdealStateProps
@@ -62,12 +64,12 @@ export const NonIdealState = (
       ? (
         <SVGImage
           glyph={image}
-          className={cx(styles.icon, { [styles.iconMargin]: title || description })}
+          className={cx(styles.icon, { [styles.iconMargin]: title || description }, imageClassName)}
         />
       )
       : null}
     {Icon && !image
-      ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description })} />
+      ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description }, imageClassName)} />
       : null
     }
     {title && <Text variant='h2' className={styles.title}>{title}</Text>}

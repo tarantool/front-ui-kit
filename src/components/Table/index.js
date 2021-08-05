@@ -8,22 +8,19 @@ import {
   useRowSelect,
   useMountedLayoutEffect,
   type UseTableOptions,
-  type Row,
-  type ColumnInstance,
-  type UseSortByColumnProps
+  type Row
 } from 'react-table';
 import { css, cx } from 'emotion';
 
 import { Text } from '../Text';
-import { Button } from '../Button';
 import { Spin } from '../Spin';
 import { NonIdealState } from '../NonIdealState';
-import { IconHelperSortable } from '../IconHelper';
-import image from '../Icon/icons/IconBoxNoData/empty-box-no-data.svg';
+import image from '../Icon/icons/IconEmptyData/icon-empty-data.svg';
 import { Pagination, PaginationControlled } from '../Pagination';
 import { Checkbox } from '../Checkbox';
+import { TableRow } from './TableRow';
+import { TableHeader } from './TableHeader';
 import { colors } from '../../variables';
-import TableRow from './TableRow';
 
 
 const styles = {
@@ -33,30 +30,15 @@ const styles = {
     border-spacing: initial;
     border-collapse: collapse;
   `,
-  head: css`
-    color: ${colors.dark65};
-    font-weight: 600;
-    font-size: 14px;
-    padding: 12px 16px;
-    text-align: left;
-  `,
   tbody: css`
     background-color: #FFFFFF;
   `,
-  buttonSort: css`
-    margin-left: -16px;
-    font-weight: 600;
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.07s;
-    transition-property: fill;
-
-    &:hover {
-      background-color: ${colors.intentBase};
-      
-      svg {
-        fill: ${colors.dark65} !important;
-      }
-    }
+  loading: css`
+    min-height: 200px;
+  `,
+  iconNoData: css`
+    height: 96px;
+    width: 120px;
   `,
   noData: css`
     background-color: #FFFFFF;
@@ -64,7 +46,7 @@ const styles = {
   `,
   noDataText: css`
     margin-top: 16px;
-    color: rgba(0, 0, 0, 0.25);
+    color: ${colors.dark65};
  `,
   pagination: css`
     margin-top: 40px;
@@ -77,13 +59,10 @@ const styles = {
 
 export type RowProps = {
   rowClassName?: string,
-  codeClassName?: string,
-  codeRowKey?: string,
   topRowClassName?: string,
   topRowKey?: string,
   topRowStickySide?: number,
   onRowClick?: (row: Row) => void;
-  onCodeRowClick?: (row: Row) => void;
 }
 
 export type ManualPagination = {
@@ -105,23 +84,9 @@ type TableProps = UseTableOptions & RowProps & {
   initialSortBy?: Array<{ id: string, desc: boolean }>
 };
 
-function getSortDirection(isSortedDesc?: boolean) {
-  if (isSortedDesc === true) {
-
-    return 'desc';
-  }
-  if (isSortedDesc === false) {
-
-    return 'asc';
-  }
-
-  return undefined;
-}
-
 export function Table(props: TableProps) {
   const {
     rowClassName,
-    codeClassName,
     columns = [],
     className,
     data = [],
@@ -195,46 +160,13 @@ export function Table(props: TableProps) {
   const dataRows = pagination ? page : rows;
   return (
     <>
-      <Spin enable={loading}>
+      <Spin enable={loading} className={cx({ [styles.loading]: loading })}>
         <table {...getTableProps()} className={cx(styles.table, className)}>
-          {rows.length > 0 && <thead ref={theadRef}>
-            {headerGroups.map(headerGroup => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
-                  const sortColumn = () => {
-                    column.toggleSortBy && column.toggleSortBy(!column.isSortedDesc, false);
-                  };
-                  return (
-                    <Text
-                      tag='th'
-                      className={styles.head}
-                      {...column.getHeaderProps()}
-                    >
-                      {
-                        column.canSort && dataRows.length > 0
-                          ?
-                          <Button
-                            intent="plain"
-                            className={styles.buttonSort}
-                            onClick={dataRows.length > 0 ? sortColumn : undefined}
-                            iconRight={props => (
-                              <IconHelperSortable
-                                {...props}
-                                sort={getSortDirection(column.isSortedDesc)}
-                              />
-                            )}
-                          >
-                            {column.render('Header')}
-                          </Button>
-                          : column.render('Header')
-                      }
-                    </Text>
-                  )
-                }
-                )}
-              </tr>
-            ))}
-          </thead>}
+          <TableHeader
+            ref={theadRef}
+            headerGroups={headerGroups}
+            dataRows={dataRows}
+          />
           <tbody className={styles.tbody} {...getTableBodyProps()}>
             {dataRows.map(row => {
               prepareRow(row);
@@ -243,10 +175,7 @@ export function Table(props: TableProps) {
                   key={row.getRowProps().key}
                   row={row}
                   rowClassName={rowClassName}
-                  codeClassName={codeClassName}
-                  onCodeRowClick={props.onCodeRowClick}
                   onRowClick={props.onRowClick}
-                  codeRowKey={props.codeRowKey}
                   topRowClassName={props.topRowClassName}
                   topRowKey={props.topRowKey}
                   topRowStickySide={props.topRowStickySide}
@@ -254,10 +183,10 @@ export function Table(props: TableProps) {
                 />
               )
             })}
-            {!rows.length && (
+            {!rows.length && !loading && (
               <tr>
                 <td colSpan={visibleColumns.length}>
-                  <NonIdealState className={cx(styles.noData)} image={image}>
+                  <NonIdealState className={cx(styles.noData)} image={image} imageClassName={styles.iconNoData}>
                     <Text className={styles.noDataText}>The list is empty</Text>
                   </NonIdealState>
                 </td>

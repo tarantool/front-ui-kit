@@ -36,7 +36,8 @@ const styles = {
 
 type SpinProps = {
   children?: React.Node,
-  enable?: boolean
+  enable?: boolean,
+  className?: string,
 };
 
 export class Spin extends React.Component<SpinProps> {
@@ -45,9 +46,9 @@ export class Spin extends React.Component<SpinProps> {
   };
 
   render() {
-    const { children, enable } = this.props;
+    const { children, enable, className } = this.props;
     return (
-      <div className={styles.wrap}>
+      <div className={cx(styles.wrap, className)}>
         {enable && this.renderSpin()}
         <div className={cx(styles.container, { 'blur': enable })}>{children}</div>
       </div>
