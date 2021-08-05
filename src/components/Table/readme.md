@@ -80,6 +80,10 @@ const data = React.useMemo(
   </div>
 
   <div style={{ padding: '20px' }}>
+    <Table columns={columns} />
+  </div>
+
+  <div style={{ padding: '20px' }}>
     <Table columns={columns} data={data} loading />
   </div>
 </>
@@ -129,8 +133,7 @@ const data = React.useMemo(
       age: 15,
       visits: 55,
       progress: 66,
-      status: 'complicated',
-      code: 'some code1'
+      status: 'complicated'
     },
     {
       firstName: 'spiders',
@@ -138,8 +141,7 @@ const data = React.useMemo(
       age: 15,
       visits: 55,
       progress: 66,
-      status: 'complicated',
-      code: `Pipeline execution failed: Function \"bad_task\" in pipeline \"bad_task\":\nfunction_call_error: [string \"bad_task\"]:1: failure\nstack traceback:\n\t[string \"bad_task\"]:1: in main chunk\n\t[C]: in function 'xpcall'\n\t...\/errors.lua:148: in function 'pcall'\n\t...\/init.lua:109: in function 'call'\n\t...\/pipeline\/init.lua:21: in function 'call_function'\n\t...pipeline\/init.lua:63: in function 'run'\n\t...\/runner\/server.lua:70: in function <...\/runner\/server.lua:68>\nstack traceback:\n\t...\/pipeline\/init.lua:25: in function 'call_function'\n\t...\/pipeline\/init.lua:63: in function 'run'\n\t...\/runner\/server.lua:70: in function <...s\/runner\/server.lua:68>`
+      status: 'complicated'
     },
     {
       firstName: 'profit',
@@ -157,7 +159,6 @@ const data = React.useMemo(
       visits: 56,
       progress: 67,
       status: 'relationship',
-      code: 'some code4',
       date: '24.11.2020'
     },
     {
@@ -166,8 +167,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -175,8 +175,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -184,8 +183,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -193,8 +191,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -202,8 +199,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -211,8 +207,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -220,8 +215,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -229,8 +223,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -238,8 +231,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -247,8 +239,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -256,8 +247,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -265,8 +255,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -274,8 +263,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -283,8 +271,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -292,8 +279,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -301,8 +287,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -310,8 +295,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -319,8 +303,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -328,8 +311,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -337,8 +319,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -346,8 +327,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -355,8 +335,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -364,8 +343,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -373,8 +351,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -382,8 +359,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -391,8 +367,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -400,8 +375,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -409,8 +383,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -418,8 +391,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -427,8 +399,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -436,8 +407,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
     {
       firstName: 'hat',
@@ -445,8 +415,7 @@ const data = React.useMemo(
       age: 7,
       visits: 56,
       progress: 67,
-      status: 'relationship',
-      code: 'some code4',
+      status: 'relationship'
     },
   ],
   []
@@ -455,10 +424,8 @@ const data = React.useMemo(
   <Table
     columns={columns}
     data={data}
-    codeRowKey='code'
     topRowKey='date'
     topRowStickySide={0}
-    onCodeRowClick={r => console.log('code row clicked', r)}
     initialSortBy={[
       { id: 'progress', desc: false },
     ]}
@@ -822,7 +789,6 @@ const onSelectedRowsChange = (rows) => console.log(rows);
   <Table
     columns={columns}
     data={data}
-    codeRowKey='code'
     pagination
     onSelectedRowsChange={onSelectedRowsChange}
     onRowClick={r => console.log('row clicked', r)}

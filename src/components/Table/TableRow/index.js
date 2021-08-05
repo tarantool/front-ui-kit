@@ -1,13 +1,14 @@
 // @flow
 
-import React, { useState } from 'react';
-import { type Row } from 'react-table';
+import React from 'react';
 import { css, cx } from 'emotion';
 import { rgba } from 'emotion-rgba';
 import { Text } from '../../Text';
-import type { RowProps } from '../index';
 import { colors } from '../../../variables';
 import { isSafari } from '../../../utils/browser';
+
+import { type Row } from 'react-table';
+import type { RowProps } from '../index';
 
 const styles = {
   col: css`
@@ -18,14 +19,9 @@ const styles = {
   `,
   row: css`
     border-bottom: 1px solid #E5E5E5;
-  `,
-  code: css`
-    position: relative;
-    padding: 8px 48px 8px 16px;
-    white-space: pre-wrap;
-  `,
-  hoverRow: css`
-    background-color: ${rgba(colors.baseBg, 0.3)};
+    &:hover {
+      background-color: ${rgba(colors.baseBg, 0.3)};
+    }
   `,
   pointer: css`
     cursor: pointer;
@@ -45,27 +41,17 @@ const styles = {
     z-index: 1;
   `
 };
-const get2RowFromStr = (str: string) => {
-  const splitedStr = str.split('\n');
 
-  return `${splitedStr[0]}${splitedStr[1] ? `\n${splitedStr[1]}` : ''}`;
-};
-
-function TableRow({
+export function TableRow({
   row,
   rowClassName,
-  codeClassName,
-  onCodeRowClick,
-  codeRowKey,
   onRowClick,
   topRowKey,
   topRowClassName,
   topRowStickySide,
   headHeight
 }: RowProps & { row: Row, headHeight: number }) {
-  const [ isHover, setHover ] = useState(false);
   const rowProps = row.getRowProps();
-  const codeRow = codeRowKey && row.original[codeRowKey];
   const topRow = topRowKey && row.original[topRowKey];
 
   return (
@@ -89,11 +75,9 @@ function TableRow({
         </tr>
       )}
       <tr
-        onMouseOver={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
         onClick={onRowClick ? () => onRowClick(row) : null}
         className={
-          cx({ [styles.row]: !codeRow, [styles.hoverRow]: isHover, [styles.pointer]: onRowClick })
+          cx(styles.row,  { [styles.pointer]: onRowClick })
         }
         {...rowProps}
       >
@@ -116,30 +100,6 @@ function TableRow({
           </Text>
         ))}
       </tr>
-      {codeRow && (
-        <tr
-          onMouseOver={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          className={
-            cx(
-              styles.row,
-              codeClassName,
-              { [styles.hoverRow]: isHover, [styles.pointer]: onCodeRowClick })
-          }
-          onClick={() => onCodeRowClick ? onCodeRowClick(row) : null}
-        >
-          <Text
-            tag='td'
-            variant='code'
-            className={cx(styles.code, styles.colText)}
-            colSpan={row.cells.length}
-          >
-            {get2RowFromStr(codeRow)}
-          </Text>
-        </tr>
-      )}
     </React.Fragment>
   );
 }
-
-export default TableRow;

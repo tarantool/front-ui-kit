@@ -12,6 +12,54 @@ Array [
         className="css-1c1gq12"
         role="table"
       >
+        <thead>
+          <tr
+            role="row"
+          >
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              First Name
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Last Name
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Age
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Visits
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Status
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Profile Progress
+            </th>
+          </tr>
+        </thead>
         <tbody
           className="css-14r34si"
           role="rowgroup"
@@ -24,15 +72,15 @@ Array [
                 className="css-1unytjj"
               >
                 <svg
-                  className="css-zlqbmm"
-                  viewBox="0 0 64 41"
+                  className="css-16alpug"
+                  viewBox="0 0 120 96"
                 >
                   <use
-                    xlinkHref="#empty-box-no-data"
+                    xlinkHref="#icon-empty-data"
                   />
                 </svg>
                 <span
-                  className="css-1cbcpp5"
+                  className="css-1mw4f8u"
                 >
                   The list is empty
                 </span>
@@ -53,6 +101,54 @@ Array [
         className="css-1c1gq12"
         role="table"
       >
+        <thead>
+          <tr
+            role="row"
+          >
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              First Name
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Last Name
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Age
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Visits
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Status
+            </th>
+            <th
+              className="css-1bpu65y"
+              colSpan={1}
+              role="columnheader"
+            >
+              Profile Progress
+            </th>
+          </tr>
+        </thead>
         <tbody
           className="css-14r34si"
           role="rowgroup"
@@ -65,15 +161,15 @@ Array [
                 className="css-1unytjj"
               >
                 <svg
-                  className="css-zlqbmm"
-                  viewBox="0 0 64 41"
+                  className="css-16alpug"
+                  viewBox="0 0 120 96"
                 >
                   <use
-                    xlinkHref="#empty-box-no-data"
+                    xlinkHref="#icon-empty-data"
                   />
                 </svg>
                 <span
-                  className="css-1cbcpp5"
+                  className="css-1mw4f8u"
                 >
                   The list is empty
                 </span>
@@ -165,10 +261,8 @@ exports[`Table renders simple 1`] = `
         role="rowgroup"
       >
         <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -215,10 +309,8 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -265,10 +357,8 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -315,10 +405,8 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -453,10 +541,8 @@ exports[`Table renders with code row 1`] = `
         role="rowgroup"
       >
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -503,23 +589,8 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={6}
-          >
-            some code1
-          </td>
-        </tr>
-        <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -566,23 +637,8 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={6}
-          >
-            some code2
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -629,10 +685,8 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -676,19 +730,6 @@ exports[`Table renders with code row 1`] = `
             role="cell"
           >
             67
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={6}
-          >
-            some code4
           </td>
         </tr>
       </tbody>
@@ -805,10 +846,8 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
         role="rowgroup"
       >
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -883,23 +922,8 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={7}
-          >
-            some code1
-          </td>
-        </tr>
-        <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -974,23 +998,8 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={7}
-          >
-            some code2
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1065,10 +1074,8 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1140,19 +1147,6 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             role="cell"
           >
             67
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={7}
-          >
-            some code4
           </td>
         </tr>
       </tbody>
@@ -1313,10 +1307,8 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1363,10 +1355,8 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1413,23 +1403,8 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={6}
-          >
-            some code1
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1559,10 +1534,8 @@ exports[`Table renders with pagination 1`] = `
         role="rowgroup"
       >
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1609,23 +1582,8 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={6}
-          >
-            some code1
-          </td>
-        </tr>
-        <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1672,23 +1630,8 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={6}
-          >
-            some code2
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1735,10 +1678,8 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -1782,19 +1723,6 @@ exports[`Table renders with pagination 1`] = `
             role="cell"
           >
             67
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={6}
-          >
-            some code4
           </td>
         </tr>
       </tbody>
@@ -1991,10 +1919,8 @@ exports[`Table renders with pagination and selected rows 1`] = `
         role="rowgroup"
       >
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -2069,23 +1995,8 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={7}
-          >
-            some code1
-          </td>
-        </tr>
-        <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -2160,23 +2071,8 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={7}
-          >
-            some code2
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -2251,10 +2147,8 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className=""
+          className="css-16dbkro"
           onClick={null}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           role="row"
         >
           <td
@@ -2326,19 +2220,6 @@ exports[`Table renders with pagination and selected rows 1`] = `
             role="cell"
           >
             67
-          </td>
-        </tr>
-        <tr
-          className="css-18uvckh"
-          onClick={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-        >
-          <td
-            className="css-1pwfef4"
-            colSpan={7}
-          >
-            some code4
           </td>
         </tr>
       </tbody>
