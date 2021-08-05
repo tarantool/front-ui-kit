@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Add new icon `IconEmptyData`;
 
-- Update component `NonIdealState`. Add new prop `imageClassName`;
+- Add new prop `imageClassName` in `NonIdealState` component;
+
+- Add new prop `className` in `Spin` component;
 
 - Update component `Table`:
     

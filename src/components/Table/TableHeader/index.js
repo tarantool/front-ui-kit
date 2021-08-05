@@ -1,10 +1,10 @@
 // @flow
 import React from 'react';
-import type { ColumnInstance, UseSortByColumnProps } from 'react-table';
+import { css } from 'emotion';
+import type { ColumnInstance, UseSortByColumnProps, HeaderGroup, Row } from 'react-table';
 import { Text } from '../../Text';
 import { Button } from '../../Button';
 import { IconHelperSortable } from '../../IconHelper';
-import { css } from 'emotion';
 import { colors } from '../../../variables';
 
 const styles = {
@@ -33,7 +33,8 @@ const styles = {
 };
 
 type TableHeaderProps = {
-
+  headerGroups: HeaderGroup[],
+  dataRows: Row[]
 }
 
 function getSortDirection(isSortedDesc?: boolean) {
