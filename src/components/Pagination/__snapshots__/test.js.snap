@@ -1,18 +1,273 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination render simple 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  cursor: default;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-1 svg {
+  fill: #5c606c;
+}
+
+.emotion-1:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background: #d9dadd;
+}
+
+.emotion-2 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-3 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-3:hover,
+.emotion-3:focus,
+.emotion-3:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-3:disabled,
+.emotion-3:disabled:active,
+.emotion-3:disabled:hover {
+  cursor: default;
+}
+
+.emotion-3:focus,
+.emotion-3:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-3:disabled,
+.emotion-3:disabled:active,
+.emotion-3:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-3 svg {
+  fill: #5c606c;
+}
+
+.emotion-3:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-3:focus,
+.emotion-3:hover {
+  background: #d9dadd;
+}
+
+.emotion-5 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+  color: #fff;
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  cursor: default;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-5 svg {
+  fill: #5c606c;
+}
+
+.emotion-5:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  background: #d9dadd;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-11 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
 <div
-  className="css-zjik7"
+  className="emotion-0"
 >
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-1"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1jwstkt"
+        className="emotion-2"
         viewBox="0 0 14 14"
       >
         <use
@@ -23,49 +278,49 @@ exports[`Pagination render simple 1`] = `
   </div>
   <div>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-s5x2y9"
+      className="emotion-5"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
@@ -74,13 +329,13 @@ exports[`Pagination render simple 1`] = `
   </div>
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-1"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1qr49le"
+        className="emotion-11"
         viewBox="0 0 14 14"
       >
         <use
@@ -93,18 +348,359 @@ exports[`Pagination render simple 1`] = `
 `;
 
 exports[`Pagination renders with page size changer 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  cursor: default;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-1 svg {
+  fill: #5c606c;
+}
+
+.emotion-1:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background: #d9dadd;
+}
+
+.emotion-2 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-3 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-3:hover,
+.emotion-3:focus,
+.emotion-3:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-3:disabled,
+.emotion-3:disabled:active,
+.emotion-3:disabled:hover {
+  cursor: default;
+}
+
+.emotion-3:focus,
+.emotion-3:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-3:disabled,
+.emotion-3:disabled:active,
+.emotion-3:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-3 svg {
+  fill: #5c606c;
+}
+
+.emotion-3:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-3:focus,
+.emotion-3:hover {
+  background: #d9dadd;
+}
+
+.emotion-5 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+  color: #fff;
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  cursor: default;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-5 svg {
+  fill: #5c606c;
+}
+
+.emotion-5:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  background: #d9dadd;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-11 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-12 {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  min-width: 120px;
+}
+
+.emotion-13 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-13:hover,
+.emotion-13:focus,
+.emotion-13:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-13:disabled,
+.emotion-13:disabled:active,
+.emotion-13:disabled:hover {
+  cursor: default;
+}
+
+.emotion-13:focus,
+.emotion-13:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-13:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-13:disabled,
+.emotion-13:disabled:active,
+.emotion-13:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-13 svg {
+  fill: #5c606c;
+}
+
+.emotion-13:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-14 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
 <div
-  className="css-zjik7"
+  className="emotion-0"
 >
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-1"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1jwstkt"
+        className="emotion-2"
         viewBox="0 0 14 14"
       >
         <use
@@ -115,49 +711,49 @@ exports[`Pagination renders with page size changer 1`] = `
   </div>
   <div>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-s5x2y9"
+      className="emotion-5"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-3"
       onClick={[Function]}
       type="button"
     >
@@ -166,13 +762,13 @@ exports[`Pagination renders with page size changer 1`] = `
   </div>
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-1"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1qr49le"
+        className="emotion-11"
         viewBox="0 0 14 14"
       >
         <use
@@ -182,16 +778,16 @@ exports[`Pagination renders with page size changer 1`] = `
     </button>
   </div>
   <div
-    className="css-17vatmo"
+    className="emotion-12"
     onClick={[Function]}
   >
     <button
-      className="css-1mocbyz"
+      className="emotion-13"
       type="button"
     >
       10 / page 
       <svg
-        className="css-10s1w"
+        className="emotion-14"
         viewBox="0 0 14 14"
       >
         <use
@@ -204,11 +800,375 @@ exports[`Pagination renders with page size changer 1`] = `
 `;
 
 exports[`Pagination renders with page size changer and total 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 12px;
+  color: #5c606c;
+}
+
+.emotion-1 b {
+  font-weight: 600;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-2:hover,
+.emotion-2:focus,
+.emotion-2:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-2:disabled,
+.emotion-2:disabled:active,
+.emotion-2:disabled:hover {
+  cursor: default;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-2:disabled,
+.emotion-2:disabled:active,
+.emotion-2:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-2 svg {
+  fill: #5c606c;
+}
+
+.emotion-2:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  background: #d9dadd;
+}
+
+.emotion-3 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-4 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-4:disabled,
+.emotion-4:disabled:active,
+.emotion-4:disabled:hover {
+  cursor: default;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-4:disabled,
+.emotion-4:disabled:active,
+.emotion-4:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-4 svg {
+  fill: #5c606c;
+}
+
+.emotion-4:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  background: #d9dadd;
+}
+
+.emotion-6 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+  color: #fff;
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-6:hover,
+.emotion-6:focus,
+.emotion-6:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  cursor: default;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-6 svg {
+  fill: #5c606c;
+}
+
+.emotion-6:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  background: #d9dadd;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-12 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-13 {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  min-width: 120px;
+}
+
+.emotion-14 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-14:hover,
+.emotion-14:focus,
+.emotion-14:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  cursor: default;
+}
+
+.emotion-14:focus,
+.emotion-14:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-14:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-14 svg {
+  fill: #5c606c;
+}
+
+.emotion-14:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-15 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
 <div
-  className="css-zjik7"
+  className="emotion-0"
 >
   <div
-    className="css-1obq1rs"
+    className="emotion-1"
   >
     21
     -
@@ -219,13 +1179,13 @@ exports[`Pagination renders with page size changer and total 1`] = `
   </div>
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-2"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1jwstkt"
+        className="emotion-3"
         viewBox="0 0 14 14"
       >
         <use
@@ -236,49 +1196,49 @@ exports[`Pagination renders with page size changer and total 1`] = `
   </div>
   <div>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-s5x2y9"
+      className="emotion-6"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
@@ -287,13 +1247,13 @@ exports[`Pagination renders with page size changer and total 1`] = `
   </div>
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-2"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1qr49le"
+        className="emotion-12"
         viewBox="0 0 14 14"
       >
         <use
@@ -303,16 +1263,16 @@ exports[`Pagination renders with page size changer and total 1`] = `
     </button>
   </div>
   <div
-    className="css-17vatmo"
+    className="emotion-13"
     onClick={[Function]}
   >
     <button
-      className="css-1mocbyz"
+      className="emotion-14"
       type="button"
     >
       10 / page 
       <svg
-        className="css-10s1w"
+        className="emotion-15"
         viewBox="0 0 14 14"
       >
         <use
@@ -325,11 +1285,289 @@ exports[`Pagination renders with page size changer and total 1`] = `
 `;
 
 exports[`Pagination renders with total 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 12px;
+  color: #5c606c;
+}
+
+.emotion-1 b {
+  font-weight: 600;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-2:hover,
+.emotion-2:focus,
+.emotion-2:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-2:disabled,
+.emotion-2:disabled:active,
+.emotion-2:disabled:hover {
+  cursor: default;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-2:disabled,
+.emotion-2:disabled:active,
+.emotion-2:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-2 svg {
+  fill: #5c606c;
+}
+
+.emotion-2:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  background: #d9dadd;
+}
+
+.emotion-3 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-4 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-4:disabled,
+.emotion-4:disabled:active,
+.emotion-4:disabled:hover {
+  cursor: default;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-4:disabled,
+.emotion-4:disabled:active,
+.emotion-4:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-4 svg {
+  fill: #5c606c;
+}
+
+.emotion-4:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  background: #d9dadd;
+}
+
+.emotion-6 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+  color: #fff;
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-6:hover,
+.emotion-6:focus,
+.emotion-6:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  cursor: default;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-6 svg {
+  fill: #5c606c;
+}
+
+.emotion-6:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  background: #d9dadd;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-12 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
 <div
-  className="css-zjik7"
+  className="emotion-0"
 >
   <div
-    className="css-1obq1rs"
+    className="emotion-1"
   >
     21
     -
@@ -340,13 +1578,13 @@ exports[`Pagination renders with total 1`] = `
   </div>
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-2"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1jwstkt"
+        className="emotion-3"
         viewBox="0 0 14 14"
       >
         <use
@@ -357,49 +1595,49 @@ exports[`Pagination renders with total 1`] = `
   </div>
   <div>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       1
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       2
     </button>
     <button
-      className="css-s5x2y9"
+      className="emotion-6"
       onClick={[Function]}
       type="button"
     >
       3
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       4
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       5
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       ...
     </button>
     <button
-      className="css-1x4gift"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
@@ -408,13 +1646,13 @@ exports[`Pagination renders with total 1`] = `
   </div>
   <div>
     <button
-      className="css-nbfjew"
+      className="emotion-2"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="css-1qr49le"
+        className="emotion-12"
         viewBox="0 0 14 14"
       >
         <use
@@ -427,17 +1665,163 @@ exports[`Pagination renders with total 1`] = `
 `;
 
 exports[`PaginationControlled render simple 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0 4px;
+  border: 1px solid #d9dadd;
+  display: block;
+  background: #FFFFFF;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+}
+
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  cursor: default;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-1 svg {
+  fill: #5c606c;
+}
+
+.emotion-1:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1:hover {
+  background: #d9dadd;
+}
+
+.emotion-2 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0 4px;
+  border: 1px solid #d9dadd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d9dadd;
+  background: #fafafa;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-5 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
 <div
-  className="css-zjik7"
+  className="emotion-0"
 >
   <button
-    className="css-53w1bj"
+    className="emotion-1"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-1jwstkt"
+      className="emotion-2"
       viewBox="0 0 14 14"
     >
       <use
@@ -446,18 +1830,18 @@ exports[`PaginationControlled render simple 1`] = `
     </svg>
   </button>
   <span
-    className="css-xqrn7q"
+    className="emotion-3"
   >
     3
   </span>
   <button
-    className="css-53w1bj"
+    className="emotion-1"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-1qr49le"
+      className="emotion-5"
       viewBox="0 0 14 14"
     >
       <use
@@ -469,17 +1853,253 @@ exports[`PaginationControlled render simple 1`] = `
 `;
 
 exports[`PaginationControlled renders with page size changer 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0 4px;
+  border: 1px solid #d9dadd;
+  display: block;
+  background: #FFFFFF;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+}
+
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  cursor: default;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-1 svg {
+  fill: #5c606c;
+}
+
+.emotion-1:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1:hover {
+  background: #d9dadd;
+}
+
+.emotion-2 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0 4px;
+  border: 1px solid #d9dadd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d9dadd;
+  background: #fafafa;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-5 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-6 {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  min-width: 120px;
+}
+
+.emotion-7 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-7:disabled,
+.emotion-7:disabled:active,
+.emotion-7:disabled:hover {
+  cursor: default;
+}
+
+.emotion-7:focus,
+.emotion-7:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-7:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-7:disabled,
+.emotion-7:disabled:active,
+.emotion-7:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-7 svg {
+  fill: #5c606c;
+}
+
+.emotion-7:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-7:hover {
+  background: #d9dadd;
+}
+
+.emotion-8 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
 <div
-  className="css-zjik7"
+  className="emotion-0"
 >
   <button
-    className="css-53w1bj"
+    className="emotion-1"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-1jwstkt"
+      className="emotion-2"
       viewBox="0 0 14 14"
     >
       <use
@@ -488,18 +2108,18 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     </svg>
   </button>
   <span
-    className="css-xqrn7q"
+    className="emotion-3"
   >
     3
   </span>
   <button
-    className="css-53w1bj"
+    className="emotion-1"
     disabled={false}
     onClick={[Function]}
     type="button"
   >
     <svg
-      className="css-1qr49le"
+      className="emotion-5"
       viewBox="0 0 14 14"
     >
       <use
@@ -508,16 +2128,16 @@ exports[`PaginationControlled renders with page size changer 1`] = `
     </svg>
   </button>
   <div
-    className="css-17vatmo"
+    className="emotion-6"
     onClick={[Function]}
   >
     <button
-      className="css-b3lbo0"
+      className="emotion-7"
       type="button"
     >
       10 / page 
       <svg
-        className="css-10s1w"
+        className="emotion-8"
         viewBox="0 0 14 14"
       >
         <use

@@ -1,18 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DraggableList renders correctly 1`] = `
-<div
-  className=""
->
-  <div
-    className=""
-  >
+.emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+}
+
+.emotion-2 {
+  width: 42px;
+  height: 8px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 14px;
+  height: 14px;
+  fill: #5c606c;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+<div>
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -22,7 +91,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 0
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -30,10 +99,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -41,22 +110,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 0
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -66,7 +133,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 1
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -74,10 +141,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -85,22 +152,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 1
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -110,7 +175,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 2
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -118,10 +183,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -129,22 +194,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 2
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -154,7 +217,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 3
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -162,10 +225,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -173,22 +236,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 3
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -198,7 +259,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 4
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -206,10 +267,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -217,22 +278,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 4
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -242,7 +301,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 5
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -250,10 +309,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -261,22 +320,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 5
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -286,7 +343,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 6
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -294,10 +351,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -305,22 +362,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 6
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -330,7 +385,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 7
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -338,10 +393,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -349,22 +404,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 7
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -374,7 +427,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 8
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -382,10 +435,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -393,22 +446,20 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 8
         </span>
       </div>
     </div>
   </div>
-  <div
-    className=""
-  >
+  <div>
     <div>
       <div
-        className="css-1ggp6x0"
+        className="emotion-0"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-1"
           viewBox="0 0 16 16"
         >
           <use
@@ -418,7 +469,7 @@ exports[`DraggableList renders correctly 1`] = `
         alias 9
       </div>
       <svg
-        className="css-e7nc70"
+        className="emotion-2"
         viewBox="0 0 42 8"
       >
         <use
@@ -426,10 +477,10 @@ exports[`DraggableList renders correctly 1`] = `
         />
       </svg>
       <div
-        className="css-s5xdrg"
+        className="emotion-3"
       >
         <svg
-          className="css-1l8frzb"
+          className="emotion-4"
           viewBox="0 0 14 14"
         >
           <use
@@ -437,7 +488,7 @@ exports[`DraggableList renders correctly 1`] = `
           />
         </svg>
         <span
-          className="css-1ezwu69"
+          className="emotion-5"
         >
           uri 9
         </span>

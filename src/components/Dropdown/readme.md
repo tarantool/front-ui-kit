@@ -51,23 +51,15 @@ const [state, setState] = useState({
   modalOpened: false
 });
 
-const getStateValueNatural = key => {
-  let value = parseInt(state[key]);
-
-  if (isNaN(value)) return initialState[key];
-  if (value < 1) return 1;
-  return value;
-};
-
-const setStateKey = key => value => setState({ ...state, [key]: value });
-const toggleState = key => () => setState({ ...state, [key]: !state[key] });
+const setStateKey = key => value => setState((state) => ({ ...state, [key]: value }));
+const toggleState = key => () => setState((state) => ({ ...state, [key]: !state[key] }));
 
 const itemsCollection = state.customMenuContent
   ? R.times(
     i => (i % 10 === 0 && i > 0)
-    ? <DropdownDivider />
+    ? <DropdownDivider key={i} />
     : (
-      <DropdownItem onClick={() => console.log(`Clicked Item ${i}`)}>
+      <DropdownItem key={i} onClick={() => console.log(`Clicked Item ${i}`)}>
         {`Text in item ${i} `.repeat(state.width).trim()}
       </DropdownItem>
     ),
@@ -99,7 +91,7 @@ const DropdownButton = withDropdown(Button);
       <DropdownButton
         disabled={!state.customMenuContent}
         items={menuLengthPresets.map(value => (
-          <DropdownItem onClick={() => setStateKey('rows')(value)}>{`${value} rows`}</DropdownItem>
+          <DropdownItem key={value} onClick={() => setStateKey('rows')(value)}>{`${value} rows`}</DropdownItem>
         ))}
         title='Dropdown menu rows'
         text={`${state.rows} rows`}
@@ -107,7 +99,7 @@ const DropdownButton = withDropdown(Button);
       <DropdownButton
         disabled={!state.customMenuContent}
         items={menuItemWidthPresets.map(value => (
-          <DropdownItem onClick={() => setStateKey('width')(value)}>{`${value} repeats`}</DropdownItem>
+          <DropdownItem key={value} onClick={() => setStateKey('width')(value)}>{`${value} repeats`}</DropdownItem>
         ))}
         title='Menu items width'
         text={`${state.width} repeats`}

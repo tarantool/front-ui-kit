@@ -28,6 +28,7 @@ describe('FormField', () => {
       >
         {vshard_groups && vshard_groups.map(({ name }) => (
           <RadioButton
+            key={name}
             onChange={handleChange}
             name='vshard_group'
             value={name}

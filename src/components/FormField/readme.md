@@ -48,24 +48,28 @@ const vshard_groups = [
   <InputGroup className={styles.controls}>
     {[
       <Switcher
+        key="info"
         checked={flags.info}
         onChange={toggle('info')}
       >
         Info tooltip
       </Switcher>,
       <Switcher
+        key="largeMargins"
         checked={flags.largeMargins}
         onChange={toggle('largeMargins')}
       >
         Large margins
       </Switcher>,
       <Switcher
+        key="rightControls"
         checked={flags.rightControls}
         onChange={toggle('rightControls')}
       >
         Right controls
       </Switcher>,
       <Switcher
+        key="subtitle"
         checked={flags.subtitle}
         onChange={toggle('subtitle')}
       >
@@ -87,6 +91,7 @@ const vshard_groups = [
     >
       {vshard_groups && vshard_groups.map(({ name }) => (
         <RadioButton
+          key={name}
           onChange={() => handleChange(name)}
           name='vshard_group'
           value={name}
@@ -110,6 +115,7 @@ const vshard_groups = [
     >
       {vshard_groups && vshard_groups.map(({ name }) => (
         <RadioButton
+          key={name}
           onChange={() => handleChange(name)}
           name='vshard_group'
           value={name}

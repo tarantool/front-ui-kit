@@ -1,8 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IconHelperClose renders correctly 1`] = `
+.emotion-0 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+}
+
+.emotion-0:hover {
+  fill: #c9cace;
+}
+
 <svg
-  className="css-16d6do5"
+  className="emotion-0"
   viewBox="0 0 16 16"
 >
   <use

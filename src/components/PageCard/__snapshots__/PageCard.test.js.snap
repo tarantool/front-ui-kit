@@ -1,16 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageCard renders with close button 1`] = `
+.emotion-0 {
+  position: relative;
+  padding: 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  margin: 0 -16px 48px;
+  background: #ffffff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.06);
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f3f3;
+  margin-bottom: 16px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.emotion-2:hover {
+  fill: #c9cace;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
 <div
-  className="css-iqq7hm"
+  className="emotion-0"
 >
   <h2
-    className="css-3a27n7"
+    className="emotion-1"
   >
     Bootstrap vshard
   </h2>
   <svg
-    className="css-1ksex0o"
+    className="emotion-2"
     onClick={[MockFunction]}
     viewBox="0 0 16 16"
   >
@@ -20,7 +80,7 @@ exports[`PageCard renders with close button 1`] = `
   </svg>
   <div>
     <h4
-      className="css-115iv0u"
+      className="emotion-3"
     >
       When you finish edition topology. To render storages operable.
     </h4>
@@ -29,17 +89,53 @@ exports[`PageCard renders with close button 1`] = `
 `;
 
 exports[`PageCard renders without close button 1`] = `
+.emotion-0 {
+  position: relative;
+  padding: 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  margin: 0 -16px 48px;
+  background: #ffffff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.06);
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f3f3;
+  margin-bottom: 16px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-2 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-iqq7hm"
+  className="emotion-0"
 >
   <h2
-    className="css-3a27n7"
+    className="emotion-1"
   >
     Bootstrap vshard
   </h2>
   <div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-2"
     >
       Afterwards, any change in topology will trigger data rebalancing
     </span>

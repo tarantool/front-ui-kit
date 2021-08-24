@@ -3,23 +3,380 @@
 exports[`Modal renders closed 1`] = `null`;
 
 exports[`Modal renders modal with form 1`] = `
+.emotion-0 {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 16px;
+  overflow: auto;
+  background-color: rgba(4, 11, 29, 0.65);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
+  outline: none;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 auto auto;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.emotion-3:hover {
+  fill: #c9cace;
+}
+
+.emotion-4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-5 {
+  margin-bottom: 10px;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  margin-bottom: 0;
+}
+
+.emotion-7 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+  margin-top: 6px;
+}
+
+.emotion-9 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-9::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-9::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-9:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-9::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-10 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  min-height: 20px;
+}
+
+.emotion-11 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  margin-left: auto;
+}
+
+.emotion-13 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-13:last-child {
+  margin-right: 0px;
+}
+
+.emotion-14 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: #f5222d;
+  color: #ffffff;
+}
+
+.emotion-14:hover,
+.emotion-14:focus,
+.emotion-14:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  cursor: default;
+}
+
+.emotion-14:focus,
+.emotion-14:hover {
+  background-color: #d01d26;
+}
+
+.emotion-14:active {
+  background-color: #d01d26;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  background-color: #f28a91;
+  color: #ffffff;
+}
+
+.emotion-14 svg {
+  fill: #ffffff;
+}
+
+.emotion-14:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-16 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-16:hover,
+.emotion-16:focus,
+.emotion-16:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-16:disabled,
+.emotion-16:disabled:active,
+.emotion-16:disabled:hover {
+  cursor: default;
+}
+
+.emotion-16:focus,
+.emotion-16:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-16:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-16:disabled,
+.emotion-16:disabled:active,
+.emotion-16:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-16 svg {
+  fill: #5c606c;
+}
+
+.emotion-16:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-17 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 <div
-  className="css-18615gn"
+  className="emotion-0"
   onMouseDown={[Function]}
 >
   <form
-    className="css-hm23lf"
+    className="emotion-1"
     onKeyDown={[Function]}
     onSubmit={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-vf0gu5"
+      className="emotion-2"
     >
       Configure server
     </h2>
     <svg
-      className="css-uue8s9"
+      className="emotion-3"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -28,57 +385,57 @@ exports[`Modal renders modal with form 1`] = `
       />
     </svg>
     <div
-      className="css-1ff36h2"
+      className="emotion-4"
     >
       <div
-        className="css-pr10xp"
+        className="emotion-5"
       >
         <div
-          className="css-1fg5of0"
+          className="emotion-6"
         >
           <label
-            className="css-1vk0mui"
-            for="first-input"
+            className="emotion-7"
+            htmlFor="first-input"
           >
             First input
           </label>
         </div>
         <div
-          className="css-17d8w0x"
+          className="emotion-8"
         >
           <input
-            className="css-dmlzt9"
+            className="emotion-9"
             id="first-input"
             onBlur={[Function]}
             onFocus={[Function]}
           />
         </div>
         <p
-          className="css-1j6ql58"
+          className="emotion-10"
         />
       </div>
     </div>
     <div
-      className="css-1414iyd"
+      className="emotion-11"
     >
       <div
-        className="css-99c7t3"
+        className="emotion-12"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-13"
         >
           <button
-            className="css-1e4zgmm"
+            className="emotion-14"
             type="submit"
           >
             Accept
           </button>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-13"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-16"
             onClick={[Function]}
             type="button"
           >
@@ -88,7 +445,7 @@ exports[`Modal renders modal with form 1`] = `
       </div>
     </div>
     <div
-      className="css-alng9s"
+      className="emotion-17"
       onFocus={[Function]}
       tabIndex="0"
     />
@@ -97,22 +454,293 @@ exports[`Modal renders modal with form 1`] = `
 `;
 
 exports[`Modal renders modal with large text 1`] = `
+.emotion-0 {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 16px;
+  overflow: auto;
+  background-color: rgba(4, 11, 29, 0.65);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
+  outline: none;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 auto auto;
+  overflow: hidden;
+  max-width: 1000px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.emotion-3:hover {
+  fill: #c9cace;
+}
+
+.emotion-4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-5 {
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.emotion-6 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  margin-left: auto;
+}
+
+.emotion-8 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-8:last-child {
+  margin-right: 0px;
+}
+
+.emotion-9 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: #f5222d;
+  color: #ffffff;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  cursor: default;
+}
+
+.emotion-9:focus,
+.emotion-9:hover {
+  background-color: #d01d26;
+}
+
+.emotion-9:active {
+  background-color: #d01d26;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  background-color: #f28a91;
+  color: #ffffff;
+}
+
+.emotion-9 svg {
+  fill: #ffffff;
+}
+
+.emotion-9:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-11 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-11:hover,
+.emotion-11:focus,
+.emotion-11:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active,
+.emotion-11:disabled:hover {
+  cursor: default;
+}
+
+.emotion-11:focus,
+.emotion-11:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-11:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active,
+.emotion-11:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-11 svg {
+  fill: #5c606c;
+}
+
+.emotion-11:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-12 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 <div
-  className="css-18615gn"
+  className="emotion-0"
   onMouseDown={[Function]}
 >
   <div
-    className="css-19is4js"
+    className="emotion-1"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-vf0gu5"
+      className="emotion-2"
     >
       Configure server
     </h2>
     <svg
-      className="css-uue8s9"
+      className="emotion-3"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -121,34 +749,34 @@ exports[`Modal renders modal with large text 1`] = `
       />
     </svg>
     <div
-      className="css-1ff36h2"
+      className="emotion-4"
     >
       <div
-        className="css-ug0wwi"
+        className="emotion-5"
       >
         But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
       </div>
       <div
-        className="css-1414iyd"
+        className="emotion-6"
       >
         <div
-          className="css-99c7t3"
+          className="emotion-7"
         >
           <div
-            className="css-1zje6z"
+            className="emotion-8"
           >
             <button
-              className="css-1e4zgmm"
+              className="emotion-9"
               type="button"
             >
               Accept
             </button>
           </div>
           <div
-            className="css-1zje6z"
+            className="emotion-8"
           >
             <button
-              className="css-1mocbyz"
+              className="emotion-11"
               type="button"
             >
               Decline
@@ -158,7 +786,7 @@ exports[`Modal renders modal with large text 1`] = `
       </div>
     </div>
     <div
-      className="css-alng9s"
+      className="emotion-12"
       onFocus={[Function]}
       tabIndex="0"
     />
@@ -167,22 +795,378 @@ exports[`Modal renders modal with large text 1`] = `
 `;
 
 exports[`Modal renders modal with tabs 1`] = `
+.emotion-0 {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 16px;
+  overflow: auto;
+  background-color: rgba(4, 11, 29, 0.65);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
+  outline: none;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 auto auto;
+  overflow: hidden;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  height: calc(100vh - 80px);
+  max-width: 1000px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.emotion-3:hover {
+  fill: #c9cace;
+}
+
+.emotion-4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.emotion-6 {
+  border-bottom: solid 1px #d9dadd;
+}
+
+.emotion-7 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: 14px 0;
+  border: none;
+  margin-right: 30px;
+  margin-bottom: -1px;
+  border-bottom: solid 2px transparent;
+  color: #8e9199;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #040b1d;
+  border-bottom-color: #040b1d;
+}
+
+.emotion-7:hover,
+.emotion-7:focus {
+  z-index: 1;
+  color: #5c606c;
+}
+
+.emotion-7:last-child {
+  margin-right: 0;
+}
+
+.emotion-8 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: 14px 0;
+  border: none;
+  margin-right: 30px;
+  margin-bottom: -1px;
+  border-bottom: solid 2px transparent;
+  color: #8e9199;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  z-index: 1;
+  color: #5c606c;
+}
+
+.emotion-8:last-child {
+  margin-right: 0;
+}
+
+.emotion-10 {
+  height: 100%;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding: 24px 0 0;
+}
+
+.emotion-11 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.emotion-12 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  margin-left: auto;
+}
+
+.emotion-14 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-14:last-child {
+  margin-right: 0px;
+}
+
+.emotion-15 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: #f5222d;
+  color: #ffffff;
+}
+
+.emotion-15:hover,
+.emotion-15:focus,
+.emotion-15:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-15:disabled,
+.emotion-15:disabled:active,
+.emotion-15:disabled:hover {
+  cursor: default;
+}
+
+.emotion-15:focus,
+.emotion-15:hover {
+  background-color: #d01d26;
+}
+
+.emotion-15:active {
+  background-color: #d01d26;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-15:disabled,
+.emotion-15:disabled:active,
+.emotion-15:disabled:hover {
+  background-color: #f28a91;
+  color: #ffffff;
+}
+
+.emotion-15 svg {
+  fill: #ffffff;
+}
+
+.emotion-15:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-17 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-17:hover,
+.emotion-17:focus,
+.emotion-17:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-17:disabled,
+.emotion-17:disabled:active,
+.emotion-17:disabled:hover {
+  cursor: default;
+}
+
+.emotion-17:focus,
+.emotion-17:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-17:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-17:disabled,
+.emotion-17:disabled:active,
+.emotion-17:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-17 svg {
+  fill: #5c606c;
+}
+
+.emotion-17:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-18 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 <div
-  className="css-18615gn"
+  className="emotion-0"
   onMouseDown={[Function]}
 >
   <div
-    className="css-1f6pklh"
+    className="emotion-1"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-vf0gu5"
+      className="emotion-2"
     >
       Configure server
     </h2>
     <svg
-      className="css-uue8s9"
+      className="emotion-3"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -191,64 +1175,64 @@ exports[`Modal renders modal with tabs 1`] = `
       />
     </svg>
     <div
-      className="css-1ff36h2"
+      className="emotion-4"
     >
       <div
-        className="css-13ku56z"
+        className="emotion-5"
       >
         <div
-          className="css-1cfjzc4"
+          className="emotion-6"
         >
           <button
-            className="css-1fhlilz"
+            className="emotion-7"
             onClick={[Function]}
           >
             Create Replica Set
           </button>
           <button
-            className="css-36krrg"
+            className="emotion-8"
             onClick={[Function]}
           >
             Join Replica Set
           </button>
           <button
-            className="css-36krrg"
+            className="emotion-8"
             onClick={[Function]}
           >
             Bad example tab
           </button>
         </div>
         <div
-          className="css-11hw1zo"
+          className="emotion-10"
         >
           <div
-            className="css-14447ek"
+            className="emotion-11"
           >
             But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
           </div>
         </div>
       </div>
       <div
-        className="css-1414iyd"
+        className="emotion-12"
       >
         <div
-          className="css-99c7t3"
+          className="emotion-13"
         >
           <div
-            className="css-1zje6z"
+            className="emotion-14"
           >
             <button
-              className="css-1e4zgmm"
+              className="emotion-15"
               type="button"
             >
               Accept
             </button>
           </div>
           <div
-            className="css-1zje6z"
+            className="emotion-14"
           >
             <button
-              className="css-1mocbyz"
+              className="emotion-17"
               type="button"
             >
               Decline
@@ -258,7 +1242,7 @@ exports[`Modal renders modal with tabs 1`] = `
       </div>
     </div>
     <div
-      className="css-alng9s"
+      className="emotion-18"
       onFocus={[Function]}
       tabIndex="0"
     />
@@ -267,22 +1251,292 @@ exports[`Modal renders modal with tabs 1`] = `
 `;
 
 exports[`Modal renders simple modal 1`] = `
+.emotion-0 {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 16px;
+  overflow: auto;
+  background-color: rgba(4, 11, 29, 0.65);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
+  outline: none;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 auto auto;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.emotion-3:hover {
+  fill: #c9cace;
+}
+
+.emotion-4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-5 {
+  width: 100%;
+  height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.emotion-6 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  margin-left: auto;
+}
+
+.emotion-8 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-8:last-child {
+  margin-right: 0px;
+}
+
+.emotion-9 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: #f5222d;
+  color: #ffffff;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  cursor: default;
+}
+
+.emotion-9:focus,
+.emotion-9:hover {
+  background-color: #d01d26;
+}
+
+.emotion-9:active {
+  background-color: #d01d26;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  background-color: #f28a91;
+  color: #ffffff;
+}
+
+.emotion-9 svg {
+  fill: #ffffff;
+}
+
+.emotion-9:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-11 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-11:hover,
+.emotion-11:focus,
+.emotion-11:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active,
+.emotion-11:disabled:hover {
+  cursor: default;
+}
+
+.emotion-11:focus,
+.emotion-11:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-11:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active,
+.emotion-11:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-11 svg {
+  fill: #5c606c;
+}
+
+.emotion-11:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-12 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 <div
-  className="css-18615gn"
+  className="emotion-0"
   onMouseDown={[Function]}
 >
   <div
-    className="css-hm23lf"
+    className="emotion-1"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-vf0gu5"
+      className="emotion-2"
     >
       Simple Modal
     </h2>
     <svg
-      className="css-uue8s9"
+      className="emotion-3"
       onClick={[Function]}
       viewBox="0 0 16 16"
     >
@@ -291,34 +1545,34 @@ exports[`Modal renders simple modal 1`] = `
       />
     </svg>
     <div
-      className="css-1ff36h2"
+      className="emotion-4"
     >
       <div
-        className="css-ug0wwi"
+        className="emotion-5"
       >
         But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
       </div>
       <div
-        className="css-1414iyd"
+        className="emotion-6"
       >
         <div
-          className="css-99c7t3"
+          className="emotion-7"
         >
           <div
-            className="css-1zje6z"
+            className="emotion-8"
           >
             <button
-              className="css-1e4zgmm"
+              className="emotion-9"
               type="button"
             >
               Accept
             </button>
           </div>
           <div
-            className="css-1zje6z"
+            className="emotion-8"
           >
             <button
-              className="css-1mocbyz"
+              className="emotion-11"
               type="button"
             >
               Decline
@@ -328,7 +1582,7 @@ exports[`Modal renders simple modal 1`] = `
       </div>
     </div>
     <div
-      className="css-alng9s"
+      className="emotion-12"
       onFocus={[Function]}
       tabIndex="0"
     />

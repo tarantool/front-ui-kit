@@ -61,12 +61,13 @@ const toggleRightIcon = () => setRightIcon(!rightIcon);
   />
 
   {intentions.map(intent => (
-    <FormField label={intent} verticalSort={false} columns={31}>
+    <FormField key={intent} label={intent} verticalSort={false} columns={31}>
       {sizes.reduce(
         (acc, size) => (
           [
             ...acc,
             <Button
+              key={`${size}-0`}
               icon={leftIcon && IconBucket}
               iconRight={rightIcon && DropdownControlIcon}
               intent={intent}
@@ -76,6 +77,7 @@ const toggleRightIcon = () => setRightIcon(!rightIcon);
               title='Click me right meow!'
             />,
             <Button
+              key={`${size}-1`}
               icon={leftIcon && IconBucket}
               iconRight={rightIcon && DropdownControlIcon}
               intent={intent}

@@ -2,54 +2,161 @@
 
 exports[`Text renders correctly 1`] = `
 Array [
-  <h1
-    className="css-1b2tio5"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+<h1
+    className="emotion-0"
     title="Text title"
   >
     Heading 1 - 24px, 38px, 600, spacing 0.48px
   </h1>,
-  <h2
-    className="css-1w3lc29"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+<h2
+    className="emotion-0"
   >
     Heading 2 - 20px, 28px, 600, spacing 0.4px
   </h2>,
-  <h3
-    className="css-1ayss2c"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+<h3
+    className="emotion-0"
   >
     Heading 3 - 16px, 24px, 600, spacing 0.32px
   </h3>,
-  <h4
-    className="css-115iv0u"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+<h4
+    className="emotion-0"
   >
     Heading 4 - 16px, 24px, 600, spacing 0.32px
   </h4>,
-  <h5
-    className="css-1lh30e5"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #040b1d;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+<h5
+    className="emotion-0"
   >
     Heading 5 - 12px, 22px, 400, spacing 0.24px
   </h5>,
-  <p
-    className="css-1w6kemg"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+<p
+    className="emotion-0"
   >
     paragraph - 12px, 20px, 400, spacing: 0.28px
   </p>,
-  <span
-    className="css-1ggp6x0"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
+<span
+    className="emotion-0"
   >
     basic - 14px, 22px, 400
   </span>,
-  <code
-    className="css-rt1r54"
+  .emotion-0 {
+  margin: 0;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
+<code
+    className="emotion-0"
   >
     code - 14px, 22px, 400
   </code>,
-  <span
-    className="css-1ayss2c"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+<span
+    className="emotion-0"
   >
     H3 styled span
   </span>,
-  <span
-    className="css-115iv0u"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+<span
+    className="emotion-0"
   >
     H4 styled span
   </span>,

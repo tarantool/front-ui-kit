@@ -20,8 +20,7 @@ const focusFirstInteractiveElement = (containerEl: HTMLElement) => {
   }
 };
 
-
-export type withDropdownProps = {
+export type WithDropdownProps = {
   className?: string, // trigger wrapper class
   popoverClassName?: string,
   onClick?: (e: MouseEvent) => void,
@@ -32,7 +31,7 @@ export type withDropdownProps = {
   disabled?: boolean
 };
 
-type withDropdownState = {
+export type WithDropdownState = {
   isOpen: boolean,
   left: number,
   top: number,
@@ -40,9 +39,9 @@ type withDropdownState = {
 };
 
 export const withDropdown = (
-  Component:  React.AbstractComponent<any, HTMLElement> | string
+  Component: React.AbstractComponent<any, HTMLElement> | string
 ) =>
-  class Dropdown extends React.PureComponent<withDropdownProps, withDropdownState> {
+  class Dropdown extends React.PureComponent<WithDropdownProps, WithDropdownState> {
     static defaultProps = {
       autoFocus: true
     };
@@ -65,7 +64,7 @@ export const withDropdown = (
       }
     }
 
-    componentDidUpdate(prevProps: withDropdownProps, prevState: withDropdownState) {
+    componentDidUpdate(prevProps: WithDropdownProps, prevState: WithDropdownState) {
       const { isOpen } = this.state;
 
       if (prevState.isOpen !== isOpen) {
@@ -251,7 +250,7 @@ export const withDropdown = (
           <Component
             {...props}
             className={className}
-            onClick={!disabled && this.handleClick}
+            onClick={!disabled ? this.handleClick : undefined}
             ref={this.wrapperRef}
           />
           {isOpen && items && !disabled && this.renderPortal()}

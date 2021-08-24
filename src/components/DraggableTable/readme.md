@@ -1,6 +1,6 @@
 ```js
 import { useState } from 'react';
-import { arrayMove } from 'react-sortable-hoc';
+import { arrayMoveImmutable } from 'array-move';
 import { DraggableTable } from '@tarantool.io/ui-kit';
 
 const columns = [
@@ -23,20 +23,14 @@ const [ data, setData ] = useState(Array.apply(null, { length: 10 }).map((_, ind
 })));
 
 const onChange = ({ oldIndex, newIndex }) => {
-  setData(arrayMove(data, oldIndex, newIndex));
-};
-const onSelectRow = (selected, row) => {
-  setData(data.map(item => {
-    if (item.id === row.id) {
-      return {
-        ...item,
-        selected
-      } 
-    }
-    return item;
-  }));
+  setData(data => arrayMoveImmutable(data, oldIndex, newIndex));
 };
 
+const onSelectRow = (selected, row) => {
+  setData(data => data.map(item => {
+    return item.id === row.id ? {...item, selected} : item;
+  }));
+};
 
 <>
   <DraggableTable

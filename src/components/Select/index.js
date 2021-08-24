@@ -1,6 +1,6 @@
 // @flow
 import React, { useCallback, useState, useEffect } from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { Input } from '../Input';
 import { Dropdown, DropdownItem } from '../Dropdown';
 import { IconChevronDown, IconChevron } from '../Icon';
@@ -101,7 +101,7 @@ export const Select = (props: SelectProps) => {
         onChange={onChangeInput}
         disabled={props.disabled}
         className={cx({ [styles.input]: !props.allowSearch && !props.disabled }, props.inputClassName)}
-        autocomplete="new-password"
+        autoComplete="new-password"
         rightIcon={<Icon className={styles.icon} />}
         {...props.inputProps}
       />

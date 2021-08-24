@@ -46,7 +46,7 @@ const styles = {
       <Input rightIcon={<IconSearch />} />,
       <Button text='Info' size='l' />
     ]}
-    topRightControls={flags.rightControls &&[
+    topRightControls={flags.rightControls && [
       <Button text='Details' size='l' />,
       <Button text='Info' size='l' />
     ]}
@@ -55,11 +55,11 @@ const styles = {
     <Text>Content</Text>
     <InputGroup>
       {[
-        <Checkbox onChange={toggle('leftControls')} checked={flags.leftControls}>Show controls on the left</Checkbox>,
-        <Checkbox onChange={toggle('rightControls')} checked={flags.rightControls}>Show controls on the right</Checkbox>,
-        <Checkbox onChange={toggle('aboveComponent')} checked={flags.aboveComponent}>Show aboveComponent</Checkbox>,
-        <Checkbox onChange={toggle('wide')} checked={flags.wide}>Use wide prop</Checkbox>,
-        <Checkbox onChange={toggle('fullPage')} checked={flags.fullPage}>Place on all page</Checkbox>
+        <Checkbox key='leftControls' onChange={toggle('leftControls')} checked={flags.leftControls}>Show controls on the left</Checkbox>,
+        <Checkbox key='rightControls' onChange={toggle('rightControls')} checked={flags.rightControls}>Show controls on the right</Checkbox>,
+        <Checkbox key='aboveComponent' onChange={toggle('aboveComponent')} checked={flags.aboveComponent}>Show aboveComponent</Checkbox>,
+        <Checkbox key='wide' onChange={toggle('wide')} checked={flags.wide}>Use wide prop</Checkbox>,
+        <Checkbox key='fullPage' onChange={toggle('fullPage')} checked={flags.fullPage}>Place on all page</Checkbox>
       ]}
     </InputGroup>
   </PageLayout>

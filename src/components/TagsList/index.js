@@ -47,8 +47,9 @@ TagsListProps<T>) => (
         <Text className={styles.heading} variant='h5' tag='span'><b>{`${heading}:`}</b></Text>
       )}
       <div>
-        {(values || []).map(value => (
+        {(values || []).map((value, index) => (
           <Tag
+            key={index}
             className={cx(styles.tag, tagClassName)}
             onClick={() => onTagClick && onTagClick(value)}
             text={renderItem ? renderItem(value) : toString(value)}

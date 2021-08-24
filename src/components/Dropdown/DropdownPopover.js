@@ -45,6 +45,12 @@ type DropdownPopoverProps = {
   autoFocus: boolean
 }
 
+const ScrollableWrap = ({ useScroll, children }: { useScroll: boolean, children: React.Node }) => {
+  return useScroll ? (
+    <Scrollbar className={styles.scrollable}>{children}</Scrollbar>
+  ) : <>{children}</>
+};
+
 export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   focus() {
     const { innerRef, autoFocus } = this.props;
@@ -105,12 +111,6 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
       onMouseDown
     } = this.props;
 
-    const ScrollableWrap = useScroll
-      ? ({ children }) => (
-        <Scrollbar className={styles.scrollable}>{children}</Scrollbar>
-      )
-      : ({ children }) => <>{children}</>;
-
     return (
       <div
         className={cx(
@@ -125,7 +125,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
         ref={innerRef}
         tabIndex={0}
       >
-        <ScrollableWrap>
+        <ScrollableWrap useScroll={useScroll}>
           {items}
         </ScrollableWrap>
       </div>

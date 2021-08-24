@@ -106,7 +106,7 @@ export function Table(props: TableProps) {
   const theadRef = React.useRef(null);
   React.useEffect(() => {
     setTHeadHeight(theadRef.current ? theadRef.current.clientHeight : 0);
-  }, [ theadRef ]);
+  }, []);
 
   const {
     getTableProps,
@@ -163,7 +163,7 @@ export function Table(props: TableProps) {
       <Spin enable={loading} className={cx({ [styles.loading]: loading })}>
         <table {...getTableProps()} className={cx(styles.table, className)}>
           <TableHeader
-            ref={theadRef}
+            // ref={theadRef} // TODO: Fix error: Maximum update depth exceeded.
             headerGroups={headerGroups}
             dataRows={dataRows}
           />

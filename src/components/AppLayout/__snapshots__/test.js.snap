@@ -1,17 +1,777 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppLayout renders correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.emotion-1 {
+  border-top: none;
+  overflow: hidden;
+  width: 256px;
+  background: #040b1d;
+  height: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.emotion-2 {
+  padding: 24px 0 32px 0;
+}
+
+.emotion-3 {
+  width: 154px;
+  height: 28px;
+  margin-left: 24px;
+}
+
+.emotion-4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.emotion-4 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-4::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-4::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-4::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: transparent;
+  outline: none;
+}
+
+.emotion-5 b {
+  font-weight: 600;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.emotion-6 {
+  position: absolute;
+  left: 24px;
+  top: calc(50% - 8px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+}
+
+.emotion-7 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  fill: #ffffff;
+}
+
+.emotion-8 {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 170px;
+}
+
+.emotion-8:hover,
+.emotion-8:visited {
+  color: #fff;
+}
+
+.emotion-11 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+  fill: #ffffff;
+}
+
+.emotion-13 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+.emotion-14 {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.emotion-15 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: transparent;
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.emotion-15 b {
+  font-weight: 600;
+}
+
+.emotion-15:hover,
+.emotion-15:focus {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.emotion-15:after {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 4px;
+  background: #ff272c;
+  content: '';
+  position: absolute;
+}
+
+.emotion-16 {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 170px;
+  left: 60px;
+  font-weight: 600;
+}
+
+.emotion-16:hover,
+.emotion-16:visited {
+  color: #fff;
+}
+
+.emotion-18 {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 170px;
+  left: 60px;
+}
+
+.emotion-18:hover,
+.emotion-18:visited {
+  color: #fff;
+}
+
+.emotion-25 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 14px;
+  height: 14px;
+  fill: #fff;
+  fill: #ffffff;
+}
+
+.emotion-29 {
+  width: 12px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  fill: #ffffff;
+}
+
+.emotion-31 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: 16px;
+}
+
+.emotion-36 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: transparent;
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  opacity: .65;
+}
+
+.emotion-36 b {
+  font-weight: 600;
+}
+
+.emotion-36:hover,
+.emotion-36:focus {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.emotion-36:hover {
+  opacity: 1;
+}
+
+.emotion-38 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+  fill: #ffffff;
+}
+
+.emotion-40 {
+  display: block;
+  background: #f0f2f5;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.emotion-40 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-40::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-40::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-40::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+.emotion-41 {
+  height: 68px;
+  min-width: 922px;
+  background: #ffffff;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 30px;
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-43 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+}
+
+.emotion-44 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 0;
+  width: 100%;
+}
+
+.emotion-45 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 6px;
+  color: #8e9199;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  white-space: nowrap;
+}
+
+.emotion-45 b {
+  font-weight: 600;
+}
+
+.emotion-46 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor:pointer:color: #8e9199;
+  color: #8e9199;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.emotion-46 b {
+  font-weight: 600;
+}
+
+.emotion-46:hover,
+.emotion-46:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-46:hover,
+.emotion-46:focus,
+.emotion-46 a:link,
+.emotion-46 a:visited,
+.emotion-46:active {
+  color: #8e9199;
+}
+
+.emotion-46:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-55 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: 1px;
+}
+
+.emotion-56 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.emotion-57 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-57:last-child {
+  margin-right: 0px;
+}
+
+.emotion-58 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+}
+
+.emotion-58:hover,
+.emotion-58:focus,
+.emotion-58:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-58:disabled,
+.emotion-58:disabled:active,
+.emotion-58:disabled:hover {
+  cursor: default;
+}
+
+.emotion-58:focus,
+.emotion-58:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-58:disabled,
+.emotion-58:disabled:active,
+.emotion-58:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-58 svg {
+  fill: #5c606c;
+}
+
+.emotion-58:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-59 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #c9cace;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-61 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-61:hover,
+.emotion-61:focus,
+.emotion-61:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-61:disabled,
+.emotion-61:disabled:active,
+.emotion-61:disabled:hover {
+  cursor: default;
+}
+
+.emotion-61:focus,
+.emotion-61:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-61:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-61:disabled,
+.emotion-61:disabled:active,
+.emotion-61:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-61 svg {
+  fill: #5c606c;
+}
+
+.emotion-61:disabled svg {
+  fill: #d9dadd;
+}
+
 <div
-  className="css-ww59jg"
+  className="emotion-0"
 >
   <div
-    className="css-1d4yvnq"
+    className="emotion-1"
   >
     <div
-      className="css-7s3tqb"
+      className="emotion-2"
     >
       <svg
-        className="css-1d43lrb"
+        className="emotion-3"
         viewBox="0 0 154 28"
       >
         <use
@@ -20,19 +780,19 @@ exports[`AppLayout renders correctly 1`] = `
       </svg>
     </div>
     <div
-      className="css-htil7a"
+      className="emotion-4"
     >
       <a
-        className="css-1e2guak"
+        className="emotion-5"
         href="/mytest/test"
         onClick={[Function]}
         title="My Test"
       >
         <div
-          className="css-ja26we"
+          className="emotion-6"
         >
           <svg
-            className="css-sffbkr"
+            className="emotion-7"
             viewBox="0 0 16 16"
           >
             <use
@@ -41,22 +801,22 @@ exports[`AppLayout renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-lbwipx"
+          className="emotion-8"
         >
           My Test
         </span>
       </a>
       <a
-        className="css-1e2guak"
+        className="emotion-5"
         href="/other/test"
         onClick={[Function]}
         title="Other"
       >
         <div
-          className="css-ja26we"
+          className="emotion-6"
         >
           <svg
-            className="css-1nnk27v"
+            className="emotion-11"
             viewBox="0 0 14 14"
           >
             <use
@@ -65,12 +825,12 @@ exports[`AppLayout renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-lbwipx"
+          className="emotion-8"
         >
           Other
         </span>
         <svg
-          className="css-8mr8c5"
+          className="emotion-13"
           viewBox="0 0 14 14"
         >
           <use
@@ -79,68 +839,68 @@ exports[`AppLayout renders correctly 1`] = `
         </svg>
       </a>
       <div
-        className="css-2fcw72"
+        className="emotion-14"
       >
         <a
-          className="css-1ssciey"
+          className="emotion-15"
           href="/mytest/test"
           onClick={[Function]}
           title="My Test"
         >
           <span
-            className="css-bw2ld4"
+            className="emotion-16"
           >
             My Test
           </span>
         </a>
         <a
-          className="css-1e2guak"
+          className="emotion-5"
           href="/other/test"
           onClick={[Function]}
           title="Other"
         >
           <span
-            className="css-oabgn6"
+            className="emotion-18"
           >
             Other
           </span>
         </a>
         <a
-          className="css-1e2guak"
+          className="emotion-5"
           href="/other/test2"
           onClick={[Function]}
           title="Other2"
         >
           <span
-            className="css-oabgn6"
+            className="emotion-18"
           >
             Other2
           </span>
         </a>
         <a
-          className="css-1e2guak"
+          className="emotion-5"
           href="/other/test3"
           onClick={[Function]}
           title="Other4"
         >
           <span
-            className="css-oabgn6"
+            className="emotion-18"
           >
             Other4
           </span>
         </a>
       </div>
       <a
-        className="css-1e2guak"
+        className="emotion-5"
         href="/other/test2"
         onClick={[Function]}
         title="Other2"
       >
         <div
-          className="css-ja26we"
+          className="emotion-6"
         >
           <svg
-            className="css-1e8hhk8"
+            className="emotion-25"
             viewBox="0 0 14 14"
           >
             <use
@@ -149,22 +909,22 @@ exports[`AppLayout renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-lbwipx"
+          className="emotion-8"
         >
           Other2
         </span>
       </a>
       <a
-        className="css-1e2guak"
+        className="emotion-5"
         href="/other/test3"
         onClick={[Function]}
         title="Other4"
       >
         <div
-          className="css-ja26we"
+          className="emotion-6"
         >
           <svg
-            className="css-1ok0ieg"
+            className="emotion-29"
             viewBox="0 0 12 14"
           >
             <use
@@ -173,26 +933,26 @@ exports[`AppLayout renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-lbwipx"
+          className="emotion-8"
         >
           Other4
         </span>
       </a>
     </div>
     <div
-      className="css-7yk45v"
+      className="emotion-31"
     >
       <a
-        className="css-1e2guak"
+        className="emotion-5"
         href="/other/test3"
         onClick={[Function]}
         title="Documentation"
       >
         <div
-          className="css-ja26we"
+          className="emotion-6"
         >
           <svg
-            className="css-sffbkr"
+            className="emotion-7"
             viewBox="0 0 16 16"
           >
             <use
@@ -201,22 +961,22 @@ exports[`AppLayout renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-lbwipx"
+          className="emotion-8"
         >
           Documentation
         </span>
       </a>
       <button
-        className="css-1x7zhyv"
+        className="emotion-36"
         href=""
         onClick={[Function]}
         title="Collapse menu"
       >
         <div
-          className="css-ja26we"
+          className="emotion-6"
         >
           <svg
-            className="css-1l69dq4"
+            className="emotion-38"
             viewBox="0 0 14 14"
           >
             <use
@@ -225,7 +985,7 @@ exports[`AppLayout renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-lbwipx"
+          className="emotion-8"
         >
           Collapse menu
         </span>
@@ -233,100 +993,100 @@ exports[`AppLayout renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="css-aqdqdm"
+    className="emotion-40"
   >
     <div
-      className="css-1r0gly9"
+      className="emotion-41"
     >
       <div
-        className="css-pavhyf"
+        className="emotion-42"
       >
         <span
-          className="css-10mai1l"
+          className="emotion-43"
         >
           Sample app
         </span>
         <div
-          className="css-1xzbk8"
+          className="emotion-44"
         >
           <span
-            className="css-1pfwcw7"
+            className="emotion-45"
           >
             /
           </span>
           <a
-            className="css-2w80i4"
+            className="emotion-46"
             href="/tarantool"
             onClick={[Function]}
           >
             @tarantool.io/ui-kit
           </a>
           <span
-            className="css-1pfwcw7"
+            className="emotion-45"
           >
             /
           </span>
           <a
-            className="css-2w80i4"
+            className="emotion-46"
             href="/section-ui-components"
             onClick={[Function]}
           >
             UI Components
           </a>
           <span
-            className="css-1pfwcw7"
+            className="emotion-45"
           >
             /
           </span>
           <a
-            className="css-2w80i4"
+            className="emotion-46"
             href="/breadcrumb"
             onClick={[Function]}
           >
             Breadcrumb
           </a>
           <span
-            className="css-1pfwcw7"
+            className="emotion-45"
           >
             /
           </span>
           <a
-            className="css-2w80i4"
+            className="emotion-46"
             href="/overflow-list"
             onClick={[Function]}
           >
             OverflowList
           </a>
           <span
-            className="css-1pfwcw7"
+            className="emotion-45"
           >
             /
           </span>
           <a
-            className="css-2w80i4"
+            className="emotion-46"
             href="/resize-sensor"
             onClick={[Function]}
           >
             ResizeSensor
           </a>
           <div
-            className="css-18izngs"
+            className="emotion-55"
           />
         </div>
       </div>
       <div
-        className="css-ljifeg"
+        className="emotion-56"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-57"
         >
           <button
-            className="css-lot513"
+            className="emotion-58"
             title="Search"
             type="button"
           >
             <svg
-              className="css-10tmi9z"
+              className="emotion-59"
               viewBox="0 0 16 16"
             >
               <use
@@ -336,10 +1096,10 @@ exports[`AppLayout renders correctly 1`] = `
           </button>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-57"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-61"
             type="button"
           >
             Log in

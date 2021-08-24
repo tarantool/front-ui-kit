@@ -2,12 +2,53 @@
 
 exports[`Text renders correctly 1`] = `
 Array [
-  <div
-    className="css-s5xdrg"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 14px;
+  height: 14px;
+  fill: #5c606c;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+<div
+    className="emotion-0"
     title="UriLabel"
   >
     <svg
-      className="css-1l8frzb"
+      className="emotion-1"
       viewBox="0 0 14 14"
     >
       <use
@@ -15,17 +56,59 @@ Array [
       />
     </svg>
     <span
-      className="css-1ezwu69"
+      className="emotion-2"
     >
       jh74gvr3-ec3-datacenter-southern.awa132.com
     </span>
   </div>,
-  <div
-    className="css-s5xdrg"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  fill: #ff272c;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+<div
+    className="emotion-0"
     title="UriLabel"
   >
     <svg
-      className="css-edx1zq"
+      className="emotion-1"
       viewBox="0 0 16 16"
     >
       <use
@@ -33,17 +116,58 @@ Array [
       />
     </svg>
     <span
-      className="css-1ezwu69"
+      className="emotion-2"
     >
       jh74gvr3-ec3-datacenter-southern.awa132.com
     </span>
   </div>,
-  <div
-    className="css-s5xdrg"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 14px;
+  height: 14px;
+  fill: #f5222d;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+<div
+    className="emotion-0"
     title="UriLabel"
   >
     <svg
-      className="css-1cx0hm3"
+      className="emotion-1"
       viewBox="0 0 14 14"
     >
       <use
@@ -51,7 +175,7 @@ Array [
       />
     </svg>
     <span
-      className="css-1ezwu69"
+      className="emotion-2"
     >
       jh74gvr3-ec3-datacenter-southern.awa132.com
     </span>

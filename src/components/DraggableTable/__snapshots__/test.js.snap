@@ -1,47 +1,202 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DraggableTable renders correctly 1`] = `
+.emotion-0 {
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-1 {
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.emotion-2 {
+  padding: 0 10px;
+  width: 16px;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 18px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 18px;
+  text-align: left;
+  font-weight: 600;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.emotion-6 b {
+  font-weight: 600;
+}
+
+.emotion-7 {
+  border-bottom: 1px solid #f0f2f5;
+  cursor: move;
+}
+
+.emotion-9 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-12 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-12+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-12:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-13 {
+  position: relative;
+}
+
+.emotion-14 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  display: block;
+}
+
+.emotion-15 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 13px 18px;
+  color: #040b1d;
+}
+
+.emotion-15 b {
+  font-weight: 600;
+}
+
+.emotion-17 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 13px 18px;
+  color: #040b1d;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.emotion-17 b {
+  font-weight: 600;
+}
+
 <table
-  className="css-f6vch3"
+  className="emotion-0"
 >
   <thead>
     <tr
-      className="css-lfnnak"
+      className="emotion-1"
     >
       <th
-        className="css-xhhvmu"
+        className="emotion-2"
       />
       <th
-        className="css-xhhvmu"
+        className="emotion-2"
       />
       <th
-        className="css-1wp8e0i"
+        className="emotion-4"
       >
         Field
       </th>
       <th
-        className="css-1wp8e0i"
+        className="emotion-4"
       >
         Type
       </th>
       <th
-        className="css-vu56aw"
+        className="emotion-6"
       >
         №
       </th>
     </tr>
   </thead>
-  <tbody
-    className=""
-  >
+  <tbody>
     <tr
-      className="css-1t21cuk"
+      className="emotion-7"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-9"
           viewBox="0 0 16 16"
         >
           <use
@@ -50,23 +205,23 @@ exports[`DraggableTable renders correctly 1`] = `
         </svg>
       </td>
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={1}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -77,29 +232,29 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 1
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 1
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       >
         1
       </td>
     </tr>
     <tr
-      className="css-1t21cuk"
+      className="emotion-7"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-9"
           viewBox="0 0 16 16"
         >
           <use
@@ -108,23 +263,23 @@ exports[`DraggableTable renders correctly 1`] = `
         </svg>
       </td>
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={1}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -135,29 +290,29 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 3
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 3
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       >
         2
       </td>
     </tr>
     <tr
-      className="css-1t21cuk"
+      className="emotion-7"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-9"
           viewBox="0 0 16 16"
         >
           <use
@@ -166,23 +321,23 @@ exports[`DraggableTable renders correctly 1`] = `
         </svg>
       </td>
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={1}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -193,29 +348,29 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 5
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 5
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       >
         3
       </td>
     </tr>
     <tr
-      className="css-1t21cuk"
+      className="emotion-7"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-9"
           viewBox="0 0 16 16"
         >
           <use
@@ -224,23 +379,23 @@ exports[`DraggableTable renders correctly 1`] = `
         </svg>
       </td>
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={1}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -251,29 +406,29 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 7
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 7
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       >
         4
       </td>
     </tr>
     <tr
-      className="css-1t21cuk"
+      className="emotion-7"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <svg
-          className="css-1f5lesb"
+          className="emotion-9"
           viewBox="0 0 16 16"
         >
           <use
@@ -282,23 +437,23 @@ exports[`DraggableTable renders correctly 1`] = `
         </svg>
       </td>
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={1}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -309,45 +464,45 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 9
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 9
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       >
         5
       </td>
     </tr>
     <tr
-      className="css-lfnnak"
+      className="emotion-1"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       />
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={0}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -358,43 +513,43 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 0
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 0
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       />
     </tr>
     <tr
-      className="css-lfnnak"
+      className="emotion-1"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       />
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={0}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -405,43 +560,43 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 2
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 2
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       />
     </tr>
     <tr
-      className="css-lfnnak"
+      className="emotion-1"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       />
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={0}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -452,43 +607,43 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 4
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 4
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       />
     </tr>
     <tr
-      className="css-lfnnak"
+      className="emotion-1"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       />
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={0}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -499,43 +654,43 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 6
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 6
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       />
     </tr>
     <tr
-      className="css-lfnnak"
+      className="emotion-1"
     >
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       />
       <td
-        className="css-xhhvmu"
+        className="emotion-2"
       >
         <label
-          className="css-1uoamx5 meta__checkbox_class"
+          className="emotion-11 meta__checkbox_class"
         >
           <input
             checked={0}
-            className="css-ojip76"
+            className="emotion-12"
             disabled={false}
             onChange={[Function]}
             type="checkbox"
           />
           <div
-            className="css-bjn8wh"
+            className="emotion-13"
           >
             <svg
-              className="css-vbxk2i"
+              className="emotion-14"
               viewBox="0 0 16 16"
             >
               <use
@@ -546,17 +701,17 @@ exports[`DraggableTable renders correctly 1`] = `
         </label>
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         field 8
       </td>
       <td
-        className="css-1wly7y"
+        className="emotion-15"
       >
         type 8
       </td>
       <td
-        className="css-1kq5izs"
+        className="emotion-17"
       />
     </tr>
   </tbody>

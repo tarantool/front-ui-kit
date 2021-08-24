@@ -2,14 +2,106 @@
 
 exports[`Table renders empty 1`] = `
 Array [
-  <div
-    className="css-bjn8wh"
+  .emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-9 {
+  background-color: #FFFFFF;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #FFFFFF;
+  padding: 25px;
+}
+
+.emotion-11 {
+  width: 120px;
+  height: 96px;
+  width: 200px;
+  height: 74px;
+  fill: rgba(0, 0, 0, 0.25);
+  height: 96px;
+  width: 120px;
+}
+
+.emotion-12 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 16px;
+  color: #5c606c;
+}
+
+.emotion-12 b {
+  font-weight: 600;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-907xkp"
+      className="emotion-1"
     >
       <table
-        className="css-1f5rm2b"
+        className="emotion-2"
         role="table"
       >
         <thead>
@@ -17,42 +109,42 @@ Array [
             role="row"
           >
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               First Name
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Last Name
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Age
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Visits
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Status
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
@@ -61,7 +153,7 @@ Array [
           </tr>
         </thead>
         <tbody
-          className="css-1fpax12"
+          className="emotion-9"
           role="rowgroup"
         >
           <tr>
@@ -69,10 +161,10 @@ Array [
               colSpan={6}
             >
               <div
-                className="css-qt1wxq"
+                className="emotion-10"
               >
                 <svg
-                  className="css-16alpug"
+                  className="emotion-11"
                   viewBox="0 0 120 96"
                 >
                   <use
@@ -80,7 +172,7 @@ Array [
                   />
                 </svg>
                 <span
-                  className="css-1mw4f8u"
+                  className="emotion-12"
                 >
                   The list is empty
                 </span>
@@ -91,14 +183,106 @@ Array [
       </table>
     </div>
   </div>,
-  <div
-    className="css-bjn8wh"
+  .emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-9 {
+  background-color: #FFFFFF;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #FFFFFF;
+  padding: 25px;
+}
+
+.emotion-11 {
+  width: 120px;
+  height: 96px;
+  width: 200px;
+  height: 74px;
+  fill: rgba(0, 0, 0, 0.25);
+  height: 96px;
+  width: 120px;
+}
+
+.emotion-12 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 16px;
+  color: #5c606c;
+}
+
+.emotion-12 b {
+  font-weight: 600;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-907xkp"
+      className="emotion-1"
     >
       <table
-        className="css-1f5rm2b"
+        className="emotion-2"
         role="table"
       >
         <thead>
@@ -106,42 +290,42 @@ Array [
             role="row"
           >
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               First Name
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Last Name
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Age
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Visits
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
               Status
             </th>
             <th
-              className="css-1bpu65y"
+              className="emotion-3"
               colSpan={1}
               role="columnheader"
             >
@@ -150,7 +334,7 @@ Array [
           </tr>
         </thead>
         <tbody
-          className="css-1fpax12"
+          className="emotion-9"
           role="rowgroup"
         >
           <tr>
@@ -158,10 +342,10 @@ Array [
               colSpan={6}
             >
               <div
-                className="css-qt1wxq"
+                className="emotion-10"
               >
                 <svg
-                  className="css-16alpug"
+                  className="emotion-11"
                   viewBox="0 0 120 96"
                 >
                   <use
@@ -169,7 +353,7 @@ Array [
                   />
                 </svg>
                 <span
-                  className="css-1mw4f8u"
+                  className="emotion-12"
                 >
                   The list is empty
                 </span>
@@ -184,14 +368,231 @@ Array [
 `;
 
 exports[`Table renders simple 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-9 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  margin-left: -16px;
+  font-weight: 600;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: fill;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  cursor: default;
+}
+
+.emotion-9:focus,
+.emotion-9:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-9 svg {
+  fill: #5c606c;
+}
+
+.emotion-9:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-9:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-9:hover svg {
+  fill: #5c606c!important;
+}
+
+.emotion-10 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  fill: #e6e7e8!important;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+.emotion-11 {
+  background-color: #FFFFFF;
+}
+
+.emotion-12 {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.emotion-12:hover {
+  background-color: rgba(240, 242, 245, 0.3);
+}
+
+.emotion-13 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 16px;
+  color: #000000a6;
+}
+
+.emotion-13 b {
+  font-weight: 600;
+}
+
+.emotion-39 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 1px 9px;
+  line-height: 18px;
+  font-size: 12px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-39:hover,
+.emotion-39:focus,
+.emotion-39:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-39:disabled,
+.emotion-39:disabled:active,
+.emotion-39:disabled:hover {
+  cursor: default;
+}
+
+.emotion-39:focus,
+.emotion-39:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-39:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-39:disabled,
+.emotion-39:disabled:active,
+.emotion-39:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-39 svg {
+  fill: #5c606c;
+}
+
+.emotion-39:disabled svg {
+  fill: #d9dadd;
+}
+
 <div
-  className="css-bjn8wh"
+  className="emotion-0"
 >
   <div
-    className="css-907xkp"
+    className="emotion-1"
   >
     <table
-      className="css-1f5rm2b"
+      className="emotion-2"
       role="table"
     >
       <thead>
@@ -199,53 +600,53 @@ exports[`Table renders simple 1`] = `
           role="row"
         >
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             First Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Last Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Age
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Visits
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Status
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <button
-              className="css-ozb61x"
+              className="emotion-9"
               onClick={[Function]}
               type="button"
             >
               Profile Progress
               <svg
-                className="css-4e5si3"
+                className="emotion-10"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -257,51 +658,51 @@ exports[`Table renders simple 1`] = `
         </tr>
       </thead>
       <tbody
-        className="css-1fpax12"
+        className="emotion-11"
         role="rowgroup"
       >
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -309,47 +710,47 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -357,47 +758,47 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profit
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             quiet
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             8
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             79
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -405,52 +806,52 @@ exports[`Table renders simple 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             hat
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             jelly
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             7
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             56
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             <button
-              className="css-1lc222t"
+              className="emotion-39"
               type="button"
             >
               Refresh
             </button>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -464,14 +865,170 @@ exports[`Table renders simple 1`] = `
 `;
 
 exports[`Table renders with code row 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-9 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  margin-left: -16px;
+  font-weight: 600;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: fill;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  cursor: default;
+}
+
+.emotion-9:focus,
+.emotion-9:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-9 svg {
+  fill: #5c606c;
+}
+
+.emotion-9:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-9:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-9:hover svg {
+  fill: #5c606c!important;
+}
+
+.emotion-10 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  fill: #e6e7e8!important;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+.emotion-11 {
+  background-color: #FFFFFF;
+}
+
+.emotion-12 {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.emotion-12:hover {
+  background-color: rgba(240, 242, 245, 0.3);
+}
+
+.emotion-13 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 16px;
+  color: #000000a6;
+}
+
+.emotion-13 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-bjn8wh"
+  className="emotion-0"
 >
   <div
-    className="css-907xkp"
+    className="emotion-1"
   >
     <table
-      className="css-1f5rm2b"
+      className="emotion-2"
       role="table"
     >
       <thead>
@@ -479,53 +1036,53 @@ exports[`Table renders with code row 1`] = `
           role="row"
         >
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             First Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Last Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Age
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Visits
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Status
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <button
-              className="css-ozb61x"
+              className="emotion-9"
               onClick={[Function]}
               type="button"
             >
               Profile Progress
               <svg
-                className="css-4e5si3"
+                className="emotion-10"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -537,51 +1094,51 @@ exports[`Table renders with code row 1`] = `
         </tr>
       </thead>
       <tbody
-        className="css-1fpax12"
+        className="emotion-11"
         role="rowgroup"
       >
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -589,47 +1146,47 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -637,47 +1194,47 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profit
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             quiet
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             8
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             79
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -685,47 +1242,47 @@ exports[`Table renders with code row 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             hat
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             jelly
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             7
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             56
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             relationship
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -739,14 +1296,538 @@ exports[`Table renders with code row 1`] = `
 `;
 
 exports[`Table renders with controlled pagination and selected rows 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-5+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-5:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-7 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  display: block;
+}
+
+.emotion-14 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  margin-left: -16px;
+  font-weight: 600;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: fill;
+}
+
+.emotion-14:hover,
+.emotion-14:focus,
+.emotion-14:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  cursor: default;
+}
+
+.emotion-14:focus,
+.emotion-14:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-14 svg {
+  fill: #5c606c;
+}
+
+.emotion-14:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-14:hover svg {
+  fill: #5c606c!important;
+}
+
+.emotion-15 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  fill: #e6e7e8!important;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+.emotion-16 {
+  background-color: #FFFFFF;
+}
+
+.emotion-17 {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.emotion-17:hover {
+  background-color: rgba(240, 242, 245, 0.3);
+}
+
+.emotion-18 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 16px;
+  color: #000000a6;
+}
+
+.emotion-18 b {
+  font-weight: 600;
+}
+
+.emotion-65 {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-right: 16px;
+}
+
+.emotion-66 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-67 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0 4px;
+  border: 1px solid #d9dadd;
+  display: block;
+  background: #FFFFFF;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+}
+
+.emotion-67:hover,
+.emotion-67:focus,
+.emotion-67:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-67:disabled,
+.emotion-67:disabled:active,
+.emotion-67:disabled:hover {
+  cursor: default;
+}
+
+.emotion-67:disabled,
+.emotion-67:disabled:active,
+.emotion-67:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-67 svg {
+  fill: #5c606c;
+}
+
+.emotion-67:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-67:hover {
+  background: #d9dadd;
+}
+
+.emotion-68 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-69 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0 4px;
+  border: 1px solid #d9dadd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d9dadd;
+  background: #fafafa;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-69 b {
+  font-weight: 600;
+}
+
+.emotion-70 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0 4px;
+  border: 1px solid #d9dadd;
+  display: block;
+  background: #FFFFFF;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+}
+
+.emotion-70:hover,
+.emotion-70:focus,
+.emotion-70:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-70:disabled,
+.emotion-70:disabled:active,
+.emotion-70:disabled:hover {
+  cursor: default;
+}
+
+.emotion-70:focus,
+.emotion-70:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-70:disabled,
+.emotion-70:disabled:active,
+.emotion-70:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-70 svg {
+  fill: #5c606c;
+}
+
+.emotion-70:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-70:hover {
+  background: #d9dadd;
+}
+
+.emotion-71 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-72 {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  min-width: 120px;
+}
+
+.emotion-73 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-73:hover,
+.emotion-73:focus,
+.emotion-73:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-73:disabled,
+.emotion-73:disabled:active,
+.emotion-73:disabled:hover {
+  cursor: default;
+}
+
+.emotion-73:focus,
+.emotion-73:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-73:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-73:disabled,
+.emotion-73:disabled:active,
+.emotion-73:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-73 svg {
+  fill: #5c606c;
+}
+
+.emotion-73:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-73:hover {
+  background: #d9dadd;
+}
+
+.emotion-74 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
 <div
-  className="css-bjn8wh"
+  className="emotion-0"
 >
   <div
-    className="css-907xkp"
+    className="emotion-1"
   >
     <table
-      className="css-1f5rm2b"
+      className="emotion-2"
       role="table"
     >
       <thead>
@@ -754,26 +1835,26 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           role="row"
         >
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
               title="Toggle All Rows Selected"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -784,53 +1865,53 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             </label>
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             First Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Last Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Age
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Visits
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Status
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <button
-              className="css-ozb61x"
+              className="emotion-14"
               onClick={[Function]}
               type="button"
             >
               Profile Progress
               <svg
-                className="css-4e5si3"
+                className="emotion-15"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -842,33 +1923,33 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
         </tr>
       </thead>
       <tbody
-        className="css-1fpax12"
+        className="emotion-16"
         role="rowgroup"
       >
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -879,42 +1960,42 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -922,29 +2003,29 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -955,42 +2036,42 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -998,29 +2079,29 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -1031,42 +2112,42 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             profit
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             quiet
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             8
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             79
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -1074,29 +2155,29 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -1107,42 +2188,42 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             hat
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             jelly
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             7
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             56
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             relationship
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -1152,19 +2233,19 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
       </tbody>
     </table>
     <div
-      className="css-mfy4g0"
+      className="emotion-65"
     >
       <div
-        className="css-zjik7"
+        className="emotion-66"
       >
         <button
-          className="css-j1ylrk"
+          className="emotion-67"
           disabled={true}
           onClick={[Function]}
           type="button"
         >
           <svg
-            className="css-1jwstkt"
+            className="emotion-68"
             viewBox="0 0 14 14"
           >
             <use
@@ -1173,17 +2254,17 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </svg>
         </button>
         <span
-          className="css-xqrn7q"
+          className="emotion-69"
         >
           1
         </span>
         <button
-          className="css-53w1bj"
+          className="emotion-70"
           onClick={[Function]}
           type="button"
         >
           <svg
-            className="css-1qr49le"
+            className="emotion-71"
             viewBox="0 0 14 14"
           >
             <use
@@ -1192,16 +2273,16 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           </svg>
         </button>
         <div
-          className="css-17vatmo"
+          className="emotion-72"
           onClick={[Function]}
         >
           <button
-            className="css-b3lbo0"
+            className="emotion-73"
             type="button"
           >
             10 / page 
             <svg
-              className="css-10s1w"
+              className="emotion-74"
               viewBox="0 0 14 14"
             >
               <use
@@ -1217,14 +2298,193 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
 `;
 
 exports[`Table renders with controlled pagination and selected rows 2`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-9 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  margin-left: -16px;
+  font-weight: 600;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: fill;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  cursor: default;
+}
+
+.emotion-9:focus,
+.emotion-9:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-9 svg {
+  fill: #5c606c;
+}
+
+.emotion-9:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-9:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-9:hover svg {
+  fill: #5c606c!important;
+}
+
+.emotion-10 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+.emotion-11 {
+  background-color: #FFFFFF;
+}
+
+.emotion-12 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #8e9199;
+  background-color: #f0f2f5;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  position: -webkit-sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+}
+
+.emotion-12 b {
+  font-weight: 600;
+}
+
+.emotion-13 {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.emotion-13:hover {
+  background-color: rgba(240, 242, 245, 0.3);
+}
+
+.emotion-14 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 16px;
+  color: #000000a6;
+}
+
+.emotion-14 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-bjn8wh"
+  className="emotion-0"
 >
   <div
-    className="css-907xkp"
+    className="emotion-1"
   >
     <table
-      className="css-1f5rm2b"
+      className="emotion-2"
       role="table"
     >
       <thead>
@@ -1232,53 +2492,53 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           role="row"
         >
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             First Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Last Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Age
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Visits
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Status
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <button
-              className="css-ozb61x"
+              className="emotion-9"
               onClick={[Function]}
               type="button"
             >
               Profile Progress
               <svg
-                className="css-d9ujtn"
+                className="emotion-10"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -1290,12 +2550,12 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
         </tr>
       </thead>
       <tbody
-        className="css-1fpax12"
+        className="emotion-11"
         role="rowgroup"
       >
         <tr>
           <td
-            className="css-nclwog"
+            className="emotion-12"
             colSpan={6}
             style={
               Object {
@@ -1307,47 +2567,47 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-13"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             profit
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             quiet
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             8
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             79
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
@@ -1355,47 +2615,47 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-13"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
@@ -1403,47 +2663,47 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-13"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-14"
             onClick={null}
             role="cell"
           >
@@ -1457,14 +2717,475 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
 `;
 
 exports[`Table renders with pagination 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-9 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  margin-left: -16px;
+  font-weight: 600;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: fill;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  cursor: default;
+}
+
+.emotion-9:focus,
+.emotion-9:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-9 svg {
+  fill: #5c606c;
+}
+
+.emotion-9:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-9:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-9:hover svg {
+  fill: #5c606c!important;
+}
+
+.emotion-10 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  fill: #e6e7e8!important;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+.emotion-11 {
+  background-color: #FFFFFF;
+}
+
+.emotion-12 {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.emotion-12:hover {
+  background-color: rgba(240, 242, 245, 0.3);
+}
+
+.emotion-13 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 16px;
+  color: #000000a6;
+}
+
+.emotion-13 b {
+  font-weight: 600;
+}
+
+.emotion-40 {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-right: 16px;
+}
+
+.emotion-41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-42 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 12px;
+  color: #5c606c;
+}
+
+.emotion-42 b {
+  font-weight: 600;
+}
+
+.emotion-43 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-43:hover,
+.emotion-43:focus,
+.emotion-43:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-43:disabled,
+.emotion-43:disabled:active,
+.emotion-43:disabled:hover {
+  cursor: default;
+}
+
+.emotion-43:disabled,
+.emotion-43:disabled:active,
+.emotion-43:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-43 svg {
+  fill: #5c606c;
+}
+
+.emotion-43:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-43:focus,
+.emotion-43:hover {
+  background: #d9dadd;
+}
+
+.emotion-44 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-45 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+  color: #fff;
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-45:hover,
+.emotion-45:focus,
+.emotion-45:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-45:disabled,
+.emotion-45:disabled:active,
+.emotion-45:disabled:hover {
+  cursor: default;
+}
+
+.emotion-45:focus,
+.emotion-45:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-45:disabled,
+.emotion-45:disabled:active,
+.emotion-45:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-45 svg {
+  fill: #5c606c;
+}
+
+.emotion-45:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-45:focus,
+.emotion-45:hover {
+  background: #d9dadd;
+}
+
+.emotion-45:focus,
+.emotion-45:hover {
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-47 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-48 {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  min-width: 120px;
+}
+
+.emotion-49 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-49:hover,
+.emotion-49:focus,
+.emotion-49:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-49:disabled,
+.emotion-49:disabled:active,
+.emotion-49:disabled:hover {
+  cursor: default;
+}
+
+.emotion-49:focus,
+.emotion-49:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-49:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-49:disabled,
+.emotion-49:disabled:active,
+.emotion-49:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-49 svg {
+  fill: #5c606c;
+}
+
+.emotion-49:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-50 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
 <div
-  className="css-bjn8wh"
+  className="emotion-0"
 >
   <div
-    className="css-907xkp"
+    className="emotion-1"
   >
     <table
-      className="css-1f5rm2b"
+      className="emotion-2"
       role="table"
     >
       <thead>
@@ -1472,53 +3193,53 @@ exports[`Table renders with pagination 1`] = `
           role="row"
         >
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             First Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Last Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Age
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Visits
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Status
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <button
-              className="css-ozb61x"
+              className="emotion-9"
               onClick={[Function]}
               type="button"
             >
               Profile Progress
               <svg
-                className="css-4e5si3"
+                className="emotion-10"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -1530,51 +3251,51 @@ exports[`Table renders with pagination 1`] = `
         </tr>
       </thead>
       <tbody
-        className="css-1fpax12"
+        className="emotion-11"
         role="rowgroup"
       >
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -1582,47 +3303,47 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -1630,47 +3351,47 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             profit
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             quiet
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             8
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             79
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -1678,47 +3399,47 @@ exports[`Table renders with pagination 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-12"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             hat
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             jelly
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             7
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             56
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
             relationship
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-13"
             onClick={null}
             role="cell"
           >
@@ -1728,13 +3449,13 @@ exports[`Table renders with pagination 1`] = `
       </tbody>
     </table>
     <div
-      className="css-mfy4g0"
+      className="emotion-40"
     >
       <div
-        className="css-zjik7"
+        className="emotion-41"
       >
         <div
-          className="css-1obq1rs"
+          className="emotion-42"
         >
           1
           -
@@ -1745,13 +3466,13 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-18ibiql"
+            className="emotion-43"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-1jwstkt"
+              className="emotion-44"
               viewBox="0 0 14 14"
             >
               <use
@@ -1762,7 +3483,7 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-s5x2y9"
+            className="emotion-45"
             onClick={[Function]}
             type="button"
           >
@@ -1771,13 +3492,13 @@ exports[`Table renders with pagination 1`] = `
         </div>
         <div>
           <button
-            className="css-18ibiql"
+            className="emotion-43"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-1qr49le"
+              className="emotion-47"
               viewBox="0 0 14 14"
             >
               <use
@@ -1787,16 +3508,16 @@ exports[`Table renders with pagination 1`] = `
           </button>
         </div>
         <div
-          className="css-17vatmo"
+          className="emotion-48"
           onClick={[Function]}
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-49"
             type="button"
           >
             10 / page 
             <svg
-              className="css-10s1w"
+              className="emotion-50"
               viewBox="0 0 14 14"
             >
               <use
@@ -1812,14 +3533,532 @@ exports[`Table renders with pagination 1`] = `
 `;
 
 exports[`Table renders with pagination and selected rows 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-1.blur {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  width: 100%;
+  border-spacing: initial;
+  border-collapse: collapse;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #5c606c;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-5 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-5+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-5:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-7 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  display: block;
+}
+
+.emotion-14 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  margin-left: -16px;
+  font-weight: 600;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: fill;
+}
+
+.emotion-14:hover,
+.emotion-14:focus,
+.emotion-14:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  cursor: default;
+}
+
+.emotion-14:focus,
+.emotion-14:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-14:disabled,
+.emotion-14:disabled:active,
+.emotion-14:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-14 svg {
+  fill: #5c606c;
+}
+
+.emotion-14:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-14:hover {
+  background-color: #d9dadd;
+}
+
+.emotion-14:hover svg {
+  fill: #5c606c!important;
+}
+
+.emotion-15 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  fill: #e6e7e8!important;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+.emotion-16 {
+  background-color: #FFFFFF;
+}
+
+.emotion-17 {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.emotion-17:hover {
+  background-color: rgba(240, 242, 245, 0.3);
+}
+
+.emotion-18 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 16px;
+  color: #000000a6;
+}
+
+.emotion-18 b {
+  font-weight: 600;
+}
+
+.emotion-65 {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-right: 16px;
+}
+
+.emotion-66 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-67 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 12px;
+  color: #5c606c;
+}
+
+.emotion-67 b {
+  font-weight: 600;
+}
+
+.emotion-68 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.emotion-68:hover,
+.emotion-68:focus,
+.emotion-68:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-68:disabled,
+.emotion-68:disabled:active,
+.emotion-68:disabled:hover {
+  cursor: default;
+}
+
+.emotion-68:disabled,
+.emotion-68:disabled:active,
+.emotion-68:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-68 svg {
+  fill: #5c606c;
+}
+
+.emotion-68:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-68:focus,
+.emotion-68:hover {
+  background: #d9dadd;
+}
+
+.emotion-69 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-70 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: transparent;
+  color: #5c606c;
+  min-width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #5c606c;
+  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  margin: 0 4px;
+  color: #fff;
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-70:hover,
+.emotion-70:focus,
+.emotion-70:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-70:disabled,
+.emotion-70:disabled:active,
+.emotion-70:disabled:hover {
+  cursor: default;
+}
+
+.emotion-70:focus,
+.emotion-70:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-70:disabled,
+.emotion-70:disabled:active,
+.emotion-70:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-70 svg {
+  fill: #5c606c;
+}
+
+.emotion-70:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-70:focus,
+.emotion-70:hover {
+  background: #d9dadd;
+}
+
+.emotion-70:focus,
+.emotion-70:hover {
+  border: 1px solid #8e9199;
+  background: #8e9199;
+}
+
+.emotion-72 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-73 {
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  min-width: 120px;
+}
+
+.emotion-74 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-74:hover,
+.emotion-74:focus,
+.emotion-74:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-74:disabled,
+.emotion-74:disabled:active,
+.emotion-74:disabled:hover {
+  cursor: default;
+}
+
+.emotion-74:focus,
+.emotion-74:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-74:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-74:disabled,
+.emotion-74:disabled:active,
+.emotion-74:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-74 svg {
+  fill: #5c606c;
+}
+
+.emotion-74:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-75 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
 <div
-  className="css-bjn8wh"
+  className="emotion-0"
 >
   <div
-    className="css-907xkp"
+    className="emotion-1"
   >
     <table
-      className="css-1f5rm2b"
+      className="emotion-2"
       role="table"
     >
       <thead>
@@ -1827,26 +4066,26 @@ exports[`Table renders with pagination and selected rows 1`] = `
           role="row"
         >
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
               title="Toggle All Rows Selected"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 onChange={[Function]}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -1857,53 +4096,53 @@ exports[`Table renders with pagination and selected rows 1`] = `
             </label>
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             First Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Last Name
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Age
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Visits
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             Status
           </th>
           <th
-            className="css-25vqih"
+            className="emotion-3"
             colSpan={1}
             role="columnheader"
           >
             <button
-              className="css-ozb61x"
+              className="emotion-14"
               onClick={[Function]}
               type="button"
             >
               Profile Progress
               <svg
-                className="css-4e5si3"
+                className="emotion-15"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -1915,33 +4154,33 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </tr>
       </thead>
       <tbody
-        className="css-1fpax12"
+        className="emotion-16"
         role="rowgroup"
       >
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -1952,42 +4191,42 @@ exports[`Table renders with pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -1995,29 +4234,29 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -2028,42 +4267,42 @@ exports[`Table renders with pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             spiders
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             profession
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             15
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             55
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -2071,29 +4310,29 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -2104,42 +4343,42 @@ exports[`Table renders with pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             profit
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             quiet
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             8
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             79
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             complicated
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -2147,29 +4386,29 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </td>
         </tr>
         <tr
-          className="css-16dbkro"
+          className="emotion-17"
           onClick={null}
           role="row"
         >
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={[Function]}
             role="cell"
           >
             <label
-              className="css-1uoamx5"
+              className="emotion-4"
             >
               <input
                 checked={false}
-                className="css-ojip76"
+                className="emotion-5"
                 disabled={false}
                 type="checkbox"
               />
               <div
-                className="css-bjn8wh"
+                className="emotion-6"
               >
                 <svg
-                  className="css-vbxk2i"
+                  className="emotion-7"
                   viewBox="0 0 16 16"
                 >
                   <use
@@ -2180,42 +4419,42 @@ exports[`Table renders with pagination and selected rows 1`] = `
             </label>
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             hat
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             jelly
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             7
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             56
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
             relationship
           </td>
           <td
-            className="css-wj3v7r"
+            className="emotion-18"
             onClick={null}
             role="cell"
           >
@@ -2225,13 +4464,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
       </tbody>
     </table>
     <div
-      className="css-mfy4g0"
+      className="emotion-65"
     >
       <div
-        className="css-zjik7"
+        className="emotion-66"
       >
         <div
-          className="css-1obq1rs"
+          className="emotion-67"
         >
           1
           -
@@ -2242,13 +4481,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-18ibiql"
+            className="emotion-68"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-1jwstkt"
+              className="emotion-69"
               viewBox="0 0 14 14"
             >
               <use
@@ -2259,7 +4498,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-s5x2y9"
+            className="emotion-70"
             onClick={[Function]}
             type="button"
           >
@@ -2268,13 +4507,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
         </div>
         <div>
           <button
-            className="css-18ibiql"
+            className="emotion-68"
             disabled={true}
             onClick={[Function]}
             type="button"
           >
             <svg
-              className="css-1qr49le"
+              className="emotion-72"
               viewBox="0 0 14 14"
             >
               <use
@@ -2284,16 +4523,16 @@ exports[`Table renders with pagination and selected rows 1`] = `
           </button>
         </div>
         <div
-          className="css-17vatmo"
+          className="emotion-73"
           onClick={[Function]}
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-74"
             type="button"
           >
             10 / page 
             <svg
-              className="css-10s1w"
+              className="emotion-75"
               viewBox="0 0 14 14"
             >
               <use

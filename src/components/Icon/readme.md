@@ -67,7 +67,7 @@ const renderAllIcons = () => {
   return iconNames.map(iconName => {
     const IconComponent = icons[iconName];
     return (
-      <li className={styles.listItem}>
+      <li key={iconName} className={styles.listItem}>
         <IconComponent className={cx(styles.icon, fillStyle)} />
         <CopyText content={iconName}>{iconName}</CopyText>
       </li>

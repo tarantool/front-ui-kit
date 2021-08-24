@@ -2,24 +2,75 @@
 
 exports[`IconHelperSortable renders correctly 1`] = `
 Array [
-  <svg
-    className="css-13315y1"
+  .emotion-0 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+<svg
+    className="emotion-0"
     viewBox="0 0 16 16"
   >
     <use
       xlinkHref="#icon-sort-desc"
     />
   </svg>,
-  <svg
-    className="css-1f5lesb"
+  .emotion-0 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+}
+
+<svg
+    className="emotion-0"
     viewBox="0 0 16 16"
   >
     <use
       xlinkHref="#icon-sort-desc"
     />
   </svg>,
-  <svg
-    className="css-e7m7g3"
+  .emotion-0 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  fill: #e6e7e8!important;
+}
+
+<svg
+    className="emotion-0"
     viewBox="0 0 16 16"
   >
     <use

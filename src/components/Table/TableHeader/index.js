@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import type { ColumnInstance, UseSortByColumnProps, HeaderGroup, Row } from 'react-table';
 import { Text } from '../../Text';
 import { Button } from '../../Button';
@@ -50,46 +50,48 @@ function getSortDirection(isSortedDesc?: boolean) {
   return undefined;
 }
 
-export const TableHeader = (props: TableHeaderProps) => {
-  const { headerGroups, dataRows } = props;
-  return (
-    <thead>
-      {headerGroups.map(headerGroup => (
-        <tr {...headerGroup.getHeaderGroupProps()}>
-          {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
-            const sortColumn = () => {
-              column.toggleSortBy && column.toggleSortBy(!column.isSortedDesc, false);
-            };
-            return (
-              <Text
-                tag='th'
-                className={styles.head}
-                {...column.getHeaderProps()}
-              >
-                {
-                  column.canSort && dataRows.length > 0
-                    ?
-                    <Button
-                      intent="plain"
-                      className={styles.buttonSort}
-                      onClick={dataRows.length > 0 ? sortColumn : undefined}
-                      iconRight={props => (
-                        <IconHelperSortable
-                          {...props}
-                          sort={getSortDirection(column.isSortedDesc)}
-                        />
-                      )}
-                    >
-                      {column.render('Header')}
-                    </Button>
-                    : column.render('Header')
-                }
-              </Text>
-            )
-          }
-          )}
-        </tr>
-      ))}
-    </thead>
-  )
-};
+export const TableHeader = React.forwardRef<TableHeaderProps, HTMLTableSectionElement>(
+  (props: TableHeaderProps, ref) => {
+    const { headerGroups, dataRows } = props;
+    return (
+      <thead ref={ref}>
+        {headerGroups.map(headerGroup => (
+          <tr {...headerGroup.getHeaderGroupProps()}>
+            {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
+              const sortColumn = () => {
+                column.toggleSortBy && column.toggleSortBy(!column.isSortedDesc, false);
+              };
+              return (
+                <Text
+                  tag='th'
+                  className={styles.head}
+                  {...column.getHeaderProps()}
+                >
+                  {
+                    column.canSort && dataRows.length > 0
+                      ?
+                      <Button
+                        intent="plain"
+                        className={styles.buttonSort}
+                        onClick={dataRows.length > 0 ? sortColumn : undefined}
+                        iconRight={props => (
+                          <IconHelperSortable
+                            {...props}
+                            sort={getSortDirection(column.isSortedDesc)}
+                          />
+                        )}
+                      >
+                        {column.render('Header')}
+                      </Button>
+                      : column.render('Header')
+                  }
+                </Text>
+              )
+            }
+            )}
+          </tr>
+        ))}
+      </thead>
+    )
+  }
+);

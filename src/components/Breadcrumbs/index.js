@@ -36,7 +36,7 @@ const styles = {
   breadcrumbsList: css`
     width: 100%;
   `,
-  breadcrumbDelimeter: css`
+  breadcrumbDelimiter: css`
     margin: 0 6px;
     color: ${colors.dark40};
     font-size: 16px;
@@ -101,12 +101,20 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
     );
   }
 
-  renderOverflow = (items: any[]) => {
-    const { onLinkClick } = this.props;
+  renderOverflow = (items: BreadcrumbsItem[]) => {
+    const onLinkClick = this.props.onLinkClick;
+
     const itemsCollection = (
       <>
         {items.map(item => (
-          <DropdownItem onClick={() => onLinkClick && onLinkClick(item.path)}>
+          <DropdownItem
+            key={`${item.title}|${item.path || ''}`}
+            onClick={
+              item.path && onLinkClick ?
+                () => item.path ? onLinkClick(item.path) : undefined
+                : undefined
+            }
+          >
             {item.title}
           </DropdownItem>
         ))}
@@ -115,7 +123,7 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
 
     return (
       <React.Fragment>
-        <Text tag="span" className={cx(styles.breadcrumbDelimeter, styles.breadcrumbElement)}>
+        <Text tag="span" className={cx(styles.breadcrumbDelimiter, styles.breadcrumbElement)}>
           /
         </Text>
         <Dropdown items={itemsCollection}>
@@ -128,22 +136,23 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
   renderBreadcrumbWrapper = (props: BreadcrumbsItem, index: number) => {
     const { onLinkClick } = this.props;
     return (
-      <React.Fragment>
-        <Text tag="span" className={cx(styles.breadcrumbDelimeter, styles.breadcrumbElement)}>
+      <React.Fragment key={index}>
+        <Text tag="span" className={cx(styles.breadcrumbDelimiter, styles.breadcrumbElement)}>
           /
         </Text>
-        <BreadcrumbsItemComponent key={index} title={props.title} path={props.path} onLinkClick={onLinkClick} />
+        <BreadcrumbsItemComponent title={props.title} path={props.path} onLinkClick={onLinkClick} />
       </React.Fragment>
     )
   };
 }
 
+const shorterAppName = (appName: string) => appName.length > MAX_APP_NAME_LENGTH
+  ? `${appName.slice(0, MAX_APP_NAME_LENGTH)}...`
+  : appName;
+
 
 function AppName({ appName }) {
   const [ isHover, setHover ] = React.useState(false);
-  const shoterAppName = (appName: string) => appName.length > MAX_APP_NAME_LENGTH
-    ? `${appName.slice(0, MAX_APP_NAME_LENGTH)}...`
-    : appName;
 
   return (
     <Text
@@ -153,7 +162,7 @@ function AppName({ appName }) {
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      {shoterAppName(appName)}
+      {shorterAppName(appName)}
       {isHover &&
         <Text
           tag="span"

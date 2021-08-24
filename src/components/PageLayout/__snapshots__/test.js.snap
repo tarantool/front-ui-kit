@@ -2,53 +2,242 @@
 
 exports[`PageLayout renders succesfully 1`] = `
 Array [
-  <div
-    className="css-1br8pp4"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1420px;
+  min-width: 922px;
+  height: calc(100% - 68px - 60px);
+  padding: 0 30px;
+  margin: 30px auto 30px;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1stuufb"
+      className="emotion-1"
     >
       <h1
-        className="css-1vvherk"
+        className="emotion-2"
       >
         Cluster
       </h1>
       <span
-        className="css-1ggp6x0"
+        className="emotion-3"
       >
         Heading content
       </span>
     </div>
   </div>,
-  <div
-    className="css-18mq3p9"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1420px;
+  min-width: 922px;
+  height: calc(100% - 68px - 60px);
+  padding: 0 30px;
+  margin: 30px auto 30px;
+  box-sizing: border-box;
+  max-width: none;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-4 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-4:last-child {
+  margin-right: 0px;
+}
+
+.emotion-5 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  cursor: default;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-5:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-5 svg {
+  fill: #5c606c;
+}
+
+.emotion-5:disabled svg {
+  fill: #d9dadd;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1stuufb"
+      className="emotion-1"
     >
       <h1
-        className="css-1vvherk"
+        className="emotion-2"
       >
         Cluster
       </h1>
       <div
-        className="css-1tr219l"
+        className="emotion-3"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-4"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-5"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-4"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-5"
             type="button"
           >
             Issues
@@ -57,41 +246,278 @@ Array [
       </div>
     </div>
   </div>,
-  <div
-    className="css-pujxu8"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1420px;
+  min-width: 922px;
+  height: calc(100% - 68px - 60px);
+  padding: 0 30px;
+  margin: 30px auto 30px;
+  box-sizing: border-box;
+  max-width: none;
+  margin-top: 20px;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-color: #fea39e;
+  background-color: #fff1f0;
+  color: #f5222d;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0 0 20px;
+}
+
+.emotion-1 b {
+  font-weight: 600;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-left: 40px;
+  margin-right: auto;
+}
+
+.emotion-5 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-5:last-child {
+  margin-right: 0px;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.emotion-7 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-7::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-7::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-9 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #c9cace;
+}
+
+.emotion-11 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-11:hover,
+.emotion-11:focus,
+.emotion-11:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active,
+.emotion-11:disabled:hover {
+  cursor: default;
+}
+
+.emotion-11:focus,
+.emotion-11:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-11:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-11:disabled,
+.emotion-11:disabled:active,
+.emotion-11:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-11 svg {
+  fill: #5c606c;
+}
+
+.emotion-11:disabled svg {
+  fill: #d9dadd;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1e77lro"
+      className="emotion-1"
     >
       Hello, I'm error!
     </div>
     <div
-      className="css-1stuufb"
+      className="emotion-2"
     >
       <h1
-        className="css-1b2tio5"
+        className="emotion-3"
       >
         Reports list
       </h1>
       <div
-        className="css-t9oodn"
+        className="emotion-4"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-5"
         >
           <div
-            className="css-jwj6c2"
+            className="emotion-6"
           >
             <input
-              className="css-18swi04"
+              className="emotion-7"
               onBlur={[Function]}
               onFocus={[Function]}
             />
             <div
-              className="css-6kpmax"
+              className="emotion-8"
             >
               <svg
-                className="css-1oq5xej"
+                className="emotion-9"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -102,10 +528,10 @@ Array [
           </div>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-5"
         >
           <button
-            className="css-y3htlr"
+            className="emotion-11"
             type="button"
           >
             Info
@@ -114,36 +540,261 @@ Array [
       </div>
     </div>
   </div>,
-  <div
-    className="css-18mq3p9"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1420px;
+  min-width: 922px;
+  height: calc(100% - 68px - 60px);
+  padding: 0 30px;
+  margin: 30px auto 30px;
+  box-sizing: border-box;
+  max-width: none;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-left: 40px;
+  margin-right: auto;
+}
+
+.emotion-4 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-4:last-child {
+  margin-right: 0px;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.emotion-6 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-8 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #c9cace;
+}
+
+.emotion-10 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-10:hover,
+.emotion-10:focus,
+.emotion-10:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
+  cursor: default;
+}
+
+.emotion-10:focus,
+.emotion-10:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-10:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-10 svg {
+  fill: #5c606c;
+}
+
+.emotion-10:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1stuufb"
+      className="emotion-1"
     >
       <h1
-        className="css-1b2tio5"
+        className="emotion-2"
       >
         Reports list
       </h1>
       <div
-        className="css-t9oodn"
+        className="emotion-3"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-4"
         >
           <div
-            className="css-jwj6c2"
+            className="emotion-5"
           >
             <input
-              className="css-18swi04"
+              className="emotion-6"
               onBlur={[Function]}
               onFocus={[Function]}
             />
             <div
-              className="css-6kpmax"
+              className="emotion-7"
             >
               <svg
-                className="css-1oq5xej"
+                className="emotion-8"
                 viewBox="0 0 16 16"
               >
                 <use
@@ -154,10 +805,10 @@ Array [
           </div>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-4"
         >
           <button
-            className="css-y3htlr"
+            className="emotion-10"
             type="button"
           >
             Info
@@ -165,23 +816,23 @@ Array [
         </div>
       </div>
       <div
-        className="css-1tr219l"
+        className="emotion-11"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-4"
         >
           <button
-            className="css-y3htlr"
+            className="emotion-10"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-4"
         >
           <button
-            className="css-y3htlr"
+            className="emotion-10"
             type="button"
           >
             Info
@@ -195,40 +846,182 @@ Array [
 
 exports[`PageLayoutWithRef renders succesfully 1`] = `
 Array [
-  <div
-    className="css-1br8pp4"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1420px;
+  min-width: 922px;
+  height: calc(100% - 68px - 60px);
+  padding: 0 30px;
+  margin: 30px auto 30px;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-5 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-5:last-child {
+  margin-right: 0px;
+}
+
+.emotion-6 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-6:hover,
+.emotion-6:focus,
+.emotion-6:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  cursor: default;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-6:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-6 svg {
+  fill: #5c606c;
+}
+
+.emotion-6:disabled svg {
+  fill: #d9dadd;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1stuufb"
+      className="emotion-1"
     >
       <h1
-        className="css-1vvherk"
+        className="emotion-2"
       >
         Cluster
       </h1>
       <span
-        className="css-1ggp6x0"
+        className="emotion-3"
       >
         Heading content
       </span>
       <div
-        className="css-1tr219l"
+        className="emotion-4"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-5"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-6"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-5"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-6"
             type="button"
           >
             Issues
@@ -237,40 +1030,182 @@ Array [
       </div>
     </div>
   </div>,
-  <div
-    className="css-1br8pp4"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1420px;
+  min-width: 922px;
+  height: calc(100% - 68px - 60px);
+  padding: 0 30px;
+  margin: 30px auto 30px;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-bottom: 15px;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  margin-right: auto;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-5 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-5:last-child {
+  margin-right: 0px;
+}
+
+.emotion-6 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-6:hover,
+.emotion-6:focus,
+.emotion-6:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  cursor: default;
+}
+
+.emotion-6:focus,
+.emotion-6:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-6:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-6:disabled,
+.emotion-6:disabled:active,
+.emotion-6:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-6 svg {
+  fill: #5c606c;
+}
+
+.emotion-6:disabled svg {
+  fill: #d9dadd;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1stuufb"
+      className="emotion-1"
     >
       <h1
-        className="css-1vvherk"
+        className="emotion-2"
       >
         Cluster
       </h1>
       <span
-        className="css-1ggp6x0"
+        className="emotion-3"
       >
         Heading content
       </span>
       <div
-        className="css-1tr219l"
+        className="emotion-4"
       >
         <div
-          className="css-1zje6z"
+          className="emotion-5"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-6"
             type="button"
           >
             Details
           </button>
         </div>
         <div
-          className="css-1zje6z"
+          className="emotion-5"
         >
           <button
-            className="css-1mocbyz"
+            className="emotion-6"
             type="button"
           >
             Issues

@@ -56,7 +56,7 @@ const iconWrapSizes = {
 };
 
 export type InputProps = {
-  autoComplete?: 'on' | 'off',
+  autoComplete?: 'on' | 'off' | 'new-password',
   autoFocus?: boolean,
   className?: string,
   onClearClick?: (e?: MouseEvent) => any,

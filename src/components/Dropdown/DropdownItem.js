@@ -36,7 +36,7 @@ type DropdownItemProps = {
   onClick?: (e: MouseEvent | KeyboardEvent) => void
 }
 
-export const DropdownItem = (
+export const DropdownItem = React.memo<DropdownItemProps>((
   {
     className,
     color,
@@ -44,13 +44,17 @@ export const DropdownItem = (
     ...props
   }: DropdownItemProps
 ) => {
-  const keyPressHandler = (e: KeyboardEvent) => {
+  const handleKeyDownCapture = React.useCallback((e: KeyboardEvent) => {
     if (e.keyCode === 13) {
       e.preventDefault();
       e.stopPropagation();
       onClick && onClick(e);
     }
-  };
+  }, [onClick]);
+
+  const handleMouseEnter = React.useCallback((e: any) => {
+    e.target && e.target.focus();
+  }, []);
 
   return (
     <div
@@ -58,10 +62,8 @@ export const DropdownItem = (
       tabIndex={0}
       className={cx(textStyles.basic, styles.item(color), className)}
       onClick={onClick}
-      onKeyDownCapture={keyPressHandler}
-      onMouseEnter={e => {
-        e.target && e.target.focus();
-      }}
+      onKeyDownCapture={handleKeyDownCapture}
+      onMouseEnter={handleMouseEnter}
     />
   );
-};
+});

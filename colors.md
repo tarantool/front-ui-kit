@@ -38,7 +38,7 @@ const colorsArray = Object.entries(colors);
 <>
   <Text>Colors</Text>
   <div>
-    {colorsArray.map(([name, color]) => <Color name={name} color={color} />)}
+    {colorsArray.map(([name, color]) => <Color key={name} name={name} color={color} />)}
   </div>
 </>
 ```

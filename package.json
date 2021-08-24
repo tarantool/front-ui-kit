@@ -3,80 +3,105 @@
   "version": "0.41.0",
   "description": "UI component library for Tarantool",
   "homepage": "https://tarantool.github.io/front-ui-kit/#section-readme",
-  "source": "src/index.js",
-  "main": "dist/uiKit.js",
-  "module": "dist/uiKit-es.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tarantool/front-ui-kit"
   },
+  "license": "ISC",
+  "author": "Roman Babaev <r.babaev@corp.mail.ru>",
+  "main": "dist/uiKit.js",
+  "module": "dist/uiKit-es.js",
+  "source": "src/index.js",
   "scripts": {
-    "test": "jest",
-    "test:update": "jest -u",
-    "start": "styleguidist server",
     "build": "styleguidist build",
     "flow": "flow",
     "lint": "eslint src",
     "lint:ci": "eslint --max-warnings 0 src",
     "lint:fix": "eslint --fix src",
     "precommit": "npm run lint && npm run flow",
-    "rollup": "NODE_ENV=production ./node_modules/.bin/rollup -c"
+    "rollup": "npm run rollup:prod",
+    "rollup:cmd": "rollup -c",
+    "rollup:prod": "cross-env NODE_ENV=production npm run rollup:cmd",
+    "start": "styleguidist server",
+    "test": "jest",
+    "test:update": "jest -u"
   },
-  "author": "Roman Babaev <r.babaev@corp.mail.ru>",
-  "license": "ISC",
+  "babel": {
+    "plugins": [
+      "@emotion"
+    ],
+    "presets": [
+      "@babel/preset-flow",
+      "react-app"
+    ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "@emotion/jest/serializer"
+    ],
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.svg": "<rootDir>/jestSVGLoader.js",
+      "^.+\\.js$": "babel-jest"
+    }
+  },
   "dependencies": {
-    "@emotion/babel-plugin": "11.3.0",
     "@emotion/css": "11.1.3",
+    "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
-    "@types/react-table": "7.0.23",
-    "babel-jest": "25.4.0",
-    "babel-plugin-emotion": "9.2.6",
-    "emotion-rgba": "0.0.8",
-    "jest": "25.4.0",
+    "emotion-rgba": "0.0.9",
     "lodash": "4.17.21",
-    "markdown-to-jsx": "7.0.0",
-    "postcss": "8.3.0",
-    "prismjs": "1.24.0",
-    "ramda": "0.26.1",
-    "react-dropzone": "11.2.0",
-    "react-scrollbars-custom": "4.0.20",
+    "markdown-to-jsx": "7.1.3",
+    "prismjs": "1.24.1",
+    "ramda": "0.27.1",
+    "react-dropzone": "11.3.4",
+    "react-scrollbars-custom": "4.0.27",
     "react-sortable-hoc": "2.0.0",
-    "react-table": "7.5.1",
-    "react-test-renderer": "16.13.1",
-    "resize-observer-polyfill": "1.5.1",
-    "rollup-plugin-auto-external": "2.0.0",
-    "rollup-plugin-commonjs": "10.1.0",
-    "rollup-svg-sprite-loader": "1.0.3"
+    "react-table": "7.7.0",
+    "resize-observer-polyfill": "1.5.1"
   },
   "devDependencies": {
-    "@babel/core": "7.11.6",
-    "@babel/plugin-external-helpers": "7.10.4",
-    "@babel/preset-env": "7.11.5",
-    "@babel/preset-flow": "7.10.4",
-    "@babel/preset-react": "7.9.4",
-    "autoprefixer": "10.0.1",
+    "@babel/core": "7.15.0",
+    "@babel/plugin-external-helpers": "7.14.5",
+    "@babel/preset-env": "7.15.0",
+    "@babel/preset-flow": "7.14.5",
+    "@babel/preset-react": "7.14.5",
+    "@emotion/babel-plugin": "11.3.0",
+    "@emotion/jest": "11.3.0",
+    "@rollup/plugin-replace": "3.0.0",
+    "@types/react-table": "7.7.2",
+    "array-move": "4.0.0",
+    "autoprefixer": "10.3.2",
     "babel-eslint": "10.1.0",
-    "babel-loader": "8.1.0",
-    "babel-preset-react-app": "9.1.2",
-    "eslint": "7.10.0",
-    "eslint-config-react-app": "5.2.1",
+    "babel-jest": "27.0.6",
+    "babel-loader": "8.2.2",
+    "babel-preset-react-app": "10.0.0",
+    "cross-env": "7.0.3",
+    "eslint": "7.32.0",
+    "eslint-config-react-app": "6.0.0",
     "eslint-loader": "4.0.2",
-    "eslint-plugin-flowtype": "5.2.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsx-a11y": "6.3.1",
-    "eslint-plugin-react": "7.21.2",
-    "eslint-plugin-react-hooks": "4.1.2",
+    "eslint-plugin-flowtype": "5.9.0",
+    "eslint-plugin-import": "2.24.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
     "file-loader": "6.1.0",
     "flow-bin": "0.122.0",
+    "jest": "27.0.6",
+    "postcss": "8.3.6",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-loader": "4.0.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-styleguidist": "11.1.6",
-    "rollup": "2.28.2",
+    "react-styleguidist": "11.1.7",
+    "react-test-renderer": "16.14.0",
+    "rollup": "2.56.3",
+    "rollup-plugin-auto-external": "2.0.0",
     "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-svgo": "1.1.0",
+    "rollup-svg-sprite-loader": "1.0.3",
     "svg-sprite-loader": "5.0.0",
     "svgo": "1.3.2",
     "svgo-loader": "2.2.1",
@@ -85,20 +110,5 @@
   "peerDependencies": {
     "react": ">= 16.8.1",
     "react-dom": ">= 16.8.1"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-flow",
-      "react-app"
-    ],
-    "plugins": [
-      "emotion"
-    ]
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.svg": "<rootDir>/jestSVGLoader.js",
-      "^.+\\.js$": "babel-jest"
-    }
   }
 }

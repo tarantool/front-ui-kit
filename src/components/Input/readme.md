@@ -24,8 +24,8 @@ const toggleDisabled = () => setDisabled(!disabled);
 
 const DropdownButton = withDropdown(Button);
 
-const getDropdownOption = (prefix) => (option) => (
-  <DropdownItem onClick={() => handleSelect(`${prefix}:${option.indexOf(' ') !== -1 ? `"${option}"` : option}`)}>{option}</DropdownItem>
+const getDropdownOption = (prefix) => (option, index) => (
+  <DropdownItem key={`ddo-${prefix}-${index}`} onClick={() => handleSelect(`${prefix}:${option.indexOf(' ') !== -1 ? `"${option}"` : option}`)}>{option}</DropdownItem>
 );
 
 const DropdownControlIcon = ({ className }) => (
@@ -39,7 +39,7 @@ const dropdownExample = (
   <DropdownButton
     items={[
       ...['Healthy', 'Unhealthy'].map(getDropdownOption('status')),
-      <DropdownDivider />,
+      <DropdownDivider key="divider" />,
       ...[
         'Stateful Connector',
         'Input_processor',

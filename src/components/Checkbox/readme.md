@@ -17,8 +17,11 @@ const variants = [
 const [checked, setChecked] = useState([false, true, false, false, true, false]);
 
 const changeState = i => () => {
-  checked[i] = !checked[i];
-  setChecked([...checked]);
+  setChecked(checked => {
+    const result = [...checked];
+    result[i] = !result[i];
+    return result;
+  });
 };
 
 <>
