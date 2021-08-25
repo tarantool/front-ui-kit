@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
-import styled from 'react-emotion';
-import { css, cx } from 'emotion';
+import styled from '@emotion/styled';
+import { css, cx } from '@emotion/css';
 import { useDropzone } from 'react-dropzone';
 import { IconDragFile } from './IconDragFile';
 import { TarantoolLogoSpinner } from '../TarantoolLogoSpinner';

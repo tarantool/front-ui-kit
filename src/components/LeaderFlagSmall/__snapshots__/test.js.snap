@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LeaderFlagSmall renders correctly 1`] = `
+.emotion-0 {
+  width: 42px;
+  height: 8px;
+}
+
 <svg
-  className="css-e7nc70"
+  className="emotion-0"
   viewBox="0 0 42 8"
 >
   <use

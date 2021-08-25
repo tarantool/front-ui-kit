@@ -2,7 +2,7 @@ Universal wrapper component to insert bundled SVG images everywhere.
 
 ```js
 import { useState } from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import {
   ControlsPanel,
   splashGenericErrorSvg,
@@ -11,9 +11,7 @@ import {
   Switcher,
   TarantoolLogoCompact,
   TarantoolLogoFull,
-  windowDeadSvg,
-  windowNoNetworkSvg,
-  windowShockedSvg
+  windowErrorSvg
 } from '@tarantool.io/ui-kit';
 
 const styles = {
@@ -27,7 +25,7 @@ const styles = {
 
 const [darkBg, setDarkBg] = useState(false);
 
-const toggleBg = () => setDarkBg(!darkBg);
+const toggleBg = () => setDarkBg(value => !value);
 
 <div className={cx(styles.wrapper, { [styles.bg]: darkBg })}>
   <ControlsPanel
@@ -39,8 +37,6 @@ const toggleBg = () => setDarkBg(!darkBg);
   <SVGImage glyph={splashSelectFileSvg} />
   <SVGImage glyph={TarantoolLogoCompact} />
   <SVGImage glyph={TarantoolLogoFull} />
-  <SVGImage glyph={windowDeadSvg} />
-  <SVGImage glyph={windowNoNetworkSvg} />
-  <SVGImage glyph={windowShockedSvg} />
+  <SVGImage glyph={windowErrorSvg} />
 </div>
 ```

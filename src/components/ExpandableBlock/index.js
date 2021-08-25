@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { noop } from 'lodash';
 import { Text } from '../Text';
 import { IconChevron } from '../Icon';

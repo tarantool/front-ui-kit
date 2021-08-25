@@ -1,14 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Markdown renders code block 1`] = `
+.emotion-0 {
+  display: block;
+}
+
+.emotion-0 code {
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #040b1d;
+  color: white;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+}
+
+.emotion-1 {
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #040b1d;
+  color: white;
+  position: relative;
+  padding-right: 20px;
+  margin-bottom: 16px;
+}
+
+.emotion-1>code {
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.emotion-2 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 1px 4px;
+  background-color: transparent;
+  color: #5c606c;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #040b1d;
+}
+
+.emotion-2:hover,
+.emotion-2:focus,
+.emotion-2:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-2:disabled,
+.emotion-2:disabled:active,
+.emotion-2:disabled:hover {
+  cursor: default;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-2:disabled,
+.emotion-2:disabled:active,
+.emotion-2:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-2 svg {
+  fill: #5c606c;
+}
+
+.emotion-2:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  fill: white;
+}
+
+.emotion-4 {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-5 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-1dvqj0j"
+  className="emotion-0"
 >
   <pre
-    className="css-h3y5cn"
+    className="emotion-1"
   >
     <button
-      className="css-jen7vt"
+      className="emotion-2"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -19,7 +140,7 @@ exports[`Markdown renders code block 1`] = `
       type="button"
     >
       <svg
-        className="css-1jsrbro"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -28,10 +149,10 @@ exports[`Markdown renders code block 1`] = `
       </svg>
     </button>
     <div
-      className="css-pmzqvx"
+      className="emotion-4"
     >
       <code
-        className="css-rt1r54"
+        className="emotion-5"
       >
         Code block
       </code>
@@ -41,14 +162,53 @@ exports[`Markdown renders code block 1`] = `
 `;
 
 exports[`Markdown renders code inline 1`] = `
+.emotion-0 {
+  display: block;
+}
+
+.emotion-0 code {
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #040b1d;
+  color: white;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin: 10px 0 20px;
+}
+
+.emotion-1 b {
+  font-weight: 600;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-2 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-1dvqj0j"
+  className="emotion-0"
 >
   <p
-    className="css-1hlw7zz"
+    className="emotion-1"
   >
     <code
-      className="css-rt1r54"
+      className="emotion-2"
     >
       Code line
     </code>
@@ -57,17 +217,268 @@ exports[`Markdown renders code inline 1`] = `
 `;
 
 exports[`Markdown renders mixed content 1`] = `
+.emotion-0 {
+  display: block;
+}
+
+.emotion-0 code {
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #040b1d;
+  color: white;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  margin: 20px 0 10px;
+  color: #000;
+}
+
+.emotion-2 {
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin: 10px 0 20px;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-4 {
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #040b1d;
+  color: white;
+  position: relative;
+  padding-right: 20px;
+  margin-bottom: 16px;
+}
+
+.emotion-4>code {
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.emotion-5 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 1px 4px;
+  background-color: transparent;
+  color: #5c606c;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #040b1d;
+}
+
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  cursor: default;
+}
+
+.emotion-5:focus,
+.emotion-5:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-5:disabled,
+.emotion-5:disabled:active,
+.emotion-5:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-5 svg {
+  fill: #5c606c;
+}
+
+.emotion-5:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-6 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  fill: white;
+}
+
+.emotion-7 {
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.emotion-8 {
+  margin: 0;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: #f8f8f2;
+  background: none;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.emotion-8 b {
+  font-weight: 600;
+}
+
+.emotion-8 .token.comment,
+.emotion-8 .token.prolog,
+.emotion-8 .token.doctype,
+.emotion-8 .token.cdata {
+  color: slategray;
+}
+
+.emotion-8 .token.punctuation {
+  color: #f8f8f2;
+}
+
+.emotion-8 .token.namespace {
+  opacity: .7;
+}
+
+.emotion-8 .token.property,
+.emotion-8 .token.tag,
+.emotion-8 .token.constant,
+.emotion-8 .token.symbol,
+.emotion-8 .token.deleted {
+  color: #f92672;
+}
+
+.emotion-8 .token.boolean,
+.emotion-8 .token.number {
+  color: #ae81ff;
+}
+
+.emotion-8 .token.selector,
+.emotion-8 .token.attr-name,
+.emotion-8 .token.string,
+.emotion-8 .token.char,
+.emotion-8 .token.builtin,
+.emotion-8 .token.inserted {
+  color: #a6e22e;
+}
+
+.emotion-8 .token.operator,
+.emotion-8 .token.entity,
+.emotion-8 .token.url,
+.emotion-8 .language-css .token.string,
+.emotion-8 .style .token.string,
+.emotion-8 .token.variable {
+  color: #f8f8f2;
+}
+
+.emotion-8 .token.atrule,
+.emotion-8 .token.attr-value,
+.emotion-8 .token.function,
+.emotion-8 .token.class-name {
+  color: #e6db74;
+}
+
+.emotion-8 .token.keyword {
+  color: #66d9ef;
+}
+
+.emotion-8 .token.regex,
+.emotion-8 .token.important {
+  color: #fd971f;
+}
+
+.emotion-8 .token.important,
+.emotion-8 .token.bold {
+  font-weight: bold;
+}
+
+.emotion-8 .token.italic {
+  font-style: italic;
+}
+
+.emotion-8 .token.entity {
+  cursor: help;
+}
+
 <div
-  className="css-1dvqj0j"
+  className="emotion-0"
 >
   <div>
     <h2
-      className="css-13lsgy9"
+      className="emotion-1"
       id="connect-to-tarantool-cartridge-using-python-clienthttpsgithubcomtarantooltarantool-python"
     >
       Connect to Tarantool Cartridge using 
       <a
-        className="css-k47rv5"
+        className="emotion-2"
         href="https://github.com/tarantool/tarantool-python"
         target="_blank"
       >
@@ -75,7 +486,7 @@ exports[`Markdown renders mixed content 1`] = `
       </a>
     </h2>
     <p
-      className="css-1hlw7zz"
+      className="emotion-3"
     >
       First, 
       <strong>
@@ -92,10 +503,10 @@ exports[`Markdown renders mixed content 1`] = `
       :
     </p>
     <pre
-      className="css-h3y5cn"
+      className="emotion-4"
     >
       <button
-        className="css-jen7vt"
+        className="emotion-5"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -106,7 +517,7 @@ exports[`Markdown renders mixed content 1`] = `
         type="button"
       >
         <svg
-          className="css-1jsrbro"
+          className="emotion-6"
           viewBox="0 0 16 16"
         >
           <use
@@ -115,25 +526,25 @@ exports[`Markdown renders mixed content 1`] = `
         </svg>
       </button>
       <div
-        className="css-pmzqvx"
+        className="emotion-7"
       >
         <code
-          className="language-bash css-fkp2zu"
+          className="language-bash emotion-8"
         >
           pip3 install tarantool
         </code>
       </div>
     </pre>
     <p
-      className="css-1hlw7zz"
+      className="emotion-3"
     >
       Create a file example.py with the code to get started:
     </p>
     <pre
-      className="css-h3y5cn"
+      className="emotion-4"
     >
       <button
-        className="css-jen7vt"
+        className="emotion-5"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -144,7 +555,7 @@ exports[`Markdown renders mixed content 1`] = `
         type="button"
       >
         <svg
-          className="css-1jsrbro"
+          className="emotion-6"
           viewBox="0 0 16 16"
         >
           <use
@@ -153,10 +564,10 @@ exports[`Markdown renders mixed content 1`] = `
         </svg>
       </button>
       <div
-        className="css-pmzqvx"
+        className="emotion-7"
       >
         <code
-          className="language-python css-fkp2zu"
+          className="language-python emotion-8"
         >
           from tarantool import Connection
 c = Connection(
@@ -173,15 +584,15 @@ print(results)
       </div>
     </pre>
     <p
-      className="css-1hlw7zz"
+      className="emotion-3"
     >
       Run the script
     </p>
     <pre
-      className="css-h3y5cn"
+      className="emotion-4"
     >
       <button
-        className="css-jen7vt"
+        className="emotion-5"
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -192,7 +603,7 @@ print(results)
         type="button"
       >
         <svg
-          className="css-1jsrbro"
+          className="emotion-6"
           viewBox="0 0 16 16"
         >
           <use
@@ -201,10 +612,10 @@ print(results)
         </svg>
       </button>
       <div
-        className="css-pmzqvx"
+        className="emotion-7"
       >
         <code
-          className="language-bash css-fkp2zu"
+          className="language-bash emotion-8"
         >
           python3 example.py
         </code>
@@ -215,26 +626,75 @@ print(results)
 `;
 
 exports[`Markdown renders with built-in component overriding 1`] = `
+.emotion-0 {
+  display: block;
+}
+
+.emotion-0 code {
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #040b1d;
+  color: white;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+}
+
+.emotion-1 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  margin: 20px 0 10px;
+  color: #000;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin: 10px 0 20px;
+}
+
+.emotion-2 b {
+  font-weight: 600;
+}
+
+.emotion-3 {
+  padding: 10px 40px 1px;
+  border-radius: 4px;
+  margin: 10px 0 20px;
+  background-color: #f0f2f5;
+}
+
+.emotion-5 {
+  margin: 10px 0;
+}
+
 <div
-  className="css-1dvqj0j"
+  className="emotion-0"
 >
   <div>
     <h1
-      className="css-1nfljoo"
+      className="emotion-1"
       id="bee-careful"
     >
       Bee careful
     </h1>
     <p
-      className="css-1hlw7zz"
+      className="emotion-2"
     >
       Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
     </p>
     <blockquote
-      className="css-1gmsj2n"
+      className="emotion-3"
     >
       <p
-        className="css-1hlw7zz"
+        className="emotion-2"
       >
         Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
       </p>
@@ -243,17 +703,17 @@ exports[`Markdown renders with built-in component overriding 1`] = `
       className="iAmOverridedComponent"
     >
       <li
-        className="css-1tx38fa"
+        className="emotion-5"
       >
         Create file
       </li>
       <li
-        className="css-1tx38fa"
+        className="emotion-5"
       >
         Rename file
       </li>
       <li
-        className="css-1tx38fa"
+        className="emotion-5"
       >
         Save file
       </li>

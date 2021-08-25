@@ -3,7 +3,7 @@ To keep good looking UI, pass to `message` text which can fit at one row.
 
 ```js
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   Button,
   colors,
@@ -44,30 +44,35 @@ const toggle = key => () => setFlags({ ...flags, [key]: !flags[key] });
   <InputGroup className={styles.controls}>
     {[
       <Switcher
+        key="info"
         checked={flags.info}
         onChange={toggle('info')}
       >
         Info tooltip
       </Switcher>,
       <Switcher
+        key="largeMargins"
         checked={flags.largeMargins}
         onChange={toggle('largeMargins')}
       >
         Large margins
       </Switcher>,
       <Switcher
+        key="rightControls"
         checked={flags.rightControls}
         onChange={toggle('rightControls')}
       >
         Right controls
       </Switcher>,
       <Switcher
+        key="preserveMessageSpace"
         checked={flags.preserveMessageSpace}
         onChange={toggle('preserveMessageSpace')}
       >
         Preserve message space
       </Switcher>,
       <Switcher
+        key="subtitle"
         checked={flags.subtitle}
         onChange={toggle('subtitle')}
       >

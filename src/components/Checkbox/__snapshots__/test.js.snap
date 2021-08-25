@@ -2,22 +2,93 @@
 
 exports[`Checkbox renders correctly 1`] = `
 Array [
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
     title="Indeterminate"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-1v31moo"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -26,26 +97,97 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Checked
     </span>
   </label>,
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-1v31moo"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -54,27 +196,98 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Checked
     </span>
   </label>,
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
     title="Initial"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-1v31moo"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -83,26 +296,97 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Checked
     </span>
   </label>,
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={false}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-1v31moo"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -111,26 +395,98 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Initial
     </span>
   </label>,
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  fill: #fcc8cb;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-17jpq69"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -139,26 +495,98 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Checked disabled
     </span>
   </label>,
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  fill: #fcc8cb;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-17jpq69"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -167,26 +595,98 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Disabled
     </span>
   </label>,
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  fill: #fcc8cb;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
   >
     <input
       checked={true}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-17jpq69"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -195,26 +695,98 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Checked disabled
     </span>
   </label>,
-  <label
-    className="css-759u60"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-1 {
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-1+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 3px;
+}
+
+.emotion-1:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-2 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  fill: #fcc8cb;
+  display: block;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+<label
+    className="emotion-0"
   >
     <input
       checked={false}
-      className="css-qjlde6"
+      className="emotion-1"
       disabled={true}
       onChange={[Function]}
       type="checkbox"
     />
     <div
-      className="css-1ysxw4w"
+      className="emotion-2"
     >
       <svg
-        className="css-17jpq69"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -223,7 +795,7 @@ Array [
       </svg>
     </div>
     <span
-      className="css-1ggp6x0"
+      className="emotion-4"
     >
       Disabled
     </span>

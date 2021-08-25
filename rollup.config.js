@@ -3,6 +3,7 @@ import babel from 'rollup-plugin-babel';
 import svgSpriteLoader from 'rollup-svg-sprite-loader';
 import commonjs from 'rollup-plugin-commonjs';
 import autoExternal from 'rollup-plugin-auto-external';
+import replace from '@rollup/plugin-replace';
 
 const rollupBuilds = [
   {
@@ -35,7 +36,13 @@ const rollupBuilds = [
           'react-draggable': ['DraggableCore']
         }
       }),
-      autoExternal()
+      autoExternal(),
+      replace({
+        preventAssignment: true,
+        values: {
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        }
+      })
     ]
   }
 ];

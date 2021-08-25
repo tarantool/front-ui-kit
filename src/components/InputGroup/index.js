@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import * as R from 'ramda';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 
 const styles = {
   wrap: css`
@@ -37,14 +37,22 @@ type InputGroupProps = {
   verticalSort?: boolean
 };
 
+type InputGroupRendererProps = {
+  children?: React.Node[] | React.Node,
+  columns: 1 | 2 | 3,
+  itemClassName?: string
+};
+
 const renderers = {
-  horizontal: (children, columns, itemClassName) => children instanceof Array
-    ? children.map(child => (
-      <div className={cx(styles.input, styles.columns[columns - 1], itemClassName)}>{child}</div>
+  Horizontal: ({ children, columns, itemClassName }: InputGroupRendererProps) =>  Array.isArray(children)
+    ? children.map((child, index) => (
+      <div key={index} className={cx(styles.input, styles.columns[columns - 1], itemClassName)}>
+        {child}
+      </div>
     ))
     : <div className={cx(styles.input, styles.columns[columns - 1], itemClassName)}>{children}</div>,
-  vertical: (children, columns, itemClassName) => {
-    const items = children instanceof Array ? children : [children];
+  Vertical: ({ children, columns, itemClassName }: InputGroupRendererProps) => {
+    const items = Array.isArray(children) ? children : [children];
     const columnSize = Math.ceil(items.length / columns);
     const groupedItems: React.Node[][] = R.times(() => [], columns);
 
@@ -53,10 +61,10 @@ const renderers = {
       groupedItems[column].push(item);
     });
 
-    return groupedItems.map(group => (
-      <div className={cx(styles.column, styles.columns[columns - 1])}>
-        {group.map(child => (
-          <div className={cx(styles.columnInput, itemClassName)}>{child}</div>
+    return groupedItems.map((group, index1) => (
+      <div key={index1} className={cx(styles.column, styles.columns[columns - 1])}>
+        {group.map((child, index2) => (
+          <div key={index2} className={cx(styles.columnInput, itemClassName)}>{child}</div>
         ))}
       </div>
     ));
@@ -69,12 +77,13 @@ export const InputGroup = ({
   columns = 1,
   itemClassName,
   verticalSort
-}:
-InputGroupProps) => {
-  const renderer = verticalSort ? renderers.vertical : renderers.horizontal;
+}: InputGroupProps) => {
+  const Renderer = verticalSort ? renderers.Vertical : renderers.Horizontal;
   return (
     <div className={cx(styles.wrap, className)}>
-      {renderer(children, columns, itemClassName)}
+      <Renderer columns={columns} itemClassName={itemClassName}>
+        {children}
+      </Renderer>
     </div>
   );
 };

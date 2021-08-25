@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { createRef } from 'react';
-import { css, cx } from 'react-emotion';
+import { css, cx } from '@emotion/css';
 import { commonInputStyles, commonInputSizes } from './commonStyles';
 import { colors } from '../../variables';
 import { IconCancel } from '../Icon';
@@ -56,7 +56,7 @@ const iconWrapSizes = {
 };
 
 export type InputProps = {
-  autoComplete?: 'on' | 'off',
+  autoComplete?: 'on' | 'off' | 'new-password',
   autoFocus?: boolean,
   className?: string,
   onClearClick?: (e?: MouseEvent) => any,

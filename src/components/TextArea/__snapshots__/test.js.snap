@@ -2,33 +2,249 @@
 
 exports[`TextArea renders correctly 1`] = `
 Array [
-  <div
-    className="css-rnhzxe"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-172ew6"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
       value="Example text"
     />
   </div>,
-  <div
-    className="css-3h7zp9"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border-color: #f5222d;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-172ew6"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
       value="Example text"
     />
   </div>,
-  <div
-    className="css-o72vjl"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-color: #fafafa;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  color: #d9dadd;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-njgcgv"
+      className="emotion-1"
       disabled={true}
       onBlur={[Function]}
       onChange={[MockFunction]}
@@ -36,11 +252,82 @@ Array [
       value="Example text"
     />
   </div>,
-  <div
-    className="css-rnhzxe"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-172ew6"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -48,33 +335,249 @@ Array [
       value="Example text"
     />
   </div>,
-  <div
-    className="css-rnhzxe"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-1agbe1z"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
       value="Example text"
     />
   </div>,
-  <div
-    className="css-3h7zp9"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border-color: #f5222d;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-1agbe1z"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
       value="Example text"
     />
   </div>,
-  <div
-    className="css-o72vjl"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-color: #fafafa;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #d9dadd;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-1wkkly9"
+      className="emotion-1"
       disabled={true}
       onBlur={[Function]}
       onChange={[MockFunction]}
@@ -82,11 +585,82 @@ Array [
       value="Example text"
     />
   </div>,
-  <div
-    className="css-rnhzxe"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-1::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-1::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-1::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+<div
+    className="emotion-0"
   >
     <textarea
-      className="css-1agbe1z"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}

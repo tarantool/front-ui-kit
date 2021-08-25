@@ -2,12 +2,64 @@
 
 exports[`Input simple 1`] = `
 Array [
-  <div
-    className="css-8o7sw6"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+<div
+    className="emotion-0"
     title="Input"
   >
     <input
-      className="css-17erkce"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -15,11 +67,91 @@ Array [
       value="value"
     />
   </div>,
-  <div
-    className="css-8o7sw6"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #c9cace;
+}
+
+<div
+    className="emotion-0"
   >
     <input
-      className="css-16fuuzx"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -27,10 +159,10 @@ Array [
       value="value"
     />
     <div
-      className="css-qidtvj"
+      className="emotion-2"
     >
       <svg
-        className="css-p78i9h"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -44,17 +176,198 @@ Array [
 
 exports[`Input with left-/rightElement 1`] = `
 Array [
-  <div
-    className="css-djig4t"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0>:first-child {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: #e6e7e8;
+  color: #5c606c;
+}
+
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  cursor: default;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background-color: #c9cace;
+}
+
+.emotion-1:active {
+  background-color: #c9cace;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-1 svg {
+  fill: #5c606c;
+}
+
+.emotion-1:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-2 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+  fill: rgba(245, 34, 45, 0.65);
+}
+
+.emotion-3 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-3::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-3::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-3:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-3::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-5 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  fill: #5c606c;
+}
+
+<div
+    className="emotion-0"
   >
     <button
-      className="css-v6zhl2"
+      className="emotion-1"
       onClick={[Function]}
       type="button"
     >
       Filter
       <svg
-        className="css-p9abg5"
+        className="emotion-2"
         viewBox="0 0 14 14"
       >
         <use
@@ -63,7 +376,7 @@ Array [
       </svg>
     </button>
     <input
-      className="css-6lzrz7"
+      className="emotion-3"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -71,10 +384,10 @@ Array [
       value="value"
     />
     <div
-      className="css-qidtvj"
+      className="emotion-4"
     >
       <svg
-        className="css-10o6dkz"
+        className="emotion-5"
         onClick={[Function]}
         viewBox="0 0 16 16"
       >
@@ -84,11 +397,190 @@ Array [
       </svg>
     </div>
   </div>,
-  <div
-    className="css-118hru8"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0>:last-child {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-1::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #c9cace;
+}
+
+.emotion-4 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: #e6e7e8;
+  color: #5c606c;
+}
+
+.emotion-4:hover,
+.emotion-4:focus,
+.emotion-4:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-4:disabled,
+.emotion-4:disabled:active,
+.emotion-4:disabled:hover {
+  cursor: default;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  background-color: #c9cace;
+}
+
+.emotion-4:active {
+  background-color: #c9cace;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-4:disabled,
+.emotion-4:disabled:active,
+.emotion-4:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-4 svg {
+  fill: #5c606c;
+}
+
+.emotion-4:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-5 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+  fill: rgba(245, 34, 45, 0.65);
+}
+
+<div
+    className="emotion-0"
   >
     <input
-      className="css-6lzrz7"
+      className="emotion-1"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onFocus={[Function]}
@@ -96,10 +588,10 @@ Array [
       value="value"
     />
     <div
-      className="css-qidtvj"
+      className="emotion-2"
     >
       <svg
-        className="css-p78i9h"
+        className="emotion-3"
         viewBox="0 0 16 16"
       >
         <use
@@ -108,13 +600,13 @@ Array [
       </svg>
     </div>
     <button
-      className="css-v6zhl2"
+      className="emotion-4"
       onClick={[Function]}
       type="button"
     >
       Filter
       <svg
-        className="css-p9abg5"
+        className="emotion-5"
         viewBox="0 0 14 14"
       >
         <use

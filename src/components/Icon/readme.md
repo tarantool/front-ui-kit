@@ -20,7 +20,7 @@ Use `IconChevron` as a reference. Basic concepts:
 
 ```jsx noeditor
 import { useState } from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import * as icons from './index';
 import {
   ControlsPanel,
@@ -67,7 +67,7 @@ const renderAllIcons = () => {
   return iconNames.map(iconName => {
     const IconComponent = icons[iconName];
     return (
-      <li className={styles.listItem}>
+      <li key={iconName} className={styles.listItem}>
         <IconComponent className={cx(styles.icon, fillStyle)} />
         <CopyText content={iconName}>{iconName}</CopyText>
       </li>

@@ -1,6 +1,6 @@
 ```js
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import {
   Select,
   ControlsPanel,

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { sortableContainer, sortableElement } from 'react-sortable-hoc';
-import { css } from 'react-emotion';
+import { css } from '@emotion/css';
 import { zIndex } from '../../variables';
 
 const styles = {

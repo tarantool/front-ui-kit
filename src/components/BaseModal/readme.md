@@ -12,6 +12,8 @@ const closeModal = () => setOpened(false);
   <BaseModal
     visible={opened}
     onClose={closeModal}
-  />
+  >
+    Modal content
+  </BaseModal>
 </>
 ```

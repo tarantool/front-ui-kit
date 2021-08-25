@@ -21,7 +21,7 @@ import { SectionPreloader } from '@tarantool.io/ui-kit';
 Preview:
 
 ```jsx
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { SectionPreloader } from '@tarantool.io/ui-kit';
 
 <div className={css`height: 400px;`}>

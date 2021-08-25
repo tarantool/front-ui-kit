@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
-import { css, cx } from 'emotion';
-import nanoid from '../../utils/nanoid';
+import { css, cx } from '@emotion/css';
+import { nanoid } from '../../utils/nanoid';
 import { colors } from '../../variables';
 import { Input, type InputProps } from '../Input';
 import { Text } from '../Text';
@@ -77,7 +77,7 @@ export class LabeledInput extends React.Component<LabeledInputProps> {
             { [commonStyles.headingPaneMargin]: largeMargins }
           )}
         >
-          <Text className={commonStyles.label} variant='h4' tag='label' for={id}>{label}</Text>
+          <Text className={commonStyles.label} variant='h4' tag='label' htmlFor={id}>{label}</Text>
           {!!info && (
             <Tooltip className={commonStyles.tooltip} content={info}>
               <IconInfo />

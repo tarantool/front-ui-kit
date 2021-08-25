@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import type { ComponentType } from 'react'
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { colors } from '../../variables';
 import { Button } from '../Button';
 import { Text } from '../Text';

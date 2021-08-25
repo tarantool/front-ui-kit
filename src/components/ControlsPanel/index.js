@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 
 const styles = {
   outer: css`
@@ -30,11 +30,10 @@ export const ControlsPanel = ({
   className,
   controls = [],
   thin
-}:
-ControlsPanelProps) => (
+}: ControlsPanelProps) => (
   <div className={cx(styles.outer, className)}>
-    {controls && controls.map(control => control
-      ? <div className={cx(styles.control, { [styles.thin]: thin })}>{control}</div>
-      : null)}
+    {controls && controls.filter(Boolean).map((control, index) => {
+      return <div key={index} className={cx(styles.control, { [styles.thin]: thin })}>{control}</div>
+    })}
   </div>
 );

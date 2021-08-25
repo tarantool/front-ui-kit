@@ -2,20 +2,138 @@
 
 exports[`LabeledInput renders correctly 1`] = `
 Array [
-  <div
-    className="css-1r2f04i"
+  .emotion-0 {
+  margin-bottom: 10px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  margin-bottom: 0;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+.emotion-3 {
+  cursor: pointer;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.emotion-4 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+  border-color: #f5222d;
+  margin-top: 6px;
+}
+
+.emotion-6 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-7 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  min-height: 20px;
+  color: #f5222d;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1v2kmxl"
+      className="emotion-1"
     >
       <label
-        className="css-dpor9z"
-        for="1"
+        className="emotion-2"
+        htmlFor="1"
       >
         Label
       </label>
       <div
-        className="css-vj79ep"
+        className="emotion-3"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseEnter={[Function]}
@@ -24,7 +142,7 @@ Array [
         placement="top"
       >
         <svg
-          className="css-1fn93nz"
+          className="emotion-4"
           viewBox="0 0 16 16"
         >
           <use
@@ -34,11 +152,11 @@ Array [
       </div>
     </div>
     <div
-      className="css-kha4rs"
+      className="emotion-5"
       title="Input"
     >
       <input
-        className="css-17erkce"
+        className="emotion-6"
         id="1"
         onBlur={[Function]}
         onChange={[Function]}
@@ -48,35 +166,223 @@ Array [
       />
     </div>
     <p
-      className="css-1ddecx1"
+      className="emotion-7"
     >
       Field is required
     </p>
   </div>,
-  <div
-    className="css-1r2f04i"
+  .emotion-0 {
+  margin-bottom: 10px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  margin-bottom: 0;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 32px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+  margin-top: 6px;
+}
+
+.emotion-5 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-7 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 1px 9px;
+  line-height: 18px;
+  font-size: 12px;
+  background-color: transparent;
+  color: #5c606c;
+  padding: 0;
+}
+
+.emotion-7:hover,
+.emotion-7:focus,
+.emotion-7:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-7:disabled,
+.emotion-7:disabled:active,
+.emotion-7:disabled:hover {
+  cursor: default;
+}
+
+.emotion-7:focus,
+.emotion-7:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-7:disabled,
+.emotion-7:disabled:active,
+.emotion-7:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-7 svg {
+  fill: #5c606c;
+}
+
+.emotion-7:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-8 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  display: block;
+}
+
+.emotion-9 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  min-height: 20px;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1v2kmxl"
+      className="emotion-1"
     >
       <label
-        className="css-dpor9z"
-        for="2"
+        className="emotion-2"
+        htmlFor="2"
       >
         Label
       </label>
       <span
-        className="css-1dhlryp"
+        className="emotion-3"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-u5wcni"
+      className="emotion-4"
       title="Input"
     >
       <input
-        className="css-16fuuzx"
+        className="emotion-5"
         id="2"
         onBlur={[Function]}
         onChange={[Function]}
@@ -86,15 +392,15 @@ Array [
         value="qwertyuiop"
       />
       <div
-        className="css-qidtvj"
+        className="emotion-6"
       >
         <button
-          className="css-gl759r"
+          className="emotion-7"
           onClick={[Function]}
           type="button"
         >
           <svg
-            className="css-197j0b9"
+            className="emotion-8"
             viewBox="0 0 16 16"
           >
             <use
@@ -105,33 +411,138 @@ Array [
       </div>
     </div>
     <p
-      className="css-5ut22t"
+      className="emotion-9"
     />
   </div>,
-  <div
-    className="css-1r2f04i"
+  .emotion-0 {
+  margin-bottom: 10px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  margin-bottom: 0;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 32px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+  margin-top: 6px;
+}
+
+.emotion-5 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  min-height: 20px;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1v2kmxl"
+      className="emotion-1"
     >
       <label
-        className="css-dpor9z"
-        for="3"
+        className="emotion-2"
+        htmlFor="3"
       >
         Label
       </label>
       <span
-        className="css-1dhlryp"
+        className="emotion-3"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-u5wcni"
+      className="emotion-4"
       title="Input"
     >
       <input
-        className="css-17erkce"
+        className="emotion-5"
         id="3"
         onBlur={[Function]}
         onChange={[Function]}
@@ -141,35 +552,159 @@ Array [
       />
     </div>
     <p
-      className="css-5ut22t"
+      className="emotion-6"
     >
       Field is required
     </p>
   </div>,
-  <div
-    className="css-1r2f04i"
+  .emotion-0 {
+  margin-bottom: 10px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  margin-bottom: 0;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 32px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-top: 6px;
+}
+
+.emotion-5 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-5 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-5::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-5::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-5::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  min-height: 20px;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-1v2kmxl"
+      className="emotion-1"
     >
       <label
-        className="css-dpor9z"
-        for="4"
+        className="emotion-2"
+        htmlFor="4"
       >
         Multiline labeled input
       </label>
       <span
-        className="css-1dhlryp"
+        className="emotion-3"
       >
         Sub title
       </span>
     </div>
     <div
-      className="css-15clmjk"
+      className="emotion-4"
       title="Input"
     >
       <textarea
-        className="css-172ew6"
+        className="emotion-5"
         id="4"
         onBlur={[Function]}
         onChange={[Function]}
@@ -180,7 +715,7 @@ Array [
       />
     </div>
     <p
-      className="css-5ut22t"
+      className="emotion-6"
     >
       Field is required
     </p>

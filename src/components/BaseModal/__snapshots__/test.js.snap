@@ -3,18 +3,65 @@
 exports[`BaseModal renders closed 1`] = `null`;
 
 exports[`BaseModal renders opened 1`] = `
+.emotion-0 {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 16px;
+  overflow: auto;
+  background-color: rgba(4, 11, 29, 0.65);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
+  outline: none;
+}
+
+.emotion-2 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 <div
-  className="css-18615gn"
+  className="emotion-0"
   onMouseDown={[Function]}
 >
   <div
-    className="css-1vn41o3"
+    className="emotion-1"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     Modal content
     <div
-      className="css-vnc1z7"
+      className="emotion-2"
       onFocus={[Function]}
       tabIndex="0"
     />

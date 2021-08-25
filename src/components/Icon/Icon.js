@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
 import { colors, iconSize } from '../../variables';
 import { SVGImage } from '../SVGImage';
@@ -75,7 +75,7 @@ export type GenericIconProps = {
 };
 
 
-export const Icon = ({
+export const Icon = React.memo<IconProps>(({
   active,
   className,
   glyph,
@@ -84,8 +84,7 @@ export const Icon = ({
   onMouseEnter,
   onClick,
   stroke
-}:
-IconProps) => (
+}: IconProps) => (
   <SVGImage
     glyph={glyph}
     onClick={onClick}
@@ -101,4 +100,4 @@ IconProps) => (
       className
     )}
   />
-);
+));

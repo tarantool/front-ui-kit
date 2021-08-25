@@ -1,11 +1,115 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders with copy btn 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-1 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 1px 4px;
+  background-color: transparent;
+  color: #5c606c;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+.emotion-1:hover,
+.emotion-1:focus,
+.emotion-1:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  cursor: default;
+}
+
+.emotion-1:focus,
+.emotion-1:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-1:disabled,
+.emotion-1:disabled:active,
+.emotion-1:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-1 svg {
+  fill: #5c606c;
+}
+
+.emotion-1:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  cursor: pointer;
+  white-space: pre-wrap;
+  margin-right: 30px;
+}
+
+.emotion-3 b {
+  font-weight: 600;
+}
+
+.emotion-3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  pointer-events: none;
+}
+
 <div
-  className="css-79elbk"
+  className="emotion-0"
 >
   <button
-    className="css-196xw4s"
+    className="emotion-1"
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -16,7 +120,7 @@ exports[`Table renders with copy btn 1`] = `
     type="button"
   >
     <svg
-      className="css-1swpe5a"
+      className="emotion-2"
       viewBox="0 0 16 16"
     >
       <use
@@ -25,7 +129,7 @@ exports[`Table renders with copy btn 1`] = `
     </svg>
   </button>
   <div
-    className="css-jj6lbp"
+    className="emotion-3"
     onClick={[Function]}
   >
     Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
@@ -37,8 +141,35 @@ stack traceback:
 `;
 
 exports[`Table renders with more btm 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  cursor: pointer;
+  white-space: pre-wrap;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  pointer-events: none;
+}
+
 <div
-  className="css-mtitt"
+  className="emotion-0"
   onClick={[Function]}
 >
   Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
@@ -49,8 +180,22 @@ stack traceback:
 `;
 
 exports[`Table renders without more btm 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  white-space: pre-wrap;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
 <span
-  className="css-wk8ak3"
+  className="emotion-0"
 >
   Pipeline execution failed: Function "bad_task" in pipeline "bad_task":
 function_call_error: [string "bad_task"]:1: failure

@@ -1,110 +1,432 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppHeader renders correctly 1`] = `
+.emotion-0 {
+  height: 68px;
+  min-width: 922px;
+  background: #ffffff;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 30px;
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 0;
+  width: 100%;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 6px;
+  color: #8e9199;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  white-space: nowrap;
+}
+
+.emotion-4 b {
+  font-weight: 600;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  cursor:pointer:color: #8e9199;
+  color: #8e9199;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.emotion-5 b {
+  font-weight: 600;
+}
+
+.emotion-5:hover,
+.emotion-5:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-5:hover,
+.emotion-5:focus,
+.emotion-5 a:link,
+.emotion-5 a:visited,
+.emotion-5:active {
+  color: #8e9199;
+}
+
+.emotion-5:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-16 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: 1px;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.emotion-18 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-18:last-child {
+  margin-right: 0px;
+}
+
+.emotion-19 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 8px;
+  background-color: transparent;
+  color: #5c606c;
+}
+
+.emotion-19:hover,
+.emotion-19:focus,
+.emotion-19:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-19:disabled,
+.emotion-19:disabled:active,
+.emotion-19:disabled:hover {
+  cursor: default;
+}
+
+.emotion-19:focus,
+.emotion-19:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-19:disabled,
+.emotion-19:disabled:active,
+.emotion-19:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-19 svg {
+  fill: #5c606c;
+}
+
+.emotion-19:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-20 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #c9cace;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+}
+
+.emotion-22 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-22:hover,
+.emotion-22:focus,
+.emotion-22:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-22:disabled,
+.emotion-22:disabled:active,
+.emotion-22:disabled:hover {
+  cursor: default;
+}
+
+.emotion-22:focus,
+.emotion-22:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-22:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-22:disabled,
+.emotion-22:disabled:active,
+.emotion-22:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-22 svg {
+  fill: #5c606c;
+}
+
+.emotion-22:disabled svg {
+  fill: #d9dadd;
+}
+
 <div
-  className="css-1r0gly9"
+  className="emotion-0"
 >
   <div
-    className="css-vbwxsy"
+    className="emotion-1"
   >
     <span
-      className="css-4haz1u"
+      className="emotion-2"
     >
       Project name
     </span>
     <div
-      className="css-vzwfet"
+      className="emotion-3"
     >
       <span
-        className="css-sw5zrb"
+        className="emotion-4"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="emotion-5"
         href="/tarantool"
         onClick={[Function]}
       >
         @tarantool.io/ui-kit
       </a>
       <span
-        className="css-sw5zrb"
+        className="emotion-4"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="emotion-5"
         href="/section-ui-components"
         onClick={[Function]}
       >
         UI Components
       </a>
       <span
-        className="css-sw5zrb"
+        className="emotion-4"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="emotion-5"
         href="/breadcrumb"
         onClick={[Function]}
       >
         Breadcrumb
       </a>
       <span
-        className="css-sw5zrb"
+        className="emotion-4"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="emotion-5"
         href="/overflow-list"
         onClick={[Function]}
       >
         OverflowList
       </a>
       <span
-        className="css-sw5zrb"
+        className="emotion-4"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="emotion-5"
         href="/resize-sensor"
         onClick={[Function]}
       >
         ResizeSensor
       </a>
       <span
-        className="css-sw5zrb"
+        className="emotion-4"
       >
         /
       </span>
       <a
-        className="css-1994ztc"
+        className="emotion-5"
         href="/resize-sensor-again"
         onClick={[Function]}
       >
         ResizeSensor again
       </a>
       <div
-        className="css-11rp940"
+        className="emotion-16"
       />
     </div>
   </div>
   <div
-    className="css-1p3wnpi"
+    className="emotion-17"
   >
     <div
-      className="css-12ibiio"
+      className="emotion-18"
     >
       <button
-        className="css-6zj69m"
+        className="emotion-19"
         title="Search"
         type="button"
       >
         <svg
-          className="css-1t0dl15"
+          className="emotion-20"
           viewBox="0 0 16 16"
         >
           <use
@@ -114,10 +436,10 @@ exports[`AppHeader renders correctly 1`] = `
       </button>
     </div>
     <div
-      className="css-12ibiio"
+      className="emotion-18"
     >
       <button
-        className="css-ixus2c"
+        className="emotion-22"
         type="button"
       >
         Log in

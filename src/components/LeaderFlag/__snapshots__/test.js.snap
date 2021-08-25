@@ -2,12 +2,34 @@
 
 exports[`LeaderFlag renders correctly 1`] = `
 Array [
-  <div
-    className="css-3u7751"
+  .emotion-0 {
+  position: relative;
+  width: 14px;
+  height: 17px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+.emotion-0:hover {
+  height: 59px;
+}
+
+.emotion-1 {
+  width: 14px;
+  height: 59px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  fill: #b5ec8e;
+}
+
+<div
+    className="emotion-0"
     title="Good"
   >
     <svg
-      className="css-10nodp4"
+      className="emotion-1"
       viewBox="0 0 14 59"
     >
       <use
@@ -15,12 +37,34 @@ Array [
       />
     </svg>
   </div>,
-  <div
-    className="css-3u7751"
+  .emotion-0 {
+  position: relative;
+  width: 14px;
+  height: 17px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+.emotion-0:hover {
+  height: 59px;
+}
+
+.emotion-1 {
+  width: 14px;
+  height: 59px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  fill: #f5222d;
+}
+
+<div
+    className="emotion-0"
     title="Bad"
   >
     <svg
-      className="css-1g6e4c2"
+      className="emotion-1"
       viewBox="0 0 14 59"
     >
       <use
@@ -28,12 +72,34 @@ Array [
       />
     </svg>
   </div>,
-  <div
-    className="css-3u7751"
+  .emotion-0 {
+  position: relative;
+  width: 14px;
+  height: 17px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
+.emotion-0:hover {
+  height: 59px;
+}
+
+.emotion-1 {
+  width: 14px;
+  height: 59px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  fill: #faad14;
+}
+
+<div
+    className="emotion-0"
     title="Bad"
   >
     <svg
-      className="css-j89nl8"
+      className="emotion-1"
       viewBox="0 0 14 59"
     >
       <use

@@ -1,26 +1,123 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select Render empty 1`] = `
+.emotion-0 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.emotion-1>:first-child {
+  cursor: pointer;
+  caret-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-4 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #595959;
+}
+
 <div
-  className="css-1gomreu"
+  className="emotion-0"
   onClick={[Function]}
 >
   <div
-    className="css-1ondgiw"
+    className="emotion-1"
   >
     <input
-      autocomplete="new-password"
-      className="css-16fuuzx"
+      autoComplete="new-password"
+      className="emotion-2"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       placeholder=""
     />
     <div
-      className="css-qidtvj"
+      className="emotion-3"
     >
       <svg
-        className="css-1ews5mj"
+        className="emotion-4"
         viewBox="0 0 14 14"
       >
         <use
@@ -33,16 +130,113 @@ exports[`Select Render empty 1`] = `
 `;
 
 exports[`Select Render with data 1`] = `
+.emotion-0 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.emotion-1>:first-child {
+  cursor: pointer;
+  caret-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-4 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #595959;
+}
+
 <div
-  className="css-1gomreu"
+  className="emotion-0"
   onClick={[Function]}
 >
   <div
-    className="css-1ondgiw"
+    className="emotion-1"
   >
     <input
-      autocomplete="new-password"
-      className="css-16fuuzx"
+      autoComplete="new-password"
+      className="emotion-2"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -50,10 +244,10 @@ exports[`Select Render with data 1`] = `
       value="Male"
     />
     <div
-      className="css-qidtvj"
+      className="emotion-3"
     >
       <svg
-        className="css-1ews5mj"
+        className="emotion-4"
         viewBox="0 0 14 14"
       >
         <use
@@ -66,16 +260,104 @@ exports[`Select Render with data 1`] = `
 `;
 
 exports[`Select Render with data and allow search 1`] = `
+.emotion-0 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 1px #d9dadd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  height: 40px;
+}
+
+.emotion-2 {
+  display: block;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #040b1d;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+  padding-right: 8px;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #d9dadd;
+}
+
+.emotion-2::placeholder {
+  color: #d9dadd;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.emotion-4 {
+  width: 14px;
+  height: 14px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  fill: #595959;
+}
+
 <div
-  className="css-1gomreu"
+  className="emotion-0"
   onClick={[Function]}
 >
   <div
-    className="css-8o7sw6"
+    className="emotion-1"
   >
     <input
-      autocomplete="new-password"
-      className="css-16fuuzx"
+      autoComplete="new-password"
+      className="emotion-2"
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -83,10 +365,10 @@ exports[`Select Render with data and allow search 1`] = `
       value="Male"
     />
     <div
-      className="css-qidtvj"
+      className="emotion-3"
     >
       <svg
-        className="css-1ews5mj"
+        className="emotion-4"
         viewBox="0 0 14 14"
       >
         <use

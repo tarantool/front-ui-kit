@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { css, cx } from 'emotion'
+import { css, cx } from '@emotion/css'
 import { baseFontFamily, colors, monoFontFamily } from '../../variables';
 
 export const textStyles = {

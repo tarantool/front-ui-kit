@@ -2,11 +2,75 @@
 
 exports[`UploadZone renders correctly 1`] = `
 Array [
-  <div
-    className="css-k008qs"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #d9dadd;
+  border-style: dashed;
+  background-color: #fafafa;
+  -webkit-transition: border .24s ease-in-out;
+  transition: border .24s ease-in-out;
+  outline: none;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  width: 100px;
+  height: 80px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  width: 100px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-9zwmpv e1iml2wq0"
+      className="emotion-1 emotion-2"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -20,7 +84,6 @@ Array [
       <input
         accept=""
         autoComplete="off"
-        multiple={true}
         onChange={[Function]}
         onClick={[Function]}
         style={
@@ -32,7 +95,7 @@ Array [
         type="file"
       />
       <svg
-        className="css-1mp790d"
+        className="emotion-3"
         viewBox="0 0 100 80"
       >
         <use
@@ -40,17 +103,96 @@ Array [
         />
       </svg>
       <span
-        className="css-1ayss2c"
+        className="emotion-4"
       >
         Click or drag file to this area to upload
       </span>
     </div>
   </div>,
-  <div
-    className="css-k008qs"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #d9dadd;
+  border-style: dashed;
+  background-color: #fafafa;
+  -webkit-transition: border .24s ease-in-out;
+  transition: border .24s ease-in-out;
+  outline: none;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  width: 100px;
+  height: 80px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  width: 100px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 10px;
+  color: #5c606c;
+}
+
+.emotion-5 b {
+  font-weight: 600;
+}
+
+<div
+    className="emotion-0"
   >
     <div
-      className="css-9zwmpv e1iml2wq0"
+      className="emotion-1 emotion-2"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -64,7 +206,6 @@ Array [
       <input
         accept=""
         autoComplete="off"
-        multiple={true}
         onChange={[Function]}
         onClick={[Function]}
         style={
@@ -76,7 +217,7 @@ Array [
         type="file"
       />
       <svg
-        className="css-1mp790d"
+        className="emotion-3"
         viewBox="0 0 100 80"
       >
         <use
@@ -84,12 +225,12 @@ Array [
         />
       </svg>
       <span
-        className="css-1ayss2c"
+        className="emotion-4"
       >
         Main title
       </span>
       <span
-        className="css-1ucgzvb"
+        className="emotion-5"
       >
         Second title
       </span>

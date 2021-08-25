@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import type { ComponentType } from 'react'
-import { css, cx } from 'react-emotion'
+import { css, cx } from '@emotion/css'
 import { baseFontFamily, colors } from '../../variables';
 import { IconSpinner } from '../Icon';
 
@@ -316,6 +316,7 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
   if (Icon) {
     content.push(
       <Icon
+        key="Icon"
         className={cx(
           styles.icon,
           {
@@ -326,11 +327,12 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
     )
   }
 
-  content.push(children || text)
+  content.push(<React.Fragment key="content">{children || text}</React.Fragment>)
 
   if (IconRight && !isOnlyIcon) {
     content.push(
       <IconRight
+        key="IconRight"
         className={cx(
           styles.icon,
           styles.iconRightMargin
@@ -341,7 +343,7 @@ export const Button = React.forwardRef<ButtonProps, HTMLButtonElement>((
 
   if (loading && !disabled) {
     content.push(
-      <div className={styles.loadingWrap}>
+      <div key="loading" className={styles.loadingWrap}>
         <IconSpinner />
       </div>
     );

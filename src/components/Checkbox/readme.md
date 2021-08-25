@@ -2,7 +2,7 @@ Checkbox example:
 
 ```js
 import { useState } from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Checkbox, ControlsPanel, Text } from '@tarantool.io/ui-kit';
 
 const variants = [
@@ -17,8 +17,11 @@ const variants = [
 const [checked, setChecked] = useState([false, true, false, false, true, false]);
 
 const changeState = i => () => {
-  checked[i] = !checked[i];
-  setChecked([...checked]);
+  setChecked(checked => {
+    const result = [...checked];
+    result[i] = !result[i];
+    return result;
+  });
 };
 
 <>

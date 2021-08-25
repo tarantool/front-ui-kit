@@ -1,16 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`error type renders correctly 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-color: #fea39e;
+  background-color: #fff1f0;
+  color: #f5222d;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-vkintv"
+  className="emotion-0"
 >
   Error alert
 </div>
 `;
 
 exports[`success type renders correctly 1`] = `
+.emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-color: #b5ec8e;
+  background-color: #f6ffee;
+  color: #52c41a;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-1qmzax5"
+  className="emotion-0"
 >
   Success alert
 </div>

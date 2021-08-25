@@ -19,13 +19,13 @@ npm i @tarantool.io/ui-kit
 Add Inter font to your project.
 You can attach font from Google Fonts using link:
 
-```static
+```plain
 https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap
 ```
 
 Optionally you can add Source Code Pro to display monotype texts (code, errors, etc.):
 
-```static
+```plain
 https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Code+Pro:wght@400;500&display=swap
 ```
 

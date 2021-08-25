@@ -1,7 +1,7 @@
 ```js
 import { useState } from 'react';
-import { css, cx } from 'react-emotion';
-import { arrayMove } from 'react-sortable-hoc';
+import { css, cx } from '@emotion/css';
+import { arrayMoveImmutable } from 'array-move';
 import {
   IconBurger,
   LeaderFlagSmall,
@@ -58,6 +58,7 @@ const styles = {
     width: 100%;
   `
 }
+
 const [ data, setData ] = useState(Array.apply(null, { length: 10 }).map((_, index) => ({
   key: index,
   uuid: index,
@@ -71,24 +72,24 @@ const items = data.map((item, index) => (
     index={index}
     key={item.key}
   >
-      <div className={styles.sortableItem}>
-        <Text className={styles.alias} tag='div'>
-          <IconBurger className={styles.iconMargin} />
-          {item.alias || item.uuid}
-        </Text>
-        <LeaderFlagSmall
-          className={styles.leaderFlag}
-        />
-        <UriLabel
-          className={styles.serverUriWrap}
-          uri={item.uri}
-        />
-      </div>
+    <div className={styles.sortableItem}>
+      <Text className={styles.alias} tag='div'>
+        <IconBurger className={styles.iconMargin} />
+        {item.alias || item.uuid}
+      </Text>
+      <LeaderFlagSmall
+        className={styles.leaderFlag}
+      />
+      <UriLabel
+        className={styles.serverUriWrap}
+        uri={item.uri}
+      />
+    </div>
   </DraggableListItem>
 ));
 
 const onChange = ({ oldIndex, newIndex }) => {
-  setData(arrayMove(data, oldIndex, newIndex));
+  setData(data => arrayMoveImmutable(data, oldIndex, newIndex));
 };
 
 <>

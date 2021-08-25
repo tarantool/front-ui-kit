@@ -1,6 +1,6 @@
 ProgressBar accepts values between 0 and 100.
 ```js
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { ProgressBar } from '@tarantool.io/ui-kit';
 
 const style = css`

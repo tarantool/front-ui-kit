@@ -2,26 +2,91 @@
 
 exports[`Link renders correctly 1`] = `
 Array [
-  <span
-    className="css-1ggp6x0"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
+.emotion-1 {
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-1:hover,
+.emotion-1:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<span
+    className="emotion-0"
   >
     Are you 
     <a
-      className="css-k47rv5"
+      className="emotion-1"
       href="/"
     >
       here
     </a>
     ?
   </span>,
-  <a
-    className="css-1l0ar31"
+  .emotion-0 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    className="emotion-0"
     href="/"
   >
     Go there
   </a>,
-  <a
-    className="css-hg9o61"
+  .emotion-0 {
+  margin: 0;
+  font-family: 'Source Code Pro',Menlo,Monaco,Consolas,'Courier New',monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  color: inherit;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0 b {
+  font-weight: 600;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+    className="emotion-0"
     href="/"
   >
     Go there

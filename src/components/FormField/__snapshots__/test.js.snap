@@ -1,22 +1,278 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormField renders correctly 1`] = `
+.emotion-0 {
+  margin-bottom: 10px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 22px;
+  margin-bottom: 0;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.emotion-3 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.emotion-5 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #5c606c;
+}
+
+.emotion-6 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 32px;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.emotion-8 {
+  display: block;
+  margin-right: 24px;
+}
+
+.emotion-8:last-child {
+  margin-right: 0px;
+}
+
+.emotion-9 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-9:hover,
+.emotion-9:focus,
+.emotion-9:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  cursor: default;
+}
+
+.emotion-9:focus,
+.emotion-9:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-9:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-9:disabled,
+.emotion-9:disabled:active,
+.emotion-9:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-9 svg {
+  fill: #5c606c;
+}
+
+.emotion-9:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.emotion-15 {
+  margin: 6px 16px 6px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-17 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.emotion-17+div::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 50%;
+}
+
+.emotion-17:focus+div::before {
+  border-color: rgba(245, 34, 45, 0.55);
+}
+
+.emotion-18 {
+  position: relative;
+  margin-right: 8px;
+}
+
+.emotion-19 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #f5222d;
+  stroke: #f5222d;
+  display: block;
+}
+
+.emotion-20 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-20 b {
+  font-weight: 600;
+}
+
 <div
-  className="css-1r2f04i"
+  className="emotion-0"
 >
   <div
-    className="css-1v2kmxl"
+    className="emotion-1"
   >
     <div
-      className="css-15ums5i"
+      className="emotion-2"
     >
       <span
-        className="css-dpor9z"
+        className="emotion-3"
       >
         VShard group
       </span>
       <div
-        className="css-vj79ep"
+        className="emotion-4"
         onBlur={[Function]}
         onFocus={[Function]}
         onMouseEnter={[Function]}
@@ -25,7 +281,7 @@ exports[`FormField renders correctly 1`] = `
         placement="top"
       >
         <svg
-          className="css-1fn93nz"
+          className="emotion-5"
           viewBox="0 0 16 16"
         >
           <use
@@ -34,39 +290,39 @@ exports[`FormField renders correctly 1`] = `
         </svg>
       </div>
       <span
-        className="css-1dhlryp"
+        className="emotion-6"
       >
         Subtitle
       </span>
     </div>
     <div
-      className="css-84nudp"
+      className="emotion-7"
     >
       <div
-        className="css-13w52vd"
+        className="emotion-8"
       >
         <button
-          className="css-ixus2c"
+          className="emotion-9"
           type="button"
         >
           Right
         </button>
       </div>
       <div
-        className="css-13w52vd"
+        className="emotion-8"
       >
         <button
-          className="css-ixus2c"
+          className="emotion-9"
           type="button"
         >
           Contorls
         </button>
       </div>
       <div
-        className="css-13w52vd"
+        className="emotion-8"
       >
         <button
-          className="css-ixus2c"
+          className="emotion-9"
           type="button"
         >
           Pane
@@ -75,27 +331,27 @@ exports[`FormField renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="css-1w9b8ff"
+    className="emotion-14"
   >
     <div
-      className="css-1dkz5j9"
+      className="emotion-15"
     >
       <label
-        className="css-759u60"
+        className="emotion-16"
       >
         <input
           checked={false}
-          className="css-1gif6wy"
+          className="emotion-17"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 1"
         />
         <div
-          className="css-1ysxw4w"
+          className="emotion-18"
         >
           <svg
-            className="css-e2f20o"
+            className="emotion-19"
             viewBox="0 0 16 16"
           >
             <use
@@ -104,31 +360,31 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="emotion-20"
         >
           group 1
         </span>
       </label>
     </div>
     <div
-      className="css-1dkz5j9"
+      className="emotion-15"
     >
       <label
-        className="css-759u60"
+        className="emotion-16"
       >
         <input
           checked={true}
-          className="css-1gif6wy"
+          className="emotion-17"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 2"
         />
         <div
-          className="css-1ysxw4w"
+          className="emotion-18"
         >
           <svg
-            className="css-e2f20o"
+            className="emotion-19"
             viewBox="0 0 16 16"
           >
             <use
@@ -137,31 +393,31 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="emotion-20"
         >
           group 2
         </span>
       </label>
     </div>
     <div
-      className="css-1dkz5j9"
+      className="emotion-15"
     >
       <label
-        className="css-759u60"
+        className="emotion-16"
       >
         <input
           checked={false}
-          className="css-1gif6wy"
+          className="emotion-17"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 3"
         />
         <div
-          className="css-1ysxw4w"
+          className="emotion-18"
         >
           <svg
-            className="css-e2f20o"
+            className="emotion-19"
             viewBox="0 0 16 16"
           >
             <use
@@ -170,31 +426,31 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="emotion-20"
         >
           group 3
         </span>
       </label>
     </div>
     <div
-      className="css-1dkz5j9"
+      className="emotion-15"
     >
       <label
-        className="css-759u60"
+        className="emotion-16"
       >
         <input
           checked={false}
-          className="css-1gif6wy"
+          className="emotion-17"
           name="vshard_group"
           onChange={[MockFunction]}
           type="radio"
           value="group 4"
         />
         <div
-          className="css-1ysxw4w"
+          className="emotion-18"
         >
           <svg
-            className="css-e2f20o"
+            className="emotion-19"
             viewBox="0 0 16 16"
           >
             <use
@@ -203,7 +459,7 @@ exports[`FormField renders correctly 1`] = `
           </svg>
         </div>
         <span
-          className="css-cwc1xz"
+          className="emotion-20"
         >
           group 4
         </span>

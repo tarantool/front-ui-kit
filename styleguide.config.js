@@ -42,6 +42,7 @@ module.exports = {
       links: [
         {
           rel: 'stylesheet',
+          // eslint-disable-next-line max-len
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Code+Pro:wght@400;500&display=swap'
         }
       ]

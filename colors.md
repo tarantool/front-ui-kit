@@ -2,7 +2,7 @@ UI-Kit components may contain colors that are not yet included in the global col
 Before adding a new color, make sure that it is necessary. Probably the color you need or similar is already in the collection.
 
 ```js
-import { css, cx } from 'emotion';
+import { css, cx } from '@emotion/css';
 import { colors, Text } from '@tarantool.io/ui-kit';
 
 const styles = {
@@ -38,7 +38,7 @@ const colorsArray = Object.entries(colors);
 <>
   <Text>Colors</Text>
   <div>
-    {colorsArray.map(([name, color]) => <Color name={name} color={color} />)}
+    {colorsArray.map(([name, color]) => <Color key={name} name={name} color={color} />)}
   </div>
 </>
 ```

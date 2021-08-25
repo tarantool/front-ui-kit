@@ -15,8 +15,9 @@ const vshard_groups = [
   { name: 'group 6' }
 ];
 
-const renderRadioButtons = () => vshard_groups.map(({ name }) => (
+const buttons = vshard_groups.map(({ name }) => (
   <RadioButton
+    key={name}
     onChange={() => handleChange(name)}
     name='vshard_group'
     value={name}
@@ -28,10 +29,10 @@ const renderRadioButtons = () => vshard_groups.map(({ name }) => (
 
 <>
   <Text variant='h3'>One column</Text>
-  <InputGroup>{renderRadioButtons()}</InputGroup>
+  <InputGroup>{buttons}</InputGroup>
   <Text variant='h3'>Two columns</Text>
-  <InputGroup columns={2}>{renderRadioButtons()}</InputGroup>
+  <InputGroup columns={2}>{buttons}</InputGroup>
   <Text variant='h3'>Three columns</Text>
-  <InputGroup columns={3}>{renderRadioButtons()}</InputGroup>
+  <InputGroup columns={3}>{buttons}</InputGroup>
 </>
 ```

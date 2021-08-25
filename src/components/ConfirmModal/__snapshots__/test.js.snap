@@ -3,22 +3,329 @@
 exports[`ConfirmModal renders correctly hidden state 1`] = `null`;
 
 exports[`ConfirmModal renders correctly loading state 1`] = `
+.emotion-0 {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 16px;
+  overflow: auto;
+  background-color: rgba(4, 11, 29, 0.65);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
+  outline: none;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 auto auto;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.emotion-3:hover {
+  fill: #c9cace;
+}
+
+.emotion-4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  margin-left: auto;
+}
+
+.emotion-7 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-7:last-child {
+  margin-right: 0px;
+}
+
+.emotion-8 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-8:hover,
+.emotion-8:focus,
+.emotion-8:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
+  cursor: default;
+}
+
+.emotion-8:focus,
+.emotion-8:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-8:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-8 svg {
+  fill: #5c606c;
+}
+
+.emotion-8:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-10 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #f5222d;
+  color: #ffffff;
+  position: relative;
+  color: rgba(0, 0, 0, 0);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.emotion-10:hover,
+.emotion-10:focus,
+.emotion-10:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
+  cursor: default;
+}
+
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
+  background-color: #f28a91;
+  color: #ffffff;
+}
+
+.emotion-10 svg {
+  fill: #ffffff;
+}
+
+.emotion-10:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-10:hover,
+.emotion-10:focus,
+.emotion-10:active {
+  cursor: default;
+  color: rgba(0, 0, 0, 0);
+}
+
+.emotion-10>*,
+.emotion-10:hover>*,
+.emotion-10:active>*,
+.emotion-10:focus>* {
+  visibility: hidden;
+}
+
+.emotion-10>*:last-child {
+  visibility: visible;
+}
+
+.emotion-11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-12 {
+  width: 128px;
+  height: 128px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+}
+
+.emotion-13 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 <div
-  className="css-18615gn"
+  className="emotion-0"
   onMouseDown={[Function]}
 >
   <div
-    className="css-xynqqq"
+    className="emotion-1"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-34jfdi"
+      className="emotion-2"
     >
       Please confirm
     </h2>
     <svg
-      className="css-mzwhr0"
+      className="emotion-3"
       onClick={[MockFunction]}
       viewBox="0 0 16 16"
     >
@@ -27,21 +334,21 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
       />
     </svg>
     <div
-      className="css-i9gxme"
+      className="emotion-4"
     >
       Removing user John Appleseed
     </div>
     <div
-      className="css-vtqncq"
+      className="emotion-5"
     >
       <div
-        className="css-99wgdf"
+        className="emotion-6"
       >
         <div
-          className="css-12ibiio"
+          className="emotion-7"
         >
           <button
-            className="css-1oap1v"
+            className="emotion-8"
             onClick={[MockFunction]}
             type="button"
           >
@@ -49,20 +356,20 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="emotion-7"
         >
           <button
             autoFocus={true}
-            className="css-1dd4cey"
+            className="emotion-10"
             onClick={[MockFunction]}
             type="button"
           >
             Remove
             <div
-              className="css-9lvo7z"
+              className="emotion-11"
             >
               <svg
-                className="css-2ujzs2"
+                className="emotion-12"
                 viewBox="0 0 128 128"
               >
                 <use
@@ -75,7 +382,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
       </div>
     </div>
     <div
-      className="css-vnc1z7"
+      className="emotion-13"
       onFocus={[Function]}
       tabIndex="0"
     />
@@ -84,22 +391,284 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
 `;
 
 exports[`ConfirmModal renders correctly visible state 1`] = `
+.emotion-0 {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 40px 16px;
+  overflow: auto;
+  background-color: rgba(4, 11, 29, 0.65);
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
+  outline: none;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  margin: 0 auto auto;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #040b1d;
+  -webkit-font-smoothing: antialiased;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  fill: #000;
+  fill: #8e9199;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.12s;
+  transition-property: fill;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.emotion-3:hover {
+  fill: #c9cace;
+}
+
+.emotion-4 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.emotion-5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 16px;
+  margin-left: auto;
+}
+
+.emotion-7 {
+  display: block;
+  margin-right: 24px;
+  margin-right: 16px;
+}
+
+.emotion-7:last-child {
+  margin-right: 0px;
+}
+
+.emotion-8 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f0f2f5;
+}
+
+.emotion-8:hover,
+.emotion-8:focus,
+.emotion-8:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
+  cursor: default;
+}
+
+.emotion-8:focus,
+.emotion-8:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-8:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-8 svg {
+  fill: #5c606c;
+}
+
+.emotion-8:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-10 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #f5222d;
+  color: #ffffff;
+}
+
+.emotion-10:hover,
+.emotion-10:focus,
+.emotion-10:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
+  cursor: default;
+}
+
+.emotion-10:focus,
+.emotion-10:hover {
+  background-color: #d01d26;
+}
+
+.emotion-10:active {
+  background-color: #d01d26;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
+  background-color: #f28a91;
+  color: #ffffff;
+}
+
+.emotion-10 svg {
+  fill: #ffffff;
+}
+
+.emotion-10:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-11 {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 <div
-  className="css-18615gn"
+  className="emotion-0"
   onMouseDown={[Function]}
 >
   <div
-    className="css-xynqqq"
+    className="emotion-1"
     onKeyDown={[Function]}
     tabIndex={0}
   >
     <h2
-      className="css-34jfdi"
+      className="emotion-2"
     >
       Please confirm
     </h2>
     <svg
-      className="css-mzwhr0"
+      className="emotion-3"
       onClick={[MockFunction]}
       viewBox="0 0 16 16"
     >
@@ -108,21 +677,21 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
       />
     </svg>
     <div
-      className="css-i9gxme"
+      className="emotion-4"
     >
       Removing user John Appleseed
     </div>
     <div
-      className="css-vtqncq"
+      className="emotion-5"
     >
       <div
-        className="css-99wgdf"
+        className="emotion-6"
       >
         <div
-          className="css-12ibiio"
+          className="emotion-7"
         >
           <button
-            className="css-1oap1v"
+            className="emotion-8"
             onClick={[MockFunction]}
             type="button"
           >
@@ -130,11 +699,11 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
           </button>
         </div>
         <div
-          className="css-12ibiio"
+          className="emotion-7"
         >
           <button
             autoFocus={true}
-            className="css-8qjt25"
+            className="emotion-10"
             onClick={[MockFunction]}
             type="button"
           >
@@ -144,7 +713,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
       </div>
     </div>
     <div
-      className="css-vnc1z7"
+      className="emotion-11"
       onFocus={[Function]}
       tabIndex="0"
     />

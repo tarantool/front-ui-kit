@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import { css, cx } from 'react-emotion';
+import { css, cx } from '@emotion/css';
 import { DraggableListItem, DraggableListContainer } from '../DraggableList';
 import { IconBurger } from '../Icon';
 import { Checkbox } from '../Checkbox';

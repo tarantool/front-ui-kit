@@ -8,9 +8,6 @@ import {
   TarantoolLogoSpinner
 } from '@tarantool.io/ui-kit';
 
-console.log(NonIdealState);
-console.log(TarantoolLogoSpinner);
-
 <>
   <NonIdealState
     icon={TarantoolLogoSpinner}
