@@ -5,7 +5,7 @@ import { CodeBlockWrap } from './CodeBlockWrap';
 
 type CodeBlockProps = {
   className?: string,
-  copyBtn?: bool,
+  copyBtn?: boolean,
   text: string,
   language?: 'lua' | 'python' | 'js' | 'javascript' | 'jsx' | 'php' | 'go' | 'ruby'
 };

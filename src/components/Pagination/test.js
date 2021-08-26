@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer';
 import { Pagination, PaginationControlled } from './index';
 
 
-const changePage = () => {};
-const setPageSize = () => {};
+const changePage = () => void 0;
+const setPageSize = () => void 0;
 
 describe('Pagination', () => {
   it('render simple', () => {

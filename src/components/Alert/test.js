@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Alert } from './index';
+
+import { Alert } from '.';
 
 it('error type renders correctly', () => {
   const tree = renderer

@@ -73,8 +73,7 @@ export const Checkbox = ({
   name,
   title,
   value
-}:
-CheckboxProps) => {
+}: CheckboxProps) => {
   const inputRef = useRef(null);
 
   useEffect(

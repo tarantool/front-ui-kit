@@ -87,7 +87,7 @@ type InputState = {
   focused: boolean;
 };
 
-const noop = () => {}
+const noop = () => void 0
 
 export class Input extends React.Component<InputProps, InputState> {
   elementRef = createRef<HTMLInputElement>();

@@ -6,6 +6,8 @@ import { IconBurger } from '../Icon';
 import { LeaderFlagSmall } from '../LeaderFlagSmall';
 import { UriLabel } from '../UriLabel';
 
+const noop = () => void 0;
+
 it('DraggableList renders correctly', () => {
   const data = Array.apply(null, { length: 10 }).map((_, index) => ({
     key: index,
@@ -34,7 +36,7 @@ it('DraggableList renders correctly', () => {
   ));
 
   const tree = renderer.create(
-    <DraggableList items={items} onChange={() => {}} />
+    <DraggableList items={items} onChange={noop} />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();

@@ -1,10 +1,10 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
-import { colors } from '../../variables';
+
 import { Text } from '../Text';
 import { IconHelperClose } from '../IconHelper';
-import { keyFrames } from '../../variables';
+import { colors, keyFrames } from '../../variables';
 
 const styles = {
   wrap: css`

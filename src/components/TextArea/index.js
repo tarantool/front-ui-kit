@@ -6,7 +6,7 @@ import { commonInputStyles, commonInputSizes } from '../Input/commonStyles';
 import { genericStyles } from '../../genericStyles';
 
 export type TextAreaProps = {
-  autoComplete?: 'on' | 'off',  // ?
+  autoComplete?: 'on' | 'off', // ?
   autoFocus?: boolean,
   className?: string,
   disabled?: boolean,
@@ -92,7 +92,7 @@ export class TextArea extends React.Component<TextAreaProps, TextAreaState> {
           className={cx(
             commonInputStyles.input,
             commonInputSizes[size || 'l'],
-            genericStyles.scrollbars,
+            genericStyles.scrollbars, 
             { [commonInputStyles.disabled]: disabled }
           )}
           disabled={disabled}

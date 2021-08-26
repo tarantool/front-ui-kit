@@ -1,4 +1,4 @@
-```
+```typescript
 <Text variant='h1' title='Text title'>Heading 1 - 24/40, 600</Text>
 <Text variant='h2'>Heading 2 - 20/28, 600</Text>
 <Text variant='h3'>Heading 3 - 16/24, 600</Text>

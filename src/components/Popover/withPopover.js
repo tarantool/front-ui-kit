@@ -35,7 +35,7 @@ type withPopoverState = {
 };
 
 export const withPopover = (
-  Component:  React.AbstractComponent<any, HTMLElement> | string
+  Component: React.AbstractComponent<any, HTMLElement> | string
 ) =>
   class Dropdown extends React.PureComponent<withPopoverProps, withPopoverState> {
     popoverRef = React.createRef<HTMLElement>();
@@ -212,6 +212,7 @@ export const withPopover = (
       const {
         className,
         popoverContent,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         popoverClassName,
         ...props
       } = this.props;

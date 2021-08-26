@@ -125,8 +125,7 @@ export const Switcher = ({
   name,
   onChange,
   title
-}:
-SwitcherProps) => (
+}: SwitcherProps) => (
   <label className={cx(styles.label, className)} title={title}>
     <input
       checked={checked}

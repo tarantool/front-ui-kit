@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Text } from './index';
+
+import { Text } from '.';
 
 it('Text renders correctly', () => {
   const tree = renderer.create(

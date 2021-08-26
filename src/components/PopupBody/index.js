@@ -1,4 +1,4 @@
-// @flex
+// @flow
 
 // TODO: move popup components inside Modal
 import * as React from 'react';

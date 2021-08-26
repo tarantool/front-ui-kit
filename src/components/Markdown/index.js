@@ -75,7 +75,7 @@ const components = {
       ? <SyntaxHighlight language={className.substr(5)} text={children} />
       : <Text {...props} variant='code'>{children}</Text>
   ),
-  pre: ({ children, ...props }) => {
+  pre: ({ children }) => {
     const { props: { children: childrenText } = {} } = children;
     return <CodeBlockWrap className={styles.pre} textToCopy={childrenText}>{children}</CodeBlockWrap>
   },

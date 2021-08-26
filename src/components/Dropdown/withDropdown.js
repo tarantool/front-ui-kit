@@ -237,8 +237,11 @@ export const withDropdown = (
       const {
         className,
         items,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         popoverClassName,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         onDropdownVisibleChange,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         autoFocus,
         disabled,
         ...props

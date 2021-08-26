@@ -1,12 +1,26 @@
 const path = require('path');
+const docgen = require('react-docgen');
+
 const { version } = require('./package');
 
+const tsParser = require('react-docgen-typescript').withDefaultConfig({
+  savePropValueAsString: true
+}).parse;
+
+const propsParser = function (filePath, source) {
+  if (filePath.endsWith('.js') || filePath.endsWith('.jsx')) {
+    return docgen.parse(source);
+  }
+
+  return tsParser(filePath);
+};
+
 module.exports = {
-  getComponentPathLine: componentPath => {
+  getComponentPathLine: (componentPath) => {
     const exceptions = ['Icon'];
     const dir = path.dirname(componentPath);
-    const fileName = path.basename(componentPath, '.js');
-    const name = fileName === 'index' ? dir.slice(dir.lastIndexOf('/') + 1) : fileName;
+    const fileName = path.basename(componentPath);
+    const name = fileName === 'index.js' || fileName === 'index.ts' ? dir.slice(dir.lastIndexOf('/') + 1) : fileName;
 
     if (exceptions.includes(name)) return;
     return `import { ${name} } from '@tarantool.io/ui-kit';`;
@@ -24,7 +38,7 @@ module.exports = {
     {
       name: 'UI Components',
       content: './components.md',
-      components: 'src/components/*/index.js',
+      components: 'src/components/*/index.{ts,js}',
       sectionDepth: 1
     },
     {
@@ -58,5 +72,7 @@ module.exports = {
   title: 'Tarantool UI-Kit',
   // tocMode: 'expand',
   usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-  version
+  version,
+  propsParser,
+  resolver: docgen.resolver.findAllComponentDefinitions
 };

@@ -15,7 +15,7 @@ type FormFieldProps = {
   info?: string | React.Node,
   itemClassName?: string,
   label?: string,
-  largeMargins?: bool,
+  largeMargins?: boolean,
   subTitle?: string | React.Node,
   topRightControls?: React.Node[],
   verticalSort?: boolean
@@ -32,8 +32,7 @@ export const FormField = ({
   label,
   largeMargins,
   verticalSort
-}:
-FormFieldProps) => (
+}: FormFieldProps) => (
   <div
     className={cx(
       commonStyles.wrap,

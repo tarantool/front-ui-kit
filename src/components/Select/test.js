@@ -2,6 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Select } from './index';
 
+const noop = () => void 0;
+
 describe('Select', () => {
   it('Render empty', () => {
     const tree = renderer.create(
@@ -9,7 +11,7 @@ describe('Select', () => {
         <Select
           options={[]}
           value={undefined}
-          onChange={() => {}}
+          onChange={noop}
         />
       </>
     ).toJSON();
@@ -23,7 +25,7 @@ describe('Select', () => {
         <Select
           options={[{ label: 'Male', value: 'male' }]}
           value={'male'}
-          onChange={() => {}}
+          onChange={noop}
         />
       </>
     ).toJSON();
@@ -37,7 +39,7 @@ describe('Select', () => {
         <Select
           options={[{ label: 'Male', value: 'male' }]}
           value={'male'}
-          onChange={() => {}}
+          onChange={noop}
           allowSearch
         />
       </>

@@ -18,6 +18,6 @@ const styles = {
   `
 };
 
-export const IconHelperClose = ({ className, onClick, ...props }: GenericIconProps) => (
+export const IconHelperClose = ({ className, onClick }: GenericIconProps) => (
   <IconClose className={cx(styles.closeIcon, className)} onClick={onClick} />
 );

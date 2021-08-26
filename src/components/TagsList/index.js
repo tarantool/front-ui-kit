@@ -40,8 +40,7 @@ export const TagsList = <T>({
   renderItem,
   tagClassName,
   values
-}:
-TagsListProps<T>) => (
+}: TagsListProps<T>) => (
     <div className={cx(styles.wrapper, className)}>
       {heading && (
         <Text className={styles.heading} variant='h5' tag='span'><b>{`${heading}:`}</b></Text>

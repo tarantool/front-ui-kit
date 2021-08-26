@@ -3,6 +3,8 @@ import renderer from 'react-test-renderer';
 import { Button } from '../Button';
 import { Table } from './index';
 
+const noop = () => void 0;
+
 const columns = [
   {
     Header: 'First Name',
@@ -222,7 +224,7 @@ describe('Table', () => {
     ];
 
     const tree = renderer.create(
-      <Table columns={columns} data={data} codeRowKey='code' onSelectedRowsChange={() => {}} pagination/>
+      <Table columns={columns} data={data} codeRowKey='code' onSelectedRowsChange={noop} pagination/>
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -273,12 +275,12 @@ describe('Table', () => {
         data={data}
         tableKey={'id'}
         codeRowKey='code'
-        onSelectedRowsChange={() => {}}
+        onSelectedRowsChange={noop}
         manualPagination={{
           page: 0,
           pageSize: 10,
-          onChangePage: () => {},
-          onChangePageSize: () => {}
+          onChangePage: noop,
+          onChangePageSize: noop
         }}
       />
     ).toJSON();

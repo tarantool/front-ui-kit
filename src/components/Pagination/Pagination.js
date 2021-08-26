@@ -155,7 +155,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
   };
 
   getDropDownItems = (): React.Node[] => this.props.pageSizeOptions.map(pageSize => (
-    <DropdownItem onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
+    <DropdownItem key={pageSize} onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
   ));
 
   render() {

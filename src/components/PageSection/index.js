@@ -42,8 +42,7 @@ export const PageSection = ({
   subTitle,
   title,
   topRightControls
-}:
-PageSectionProps) => {
+}: PageSectionProps) => {
   const isHeadingPaneVisible = title || subTitle || topRightControls;
 
   return (

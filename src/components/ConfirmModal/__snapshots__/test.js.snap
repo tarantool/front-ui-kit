@@ -384,7 +384,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
     <div
       className="emotion-13"
       onFocus={[Function]}
-      tabIndex="0"
+      tabIndex={0}
     />
   </div>
 </div>
@@ -715,7 +715,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
     <div
       className="emotion-11"
       onFocus={[Function]}
-      tabIndex="0"
+      tabIndex={0}
     />
   </div>
 </div>

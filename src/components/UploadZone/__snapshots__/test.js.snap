@@ -34,8 +34,8 @@ Array [
   border-color: #d9dadd;
   border-style: dashed;
   background-color: #fafafa;
-  -webkit-transition: border .24s ease-in-out;
-  transition: border .24s ease-in-out;
+  -webkit-transition: border 0.24s ease-in-out;
+  transition: border 0.24s ease-in-out;
   outline: none;
   cursor: pointer;
 }
@@ -141,8 +141,8 @@ Array [
   border-color: #d9dadd;
   border-style: dashed;
   background-color: #fafafa;
-  -webkit-transition: border .24s ease-in-out;
-  transition: border .24s ease-in-out;
+  -webkit-transition: border 0.24s ease-in-out;
+  transition: border 0.24s ease-in-out;
   outline: none;
   cursor: pointer;
 }

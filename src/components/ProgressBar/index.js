@@ -45,8 +45,7 @@ export const ProgressBar = ({
   className,
   percents,
   intention = defineStatus(percents)
-}:
-ProgressBarProps) => {
+}: ProgressBarProps) => {
   const bar = css`
     &::before {
       width: ${percents}%;

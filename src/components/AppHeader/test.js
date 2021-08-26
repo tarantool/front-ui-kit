@@ -38,8 +38,8 @@ it('AppHeader renders correctly', () => {
       appName='Project name'
       onLinkClick={onLinkClick}
       controls={[
-        <Button title='Search' intent='plain' icon={IconSearch} />,
-        <Button text='Log in' />
+        <Button key={0} title='Search' intent='plain' icon={IconSearch} />,
+        <Button key={1} text='Log in' />
       ]}
     />
   ).toJSON();

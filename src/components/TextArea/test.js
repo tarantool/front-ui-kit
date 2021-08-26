@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { TextArea } from '../TextArea';
+
+import { TextArea } from '.';
 
 const updateState = jest.fn();
 

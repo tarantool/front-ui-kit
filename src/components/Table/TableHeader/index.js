@@ -55,14 +55,15 @@ export const TableHeader = React.forwardRef<TableHeaderProps, HTMLTableSectionEl
     const { headerGroups, dataRows } = props;
     return (
       <thead ref={ref}>
-        {headerGroups.map(headerGroup => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps) => {
+        {headerGroups.map((headerGroup, index1) => (
+          <tr key={index1} {...headerGroup.getHeaderGroupProps()}>
+            {headerGroup.headers.map((column: ColumnInstance & UseSortByColumnProps, index2) => {
               const sortColumn = () => {
                 column.toggleSortBy && column.toggleSortBy(!column.isSortedDesc, false);
               };
               return (
                 <Text
+                  key={index2}
                   tag='th'
                   className={styles.head}
                   {...column.getHeaderProps()}

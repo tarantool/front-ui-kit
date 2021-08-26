@@ -73,8 +73,8 @@ describe('Modal', () => {
         <PopupBody>{sampleText}</PopupBody>
         <PopupFooter
           controls={[
-            <Button intent='primary' text='Accept' />,
-            <Button text='Decline' />
+            <Button key={0} intent='primary' text='Accept' />,
+            <Button key={1} text='Decline' />
           ]}
         />
       </Modal>
@@ -94,8 +94,8 @@ describe('Modal', () => {
         <PopupBody>{sampleText.repeat(40)}</PopupBody>
         <PopupFooter
           controls={[
-            <Button intent='primary' text='Accept' />,
-            <Button text='Decline' />
+            <Button key={0} intent='primary' text='Accept' />,
+            <Button key={1} text='Decline' />
           ]}
         />
       </Modal>
@@ -116,8 +116,8 @@ describe('Modal', () => {
         <Tabbed tabs={tabs} />
         <PopupFooter
           controls={[
-            <Button intent='primary' text='Accept' />,
-            <Button text='Decline' />
+            <Button key={0} intent='primary' text='Accept' />,
+            <Button key={1} text='Decline' />
           ]}
         />
       </Modal>
@@ -134,8 +134,8 @@ describe('Modal', () => {
         onClose={action}
         onSubmit={() => null}
         footerControls={[
-          <Button intent='primary' text='Accept' type='submit' />,
-          <Button text='Decline' onClick={action} />
+          <Button key={0} intent='primary' text='Accept' type='submit' />,
+          <Button key={1} text='Decline' onClick={action} />
         ]}
       >
         <LabeledInput label='First input' id='first-input' />
