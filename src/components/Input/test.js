@@ -25,7 +25,7 @@ const handleSelect = jest.fn();
 const DropdownButton = withDropdown(Button);
 
 const getDropdownOption = prefix => option => (
-  <DropdownItem onClick={() => handleSelect(`${prefix}:${option.indexOf(' ') !== -1 ? `"${option}"` : option}`)}>
+  <DropdownItem key={`${prefix}|${option}`} onClick={() => handleSelect(`${prefix}:${option.indexOf(' ') !== -1 ? `"${option}"` : option}`)}>
     {option}
   </DropdownItem>
 );
@@ -41,7 +41,7 @@ const dropdownExample = (
   <DropdownButton
     items={[
       ...['Healthy', 'Unhealthy'].map(getDropdownOption('status')),
-      <DropdownDivider />,
+      <DropdownDivider key="DropdownDivider" />,
       ...[
         'Stateful Connector',
         'Input_processor',

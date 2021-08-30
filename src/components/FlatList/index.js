@@ -37,8 +37,7 @@ type FlatListProps = {
 export const FlatList = ({
   className,
   children
-}:
-FlatListProps) => (
+}: FlatListProps) => (
   <ul className={cx(styles.outer, className)}>
     {children}
   </ul>

@@ -6,7 +6,7 @@ import { TextArea } from '../TextArea';
 
 const testValue = 'qwertyuiop';
 
-const handleChange = e => null;
+const handleChange = () => void 0;
 
 it('LabeledInput renders correctly', () => {
   const tree = renderer.create(

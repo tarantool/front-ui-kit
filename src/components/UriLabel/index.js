@@ -38,7 +38,7 @@ type UriLabelProps = {
   icon?: React.AbstractComponent<any>,
   title?: string,
   uri?: string,
-  weAreHere?: bool
+  weAreHere?: boolean
 };
 
 export const UriLabel = (

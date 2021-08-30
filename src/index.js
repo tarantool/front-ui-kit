@@ -1,9 +1,7 @@
-export * from './components/Alert';
 export * from './components/AppHeader';
 export * from './components/AppLayout';
 export * from './components/BaseModal';
 export * from './components/Breadcrumbs';
-export * from './components/Button';
 export * from './components/Checkbox';
 export * from './components/CodeBlock';
 export * from './components/ConfirmModal';
@@ -58,7 +56,6 @@ export * from './components/Table';
 export * from './components/Tag';
 export * from './components/TagsList';
 export * from './components/TarantoolLogoSpinner';
-export * from './components/Text';
 export * from './components/TextArea';
 export * from './components/TiledList';
 export * from './components/Tooltip';
@@ -66,4 +63,5 @@ export * from './components/UploadZone';
 export * from './components/UriLabel';
 export * from './genericStyles';
 export * from './images';
-export * from './variables';
+//
+export * from './index.ts';

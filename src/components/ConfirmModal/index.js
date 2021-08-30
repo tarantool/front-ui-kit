@@ -26,6 +26,7 @@ export const ConfirmModal = (
       onClose={onCancel}
       footerControls={[
         <Button
+          key={0}
           intent='base'
           size='l'
           onClick={onCancel}
@@ -33,6 +34,7 @@ export const ConfirmModal = (
           Cancel
         </Button>,
         <Button
+          key={1}
           autoFocus
           intent='primary'
           size='l'

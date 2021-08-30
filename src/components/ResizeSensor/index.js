@@ -59,6 +59,7 @@ export class ResizeSensor extends React.PureComponent<ResizeSensorProps> {
 
   getElement() {
     try {
+      // eslint-disable-next-line react/no-find-dom-node
       return findDOMNode(this);
     } catch {
       // swallow error if findDOMNode is run on unmounted component.

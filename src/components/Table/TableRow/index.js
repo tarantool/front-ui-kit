@@ -81,8 +81,9 @@ export function TableRow({
         }
         {...rowProps}
       >
-        {row.cells.map(cell => (
+        {row.cells.map((cell, index) => (
           <Text
+            key={index}
             tag='td'
             className={cx(styles.col, styles.colText, rowClassName)}
             onClick={

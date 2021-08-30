@@ -38,6 +38,7 @@ type PageCardProps = {
 export const PageCard = ({
   className,
   children,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   showCorner, // TODO: implement
   onClose,
   title = ''

@@ -1,3 +1,4 @@
+// @flow
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
 import { colors, zIndex, INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';

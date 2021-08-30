@@ -27,8 +27,7 @@ export const HealthStatus = ({
   status,
   message,
   title
-}:
-HealthStatusProps) => (
+}: HealthStatusProps) => (
   <Text className={cx(styles.status, className)} variant='p' tag='div' title={title}>
     <DotIndicator state={status === 'healthy' ? 'good' : 'bad'} />
     {message || defaultMessage || status}

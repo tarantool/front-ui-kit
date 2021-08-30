@@ -94,7 +94,7 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
   };
 
   getDropDownItems = (): React.Node[] => this.props.pageSizeOptions.map(pageSize => (
-    <DropdownItem onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
+    <DropdownItem key={pageSize} onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
   ));
 
   render() {

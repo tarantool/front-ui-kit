@@ -79,7 +79,8 @@ export const Icon = React.memo<IconProps>(({
   active,
   className,
   glyph,
-  hasState,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  hasState, // TODO: 'hasState' is defined but never used.
   onMouseLeave,
   onMouseEnter,
   onClick,

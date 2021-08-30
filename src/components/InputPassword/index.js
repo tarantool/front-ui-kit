@@ -38,4 +38,4 @@ export class InputPassword extends React.Component<InputProps, InputPasswordStat
       />
     );
   }
-};
+}

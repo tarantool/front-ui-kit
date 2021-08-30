@@ -168,8 +168,8 @@ it('AppLayout renders correctly', () => {
         appName='Sample app'
         breadcrumbs={breadcrumbs}
         controls={[
-          <Button title='Search' intent='plain' icon={IconSearch} />,
-          <Button text='Log in' />
+          <Button key={0} title='Search' intent='plain' icon={IconSearch} />,
+          <Button key={1} text='Log in' />
         ]}
         onLinkClick={onLinkClick}
       />

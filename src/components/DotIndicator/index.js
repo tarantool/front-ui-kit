@@ -43,8 +43,7 @@ export const DotIndicator = ({
   className,
   // size = 's',
   state = 'inactive'
-}:
-DotIndicatorProps) => {
+}: DotIndicatorProps) => {
   return (
     <span
       className={cx(

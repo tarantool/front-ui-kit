@@ -447,7 +447,7 @@ exports[`Modal renders modal with form 1`] = `
     <div
       className="emotion-17"
       onFocus={[Function]}
-      tabIndex="0"
+      tabIndex={0}
     />
   </form>
 </div>
@@ -788,7 +788,7 @@ exports[`Modal renders modal with large text 1`] = `
     <div
       className="emotion-12"
       onFocus={[Function]}
-      tabIndex="0"
+      tabIndex={0}
     />
   </div>
 </div>
@@ -1244,7 +1244,7 @@ exports[`Modal renders modal with tabs 1`] = `
     <div
       className="emotion-18"
       onFocus={[Function]}
-      tabIndex="0"
+      tabIndex={0}
     />
   </div>
 </div>
@@ -1584,7 +1584,7 @@ exports[`Modal renders simple modal 1`] = `
     <div
       className="emotion-12"
       onFocus={[Function]}
-      tabIndex="0"
+      tabIndex={0}
     />
   </div>
 </div>

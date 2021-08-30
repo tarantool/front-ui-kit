@@ -21,9 +21,9 @@ describe('FormField', () => {
         info='Extended text description'
         subTitle='Subtitle'
         topRightControls={[
-          <Button text='Right' />,
-          <Button text='Contorls' />,
-          <Button text='Pane' />
+          <Button key={0} text='Right' />,
+          <Button key={1} text='Contorls' />,
+          <Button key={2} text='Pane' />
         ]}
       >
         {vshard_groups && vshard_groups.map(({ name }) => (

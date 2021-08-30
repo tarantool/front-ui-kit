@@ -77,6 +77,7 @@ export const withCopyToClipboard = (
 
   render() {
     const {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       content,
       tooltipContent,
       tooltipContentCopied,
@@ -97,10 +98,7 @@ export const withCopyToClipboard = (
 }
 
 type CopyToClipboardProps = {|
-  ...$Exact<$Rest<
-    ButtonProps,
-    { onClick: (e: MouseEvent) => void }
-  >>,
+  ...$Exact<$Rest<ButtonProps, { onClick: (e: MouseEvent) => void }>>,
   ...$Exact<withCopyToClipboardProps>
 |}
 

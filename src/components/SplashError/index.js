@@ -43,7 +43,7 @@ export const SplashError = (
         title={title}
         onClose={onCloseClick}
         footerControls={[
-          <Button intent={'primary'} onClick={onCloseClick}>Close</Button>
+          <Button key={0} intent={'primary'} onClick={onCloseClick}>Close</Button>
         ]}
       >
         {!!details && <Text tag='div'>{details}</Text>}

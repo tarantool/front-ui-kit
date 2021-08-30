@@ -1,3 +1,5 @@
+// @flow
+
 export function shallowCompareKeys(objA, objB, keys) {
   // treat `null` and `undefined` as the same
   if (objA == null && objB == null) {
@@ -21,7 +23,7 @@ export function shallowCompareKeys(objA, objB, keys) {
 
 function shallowCompareKeysImpl(objA, objB, keys) {
   return filterKeys(objA, objB, keys).every(key => {
-    return objA.hasOwnProperty(key) === objB.hasOwnProperty(key) && objA[key] === objB[key];
+    return Object.prototype.hasOwnProperty.call(objA, key) === Object.prototype.hasOwnProperty.call(objB, key) && objA[key] === objB[key];
   });
 }
 

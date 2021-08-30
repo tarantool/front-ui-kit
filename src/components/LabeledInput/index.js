@@ -31,12 +31,12 @@ type LabeledInputProps = {
   id?: string,
   info?: string,
   label: string,
-  largeMargins?: bool,
+  largeMargins?: boolean,
   subTitle?: string | React.Node,
   topRightControls?: React.Node[],
   error?: boolean,
   message?: string,
-  preserveMessageSpace?: bool
+  preserveMessageSpace?: boolean
 };
 
 export class LabeledInput extends React.Component<LabeledInputProps> {

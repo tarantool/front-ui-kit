@@ -44,7 +44,7 @@ const Container = styled.div`
   border-color: ${props => getColor(props)};
   border-style: dashed;
   background-color: ${colors.intentBaseActive};
-  transition: border .24s ease-in-out;
+  transition: border 0.24s ease-in-out;
   outline: none;
   cursor: pointer;
 `;
@@ -57,7 +57,7 @@ type UploadZoneProps = {
   className?: string,
   title?: string,
   subTitle?: string,
-  loading?: bool,
+  loading?: boolean,
   files?: Array<File>
 }
 
@@ -71,7 +71,8 @@ export const UploadZone = (
     title,
     subTitle,
     loading,
-    files
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    files // TODO: 'files' is defined but never used
   }: UploadZoneProps
 ) => {
   const {

@@ -1,4 +1,4 @@
-const autoprefixer = require('autoprefixer');
+// const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 const shouldUseSourceMap = true;
@@ -33,6 +33,13 @@ module.exports = {
       },
       {
         oneOf: [
+          // Process TS with ts-loader.
+          {
+            test: /\.(ts|tsx)$/,
+            include: path.resolve('./src'),
+            loader: require.resolve('ts-loader'),
+            options: {}
+          },
           // Process JS with Babel.
           {
             test: /\.(js|jsx|mjs)$/,

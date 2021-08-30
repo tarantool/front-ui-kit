@@ -22,7 +22,7 @@ const styles = {
 };
 
 type LinkProps = {
-  children:? React.Node,
+  children?: React.Node,
   className?: string,
   href: string,
   onClick?: (e: MouseEvent) => void,

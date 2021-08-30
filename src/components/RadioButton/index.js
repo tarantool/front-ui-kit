@@ -71,8 +71,7 @@ export const RadioButton = ({
   name,
   title,
   value
-}:
-RadioButtonProps) => (
+}: RadioButtonProps) => (
   <label className={cx(styles.label, className)} title={title}>
     <input
       checked={checked}

@@ -25,6 +25,7 @@ const trackYProps = (track?: string) => ({
 });
 
 const thumbYProps = (thumb?: string) => ({
+  thumb,
   renderer: props => {
     const { elementRef, style, ...rest } = props;
 
@@ -69,6 +70,7 @@ export const Scrollbar = ({ children, className, track, thumb }: ScrollbarProps)
       trackYProps={trackYPropsMemo}
       thumbYProps={thumbYPropsMemo}
       style={style}
+      className={className}
     >
       {children}
     </ReactScroll>

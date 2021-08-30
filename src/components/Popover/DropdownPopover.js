@@ -1,3 +1,5 @@
+// @flow
+
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
 import { colors, zIndex, INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';
@@ -64,7 +66,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
     innerRef.current && innerRef.current.focus();
   }
 
-  handleFocusOutside = (evt: FocusEvent) => {
+  handleFocusOutside = () => {
     if (!isFocusInsideRef(this.props.innerRef)) {
       this.focusFirstInteractiveElement();
     }
@@ -110,7 +112,7 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
         <div
           className={styles.focusClosureControl}
           onFocus={this.focusFirstInteractiveElement}
-          tabIndex='0'
+          tabIndex={0}
         />
       </div>
     );

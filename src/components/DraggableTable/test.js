@@ -2,6 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { DraggableTable } from './index';
 
+const noop = () => void 0;
+
 it('DraggableTable renders correctly', () => {
   const columns = [
     {
@@ -27,8 +29,8 @@ it('DraggableTable renders correctly', () => {
     <DraggableTable
       columns={columns}
       data={data}
-      onChange={() => {}}
-      onSelectRow={() => {}}
+      onChange={noop}
+      onSelectRow={noop}
       withPositionCol
       draggableOnlySelected
     />

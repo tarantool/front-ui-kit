@@ -63,8 +63,7 @@ export const TiledList = ({
   children,
   className,
   outer = true
-}:
-TiledListProps) => (
+}: TiledListProps) => (
   <ul
     className={cx(
       styles.wrap,

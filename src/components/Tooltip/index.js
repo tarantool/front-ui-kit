@@ -61,7 +61,7 @@ type WrapperRefElement = HTMLElement | React.Component<any>;
 type withTooltipProps = {
   children?: React.Node,
   className?: string,
-  largePadding?: bool,
+  largePadding?: boolean,
   onMouseEnter?: (e: MouseEvent) => void,
   onMouseLeave?: (e: MouseEvent) => void,
   onScroll?: (e: MouseEvent) => void,
@@ -168,8 +168,11 @@ export const withTooltip = (
     const {
       children,
       className,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       largePadding,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       popoverClassName,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       tooltipContent,
       ...props
     } = this.props;
@@ -258,7 +261,7 @@ type TooltipProps = {
   children: React.Node,
   className?: string,
   content?: React.Node,
-  largePadding?: bool,
+  largePadding?: boolean,
   tag?: string,
   popoverClassName?: string
 };

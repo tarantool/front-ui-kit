@@ -20,31 +20,31 @@ it('PageLayout renders succesfully', () => {
       <PageLayout
         heading='Cluster'
         topRightControls={[
-          <Button text='Details' />,
-          <Button text='Issues' />
+          <Button key={0} text='Details' />,
+          <Button key={1} text='Issues' />
         ]}
         wide
       />
       <PageLayout
         heading='Reports list'
         aboveComponent={({ className }) => (
-          <Alert className={className} type='error'>Hello, I'm error!</Alert>
+          <Alert className={className} type='error'>{"Hello, I'm error!"}</Alert>
         )}
         topLeftControls={[
-          <Input rightIcon={<IconSearch />} />,
-          <Button text='Info' size='l' />
+          <Input key={0} rightIcon={<IconSearch />} />,
+          <Button key={1} text='Info' size='l' />
         ]}
         wide
       />
       <PageLayout
         heading='Reports list'
         topLeftControls={[
-          <Input rightIcon={<IconSearch />} />,
-          <Button text='Info' size='l' />
+          <Input key={0} rightIcon={<IconSearch />} />,
+          <Button key={1} text='Info' size='l' />
         ]}
         topRightControls={[
-          <Button text='Details' size='l' />,
-          <Button text='Info' size='l' />
+          <Button key={0} text='Details' size='l' />,
+          <Button key={1} text='Info' size='l' />
         ]}
         wide
       />
@@ -65,16 +65,16 @@ it('PageLayoutWithRef renders succesfully', () => {
         headingContent={<Text>Heading content</Text>}
         ref={ref}
         topRightControls={[
-          <Button text='Details' />,
-          <Button text='Issues' />
+          <Button key={0} text='Details' />,
+          <Button key={1} text='Issues' />
         ]}
       />
       <PageLayoutWithRef
         heading='Cluster'
         headingContent={<Text>Heading content</Text>}
         topRightControls={[
-          <Button text='Details' />,
-          <Button text='Issues' />
+          <Button key={0} text='Details' />,
+          <Button key={1} text='Issues' />
         ]}
       />
     </>

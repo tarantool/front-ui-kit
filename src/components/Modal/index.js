@@ -45,7 +45,7 @@ export type ModalProps = BaseModalProps & {
   footerContent?: React.Node,
   footerControls?: React.Node[],
   title: string,
-  loading?:? boolean,
+  loading?: ?boolean,
   onSubmit?: (e: Event) => ?boolean,
   fit?: boolean,
   thinBorders?: boolean
@@ -102,7 +102,7 @@ export class Modal extends BaseModal<ModalProps> {
           <div
             className={baseStyles.focusClosureControl}
             onFocus={this.focusFirstInteractiveElement}
-            tabIndex='0'
+            tabIndex={0}
           />
         </Component>
       </div>

@@ -1,6 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Breadcrumbs } from '../Breadcrumbs';
+
+import { Breadcrumbs } from '.';
+
+const noop = () => void 0;
 
 describe('Breadcrumbs', () => {
   const breadcrumbs = [{
@@ -23,7 +26,6 @@ describe('Breadcrumbs', () => {
     title: 'ResizeSensor',
     path: '/resize-sensor'
   }];
-  const onLinkClick = () => {};
 
   it('renders correctly', () => {
     const tree = renderer.create(
@@ -31,7 +33,7 @@ describe('Breadcrumbs', () => {
         <Breadcrumbs
           items={breadcrumbs}
           appName={'Project name'}
-          onLinkClick={onLinkClick}
+          onLinkClick={noop}
         />
       </>
     ).toJSON();
@@ -46,7 +48,7 @@ describe('Breadcrumbs', () => {
         <Breadcrumbs
           items={breadcrumbs}
           appName={'Project name-2948474770249-999-20299547789123123141'}
-          onLinkClick={onLinkClick}
+          onLinkClick={noop}
         />
       </>
     ).toJSON();
@@ -61,7 +63,7 @@ describe('Breadcrumbs', () => {
           <Breadcrumbs
             items={breadcrumbs}
             appName={'Project name-2948474770249-999-20299547789123123141'}
-            onLinkClick={onLinkClick}
+            onLinkClick={noop}
           />
         </div>
       </>
