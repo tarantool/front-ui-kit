@@ -32,27 +32,25 @@ const styles = {
   `
 };
 
-type TableHeaderProps = {
-  headerGroups: HeaderGroup[],
-  dataRows: Row[]
-}
-
 function getSortDirection(isSortedDesc?: boolean) {
   if (isSortedDesc === true) {
-
     return 'desc';
   }
-  if (isSortedDesc === false) {
 
+  if (isSortedDesc === false) {
     return 'asc';
   }
 
   return undefined;
 }
 
+type TableHeaderProps = {
+  headerGroups: HeaderGroup[],
+  dataRows: Row[],
+}
+
 export const TableHeader = React.forwardRef<TableHeaderProps, HTMLTableSectionElement>(
-  (props: TableHeaderProps, ref) => {
-    const { headerGroups, dataRows } = props;
+  ({ headerGroups, dataRows }: TableHeaderProps, ref) => {
     return (
       <thead ref={ref}>
         {headerGroups.map((headerGroup, index1) => (
