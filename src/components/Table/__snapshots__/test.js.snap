@@ -1938,11 +1938,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div
@@ -2014,11 +2016,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div
@@ -2090,11 +2094,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div
@@ -2166,11 +2172,13 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div
@@ -2448,6 +2456,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
+  top: 0;
 }
 
 .emotion-12 b {
@@ -4169,11 +4178,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div
@@ -4245,11 +4256,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div
@@ -4321,11 +4334,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div
@@ -4397,11 +4412,13 @@ exports[`Table renders with pagination and selected rows 1`] = `
           >
             <label
               className="emotion-4"
+              title="Toggle Row Selected"
             >
               <input
                 checked={false}
                 className="emotion-5"
                 disabled={false}
+                onChange={[Function]}
                 type="checkbox"
               />
               <div

@@ -5,12 +5,10 @@ import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
 import { Text } from '../../Text';
 import { colors } from '../../../variables';
-import { isSafari } from '../../../utils/browser';
 
-import { type Row } from 'react-table';
-import type { RowProps } from '../index';
+import type { RowProps } from '../types';
 
-const styles = {
+export const styles = {
   col: css`
     padding: 16px;
   `,
@@ -39,68 +37,42 @@ const styles = {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     z-index: 1;
+    top: 0;
   `
 };
 
 export function TableRow({
   row,
   rowClassName,
-  onRowClick,
-  topRowKey,
-  topRowClassName,
-  topRowStickySide,
-  headHeight
-}: RowProps & { row: Row, headHeight: number }) {
-  const rowProps = row.getRowProps();
-  const topRow = topRowKey && row.original[topRowKey];
-
+  onRowClick
+}: RowProps) {
   return (
-    <React.Fragment>
-      {topRow && (
-        <tr>
-          <Text
-            tag='td'
-            colSpan={row.cells.length}
-            className={
-              cx(
-                styles.topRow,
-                { [styles.sticky]: !Number.isNaN(Number(topRowStickySide)) },
-                topRowClassName
-              )
-            }
-            style={{ top: isSafari ? Number(topRowStickySide) - headHeight : topRowStickySide }}
-          >
-            {topRow}
-          </Text>
-        </tr>
-      )}
-      <tr
-        onClick={onRowClick ? () => onRowClick(row) : null}
-        className={
-          cx(styles.row,  { [styles.pointer]: onRowClick })
-        }
-        {...rowProps}
-      >
-        {row.cells.map((cell, index) => (
-          <Text
-            key={index}
-            tag='td'
-            className={cx(styles.col, styles.colText, rowClassName)}
-            onClick={
-              cell.column.id === 'selection'
-                ? e => {
-                  e.stopPropagation();
-                  e.preventDefault();
-                  cell.row.toggleRowSelected(!cell.row.isSelected);
-                }
-                : null
-            }
-            {...cell.getCellProps()}
-          >
-            {cell.render('Cell')}
-          </Text>
-        ))}
-      </tr>
-    </React.Fragment>
+    <tr
+      onClick={onRowClick ? () => onRowClick(row) : null}
+      className={
+        cx(styles.row, { [styles.pointer]: onRowClick })
+      }
+      {...row.getRowProps()}
+    >
+      {row.cells.map((cell, index) => (
+        <Text
+          key={index}
+          tag='td'
+          className={cx(styles.col, styles.colText, rowClassName)}
+          onClick={
+            cell.column.id === 'selection'
+              ? e => {
+                e.stopPropagation();
+                e.preventDefault();
+                cell.row.toggleRowSelected(!cell.row.isSelected);
+              }
+              : null
+          }
+          {...cell.getCellProps()}
+        >
+          {cell.render('Cell')}
+        </Text>
+      ))}
+    </tr>
   );
 }
