@@ -119,14 +119,12 @@ const tabs = [
     wide
     fit
     thinBorders
+    footerControls={[
+      <Button intent='primary' size='l' text='Accept' />,
+      <Button size='l' text='Decline' onClick={closeModal} />
+    ]}
   >
     <Tabbed tabs={tabs} />
-    <PopupFooter
-      controls={[
-        <Button intent='primary' size='l' text='Accept' />,
-        <Button size='l' text='Decline' onClick={closeModal} />
-      ]}
-    />
   </Modal>
   <Modal
     title='Configure server'
