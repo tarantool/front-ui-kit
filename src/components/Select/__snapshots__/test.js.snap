@@ -44,7 +44,7 @@ exports[`Select Render empty 1`] = `
   font-size: 14px;
   line-height: 22px;
   color: #040b1d;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   outline: none;
   resize: none;
   padding-top: 9px;
@@ -173,7 +173,7 @@ exports[`Select Render with data 1`] = `
   font-size: 14px;
   line-height: 22px;
   color: #040b1d;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   outline: none;
   resize: none;
   padding-top: 9px;
@@ -294,7 +294,7 @@ exports[`Select Render with data and allow search 1`] = `
   font-size: 14px;
   line-height: 22px;
   color: #040b1d;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
   outline: none;
   resize: none;
   padding-top: 9px;
