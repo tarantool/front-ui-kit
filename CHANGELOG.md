@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Update `Alert`, `Button` and `Text` components in typescript;
 
+- Fixed disabled field color in `Input`.
+
 ## [0.41.0] - 2021-08-05
 
 - Add new icon `IconEmptyData`;
