@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Update `Alert`, `Button` and `Text` components in typescript;
 
+- Fix the "sticky" problem in the `Table` component in Safari;
+
+- Minor improvement in Table component performance;
+
 ## [0.41.0] - 2021-08-05
 
 - Add new icon `IconEmptyData`;

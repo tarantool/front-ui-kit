@@ -35,7 +35,9 @@ const styles = {
 function getSortDirection(isSortedDesc?: boolean) {
   if (isSortedDesc === true) {
     return 'desc';
-  } else if (isSortedDesc === false) {
+  }
+
+  if (isSortedDesc === false) {
     return 'asc';
   }
 
