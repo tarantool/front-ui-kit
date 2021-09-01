@@ -4,20 +4,11 @@ import { css } from '@emotion/css';
 import { Modal } from './index';
 import { Button } from '../Button';
 import { Tabbed } from '../Tabbed';
-import { PopupBody } from '../PopupBody';
-import { PopupFooter } from '../PopupFooter';
 import { LabeledInput } from '../LabeledInput';
 
 jest.mock('react-dom', () => ({
   createPortal: node => node
 }));
-
-jest.mock(
-  '../Scrollbar/index.js',
-  () => ({
-    Scrollbar: ({ children, className }) => <div className={className}>{children}</div>
-  })
-);
 
 const sampleText = 'But I must explain to you how all this mistaken idea of denouncing \
 pleasure and praising pain was born and I will give you a complete account of the system, \
@@ -29,22 +20,28 @@ const tabStyles = css`padding: 24px 0 0;`;
 const tabs = [
   {
     label: 'Create Replica Set',
-    content: <PopupBody className={tabStyles} scrollable>
-      {sampleText.repeat(10)}
-    </PopupBody>
+    content: (
+      <Modal.Body className={tabStyles} scrollable>
+        {sampleText.repeat(10)}
+      </Modal.Body>
+    )
   },
   {
     label: 'Join Replica Set',
-    content: <PopupBody className={tabStyles} scrollable>
-      {sampleText.repeat(40)}
-    </PopupBody>
+    content: (
+      <Modal.Body className={tabStyles} scrollable>
+        {sampleText.repeat(40)}
+      </Modal.Body>
+    )
   },
   {
     label: 'Bad example tab',
-    content: <PopupBody className={tabStyles}>
-      Bad example (without scroll).
-      {sampleText.repeat(40)}
-    </PopupBody>
+    content: (
+      <Modal.Body className={tabStyles}>
+        Bad example (without scroll).
+        {sampleText.repeat(40)}
+      </Modal.Body>
+    )
   }
 ];
 
@@ -69,14 +66,12 @@ describe('Modal', () => {
         title='Simple Modal'
         visible
         onClose={action}
+        footerControls={[
+          <Button key={0} intent='primary' text='Accept' />,
+          <Button key={1} text='Decline' />
+        ]}
       >
-        <PopupBody>{sampleText}</PopupBody>
-        <PopupFooter
-          controls={[
-            <Button key={0} intent='primary' text='Accept' />,
-            <Button key={1} text='Decline' />
-          ]}
-        />
+        {sampleText}
       </Modal>
     ).toJSON();
 
@@ -90,14 +85,12 @@ describe('Modal', () => {
         visible
         onClose={action}
         wide
+        footerControls={[
+          <Button key={0} intent='primary' text='Accept' />,
+          <Button key={1} text='Decline' />
+        ]}
       >
-        <PopupBody>{sampleText.repeat(40)}</PopupBody>
-        <PopupFooter
-          controls={[
-            <Button key={0} intent='primary' text='Accept' />,
-            <Button key={1} text='Decline' />
-          ]}
-        />
+        {sampleText.repeat(40)}
       </Modal>
     ).toJSON();
 
@@ -112,14 +105,12 @@ describe('Modal', () => {
         onClose={action}
         wide
         fit
+        footerControls={[
+          <Button key={0} intent='primary' text='Accept' />,
+          <Button key={1} text='Decline' />
+        ]}
       >
         <Tabbed tabs={tabs} />
-        <PopupFooter
-          controls={[
-            <Button key={0} intent='primary' text='Accept' />,
-            <Button key={1} text='Decline' />
-          ]}
-        />
       </Modal>
     ).toJSON();
 

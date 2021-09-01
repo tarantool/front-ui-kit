@@ -21,8 +21,6 @@ import {
   Input,
   LabeledInput,
   Modal,
-  PopupBody,
-  PopupFooter,
   Tabbed,
   Text
 } from '@tarantool.io/ui-kit';
@@ -42,22 +40,28 @@ const closeModal = () => setOpened(null);
 const tabs = [
   {
     label: 'Create Replica Set',
-    content: <PopupBody className={tabStyles} scrollable>
-      <Text>{sampleText.repeat(10)}</Text>
-    </PopupBody>
+    content: (
+      <Modal.Body className={tabStyles} scrollable>
+        <Text>{sampleText.repeat(10)}</Text>
+      </Modal.Body>
+    )
   },
   {
     label: 'Join Replica Set',
-    content: <PopupBody className={tabStyles} scrollable>
-      <Text>{sampleText.repeat(40)}</Text>
-    </PopupBody>
+    content: (
+      <Modal.Body className={tabStyles} scrollable>
+        <Text>{sampleText.repeat(40)}</Text>
+      </Modal.Body>
+    )
   },
   {
     label: 'Bad example tab',
-    content: <PopupBody className={tabStyles}>
-      Bad example (without scroll).
-      <Text>{sampleText.repeat(40)}</Text>
-    </PopupBody>
+    content: (
+      <Modal.Body className={tabStyles}>
+        Bad example (without scroll).
+        <Text>{sampleText.repeat(40)}</Text>
+      </Modal.Body>
+    )
   }
 ];
 
@@ -107,9 +111,9 @@ const tabs = [
     thinBorders
     wide
   >
-    <PopupBody scrollable>
+    <Modal.Body scrollable>
       <Text>{sampleText.repeat(40)}</Text>
-    </PopupBody>
+    </Modal.Body>
   </Modal>
 
   <Modal

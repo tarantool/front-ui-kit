@@ -15,7 +15,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Minor improvement in Table component performance;
 
-- Fixed disabled field color in `Input`.
+- Fixed disabled field color in `Input`;
+
+- Deprecate `Scrollbar` component;
+
+- Use styled scrollbars instead Scrollbar component;
 
 ## [0.41.0] - 2021-08-05
 

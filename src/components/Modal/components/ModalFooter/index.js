@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
-import { ControlsPanel } from '../ControlsPanel';
+import { ControlsPanel } from '../../../ControlsPanel';
 
 const styles = {
   wrap: css`
@@ -16,13 +16,13 @@ const styles = {
   `
 };
 
-type PopupFooterProps = {
+type ModalFooterProps = {
   children?: React.Node,
   className?: string,
   controls?: React.Node[]
 };
 
-export const PopupFooter = ({ children, className, controls }: PopupFooterProps) => (
+export const ModalFooter = ({ children, className, controls }: ModalFooterProps) => (
   <div className={cx(styles.wrap, className)}>
     {children}
     {controls && <ControlsPanel className={cx(styles.controls)} controls={controls} thin />}

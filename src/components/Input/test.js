@@ -11,13 +11,6 @@ import {
   withDropdown
 } from '../../index';
 
-jest.mock(
-  '../Scrollbar/index.js',
-  () => ({
-    Scrollbar: ({ children, className }) => <div className={className}>{children}</div>
-  })
-);
-
 const handleChange = jest.fn();
 const handleClear = jest.fn();
 const handleSelect = jest.fn();

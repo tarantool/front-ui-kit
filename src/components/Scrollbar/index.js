@@ -58,6 +58,9 @@ type ScrollbarProps = {
 
 const style = { width: '100%' };
 
+/**
+ * @deprecated Use genericStyles.scrollbars instead
+ */
 export const Scrollbar = ({ children, className, track, thumb }: ScrollbarProps) => {
   const trackYPropsMemo = React.useMemo(() => trackYProps(track), [track]);
   const thumbYPropsMemo = React.useMemo(() => thumbYProps(thumb), [thumb]);

@@ -560,14 +560,6 @@ exports[`Modal renders modal with large text 1`] = `
 }
 
 .emotion-5 {
-  width: 100%;
-  height: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  overflow: hidden;
-}
-
-.emotion-6 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -579,7 +571,7 @@ exports[`Modal renders modal with large text 1`] = `
   margin: 20px 0 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -592,17 +584,17 @@ exports[`Modal renders modal with large text 1`] = `
   margin-left: auto;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: block;
   margin-right: 24px;
   margin-right: 16px;
 }
 
-.emotion-8:last-child {
+.emotion-7:last-child {
   margin-right: 0px;
 }
 
-.emotion-9 {
+.emotion-8 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -621,44 +613,44 @@ exports[`Modal renders modal with large text 1`] = `
   color: #ffffff;
 }
 
-.emotion-9:hover,
-.emotion-9:focus,
-.emotion-9:active {
+.emotion-8:hover,
+.emotion-8:focus,
+.emotion-8:active {
   transition-property: background-color,color,box-shadow;
 }
 
-.emotion-9:disabled,
-.emotion-9:disabled:active,
-.emotion-9:disabled:hover {
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
   cursor: default;
 }
 
-.emotion-9:focus,
-.emotion-9:hover {
+.emotion-8:focus,
+.emotion-8:hover {
   background-color: #d01d26;
 }
 
-.emotion-9:active {
+.emotion-8:active {
   background-color: #d01d26;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
-.emotion-9:disabled,
-.emotion-9:disabled:active,
-.emotion-9:disabled:hover {
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
   background-color: #f28a91;
   color: #ffffff;
 }
 
-.emotion-9 svg {
+.emotion-8 svg {
   fill: #ffffff;
 }
 
-.emotion-9:disabled svg {
+.emotion-8:disabled svg {
   fill: #ffffff;
 }
 
-.emotion-11 {
+.emotion-10 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -678,46 +670,46 @@ exports[`Modal renders modal with large text 1`] = `
   box-shadow: inset 0 0 0 1px #f0f2f5;
 }
 
-.emotion-11:hover,
-.emotion-11:focus,
-.emotion-11:active {
+.emotion-10:hover,
+.emotion-10:focus,
+.emotion-10:active {
   transition-property: background-color,color,box-shadow;
 }
 
-.emotion-11:disabled,
-.emotion-11:disabled:active,
-.emotion-11:disabled:hover {
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
   cursor: default;
 }
 
-.emotion-11:focus,
-.emotion-11:hover {
+.emotion-10:focus,
+.emotion-10:hover {
   background-color: #e6e7e8;
   box-shadow: none;
 }
 
-.emotion-11:active {
+.emotion-10:active {
   background-color: #e6e7e8;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
-.emotion-11:disabled,
-.emotion-11:disabled:active,
-.emotion-11:disabled:hover {
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
   color: #d9dadd;
   background-color: #fafafa;
   box-shadow: inset 0 0 0 1px #d9dadd;
 }
 
-.emotion-11 svg {
+.emotion-10 svg {
   fill: #5c606c;
 }
 
-.emotion-11:disabled svg {
+.emotion-10:disabled svg {
   fill: #d9dadd;
 }
 
-.emotion-12 {
+.emotion-11 {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -751,42 +743,38 @@ exports[`Modal renders modal with large text 1`] = `
     <div
       className="emotion-4"
     >
-      <div
-        className="emotion-5"
-      >
-        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
-      </div>
+      But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+    </div>
+    <div
+      className="emotion-5"
+    >
       <div
         className="emotion-6"
       >
         <div
           className="emotion-7"
         >
-          <div
+          <button
             className="emotion-8"
+            type="button"
           >
-            <button
-              className="emotion-9"
-              type="button"
-            >
-              Accept
-            </button>
-          </div>
-          <div
-            className="emotion-8"
+            Accept
+          </button>
+        </div>
+        <div
+          className="emotion-7"
+        >
+          <button
+            className="emotion-10"
+            type="button"
           >
-            <button
-              className="emotion-11"
-              type="button"
-            >
-              Decline
-            </button>
-          </div>
+            Decline
+          </button>
         </div>
       </div>
     </div>
     <div
-      className="emotion-12"
+      className="emotion-11"
       onFocus={[Function]}
       tabIndex={0}
     />
@@ -982,15 +970,37 @@ exports[`Modal renders modal with tabs 1`] = `
 }
 
 .emotion-10 {
+  position: relative;
+  width: 100%;
   height: 100%;
-  margin-left: -30px;
-  margin-right: -30px;
   padding: 24px 0 0;
 }
 
 .emotion-11 {
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-right: 30px;
+  position: absolute;
+  inset: 0px;
+  overflow: auto;
+}
+
+.emotion-11 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 96, 108, 0.5) transparent;
+}
+
+.emotion-11::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+}
+
+.emotion-11::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.emotion-11::-webkit-scrollbar-thumb {
+  background-color: rgba(92, 96, 108, 0.5);
+  border-radius: 4px;
 }
 
 .emotion-12 {
@@ -1212,32 +1222,32 @@ exports[`Modal renders modal with tabs 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="emotion-12"
+    >
       <div
-        className="emotion-12"
+        className="emotion-13"
       >
         <div
-          className="emotion-13"
+          className="emotion-14"
         >
-          <div
-            className="emotion-14"
+          <button
+            className="emotion-15"
+            type="button"
           >
-            <button
-              className="emotion-15"
-              type="button"
-            >
-              Accept
-            </button>
-          </div>
-          <div
-            className="emotion-14"
+            Accept
+          </button>
+        </div>
+        <div
+          className="emotion-14"
+        >
+          <button
+            className="emotion-17"
+            type="button"
           >
-            <button
-              className="emotion-17"
-              type="button"
-            >
-              Decline
-            </button>
-          </div>
+            Decline
+          </button>
         </div>
       </div>
     </div>
@@ -1356,14 +1366,6 @@ exports[`Modal renders simple modal 1`] = `
 }
 
 .emotion-5 {
-  width: 100%;
-  height: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
-  overflow: hidden;
-}
-
-.emotion-6 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1375,7 +1377,7 @@ exports[`Modal renders simple modal 1`] = `
   margin: 20px 0 0;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1388,17 +1390,17 @@ exports[`Modal renders simple modal 1`] = `
   margin-left: auto;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: block;
   margin-right: 24px;
   margin-right: 16px;
 }
 
-.emotion-8:last-child {
+.emotion-7:last-child {
   margin-right: 0px;
 }
 
-.emotion-9 {
+.emotion-8 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -1417,44 +1419,44 @@ exports[`Modal renders simple modal 1`] = `
   color: #ffffff;
 }
 
-.emotion-9:hover,
-.emotion-9:focus,
-.emotion-9:active {
+.emotion-8:hover,
+.emotion-8:focus,
+.emotion-8:active {
   transition-property: background-color,color,box-shadow;
 }
 
-.emotion-9:disabled,
-.emotion-9:disabled:active,
-.emotion-9:disabled:hover {
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
   cursor: default;
 }
 
-.emotion-9:focus,
-.emotion-9:hover {
+.emotion-8:focus,
+.emotion-8:hover {
   background-color: #d01d26;
 }
 
-.emotion-9:active {
+.emotion-8:active {
   background-color: #d01d26;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
-.emotion-9:disabled,
-.emotion-9:disabled:active,
-.emotion-9:disabled:hover {
+.emotion-8:disabled,
+.emotion-8:disabled:active,
+.emotion-8:disabled:hover {
   background-color: #f28a91;
   color: #ffffff;
 }
 
-.emotion-9 svg {
+.emotion-8 svg {
   fill: #ffffff;
 }
 
-.emotion-9:disabled svg {
+.emotion-8:disabled svg {
   fill: #ffffff;
 }
 
-.emotion-11 {
+.emotion-10 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -1474,46 +1476,46 @@ exports[`Modal renders simple modal 1`] = `
   box-shadow: inset 0 0 0 1px #f0f2f5;
 }
 
-.emotion-11:hover,
-.emotion-11:focus,
-.emotion-11:active {
+.emotion-10:hover,
+.emotion-10:focus,
+.emotion-10:active {
   transition-property: background-color,color,box-shadow;
 }
 
-.emotion-11:disabled,
-.emotion-11:disabled:active,
-.emotion-11:disabled:hover {
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
   cursor: default;
 }
 
-.emotion-11:focus,
-.emotion-11:hover {
+.emotion-10:focus,
+.emotion-10:hover {
   background-color: #e6e7e8;
   box-shadow: none;
 }
 
-.emotion-11:active {
+.emotion-10:active {
   background-color: #e6e7e8;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
-.emotion-11:disabled,
-.emotion-11:disabled:active,
-.emotion-11:disabled:hover {
+.emotion-10:disabled,
+.emotion-10:disabled:active,
+.emotion-10:disabled:hover {
   color: #d9dadd;
   background-color: #fafafa;
   box-shadow: inset 0 0 0 1px #d9dadd;
 }
 
-.emotion-11 svg {
+.emotion-10 svg {
   fill: #5c606c;
 }
 
-.emotion-11:disabled svg {
+.emotion-10:disabled svg {
   fill: #d9dadd;
 }
 
-.emotion-12 {
+.emotion-11 {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
@@ -1547,42 +1549,38 @@ exports[`Modal renders simple modal 1`] = `
     <div
       className="emotion-4"
     >
-      <div
-        className="emotion-5"
-      >
-        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
-      </div>
+      But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+    </div>
+    <div
+      className="emotion-5"
+    >
       <div
         className="emotion-6"
       >
         <div
           className="emotion-7"
         >
-          <div
+          <button
             className="emotion-8"
+            type="button"
           >
-            <button
-              className="emotion-9"
-              type="button"
-            >
-              Accept
-            </button>
-          </div>
-          <div
-            className="emotion-8"
+            Accept
+          </button>
+        </div>
+        <div
+          className="emotion-7"
+        >
+          <button
+            className="emotion-10"
+            type="button"
           >
-            <button
-              className="emotion-11"
-              type="button"
-            >
-              Decline
-            </button>
-          </div>
+            Decline
+          </button>
         </div>
       </div>
     </div>
     <div
-      className="emotion-12"
+      className="emotion-11"
       onFocus={[Function]}
       tabIndex={0}
     />

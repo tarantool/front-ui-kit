@@ -44,12 +44,6 @@ type DropdownPopoverProps = {
   autoFocus: boolean
 }
 
-const ScrollableWrap = ({ useScroll, children }: { useScroll: boolean, children: React.Node }) => {
-  return useScroll ? (
-    <Scrollbar className={styles.scrollable}>{children}</Scrollbar>
-  ) : <>{children}</>
-};
-
 export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   focus() {
     const { innerRef, autoFocus } = this.props;

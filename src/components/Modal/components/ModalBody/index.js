@@ -1,9 +1,7 @@
 // @flow
-
-// TODO: move popup components inside Modal
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
-import { Scrollbar } from '../Scrollbar';
+import { genericStyles } from '../../../../genericStyles';
 
 const styles = {
   wrap: css`
@@ -14,30 +12,32 @@ const styles = {
     overflow: hidden;
   `,
   scrollableWrap: css`
+    position: relative;
+    width: 100%;
     height: 100%;
-    margin-left: -30px;
-    margin-right: -30px;
   `,
   scrollableBody: css`
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-right: 30px;
+    position: absolute;
+    inset: 0px;
+    overflow: auto;
   `
 };
 
-type PopupBodyProps = {
+type ModalBodyProps = {
   children?: React.Node,
   className?: string,
   innerClassName?: string,
   scrollable?: boolean
 };
 
-export const PopupBody = ({ children, className, innerClassName, scrollable }: PopupBodyProps) => scrollable
+export const ModalBody = ({ children, className, innerClassName, scrollable }: ModalBodyProps) => scrollable
   ? (
-    <Scrollbar className={cx(styles.scrollableWrap, className)}>
-      <div className={cx(styles.scrollableBody, innerClassName)}>
+    <div className={cx(styles.scrollableWrap, className)}>
+      <div className={cx(styles.scrollableBody, genericStyles.scrollbars, innerClassName)}>
         {children}
       </div>
-    </Scrollbar>
+    </div>
   )
   : (
     <div className={cx(styles.wrap, className)}>

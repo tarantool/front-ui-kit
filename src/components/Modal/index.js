@@ -2,9 +2,11 @@
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
 import { IconHelperClose } from '../IconHelper';
-import { PopupFooter } from '../PopupFooter';
 import { Text } from '../Text';
 import { type BaseModalProps, BaseModal, styles as baseStyles } from '../BaseModal';
+
+import { ModalBody } from './components/ModalBody';
+import { ModalFooter } from './components/ModalFooter';
 
 const styles = {
   modal: css`
@@ -51,7 +53,18 @@ export type ModalProps = BaseModalProps & {
   thinBorders?: boolean
 };
 
+/**
+ * @deprecated
+ *
+ * For backward compatibility.
+ * Use Modal.Body and Modal.Footer instead PopupBody and PopupFooter.
+ */
+export { ModalBody as PopupBody, ModalFooter as PopupFooter };
+
 export class Modal extends BaseModal<ModalProps> {
+  static Body = ModalBody;
+  static Footer = ModalFooter;
+
   renderModal() {
     const {
       children,
@@ -97,7 +110,7 @@ export class Modal extends BaseModal<ModalProps> {
             {loading ? 'Loading' : children}
           </div>
           {(footerContent || footerControls) && (
-            <PopupFooter controls={footerControls}>{footerContent}</PopupFooter>
+            <Modal.Footer controls={footerControls}>{footerContent}</Modal.Footer>
           )}
           <div
             className={baseStyles.focusClosureControl}
