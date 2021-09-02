@@ -16,13 +16,6 @@ import {
   TarantoolLogoFull
 } from '../../index';
 
-jest.mock(
-  '../Scrollbar/index.js',
-  () => ({
-    Scrollbar: ({ children, className }) => <div className={className}>{children}</div>
-  })
-);
-
 it('AppLayout renders correctly', () => {
   const onLinkClick = jest.fn();
   const onMenuItemClick = jest.fn();

@@ -1,20 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { PopupBody } from './index';
 
-jest.mock(
-  '../Scrollbar/index.js',
-  () => ({
-    Scrollbar: ({ children, className }) => <div className={className}>{children}</div>
-  })
-);
+import { ModalBody } from '.';
 
-describe('PopupBody', () => {
+describe('ModalBody', () => {
   it('renders without scrollbars', () => {
     const tree = renderer.create(
-      <PopupBody className='external-class'>
+      <ModalBody className='external-class'>
         content
-      </PopupBody>
+      </ModalBody>
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -22,9 +16,9 @@ describe('PopupBody', () => {
 
   it('renders with scrollbars', () => {
     const tree = renderer.create(
-      <PopupBody className='external-class' scrollable>
+      <ModalBody className='external-class' scrollable>
         content
-      </PopupBody>
+      </ModalBody>
     ).toJSON();
 
     expect(tree).toMatchSnapshot();

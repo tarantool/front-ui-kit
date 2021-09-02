@@ -35,13 +35,11 @@ export * from './components/PageLayout';
 export * from './components/PageSection';
 export * from './components/Pagination';
 export * from './components/Popover';
-export * from './components/PopupBody';
-export * from './components/PopupFooter';
 export * from './components/PopupNotificationList';
 export * from './components/ProgressBar';
 export * from './components/RadioButton';
 export * from './components/ResizeSensor';
-export * from './components/Scrollbar';
+export * from './components/Scrollbar'; // deprecated
 export * from './components/SectionPreloader';
 export * from './components/Select';
 export * from './components/SideMenu';
