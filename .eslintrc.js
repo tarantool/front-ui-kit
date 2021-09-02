@@ -16,6 +16,7 @@ module.exports = {
     },
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
     'import/parsers': {
+      'babel-eslint': ['.js', '.jsx'],
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
   },
@@ -25,7 +26,7 @@ module.exports = {
     jest: true,
     node: true,
   },
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     jsx: true,
     ecmaFeatures: {
