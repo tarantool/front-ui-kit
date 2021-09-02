@@ -1,4 +1,4 @@
-```js
+```jsx
 import { css } from '@emotion/css';
 import {
   Button,
@@ -14,79 +14,79 @@ const styles = {
   `,
 };
 
-const ToClipboadLabel = withCopyToClipboard(Text);
-const ToClipboadHTMLLabel = withCopyToClipboard('span');
-const ToClipboadButton = withCopyToClipboard(Button);
+const ToClipboardLabel = withCopyToClipboard(Text);
+const ToClipboardHTMLLabel = withCopyToClipboard('span');
+const ToClipboardButton = withCopyToClipboard(Button);
 
 <>
   <div className={styles.wrap}>
     <CopyToClipboard
-      content='Hello, I`m copied text'
-      size='s'
-      intent='secondary'
+      content="Hello, I'm copied text"
+      size="s"
+      intent="secondary"
     >
-    Copy
+      Copy
     </CopyToClipboard>
   </div>
   <div className={styles.wrap}>
-    <ToClipboadLabel content={'I\'m Text with clipboard'}>
+    <ToClipboardLabel content="I'm Text with clipboard">
       I'm Text with clipboard
-    </ToClipboadLabel>
+    </ToClipboardLabel>
   </div>
   <div className={styles.wrap}>
-    <ToClipboadHTMLLabel content={'I\'m HTML tag with clipboard'}>
+    <ToClipboardHTMLLabel content="I'm HTML tag with clipboard">
       I'm HTML tag with clipboard
-    </ToClipboadHTMLLabel>
+    </ToClipboardHTMLLabel>
   </div>
   <div className={styles.wrap}>
-    <ToClipboadButton
-      content={'I\'m Button with clipboard'}
-      text={'I\'m Button with clipboard'}
+    <ToClipboardButton
+      content="I'm Button with clipboard"
+      text="I'm Button with clipboard"
     />
   </div>
   <div className={styles.wrap}>
-    <Button text={'I\'m copy button without tooltip'} onClick={() => copyToClipboard('I\'m copied text')} />
+    <Button text="I'm copy button without tooltip" onClick={() => copyToClipboard('I\'m copied text')} />
   </div>
   <Text>Examples with custom tooltip messages:</Text>
     <div className={styles.wrap}>
     <CopyToClipboard
-      content='Hello, I`m copied text'
-      size='s'
-      intent='secondary'
-      tooltipContentCopied='Not bad'
-      tooltipContent='Hit me'
+      content="Hello, I'm copied text"
+      size="s"
+      intent="secondary"
+      tooltipContentCopied="Not bad"
+      tooltipContent="Hit me"
     >
-    Copy
+      Copy
     </CopyToClipboard>
   </div>
   <div className={styles.wrap}>
-    <ToClipboadLabel
-      content={'I\'m Text with clipboard'}
-      tooltipContentCopied='Not bad'
-      tooltipContent='Hit me'
+    <ToClipboardLabel
+      content="I'm Text with clipboard"
+      tooltipContentCopied="Not bad"
+      tooltipContent="Hit me"
     >
       I'm Text with clipboard
-    </ToClipboadLabel>
+    </ToClipboardLabel>
   </div>
   <div className={styles.wrap}>
-    <ToClipboadHTMLLabel
-      content={'I\'m HTML tag with clipboard'}
-      tooltipContentCopied='Not bad'
-      tooltipContent='Hit me'
+    <ToClipboardHTMLLabel
+      content="I'm HTML tag with clipboard"
+      tooltipContentCopied="Not bad"
+      tooltipContent="Hit me"
     >
       I'm HTML tag with clipboard
-    </ToClipboadHTMLLabel>
+    </ToClipboardHTMLLabel>
   </div>
   <div className={styles.wrap}>
-    <ToClipboadButton
-      content={'I\'m Button with clipboard'}
-      text={'I\'m Button with clipboard'}
-      tooltipContentCopied='Not bad'
-      tooltipContent='Hit me'
+    <ToClipboardButton
+      content="I'm Button with clipboard"
+      text="I'm Button with clipboard"
+      tooltipContentCopied="Not bad"
+      tooltipContent="Hit me"
     />
   </div>
   <div className={styles.wrap}>
-    <Button text={'I\'m copy button without tooltip'} onClick={() => copyToClipboard('I\'m copied text')} />
+    <Button text="I'm copy button without tooltip" onClick={() => copyToClipboard('I\'m copied text')} />
   </div>
 </>
 ```

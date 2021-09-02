@@ -1,4 +1,4 @@
-```js
+```jsx
 import { css } from '@emotion/css';
 import { Button, NotificationSplash, Switcher } from '@tarantool.io/ui-kit';
 
@@ -10,16 +10,16 @@ const wrap = css`
   <div className={wrap}>
     <NotificationSplash
       controls={[
-        <Button text='I understand, dont touch me again' />
+        <Button key={0} text="I understand, don't touch me again" />
       ]}
     >
-      Unathorized web-panel access is open! Please consider enabling authorization (you need to create a user and login to do it).
+      Unauthorized web-panel access is open! Please consider enabling authorization (you need to create a user and login to do it).
     </NotificationSplash>
   </div>
   <div className={wrap}>
     <NotificationSplash
       controls={[
-        <Button text='Yeah' />
+        <Button key={0} text="Yeah" />
       ]}
       onClose={console.log}
     >
@@ -29,9 +29,9 @@ const wrap = css`
   <div className={wrap}>
     <NotificationSplash
       controls={[
-        <Button intent='primary' text='Agree' />,
-        <Button text='Discard' />,
-        <Switcher>Remember</Switcher>
+        <Button key={0} intent="primary" text="Agree" />,
+        <Button key={1} text="Discard" />,
+        <Switcher key={2}>Remember</Switcher>,
       ]}
     >
       A few controls

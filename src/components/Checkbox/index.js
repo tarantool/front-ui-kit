@@ -48,7 +48,7 @@ const styles = {
     display: flex;
     align-items: center;
     cursor: pointer;
-  `
+  `,
 };
 
 type CheckboxProps = {
@@ -60,7 +60,7 @@ type CheckboxProps = {
   name?: string,
   title?: string,
   value?: string,
-  onChange?: (MouseEvent) => void
+  onChange?: (MouseEvent) => void,
 };
 
 export const Checkbox = ({
@@ -72,16 +72,13 @@ export const Checkbox = ({
   onChange,
   name,
   title,
-  value
+  value,
 }: CheckboxProps) => {
   const inputRef = useRef(null);
 
-  useEffect(
-    () => {
-      inputRef.current && (inputRef.current.indeterminate = indeterminate)
-    },
-    [indeterminate]
-  );
+  useEffect(() => {
+    inputRef.current && (inputRef.current.indeterminate = indeterminate);
+  }, [indeterminate]);
 
   return (
     <label className={cx(styles.label, className)} title={title}>
@@ -89,24 +86,14 @@ export const Checkbox = ({
         checked={checked}
         className={styles.input}
         disabled={disabled}
-        type='checkbox'
+        type="checkbox"
         onChange={onChange}
         name={name}
         value={value}
         ref={inputRef}
       />
-      <div
-        className={cx(
-          styles.iconWrap,
-          { [styles.childrenMargin]: children }
-        )}
-      >
-        <IconCheckbox
-          className={styles.icon}
-          checked={checked}
-          indeterminate={indeterminate}
-          disabled={disabled}
-        />
+      <div className={cx(styles.iconWrap, { [styles.childrenMargin]: children })}>
+        <IconCheckbox className={styles.icon} checked={checked} indeterminate={indeterminate} disabled={disabled} />
       </div>
       {typeof children === 'string' ? <Text>{children}</Text> : children}
     </label>

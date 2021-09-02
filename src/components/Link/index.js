@@ -18,7 +18,7 @@ const styles = {
     &:active {
       text-decoration: none;
     }
-  `
+  `,
 };
 
 type LinkProps = {
@@ -28,23 +28,12 @@ type LinkProps = {
   onClick?: (e: MouseEvent) => void,
   target?: string,
   title?: string,
-  variant?: TextStyleVariants
+  variant?: TextStyleVariants,
 };
 
-export const Link = (
-  {
-    className,
-    variant,
-    ...props
-  }: LinkProps
-) => {
+export const Link = ({ className, variant, ...props }: LinkProps) => {
   const textStyle = (variant && textStyles[variant]) || null;
 
   /* eslint-disable jsx-a11y/anchor-has-content */
-  return (
-    <a
-      {...props}
-      className={cx(textStyle, styles.link, className)}
-    />
-  )
+  return <a {...props} className={cx(textStyle, styles.link, className)} />;
 };

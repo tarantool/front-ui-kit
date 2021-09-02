@@ -16,7 +16,7 @@ export const styles = {
     color: #000000a6;
   `,
   row: css`
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #e5e5e5;
     &:hover {
       background-color: ${rgba(colors.baseBg, 0.3)};
     }
@@ -38,34 +38,28 @@ export const styles = {
     position: sticky;
     z-index: 1;
     top: 0;
-  `
+  `,
 };
 
-export function TableRow({
-  row,
-  rowClassName,
-  onRowClick
-}: RowProps) {
+export function TableRow({ row, rowClassName, onRowClick }: RowProps) {
   return (
     <tr
       onClick={onRowClick ? () => onRowClick(row) : null}
-      className={
-        cx(styles.row, { [styles.pointer]: onRowClick })
-      }
+      className={cx(styles.row, { [styles.pointer]: onRowClick })}
       {...row.getRowProps()}
     >
       {row.cells.map((cell, index) => (
         <Text
           key={index}
-          tag='td'
+          tag="td"
           className={cx(styles.col, styles.colText, rowClassName)}
           onClick={
             cell.column.id === 'selection'
-              ? e => {
-                e.stopPropagation();
-                e.preventDefault();
-                cell.row.toggleRowSelected(!cell.row.isSelected);
-              }
+              ? (e) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  cell.row.toggleRowSelected(!cell.row.isSelected);
+                }
               : null
           }
           {...cell.getCellProps()}

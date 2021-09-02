@@ -1,4 +1,4 @@
-```js
+```jsx
 import { useState } from 'react';
 import { css, cx } from '@emotion/css';
 import {
@@ -17,9 +17,9 @@ import {
 const [disabled, setDisabled] = useState(false);
 const [value, setValue] = useState('Value');
 
-const handleChange = e => setValue(e.target.value);
+const handleChange = (e) => setValue(e.target.value);
 const handleClear = () => setValue('');
-const handleSelect = value => setValue(value);
+const handleSelect = (value) => setValue(value);
 const toggleDisabled = () => setDisabled(!disabled);
 
 const DropdownButton = withDropdown(Button);
@@ -30,7 +30,7 @@ const getDropdownOption = (prefix) => (option, index) => (
 
 const DropdownControlIcon = ({ className }) => (
   <IconChevron
-    direction='down'
+    direction="down"
     className={cx(className, css`fill: rgba(245, 34, 45, 0.65);`)}
   />
 );
@@ -49,7 +49,7 @@ const dropdownExample = (
         'Task_runner',
       ].map(getDropdownOption('role'))
     ]}
-    intent='dark'
+    intent="dark"
     iconRight={DropdownControlIcon}
   >
     Filter
@@ -59,7 +59,7 @@ const dropdownExample = (
 <>
   <ControlsPanel
     controls={[
-      <Switcher checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
+      <Switcher key={0} checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
     ]}
   />
 
@@ -67,10 +67,10 @@ const dropdownExample = (
     <Input
       disabled={disabled}
       value={value}
-      placeholder='Placeholder'
+      placeholder="Placeholder"
       onChange={handleChange}
-      title='Input'
-      size='l'
+      title="Input"
+      size="l"
     />
   </div>
 
@@ -78,7 +78,7 @@ const dropdownExample = (
     <Input
       disabled={disabled}
       value={value}
-      placeholder={'Filter by uri, uuid, role, alias or labels'}
+      placeholder="Filter by uri, uuid, role, alias or labels"
       onChange={handleChange}
       rightIcon={<IconSearch />}
     />
@@ -88,10 +88,10 @@ const dropdownExample = (
     <Input
       disabled={disabled}
       value={value}
-      placeholder={'Filter by uri, uuid, role, alias or labels'}
+      placeholder="Filter by uri, uuid, role, alias or labels"
       onChange={handleChange}
       rightIcon={<IconSearch />}
-      size='m'
+      size="m"
     />
   </div>
 
@@ -103,12 +103,12 @@ const dropdownExample = (
     <Input
       disabled={disabled}
       value={value}
-      placeholder={'Filter by uri, uuid, role, alias or labels'}
+      placeholder="Filter by uri, uuid, role, alias or labels"
       onChange={handleChange}
       onClearClick={handleClear}
       rightIcon={<IconSearch />}
       leftElement={dropdownExample}
-      size='m'
+      size="m"
     />
   </div>
 
@@ -116,11 +116,11 @@ const dropdownExample = (
     <Input
       disabled={disabled}
       value={value}
-      placeholder={'Filter by uri, uuid, role, alias or labels'}
+      placeholder="Filter by uri, uuid, role, alias or labels"
       onChange={handleChange}
       rightIcon={<IconSearch />}
       rightElement={dropdownExample}
-      size='m'
+      size="m"
     />
   </div>
 
@@ -128,11 +128,11 @@ const dropdownExample = (
     <Input
       disabled={disabled}
       value={value}
-      placeholder={'Filter by uri, uuid, role, alias or labels'}
+      placeholder="Filter by uri, uuid, role, alias or labels"
       onChange={handleChange}
       rightIcon={<IconSearch />}
       rightElement={dropdownExample}
-      size='m'
+      size="m"
     />
   </div>
 </>

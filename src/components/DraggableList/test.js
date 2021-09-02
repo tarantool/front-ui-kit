@@ -13,31 +13,23 @@ it('DraggableList renders correctly', () => {
     key: index,
     uuid: index,
     alias: `alias ${index}`,
-    uri: `uri ${index}`
+    uri: `uri ${index}`,
   }));
 
   const items = data.map((item, index) => (
-    <DraggableListItem
-      num={index}
-      index={index}
-      key={item.key}
-    >
+    <DraggableListItem num={index} index={index} key={item.key}>
       <div>
-        <Text tag='div'>
+        <Text tag="div">
           <IconBurger />
           {item.alias || item.uuid}
         </Text>
-        <LeaderFlagSmall/>
-        <UriLabel
-          uri={item.uri}
-        />
+        <LeaderFlagSmall />
+        <UriLabel uri={item.uri} />
       </div>
     </DraggableListItem>
   ));
 
-  const tree = renderer.create(
-    <DraggableList items={items} onChange={noop} />
-  ).toJSON();
+  const tree = renderer.create(<DraggableList items={items} onChange={noop} />).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

@@ -10,7 +10,7 @@ type ResizeSensorProps = {
   onResize: (entries: any) => void,
   observeParents?: boolean,
   children: React.Node,
-}
+};
 
 export class ResizeSensor extends React.PureComponent<ResizeSensorProps> {
   element: Element | null = null;

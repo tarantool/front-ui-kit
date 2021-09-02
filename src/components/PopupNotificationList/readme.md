@@ -1,4 +1,4 @@
-```js
+```jsx
 import { useState } from 'react';
 import { Button, ControlsPanel, PopupNotificationList } from '@tarantool.io/ui-kit';
 
@@ -6,12 +6,12 @@ const greetings = [
   'Hello', 'Hola', 'Прывитанне', 'Chao', 'Aloha', 'Hallo',
   'Гамарджоба', 'Shalom', 'Buenas dias', 'Buon giorno', 'Ave',
   'Guten Tag', 'Ola', 'Dobry den', 'Merhaba', 'Привіт',
-  'Paivaa', 'Bonjour', 'Namaste', 'Zdravo'
+  'Paivaa', 'Bonjour', 'Namaste', 'Zdravo',
 ];
 
 const texts = [
   'Tarantool можно использовать в сценариях OLTP вместо реляционной базы данных, и в этом случае он будет на порядки быстрее.',
-  'Tarantool can be used in OLTP scenarios instead of relational databases, and such a solution will work many times faster.'
+  'Tarantool can be used in OLTP scenarios instead of relational databases, and such a solution will work many times faster.',
 ]
 
 const [notifications, setNotifications] = useState([]);
@@ -51,17 +51,19 @@ const addNotification = ({
   <ControlsPanel
     controls={[
       <Button
-        text='Add notification'
+        text="Add notification"
         onClick={addNotification}
       />,
       <Button
-        text='Add error notification'
-        onClick={() => addNotification({
-          details: <Button onClick={e => e.stopPropagation()} text='Details' />,
-          heading: 'Error',
-          intent: 'error',
-          text: 'NetboxError: GraphQL error: "localhost:3303": Connection refused'
-        })}
+        text="Add error notification"
+        onClick={() => {
+          addNotification({
+            details: <Button onClick={e => e.stopPropagation()} text="Details" />,
+            heading: 'Error',
+            intent: 'error',
+            text: 'NetboxError: GraphQL error: "localhost:3303": Connection refused'
+          });
+        }}
       />
     ]}
     thin

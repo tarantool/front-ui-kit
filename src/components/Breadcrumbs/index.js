@@ -11,17 +11,17 @@ import BreadcrumbsItemComponent from './components/BreadcrumbsItem';
 export type BreadcrumbsItem = {
   title: string,
   path?: string,
-}
+};
 
 export type ActionsBreadCrumbs = {
-  onLinkClick?: (path: string) => void
-}
+  onLinkClick?: (path: string) => void,
+};
 
 export type BreadcrumbsProps = ActionsBreadCrumbs & {
   appName?: string,
   items: BreadcrumbsItem[],
-  className?: string
-}
+  className?: string,
+};
 
 const styles = {
   breadcrumbs: css`
@@ -48,8 +48,8 @@ const styles = {
     white-space: nowrap;
     left: 0;
     top: 0;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 10px #E6E7E8;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px #e6e7e8;
     border-radius: 2px;
     margin-left: -10px;
     padding: 0 10px;
@@ -62,34 +62,30 @@ const styles = {
     cursor: pointer;
     font-size: 16px;
     line-height: 24px;
-    color: #8E9199;
-    
+    color: #8e9199;
+
     &:hover {
       text-decoration-line: underline;
     }
-  `
+  `,
 };
 
 const MAX_APP_NAME_LENGTH = 40;
 
-export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
+export class Breadcrumbs extends React.Component<BreadcrumbsProps> {
   render() {
     const { items, appName, className } = this.props;
     const isLongAppName = (appName: string) => appName.length > MAX_APP_NAME_LENGTH;
     return (
       <div className={cx(styles.breadcrumbs, className)}>
         {appName &&
-        (isLongAppName(appName)
-          ? <AppName appName={appName} />
-          :
-          <Text
-            tag="span"
-            className={styles.breadcrumbElement}
-            variant="h3"
-          >
-            {appName}
-          </Text>)
-        }
+          (isLongAppName(appName) ? (
+            <AppName appName={appName} />
+          ) : (
+            <Text tag="span" className={styles.breadcrumbElement} variant="h3">
+              {appName}
+            </Text>
+          ))}
         <OverflowList
           minVisibleItems={1}
           items={items}
@@ -106,14 +102,10 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
 
     const itemsCollection = (
       <>
-        {items.map(item => (
+        {items.map((item) => (
           <DropdownItem
             key={`${item.title}|${item.path || ''}`}
-            onClick={
-              item.path && onLinkClick ?
-                () => item.path ? onLinkClick(item.path) : undefined
-                : undefined
-            }
+            onClick={item.path && onLinkClick ? () => (item.path ? onLinkClick(item.path) : undefined) : undefined}
           >
             {item.title}
           </DropdownItem>
@@ -130,7 +122,7 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
           <Text className={styles.overflowButton}>...</Text>
         </Dropdown>
       </React.Fragment>
-    )
+    );
   };
 
   renderBreadcrumbWrapper = (props: BreadcrumbsItem, index: number) => {
@@ -142,17 +134,15 @@ export class Breadcrumbs extends React.Component<BreadcrumbsProps>{
         </Text>
         <BreadcrumbsItemComponent title={props.title} path={props.path} onLinkClick={onLinkClick} />
       </React.Fragment>
-    )
+    );
   };
 }
 
-const shorterAppName = (appName: string) => appName.length > MAX_APP_NAME_LENGTH
-  ? `${appName.slice(0, MAX_APP_NAME_LENGTH)}...`
-  : appName;
-
+const shorterAppName = (appName: string) =>
+  appName.length > MAX_APP_NAME_LENGTH ? `${appName.slice(0, MAX_APP_NAME_LENGTH)}...` : appName;
 
 function AppName({ appName }) {
-  const [ isHover, setHover ] = React.useState(false);
+  const [isHover, setHover] = React.useState(false);
 
   return (
     <Text
@@ -163,15 +153,11 @@ function AppName({ appName }) {
       onMouseLeave={() => setHover(false)}
     >
       {shorterAppName(appName)}
-      {isHover &&
-        <Text
-          tag="span"
-          className={cx(styles.breadcrumbElement, styles.appName)}
-          variant="h3"
-        >
+      {isHover && (
+        <Text tag="span" className={cx(styles.breadcrumbElement, styles.appName)} variant="h3">
           {appName}
         </Text>
-      }
+      )}
     </Text>
-  )
+  );
 }

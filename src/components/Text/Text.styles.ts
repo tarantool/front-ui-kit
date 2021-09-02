@@ -1,6 +1,6 @@
-import { css } from "@emotion/css";
+import { css } from '@emotion/css';
 
-import { baseFontFamily, colors, monoFontFamily } from "../../variables";
+import { baseFontFamily, colors, monoFontFamily } from '../../variables';
 
 export const textStyles = {
   h1: css`

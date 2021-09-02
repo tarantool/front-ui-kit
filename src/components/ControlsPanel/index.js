@@ -17,23 +17,24 @@ const styles = {
   `,
   thin: css`
     margin-right: 16px;
-  `
+  `,
 };
 
 type ControlsPanelProps = {
   className?: string,
   controls?: React.Node[],
-  thin?: boolean // use thin in modals
+  thin?: boolean, // use thin in modals
 };
 
-export const ControlsPanel = ({
-  className,
-  controls = [],
-  thin
-}: ControlsPanelProps) => (
+export const ControlsPanel = ({ className, controls = [], thin }: ControlsPanelProps) => (
   <div className={cx(styles.outer, className)}>
-    {controls && controls.filter(Boolean).map((control, index) => {
-      return <div key={index} className={cx(styles.control, { [styles.thin]: thin })}>{control}</div>
-    })}
+    {controls &&
+      controls.filter(Boolean).map((control, index) => {
+        return (
+          <div key={index} className={cx(styles.control, { [styles.thin]: thin })}>
+            {control}
+          </div>
+        );
+      })}
   </div>
 );

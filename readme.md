@@ -39,7 +39,7 @@ import { Button } from '@tarantool.io/ui-kit';
 ...
 
 return (
-  <Button intent='primary' text='Tarantool' />
+  <Button intent="primary" text="Tarantool" />
 );
 ```
 

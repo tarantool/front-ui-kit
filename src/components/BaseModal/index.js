@@ -46,7 +46,7 @@ export const styles = {
   `,
   wide: css`
     max-width: 1000px;
-  `
+  `,
 };
 
 const isNodeOutsideElement = (node: HTMLElement, element: HTMLElement) => !(element.contains(node) || element === node);
@@ -57,8 +57,8 @@ export type BaseModalProps = {
   className?: string,
   wide?: boolean,
   onClose?: (?MouseEvent) => void,
-  shimClassName?: string
-}
+  shimClassName?: string,
+};
 
 export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Component<T> {
   modalRef = createRef<HTMLElement>();
@@ -66,12 +66,12 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
   lockBodyScroll = () => {
     const { body } = document;
     body && body.classList.add(styles.lockedBody);
-  }
+  };
 
   releaseBodyScroll = () => {
     const { body } = document;
     body && body.classList.remove(styles.lockedBody);
-  }
+  };
 
   afterModalOpen() {
     this.lockBodyScroll();
@@ -99,8 +99,7 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
   }
 
   render() {
-    if (!this.isModalVisible())
-      return null;
+    if (!this.isModalVisible()) return null;
 
     const root = document.body;
 
@@ -108,35 +107,22 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
       return ReactDOM.createPortal(this.renderModal(), root);
     }
 
-    return null
+    return null;
   }
 
   renderModal() {
-    const {
-      children,
-      className,
-      wide,
-      shimClassName
-    } = this.props;
+    const { children, className, wide, shimClassName } = this.props;
 
     return (
       <div className={cx(styles.shim, shimClassName)} onMouseDown={this.handleOutsideClick}>
         <div
-          className={cx(
-            styles.baseModal,
-            { [styles.wide]: wide },
-            className
-          )}
+          className={cx(styles.baseModal, { [styles.wide]: wide }, className)}
           ref={this.modalRef}
           tabIndex={0}
           onKeyDown={this.handleEscapePress}
         >
           {children}
-          <div
-            className={styles.focusClosureControl}
-            onFocus={this.focusFirstInteractiveElement}
-            tabIndex='0'
-          />
+          <div className={styles.focusClosureControl} onFocus={this.focusFirstInteractiveElement} tabIndex="0" />
         </div>
       </div>
     );
@@ -151,17 +137,17 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
     } else if (modal) {
       modal.focus();
     }
-  }
+  };
 
   focusModal = () => {
     const modal = this.modalRef.current;
     modal && modal.focus();
-  }
+  };
 
   isModalVisible = (): boolean => {
     const { visible } = this.props;
     return visible !== false;
-  }
+  };
 
   handleOutsideClick = (event: MouseEvent) => {
     const modal = this.modalRef.current;
@@ -175,5 +161,5 @@ export class BaseModal<T: BaseModalProps = BaseModalProps> extends React.Compone
     if (this.props.onClose && e.keyCode === 27) {
       this.props.onClose();
     }
-  }
+  };
 }

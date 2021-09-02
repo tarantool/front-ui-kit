@@ -7,21 +7,11 @@ type CodeBlockProps = {
   className?: string,
   copyBtn?: boolean,
   text: string,
-  language?: 'lua' | 'python' | 'js' | 'javascript' | 'jsx' | 'php' | 'go' | 'ruby'
+  language?: 'lua' | 'python' | 'js' | 'javascript' | 'jsx' | 'php' | 'go' | 'ruby',
 };
 
-export const CodeBlock = (
-  {
-    className,
-    copyBtn = true,
-    text,
-    language
-  }: CodeBlockProps
-) => (
+export const CodeBlock = ({ className, copyBtn = true, text, language }: CodeBlockProps) => (
   <CodeBlockWrap className={className} textToCopy={copyBtn ? text : null}>
-    <SyntaxHighlight
-      text={text}
-      language={language}
-    />
+    <SyntaxHighlight text={text} language={language} />
   </CodeBlockWrap>
 );

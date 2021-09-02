@@ -17,44 +17,44 @@ const Thumb = styled.div`
 
 const trackYProps = (track?: string) => ({
   track,
-  renderer: props => {
+  renderer: (props) => {
     const { elementRef, style, ...rest } = props;
 
     return <Track {...rest} style={style} ref={elementRef} />;
-  }
+  },
 });
 
 const thumbYProps = (thumb?: string) => ({
   thumb,
-  renderer: props => {
+  renderer: (props) => {
     const { elementRef, style, ...rest } = props;
 
     return <Thumb {...rest} style={style} ref={elementRef} />;
-  }
+  },
 });
 
 const wrapperProps = {
-  renderer: props => {
+  renderer: (props) => {
     const { elementRef, style, ...rest } = props;
 
     return <div {...rest} style={{ ...style, right: 0 }} ref={elementRef} />;
-  }
+  },
 };
 
 const scrollerProps = {
-  renderer: props => {
+  renderer: (props) => {
     const { elementRef, style, ...rest } = props;
 
     return <div {...rest} style={{ ...style, marginRight: -20, paddingRight: 20 }} ref={elementRef} />;
-  }
+  },
 };
 
 type ScrollbarProps = {
   children?: React.Node,
   className?: string,
   track?: string,
-  thumb?: string
-}
+  thumb?: string,
+};
 
 const style = { width: '100%' };
 
@@ -77,5 +77,5 @@ export const Scrollbar = ({ children, className, track, thumb }: ScrollbarProps)
     >
       {children}
     </ReactScroll>
-  )
+  );
 };

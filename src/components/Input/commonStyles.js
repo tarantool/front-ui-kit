@@ -42,9 +42,9 @@ export const commonInputStyles = {
     resize: none;
 
     &::placeholder {
-      color: ${colors.intentBase}
+      color: ${colors.intentBase};
     }
-  `
+  `,
 };
 
 export const commonInputSizes = {
@@ -55,5 +55,5 @@ export const commonInputSizes = {
   l: css`
     padding-top: 9px;
     padding-bottom: 9px;
-  `
+  `,
 };

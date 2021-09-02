@@ -2,10 +2,9 @@
 import * as React from 'react';
 import { NonIdealState, NonIdealStateAction } from '../NonIdealState';
 import { windowErrorSvg } from '../../images';
-import { Button } from '../Button'
+import { Button } from '../Button';
 import { Modal } from '../Modal';
 import { Text } from '../Text';
-
 
 export type CommonSplashErrorProps = {
   title: string,
@@ -16,18 +15,9 @@ export type CommonSplashErrorProps = {
 
 type Props = CommonSplashErrorProps & {
   image?: SVGGlyph,
-}
+};
 
-
-export const SplashError = (
-  {
-    description,
-    title,
-    details,
-    image,
-    children
-  }: Props
-) => {
+export const SplashError = ({ description, title, details, image, children }: Props) => {
   const [showDetails, setShowDetails] = React.useState(false);
   const onCloseClick = () => setShowDetails(false);
 
@@ -35,33 +25,29 @@ export const SplashError = (
     image: image || windowErrorSvg,
     title,
     description,
-    children
+    children,
   };
-  return <>
-    {showDetails &&
-      <Modal
-        title={title}
-        onClose={onCloseClick}
-        footerControls={[
-          <Button key={0} intent={'primary'} onClick={onCloseClick}>Close</Button>
-        ]}
-      >
-        {!!details && <Text tag='div'>{details}</Text>}
-      </Modal>
-    }
+  return (
+    <>
+      {showDetails && (
+        <Modal
+          title={title}
+          onClose={onCloseClick}
+          footerControls={[
+            <Button key={0} intent={'primary'} onClick={onCloseClick}>
+              Close
+            </Button>,
+          ]}
+        >
+          {!!details && <Text tag="div">{details}</Text>}
+        </Modal>
+      )}
 
-    {details
-      ? (
-        <NonIdealStateAction
-          {...commonProps}
-          actionText="Details"
-          onActionClick={() => setShowDetails(true)}
-        />
+      {details ? (
+        <NonIdealStateAction {...commonProps} actionText="Details" onActionClick={() => setShowDetails(true)} />
       ) : (
-        <NonIdealState
-          {...commonProps}
-        />
-      )
-    }
-  </>;
-}
+        <NonIdealState {...commonProps} />
+      )}
+    </>
+  );
+};

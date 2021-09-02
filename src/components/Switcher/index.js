@@ -64,11 +64,11 @@ const styles = {
     cursor: default;
   `,
   notDisabled: css`
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0, 0, 0, 0.25);
 
     &:hover,
     &:focus {
-      background-color: rgba(0,0,0,0.35);
+      background-color: rgba(0, 0, 0, 0.35);
     }
   `,
   checked: css`
@@ -104,7 +104,7 @@ const styles = {
   label: css`
     display: flex;
     align-items: center;
-  `
+  `,
 };
 
 type SwitcherProps = {
@@ -114,39 +114,28 @@ type SwitcherProps = {
   disabled?: boolean,
   name?: string,
   onChange?: (MouseEvent) => void,
-  title?: string
+  title?: string,
 };
 
-export const Switcher = ({
-  checked,
-  children,
-  className,
-  disabled,
-  name,
-  onChange,
-  title
-}: SwitcherProps) => (
+export const Switcher = ({ checked, children, className, disabled, name, onChange, title }: SwitcherProps) => (
   <label className={cx(styles.label, className)} title={title}>
     <input
       checked={checked}
       className={styles.input}
       disabled={disabled}
       name={name}
-      type='checkbox'
+      type="checkbox"
       onChange={onChange}
     />
     <div
-      className={cx(
-        styles.switcher,
-        {
-          [styles.notDisabled]: !checked && !disabled,
-          [styles.checked]: checked && !disabled,
-          [styles.disabled]: !checked && disabled,
-          [styles.basicDisabled]: disabled,
-          [styles.checkedDisabled]: checked && disabled,
-          [styles.childrenMargin]: children
-        }
-      )}
+      className={cx(styles.switcher, {
+        [styles.notDisabled]: !checked && !disabled,
+        [styles.checked]: checked && !disabled,
+        [styles.disabled]: !checked && disabled,
+        [styles.basicDisabled]: disabled,
+        [styles.checkedDisabled]: checked && disabled,
+        [styles.childrenMargin]: children,
+      })}
     />
     {typeof children === 'string' ? <Text className={styles.children}>{children}</Text> : children}
   </label>

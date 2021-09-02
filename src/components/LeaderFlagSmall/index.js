@@ -7,9 +7,4 @@ type LeaderFlagSmallProps = {
   className?: string,
 };
 
-export const LeaderFlagSmall = (props: LeaderFlagSmallProps) => (
-  <SVGImage
-    {...props}
-    glyph={glyph}
-  />
-);
+export const LeaderFlagSmall = (props: LeaderFlagSmallProps) => <SVGImage {...props} glyph={glyph} />;

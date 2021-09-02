@@ -1,6 +1,6 @@
 // @flow
-import * as React from 'react'
-import { css, cx } from '@emotion/css'
+import * as React from 'react';
+import { css, cx } from '@emotion/css';
 import { colors } from '../../variables';
 import { ControlsPanel } from '../ControlsPanel';
 import { IconHelperClose } from '../IconHelper';
@@ -33,39 +33,23 @@ const styles = {
   `,
   controlsMargin: css`
     margin-left: 24px;
-  `
-}
+  `,
+};
 
 export type NotificationSplashProps = {
   className?: string,
   children?: React.Node,
   controls?: React.Node[],
-  onClose?: (e: MouseEvent) => void
+  onClose?: (e: MouseEvent) => void,
 };
 
-export const NotificationSplash = (
-  {
-    className,
-    children,
-    controls,
-    onClose
-  }: NotificationSplashProps
-) => (
-  <div
-    className={cx(
-      styles.splash,
-      { [styles.closePadding]: onClose },
-      className
-    )}
-  >
-    <Text className={styles.children} tag='span'>
+export const NotificationSplash = ({ className, children, controls, onClose }: NotificationSplashProps) => (
+  <div className={cx(styles.splash, { [styles.closePadding]: onClose }, className)}>
+    <Text className={styles.children} tag="span">
       {children}
     </Text>
     <ControlsPanel
-      className={cx(
-        styles.controls,
-        { [styles.controlsMargin]: children && controls }
-      )}
+      className={cx(styles.controls, { [styles.controlsMargin]: children && controls })}
       controls={controls}
     />
     {onClose && <IconHelperClose className={styles.close} onClick={onClose} />}

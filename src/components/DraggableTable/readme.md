@@ -1,4 +1,4 @@
-```js
+```jsx
 import { useState } from 'react';
 import { arrayMoveImmutable } from 'array-move';
 import { DraggableTable } from '@tarantool.io/ui-kit';
@@ -40,6 +40,6 @@ const onSelectRow = (selected, row) => {
     onSelectRow={onSelectRow}
     withPositionCol
     draggableOnlySelected
- />
+  />
 </>
 ```

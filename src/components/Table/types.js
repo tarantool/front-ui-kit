@@ -3,10 +3,10 @@
 import { type Row } from 'react-table';
 
 export type RowProps = {
-  row: Row;
+  row: Row,
   rowClassName?: string,
   onRowClick?: (row: Row) => void,
-}
+};
 
 export type TopRowProps = {
   cellsLength: Number,
@@ -14,7 +14,7 @@ export type TopRowProps = {
   topRowStickySide: number,
   headerRef: {| current: HTMLTableSectionElement | null |},
   children: any,
-}
+};
 
 export type AdditionalProps = {
   rowClassName?: string,
@@ -22,7 +22,7 @@ export type AdditionalProps = {
   topRowKey: string,
   topRowClassName: string,
   topRowStickySide: number,
-}
+};
 
 export type ManualPagination = {
   page: number,
@@ -30,4 +30,4 @@ export type ManualPagination = {
   onChangePage: (page: number) => void,
   onChangePageSize: (pageSize: number) => void,
   disableNextPageButton: boolean,
-}
+};

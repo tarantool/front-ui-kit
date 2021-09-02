@@ -17,7 +17,9 @@ export const styles = {
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       transition-property: background-color, color, box-shadow;
     }
 
@@ -47,7 +49,9 @@ export const styles = {
     color: rgba(0, 0, 0, 0);
     transition: none;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       cursor: default;
       color: rgba(0, 0, 0, 0);
     }
@@ -103,7 +107,7 @@ export const styles = {
 
   iconicS: css`
     padding: 1px 4px;
-  `
+  `,
 };
 
 export const intentStyles = {
@@ -208,7 +212,7 @@ export const intentStyles = {
     &:disabled svg {
       fill: ${colors.intentBase};
     }
-  `
+  `,
 };
 
 export const intentActiveStyles = {
@@ -266,5 +270,5 @@ export const intentActiveStyles = {
     &:hover {
       background-color: ${colors.dark10};
     }
-  `
+  `,
 };

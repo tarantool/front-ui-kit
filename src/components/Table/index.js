@@ -8,7 +8,7 @@ import {
   useRowSelect,
   useMountedLayoutEffect,
   type UseTableOptions,
-  type Row
+  type Row,
 } from 'react-table';
 import { css, cx } from '@emotion/css';
 
@@ -34,7 +34,7 @@ const styles = {
     border-collapse: collapse;
   `,
   tbody: css`
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   `,
   loading: css`
     min-height: 200px;
@@ -44,32 +44,34 @@ const styles = {
     width: 120px;
   `,
   noData: css`
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 25px;
   `,
   noDataText: css`
     margin-top: 16px;
     color: ${colors.dark65};
- `,
+  `,
   pagination: css`
     margin-top: 40px;
     display: flex;
     justify-content: flex-end;
     margin-right: 16px;
-  `
+  `,
 };
 
-
-type TableProps = $Exact<UseTableOptions & AdditionalProps & {
-  className?: string,
-  pagination?: boolean;
-  loading?: boolean;
-  manualPagination?: ManualPagination;
-  onSelectedRowsChange?: (selectedFlatRows: Row[], selectedRowIds: any[]) => void,
-  tableKey?: string;
-  initialSelectedRowIds?: any[],
-  initialSortBy?: Array<{ id: string, desc: boolean }>
-}>;
+type TableProps = $Exact<
+  UseTableOptions &
+    AdditionalProps & {
+      className?: string,
+      pagination?: boolean,
+      loading?: boolean,
+      manualPagination?: ManualPagination,
+      onSelectedRowsChange?: (selectedFlatRows: Row[], selectedRowIds: any[]) => void,
+      tableKey?: string,
+      initialSelectedRowIds?: any[],
+      initialSortBy?: Array<{ id: string, desc: boolean }>,
+    }
+>;
 
 const emptyArr = [];
 
@@ -85,12 +87,15 @@ export function Table(props: TableProps) {
     initialSelectedRowIds = emptyArr,
     initialSortBy = emptyArr,
     manualPagination,
-    loading = false
+    loading = false,
   } = props;
 
-  const getRowId = React.useCallback((row, index) => {
-    return tableKey && row[tableKey] ? row[tableKey] : index;
-  }, [tableKey]);
+  const getRowId = React.useCallback(
+    (row, index) => {
+      return tableKey && row[tableKey] ? row[tableKey] : index;
+    },
+    [tableKey]
+  );
 
   const headerRef = React.useRef<HTMLTableSectionElement | null>(null);
 
@@ -105,11 +110,7 @@ export function Table(props: TableProps) {
     gotoPage,
     setPageSize,
     selectedFlatRows,
-    state: {
-      pageIndex,
-      pageSize,
-      selectedRowIds
-    }
+    state: { pageIndex, pageSize, selectedRowIds },
   } = useTable(
     {
       columns,
@@ -117,37 +118,38 @@ export function Table(props: TableProps) {
       getRowId,
       initialState: {
         selectedRowIds: initialSelectedRowIds,
-        sortBy: initialSortBy
+        sortBy: initialSortBy,
       },
       manualPagination: !!manualPagination,
       autoResetSelectedRows: !manualPagination,
-      autoResetSortBy: !manualPagination
+      autoResetSortBy: !manualPagination,
     },
     useSortBy,
     usePagination,
     useRowSelect,
-    hooks => {
-      onSelectedRowsChange && hooks.visibleColumns.push(columns => [
-        // Let's make a column for selection
-        {
-          id: 'selection',
-          Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
-          Cell: ({ row: { getToggleRowSelectedProps } }) => <Checkbox {...getToggleRowSelectedProps()} />
-        },
-        ...columns
-      ])
+    (hooks) => {
+      onSelectedRowsChange &&
+        hooks.visibleColumns.push((columns) => [
+          // Let's make a column for selection
+          {
+            id: 'selection',
+            Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
+            Cell: ({ row: { getToggleRowSelectedProps } }) => <Checkbox {...getToggleRowSelectedProps()} />,
+          },
+          ...columns,
+        ]);
     }
   );
 
   useMountedLayoutEffect(() => {
     if (onSelectedRowsChange) {
-      const selectedRows = selectedFlatRows.map(row => row.original);
+      const selectedRows = selectedFlatRows.map((row) => row.original);
       onSelectedRowsChange(selectedRows, Object.keys(selectedRowIds));
     }
   }, [selectedFlatRows]);
 
   const dataRows: Row[] = React.useMemo(() => {
-    return (pagination ? page : rows).map(item => {
+    return (pagination ? page : rows).map((item) => {
       prepareRow(item);
       return item;
     });
@@ -157,13 +159,9 @@ export function Table(props: TableProps) {
     <>
       <Spin enable={loading} className={cx({ [styles.loading]: loading })}>
         <table {...getTableProps()} className={cx(styles.table, className)}>
-          <TableHeader
-            ref={headerRef}
-            headerGroups={headerGroups}
-            dataRows={dataRows}
-          />
+          <TableHeader ref={headerRef} headerGroups={headerGroups} dataRows={dataRows} />
           <tbody className={styles.tbody} {...getTableBodyProps()}>
-            {dataRows.map(row => {
+            {dataRows.map((row) => {
               const topRow = props.topRowKey && row.original[props.topRowKey];
               return (
                 <React.Fragment key={row.getRowProps().key}>
@@ -178,13 +176,9 @@ export function Table(props: TableProps) {
                       {topRow}
                     </TableStickyRow>
                   )}
-                  <TableRow
-                    row={row}
-                    rowClassName={rowClassName}
-                    onRowClick={props.onRowClick}
-                  />
+                  <TableRow row={row} rowClassName={rowClassName} onRowClick={props.onRowClick} />
                 </React.Fragment>
-              )
+              );
             })}
             {!rows.length && !loading && (
               <tr>

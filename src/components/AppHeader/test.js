@@ -8,41 +8,43 @@ it('AppHeader renders correctly', () => {
   const breadcrumbs = [
     {
       title: '@tarantool.io/ui-kit',
-      path: '/tarantool'
+      path: '/tarantool',
     },
     {
       title: 'UI Components',
-      path: '/section-ui-components'
+      path: '/section-ui-components',
     },
     {
       title: 'Breadcrumb',
-      path: '/breadcrumb'
+      path: '/breadcrumb',
     },
     {
       title: 'OverflowList',
-      path: '/overflow-list'
+      path: '/overflow-list',
     },
     {
       title: 'ResizeSensor',
-      path: '/resize-sensor'
+      path: '/resize-sensor',
     },
     {
       title: 'ResizeSensor again',
-      path: '/resize-sensor-again'
-    }
+      path: '/resize-sensor-again',
+    },
   ];
 
-  const tree = renderer.create(
-    <AppHeader
-      breadcrumbs={breadcrumbs}
-      appName='Project name'
-      onLinkClick={onLinkClick}
-      controls={[
-        <Button key={0} title='Search' intent='plain' icon={IconSearch} />,
-        <Button key={1} text='Log in' />
-      ]}
-    />
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <AppHeader
+        breadcrumbs={breadcrumbs}
+        appName="Project name"
+        onLinkClick={onLinkClick}
+        controls={[
+          <Button key={0} title="Search" intent="plain" icon={IconSearch} />,
+          <Button key={1} text="Log in" />,
+        ]}
+      />
+    )
+    .toJSON();
 
   expect(tree).toMatchSnapshot();
 });

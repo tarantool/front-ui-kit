@@ -30,20 +30,18 @@ const styles = {
     flex-shrink: 0;
     box-sizing: border-box;
     z-index: 1;
-  `
-}
+  `,
+};
 
 type AppLayoutProps = {
   children: React.Node,
   className?: string,
-  sidebarComponent: React.AbstractComponent<{ className: string }>
-}
+  sidebarComponent: React.AbstractComponent<{ className: string }>,
+};
 
 export const AppLayout = ({ children, className, sidebarComponent: Sidebar }: AppLayoutProps) => (
   <div className={cx(styles.main, className)}>
     <Sidebar className={styles.sidebar} />
-    <div className={cx(styles.content, genericStyles.scrollbars)}>
-      {children}
-    </div>
+    <div className={cx(styles.content, genericStyles.scrollbars)}>{children}</div>
   </div>
 );

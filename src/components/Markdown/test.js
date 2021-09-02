@@ -4,13 +4,12 @@ import { Markdown } from './index';
 
 describe('Markdown', () => {
   it('renders code inline', () => {
-    const tree = renderer.create(<Markdown text='`Code line`' />).toJSON();
+    const tree = renderer.create(<Markdown text="`Code line`" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders code block', () => {
-    const md =
-`\`\`\`
+    const md = `\`\`\`
 Code block
 \`\`\``;
 
@@ -58,8 +57,7 @@ python3 example.py
   });
 
   it('renders with built-in component overriding', () => {
-    const md =
-`
+    const md = `
 # Bee careful
 
 Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
@@ -71,18 +69,21 @@ Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium dolo
 * Save file
 `;
 
-    const tree = renderer.create(
-      <Markdown
-        overrides={{
-          ul: ({ children, ...props }) => (
-            <ul {...props} className='iAmOverridedComponent'>{children}</ul>
-          )
-        }}
-        text={md}
-      />
-    ).toJSON();
+    const tree = renderer
+      .create(
+        <Markdown
+          overrides={{
+            ul: ({ children, ...props }) => (
+              <ul {...props} className="iAmOverridedComponent">
+                {children}
+              </ul>
+            ),
+          }}
+          text={md}
+        />
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
-
 });

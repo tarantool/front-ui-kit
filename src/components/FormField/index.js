@@ -18,7 +18,7 @@ type FormFieldProps = {
   largeMargins?: boolean,
   subTitle?: string | React.Node,
   topRightControls?: React.Node[],
-  verticalSort?: boolean
+  verticalSort?: boolean,
 };
 
 export const FormField = ({
@@ -31,24 +31,15 @@ export const FormField = ({
   info,
   label,
   largeMargins,
-  verticalSort
+  verticalSort,
 }: FormFieldProps) => (
-  <div
-    className={cx(
-      commonStyles.wrap,
-      { [commonStyles.wrapMargin]: largeMargins },
-      className
-    )}
-  >
-    <div
-      className={cx(
-        commonStyles.headingPane,
-        { [commonStyles.headingPaneMargin]: largeMargins }
-      )}
-    >
+  <div className={cx(commonStyles.wrap, { [commonStyles.wrapMargin]: largeMargins }, className)}>
+    <div className={cx(commonStyles.headingPane, { [commonStyles.headingPaneMargin]: largeMargins })}>
       <div className={commonStyles.headingPaneLeft}>
         {label && (
-          <Text className={commonStyles.label} variant='h4' tag='span'>{label}</Text>
+          <Text className={commonStyles.label} variant="h4" tag="span">
+            {label}
+          </Text>
         )}
         {!!info && (
           <Tooltip className={commonStyles.tooltip} content={info}>
@@ -56,13 +47,15 @@ export const FormField = ({
           </Tooltip>
         )}
         {!!subTitle && (
-          <Text className={commonStyles.subTitle} variant='p' tag='span'>{subTitle}</Text>
+          <Text className={commonStyles.subTitle} variant="p" tag="span">
+            {subTitle}
+          </Text>
         )}
       </div>
-      {topRightControls && (
-        <ControlsPanel className={commonStyles.topRightControls} controls={topRightControls} />
-      )}
+      {topRightControls && <ControlsPanel className={commonStyles.topRightControls} controls={topRightControls} />}
     </div>
-    <InputGroup columns={columns} itemClassName={itemClassName} verticalSort={verticalSort}>{children}</InputGroup>
+    <InputGroup columns={columns} itemClassName={itemClassName} verticalSort={verticalSort}>
+      {children}
+    </InputGroup>
   </div>
 );

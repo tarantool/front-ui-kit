@@ -29,8 +29,8 @@ const styles = {
   popoverScrollable: css`
     height: 100%;
     overflow: auto;
-  `
-}
+  `,
+};
 
 type DropdownPopoverProps = {
   useScroll: boolean,
@@ -41,8 +41,8 @@ type DropdownPopoverProps = {
   onClick: MouseEvent,
   onKeyDownCapture?: KeyboardEvent,
   onMouseDown: MouseEvent,
-  autoFocus: boolean
-}
+  autoFocus: boolean,
+};
 
 export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   focus() {
@@ -63,22 +63,23 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
 
       const focused = document.activeElement;
       if (innerRef && innerRef.current) {
-        const items = Array.from(
-          innerRef.current.querySelectorAll(INTERACTIVE_ELEMENT_SELECTOR)
-        );
+        const items = Array.from(innerRef.current.querySelectorAll(INTERACTIVE_ELEMENT_SELECTOR));
         const currentIndex = items.indexOf(focused);
-        let newActiveIndex = currentIndex === -1
-          ? (e.keyCode === 38) ? items.length - 1 : 0
-          : (e.keyCode === 38)
-            ? ((currentIndex + items.length - 1) % items.length)
-            : ((currentIndex + items.length + 1) % items.length);
+        let newActiveIndex =
+          currentIndex === -1
+            ? e.keyCode === 38
+              ? items.length - 1
+              : 0
+            : e.keyCode === 38
+            ? (currentIndex + items.length - 1) % items.length
+            : (currentIndex + items.length + 1) % items.length;
 
         items[newActiveIndex].focus();
       }
     }
 
     onKeyDownCapture && onKeyDownCapture(e);
-  }
+  };
 
   componentDidMount() {
     const { style } = this.props;
@@ -94,24 +95,11 @@ export class DropdownPopover extends React.Component<DropdownPopoverProps> {
   }
 
   render() {
-    const {
-      className,
-      innerRef,
-      items,
-      useScroll,
-      style,
-      onClick,
-      onMouseDown
-    } = this.props;
+    const { className, innerRef, items, useScroll, style, onClick, onMouseDown } = this.props;
 
     return (
       <div
-        className={cx(
-          styles.popover,
-          genericStyles.scrollbars,
-          { [styles.popoverScrollable]: useScroll },
-          className
-        )}
+        className={cx(styles.popover, genericStyles.scrollbars, { [styles.popoverScrollable]: useScroll }, className)}
         onClick={onClick}
         onMouseDown={onMouseDown}
         onKeyDownCapture={this.handleKeyDown}

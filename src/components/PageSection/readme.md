@@ -1,4 +1,4 @@
-```js
+```jsx
 import { Button, PageSection } from '@tarantool.io/ui-kit';
 
 <div>
@@ -6,7 +6,8 @@ import { Button, PageSection } from '@tarantool.io/ui-kit';
     title='First section'
     topRightControls={[
       <Button
-        text='Configure selected'
+        key={0}
+        text="Configure selected"
       />
     ]}
     subTitle={
@@ -20,10 +21,11 @@ import { Button, PageSection } from '@tarantool.io/ui-kit';
   </PageSection>
 
   <PageSection
-    title='Second section'
+    title="Second section"
     topRightControls={[
       <Button
-        text='Configure selected'
+        key={0}
+        text="Configure selected"
       />
     ]}
     subTitle={

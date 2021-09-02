@@ -48,7 +48,7 @@ const styles = {
     display: flex;
     align-items: center;
     cursor: pointer;
-  `
+  `,
 };
 
 type RadioButtonProps = {
@@ -59,7 +59,7 @@ type RadioButtonProps = {
   name?: string,
   title?: string,
   value?: string,
-  onChange?: (MouseEvent) => void
+  onChange?: (MouseEvent) => void,
 };
 
 export const RadioButton = ({
@@ -70,29 +70,20 @@ export const RadioButton = ({
   onChange,
   name,
   title,
-  value
+  value,
 }: RadioButtonProps) => (
   <label className={cx(styles.label, className)} title={title}>
     <input
       checked={checked}
       className={styles.input}
       disabled={disabled}
-      type='radio'
+      type="radio"
       onChange={onChange}
       name={name}
       value={value}
     />
-    <div
-      className={cx(
-        styles.iconWrap,
-        { [styles.childrenMargin]: children }
-      )}
-    >
-      <IconRadio
-        className={styles.icon}
-        checked={checked}
-        disabled={disabled}
-      />
+    <div className={cx(styles.iconWrap, { [styles.childrenMargin]: children })}>
+      <IconRadio className={styles.icon} checked={checked} disabled={disabled} />
     </div>
     {typeof children === 'string' ? <Text className={styles.children}>{children}</Text> : children}
   </label>

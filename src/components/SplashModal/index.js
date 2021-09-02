@@ -45,40 +45,37 @@ const styles = {
   formContainer: css`
     flex-grow: 1;
     padding: 30px;
-  `
+  `,
 };
-
 
 export type SplashModalProps = BaseModalProps & {
   title: string,
   subTitle: string,
-  logo?: SVGGlyph
+  logo?: SVGGlyph,
 };
 
-export const SplashModal = (
-  {
-    children,
-    className,
-    shimClassName,
-    subTitle,
-    title,
-    logo,
-    ...props
-  }: SplashModalProps
-) => (
-  <BaseModal
-    {...props}
-    className={cx(styles.modal, className)}
-    shimClassName={cx(styles.shim, shimClassName)}
-  >
-    {logo && <div className={styles.logoContainer}>
-      <SVGImage glyph={logo} className={styles.logo} />
-    </div>}
+export const SplashModal = ({
+  children,
+  className,
+  shimClassName,
+  subTitle,
+  title,
+  logo,
+  ...props
+}: SplashModalProps) => (
+  <BaseModal {...props} className={cx(styles.modal, className)} shimClassName={cx(styles.shim, shimClassName)}>
+    {logo && (
+      <div className={styles.logoContainer}>
+        <SVGImage glyph={logo} className={styles.logo} />
+      </div>
+    )}
     <div className={styles.formContainer}>
-      {title && (<Text variant='h1'>{title}</Text>)}
+      {title && <Text variant="h1">{title}</Text>}
       {subTitle && (
         <div className={styles.subTitleWrap}>
-          <Text variant='basic' className={styles.subTitle}>{subTitle}</Text>
+          <Text variant="basic" className={styles.subTitle}>
+            {subTitle}
+          </Text>
         </div>
       )}
       {children}

@@ -29,23 +29,24 @@ const styles = {
       border-radius: 3px;
     }
   `,
-  interactive: (className?: string): string => className
-    ? css`
-      color: rgba(0, 0, 0, 0.2);
-      background-color: transparent;
+  interactive: (className?: string): string =>
+    className
+      ? css`
+          color: rgba(0, 0, 0, 0.2);
+          background-color: transparent;
 
-      .${className}:hover & {
-        color: #ffffff;
-        background-color: rgba(0, 0, 0, 0.65);
-      }
+          .${className}:hover & {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.65);
+          }
 
-      .${className} &:hover,
-      .${className} &:focus {
-        background-color: #000000;
-        color: #ffffff;
-      }
-    `
-    : '',
+          .${className} &:hover,
+          .${className} &:focus {
+            background-color: #000000;
+            color: #ffffff;
+          }
+        `
+      : '',
   static: css`
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.65);
@@ -58,7 +59,7 @@ const styles = {
   `,
   pointer: css`
     cursor: pointer;
-  `
+  `,
 };
 
 export type TagProps = {
@@ -67,16 +68,10 @@ export type TagProps = {
   highlightingOnHover?: string,
   onClick?: (MouseEvent) => void,
   text: string,
-  title?: string
+  title?: string,
 };
 
-export const Tag = ({
-  highlightingOnHover,
-  className,
-  onClick,
-  text,
-  title
-}: TagProps) => {
+export const Tag = ({ highlightingOnHover, className, onClick, text, title }: TagProps) => {
   const Element = onClick ? 'button' : 'span';
 
   return (
@@ -85,7 +80,7 @@ export const Tag = ({
         {
           [styles.interactive(highlightingOnHover)]: !!highlightingOnHover,
           [styles.static]: !highlightingOnHover,
-          [styles.pointer]: onClick
+          [styles.pointer]: onClick,
         },
         styles.tag,
         className
@@ -96,4 +91,4 @@ export const Tag = ({
       {text}
     </Element>
   );
-}
+};

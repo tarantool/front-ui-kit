@@ -2,22 +2,39 @@
 import { useState } from 'react';
 import { Button, ConfirmModal, Text } from '@tarantool.io/ui-kit';
 
-const [opened, setOpened] = useState(false);
-const [loading, setLoading] = useState(false);
+const [{ loading, opened }, setState] = useState({
+  loading: false,
+  opened: false,
+});
 
-const openModal = () => setOpened(true);
-const closeModal = () => setOpened(false);
+const openModal = () => setState((value) => ({
+  ...value,
+  opened: true,
+}));
+
+const closeModal = () => setState((value) => ({
+  ...value,
+  opened: false,
+}));
 
 const apply = () => {
-  setLoading(true);
+  setState((value) => ({
+    ...value,
+    loading: true,
+  }));
   setTimeout(
-    () => { setLoading(false); setOpened(false); },
-    1200
+    () => {
+      setState(() => ({
+        loading: false,
+        opened: false,
+      }));
+    },
+    1200,
   );
 };
 
 <>
-  <Button onClick={openModal} text='Open ConfirmModal' />
+  <Button onClick={openModal} text="Open ConfirmModal" />
   <ConfirmModal
     title="Please confirm"
     visible={opened}

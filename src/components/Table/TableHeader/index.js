@@ -24,12 +24,12 @@ const styles = {
 
     &:hover {
       background-color: ${colors.intentBase};
-      
+
       svg {
         fill: ${colors.dark65} !important;
       }
     }
-  `
+  `,
 };
 
 function getSortDirection(isSortedDesc?: boolean) {
@@ -47,7 +47,7 @@ function getSortDirection(isSortedDesc?: boolean) {
 type TableHeaderProps = {
   headerGroups: HeaderGroup[],
   dataRows: Row[],
-}
+};
 
 export const TableHeader = React.forwardRef<TableHeaderProps, HTMLTableSectionElement>(
   ({ headerGroups, dataRows }: TableHeaderProps, ref) => {
@@ -60,37 +60,27 @@ export const TableHeader = React.forwardRef<TableHeaderProps, HTMLTableSectionEl
                 column.toggleSortBy && column.toggleSortBy(!column.isSortedDesc, false);
               };
               return (
-                <Text
-                  key={index2}
-                  tag='th'
-                  className={styles.head}
-                  {...column.getHeaderProps()}
-                >
-                  {
-                    column.canSort && dataRows.length > 0
-                      ?
-                      <Button
-                        intent="plain"
-                        className={styles.buttonSort}
-                        onClick={dataRows.length > 0 ? sortColumn : undefined}
-                        iconRight={props => (
-                          <IconHelperSortable
-                            {...props}
-                            sort={getSortDirection(column.isSortedDesc)}
-                          />
-                        )}
-                      >
-                        {column.render('Header')}
-                      </Button>
-                      : column.render('Header')
-                  }
+                <Text key={index2} tag="th" className={styles.head} {...column.getHeaderProps()}>
+                  {column.canSort && dataRows.length > 0 ? (
+                    <Button
+                      intent="plain"
+                      className={styles.buttonSort}
+                      onClick={dataRows.length > 0 ? sortColumn : undefined}
+                      iconRight={(props) => (
+                        <IconHelperSortable {...props} sort={getSortDirection(column.isSortedDesc)} />
+                      )}
+                    >
+                      {column.render('Header')}
+                    </Button>
+                  ) : (
+                    column.render('Header')
+                  )}
                 </Text>
-              )
-            }
-            )}
+              );
+            })}
           </tr>
         ))}
       </thead>
-    )
+    );
   }
 );

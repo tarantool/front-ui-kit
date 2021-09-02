@@ -9,7 +9,7 @@ exports[`FlatList renders correctly 1`] = `
 
 .emotion-1 {
   padding: 12px 16px;
-  border: solid 1px #E8E8E8;
+  border: solid 1px #e8e8e8;
   margin-bottom: 8px;
   border-radius: 4px;
   background-color: #ffffff;

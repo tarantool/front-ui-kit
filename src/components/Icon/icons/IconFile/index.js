@@ -10,9 +10,5 @@ const styles = css`
 `;
 
 export const IconFile = ({ className, onClick }: GenericIconProps) => (
-  <Icon
-    className={cx(styles, className)}
-    glyph={image}
-    onClick={onClick}
-  />
+  <Icon className={cx(styles, className)} glyph={image} onClick={onClick} />
 );

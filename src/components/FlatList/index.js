@@ -11,7 +11,7 @@ const styles = {
   `,
   item: css`
     padding: 12px 16px;
-    border: solid 1px #E8E8E8;
+    border: solid 1px #e8e8e8;
     margin-bottom: 8px;
     border-radius: 4px;
     background-color: #ffffff;
@@ -26,35 +26,23 @@ const styles = {
       border-color: ${colors.intentBaseBg};
       box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.09);
     }
-  `
+  `,
 };
 
 type FlatListProps = {
   className?: string,
-  children?: React.Node
+  children?: React.Node,
 };
 
-export const FlatList = ({
-  className,
-  children
-}: FlatListProps) => (
-  <ul className={cx(styles.outer, className)}>
-    {children}
-  </ul>
+export const FlatList = ({ className, children }: FlatListProps) => (
+  <ul className={cx(styles.outer, className)}>{children}</ul>
 );
 
 type FlatListItemProps = {
   className?: string,
-  children?: React.Node
+  children?: React.Node,
 };
 
 export const FlatListItem = ({ className, children }: FlatListItemProps) => (
-  <li
-    className={cx(
-      styles.item,
-      className
-    )}
-  >
-    {children}
-  </li>
+  <li className={cx(styles.item, className)}>{children}</li>
 );

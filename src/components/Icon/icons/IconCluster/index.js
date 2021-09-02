@@ -11,9 +11,5 @@ const styles = css`
 `;
 
 export const IconCluster = ({ className, ...props }: GenericIconProps) => (
-  <Icon
-    {...props}
-    className={cx(styles, className)}
-    glyph={image}
-  />
+  <Icon {...props} className={cx(styles, className)} glyph={image} />
 );

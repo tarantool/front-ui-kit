@@ -40,7 +40,7 @@ const styles = {
   childrenThin: css`
     padding-left: 0;
     padding-right: 0;
-  `
+  `,
 };
 
 export type ModalProps = BaseModalProps & {
@@ -50,7 +50,7 @@ export type ModalProps = BaseModalProps & {
   loading?: ?boolean,
   onSubmit?: (e: Event) => ?boolean,
   fit?: boolean,
-  thinBorders?: boolean
+  thinBorders?: boolean,
 };
 
 /**
@@ -77,7 +77,7 @@ export class Modal extends BaseModal<ModalProps> {
       loading,
       fit,
       thinBorders,
-      wide
+      wide,
     } = this.props;
 
     const Component = onSubmit ? 'form' : 'div';
@@ -90,7 +90,7 @@ export class Modal extends BaseModal<ModalProps> {
             styles.modal,
             {
               [styles.fit]: fit,
-              [baseStyles.wide]: wide
+              [baseStyles.wide]: wide,
             },
             className
           )}
@@ -99,24 +99,15 @@ export class Modal extends BaseModal<ModalProps> {
           onKeyDown={this.handleEscapePress}
           onSubmit={onSubmit}
         >
-          <Text className={styles.title} variant='h2'>{title}</Text>
+          <Text className={styles.title} variant="h2">
+            {title}
+          </Text>
           {onClose && <IconHelperClose className={styles.closeIcon} onClick={onClose} />}
-          <div
-            className={cx(
-              styles.children,
-              { [styles.childrenThin]: thinBorders }
-            )}
-          >
+          <div className={cx(styles.children, { [styles.childrenThin]: thinBorders })}>
             {loading ? 'Loading' : children}
           </div>
-          {(footerContent || footerControls) && (
-            <Modal.Footer controls={footerControls}>{footerContent}</Modal.Footer>
-          )}
-          <div
-            className={baseStyles.focusClosureControl}
-            onFocus={this.focusFirstInteractiveElement}
-            tabIndex={0}
-          />
+          {(footerContent || footerControls) && <Modal.Footer controls={footerControls}>{footerContent}</Modal.Footer>}
+          <div className={baseStyles.focusClosureControl} onFocus={this.focusFirstInteractiveElement} tabIndex={0} />
         </Component>
       </div>
     );

@@ -10,8 +10,7 @@ const SCROLLBAR_WIDTH = 28;
 const popoverCloseKeyCodes = [9, 13, 27];
 
 const focusFirstInteractiveElement = (containerEl: HTMLElement) => {
-  const firstInteractiveElement = containerEl
-    && containerEl.querySelector(INTERACTIVE_ELEMENT_SELECTOR);
+  const firstInteractiveElement = containerEl && containerEl.querySelector(INTERACTIVE_ELEMENT_SELECTOR);
 
   if (firstInteractiveElement) {
     firstInteractiveElement.focus();
@@ -28,22 +27,20 @@ export type WithDropdownProps = {
   items?: React.Node,
   onDropdownVisibleChange?: (visible: boolean) => void,
   autoFocus?: boolean,
-  disabled?: boolean
+  disabled?: boolean,
 };
 
 export type WithDropdownState = {
   isOpen: boolean,
   left: number,
   top: number,
-  useScroll: boolean
+  useScroll: boolean,
 };
 
-export const withDropdown = (
-  Component: React.AbstractComponent<any, HTMLElement> | string
-) =>
+export const withDropdown = (Component: React.AbstractComponent<any, HTMLElement> | string) =>
   class Dropdown extends React.PureComponent<WithDropdownProps, WithDropdownState> {
     static defaultProps = {
-      autoFocus: true
+      autoFocus: true,
     };
 
     popoverRef = React.createRef<HTMLElement>();
@@ -54,7 +51,7 @@ export const withDropdown = (
       isOpen: false,
       left: 0,
       top: 0,
-      useScroll: false
+      useScroll: false,
     };
 
     componentDidMount() {
@@ -79,7 +76,7 @@ export const withDropdown = (
         document.removeEventListener('mousedown', this.handleMouseDownOutside);
       }
 
-      if ((isOpen && !prevState.isOpen) || (prevProps !== this.props)) {
+      if ((isOpen && !prevState.isOpen) || prevProps !== this.props) {
         this.recalcPosition();
       }
     }
@@ -103,15 +100,15 @@ export const withDropdown = (
         const useScroll = popoverRect.height >= window.innerHeight;
 
         // will show popover upside toggler;
-        const upside = popoverElement.offsetHeight > wrapperBottomSpace
-          && popoverElement.offsetHeight <= wrapperRect.top;
+        const upside =
+          popoverElement.offsetHeight > wrapperBottomSpace && popoverElement.offsetHeight <= wrapperRect.top;
 
         // will show popover downside & shift vertical
-        const shiftVertical = popoverElement.offsetHeight > wrapperBottomSpace
-          && popoverElement.offsetHeight > wrapperRect.top;
+        const shiftVertical =
+          popoverElement.offsetHeight > wrapperBottomSpace && popoverElement.offsetHeight > wrapperRect.top;
 
         // will show popover to left from toggler;
-        const leftside = wrapperRect.left > (bodyWidth / 2);
+        const leftside = wrapperRect.left > bodyWidth / 2;
 
         let left = leftside
           ? Math.max(window.scrollX + wrapperRect.left + wrapperRect.width - popoverRect.width, 0)
@@ -120,18 +117,17 @@ export const withDropdown = (
         let top = shiftVertical
           ? window.scrollY + window.innerHeight - popoverRect.height
           : upside
-            ? window.scrollY + wrapperRect.top - popoverElement.offsetHeight
-            : window.scrollY + wrapperRect.top + wrapperRect.height;
+          ? window.scrollY + wrapperRect.top - popoverElement.offsetHeight
+          : window.scrollY + wrapperRect.top + wrapperRect.height;
 
-        const horizontalShift = left - window.scrollX + popoverRect.width > window.innerWidth
-          ? -(left - window.scrollX + popoverRect.width - window.innerWidth)
-          : left < window.scrollX
+        const horizontalShift =
+          left - window.scrollX + popoverRect.width > window.innerWidth
+            ? -(left - window.scrollX + popoverRect.width - window.innerWidth)
+            : left < window.scrollX
             ? window.scrollX - left
             : 0;
 
-        this.scrollablePopoverWidth = this.state.useScroll
-          ? popoverRect.width
-          : popoverRect.width + SCROLLBAR_WIDTH;
+        this.scrollablePopoverWidth = this.state.useScroll ? popoverRect.width : popoverRect.width + SCROLLBAR_WIDTH;
 
         left += horizontalShift;
         left -= !this.state.useScroll && useScroll ? SCROLLBAR_WIDTH : 0;
@@ -139,7 +135,7 @@ export const withDropdown = (
         this.setState({
           top,
           left,
-          useScroll
+          useScroll,
         });
       }
     };
@@ -151,7 +147,7 @@ export const withDropdown = (
       const { onClick, autoFocus } = this.props;
       const { isOpen } = this.state;
       if (!autoFocus && isOpen) {
-        return
+        return;
       }
       this.toggleDropdown();
       onClick && onClick(event);
@@ -166,16 +162,17 @@ export const withDropdown = (
       const eventTarget = ((event.target: any): Node);
 
       if (
-        isOpen
-        && popoverElement && wrapperElement
-        && !(popoverElement.contains(eventTarget) || wrapperElement.contains(eventTarget))
-        && (popoverElement !== event.target || wrapperElement !== event.target)
+        isOpen &&
+        popoverElement &&
+        wrapperElement &&
+        !(popoverElement.contains(eventTarget) || wrapperElement.contains(eventTarget)) &&
+        (popoverElement !== event.target || wrapperElement !== event.target)
       ) {
         this.toggleDropdown();
       }
     };
 
-    handlePopoverClick = (event: MouseEvent)=> {
+    handlePopoverClick = (event: MouseEvent) => {
       event.stopPropagation();
       const ref = this.popoverRef && this.popoverRef.current;
 
@@ -184,9 +181,9 @@ export const withDropdown = (
       }
     };
 
-    handlePopoverMouseDown = (event: MouseEvent)=> event.stopPropagation();
+    handlePopoverMouseDown = (event: MouseEvent) => event.stopPropagation();
 
-    handlePopoverKeyDown = (event: KeyboardEvent)=> {
+    handlePopoverKeyDown = (event: KeyboardEvent) => {
       if (popoverCloseKeyCodes.includes(event.keyCode)) {
         this.toggleDropdown();
         this.wrapperRef.current && this.props.autoFocus && focusFirstInteractiveElement(this.wrapperRef.current);
@@ -199,9 +196,7 @@ export const withDropdown = (
       const { popoverClassName, autoFocus } = this.props;
       const { left, top, useScroll } = this.state;
       const { wrapperRef } = this;
-      const minWidth = wrapperRef && wrapperRef.current
-        ? wrapperRef.current.getBoundingClientRect().width
-        : 0;
+      const minWidth = wrapperRef && wrapperRef.current ? wrapperRef.current.getBoundingClientRect().width : 0;
 
       return (
         <DropdownPopoverWithRef
@@ -215,7 +210,7 @@ export const withDropdown = (
             left,
             top,
             minWidth,
-            width: useScroll ? this.scrollablePopoverWidth : null
+            width: useScroll ? this.scrollablePopoverWidth : null,
           }}
           useScroll={useScroll}
           ref={this.popoverRef}
@@ -230,7 +225,7 @@ export const withDropdown = (
         return ReactDOM.createPortal(this.renderPopover(), body);
       }
 
-      return null
+      return null;
     }
 
     render() {
@@ -258,6 +253,6 @@ export const withDropdown = (
           />
           {isOpen && items && !disabled && this.renderPortal()}
         </>
-      )
+      );
     }
-  }
+  };

@@ -1,6 +1,6 @@
 Root component to compose default Tarantool applications layout.
 
-```js
+```jsx
 import { css } from '@emotion/css';
 import {
   AppHeader,
@@ -21,24 +21,24 @@ import {
 const breadcrumbs = [
   {
     title: '@tarantool.io/ui-kit',
-    path: '/tarantool'
+    path: '/tarantool',
   },
   {
     title: 'UI Components',
-    path: '/section-ui-components'
+    path: '/section-ui-components',
   },
   {
     title: 'Breadcrumb',
-    path: '/breadcrumb'
+    path: '/breadcrumb',
   },
   {
     title: 'OverflowList',
-    path: '/overflow-list'
+    path: '/overflow-list',
   },
   {
     title: 'ResizeSensor',
-    path: '/resize-sensor'
-  }
+    path: '/resize-sensor',
+  },
 ];
 
 const menuItems = [
@@ -50,54 +50,56 @@ const menuItems = [
     'icon': IconInfo,
     'label': 'My Test',
     'path': '/mytest/test',
-    'namespace': 'mytest'
+    'namespace': 'mytest',
   },
   {
     'selected': false,
     'expanded': true,
     'loading': false,
-    'items': [{
-      'selected': true,
-      'expanded': false,
-      'loading': false,
-      'items': [],
-      'label': 'My Test',
-      'path': '/mytest/test',
-      'namespace': 'mytest'
-    },
-    {
-      'selected': false,
-      'expanded': false,
-      'loading': false,
-      'items': [],
-      'icon': '',
-      'label': 'Other',
-      'path': '/other/test',
-      'namespace': 'other'
-    },
-    {
-      'selected': false,
-      'expanded': false,
-      'loading': false,
-      'items': [],
-      'icon': '',
-      'label': 'Other2',
-      'path': '/other/test2',
-      'namespace': 'other'
-    },
-    {
-      'selected': false,
-      'expanded': false,
-      'loading': false,
-      'items': [],
-      'label': 'Other4',
-      'path': '/other/test3',
-      'namespace': 'other'
-    }],
+    'items': [
+      {
+        'selected': true,
+        'expanded': false,
+        'loading': false,
+        'items': [],
+        'label': 'My Test',
+        'path': '/mytest/test',
+        'namespace': 'mytest',
+      },
+      {
+        'selected': false,
+        'expanded': false,
+        'loading': false,
+        'items': [],
+        'icon': '',
+        'label': 'Other',
+        'path': '/other/test',
+        'namespace': 'other',
+      },
+      {
+        'selected': false,
+        'expanded': false,
+        'loading': false,
+        'items': [],
+        'icon': '',
+        'label': 'Other2',
+        'path': '/other/test2',
+        'namespace': 'other',
+      },
+      {
+        'selected': false,
+        'expanded': false,
+        'loading': false,
+        'items': [],
+        'label': 'Other4',
+        'path': '/other/test3',
+        'namespace': 'other',
+      },
+    ],
     'icon': IconCode,
     'label': 'Other',
     'path': '/other/test',
-    'namespace': 'other'
+    'namespace': 'other',
   },
   {
     'selected': false,
@@ -107,7 +109,7 @@ const menuItems = [
     'icon': IconCluster,
     'label': 'Other2',
     'path': '/other/test2',
-    'namespace': 'other'
+    'namespace': 'other',
   },
   {
     'selected': false,
@@ -117,7 +119,7 @@ const menuItems = [
     'icon': IconTrash,
     'label': 'Other4',
     'path': '/other/test3',
-    'namespace': 'other'
+    'namespace': 'other',
   },
   {
     'selected': false,
@@ -129,7 +131,7 @@ const menuItems = [
     'path': '/other/test3',
     'namespace': 'doc',
     'type': 'external',
-    'pinBottom': true
+    'pinBottom': true,
   }
 ];
 
@@ -140,8 +142,12 @@ const styles = {
     flex-grow: 1;
     flex-shrink: 0;
   `,
-  logo: css`margin-left: 24px;`,
-  wrap: css`height: 500px;`
+  logo: css`
+    margin-left: 24px;
+  `,
+  wrap: css`
+    height: 500px;
+  `,
 };
 
 const onMenuItemClick = (path, type) => console.log(path, type);
@@ -158,7 +164,7 @@ const PreconfiguredSideMenu = ({ className }) => (
   <SideMenu
     className={className}
     menu={menuItems}
-    path='/'
+    path="/"
     onMenuItemClick={onMenuItemClick}
     toggleExpand={toggleExpand}
     renderMenuLogo={renderLogo}
@@ -169,15 +175,15 @@ const onLinkClick = (link) => console.log('link', link);
 
 <AppLayout sidebarComponent={PreconfiguredSideMenu} className={styles.wrap}>
   <AppHeader
-    appName='Sample app'
+    appName="Sample app"
     breadcrumbs={breadcrumbs}
     controls={[
-      <Button title='Search' intent='plain' icon={IconSearch} />,
-      <Button text='Log in' />
+      <Button key={0} title="Search" intent="plain" icon={IconSearch} />,
+      <Button key={1} text="Log in" />,
     ]}
     onLinkClick={onLinkClick}
   />
-  <PageLayout heading='Page header'>
+  <PageLayout heading="Page header">
     <div className={styles.content}>Content</div>
   </PageLayout>
 </AppLayout>

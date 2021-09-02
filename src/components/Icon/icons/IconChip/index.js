@@ -9,9 +9,4 @@ const style = css`
   fill: ${colors.dark65};
 `;
 
-export const IconChip = ({ className }: GenericIconProps) => (
-  <Icon
-    className={cx(style, className)}
-    glyph={image}
-  />
-);
+export const IconChip = ({ className }: GenericIconProps) => <Icon className={cx(style, className)} glyph={image} />;

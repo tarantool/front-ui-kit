@@ -1,6 +1,6 @@
 Universal wrapper component to insert bundled SVG images everywhere.
 
-```js
+```jsx
 import { useState } from 'react';
 import { css, cx } from '@emotion/css';
 import {
@@ -20,7 +20,7 @@ const styles = {
   `,
   bg: css`
     background-color: #f0f2f5;
-  `
+  `,
 };
 
 const [darkBg, setDarkBg] = useState(false);
@@ -30,7 +30,7 @@ const toggleBg = () => setDarkBg(value => !value);
 <div className={cx(styles.wrapper, { [styles.bg]: darkBg })}>
   <ControlsPanel
     controls={[
-      <Switcher onChange={toggleBg} checked={darkBg}>Background</Switcher>
+      <Switcher key={0} onChange={toggleBg} checked={darkBg}>Background</Switcher>
     ]}
   />
   <SVGImage glyph={splashGenericErrorSvg} />

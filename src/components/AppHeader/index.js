@@ -1,16 +1,9 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
-import {
-  Breadcrumbs,
-  type ActionsBreadCrumbs,
-  type BreadcrumbsItem
-} from '../Breadcrumbs';
+import { Breadcrumbs, type ActionsBreadCrumbs, type BreadcrumbsItem } from '../Breadcrumbs';
 import { ControlsPanel } from '../ControlsPanel';
-import {
-  appLayoutTopPanelHeight,
-  pageLayoutMinWidth
-} from '../../variables';
+import { appLayoutTopPanelHeight, pageLayoutMinWidth } from '../../variables';
 
 const styles = {
   header: css`
@@ -42,37 +35,20 @@ const styles = {
     flex-wrap: nowrap;
     align-items: center;
     margin-left: 20px;
-  `
-}
+  `,
+};
 
 type AppHeaderProps = {
   ...ActionsBreadCrumbs,
   appName?: string,
   breadcrumbs: BreadcrumbsItem[],
   className?: string,
-  controls?: React.Node[]
-}
+  controls?: React.Node[],
+};
 
-export const AppHeader = (
-  {
-    appName,
-    breadcrumbs,
-    className,
-    controls,
-    onLinkClick
-  }: AppHeaderProps
-) => (
+export const AppHeader = ({ appName, breadcrumbs, className, controls, onLinkClick }: AppHeaderProps) => (
   <div className={cx(styles.header, className)}>
-    <Breadcrumbs
-      className={styles.crumbs}
-      items={breadcrumbs}
-      appName={appName}
-      onLinkClick={onLinkClick}
-    />
-    <ControlsPanel
-      className={styles.controls}
-      controls={controls}
-      thin
-    />
+    <Breadcrumbs className={styles.crumbs} items={breadcrumbs} appName={appName} onLinkClick={onLinkClick} />
+    <ControlsPanel className={styles.controls} controls={controls} thin />
   </div>
 );

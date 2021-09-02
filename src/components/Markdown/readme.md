@@ -1,4 +1,4 @@
-```js
+```jsx
 <Markdown text={`
 # Header
 
@@ -24,7 +24,7 @@ JS code block
 `} />
 ```
 
-```js
+```jsx
 
 const instruction = `
 ## Connect to Tarantool Cartridge using [python client](https://github.com/tarantool/tarantool-python)
@@ -61,7 +61,7 @@ python3 example.py
 <Markdown text={instruction} />
 ```
 
-```js
+```jsx
 <Markdown text={`
 # Hello world
 
@@ -87,7 +87,7 @@ Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium dolo
 
 ## Built-in components overriding
 
-```js
+```jsx
 import { css } from '@emotion/css';
 import { Markdown } from '@tarantool.io/ui-kit';
 
@@ -95,7 +95,7 @@ const styles = {
   ul: css`
     padding-left: 0;
     list-style: armenian inside;
-  `
+  `,
 };
 
 const md = `

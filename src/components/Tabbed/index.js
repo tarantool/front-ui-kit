@@ -22,13 +22,13 @@ const styles = {
       background-color: transparent;
       outline: none;
       cursor: pointer;
-  
+
       &:hover,
       &:focus {
         z-index: ${zIndex.inline};
         color: ${colors.dark65};
       }
-  
+
       &:last-child {
         margin-right: 0;
       }
@@ -39,13 +39,13 @@ const styles = {
     `,
     tabs: css`
       border-bottom: solid 1px ${colors.intentBase};
-    `
+    `,
   },
   small: {
     wrap: css`
       display: flex;
       flex-direction: column;
-  `,
+    `,
     tab: css`
       position: relative;
       cursor: pointer;
@@ -58,11 +58,11 @@ const styles = {
       padding: 9px 20px;
       border-radius: 4px;
       background-color: ${colors.baseBg};
-      
+
       &:focus {
         background-color: ${colors.baseBg};
       }
-      
+
       &:hover {
         z-index: ${zIndex.inline};
         background-color: #fff;
@@ -78,13 +78,13 @@ const styles = {
       padding 7px 8px;
       background-color: ${colors.baseBg};
       border-radius: 4px;
-    `
-  }
+    `,
+  },
 };
 
 type Tab = {
   label: string,
-  content: React.Node
+  content: React.Node,
 };
 
 type TabbedProps = {
@@ -92,20 +92,20 @@ type TabbedProps = {
   className?: string,
   activeTab?: number,
   handleTabChange?: (i: number, e: MouseEvent) => void,
-  size: 'default' | 'small'
+  size: 'default' | 'small',
 };
 
 type TabbedState = {
   activeTab: number,
-}
+};
 
 export class Tabbed extends React.Component<TabbedProps, TabbedState> {
   static defaultProps = {
-    size: 'default'
+    size: 'default',
   };
 
   state = {
-    activeTab: 0
+    activeTab: 0,
   };
 
   render() {
@@ -116,19 +116,18 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
     return (
       <div className={cx(styles[size].wrap, className)}>
         <div className={styles[size].tabs}>
-          {tabs && tabs.map(({ label }, i) => (
-            <button
-              key={i}
-              className={cx(
-                { [textStyles.h3]: size === 'default' },
-                styles[size].tab,
-                { [styles[size].activeTab]: tabIndex === i }
-              )}
-              onClick={e => this.handleTabChange(i, e)}
-            >
-              {label}
-            </button>
-          ))}
+          {tabs &&
+            tabs.map(({ label }, i) => (
+              <button
+                key={i}
+                className={cx({ [textStyles.h3]: size === 'default' }, styles[size].tab, {
+                  [styles[size].activeTab]: tabIndex === i,
+                })}
+                onClick={(e) => this.handleTabChange(i, e)}
+              >
+                {label}
+              </button>
+            ))}
         </div>
         {tabs[tabIndex].content}
       </div>

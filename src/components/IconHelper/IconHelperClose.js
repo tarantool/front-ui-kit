@@ -15,7 +15,7 @@ const styles = {
     &:hover {
       fill: ${colors.dark25};
     }
-  `
+  `,
 };
 
 export const IconHelperClose = ({ className, onClick }: GenericIconProps) => (

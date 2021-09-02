@@ -12,16 +12,24 @@ const styles = {
     border-radius: 50%;
   `,
   state: {
-    bad: css`background-color: ${colors.intentDanger};`,
-    good: css`background-color: ${colors.intentSuccess};`,
-    inactive: css`background-color: ${colors.intentBaseBg};`,
-    middle: css`background-color: ${colors.intentWarning};`
+    bad: css`
+      background-color: ${colors.intentDanger};
+    `,
+    good: css`
+      background-color: ${colors.intentSuccess};
+    `,
+    inactive: css`
+      background-color: ${colors.intentBaseBg};
+    `,
+    middle: css`
+      background-color: ${colors.intentWarning};
+    `,
   },
   size: {
     s: css`
       width: 6px;
       height: 6px;
-    `
+    `,
     // m: css`
     //   width: 13px;
     //   height: 13px;
@@ -30,28 +38,19 @@ const styles = {
     //   width: 16px;
     //   height: 16px;
     // `
-  }
+  },
 };
 
 type DotIndicatorProps = {
   className?: string,
   // size?: 's',
-  state: 'inactive' | 'good' | 'bad' | 'middle'
+  state: 'inactive' | 'good' | 'bad' | 'middle',
 };
 
 export const DotIndicator = ({
   className,
   // size = 's',
-  state = 'inactive'
+  state = 'inactive',
 }: DotIndicatorProps) => {
-  return (
-    <span
-      className={cx(
-        styles.indicator,
-        styles.state[state],
-        styles.size.s,
-        className
-      )}
-    />
-  );
+  return <span className={cx(styles.indicator, styles.state[state], styles.size.s, className)} />;
 };

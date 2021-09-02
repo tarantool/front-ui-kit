@@ -10,8 +10,5 @@ const styles = css`
 `;
 
 export const IconSpinner = ({ className }: GenericIconProps) => (
-  <Icon
-    className={cx(styles, className)}
-    glyph={image}
-  />
+  <Icon className={cx(styles, className)} glyph={image} />
 );

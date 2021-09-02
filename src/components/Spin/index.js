@@ -29,9 +29,9 @@ const styles = {
       -ms-user-select: none;
       user-select: none;
       overflow: hidden;
-      opacity: .5;
+      opacity: 0.5;
     }
-  `
+  `,
 };
 
 type SpinProps = {
@@ -42,7 +42,7 @@ type SpinProps = {
 
 export class Spin extends React.Component<SpinProps> {
   static defaultProps = {
-    enable: false
+    enable: false,
   };
 
   render() {
@@ -50,14 +50,16 @@ export class Spin extends React.Component<SpinProps> {
     return (
       <div className={cx(styles.wrap, className)}>
         {enable && this.renderSpin()}
-        <div className={cx(styles.container, { 'blur': enable })}>{children}</div>
+        <div className={cx(styles.container, { blur: enable })}>{children}</div>
       </div>
     );
   }
 
-  renderSpin(){
-    return <div className={styles.spin}>
-      <TarantoolLogoSpinner className={styles.icon} />
-    </div>;
+  renderSpin() {
+    return (
+      <div className={styles.spin}>
+        <TarantoolLogoSpinner className={styles.icon} />
+      </div>
+    );
   }
 }

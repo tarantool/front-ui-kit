@@ -1,4 +1,4 @@
-```js
+```jsx
 import { Button } from '../Button';
 import {
   splashGenericErrorSvg,
@@ -11,20 +11,20 @@ import {
 <>
   <NonIdealState
     icon={TarantoolLogoSpinner}
-    title='Loading...'
+    title="Loading..."
   />
 
   <NonIdealState
     image={splashSelectFileSvg}
-    title='Please select a file'
+    title="Please select a file"
   />
 
   <NonIdealStateAction
     image={splashGenericErrorSvg}
-    title='Error loading component'
-    description='Try to reload, please.'
+    title="Error loading component"
+    description="Try to reload, please."
     isError
-    actionText='Retry'
+    actionText="Retry"
     onActionClick={console.log}
   />
 </>

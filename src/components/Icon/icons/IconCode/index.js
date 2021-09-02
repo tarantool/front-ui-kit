@@ -8,6 +8,4 @@ const styles = css`
   fill: #fff;
 `;
 
-export const IconCode = ({ className }: GenericIconProps) => (
-  <Icon className={cx(styles, className)} glyph={image} />
-);
+export const IconCode = ({ className }: GenericIconProps) => <Icon className={cx(styles, className)} glyph={image} />;

@@ -14,84 +14,89 @@ const styles = {
     flex-grow: 1;
     margin: 16px;
   `,
-  margin: css`margin: 8px 0;`
+  margin: css`margin: 8px 0;`,
 };
 
 const [disabled, setDisabled] = useState(false);
 const [value, setValue] = useState('Value');
 
-const updateState = e => setValue(e.target.value);
-const toggleDisabled = () => setDisabled(!disabled);
+const updateState = (e) => setValue(e.target.value);
+const toggleDisabled = () => setDisabled((v) => !v);
 
 <>
   <ControlsPanel
     controls={[
-      <Switcher checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
+      <Switcher key={0} checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
     ]}
   />
 
   <div className={styles.wrap}>
     <div className={styles.column}>
-      <Text variant='h3'>Size L (default)</Text>
+      <Text variant="h3">Size L (default)</Text>
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
+        placeholder="Type here"
         className={styles.margin}
         onChange={updateState}
         value={value}
-        />
+      />
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
+        placeholder="Type here"
         className={styles.margin}
         onChange={updateState}
         value={value}
-        disabled />
+        disabled
+      />
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
+        placeholder="Type here"
         className={styles.margin}
         onChange={updateState}
         value={value}
-        error />
+        error
+      />
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
+        placeholder="Type here"
         className={styles.margin}
         onChange={updateState}
         value={value}
-        rows={5} />
+        rows={5}
+      />
     </div>
     <div className={styles.column}>
-      <Text variant='h3'>Size M</Text>
+      <Text variant="h3">Size M</Text>
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
-        size='m'
+        placeholder="Type here"
+        size="m"
         className={styles.margin}
         onChange={updateState}
         value={value}
-        />
+      />
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
-        size='m'
+        placeholder="Type here"
+        size="m"
         className={styles.margin}
         onChange={updateState}
         value={value}
-        disabled />
+        disabled
+      />
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
-        size='m'
+        placeholder="Type here"
+        size="m"
         className={styles.margin}
         onChange={updateState}
         value={value}
-        error />
+        error
+      />
       <TextArea
         disabled={disabled}
-        placeholder='Type here'
-        size='m'
+        placeholder="Type here"
+        size="m"
         className={styles.margin}
         onChange={updateState}
         value={value}

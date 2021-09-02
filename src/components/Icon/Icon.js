@@ -1,5 +1,5 @@
 // @flow
-import * as React from 'react'
+import * as React from 'react';
 import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
 import { colors, iconSize } from '../../variables';
@@ -55,50 +55,51 @@ const styles = {
       border: solid 1px ${rgba(colors.intentPrimary, 0.55)};
       border-radius: 3px;
     }
-  `
+  `,
 };
 
 type IconProps = {
-  active?: boolean; // Выбраное состояние
-  className?: string;
+  active?: boolean, // Выбраное состояние
+  className?: string,
   glyph: SVGGlyph,
   hasState?: boolean, // Включение состояния: Normal, Hover, Active
   onClick?: (evt: MouseEvent) => void,
   onMouseEnter?: () => void,
   onMouseLeave?: () => void,
-  stroke?: boolean // Задавать stroke вместо fill
+  stroke?: boolean, // Задавать stroke вместо fill
 };
 
 export type GenericIconProps = {
   className?: string,
-  onClick?: (e: MouseEvent) => void
+  onClick?: (e: MouseEvent) => void,
 };
 
-
-export const Icon = React.memo<IconProps>(({
-  active,
-  className,
-  glyph,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  hasState, // TODO: 'hasState' is defined but never used.
-  onMouseLeave,
-  onMouseEnter,
-  onClick,
-  stroke
-}: IconProps) => (
-  <SVGImage
-    glyph={glyph}
-    onClick={onClick}
-    onMouseLeave={onMouseLeave}
-    onMouseEnter={onMouseEnter}
-    className={cx(
-      styles.icon,
-      {
-        [styles.stroke]: stroke,
-        [styles.clickable]: !!onClick,
-        [styles.active]: active
-      },
-      className
-    )}
-  />
-));
+export const Icon = React.memo<IconProps>(
+  ({
+    active,
+    className,
+    glyph,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    hasState, // TODO: 'hasState' is defined but never used.
+    onMouseLeave,
+    onMouseEnter,
+    onClick,
+    stroke,
+  }: IconProps) => (
+    <SVGImage
+      glyph={glyph}
+      onClick={onClick}
+      onMouseLeave={onMouseLeave}
+      onMouseEnter={onMouseEnter}
+      className={cx(
+        styles.icon,
+        {
+          [styles.stroke]: stroke,
+          [styles.clickable]: !!onClick,
+          [styles.active]: active,
+        },
+        className
+      )}
+    />
+  )
+);

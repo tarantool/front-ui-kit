@@ -1,19 +1,11 @@
-import { ReactNode, createElement, forwardRef } from "react";
-import { cx } from "@emotion/css";
+import { ReactNode, createElement, forwardRef } from 'react';
+import { cx } from '@emotion/css';
 
-import { textStyles } from "./Text.styles";
+import { textStyles } from './Text.styles';
 
 export { textStyles };
 
-export type TextStyleVariants =
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "p"
-  | "basic"
-  | "code";
+export type TextStyleVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'basic' | 'code';
 
 export interface TextProps {
   className?: string;
@@ -27,19 +19,8 @@ export interface TextProps {
 }
 
 export const Text = forwardRef<HTMLElement, TextProps>(
-  (
-    {
-      className,
-      children,
-      tag,
-      upperCase,
-      noCase,
-      variant = "basic",
-      ...props
-    },
-    ref
-  ) => {
-    const Element = tag || (variant === "basic" ? "span" : variant);
+  ({ className, children, tag, upperCase, noCase, variant = 'basic', ...props }, ref) => {
+    const Element = tag || (variant === 'basic' ? 'span' : variant);
 
     return createElement(
       Element,

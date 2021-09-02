@@ -16,13 +16,13 @@ const styles = {
   `,
   right: css`
     transform: rotate(90deg);
-  `
+  `,
 };
 
 type IconChevronProps = {
   ...$Exact<GenericIconProps>,
-  direction?: 'up' | 'down' | 'left' | 'right'
-}
+  direction?: 'up' | 'down' | 'left' | 'right',
+};
 
 export const IconChevron = (props: IconChevronProps) => {
   const { direction = 'up', className, ...otherProps } = props;
@@ -47,14 +47,8 @@ export const IconChevron = (props: IconChevronProps) => {
 //   <IconChevron {...props} direction='up' />
 // );
 
-export const IconChevronDown = (props: GenericIconProps) => (
-  <IconChevron {...props} direction='down' />
-);
+export const IconChevronDown = (props: GenericIconProps) => <IconChevron {...props} direction="down" />;
 
-export const IconChevronLeft = (props: GenericIconProps) => (
-  <IconChevron {...props} direction='left' />
-);
+export const IconChevronLeft = (props: GenericIconProps) => <IconChevron {...props} direction="left" />;
 
-export const IconChevronRight = (props: GenericIconProps) => (
-  <IconChevron {...props} direction='right' />
-);
+export const IconChevronRight = (props: GenericIconProps) => <IconChevron {...props} direction="right" />;

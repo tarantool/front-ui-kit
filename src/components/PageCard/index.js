@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { css, cx } from '@emotion/css'
+import { css, cx } from '@emotion/css';
 import { colors } from '../../variables';
 import { Text } from '../Text';
 import { IconHelperClose } from '../IconHelper';
@@ -24,7 +24,7 @@ const styles = {
     position: absolute;
     top: 16px;
     right: 16px;
-  `
+  `,
 };
 
 type PageCardProps = {
@@ -32,7 +32,7 @@ type PageCardProps = {
   children?: React.Node,
   showCorner?: boolean,
   onClose?: (e: MouseEvent) => void,
-  title?: string
+  title?: string,
 };
 
 export const PageCard = ({
@@ -41,7 +41,7 @@ export const PageCard = ({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   showCorner, // TODO: implement
   onClose,
-  title = ''
+  title = '',
 }: PageCardProps) => (
   <div
     className={cx(
@@ -50,7 +50,9 @@ export const PageCard = ({
       className
     )}
   >
-    <Text className={styles.cardHead} variant='h2'>{title}</Text>
+    <Text className={styles.cardHead} variant="h2">
+      {title}
+    </Text>
     {onClose && <IconHelperClose className={styles.closeIcon} onClick={onClose} />}
     <div>{children}</div>
   </div>

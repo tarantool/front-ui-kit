@@ -1,4 +1,4 @@
-```js
+```jsx
 import { useState } from 'react';
 import { css, cx } from '@emotion/css';
 import { arrayMoveImmutable } from 'array-move';
@@ -56,7 +56,7 @@ const styles = {
     display: flex; 
     flex-direction: column; 
     width: 100%;
-  `
+  `,
 }
 
 const [ data, setData ] = useState(Array.apply(null, { length: 10 }).map((_, index) => ({
@@ -73,7 +73,7 @@ const items = data.map((item, index) => (
     key={item.key}
   >
     <div className={styles.sortableItem}>
-      <Text className={styles.alias} tag='div'>
+      <Text className={styles.alias} tag="div">
         <IconBurger className={styles.iconMargin} />
         {item.alias || item.uuid}
       </Text>

@@ -1,4 +1,4 @@
-```js
+```jsx
 import { css } from '@emotion/css';
 import {
   IconSuccess,
@@ -13,8 +13,10 @@ import {
 } from '@tarantool.io/ui-kit';
 
 const logoStyle = css`margin-left: 24px;`;
+
 const IconSuccessGreen = ({ className, ...props }) => <IconSuccess {...props} />
-const renderLogo = collapsed => (
+
+const renderLogo = (collapsed) => (
   <SVGImage
     className={!collapsed && logoStyle}
     glyph={collapsed ? TarantoolLogoCompact : TarantoolLogoFull}

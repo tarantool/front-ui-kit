@@ -10,9 +10,4 @@ const styles = css`
   fill: #000;
 `;
 
-export const IconAttach = ({ className }: GenericIconProps) => (
-  <Icon
-    className={cx(styles, className)}
-    glyph={image}
-  />
-);
+export const IconAttach = ({ className }: GenericIconProps) => <Icon className={cx(styles, className)} glyph={image} />;

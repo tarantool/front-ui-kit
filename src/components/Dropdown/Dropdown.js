@@ -9,22 +9,13 @@ const styles = {
   wrap: css`
     position: relative;
     display: inline-block;
-  `
-}
+  `,
+};
 
-export const Dropdown = withDropdown(React.forwardRef((
-  {
-    className,
-    children = <Button icon={IconMore} intent='base' />,
-    ...props
-  },
-  ref
-) =>
-  <div
-    className={cx(styles.wrap, className)}
-    {...props}
-    ref={ref}
-  >
-    {children}
-  </div>
-));
+export const Dropdown = withDropdown(
+  React.forwardRef(({ className, children = <Button icon={IconMore} intent="base" />, ...props }, ref) => (
+    <div className={cx(styles.wrap, className)} {...props} ref={ref}>
+      {children}
+    </div>
+  ))
+);

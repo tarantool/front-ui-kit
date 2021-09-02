@@ -8,7 +8,7 @@ import { colors } from '../../variables';
 const COLORS = {
   success: colors.intentSuccess,
   warning: colors.intentWarning,
-  danger: colors.intentDanger
+  danger: colors.intentDanger,
 };
 
 const style = css`
@@ -32,24 +32,20 @@ const style = css`
 const defineStatus = R.cond([
   [R.lt(66), R.always('danger')],
   [R.lt(33), R.always('warning')],
-  [R.T, R.always('success')]
+  [R.T, R.always('success')],
 ]);
 
 type ProgressBarProps = {
   className?: string,
   percents: number,
-  intention?: 'danger' | 'warning' | 'success'
+  intention?: 'danger' | 'warning' | 'success',
 };
 
-export const ProgressBar = ({
-  className,
-  percents,
-  intention = defineStatus(percents)
-}: ProgressBarProps) => {
+export const ProgressBar = ({ className, percents, intention = defineStatus(percents) }: ProgressBarProps) => {
   const bar = css`
     &::before {
       width: ${percents}%;
-      background-color: ${COLORS[intention]}
+      background-color: ${COLORS[intention]};
     }
   `;
 

@@ -19,7 +19,7 @@ const styles = {
     fill: ${colors.dark65};
   `,
   chevronIcon: css`
-   fill: ${colors.dark65};
+    fill: ${colors.dark65};
   `,
   btn: css`
     min-width: 32px;
@@ -32,7 +32,7 @@ const styles = {
   `,
   buttonArrow: css`
     display: block;
-    background: #FFFFFF;
+    background: #ffffff;
     color: ${colors.dark65};
     font-size: 14px;
     text-align: center;
@@ -55,7 +55,7 @@ const styles = {
     &:hover {
       background: ${colors.intentBase};
     }
-  `
+  `,
 };
 
 type PaginationControlledProps = {
@@ -65,14 +65,14 @@ type PaginationControlledProps = {
   onPageChange: (pageIndex: number) => void,
   setPageSize?: (pageSize: number) => void,
   pageSizeOptions: number[],
-}
+};
 
-export class PaginationControlled extends React.Component<PaginationControlledProps> {
+export class PaginationControlled extends React.PureComponent<PaginationControlledProps> {
   static defaultProps = {
-    pageSizeOptions: [10, 20, 50, 100]
+    pageSizeOptions: [10, 20, 50, 100],
   };
 
-  changePage = (newPage: number) => () => {
+  handleChangePage = (_: ?any, newPage: number) => {
     const { onPageChange, page } = this.props;
 
     const activePage = page + 1;
@@ -84,18 +84,21 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
     onPageChange(newPage - 1);
   };
 
-  onCheckPageSize = (newPageSize: number) => () => {
+  handleCheckPageSize = (_: ?any, newPageSize: number) => {
     const { setPageSize, pageSize } = this.props;
     if (newPageSize === pageSize) {
-
       return;
     }
+
     setPageSize && setPageSize(newPageSize);
   };
 
-  getDropDownItems = (): React.Node[] => this.props.pageSizeOptions.map(pageSize => (
-    <DropdownItem key={pageSize} onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
-  ));
+  getDropDownItems = (): React.Node[] =>
+    this.props.pageSizeOptions.map((pageSize) => (
+      <DropdownItem key={pageSize} onClick={this.handleCheckPageSize} pass={pageSize}>
+        {pageSize} / page
+      </DropdownItem>
+    ));
 
   render() {
     const { setPageSize, disableNextPageButton, page, pageSize } = this.props;
@@ -105,22 +108,24 @@ export class PaginationControlled extends React.Component<PaginationControlledPr
       <div className={styles.pagination}>
         <Button
           className={cx(styles.btn, styles.buttonArrow)}
-          onClick={this.changePage(activePage - 1)}
+          onClick={this.handleChangePage}
           disabled={activePage === 1}
           icon={IconChevronLeft}
-          intent='plain'
+          intent="plain"
+          pass={activePage - 1}
         />
         <Text className={cx(styles.btn, styles.activePage)}>{activePage}</Text>
         <Button
           className={cx(styles.btn, styles.buttonArrow)}
-          onClick={this.changePage(activePage + 1)}
+          onClick={this.handleChangePage}
           disabled={disableNextPageButton}
           icon={IconChevronRight}
-          intent='plain'
+          intent="plain"
+          pass={activePage + 1}
         />
         {setPageSize && (
           <Dropdown className={styles.dropDown} items={this.getDropDownItems()}>
-            <Button className={styles.dropDownBtn} text={`${pageSize} / page `} iconRight={IconChevronDown}/>
+            <Button className={styles.dropDownBtn} text={`${pageSize} / page `} iconRight={IconChevronDown} />
           </Dropdown>
         )}
       </div>

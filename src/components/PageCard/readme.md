@@ -1,4 +1,4 @@
-```js
+```jsx
 import { IconOk, IconCancel, PageCard, Text } from '@tarantool.io/ui-kit';
 
 <PageCard title="Bootstrap vshard" onClose={() => console.log('Close clicked')}>

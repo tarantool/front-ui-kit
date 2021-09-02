@@ -4,7 +4,7 @@
 > Use native CSS-styled scrollbars instead of it.
 > We'll add this styles in UI-Kit later.
 
-<!-- ```js
+<!-- ```jsx
 import { css } from '@emotion/css';
 
 const style = css`height: 300px;`;

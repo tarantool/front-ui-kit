@@ -16,7 +16,7 @@ Array [
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -45,7 +45,7 @@ Array [
 }
 
 .emotion-9 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-10 {
@@ -65,7 +65,7 @@ Array [
   -ms-flex-align: center;
   align-items: center;
   padding: 16px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 25px;
 }
 
@@ -197,7 +197,7 @@ Array [
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -226,7 +226,7 @@ Array [
 }
 
 .emotion-9 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-10 {
@@ -246,7 +246,7 @@ Array [
   -ms-flex-align: center;
   align-items: center;
   padding: 16px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 25px;
 }
 
@@ -382,7 +382,7 @@ exports[`Table renders simple 1`] = `
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -498,11 +498,11 @@ exports[`Table renders simple 1`] = `
 }
 
 .emotion-11 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .emotion-12:hover {
@@ -879,7 +879,7 @@ exports[`Table renders with code row 1`] = `
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -995,11 +995,11 @@ exports[`Table renders with code row 1`] = `
 }
 
 .emotion-11 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .emotion-12:hover {
@@ -1310,7 +1310,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -1483,11 +1483,11 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
 }
 
 .emotion-16 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-17 {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .emotion-17:hover {
@@ -1554,7 +1554,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
   margin: 0 4px;
   border: 1px solid #d9dadd;
   display: block;
-  background: #FFFFFF;
+  background: #ffffff;
   color: #5c606c;
   font-size: 14px;
   text-align: center;
@@ -1669,7 +1669,7 @@ exports[`Table renders with controlled pagination and selected rows 1`] = `
   margin: 0 4px;
   border: 1px solid #d9dadd;
   display: block;
-  background: #FFFFFF;
+  background: #ffffff;
   color: #5c606c;
   font-size: 14px;
   text-align: center;
@@ -2320,7 +2320,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -2435,7 +2435,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
 }
 
 .emotion-11 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
@@ -2464,7 +2464,7 @@ exports[`Table renders with controlled pagination and selected rows 2`] = `
 }
 
 .emotion-13 {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .emotion-13:hover {
@@ -2740,7 +2740,7 @@ exports[`Table renders with pagination 1`] = `
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -2856,11 +2856,11 @@ exports[`Table renders with pagination 1`] = `
 }
 
 .emotion-11 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .emotion-12:hover {
@@ -2944,7 +2944,7 @@ exports[`Table renders with pagination 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -3025,7 +3025,7 @@ exports[`Table renders with pagination 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -3556,7 +3556,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .emotion-2 {
@@ -3729,11 +3729,11 @@ exports[`Table renders with pagination and selected rows 1`] = `
 }
 
 .emotion-16 {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-17 {
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .emotion-17:hover {
@@ -3817,7 +3817,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -3898,7 +3898,7 @@ exports[`Table renders with pagination and selected rows 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;

@@ -25,12 +25,12 @@ const styles = {
     fill: ${colors.dark65};
   `,
   chevronIcon: css`
-   fill: ${colors.dark65};
+    fill: ${colors.dark65};
   `,
   button: css`
     min-width: 32px;
     height: 32px;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid ${colors.intentBase};
     box-sizing: border-box;
     border-radius: 4px;
@@ -57,7 +57,7 @@ const styles = {
   dropDown: css`
     margin-left: 12px;
     min-width: 120px;
-  `
+  `,
 };
 
 type PaginationProps = {
@@ -68,40 +68,28 @@ type PaginationProps = {
   setPageSize?: (pageSize: number) => void,
   pageSizeOptions: number[],
   showTotal: boolean,
-}
-
-type PaginationState = {
-  visiblePages: number[],
-}
-
-export class Pagination extends React.Component<PaginationProps, PaginationState> {
+};
+export class Pagination extends React.PureComponent<PaginationProps> {
   static defaultProps = {
-    pageSizeOptions: [10, 20, 50, 100]
+    pageSizeOptions: [10, 20, 50, 100],
   };
 
   constructor(props: PaginationProps) {
     super(props);
     const { page, items } = props;
-    this.state = {
-      visiblePages: this.getVisiblePages(page + 1, items)
-    };
+
     const totalPages = this.getPages(items);
     if (page >= totalPages) {
-      this.changePage(totalPages)();
+      this.handleChangePage(null, totalPages);
     }
   }
 
-  componentDidUpdate(prevProps: PaginationProps) {
-    const { page, items, pageSize } = this.props;
-    if (prevProps.items !== items || prevProps.pageSize !== pageSize ) {
-      this.setState({
-        visiblePages: this.getVisiblePages(page, items)
-      });
-    }
-
+  componentDidUpdate() {
+    const { page, items } = this.props;
     const totalPages = this.getPages(items);
+
     if (page >= totalPages) {
-      this.changePage(totalPages)();
+      this.handleChangePage(null, totalPages);
     }
   }
 
@@ -125,20 +113,14 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
     }
   };
 
-  changePage = (newPage: number) => () => {
-    const { page, items } = this.props;
+  handleChangePage = (_: ?any, newPage: number) => {
+    const { page } = this.props;
 
     const activePage = page + 1;
 
     if (newPage === activePage) {
       return;
     }
-
-    const visiblePages = this.getVisiblePages(newPage, items);
-
-    this.setState({
-      visiblePages: this.filterPages(visiblePages, items)
-    });
 
     this.props.onPageChange(newPage - 1);
   };
@@ -149,54 +131,62 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
     return Math.ceil(items / pageSize);
   };
 
-  onCheckPageSize = (pageSize: number) => () => {
+  handleCheckPageSize = (_: ?any, pageSize: number) => {
     const { setPageSize } = this.props;
     setPageSize && setPageSize(pageSize);
   };
 
-  getDropDownItems = (): React.Node[] => this.props.pageSizeOptions.map(pageSize => (
-    <DropdownItem key={pageSize} onClick={this.onCheckPageSize(pageSize)}>{pageSize} / page</DropdownItem>
-  ));
+  getDropDownItems = (): React.Node[] =>
+    this.props.pageSizeOptions.map((pageSize) => (
+      <DropdownItem key={pageSize} onClick={this.handleCheckPageSize} pass={pageSize}>
+        {pageSize} / page
+      </DropdownItem>
+    ));
 
   render() {
-    const {
-      page, items, setPageSize, pageSize, showTotal
-    } = this.props;
-    const { visiblePages } = this.state;
+    const { page, items, setPageSize, pageSize, showTotal } = this.props;
     const activePage = page + 1;
+
+    const pages = this.getVisiblePages(activePage, items);
+    const visiblePages = this.filterPages(pages, items);
 
     return (
       <div className={styles.pagination}>
-        {showTotal && <Text className={styles.countItemsText} tag='div'>
-          {page * pageSize + 1}-{activePage * pageSize > items ? items : activePage * pageSize} of {items} items
-        </Text>}
+        {showTotal && (
+          <Text className={styles.countItemsText} tag="div">
+            {page * pageSize + 1}-{activePage * pageSize > items ? items : activePage * pageSize} of {items} items
+          </Text>
+        )}
         <div>
           <Button
             className={styles.button}
-            onClick={this.changePage(activePage - 1)}
+            onClick={this.handleChangePage}
             disabled={activePage === 1}
             icon={IconChevronLeft}
-            intent='plain'
+            intent="plain"
+            pass={activePage - 1}
           />
         </div>
         <div>
           {visiblePages.map((visiblePage, index, array) => {
-            const needElipsis = array[index - 1] + 1 < visiblePage;
+            const needEllipsis = array[index - 1] + 1 < visiblePage;
             return (
               <React.Fragment key={visiblePage}>
-                {needElipsis && (
+                {needEllipsis && (
                   <Button
                     className={cx(styles.button)}
-                    intent='plain'
-                    onClick={this.changePage(array[index - 1] < activePage ? activePage - 5 : activePage + 5 )}
+                    intent="plain"
+                    onClick={this.handleChangePage}
+                    pass={array[index - 1] < activePage ? activePage - 5 : activePage + 5}
                   >
                     ...
                   </Button>
                 )}
                 <Button
-                  className={cx(styles.button,  { [styles.buttonActive]: activePage === visiblePage })}
-                  intent='plain'
-                  onClick={this.changePage(visiblePage)}
+                  className={cx(styles.button, { [styles.buttonActive]: activePage === visiblePage })}
+                  intent="plain"
+                  onClick={this.handleChangePage}
+                  pass={visiblePage}
                 >
                   {visiblePage}
                 </Button>
@@ -207,15 +197,16 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
         <div>
           <Button
             className={styles.button}
-            onClick={this.changePage(activePage + 1)}
+            onClick={this.handleChangePage}
             disabled={activePage === this.getPages(items)}
             icon={IconChevronRight}
-            intent='plain'
+            intent="plain"
+            pass={activePage + 1}
           />
         </div>
         {setPageSize && (
           <Dropdown className={styles.dropDown} items={this.getDropDownItems()}>
-            <Button text={`${pageSize} / page `} iconRight={IconChevronDown}/>
+            <Button text={`${pageSize} / page `} iconRight={IconChevronDown} />
           </Dropdown>
         )}
       </div>

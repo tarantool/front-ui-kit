@@ -18,29 +18,29 @@ const closeModal = () => setOpened(false);
 const controlsStyle = css`justify-content: flex-end;`;
 
 <>
-  <Button onClick={openModal} text='Open SplashModal' />
+  <Button onClick={openModal} text="Open SplashModal" />
   <SplashModal
     visible={opened}
-    title='Authorization'
-    subTitle='Please, input your credentials'
+    title="Authorization"
+    subTitle="Please, input your credentials"
     onClose={closeModal}
     logo={TarantoolLogoFull}
   >
   <LabeledInput
-    label='Your account ID'
-    placeholder='Johnny Appleseed'
+    label="Your account ID"
+    placeholder="Johnny Appleseed"
    />
   <LabeledInput
-    label='Password'
+    label="Password"
     inputComponent={InputPassword}
-    placeholder='Password'
+    placeholder="Password"
    />
     <ControlsPanel
       className={controlsStyle}
       thin
       controls={[
-        <Button text='Close' key='close' size='l' onClick={closeModal} />,
-        <Button text='Log in' key='login' size='l' intent='primary' />
+        <Button key="close" text="Close" size="l" onClick={closeModal} />,
+        <Button key="login" text="Log in" size="l" intent="primary" />,
       ]}
     />
   </SplashModal>

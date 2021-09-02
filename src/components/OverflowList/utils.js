@@ -15,15 +15,17 @@ export function shallowCompareKeys(objA, objB, keys) {
     const keysA = Object.keys(objA);
     const keysB = Object.keys(objB);
     return (
-      shallowCompareKeysImpl(objA, objB, { include: keysA }) &&
-      shallowCompareKeysImpl(objA, objB, { include: keysB })
+      shallowCompareKeysImpl(objA, objB, { include: keysA }) && shallowCompareKeysImpl(objA, objB, { include: keysB })
     );
   }
 }
 
 function shallowCompareKeysImpl(objA, objB, keys) {
-  return filterKeys(objA, objB, keys).every(key => {
-    return Object.prototype.hasOwnProperty.call(objA, key) === Object.prototype.hasOwnProperty.call(objB, key) && objA[key] === objB[key];
+  return filterKeys(objA, objB, keys).every((key) => {
+    return (
+      Object.prototype.hasOwnProperty.call(objA, key) === Object.prototype.hasOwnProperty.call(objB, key) &&
+      objA[key] === objB[key]
+    );
   });
 }
 
@@ -38,7 +40,7 @@ function filterKeys(objA, objB, keys) {
     const keySet = arrayToObject(keysA.concat(keysB));
 
     // delete denied keys from the key set
-    keys.exclude.forEach(key => delete keySet[key]);
+    keys.exclude.forEach((key) => delete keySet[key]);
 
     // return the remaining keys as an array
     return Object.keys(keySet);

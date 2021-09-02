@@ -62,25 +62,25 @@ const tabs = [
         <Text>{sampleText.repeat(40)}</Text>
       </Modal.Body>
     )
-  }
+  },
 ];
 
 <>
   <ControlsPanel
     controls={[
-      <Button onClick={() => openModal('simple')} text='simple Modal' />,
-      <Button onClick={() => openModal('wide')} text='Wide Modal' />,
-      <Button onClick={() => openModal('wide-scrollable')} text='Wide scrollable Modal' />,
-      <Button onClick={() => openModal('tabbed')} text='Wide Modal with scrollable body' />,
-      <Button onClick={() => openModal('form')} text='Modal with form' />
+      <Button key={0} onClick={() => openModal('simple')} text="simple Modal" />,
+      <Button key={1} onClick={() => openModal('wide')} text="Wide Modal" />,
+      <Button key={2} onClick={() => openModal('wide-scrollable')} text="Wide scrollable Modal" />,
+      <Button key={3} onClick={() => openModal('tabbed')} text="Wide Modal with scrollable body" />,
+      <Button key={4} onClick={() => openModal('form')} text="Modal with form" />,
     ]}
   />
   <Modal
     footerControls={[
-      <Button intent='primary' size='l' text='Accept' />,
-      <Button size='l' text='Decline' onClick={closeModal} />
+      <Button key={0} intent="primary" size="l" text="Accept" />,
+      <Button key={1} size="l" text="Decline" onClick={closeModal} />,
     ]}
-    title='Simple Modal'
+    title="Simple Modal"
     visible={opened === 'simple'}
     onClose={closeModal}
   >
@@ -88,10 +88,10 @@ const tabs = [
   </Modal>
   <Modal
     footerControls={[
-      <Button intent='primary' size='l' text='Accept' />,
-      <Button size='l' text='Decline' onClick={closeModal} />
+      <Button key={0} intent="primary" size="l" text="Accept" />,
+      <Button key={1} size="l" text="Decline" onClick={closeModal} />,
     ]}
-    title='Configure server'
+    title="Configure server"
     visible={opened === 'wide'}
     onClose={closeModal}
     wide
@@ -101,10 +101,10 @@ const tabs = [
 
   <Modal
     footerControls={[
-      <Button intent='primary' size='l' text='Accept' />,
-      <Button size='l' text='Decline' onClick={closeModal} />
+      <Button key={0} intent="primary" size="l" text="Accept" />,
+      <Button key={1} size="l" text="Decline" onClick={closeModal} />,
     ]}
-    title='Configure server'
+    title="Configure server"
     visible={opened === 'wide-scrollable'}
     onClose={closeModal}
     fit
@@ -117,30 +117,30 @@ const tabs = [
   </Modal>
 
   <Modal
-    title='Configure server'
+    title="Configure server"
     visible={opened === 'tabbed'}
     onClose={closeModal}
     wide
     fit
     thinBorders
     footerControls={[
-      <Button intent='primary' size='l' text='Accept' />,
-      <Button size='l' text='Decline' onClick={closeModal} />
+      <Button key={0} intent="primary" size="l" text="Accept" />,
+      <Button key={0} size="l" text="Decline" onClick={closeModal} />,
     ]}
   >
     <Tabbed tabs={tabs} />
   </Modal>
   <Modal
-    title='Configure server'
+    title="Configure server"
     visible={opened === 'form'}
     onClose={closeModal}
     onSubmit={() => console.log('submit')}
     footerControls={[
-      <Button intent='primary' size='l' text='Accept' type='submit' />,
-      <Button size='l' text='Decline' onClick={closeModal} />
+      <Button key={0} intent="primary" size="l" text="Accept" type="submit" />,
+      <Button key={1} size="l" text="Decline" onClick={closeModal} />,
     ]}
   >
-    <LabeledInput label='First input' autoFocus />
+    <LabeledInput label="First input" autoFocus />
   </Modal>
 </>
 ```

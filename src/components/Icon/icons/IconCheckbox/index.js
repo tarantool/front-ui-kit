@@ -20,7 +20,7 @@ const states = [
   checkboxChecked,
   checkboxCheckedDisabled,
   checkboxIndeterminate,
-  checkboxIndeterminateDisabled
+  checkboxIndeterminateDisabled,
 ];
 
 const styles = css`
@@ -38,37 +38,23 @@ type IconCheckboxProps = {
   checked?: boolean,
   disabled?: boolean,
   indeterminate?: boolean,
-}
-
-export const IconCheckbox = ({ checked, className, disabled, indeterminate }: IconCheckboxProps) => {
-  const mask = (indeterminate ? INDETERMINATE : 0)
-    + (disabled ? DISABLED : 0)
-    + (checked && !indeterminate ? CHECKED : 0);
-
-  return (
-    <Icon
-      className={cx(styles, { [stylesDisabled]: disabled }, className)}
-      glyph={states[mask]}
-    />
-  );
 };
 
-export const IconCheckboxChecked = (props: GenericIconProps) => (
-  <IconCheckbox {...props} checked />
-);
+export const IconCheckbox = ({ checked, className, disabled, indeterminate }: IconCheckboxProps) => {
+  const mask =
+    (indeterminate ? INDETERMINATE : 0) + (disabled ? DISABLED : 0) + (checked && !indeterminate ? CHECKED : 0);
 
-export const IconCheckboxDisabled = (props: GenericIconProps) => (
-  <IconCheckbox {...props} disabled />
-);
+  return <Icon className={cx(styles, { [stylesDisabled]: disabled }, className)} glyph={states[mask]} />;
+};
 
-export const IconCheckboxIndeterminate = (props: GenericIconProps) => (
-  <IconCheckbox {...props} indeterminate />
-);
+export const IconCheckboxChecked = (props: GenericIconProps) => <IconCheckbox {...props} checked />;
+
+export const IconCheckboxDisabled = (props: GenericIconProps) => <IconCheckbox {...props} disabled />;
+
+export const IconCheckboxIndeterminate = (props: GenericIconProps) => <IconCheckbox {...props} indeterminate />;
 
 export const IconCheckboxIndeterminateDisabled = (props: GenericIconProps) => (
   <IconCheckbox {...props} indeterminate disabled />
 );
 
-export const IconCheckboxCheckedDisabled = (props: GenericIconProps) => (
-  <IconCheckbox {...props} checked disabled />
-);
+export const IconCheckboxCheckedDisabled = (props: GenericIconProps) => <IconCheckbox {...props} checked disabled />;

@@ -11,12 +11,7 @@ import radioSelectedDisabled from './radio-checked-disabled.svg';
 const CHECKED = 1;
 const DISABLED = 2;
 
-const states = [
-  radio,
-  radioSelected,
-  radioDisabled,
-  radioSelectedDisabled
-];
+const states = [radio, radioSelected, radioDisabled, radioSelectedDisabled];
 
 const styles = css`
   width: 16px;
@@ -34,26 +29,15 @@ type IconRadioProps = {
   ...$Exact<GenericIconProps>,
   checked?: boolean,
   disabled?: boolean,
-}
+};
 
 export const IconRadio = ({ checked, className, disabled }: IconRadioProps) => {
   const mask = (disabled ? DISABLED : 0) + (checked ? CHECKED : 0);
-  return (
-    <Icon
-      className={cx(styles, { [stylesDisabled]: disabled }, className)}
-      glyph={states[mask]}
-    />
-  );
+  return <Icon className={cx(styles, { [stylesDisabled]: disabled }, className)} glyph={states[mask]} />;
 };
 
-export const IconRadioChecked = (props: GenericIconProps) => (
-  <IconRadio {...props} checked />
-);
+export const IconRadioChecked = (props: GenericIconProps) => <IconRadio {...props} checked />;
 
-export const IconRadioDisabled = (props: GenericIconProps) => (
-  <IconRadio {...props} disabled />
-);
+export const IconRadioDisabled = (props: GenericIconProps) => <IconRadio {...props} disabled />;
 
-export const IconRadioCheckedDisabled = (props: GenericIconProps) => (
-  <IconRadio {...props} checked disabled />
-);
+export const IconRadioCheckedDisabled = (props: GenericIconProps) => <IconRadio {...props} checked disabled />;
