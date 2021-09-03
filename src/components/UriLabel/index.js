@@ -23,13 +23,10 @@ const styles = {
   `,
   hereIcon: css`
     fill: ${colors.intentWarningAccent};
-  `
+  `,
 };
 
-const IconHere = ({
-  className,
-  ...props
-}) => (
+const IconHere = ({ className, ...props }) => (
   <IconBoldArrowRight className={cx(styles.hereIcon, className)} {...props} />
 );
 
@@ -38,24 +35,18 @@ type UriLabelProps = {
   icon?: React.AbstractComponent<any>,
   title?: string,
   uri?: string,
-  weAreHere?: boolean
+  weAreHere?: boolean,
 };
 
-export const UriLabel = (
-  {
-    className,
-    icon,
-    title,
-    uri,
-    weAreHere
-  }: UriLabelProps
-) => {
+export const UriLabel = ({ className, icon, title, uri, weAreHere }: UriLabelProps) => {
   const Icon = icon || (weAreHere ? IconHere : IconLink);
 
   return (
     <div className={cx(styles.uriWrap, className)} title={title}>
       <Icon className={styles.uriIcon} />
-      <Text className={styles.uri} variant='p' tag='span'>{uri}</Text>
+      <Text className={styles.uri} variant="p" tag="span">
+        {uri}
+      </Text>
     </div>
   );
 };

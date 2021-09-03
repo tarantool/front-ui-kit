@@ -19,7 +19,7 @@ require('prismjs/components/prism-ruby');
 type SyntaxHighlightProps = {
   className?: string,
   text: string,
-  language?: 'lua' | 'python' | 'js' | 'javascript' | 'jsx' | 'php' | 'go' | 'ruby'
+  language?: 'lua' | 'python' | 'js' | 'javascript' | 'jsx' | 'php' | 'go' | 'ruby',
 };
 
 export class SyntaxHighlight extends React.Component<SyntaxHighlightProps> {
@@ -43,12 +43,7 @@ export class SyntaxHighlight extends React.Component<SyntaxHighlightProps> {
     return (
       <code
         ref={this.ref}
-        className={cx(
-          textStyles.code,
-          theme,
-          { [`language-${language || ''}`]: language },
-          className
-        )}
+        className={cx(textStyles.code, theme, { [`language-${language || ''}`]: language }, className)}
       >
         {text}
       </code>

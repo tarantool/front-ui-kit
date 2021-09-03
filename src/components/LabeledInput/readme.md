@@ -1,7 +1,7 @@
 It's not recommended to use `topRightControls` without `largeMargins`.
 To keep good looking UI, pass to `message` text which can fit at one row.
 
-```js
+```jsx
 import { useState } from 'react';
 import { css } from '@emotion/css';
 import {
@@ -25,7 +25,7 @@ const styles = {
     flex-basis: 200px;
     align-self: flex-start;
     margin-left: 30px;
-  `
+  `,
 };
 
 const [value, setValue] = useState('');
@@ -37,8 +37,8 @@ const [flags, setFlags] = useState({
   subtitle: false
 });
 
-const handleChange = e => setValue(e.target.value);
-const toggle = key => () => setFlags({ ...flags, [key]: !flags[key] });
+const handleChange = (e) => setValue(e.target.value);
+const toggle = (key) => () => setFlags({ ...flags, [key]: !flags[key] });
 
 <div className={styles.wrap}>
   <InputGroup className={styles.controls}>
@@ -77,80 +77,80 @@ const toggle = key => () => setFlags({ ...flags, [key]: !flags[key] });
         onChange={toggle('subtitle')}
       >
         Subtitle
-      </Switcher>
+      </Switcher>,
     ]}
   </InputGroup>
   <div className={styles.demoPanel}>
     <LabeledInput
-      label='Label'
+      label="Label"
       info={flags.info && 'Extended text description'}
       subTitle={flags.subtitle && 'Subtitle'}
-      message='Field is required'
+      message="Field is required"
       preserveMessageSpace={flags.preserveMessageSpace}
       value={value}
       largeMargins={flags.largeMargins}
-      placeholder='Placeholder'
+      placeholder="Placeholder"
       topRightControls={flags.rightControls && [
-        <Button text='Right' intent='secondary' />,
-        <Button text='Contorls' intent='secondary' />,
-        <Button text='Pane' intent='secondary' />
+        <Button key={0} text="Right" intent="secondary" />,
+        <Button key={1} text="Controls" intent="secondary" />,
+        <Button key={2} text="Pane" intent="secondary" />,
       ]}
       onChange={handleChange}
-      title='Input'
+      title="Input"
       error
     />
     <LabeledInput
       inputComponent={InputPassword}
-      label='Label'
+      label="Label"
       info={flags.info && 'Extended text description'}
       subTitle={flags.subtitle && 'Subtitle'}
       preserveMessageSpace={flags.preserveMessageSpace}
       value={value}
       largeMargins={flags.largeMargins}
-      placeholder='Placeholder'
+      placeholder="Placeholder"
       topRightControls={flags.rightControls && [
-        <Button text='Right' intent='secondary' />,
-        <Button text='Contorls' intent='secondary' />,
-        <Button text='Pane' intent='secondary' />
+        <Button key={0} text="Right" intent="secondary" />,
+        <Button key={1} text="Controls" intent="secondary" />,
+        <Button key={2} text="Pane" intent="secondary" />
       ]}
       onChange={handleChange}
-      title='Input'
+      title="Input"
     />
     <LabeledInput
-      label='Label'
+      label="Label"
       info={flags.info && 'Extended text description'}
       subTitle={flags.subtitle && 'Subtitle'}
-      message='Field is required'
+      message="Field is required"
       preserveMessageSpace={flags.preserveMessageSpace}
       value={value}
       largeMargins={flags.largeMargins}
-      placeholder='Placeholder'
+      placeholder="Placeholder"
       topRightControls={flags.rightControls && [
-        <Button text='Right' intent='secondary' />,
-        <Button text='Contorls' intent='secondary' />,
-        <Button text='Pane' intent='secondary' />
+        <Button key={0} text="Right" intent="secondary" />,
+        <Button key={1} text="Controls" intent="secondary" />,
+        <Button key={2} text="Pane" intent="secondary" />
       ]}
       onChange={handleChange}
-      title='Input'
+      title="Input"
     />
     <LabeledInput
-      label='Multiline labeled input'
+      label="Multiline labeled input"
       info={flags.info && 'Extended text description'}
       subTitle={flags.subtitle && 'Subtitle'}
-      message='Field is required'
+      message="Field is required"
       inputComponent={TextArea}
       preserveMessageSpace={flags.preserveMessageSpace}
       value={value}
       largeMargins={flags.largeMargins}
       rows={4}
-      placeholder='Placeholder'
+      placeholder="Placeholder"
       topRightControls={flags.rightControls && [
-        <Button text='Right' intent='secondary' />,
-        <Button text='Contorls' intent='secondary' />,
-        <Button text='Pane' intent='secondary' />
+        <Button key={0} text="Right" intent="secondary" />,
+        <Button key={1} text="Controls" intent="secondary" />,
+        <Button key={2} text="Pane" intent="secondary" />
       ]}
       onChange={handleChange}
-      title='Input'
+      title="Input"
     />
   </div>
 </div>

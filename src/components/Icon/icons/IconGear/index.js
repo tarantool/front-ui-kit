@@ -11,9 +11,4 @@ const styles = css`
   fill: ${colors.intentPrimary};
 `;
 
-export const IconGear = ({ className }: GenericIconProps) => (
-  <Icon
-    className={cx(styles, className)}
-    glyph={image}
-  />
-);
+export const IconGear = ({ className }: GenericIconProps) => <Icon className={cx(styles, className)} glyph={image} />;

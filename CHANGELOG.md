@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Use styled scrollbars instead Scrollbar component;
 
+- Enable prettier and change some code style rules;
+
 ## [0.41.0] - 2021-08-05
 
 - Add new icon `IconEmptyData`;

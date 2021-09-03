@@ -3,7 +3,7 @@
 > This type has been kept for compatibility reasons
 > and will be deleted soon.
 
-```js
+```jsx
 import { css } from '@emotion/css';
 import {
   withPopover,
@@ -34,7 +34,7 @@ const styles = {
   rightCell: css`
     color: ${colors.dark40};
     display: inline-block;
-  `
+  `,
 };
 
 const PopoverButton = withPopover(Button);
@@ -42,35 +42,40 @@ const PopoverButton = withPopover(Button);
 <ControlsPanel
   controls={[
     <PopoverButton
-      popoverContent={() => <>
-        <div className={styles.row}>
-          <Text className={styles.leftCell}>subject ID</Text>
-          <Text className={styles.rightCell}>—</Text>
-        </div>
-        <div className={styles.row}>
-          <Text className={styles.leftCell}>subject</Text>
-          <Text className={styles.rightCell}>anonymous</Text>
-        </div>
-        <div className={styles.row}>
-          <Text className={styles.leftCell}>request ID</Text>
-          <Text className={styles.rightCell}>9098df5yt</Text>
-        </div>
-        <div className={styles.row}>
-          <Text className={styles.leftCell}>module</Text>
-          <Text className={styles.rightCell}>common.admin.auth</Text>
-        </div>
-      </>}
+      key={0}
+      popoverContent={() => (
+        <>
+          <div className={styles.row}>
+            <Text className={styles.leftCell}>subject ID</Text>
+            <Text className={styles.rightCell}>—</Text>
+          </div>
+          <div className={styles.row}>
+            <Text className={styles.leftCell}>subject</Text>
+            <Text className={styles.rightCell}>anonymous</Text>
+          </div>
+          <div className={styles.row}>
+            <Text className={styles.leftCell}>request ID</Text>
+            <Text className={styles.rightCell}>9098df5yt</Text>
+          </div>
+          <div className={styles.row}>
+            <Text className={styles.leftCell}>module</Text>
+            <Text className={styles.rightCell}>common.admin.auth</Text>
+          </div>
+        </>
+      )}
     >
       Hey
     </PopoverButton>,
     <PopoverButton
       icon={IconMore}
-      popoverContent={({ closePopover }) => <>
-        <Button text='Click me twice' onClick={closePopover} />
-        <Input type='text' />
-        <Checkbox>Accept agreement</Checkbox>
-        <Text>I'm text inside popover.</Text>
-      </>}
+      popoverContent={({ closePopover }) => (
+        <>
+          <Button text="Click me twice" onClick={closePopover} />
+          <Input type="text" />
+          <Checkbox>Accept agreement</Checkbox>
+          <Text>I'm text inside popover.</Text>
+        </>
+      )}
     />
   ]}
 />

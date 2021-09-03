@@ -7,4 +7,4 @@ export const nanoid = () => {
     res += alphabet[Math.floor(Math.random() * alphabet.length)];
   }
   return res;
-}
+};

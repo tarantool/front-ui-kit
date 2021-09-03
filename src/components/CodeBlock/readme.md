@@ -1,6 +1,6 @@
-```js
+```jsx
 <CodeBlock
-  language='jsx'
+  language="jsx"
   text={`export const Alert = ({
   className,
   children,
@@ -25,9 +25,9 @@
 
 ### Lua
 
-```js
+```jsx
 <CodeBlock
-  language='lua'
+  language="lua"
   text={`local function customer_add(customer_id, fullname)
 checks('number', 'string')
 return box.space.customer:insert(
@@ -39,9 +39,9 @@ end`}
 
 ### Python
 
-```js
+```jsx
 <CodeBlock
-  language='python'
+  language="python"
   text={`from tarantool import Connection
 c = Connection(
   "try-cartridge.tarantool.io", 
@@ -58,9 +58,9 @@ print(results)`}
 
 ### PHP
 
-```js
+```jsx
 <CodeBlock
-  language='php'
+  language="php"
   text={`<?php
 include_once('vendor/autoload.php');
 use Tarantool\\Client\\Client;
@@ -78,9 +78,9 @@ print_r($result);
 
 ### Go
 
-```js
+```jsx
 <CodeBlock
-  language='go'
+  language="go"
   text={`package main
 
 import (
@@ -106,9 +106,9 @@ func main() {
 
 ### Ruby
 
-```js
+```jsx
 <CodeBlock
-  language='ruby'
+  language="ruby"
   text={`require 'tarantool16'
 
 db = Tarantool16.new host:'localhost:33013'
@@ -135,7 +135,7 @@ tar.select(:_space, [512], index: 0, iterator: :>=, hash: true)`}
 
 ### Plain text
 
-```js
+```jsx
 <CodeBlock
   text={`require 'tarantool16'
 

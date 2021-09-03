@@ -10,8 +10,5 @@ const style = css`
 `;
 
 export const IconChipDanger = ({ className }: GenericIconProps) => (
-  <Icon
-    className={cx(style, className)}
-    glyph={image}
-  />
+  <Icon className={cx(style, className)} glyph={image} />
 );

@@ -10,9 +10,5 @@ const styles = css`
 `;
 
 export const IconUser = ({ className, ...props }: GenericIconProps) => (
-  <Icon
-    {...props}
-    className={cx(styles, className)}
-    glyph={image}
-  />
+  <Icon {...props} className={cx(styles, className)} glyph={image} />
 );

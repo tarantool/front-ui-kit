@@ -405,7 +405,7 @@ exports[`Markdown renders mixed content 1`] = `
 }
 
 .emotion-8 .token.namespace {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .emotion-8 .token.property,

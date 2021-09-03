@@ -13,13 +13,13 @@ const styles = {
   controls: css`
     padding-left: 16px;
     margin-left: auto;
-  `
+  `,
 };
 
 type ModalFooterProps = {
   children?: React.Node,
   className?: string,
-  controls?: React.Node[]
+  controls?: React.Node[],
 };
 
 export const ModalFooter = ({ children, className, controls }: ModalFooterProps) => (

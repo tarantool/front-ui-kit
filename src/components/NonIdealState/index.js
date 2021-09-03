@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import type { ComponentType } from 'react'
+import type { ComponentType } from 'react';
 import { css, cx } from '@emotion/css';
 import { colors } from '../../variables';
 import { Button } from '../Button';
@@ -35,7 +35,7 @@ const styles = {
   title: css`
     margin-bottom: 10px;
     font-weight: 600;
-  `
+  `,
 };
 
 type NonIdealStateProps = {
@@ -45,40 +45,38 @@ type NonIdealStateProps = {
   image?: SVGGlyph, // will be required
   imageClassName?: string,
   title?: string,
-  description?: string
+  description?: string,
 };
 
-export const NonIdealState = (
-  {
-    children,
-    className,
-    icon: Icon,
-    image,
-    imageClassName,
-    title,
-    description
-  }: NonIdealStateProps
-) => (
+export const NonIdealState = ({
+  children,
+  className,
+  icon: Icon,
+  image,
+  imageClassName,
+  title,
+  description,
+}: NonIdealStateProps) => (
   <div className={cx(styles.wrap, className)}>
-    {image
-      ? (
-        <SVGImage
-          glyph={image}
-          className={cx(styles.icon, { [styles.iconMargin]: title || description }, imageClassName)}
-        />
-      )
-      : null}
-    {Icon && !image
-      ? <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description }, imageClassName)} />
-      : null
-    }
-    {title && <Text variant='h2' className={styles.title}>{title}</Text>}
+    {image ? (
+      <SVGImage
+        glyph={image}
+        className={cx(styles.icon, { [styles.iconMargin]: title || description }, imageClassName)}
+      />
+    ) : null}
+    {Icon && !image ? (
+      <Icon className={cx(styles.icon, { [styles.iconMargin]: title || description }, imageClassName)} />
+    ) : null}
+    {title && (
+      <Text variant="h2" className={styles.title}>
+        {title}
+      </Text>
+    )}
     {description && <Text className={styles.description}>{description}</Text>}
 
     {children}
   </div>
 );
-
 
 type NonIdealStateActionProps = {
   actionText: string,
@@ -91,24 +89,16 @@ type NonIdealStateActionProps = {
   title: string,
 };
 
-export const NonIdealStateAction = (
-  {
-    actionText,
-    className,
-    description,
-    icon,
-    image,
-    onActionClick,
-    title
-  }: NonIdealStateActionProps
-) => (
-  <NonIdealState
-    className={className}
-    description={description}
-    icon={icon}
-    image={image}
-    title={title}
-  >
+export const NonIdealStateAction = ({
+  actionText,
+  className,
+  description,
+  icon,
+  image,
+  onActionClick,
+  title,
+}: NonIdealStateActionProps) => (
+  <NonIdealState className={className} description={description} icon={icon} image={image} title={title}>
     <Button autoFocus text={actionText} onClick={onActionClick} />
   </NonIdealState>
 );

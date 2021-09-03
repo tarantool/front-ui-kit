@@ -13,7 +13,7 @@ type ExpandableBlockProps = {
   visibleLines: number,
   className?: string,
   showCopyBtn?: boolean,
-}
+};
 
 const styles = {
   textStyle: css`
@@ -32,7 +32,7 @@ const styles = {
       left: 0;
       width: 100%;
       height: 30px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
       pointer-events: none;
     }
   `,
@@ -46,41 +46,31 @@ const styles = {
   `,
   contentWrapper: css`
     margin-right: 30px;
-  `
+  `,
 };
 
 const ExpandableBlockContent = (props: ExpandableBlockProps) => {
-  const [ fullIsShowing, setShowFull ] = React.useState(false);
+  const [fullIsShowing, setShowFull] = React.useState(false);
 
   const splitedContent: string[] = props.content.split('\n');
   const countTextLines: number = splitedContent.length;
 
-  if ((countTextLines <= props.visibleLines)) {
-    return (
-      <Text className={cx(styles.textStyle, props.className)}>
-        {props.content}
-      </Text>
-    )
+  if (countTextLines <= props.visibleLines) {
+    return <Text className={cx(styles.textStyle, props.className)}>{props.content}</Text>;
   }
 
-  const content = fullIsShowing
-    ? props.content
-    : splitedContent.slice(0, props.visibleLines).join('\n');
+  const content = fullIsShowing ? props.content : splitedContent.slice(0, props.visibleLines).join('\n');
 
   return (
     <>
       <Text
         tag="div"
         onClick={!fullIsShowing ? setShowFull.bind(undefined, true) : noop}
-        className={cx(
-          { [styles.textOverflowStyle]: !fullIsShowing },
-          styles.textStyle,
-          props.className
-        )}
+        className={cx({ [styles.textOverflowStyle]: !fullIsShowing }, styles.textStyle, props.className)}
       >
         {content}
       </Text>
-      {fullIsShowing &&
+      {fullIsShowing && (
         <Button
           onClick={setShowFull.bind(undefined, false)}
           iconRight={IconChevron}
@@ -88,31 +78,21 @@ const ExpandableBlockContent = (props: ExpandableBlockProps) => {
           text="less"
           intent="plain"
         />
-      }
+      )}
     </>
-  )
+  );
 };
 
 export const ExpandableBlock = (props: ExpandableBlockProps) => {
-
   if (props.showCopyBtn) {
     return (
-      <div
-        className={cx(
-          styles.withBtn
-        )}
-      >
+      <div className={cx(styles.withBtn)}>
         {props.showCopyBtn && (
-          <CopyToClipboard
-            className={styles.copyBtn}
-            intent='plain'
-            content={props.content}
-            size='s'
-          />
+          <CopyToClipboard className={styles.copyBtn} intent="plain" content={props.content} size="s" />
         )}
         <ExpandableBlockContent {...props} className={cx(styles.contentWrapper, props.className)} />
       </div>
-    )
+    );
   }
 
   return <ExpandableBlockContent {...props} />;

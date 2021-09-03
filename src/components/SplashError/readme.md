@@ -1,4 +1,4 @@
-```js
+```jsx
 import { CopyToClipboard } from "../CopyToClipboard";
 
 <>

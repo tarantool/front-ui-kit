@@ -349,7 +349,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
         >
           <button
             className="emotion-8"
-            onClick={[MockFunction]}
+            onClick={[Function]}
             type="button"
           >
             Cancel
@@ -361,7 +361,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
           <button
             autoFocus={true}
             className="emotion-10"
-            onClick={[MockFunction]}
+            onClick={[Function]}
             type="button"
           >
             Remove
@@ -692,7 +692,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
         >
           <button
             className="emotion-8"
-            onClick={[MockFunction]}
+            onClick={[Function]}
             type="button"
           >
             Cancel
@@ -704,7 +704,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
           <button
             autoFocus={true}
             className="emotion-10"
-            onClick={[MockFunction]}
+            onClick={[Function]}
             type="button"
           >
             Remove

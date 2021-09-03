@@ -19,48 +19,48 @@ const rollupBuilds = [
     output: [
       {
         file: 'dist/index.js',
-        format: 'cjs'
+        format: 'cjs',
       },
       {
         file: 'dist/index-es.js',
-        format: 'es'
-      }
+        format: 'es',
+      },
     ],
     external: ['react', 'react-dom'],
     plugins: [
       del({
-        targets: './dist/*'
+        targets: './dist/*',
       }),
       svgSpriteLoader(),
       resolve({
-        extensions
+        extensions,
       }),
       commonjs({
         include: 'node_modules/**',
-        sourceMap: false
+        sourceMap: false,
       }),
       typescript({
         tsconfigOverride: {
           compilerOptions: {
-            declaration: true
-          }
-        }
+            declaration: true,
+          },
+        },
       }),
       babel({
         exclude: ['node_modules/**'],
         babelHelpers: 'runtime',
-        extensions
+        extensions,
       }),
       replace({
         preventAssignment: true,
         values: {
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        }
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        },
       }),
-      autoExternal()
+      autoExternal(),
       // terser()
-    ]
-  }
+    ],
+  },
 ];
 
 export default rollupBuilds;

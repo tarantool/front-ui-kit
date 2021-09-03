@@ -148,11 +148,10 @@ const styles = {
     width: 14px;
     height: 14px;
     fill: #fff;
-  `
+  `,
 };
 
-
-export type SideMenuItemTypes = 'internal' | 'external'
+export type SideMenuItemTypes = 'internal' | 'external';
 
 export type SideMenuItemType = {
   label: string,
@@ -170,8 +169,7 @@ export type SideMenuItemType = {
   isCollapse?: boolean,
   expand?: (evt: MouseEvent, path: string, expanded: boolean) => void,
   pathPrefix?: string,
-}
-
+};
 
 type SideMenuProps = {
   menu: SideMenuItemType[],
@@ -181,12 +179,10 @@ type SideMenuProps = {
   renderMenuLogo?: (isShort: boolean) => React.Node,
   className?: string,
   pathPrefix?: string,
-}
+};
 
 export function SideMenu(props: SideMenuProps) {
-  const {
-    menu, className, onMenuItemClick, toggleExpand, pathPrefix, renderMenuLogo
-  } = props;
+  const { menu, className, onMenuItemClick, toggleExpand, pathPrefix, renderMenuLogo } = props;
   const [isShort, setIsShort] = useState(false);
 
   const topMenu = menu.filter((item: SideMenuItemType) => !item.pinBottom);
@@ -205,7 +201,7 @@ export function SideMenu(props: SideMenuProps) {
   const onExpand = (evt: MouseEvent, path: string, expanded: boolean) => {
     evt.preventDefault();
     if (isShort) {
-      setIsShort(false)
+      setIsShort(false);
     }
     toggleExpand(path, expanded);
   };
@@ -219,13 +215,13 @@ export function SideMenu(props: SideMenuProps) {
       </div>
       <div className={cx(styles.menuList, genericStyles.scrollbars)}>
         {topMenu.map((x: SideMenuItemType, i) => (
-          <SideMenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort}/>
+          <SideMenuItem {...x} key={i} onClick={onClick} expand={onExpand} pathPrefix={pathPrefix} short={isShort} />
         ))}
       </div>
       <div className={styles.bottomButtons}>
         {pinnedMenuItem && (
           <SideMenuItem
-            key='pinned-element'
+            key="pinned-element"
             {...pinnedMenuItem}
             onClick={onClick}
             expand={onExpand}
@@ -234,21 +230,21 @@ export function SideMenu(props: SideMenuProps) {
           />
         )}
         <SideMenuItem
-          key='collapse'
+          key="collapse"
           items={[]}
-          path=''
+          path=""
           isCollapse
           selected={false}
           expanded={false}
           icon={isShort ? IconArrowRight : IconArrowLeft}
-          label='Collapse menu'
-          onClick={e => {
+          label="Collapse menu"
+          onClick={(e) => {
             e.preventDefault();
-            setIsShort(!isShort)
+            setIsShort(!isShort);
           }}
           short={isShort}
         />
       </div>
     </div>
-  )
+  );
 }

@@ -4,9 +4,11 @@ import { css, cx } from '@emotion/css';
 import { colors } from '../../variables';
 import { IconSortableAsc, IconSortableDesc, type GenericIconProps } from '../Icon';
 
-type IconSortableProps = $Exact<GenericIconProps & { sort?: 'asc' | 'desc' }>
+type IconSortableProps = $Exact<GenericIconProps & { sort?: 'asc' | 'desc' }>;
 
-const indeterminateStyle = css`fill: ${colors.dark10} !important;`;
+const indeterminateStyle = css`
+  fill: ${colors.dark10} !important;
+`;
 
 export const IconHelperSortable = ({ sort, className, ...props }: IconSortableProps) => {
   switch (sort) {

@@ -42,17 +42,25 @@ const styles = {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
-  `
+  `,
 };
 
 const wrapSizes = {
-  m: css`height: 32px;`,
-  l: css`height: 40px;`
+  m: css`
+    height: 32px;
+  `,
+  l: css`
+    height: 40px;
+  `,
 };
 
 const iconWrapSizes = {
-  m: css`margin-right: 7px;`,
-  l: css`margin-right: 15px;`
+  m: css`
+    margin-right: 7px;
+  `,
+  l: css`
+    margin-right: 15px;
+  `,
 };
 
 export type InputProps = {
@@ -80,27 +88,27 @@ export type InputProps = {
   placeholder?: string,
   size?: 'm' | 'l',
   leftElement?: React.Node,
-  rightElement?: React.Node
+  rightElement?: React.Node,
 };
 
 type InputState = {
-  focused: boolean;
+  focused: boolean,
 };
 
-const noop = () => void 0
+const noop = () => void 0;
 
 export class Input extends React.Component<InputProps, InputState> {
   elementRef = createRef<HTMLInputElement>();
 
   state = {
-    focused: false
+    focused: false,
   };
 
   focus = () => {
     if (this.elementRef && this.elementRef.current) {
       this.elementRef.current.focus();
     }
-  }
+  };
 
   render() {
     const {
@@ -144,7 +152,7 @@ export class Input extends React.Component<InputProps, InputState> {
             [commonInputStyles.error]: error,
             [styles.outerWithAddition]: hasAddition,
             [styles.withLeftElement]: !!leftElement,
-            [styles.withRightElement]: !!rightElement
+            [styles.withRightElement]: !!rightElement,
           },
           className
         )}
@@ -155,15 +163,11 @@ export class Input extends React.Component<InputProps, InputState> {
           {...props}
           autoFocus={autoFocus}
           autoComplete={autoComplete}
-          className={cx(
-            commonInputStyles.input,
-            commonInputSizes[size || 'l'],
-            {
-              [styles.inputWithAddition]: hasAddition,
-              [styles.inputWithIcon]: rightIcon || onClearClick,
-              [commonInputStyles.disabled]: disabled
-            }
-          )}
+          className={cx(commonInputStyles.input, commonInputSizes[size || 'l'], {
+            [styles.inputWithAddition]: hasAddition,
+            [styles.inputWithIcon]: rightIcon || onClearClick,
+            [commonInputStyles.disabled]: disabled,
+          })}
           disabled={disabled}
           name={name}
           onChange={onChange}
@@ -183,14 +187,14 @@ export class Input extends React.Component<InputProps, InputState> {
         />
         {(onClearClick || rightIcon) && (
           <div className={cx(styles.iconWrap, iconWrapSizes[size || 'l'])}>
-            {onClearClick && (!rightIcon || value)
-              ? (
-                <IconCancel
-                  className={styles.clearIcon}
-                  onClick={(!(disabled || readOnly) && this.handleClearClick) || noop}
-                />
-              )
-              : rightIcon}
+            {onClearClick && (!rightIcon || value) ? (
+              <IconCancel
+                className={styles.clearIcon}
+                onClick={(!(disabled || readOnly) && this.handleClearClick) || noop}
+              />
+            ) : (
+              rightIcon
+            )}
           </div>
         )}
 
@@ -212,5 +216,5 @@ export class Input extends React.Component<InputProps, InputState> {
   handleClearClick = () => {
     this.focus();
     this.props.onClearClick && this.props.onClearClick();
-  }
+  };
 }

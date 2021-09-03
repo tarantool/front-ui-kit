@@ -21,10 +21,10 @@ const styles = {
       margin-bottom: 0;
     }
   `,
-  softCorners: css `
+  softCorners: css`
     border-radius: 4px;
     margin-bottom: 16px;
-  `
+  `,
 };
 
 type TiledListItemProps = {
@@ -33,18 +33,12 @@ type TiledListItemProps = {
   corners?: 'hard' | 'soft',
 };
 
-export const TiledListItem = (
-  {
-    children,
-    className,
-    corners = 'hard'
-  }: TiledListItemProps
-) => (
+export const TiledListItem = ({ children, className, corners = 'hard' }: TiledListItemProps) => (
   <li
     className={cx(
       styles.item,
       {
-        [styles.softCorners]: corners === 'soft'
+        [styles.softCorners]: corners === 'soft',
       },
       className
     )}
@@ -59,18 +53,6 @@ type TiledListProps = {
   outer?: boolean,
 };
 
-export const TiledList = ({
-  children,
-  className,
-  outer = true
-}: TiledListProps) => (
-  <ul
-    className={cx(
-      styles.wrap,
-      { [styles.outer]: outer },
-      className
-    )}
-  >
-    {children}
-  </ul>
+export const TiledList = ({ children, className, outer = true }: TiledListProps) => (
+  <ul className={cx(styles.wrap, { [styles.outer]: outer }, className)}>{children}</ul>
 );

@@ -25,12 +25,10 @@ const styles = {
   notice: css`
     margin-top: 10px;
     color: ${colors.dark65};
-  `
+  `,
 };
 
-const getColor = ({ isDragAccept }) => isDragAccept
-  ? colors.intentPrimary
-  : colors.intentBase;
+const getColor = ({ isDragAccept }) => (isDragAccept ? colors.intentPrimary : colors.intentBase);
 
 const Container = styled.div`
   flex: 1;
@@ -41,7 +39,7 @@ const Container = styled.div`
   padding: 20px;
   border-width: 1px;
   border-radius: 4px;
-  border-color: ${props => getColor(props)};
+  border-color: ${(props) => getColor(props)};
   border-style: dashed;
   background-color: ${colors.intentBaseActive};
   transition: border 0.24s ease-in-out;
@@ -58,53 +56,41 @@ type UploadZoneProps = {
   title?: string,
   subTitle?: string,
   loading?: boolean,
-  files?: Array<File>
-}
+  files?: Array<File>,
+};
 
-export const UploadZone = (
-  {
-    accept = '',
-    handler,
-    name,
-    multiple,
-    className,
-    title,
-    subTitle,
-    loading,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    files // TODO: 'files' is defined but never used
-  }: UploadZoneProps
-) => {
-  const {
-    getRootProps,
-    getInputProps,
-    isDragAccept
-  } = useDropzone({
+export const UploadZone = ({
+  accept = '',
+  handler,
+  name,
+  multiple,
+  className,
+  title,
+  subTitle,
+  loading,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  files, // TODO: 'files' is defined but never used
+}: UploadZoneProps) => {
+  const { getRootProps, getInputProps, isDragAccept } = useDropzone({
     accept,
     multiple,
-    onDrop: handler
+    onDrop: handler,
   });
 
   const { ref, ...rootProps } = getRootProps({
-    isDragAccept
-  })
+    isDragAccept,
+  });
 
   return (
     <div className={cx(styles.wrap, className)} ref={ref}>
-      <Container
-        {...rootProps}
-      >
-        <input {...getInputProps()} name={name}/>
-        {loading
-          ? <TarantoolLogoSpinner className={styles.preloader} />
-          : <IconDragFile className={styles.icon} />}
-        <Text variant='h3' tag='span'>
-          {loading
-            ? 'Uploading...'
-            : title || 'Click or drag file to this area to upload'}
+      <Container {...rootProps}>
+        <input {...getInputProps()} name={name} />
+        {loading ? <TarantoolLogoSpinner className={styles.preloader} /> : <IconDragFile className={styles.icon} />}
+        <Text variant="h3" tag="span">
+          {loading ? 'Uploading...' : title || 'Click or drag file to this area to upload'}
         </Text>
         {!!subTitle && !loading && <Text className={styles.notice}>{subTitle}</Text>}
       </Container>
     </div>
   );
-}
+};

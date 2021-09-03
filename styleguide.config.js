@@ -4,7 +4,7 @@ const docgen = require('react-docgen');
 const { version } = require('./package');
 
 const tsParser = require('react-docgen-typescript').withDefaultConfig({
-  savePropValueAsString: true
+  savePropValueAsString: true,
 }).parse;
 
 const propsParser = function (filePath, source) {
@@ -29,42 +29,41 @@ module.exports = {
   sections: [
     {
       name: 'Intro',
-      content: './readme.md'
+      content: './readme.md',
     },
     {
       name: 'Colors',
-      content: './colors.md'
+      content: './colors.md',
     },
     {
       name: 'UI Components',
       content: './components.md',
       components: 'src/components/*/index.{ts,js}',
-      sectionDepth: 1
+      sectionDepth: 1,
     },
     {
       name: 'Generic styles',
-      content: 'src/genericStyles/readme.md'
+      content: 'src/genericStyles/readme.md',
     },
     {
       name: 'GitHub',
       href: 'https://github.com/tarantool/front-ui-kit',
-      external: true
-    }
+      external: true,
+    },
   ],
   template: {
     head: {
       links: [
         {
           rel: 'stylesheet',
-          // eslint-disable-next-line max-len
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Code+Pro:wght@400;500&display=swap'
-        }
-      ]
-    }
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Source+Code+Pro:wght@400;500&display=swap',
+        },
+      ],
+    },
   },
   exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
   moduleAliases: {
-    '@tarantool.io/ui-kit': path.resolve(__dirname, 'src')
+    '@tarantool.io/ui-kit': path.resolve(__dirname, 'src'),
   },
   pagePerSection: true,
   // skipComponentsWithoutExample: true,
@@ -74,5 +73,5 @@ module.exports = {
   usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
   version,
   propsParser,
-  resolver: docgen.resolver.findAllComponentDefinitions
+  resolver: docgen.resolver.findAllComponentDefinitions,
 };

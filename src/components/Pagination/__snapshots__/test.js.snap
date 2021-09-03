@@ -27,7 +27,7 @@ exports[`Pagination render simple 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -113,7 +113,7 @@ exports[`Pagination render simple 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -180,7 +180,7 @@ exports[`Pagination render simple 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -374,7 +374,7 @@ exports[`Pagination renders with page size changer 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -460,7 +460,7 @@ exports[`Pagination renders with page size changer 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -527,7 +527,7 @@ exports[`Pagination renders with page size changer 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -849,7 +849,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -935,7 +935,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1002,7 +1002,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1334,7 +1334,7 @@ exports[`Pagination renders with total 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1420,7 +1420,7 @@ exports[`Pagination renders with total 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1487,7 +1487,7 @@ exports[`Pagination renders with total 1`] = `
   color: #5c606c;
   min-width: 32px;
   height: 32px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d9dadd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1697,7 +1697,7 @@ exports[`PaginationControlled render simple 1`] = `
   margin: 0 4px;
   border: 1px solid #d9dadd;
   display: block;
-  background: #FFFFFF;
+  background: #ffffff;
   color: #5c606c;
   font-size: 14px;
   text-align: center;
@@ -1885,7 +1885,7 @@ exports[`PaginationControlled renders with page size changer 1`] = `
   margin: 0 4px;
   border: 1px solid #d9dadd;
   display: block;
-  background: #FFFFFF;
+  background: #ffffff;
   color: #5c606c;
   font-size: 14px;
   text-align: center;

@@ -8,10 +8,10 @@ import { shallowCompareKeys } from './utils';
 import type { Entries } from '../ResizeSensor';
 
 export interface IOverflowListProps<T> {
-  items: T[],
-  className?: string,
-  minVisibleItems?: number,
-  observeParents?: boolean,
+  items: T[];
+  className?: string;
+  minVisibleItems?: number;
+  observeParents?: boolean;
   onOverflow?: (overflowItems: T[]) => void;
   overflowRenderer: (overflowItems: T[]) => React.Node;
   style?: string;
@@ -29,31 +29,31 @@ export interface IOverflowListState<T> {
 const OverflowDirection = {
   NONE: 'none',
   GROW: 'grow',
-  SHRINK: 'shrink'
+  SHRINK: 'shrink',
 };
 
 const styles = {
   overFlowList: css`
-     display: flex;
-     flex-wrap: nowrap;
-     min-width: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 0;
   `,
   overflowListSpacer: css`
     flex-shrink: 1;
     width: 1px;
-  `
+  `,
 };
 
 export class OverflowList<T> extends React.Component<IOverflowListProps<T>, IOverflowListState<T>> {
   static defaultProps = {
-    minVisibleItems: 0
+    minVisibleItems: 0,
   };
 
   state: IOverflowListState<T> = {
     direction: OverflowDirection.NONE,
     lastOverflowCount: 0,
     overflow: [],
-    visible: this.props.items
+    visible: this.props.items,
   };
 
   previousWidths = new Map<Element, number>();
@@ -78,7 +78,7 @@ export class OverflowList<T> extends React.Component<IOverflowListProps<T>, IOve
         direction: OverflowDirection.GROW,
         lastOverflowCount: 0,
         overflow: [],
-        visible: this.props.items
+        visible: this.props.items,
       });
     }
 
@@ -92,25 +92,22 @@ export class OverflowList<T> extends React.Component<IOverflowListProps<T>, IOve
       overflow.length !== lastOverflowCount
     ) {
       this.props.onOverflow && this.props.onOverflow(overflow);
-
     }
   }
 
   render() {
-    const {
-      className, observeParents, style, tagName = 'div', visibleItemRenderer
-    } = this.props;
+    const { className, observeParents, style, tagName = 'div', visibleItemRenderer } = this.props;
     const overflow = this.maybeRenderOverflow();
     const list = React.createElement(
       tagName,
       {
         className: cx(styles.overFlowList, className),
-        style
+        style,
       },
       overflow,
       this.state.visible.map(visibleItemRenderer),
       null,
-      <div className={styles.overflowListSpacer} ref={ref => (this.spacer = ref)}/>
+      <div className={styles.overflowListSpacer} ref={(ref) => (this.spacer = ref)} />
     );
 
     return (
@@ -129,12 +126,12 @@ export class OverflowList<T> extends React.Component<IOverflowListProps<T>, IOve
   }
 
   resize = (entries: Entries) => {
-    const growing = entries.some(entry => {
+    const growing = entries.some((entry) => {
       const previousWidth = this.previousWidths.get(entry.target) || 0;
       return entry.contentRect.width > previousWidth;
     });
     this.repartition(growing);
-    entries.forEach(entry => this.previousWidths.set(entry.target, entry.contentRect.width));
+    entries.forEach((entry) => this.previousWidths.set(entry.target, entry.contentRect.width));
   };
 
   repartition(growing: boolean) {
@@ -142,16 +139,15 @@ export class OverflowList<T> extends React.Component<IOverflowListProps<T>, IOve
       return;
     }
     if (growing) {
-      this.setState(state => ({
+      this.setState((state) => ({
         direction: OverflowDirection.GROW,
         // store last overflow if this is the beginning of a resize (for check in componentDidUpdate).
-        lastOverflowCount:
-          state.direction === OverflowDirection.NONE ? state.overflow.length : state.lastOverflowCount,
+        lastOverflowCount: state.direction === OverflowDirection.NONE ? state.overflow.length : state.lastOverflowCount,
         overflow: [],
-        visible: this.props.items
+        visible: this.props.items,
       }));
     } else if (this.spacer.getBoundingClientRect().width < 0.9) {
-      this.setState(state => {
+      this.setState((state) => {
         if (state.visible.length <= Number(this.props.minVisibleItems)) {
           return null;
         }
@@ -164,7 +160,7 @@ export class OverflowList<T> extends React.Component<IOverflowListProps<T>, IOve
         return {
           direction: state.direction === OverflowDirection.NONE ? OverflowDirection.SHRINK : state.direction,
           overflow,
-          visible
+          visible,
         };
       });
     } else {

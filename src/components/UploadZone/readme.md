@@ -1,13 +1,12 @@
-```js
-
+```jsx
 <UploadZone
   handler={console.log}
-  subTitle='Second string'
+  subTitle="Second string"
 />
 <br />
 <UploadZone
   handler={console.log}
-  subTitle='Second string'
+  subTitle="Second string"
   loading
 />
 ```

@@ -11,9 +11,4 @@ const styles = css`
   fill: ${colors.dark65};
 `;
 
-export const IconInfo = ({ className }: GenericIconProps) => (
-  <Icon
-    className={cx(styles, className)}
-    glyph={image}
-  />
-);
+export const IconInfo = ({ className }: GenericIconProps) => <Icon className={cx(styles, className)} glyph={image} />;

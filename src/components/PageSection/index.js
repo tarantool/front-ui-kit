@@ -25,7 +25,7 @@ const styles = {
   `,
   topRightControls: css`
     margin-left: auto;
-  `
+  `,
 };
 
 type PageSectionProps = {
@@ -33,29 +33,26 @@ type PageSectionProps = {
   className?: string,
   subTitle?: string | React.Node,
   title?: string | React.Node,
-  topRightControls?: React.Node[]
+  topRightControls?: React.Node[],
 };
 
-export const PageSection = ({
-  children,
-  className,
-  subTitle,
-  title,
-  topRightControls
-}: PageSectionProps) => {
+export const PageSection = ({ children, className, subTitle, title, topRightControls }: PageSectionProps) => {
   const isHeadingPaneVisible = title || subTitle || topRightControls;
 
   return (
     <section className={cx(styles.section, className)}>
       {isHeadingPaneVisible && (
-        <div
-          className={cx(
-            styles.headingPane,
-            { [styles.headingPaneMargin]: children }
+        <div className={cx(styles.headingPane, { [styles.headingPaneMargin]: children })}>
+          {title && (
+            <Text className={styles.heading} variant="h2">
+              {title}
+            </Text>
           )}
-        >
-          {title && (<Text className={styles.heading} variant='h2'>{title}</Text>)}
-          {subTitle && (<Text className={styles.subTitle} variant='p' tag='span'>{subTitle}</Text>)}
+          {subTitle && (
+            <Text className={styles.subTitle} variant="p" tag="span">
+              {subTitle}
+            </Text>
+          )}
           {topRightControls && <ControlsPanel className={styles.topRightControls} controls={topRightControls} />}
         </div>
       )}

@@ -1,4 +1,4 @@
-```js
+```jsx
 <Tabbed
   tabs={[
     {
@@ -17,7 +17,7 @@
 />
 ```
 
-```js
+```jsx
 import { useState } from 'react';
 
 const [ activeTab, setActiveTab ] = useState(1);
@@ -42,7 +42,7 @@ const [ activeTab, setActiveTab ] = useState(1);
 />
 ```
 
-```js
+```jsx
 import { useState } from 'react';
 
 const [ activeTab, setActiveTab ] = useState(1);
@@ -50,7 +50,7 @@ const [ activeTab, setActiveTab ] = useState(1);
 <Tabbed
   activeTab={activeTab}
   handleTabChange={setActiveTab}
-  size={"small"}
+  size="small"
   tabs={[
     {
       label: 'Create Replica Set',

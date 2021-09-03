@@ -8,7 +8,7 @@ const openModal = () => setOpened(true);
 const closeModal = () => setOpened(false);
 
 <>
-  <Button onClick={openModal} text='Open BaseModal' />
+  <Button onClick={openModal} text="Open BaseModal" />
   <BaseModal
     visible={opened}
     onClose={closeModal}

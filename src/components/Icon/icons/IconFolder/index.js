@@ -12,17 +12,11 @@ const styles = css`
 
 type IconFolderProps = {
   ...$Exact<GenericIconProps>,
-  opened: boolean
-}
+  opened: boolean,
+};
 
 export const IconFolder = ({ className, onClick, opened }: IconFolderProps) => (
-  <Icon
-    className={cx(styles, className)}
-    glyph={opened ? folderOpened : folder}
-    onClick={onClick}
-  />
+  <Icon className={cx(styles, className)} glyph={opened ? folderOpened : folder} onClick={onClick} />
 );
 
-export const IconFolderOpened = (props: GenericIconProps) => (
-  <IconFolder {...props} opened />
-);
+export const IconFolderOpened = (props: GenericIconProps) => <IconFolder {...props} opened />;

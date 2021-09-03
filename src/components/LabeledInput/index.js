@@ -20,7 +20,7 @@ const styles = {
   `,
   errorMessage: css`
     color: ${colors.intentDanger};
-  `
+  `,
 };
 
 type LabeledInputProps = {
@@ -36,12 +36,12 @@ type LabeledInputProps = {
   topRightControls?: React.Node[],
   error?: boolean,
   message?: string,
-  preserveMessageSpace?: boolean
+  preserveMessageSpace?: boolean,
 };
 
 export class LabeledInput extends React.Component<LabeledInputProps> {
   static defaultProps = {
-    preserveMessageSpace: true
+    preserveMessageSpace: true,
   };
 
   internalId = nanoid();
@@ -64,40 +64,26 @@ export class LabeledInput extends React.Component<LabeledInputProps> {
     } = this.props;
 
     return (
-      <div
-        className={cx(
-          commonStyles.wrap,
-          { [commonStyles.wrapMargin]: largeMargins },
-          className
-        )}
-      >
-        <div
-          className={cx(
-            commonStyles.headingPane,
-            { [commonStyles.headingPaneMargin]: largeMargins }
-          )}
-        >
-          <Text className={commonStyles.label} variant='h4' tag='label' htmlFor={id}>{label}</Text>
+      <div className={cx(commonStyles.wrap, { [commonStyles.wrapMargin]: largeMargins }, className)}>
+        <div className={cx(commonStyles.headingPane, { [commonStyles.headingPaneMargin]: largeMargins })}>
+          <Text className={commonStyles.label} variant="h4" tag="label" htmlFor={id}>
+            {label}
+          </Text>
           {!!info && (
             <Tooltip className={commonStyles.tooltip} content={info}>
               <IconInfo />
             </Tooltip>
           )}
           {!!subTitle && (
-            <Text className={commonStyles.subTitle} variant='p' tag='span'>{subTitle}</Text>
+            <Text className={commonStyles.subTitle} variant="p" tag="span">
+              {subTitle}
+            </Text>
           )}
-          {topRightControls && (
-            <ControlsPanel className={commonStyles.topRightControls} controls={topRightControls} />
-          )}
+          {topRightControls && <ControlsPanel className={commonStyles.topRightControls} controls={topRightControls} />}
         </div>
-        <InputComponent
-          {...restProps}
-          error={error}
-          id={id}
-          className={cx(styles.input, inputClassName)}
-        />
+        <InputComponent {...restProps} error={error} id={id} className={cx(styles.input, inputClassName)} />
         {(preserveMessageSpace || message) && (
-          <Text variant='p' className={cx(styles.message, { [styles.errorMessage]: error })}>
+          <Text variant="p" className={cx(styles.message, { [styles.errorMessage]: error })}>
             {message}
           </Text>
         )}

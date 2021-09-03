@@ -3,11 +3,7 @@ import * as React from 'react';
 import { css, cx } from '@emotion/css';
 import { ControlsPanel } from '../ControlsPanel';
 import { Text } from '../Text';
-import {
-  appLayoutTopPanelHeight,
-  pageLayoutMinWidth,
-  pageLayoutMaxWidth
-} from '../../variables';
+import { appLayoutTopPanelHeight, pageLayoutMinWidth, pageLayoutMaxWidth } from '../../variables';
 
 const styles = {
   page: css`
@@ -46,7 +42,7 @@ const styles = {
   `,
   divider: css`
     margin-right: auto;
-  `
+  `,
 };
 
 export type PageLayoutProps = {
@@ -57,7 +53,7 @@ export type PageLayoutProps = {
   aboveComponent?: React.AbstractComponent<{ className: string }>,
   heading?: string,
   headingContent?: React.Node,
-  wide?: boolean
+  wide?: boolean,
 };
 
 export const PageLayout = (
@@ -69,7 +65,7 @@ export const PageLayout = (
     aboveComponent: AboveComponent,
     topLeftControls,
     topRightControls,
-    wide
+    wide,
   }: PageLayoutProps,
   ref: Function
 ) => (
@@ -78,40 +74,25 @@ export const PageLayout = (
       styles.page,
       {
         [styles.wide]: wide,
-        [styles.pageWithAbovePanel]: !!AboveComponent
+        [styles.pageWithAbovePanel]: !!AboveComponent,
       },
       className
     )}
     ref={ref && 'current' in ref ? ref : null}
   >
-    {!!AboveComponent && (
-      <AboveComponent className={styles.aboveHeadingPanel} />
-    )}
+    {!!AboveComponent && <AboveComponent className={styles.aboveHeadingPanel} />}
     {(heading || topRightControls || headingContent) && (
       <div className={styles.headingPanel}>
         {heading && (
-          <Text
-            className={cx({ [styles.divider]: !topLeftControls })}
-            variant='h1'
-          >
+          <Text className={cx({ [styles.divider]: !topLeftControls })} variant="h1">
             {heading}
           </Text>
         )}
         {topLeftControls && (
-          <ControlsPanel
-            className={cx(styles.leftControls, styles.divider)}
-            controls={topLeftControls}
-            thin
-          />
+          <ControlsPanel className={cx(styles.leftControls, styles.divider)} controls={topLeftControls} thin />
         )}
         {headingContent}
-        {topRightControls && (
-          <ControlsPanel
-            className={styles.rightControls}
-            controls={topRightControls}
-            thin
-          />
-        )}
+        {topRightControls && <ControlsPanel className={styles.rightControls} controls={topRightControls} thin />}
       </div>
     )}
     {children}

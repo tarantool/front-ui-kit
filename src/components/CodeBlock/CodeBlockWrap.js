@@ -29,7 +29,7 @@ const styles = {
   `,
   copyIcon: css`
     fill: white;
-  `
+  `,
 };
 
 const Icon = ({ className, ...props }) => <IconCopy className={cx(className, styles.copyIcon)} {...props} />;
@@ -37,19 +37,13 @@ const Icon = ({ className, ...props }) => <IconCopy className={cx(className, sty
 type CodeBlockWrapProps = {
   className?: string,
   children?: React.Node,
-  textToCopy?: ?string
+  textToCopy?: ?string,
 };
 
 export const CodeBlockWrap = ({ className, children, textToCopy }: CodeBlockWrapProps) => (
-  <pre
-    className={cx(
-      styles.block,
-      { [styles.withBtn]: !!textToCopy },
-      className
-    )}
-  >
+  <pre className={cx(styles.block, { [styles.withBtn]: !!textToCopy }, className)}>
     {!!textToCopy && (
-      <CopyToClipboard className={styles.copyBtn} icon={Icon} intent='plain' content={textToCopy} size='s' />
+      <CopyToClipboard className={styles.copyBtn} icon={Icon} intent="plain" content={textToCopy} size="s" />
     )}
     <div className={styles.inner}>{children}</div>
   </pre>

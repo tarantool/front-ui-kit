@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { css, cx } from '@emotion/css';
-import { TarantoolLogoSpinner } from '../TarantoolLogoSpinner'
+import { TarantoolLogoSpinner } from '../TarantoolLogoSpinner';
 
 const styles = {
   wrap: css`
@@ -13,7 +13,7 @@ const styles = {
   image: css`
     height: 74px;
     width: 100px;
-  `
+  `,
 };
 
 type SectionPreloaderProps = { className?: string };

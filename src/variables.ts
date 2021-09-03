@@ -46,7 +46,7 @@ export const colors = {
   dark40: '#8e9199',
   dark60: '#797d86',
   dark65: '#5c606c',
-  dark: '#040b1d'
+  dark: '#040b1d',
 };
 
 export const navItemHeight = '40px';
@@ -62,7 +62,7 @@ export const zIndex = {
   notification: 150,
   dropdownMenu: 200,
   tooltip: 250,
-  dragNDrop: 300
+  dragNDrop: 300,
 };
 
 export const INTERACTIVE_ELEMENT_SELECTOR = 'a, button, input, select, textarea, [tabindex="0"]';
@@ -71,5 +71,5 @@ export const keyFrames = {
   fadeIn: keyframes`
     from { opacity: 0; }
     to { opacity: 1; }
-  `
+  `,
 };

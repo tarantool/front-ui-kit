@@ -35,7 +35,7 @@ const styles = {
   `,
   btmMargin: css`
     margin-bottom: 5px;
-  `
+  `,
 };
 
 const intentStyles = {
@@ -46,7 +46,7 @@ const intentStyles = {
     `,
     heading: css`
       color: ${colors.intentWarningAccent};
-    `
+    `,
   },
   success: {
     wrap: css`
@@ -55,8 +55,8 @@ const intentStyles = {
     `,
     heading: css`
       color: ${colors.intentSuccess};
-    `
-  }
+    `,
+  },
 };
 
 type Props = {
@@ -67,32 +67,28 @@ type Props = {
   intent: 'error' | 'success',
   onClose: (e: MouseEvent) => void,
   onMouseEnter?: (e: MouseEvent) => void,
-  onMouseLeave?: (e: MouseEvent) => void
+  onMouseLeave?: (e: MouseEvent) => void,
 };
 
-export const PopupNotificationItem = (
-  {
-    heading,
-    text,
-    children,
-    className,
-    intent = 'success',
-    onClose,
-    onMouseEnter,
-    onMouseLeave
-  }: Props
-) => (
+export const PopupNotificationItem = ({
+  heading,
+  text,
+  children,
+  className,
+  intent = 'success',
+  onClose,
+  onMouseEnter,
+  onMouseLeave,
+}: Props) => (
   <div
-    className={cx(
-      styles.wrap,
-      intentStyles[intent].wrap,
-      className
-    )}
+    className={cx(styles.wrap, intentStyles[intent].wrap, className)}
     onClick={onClose}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
-    <Text className={cx(styles.heading, intentStyles[intent].heading)} variant='h4' tag='span'>{heading}</Text>
+    <Text className={cx(styles.heading, intentStyles[intent].heading)} variant="h4" tag="span">
+      {heading}
+    </Text>
     <Text className={cx(styles.text, { [styles.btmMargin]: !!children })}>{text}</Text>
     {children}
     <IconHelperClose className={styles.closeBtn} onClick={onClose} />

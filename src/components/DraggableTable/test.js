@@ -8,12 +8,12 @@ it('DraggableTable renders correctly', () => {
   const columns = [
     {
       header: 'Field',
-      accessor: 'field'
+      accessor: 'field',
     },
     {
       header: 'Type',
-      accessor: 'type'
-    }
+      accessor: 'type',
+    },
   ];
 
   const data = Array.apply(null, { length: 10 }).map((_, index) => ({
@@ -21,20 +21,21 @@ it('DraggableTable renders correctly', () => {
     uuid: index,
     field: `field ${index}`,
     type: `type ${index}`,
-    selected: index % 2
+    selected: index % 2,
   }));
 
-
-  const tree = renderer.create(
-    <DraggableTable
-      columns={columns}
-      data={data}
-      onChange={noop}
-      onSelectRow={noop}
-      withPositionCol
-      draggableOnlySelected
-    />
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <DraggableTable
+        columns={columns}
+        data={data}
+        onChange={noop}
+        onSelectRow={noop}
+        withPositionCol
+        draggableOnlySelected
+      />
+    )
+    .toJSON();
 
   expect(tree).toMatchSnapshot();
 });

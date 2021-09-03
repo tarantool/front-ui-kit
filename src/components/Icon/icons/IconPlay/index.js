@@ -10,9 +10,5 @@ const styles = css`
 `;
 
 export const IconPlay = ({ className, ...props }: GenericIconProps) => (
-  <Icon
-    {...props}
-    className={cx(styles, className)}
-    glyph={image}
-  />
+  <Icon {...props} className={cx(styles, className)} glyph={image} />
 );

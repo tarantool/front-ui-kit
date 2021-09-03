@@ -47,7 +47,7 @@ const styles = {
   `,
   icon: css`
     margin-right: 8px;
-  `
+  `,
 };
 
 const [fill, setFill] = useState(false);
@@ -61,7 +61,7 @@ const fillStyle = fill ? css`fill: #0044aa;` : '';
 
 const CopyText = withCopyToClipboard(Text);
 
-const renderAllIcons = () => {
+const RenderAllIcons = () => {
   const [Icon, ...iconNames] = Object.keys(icons);
 
   return iconNames.map(iconName => {
@@ -82,6 +82,8 @@ const renderAllIcons = () => {
       <Switcher checked={background} onChange={switchBg}>Gray bg</Switcher>
     ]}
   />
-  <ul className={cx(styles.list, listBackgroundStyle)}>{renderAllIcons()}</ul>
+  <ul className={cx(styles.list, listBackgroundStyle)}>
+    <RenderAllIcons />
+  </ul>
 </>
 ```

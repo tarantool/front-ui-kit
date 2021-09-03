@@ -6,37 +6,34 @@ import { throttle } from 'lodash';
 import { DropdownPopoverWithRef } from './DropdownPopover';
 
 const focusFirstInteractiveElement = (containerEl: HTMLElement) => {
-  const firstInteractiveElement = containerEl
-    && containerEl.querySelector(INTERACTIVE_ELEMENT_SELECTOR);
+  const firstInteractiveElement = containerEl && containerEl.querySelector(INTERACTIVE_ELEMENT_SELECTOR);
 
   if (firstInteractiveElement) {
     firstInteractiveElement.focus();
   } else if (containerEl) {
     containerEl.focus();
   }
-}
+};
 
 type PopoverMethods = {
-  closePopover: () => void
-}
+  closePopover: () => void,
+};
 
 export type withPopoverProps = {
   className?: string, // trigger wrapper class
   popoverClassName?: string,
   onClick?: (e: MouseEvent) => void,
   component?: React.AbstractComponent<any>,
-  popoverContent?: React.Node | (PopoverMethods) => React.Node
+  popoverContent?: React.Node | ((PopoverMethods) => React.Node),
 };
 
 type withPopoverState = {
   isOpen: boolean,
   left: number,
-  top: number
+  top: number,
 };
 
-export const withPopover = (
-  Component: React.AbstractComponent<any, HTMLElement> | string
-) =>
+export const withPopover = (Component: React.AbstractComponent<any, HTMLElement> | string) =>
   class Dropdown extends React.PureComponent<withPopoverProps, withPopoverState> {
     popoverRef = React.createRef<HTMLElement>();
     wrapperRef = React.createRef<HTMLElement>();
@@ -44,7 +41,7 @@ export const withPopover = (
     state = {
       isOpen: false,
       left: 0,
-      top: 0
+      top: 0,
     };
 
     componentDidMount() {
@@ -65,7 +62,7 @@ export const withPopover = (
         document.removeEventListener('mousedown', this.handleMouseDownOutside);
       }
 
-      if ((isOpen && !prevState.isOpen) || (prevProps !== this.props)) {
+      if ((isOpen && !prevState.isOpen) || prevProps !== this.props) {
         this.recalcPosition();
       }
     }
@@ -88,15 +85,15 @@ export const withPopover = (
         const wrapperBottomSpace = window.innerHeight - wrapperRect.top - wrapperRect.height;
 
         // will show popover upside toggler;
-        const upside = popoverElement.offsetHeight > wrapperBottomSpace
-          && popoverElement.offsetHeight <= wrapperRect.top;
+        const upside =
+          popoverElement.offsetHeight > wrapperBottomSpace && popoverElement.offsetHeight <= wrapperRect.top;
 
         // will show popover downside & shift vertical
-        const shiftVertical = popoverElement.offsetHeight > wrapperBottomSpace
-          && popoverElement.offsetHeight > wrapperRect.top;
+        const shiftVertical =
+          popoverElement.offsetHeight > wrapperBottomSpace && popoverElement.offsetHeight > wrapperRect.top;
 
         // will show popover to left from toggler;
-        const leftside = wrapperRect.left > (bodyWidth / 2);
+        const leftside = wrapperRect.left > bodyWidth / 2;
 
         let left = leftside
           ? Math.max(window.scrollX + wrapperRect.left + wrapperRect.width - popoverRect.width, 0)
@@ -105,12 +102,13 @@ export const withPopover = (
         let top = shiftVertical
           ? window.scrollY + window.innerHeight - popoverRect.height
           : upside
-            ? window.scrollY + wrapperRect.top - popoverElement.offsetHeight
-            : window.scrollY + wrapperRect.top + wrapperRect.height;
+          ? window.scrollY + wrapperRect.top - popoverElement.offsetHeight
+          : window.scrollY + wrapperRect.top + wrapperRect.height;
 
-        const horizontalShift = left - window.scrollX + popoverRect.width > window.innerWidth
-          ? -(left - window.scrollX + popoverRect.width - window.innerWidth)
-          : left < window.scrollX
+        const horizontalShift =
+          left - window.scrollX + popoverRect.width > window.innerWidth
+            ? -(left - window.scrollX + popoverRect.width - window.innerWidth)
+            : left < window.scrollX
             ? window.scrollX - left
             : 0;
 
@@ -119,7 +117,7 @@ export const withPopover = (
 
         this.setState({ top, left });
       }
-    }
+    };
 
     // 16 approximately equals 1 frame with 60fps
     throttledRecalcPosition = throttle(this.recalcPosition, 16);
@@ -128,7 +126,7 @@ export const withPopover = (
       const { onClick } = this.props;
       this.toggleDropdown();
       onClick && onClick(event);
-    }
+    };
 
     handleMouseDownOutside = (event: MouseEvent) => {
       const { isOpen } = this.state;
@@ -139,27 +137,28 @@ export const withPopover = (
       const eventTarget = ((event.target: any): Node);
 
       if (
-        isOpen
-        && popoverElement && wrapperElement
-        && !(popoverElement.contains(eventTarget) || wrapperElement.contains(eventTarget))
-        && (popoverElement !== event.target || wrapperElement !== event.target)
+        isOpen &&
+        popoverElement &&
+        wrapperElement &&
+        !(popoverElement.contains(eventTarget) || wrapperElement.contains(eventTarget)) &&
+        (popoverElement !== event.target || wrapperElement !== event.target)
       ) {
         this.toggleDropdown();
       }
-    }
+    };
 
-    handlePopoverClick = (event: MouseEvent)=> {
+    handlePopoverClick = (event: MouseEvent) => {
       event.stopPropagation();
       const ref = this.popoverRef && this.popoverRef.current;
 
       if (ref && ref !== event.target) {
         this.toggleDropdown();
       }
-    }
+    };
 
-    handlePopoverMouseDown = (event: MouseEvent)=> event.stopPropagation();
+    handlePopoverMouseDown = (event: MouseEvent) => event.stopPropagation();
 
-    handlePopoverKeyDown = (event: KeyboardEvent)=> {
+    handlePopoverKeyDown = (event: KeyboardEvent) => {
       if (event.keyCode === 27) {
         this.toggleDropdown();
         this.wrapperRef.current && focusFirstInteractiveElement(this.wrapperRef.current);
@@ -169,16 +168,14 @@ export const withPopover = (
     toggleDropdown = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
 
     popoverMethods = {
-      closePopover: this.toggleDropdown
-    }
+      closePopover: this.toggleDropdown,
+    };
 
     renderPopover = () => {
       const { popoverClassName, popoverContent } = this.props;
       const { left, top } = this.state;
       const { wrapperRef } = this;
-      const minWidth = wrapperRef && wrapperRef.current
-        ? wrapperRef.current.getBoundingClientRect().width
-        : 0;
+      const minWidth = wrapperRef && wrapperRef.current ? wrapperRef.current.getBoundingClientRect().width : 0;
 
       return (
         <DropdownPopoverWithRef
@@ -189,7 +186,7 @@ export const withPopover = (
           style={{
             left,
             top,
-            minWidth
+            minWidth,
           }}
           ref={this.popoverRef}
         >
@@ -205,7 +202,7 @@ export const withPopover = (
         return ReactDOM.createPortal(this.renderPopover(), body);
       }
 
-      return null
+      return null;
     }
 
     render() {
@@ -220,14 +217,9 @@ export const withPopover = (
 
       return (
         <>
-          <Component
-            {...props}
-            className={className}
-            onClick={this.handleClick}
-            ref={this.wrapperRef}
-          />
+          <Component {...props} className={className} onClick={this.handleClick} ref={this.wrapperRef} />
           {isOpen && popoverContent && this.renderPortal()}
         </>
-      )
+      );
     }
-  }
+  };

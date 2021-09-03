@@ -1,10 +1,10 @@
-```js
+```jsx
 import { useState } from 'react';
 import { Button, Text, RadioButton } from '@tarantool.io/ui-kit';
 
 const [value, setValue] = useState(null);
 
-const handleChange = value => setValue(value);
+const handleChange = (value) => setValue(value);
 
 const vshard_groups = [
   { name: 'group 1' },
@@ -19,7 +19,7 @@ const buttons = vshard_groups.map(({ name }) => (
   <RadioButton
     key={name}
     onChange={() => handleChange(name)}
-    name='vshard_group'
+    name="vshard_group"
     value={name}
     checked={name === value}
   >
@@ -28,11 +28,11 @@ const buttons = vshard_groups.map(({ name }) => (
 ));
 
 <>
-  <Text variant='h3'>One column</Text>
+  <Text variant="h3">One column</Text>
   <InputGroup>{buttons}</InputGroup>
-  <Text variant='h3'>Two columns</Text>
+  <Text variant="h3">Two columns</Text>
   <InputGroup columns={2}>{buttons}</InputGroup>
-  <Text variant='h3'>Three columns</Text>
+  <Text variant="h3">Three columns</Text>
   <InputGroup columns={3}>{buttons}</InputGroup>
 </>
 ```

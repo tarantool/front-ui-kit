@@ -38,7 +38,7 @@ const styles = {
     &:focus {
       box-shadow: 0 0 600px 40px yellow;
     }
-  `
+  `,
 };
 
 const menuLengthPresets = [5, 10, 15, 25, 45, 100];
@@ -51,7 +51,7 @@ const [state, setState] = useState({
   modalOpened: false
 });
 
-const setStateKey = key => value => setState((state) => ({ ...state, [key]: value }));
+const setStateKey = key => (value) => setState((state) => ({ ...state, [key]: value }));
 const toggleState = key => () => setState((state) => ({ ...state, [key]: !state[key] }));
 
 const itemsCollection = state.customMenuContent
@@ -83,27 +83,30 @@ const DropdownButton = withDropdown(Button);
   <ControlsPanel
     controls={[
       <Checkbox
+        key={0}
         checked={state.customMenuContent}
         onChange={toggleState('customMenuContent')}
       >
         Custom menu
       </Checkbox>,
       <DropdownButton
+        key={1}
         disabled={!state.customMenuContent}
         items={menuLengthPresets.map(value => (
           <DropdownItem key={value} onClick={() => setStateKey('rows')(value)}>{`${value} rows`}</DropdownItem>
         ))}
-        title='Dropdown menu rows'
+        title="Dropdown menu rows"
         text={`${state.rows} rows`}
       />,
       <DropdownButton
+        key={2}
         disabled={!state.customMenuContent}
         items={menuItemWidthPresets.map(value => (
           <DropdownItem key={value} onClick={() => setStateKey('width')(value)}>{`${value} repeats`}</DropdownItem>
         ))}
-        title='Menu items width'
+        title="Menu items width"
         text={`${state.width} repeats`}
-      />
+      />,
     ]}
   />
   <div className={css`position: relative;`}>
@@ -115,7 +118,7 @@ const DropdownButton = withDropdown(Button);
       <Dropdown items={itemsCollection}>
         <Button
           icon={IconMore}
-          intent='secondary'
+          intent="secondary"
         />
       </Dropdown>
       <Dropdown items={itemsCollection}>
@@ -126,15 +129,15 @@ const DropdownButton = withDropdown(Button);
 
   <div className={styles.scrollableBox}>
     <div className={styles.scrollableContent}>
-      <DropdownButton className={styles.shadow} items={itemsCollection} icon={IconMore} text='Dropdown' />
+      <DropdownButton className={styles.shadow} items={itemsCollection} icon={IconMore} text="Dropdown" />
     </div>
   </div>
 
-  <DropdownButton items={itemsCollection} text='Another Dropdown' />
-  <Button text='Open modal' onClick={toggleState('modalOpened')} />
-  <Modal onClose={toggleState('modalOpened')} visible={state.modalOpened} title='Modal'>
+  <DropdownButton items={itemsCollection} text="Another Dropdown" />
+  <Button text="Open modal" onClick={toggleState('modalOpened')} />
+  <Modal onClose={toggleState('modalOpened')} visible={state.modalOpened} title="Modal">
     Modal content
-    <DropdownButton items={itemsCollection} text='Dropdown' />
+    <DropdownButton items={itemsCollection} text="Dropdown" />
   </Modal>
 </div>
 ```

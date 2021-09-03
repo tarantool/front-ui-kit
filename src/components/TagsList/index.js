@@ -17,7 +17,7 @@ const styles = {
   `,
   tag: css`
     margin-bottom: 4px;
-  `
+  `,
 };
 
 export type TagsListProps<T> = {
@@ -27,11 +27,14 @@ export type TagsListProps<T> = {
   tagClassName?: string,
   values?: T[],
   onTagClick?: (value: T) => void,
-  renderItem: (value: T) => string
+  renderItem: (value: T) => string,
 };
 
-const toString = (v: any): string => v + ''
+const toString = (v: any): string => v + '';
 
+/**
+ * @deprecated
+ */
 export const TagsList = <T>({
   className,
   heading,
@@ -39,22 +42,24 @@ export const TagsList = <T>({
   onTagClick,
   renderItem,
   tagClassName,
-  values
+  values,
 }: TagsListProps<T>) => (
-    <div className={cx(styles.wrapper, className)}>
-      {heading && (
-        <Text className={styles.heading} variant='h5' tag='span'><b>{`${heading}:`}</b></Text>
-      )}
-      <div>
-        {(values || []).map((value, index) => (
-          <Tag
-            key={index}
-            className={cx(styles.tag, tagClassName)}
-            onClick={() => onTagClick && onTagClick(value)}
-            text={renderItem ? renderItem(value) : toString(value)}
-            highlightingOnHover={highlightingOnHover}
-          />
-        ))}
-      </div>
+  <div className={cx(styles.wrapper, className)}>
+    {heading && (
+      <Text className={styles.heading} variant="h5" tag="span">
+        <b>{`${heading}:`}</b>
+      </Text>
+    )}
+    <div>
+      {(values || []).map((value, index) => (
+        <Tag
+          key={index}
+          className={cx(styles.tag, tagClassName)}
+          onClick={() => onTagClick && onTagClick(value)}
+          text={renderItem ? renderItem(value) : toString(value)}
+          highlightingOnHover={highlightingOnHover}
+        />
+      ))}
     </div>
-  );
+  </div>
+);

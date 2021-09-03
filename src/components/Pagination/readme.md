@@ -1,5 +1,5 @@
-```js
-import { useState } from 'react';
+```jsx
+import { useState, useMemo } from 'react';
 import { css, cx } from '@emotion/css';
 import {
   ControlsPanel,
@@ -14,19 +14,20 @@ const styles = {
   `,
   bg: css`
     background-color: #f0f2f5;
-  `
+  `,
 };
 
 const [darkBg, setDarkBg] = useState(false);
 const [pageIndex, setPageIndex] = useState(20);
 const [pageSize, setPageSize] = useState(10);
 
-const toggleBg = () => setDarkBg(!darkBg);
+const toggleBg = () => setDarkBg((v) => !v);
+const pageSizeOptions = useMemo(() => [10, 25, 75, 100], []);
 
 <div className={cx(styles.wrapper, { [styles.bg]: darkBg })}>
   <ControlsPanel
     controls={[
-      <Switcher onChange={toggleBg} checked={darkBg}>Background</Switcher>
+      <Switcher key={0} onChange={toggleBg} checked={darkBg}>Background</Switcher>
     ]}
   />
 
@@ -49,7 +50,7 @@ const toggleBg = () => setDarkBg(!darkBg);
     page={pageIndex}
     pageSize={pageSize}
     items={300}
-    pageSizeOptions={[10, 25, 75, 100]}
+    pageSizeOptions={pageSizeOptions}
     onPageChange={setPageIndex}
     setPageSize={setPageSize}
   />
@@ -82,7 +83,7 @@ const toggleBg = () => setDarkBg(!darkBg);
     pageSize={pageSize}
     disableNextPageButton={false}
     onPageChange={setPageIndex}
-    pageSizeOptions={[10, 25, 75, 110]}
+    pageSizeOptions={pageSizeOptions}
     setPageSize={setPageSize}
   />
 </div>

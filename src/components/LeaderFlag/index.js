@@ -22,19 +22,25 @@ const styles = {
     position: absolute;
     left: 0;
     bottom: 0;
-  `
+  `,
 };
 
 const intentions = {
-  good: css`fill: ${colors.intentSuccessBorder};`,
-  bad: css`fill: ${colors.intentDanger};`,
-  warning: css`fill: ${colors.intentWarning};`
+  good: css`
+    fill: ${colors.intentSuccessBorder};
+  `,
+  bad: css`
+    fill: ${colors.intentDanger};
+  `,
+  warning: css`
+    fill: ${colors.intentWarning};
+  `,
 };
 
 type LeaderFlagProps = {
   className?: string,
   state: 'warning' | 'good' | 'bad',
-  title?: string
+  title?: string,
 };
 
 export const LeaderFlag = ({ className, state = 'bad', title }: LeaderFlagProps) => {
@@ -42,10 +48,7 @@ export const LeaderFlag = ({ className, state = 'bad', title }: LeaderFlagProps)
 
   return (
     <div className={cx(styles.wrap, className)} title={title}>
-      <SVGImage
-        glyph={glyph}
-        className={cx(styles.flag, intentions[state])}
-      />
+      <SVGImage glyph={glyph} className={cx(styles.flag, intentions[state])} />
     </div>
-  )
+  );
 };

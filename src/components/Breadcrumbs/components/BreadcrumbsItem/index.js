@@ -29,34 +29,32 @@ const styles = {
     &:hover {
       text-decoration: underline;
     }
-  `
-}
+  `,
+};
 
-export default class BreadcrumbsItemComponent extends React.Component<BreadcrumbsItem & ActionsBreadCrumbs>{
+export default class BreadcrumbsItemComponent extends React.Component<BreadcrumbsItem & ActionsBreadCrumbs> {
   render() {
     const { title, path, onLinkClick } = this.props;
     if (path && onLinkClick) {
-
       return (
         <Link
           href={path}
-          onClick={e => {
+          onClick={(e) => {
             e.preventDefault();
-            onLinkClick(path)
+            onLinkClick(path);
           }}
           className={cx(styles.breadcrumbLinkElement, styles.breadcrumbElement)}
           variant="basic"
         >
           {title}
         </Link>
-      )
+      );
     }
 
     return (
       <Text tag="span" className={styles.breadcrumbElement}>
         {title}
       </Text>
-    )
+    );
   }
-
 }

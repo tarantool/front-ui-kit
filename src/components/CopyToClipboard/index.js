@@ -33,85 +33,73 @@ export const copyToClipboard = (str: string) => {
 type withCopyToClipboardProps = {
   content: string,
   tooltipContent?: string,
-  tooltipContentCopied?: string
-}
+  tooltipContentCopied?: string,
+};
 
 type CopyToClipboardState = {
-  clicked: boolean
-}
+  clicked: boolean,
+};
 
-export const withCopyToClipboard = (
-  Component: React.AbstractComponent<any, any>
-) => class extends React.PureComponent<withCopyToClipboardProps, CopyToClipboardState> {
-  static defaultProps = {
-    tooltipContent: 'Copy to clipboard',
-    tooltipContentCopied: 'Copied'
-  }
+export const withCopyToClipboard = (Component: React.AbstractComponent<any, any>) =>
+  class extends React.PureComponent<withCopyToClipboardProps, CopyToClipboardState> {
+    static defaultProps = {
+      tooltipContent: 'Copy to clipboard',
+      tooltipContentCopied: 'Copied',
+    };
 
-  ComponentWithTooltip = withTooltip(Component);
+    ComponentWithTooltip = withTooltip(Component);
 
-  state = { clicked: false };
+    state = { clicked: false };
 
-  tooltipIntervalId = null;
+    tooltipIntervalId = null;
 
-  handleClick = () => {
-    copyToClipboard(this.props.content);
-    this.setState({ clicked: true });
+    handleClick = () => {
+      copyToClipboard(this.props.content);
+      this.setState({ clicked: true });
 
-    if (this.tooltipIntervalId) clearInterval(this.tooltipIntervalId);
+      if (this.tooltipIntervalId) clearInterval(this.tooltipIntervalId);
 
-    this.tooltipIntervalId = setInterval(
-      this.resetClickedState,
-      3000
-    )
-  }
+      this.tooltipIntervalId = setInterval(this.resetClickedState, 3000);
+    };
 
-  resetClickedState = () => {
-    if (this.tooltipIntervalId) clearInterval(this.tooltipIntervalId);
-    this.setState({ clicked: false });
-  }
+    resetClickedState = () => {
+      if (this.tooltipIntervalId) clearInterval(this.tooltipIntervalId);
+      this.setState({ clicked: false });
+    };
 
-  componentWillUnmount() {
-    if (this.tooltipIntervalId) clearInterval(this.tooltipIntervalId);
-  }
+    componentWillUnmount() {
+      if (this.tooltipIntervalId) clearInterval(this.tooltipIntervalId);
+    }
 
-  render() {
-    const {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      content,
-      tooltipContent,
-      tooltipContentCopied,
-      ...restProps
-    } = this.props;
-    const { clicked } = this.state;
-    const { ComponentWithTooltip } = this;
+    render() {
+      const {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        content,
+        tooltipContent,
+        tooltipContentCopied,
+        ...restProps
+      } = this.props;
+      const { clicked } = this.state;
+      const { ComponentWithTooltip } = this;
 
-    return (
-      <ComponentWithTooltip
-        {...restProps}
-        tooltipContent={clicked ? tooltipContentCopied : tooltipContent}
-        onClick={this.handleClick}
-        onMouseLeave={this.resetClickedState}
-      />
-    );
-  }
-}
+      return (
+        <ComponentWithTooltip
+          {...restProps}
+          tooltipContent={clicked ? tooltipContentCopied : tooltipContent}
+          onClick={this.handleClick}
+          onMouseLeave={this.resetClickedState}
+        />
+      );
+    }
+  };
 
 type CopyToClipboardProps = {|
   ...$Exact<$Rest<ButtonProps, { onClick: (e: MouseEvent) => void }>>,
-  ...$Exact<withCopyToClipboardProps>
-|}
+  ...$Exact<withCopyToClipboardProps>,
+|};
 
 const CopyButton = withCopyToClipboard(Button);
 
-export const CopyToClipboard = (
-  {
-    icon,
-    ...rest
-  }: CopyToClipboardProps
-) => (
-  <CopyButton
-    {...rest}
-    icon={icon || IconCopy}
-  />
+export const CopyToClipboard = ({ icon, ...rest }: CopyToClipboardProps) => (
+  <CopyButton {...rest} icon={icon || IconCopy} />
 );

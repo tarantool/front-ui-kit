@@ -1,12 +1,13 @@
 Used inside `Markdown` and `CodeBlock`. It's not recommended to use directly.
 
-```js
+```jsx
 import { css } from '@emotion/css';
+
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
   <SyntaxHighlight
-    language='jsx'
+    language="jsx"
     text={`export const Alert = ({
   className,
   children,
@@ -32,13 +33,14 @@ const blockStyle = css`background-color: #444444;`;
 
 ### Lua
 
-```js
+```jsx
 import { css } from '@emotion/css';
+
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
   <SyntaxHighlight
-    language='lua'
+    language="lua"
     text={`local function customer_add(customer_id, fullname)
 checks('number', 'string')
 return box.space.customer:insert(
@@ -51,13 +53,14 @@ end`}
 
 ### Python
 
-```js
+```jsx
 import { css } from '@emotion/css';
+
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
   <SyntaxHighlight
-    language='python'
+    language="python"
     text={`from tarantool import Connection
 c = Connection(
   "try-cartridge.tarantool.io", 
@@ -75,13 +78,14 @@ print(results)`}
 
 ### PHP
 
-```js
+```jsx
 import { css } from '@emotion/css';
+
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
   <SyntaxHighlight
-    language='php'
+    language="php"
     text={`<?php
 include_once('vendor/autoload.php');
 use Tarantool\\Client\\Client;
@@ -100,13 +104,14 @@ print_r($result);
 
 ### Go
 
-```js
+```jsx
 import { css } from '@emotion/css';
+
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
   <SyntaxHighlight
-    language='go'
+    language="go"
     text={`package main
 
 import (
@@ -133,13 +138,14 @@ func main() {
 
 ### Ruby
 
-```js
+```jsx
 import { css } from '@emotion/css';
+
 const blockStyle = css`background-color: #444444;`;
 
 <pre className={blockStyle}>
   <SyntaxHighlight
-    language='ruby'
+    language="ruby"
     text={`require 'tarantool16'
 
 db = Tarantool16.new host:'localhost:33013'

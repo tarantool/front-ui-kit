@@ -41,18 +41,18 @@ const styles = {
   positionColumn: css`
     width: 1%;
     white-space: nowrap;
-  `
+  `,
 };
 
 type BaseData = {
   id: number,
-  selected?: boolean
-}
+  selected?: boolean,
+};
 
 type Column<T> = {
   header: string,
-  accessor: $Keys<T>
-}
+  accessor: $Keys<T>,
+};
 
 type DraggableTableProps<T> = {
   className?: string,
@@ -61,13 +61,13 @@ type DraggableTableProps<T> = {
   data: T[],
   onChange: (data: {
     oldIndex: number,
-    newData: number
+    newData: number,
   }) => void,
   defaultColumn?: string,
   withPositionCol?: boolean,
   onSelectRow?: (selected: boolean, row: T) => void,
   draggableOnlySelected?: boolean,
-}
+};
 
 const metaCheckboxClass = 'meta__checkbox_class';
 
@@ -80,10 +80,10 @@ export const DraggableTable = <T: BaseData>({
   withPositionCol,
   rowClassName,
   onSelectRow,
-  draggableOnlySelected
+  draggableOnlySelected,
 }: DraggableTableProps<T>) => {
   const items = draggableOnlySelected ? data.sort((a, b) => +b.selected - +a.selected) : data;
-  const onlyOneElSelected = data.filter(item => item.selected).length === 1;
+  const onlyOneElSelected = data.filter((item) => item.selected).length === 1;
 
   return (
     <table className={cx(styles.table, className)}>
@@ -91,23 +91,23 @@ export const DraggableTable = <T: BaseData>({
         <tr className={styles.row}>
           <th className={styles.controlsColumn} />
           {onSelectRow && <th className={styles.controlsColumn} />}
-          {columns.map(column => (
-            <Text
-              className={styles.head}
-              tag="th"
-              key={column.accessor}
-            >
+          {columns.map((column) => (
+            <Text className={styles.head} tag="th" key={column.accessor}>
               {column.header}
             </Text>
           ))}
-          {withPositionCol && <Text tag="th" className={cx(styles.head, styles.positionColumn)}>№</Text>}
+          {withPositionCol && (
+            <Text tag="th" className={cx(styles.head, styles.positionColumn)}>
+              №
+            </Text>
+          )}
         </tr>
       </thead>
       <DraggableListContainer
         helperClass={styles.helper}
         tag="tbody"
         onSortEnd={onChange}
-        shouldCancelStart={e => !!e.target.closest(`.${metaCheckboxClass}`)}
+        shouldCancelStart={(e) => !!e.target.closest(`.${metaCheckboxClass}`)}
       >
         {items.map((row, index) => {
           const isDraggableRow = (!draggableOnlySelected || row.selected) && !onlyOneElSelected;
@@ -117,31 +117,31 @@ export const DraggableTable = <T: BaseData>({
               tag="tr"
               num={index}
               index={index}
-              className={cx(
-                styles.row,
-                { [styles.rowDraggable]: isDraggableRow },
-                rowClassName
-              )}
+              className={cx(styles.row, { [styles.rowDraggable]: isDraggableRow }, rowClassName)}
               disabled={draggableOnlySelected && !row.selected}
             >
               <td className={styles.controlsColumn}>{isDraggableRow ? <IconBurger /> : null}</td>
-              {onSelectRow && <td className={styles.controlsColumn}>
-                <Checkbox
-                  onChange={() => onSelectRow(!row.selected, row)}
-                  checked={row.selected}
-                  className={metaCheckboxClass}
-                />
-              </td>}
-              {columns.map(column => (
+              {onSelectRow && (
+                <td className={styles.controlsColumn}>
+                  <Checkbox
+                    onChange={() => onSelectRow(!row.selected, row)}
+                    checked={row.selected}
+                    className={metaCheckboxClass}
+                  />
+                </td>
+              )}
+              {columns.map((column) => (
                 <Text tag="td" key={column.accessor} className={styles.column}>
                   {row[column.accessor] ? row[column.accessor] : defaultColumn}
                 </Text>
               ))}
-              {withPositionCol && <Text tag="td" className={cx(styles.column, styles.positionColumn)}>
-                {isDraggableRow || row.selected ? index + 1 : null}
-              </Text>}
+              {withPositionCol && (
+                <Text tag="td" className={cx(styles.column, styles.positionColumn)}>
+                  {isDraggableRow || row.selected ? index + 1 : null}
+                </Text>
+              )}
             </DraggableListItem>
-          )
+          );
         })}
       </DraggableListContainer>
     </table>

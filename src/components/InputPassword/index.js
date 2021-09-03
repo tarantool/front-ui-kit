@@ -11,11 +11,11 @@ const styles = {
   `,
   icon: css`
     display: block;
-  `
-}
+  `,
+};
 
 type InputPasswordState = {
-  hidden: boolean
+  hidden: boolean,
 };
 
 export class InputPassword extends React.Component<InputProps, InputPasswordState> {
@@ -30,11 +30,11 @@ export class InputPassword extends React.Component<InputProps, InputPasswordStat
       <Input
         {...this.props}
         type={hidden ? 'password' : 'text'}
-        rightIcon={(
-          <Button className={styles.innerButton} size='xs' intent='plain' onClick={this.toggleState}>
+        rightIcon={
+          <Button className={styles.innerButton} size="xs" intent="plain" onClick={this.toggleState}>
             <Icon className={styles.icon} />
           </Button>
-        )}
+        }
       />
     );
   }

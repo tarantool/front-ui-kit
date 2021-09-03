@@ -9,42 +9,44 @@ const columns = [
   {
     Header: 'First Name',
     accessor: 'firstName',
-    disableSortBy: true
+    disableSortBy: true,
   },
   {
     Header: 'Last Name',
     accessor: 'lastName',
-    disableSortBy: true
+    disableSortBy: true,
   },
   {
     Header: 'Age',
     accessor: 'age',
-    disableSortBy: true
+    disableSortBy: true,
   },
   {
     Header: 'Visits',
     accessor: 'visits',
-    disableSortBy: true
+    disableSortBy: true,
   },
   {
     Header: 'Status',
     accessor: 'status',
-    disableSortBy: true
+    disableSortBy: true,
   },
   {
     Header: 'Profile Progress',
-    accessor: 'progress'
-  }
+    accessor: 'progress',
+  },
 ];
 
 describe('Table', () => {
   it('renders empty', () => {
-    const tree = renderer.create(
-      <>
-        <Table columns={columns} data={[]}/>
-        <Table columns={columns}/>
-      </>
-    ).toJSON();
+    const tree = renderer
+      .create(
+        <>
+          <Table columns={columns} data={[]} />
+          <Table columns={columns} />
+        </>
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -57,7 +59,7 @@ describe('Table', () => {
         age: 15,
         visits: 55,
         progress: 66,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'spiders',
@@ -65,7 +67,7 @@ describe('Table', () => {
         age: 15,
         visits: 55,
         progress: 66,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'profit',
@@ -73,7 +75,7 @@ describe('Table', () => {
         age: 8,
         visits: 79,
         progress: 9,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'hat',
@@ -81,13 +83,11 @@ describe('Table', () => {
         age: 7,
         visits: 56,
         progress: 67,
-        status: <Button text='Refresh' size='xs'/>
-      }
+        status: <Button text="Refresh" size="xs" />,
+      },
     ];
 
-    const tree = renderer.create(
-      <Table columns={columns} data={data}/>
-    ).toJSON();
+    const tree = renderer.create(<Table columns={columns} data={data} />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -101,7 +101,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code1'
+        code: 'some code1',
       },
       {
         firstName: 'spiders',
@@ -110,7 +110,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code2'
+        code: 'some code2',
       },
       {
         firstName: 'profit',
@@ -118,7 +118,7 @@ describe('Table', () => {
         age: 8,
         visits: 79,
         progress: 9,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'hat',
@@ -127,13 +127,11 @@ describe('Table', () => {
         visits: 56,
         progress: 67,
         status: 'relationship',
-        code: 'some code4'
-      }
+        code: 'some code4',
+      },
     ];
 
-    const tree = renderer.create(
-      <Table columns={columns} data={data} codeRowKey='code'/>
-    ).toJSON();
+    const tree = renderer.create(<Table columns={columns} data={data} codeRowKey="code" />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -147,7 +145,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code1'
+        code: 'some code1',
       },
       {
         firstName: 'spiders',
@@ -156,7 +154,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code2'
+        code: 'some code2',
       },
       {
         firstName: 'profit',
@@ -164,7 +162,7 @@ describe('Table', () => {
         age: 8,
         visits: 79,
         progress: 9,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'hat',
@@ -173,13 +171,11 @@ describe('Table', () => {
         visits: 56,
         progress: 67,
         status: 'relationship',
-        code: 'some code4'
-      }
+        code: 'some code4',
+      },
     ];
 
-    const tree = renderer.create(
-      <Table columns={columns} data={data} codeRowKey='code' pagination/>
-    ).toJSON();
+    const tree = renderer.create(<Table columns={columns} data={data} codeRowKey="code" pagination />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -193,7 +189,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code1'
+        code: 'some code1',
       },
       {
         firstName: 'spiders',
@@ -202,7 +198,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code2'
+        code: 'some code2',
       },
       {
         firstName: 'profit',
@@ -210,7 +206,7 @@ describe('Table', () => {
         age: 8,
         visits: 79,
         progress: 9,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'hat',
@@ -219,13 +215,13 @@ describe('Table', () => {
         visits: 56,
         progress: 67,
         status: 'relationship',
-        code: 'some code4'
-      }
+        code: 'some code4',
+      },
     ];
 
-    const tree = renderer.create(
-      <Table columns={columns} data={data} codeRowKey='code' onSelectedRowsChange={noop} pagination/>
-    ).toJSON();
+    const tree = renderer
+      .create(<Table columns={columns} data={data} codeRowKey="code" onSelectedRowsChange={noop} pagination />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -239,7 +235,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code1'
+        code: 'some code1',
       },
       {
         firstName: 'spiders',
@@ -248,7 +244,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code2'
+        code: 'some code2',
       },
       {
         firstName: 'profit',
@@ -256,7 +252,7 @@ describe('Table', () => {
         age: 8,
         visits: 79,
         progress: 9,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'hat',
@@ -265,29 +261,30 @@ describe('Table', () => {
         visits: 56,
         progress: 67,
         status: 'relationship',
-        code: 'some code4'
-      }
+        code: 'some code4',
+      },
     ];
 
-    const tree = renderer.create(
-      <Table
-        columns={columns}
-        data={data}
-        tableKey={'id'}
-        codeRowKey='code'
-        onSelectedRowsChange={noop}
-        manualPagination={{
-          page: 0,
-          pageSize: 10,
-          onChangePage: noop,
-          onChangePageSize: noop
-        }}
-      />
-    ).toJSON();
+    const tree = renderer
+      .create(
+        <Table
+          columns={columns}
+          data={data}
+          tableKey={'id'}
+          codeRowKey="code"
+          onSelectedRowsChange={noop}
+          manualPagination={{
+            page: 0,
+            pageSize: 10,
+            onChangePage: noop,
+            onChangePageSize: noop,
+          }}
+        />
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
-
 
   it('renders with controlled pagination and selected rows', () => {
     const data = [
@@ -298,7 +295,7 @@ describe('Table', () => {
         visits: 55,
         progress: 66,
         status: 'complicated',
-        code: 'some code1'
+        code: 'some code1',
       },
       {
         firstName: 'spiders',
@@ -306,7 +303,7 @@ describe('Table', () => {
         age: 15,
         visits: 55,
         progress: 66,
-        status: 'complicated'
+        status: 'complicated',
       },
       {
         firstName: 'profit',
@@ -315,22 +312,22 @@ describe('Table', () => {
         visits: 79,
         progress: 9,
         status: 'complicated',
-        date: '23.11.2020'
-      }
+        date: '23.11.2020',
+      },
     ];
 
-    const tree = renderer.create(
-      <Table
-        columns={columns}
-        data={data}
-        codeRowKey='code'
-        topRowKey='date'
-        topRowStickySide={0}
-        initialSortBy={[
-          { id: 'progress', desc: false }
-        ]}
-      />
-    ).toJSON();
+    const tree = renderer
+      .create(
+        <Table
+          columns={columns}
+          data={data}
+          codeRowKey="code"
+          topRowKey="date"
+          topRowStickySide={0}
+          initialSortBy={[{ id: 'progress', desc: false }]}
+        />
+      )
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });

@@ -26,44 +26,43 @@ const styles = {
     &::-moz-focus-inner {
       border: 0;
     }
-  `
-}
+  `,
+};
 
 type DropdownItemProps = {
   children?: React.Node,
   color?: string,
   className?: string,
-  onClick?: (e: MouseEvent | KeyboardEvent) => void
-}
+  onClick?: (e: MouseEvent | KeyboardEvent, pass?: any) => void,
+  pass?: any,
+};
 
-export const DropdownItem = React.memo<DropdownItemProps>((
-  {
-    className,
-    color,
-    onClick,
-    ...props
-  }: DropdownItemProps
-) => {
-  const handleKeyDownCapture = React.useCallback((e: KeyboardEvent) => {
-    if (e.keyCode === 13) {
-      e.preventDefault();
-      e.stopPropagation();
-      onClick && onClick(e);
-    }
-  }, [onClick]);
+export const DropdownItem = React.memo<DropdownItemProps>(
+  ({ className, color, onClick, pass, ...props }: DropdownItemProps) => {
+    const handleKeyDownCapture = React.useCallback(
+      (e: KeyboardEvent) => {
+        if (e.keyCode === 13) {
+          e.preventDefault();
+          e.stopPropagation();
+          onClick && onClick(e, pass);
+        }
+      },
+      [onClick, pass]
+    );
 
-  const handleMouseEnter = React.useCallback((e: any) => {
-    e.target && e.target.focus();
-  }, []);
+    const handleMouseEnter = React.useCallback((e: any) => {
+      e.target && e.target.focus();
+    }, []);
 
-  return (
-    <div
-      {...props}
-      tabIndex={0}
-      className={cx(textStyles.basic, styles.item(color), className)}
-      onClick={onClick}
-      onKeyDownCapture={handleKeyDownCapture}
-      onMouseEnter={handleMouseEnter}
-    />
-  );
-});
+    return (
+      <div
+        {...props}
+        tabIndex={0}
+        className={cx(textStyles.basic, styles.item(color), className)}
+        onClick={onClick}
+        onKeyDownCapture={handleKeyDownCapture}
+        onMouseEnter={handleMouseEnter}
+      />
+    );
+  }
+);

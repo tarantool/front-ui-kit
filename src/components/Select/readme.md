@@ -1,4 +1,4 @@
-```js
+```jsx
 import { useState } from 'react';
 import { css } from '@emotion/css';
 import {
@@ -7,13 +7,12 @@ import {
   Switcher,
   Text
 } from '@tarantool.io/ui-kit';
+
 const styles = {
   w100: css`
     width: 100%;
-  `
+  `,
 }
-
-
 
 const [disabled, setDisabled] = useState(false);
 const toggleDisabled = () => setDisabled(!disabled);
@@ -23,10 +22,11 @@ const options = [
   { value: 'male', label: 'Male'},
   { value: 'female', label: 'Female'},
 ];
+
 <>
   <ControlsPanel
     controls={[
-      <Switcher checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
+      <Switcher key={0} checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
     ]}
   />
 
@@ -36,7 +36,6 @@ const options = [
       disabled={disabled}
     />
   </div>
-
 
   <div style={{ margin: '12px' }}>
     <Select

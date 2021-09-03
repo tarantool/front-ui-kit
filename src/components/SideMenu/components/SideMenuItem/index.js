@@ -7,12 +7,12 @@ import { Text } from '../../../Text';
 import { IconChevronDown } from '../../../Icon';
 import type { SideMenuItemType } from '../../index';
 
-type handleClickType = (event: MouseEvent, handler: (...params: any) => void, ...args: any) => void
+type handleClickType = (event: MouseEvent, handler: (...params: any) => void, ...args: any) => void;
 
 const handleClick: handleClickType = (event, handler, ...args) => {
   if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
-    event.preventDefault()
-    handler(...args)
+    event.preventDefault();
+    handler(...args);
   }
 };
 
@@ -116,12 +116,12 @@ const styles = {
   `,
   collapse: css`
     background: rgba(255, 255, 255, 0.05);
-    opacity: .65;
+    opacity: 0.65;
     &:hover {
       opacity: 1;
     }
-  `
-}
+  `,
+};
 
 export const SideMenuItem = ({
   path,
@@ -136,44 +136,46 @@ export const SideMenuItem = ({
   expand,
   isCollapse,
   pathPrefix,
-  type = 'internal'
+  type = 'internal',
 }: SideMenuItemType) => {
-  const tag = path ? 'a' : 'button'
+  const tag = path ? 'a' : 'button';
 
   if (short) {
     return (
       <Text
         tag={tag}
-        className={cx(styles.shortItem, { [styles.itemSelected]: selected || (items && items.find(x => x.selected)) })}
+        className={cx(styles.shortItem, {
+          [styles.itemSelected]: selected || (items && items.find((x) => x.selected)),
+        })}
         onClick={
           items && items.length
-            ? evt => expand && expand(evt, path, !expanded)
-            : evt => handleClick(evt, onClick, evt, path, type)
+            ? (evt) => expand && expand(evt, path, !expanded)
+            : (evt) => handleClick(evt, onClick, evt, path, type)
         }
-        href={pathPrefix ? pathPrefix + path: path}
+        href={pathPrefix ? pathPrefix + path : path}
         title={label}
       >
         <div className={styles.iconWrap}>
           <SideMenuIcon icon={icon} className={styles.icon} />
         </div>
       </Text>
-    )
+    );
   }
 
   let subItems = null;
   if (expanded && !short && items && items.length > 0) {
     subItems = (
       <div className={styles.submenuList}>
-        {items.map(x => (
+        {items.map((x) => (
           <SideMenuItem {...x} key={x.path} onClick={onClick} isSubitem={true} />
         ))}
       </div>
-    )
+    );
   }
 
   const expandButton =
     items && items.length > 0 ? (
-      <IconChevronDown className={cx(styles.expandButton, { [styles.expandButtonUnexpand]: !expanded })}/>
+      <IconChevronDown className={cx(styles.expandButton, { [styles.expandButtonUnexpand]: !expanded })} />
     ) : null;
 
   return (
@@ -183,13 +185,13 @@ export const SideMenuItem = ({
         className={cx(styles.item, {
           [styles.itemSelected]: selected,
           [styles.subItemSelected]: selected && isSubitem,
-          [styles.collapse]: isCollapse
+          [styles.collapse]: isCollapse,
         })}
-        href={pathPrefix ? pathPrefix + path: path}
+        href={pathPrefix ? pathPrefix + path : path}
         onClick={
           items && items.length
-            ? evt => expand && expand(evt, path, !expanded)
-            : evt => handleClick(evt, onClick, evt, path, type)
+            ? (evt) => expand && expand(evt, path, !expanded)
+            : (evt) => handleClick(evt, onClick, evt, path, type)
         }
         title={label}
       >
@@ -201,7 +203,7 @@ export const SideMenuItem = ({
         <span
           className={cx(styles.title, {
             [styles.subItemTitle]: isSubitem,
-            [styles.titleSelected]: selected
+            [styles.titleSelected]: selected,
           })}
         >
           {label}
@@ -211,5 +213,5 @@ export const SideMenuItem = ({
 
       {subItems}
     </React.Fragment>
-  )
-}
+  );
+};

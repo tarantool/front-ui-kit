@@ -8,9 +8,9 @@ Deprecated component. It's not recommended to use.
     'Tag 3'
   ]}
 />
-<div className='hoverMe'>
+<div className="hoverMe">
   <TagsList
-    highlightingOnHover='hoverMe'
+    highlightingOnHover="hoverMe"
     values={[
       'Tag 1',
       'Tag 2',

@@ -12,9 +12,5 @@ const styles = css`
 `;
 
 export const IconBurger = ({ className, onClick }: GenericIconProps) => (
-  <Icon
-    className={cx(styles, className)}
-    glyph={image}
-    onClick={onClick}
-  />
+  <Icon className={cx(styles, className)} glyph={image} onClick={onClick} />
 );

@@ -11,12 +11,12 @@ const toggle = () => setVisible(!visible);
 
   <NotificationSplashFixed
     controls={[
-      <Button text='I understand, dont touch me again' />
+      <Button key={0} text="I understand, don't touch me again" />
     ]}
     onClose={toggle}
     visible={visible}
   >
-    Unathorized web-panel access is open! Please consider enabling authorization (you need to create a user and login to do it).
+    Unauthorized web-panel access is open! Please consider enabling authorization (you need to create a user and login to do it).
   </NotificationSplashFixed>
 </>
 ```

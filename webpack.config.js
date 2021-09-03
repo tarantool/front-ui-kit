@@ -24,12 +24,12 @@ module.exports = {
         use: [
           {
             options: {
-              eslintPath: require.resolve('eslint')
+              eslintPath: require.resolve('eslint'),
             },
-            loader: require.resolve('eslint-loader')
-          }
+            loader: require.resolve('eslint-loader'),
+          },
         ],
-        include: path.resolve('./src')
+        include: path.resolve('./src'),
       },
       {
         oneOf: [
@@ -38,7 +38,7 @@ module.exports = {
             test: /\.(ts|tsx)$/,
             include: path.resolve('./src'),
             loader: require.resolve('ts-loader'),
-            options: {}
+            options: {},
           },
           // Process JS with Babel.
           {
@@ -46,8 +46,8 @@ module.exports = {
             include: path.resolve('./src'),
             loader: require.resolve('babel-loader'),
             options: {
-              compact: true
-            }
+              compact: true,
+            },
           },
           // Process any JS outside of the app with Babel.
           // Unlike the application JS, we only compile the standard ES features.
@@ -59,20 +59,15 @@ module.exports = {
               babelrc: false,
               configFile: false,
               compact: false,
-              presets: [
-                [
-                  require.resolve('babel-preset-react-app/dependencies'),
-                  { helpers: true }
-                ]
-              ],
+              presets: [[require.resolve('babel-preset-react-app/dependencies'), { helpers: true }]],
               cacheDirectory: true,
               cacheCompression: true,
               // If an error happens in a package, it's possible to be
               // because it was compiled. Thus, we don't want the browser
               // debugger to show the original code. Instead, the code
               // being evaluated would be much more helpful.
-              sourceMaps: false
-            }
+              sourceMaps: false,
+            },
           },
           // The notation here is somewhat confusing.
           // "postcss" loader applies autoprefixer to our CSS.
@@ -135,20 +130,16 @@ module.exports = {
                 loader: 'svg-sprite-loader',
                 options: {
                   name: '[name].[hash]',
-                  prefixize: true
-                }
+                  prefixize: true,
+                },
               },
               {
                 loader: 'svgo-loader',
                 options: {
-                  plugins: [
-                    { removeTitle: true },
-                    { convertPathData: false },
-                    { removeUselessStrokeAndFill: true }
-                  ]
-                }
-              }
-            ]
+                  plugins: [{ removeTitle: true }, { convertPathData: false }, { removeUselessStrokeAndFill: true }],
+                },
+              },
+            ],
           },
           {
             loader: require.resolve('file-loader'),
@@ -158,13 +149,13 @@ module.exports = {
             // by webpacks internal loaders.
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
             options: {
-              name: `static/media/[name].[hash:8].[ext]`
-            }
-          }
+              name: `static/media/[name].[hash:8].[ext]`,
+            },
+          },
           // ** STOP ** Are you adding a new loader?
           // Make sure to add the new loader(s) before the "file" loader.
-        ]
-      }
-    ]
-  }
+        ],
+      },
+    ],
+  },
 };

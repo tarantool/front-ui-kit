@@ -28,7 +28,7 @@ const styles = {
 const Color = ({ name, color }) => (
   <div className={styles.colorWrap}>
     <div className={cx(styles.colorPreview, styles.cell)} style={{ backgroundColor: color }} />
-    <Text className={styles.cell} variant='code'>{color}</Text>
+    <Text className={styles.cell} variant="code">{color}</Text>
     <Text className={styles.cell}>{name}</Text>
   </div>
 );

@@ -1,11 +1,6 @@
 module.exports = {
   printWidth: 120,
-  semi: true,
   singleQuote: true,
-  jsxSingleQuote: false,
-  trailingComma: 'none',
-  arrowParens: 'always',
-  endOfLine: 'lf',
   overrides: [
     {
       files: '*.js',

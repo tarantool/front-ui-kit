@@ -1,7 +1,7 @@
 // @flow
-import * as React from 'react'
+import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { css, cx } from '@emotion/css'
+import { css, cx } from '@emotion/css';
 import { NotificationSplash, type NotificationSplashProps } from '../NotificationSplash';
 import { zIndex } from '../../variables';
 
@@ -12,38 +12,28 @@ const styles = {
     left: 0;
     right: 0;
     z-index: ${zIndex.fixedSplash};
-  `
+  `,
 };
 
 type NotificationSplashFixedProps = NotificationSplashProps & {
-  visible?: boolean
+  visible?: boolean,
 };
 
 export class NotificationSplashFixed extends React.Component<NotificationSplashFixedProps> {
   isVisible = (): boolean => this.props.visible !== false;
 
   renderSplash() {
-    const {
-      className,
-      children,
-      controls,
-      onClose
-    } = this.props;
+    const { className, children, controls, onClose } = this.props;
 
     return (
-      <NotificationSplash
-        className={cx(styles.splash, className)}
-        controls={controls}
-        onClose={onClose}
-      >
+      <NotificationSplash className={cx(styles.splash, className)} controls={controls} onClose={onClose}>
         {children}
       </NotificationSplash>
     );
   }
 
   render() {
-    if (!this.isVisible())
-      return null;
+    if (!this.isVisible()) return null;
 
     const root = document.body;
 
@@ -51,6 +41,6 @@ export class NotificationSplashFixed extends React.Component<NotificationSplashF
       return ReactDOM.createPortal(this.renderSplash(), root);
     }
 
-    return null
+    return null;
   }
 }

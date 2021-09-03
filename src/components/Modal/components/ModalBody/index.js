@@ -21,26 +21,21 @@ const styles = {
     position: absolute;
     inset: 0px;
     overflow: auto;
-  `
+  `,
 };
 
 type ModalBodyProps = {
   children?: React.Node,
   className?: string,
   innerClassName?: string,
-  scrollable?: boolean
+  scrollable?: boolean,
 };
 
-export const ModalBody = ({ children, className, innerClassName, scrollable }: ModalBodyProps) => scrollable
-  ? (
+export const ModalBody = ({ children, className, innerClassName, scrollable }: ModalBodyProps) =>
+  scrollable ? (
     <div className={cx(styles.scrollableWrap, className)}>
-      <div className={cx(styles.scrollableBody, genericStyles.scrollbars, innerClassName)}>
-        {children}
-      </div>
+      <div className={cx(styles.scrollableBody, genericStyles.scrollbars, innerClassName)}>{children}</div>
     </div>
-  )
-  : (
-    <div className={cx(styles.wrap, className)}>
-      {children}
-    </div>
+  ) : (
+    <div className={cx(styles.wrap, className)}>{children}</div>
   );
