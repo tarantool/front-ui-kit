@@ -1,7 +1,9 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Button } from './index';
+
 import { IconOk } from '../Icon';
+import { Button } from './index';
 
 describe('Simple buttons renders correctly', () => {
   it('idle state', () => {

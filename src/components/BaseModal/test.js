@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { BaseModal } from './index';
 
 jest.mock('react-dom', () => ({

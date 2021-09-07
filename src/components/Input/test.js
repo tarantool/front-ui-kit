@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { css, cx } from '@emotion/css';
-import { Button, DropdownItem, DropdownDivider, IconChevron, IconSearch, Input, withDropdown } from '../../index';
+
+import { Button, DropdownDivider, DropdownItem, IconChevron, IconSearch, Input, withDropdown } from '../../index';
 
 const handleChange = jest.fn();
 const handleClear = jest.fn();
@@ -13,7 +14,7 @@ const getDropdownOption = (prefix) => (option) =>
   (
     <DropdownItem
       key={`${prefix}|${option}`}
-      onClick={() => handleSelect(`${prefix}:${option.indexOf(' ') !== -1 ? `"${option}"` : option}`)}
+      onClick={() => handleSelect(`${prefix}:` + (option.indexOf(' ') > -1 ? `"${option}"` : option))}
     >
       {option}
     </DropdownItem>

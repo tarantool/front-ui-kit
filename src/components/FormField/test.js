@@ -1,5 +1,6 @@
-import renderer from 'react-test-renderer';
 import React from 'react';
+import renderer from 'react-test-renderer';
+
 import { Button } from '../Button';
 import { FormField } from '../FormField';
 import { RadioButton } from '../RadioButton';

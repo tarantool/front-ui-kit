@@ -1,12 +1,13 @@
 // @flow
 import React from 'react';
-import styled from '@emotion/styled';
-import { css, cx } from '@emotion/css';
 import { useDropzone } from 'react-dropzone';
-import { IconDragFile } from './IconDragFile';
+import { css, cx } from '@emotion/css';
+import styled from '@emotion/styled';
+
+import { colors } from '../../variables';
 import { TarantoolLogoSpinner } from '../TarantoolLogoSpinner';
 import { Text } from '../Text';
-import { colors } from '../../variables';
+import { IconDragFile } from './IconDragFile';
 
 const styles = {
   wrap: css`

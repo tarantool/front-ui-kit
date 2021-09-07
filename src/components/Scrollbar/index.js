@@ -1,5 +1,5 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import ReactScroll from 'react-scrollbars-custom';
 import styled from '@emotion/styled';
 

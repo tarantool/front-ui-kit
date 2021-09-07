@@ -1,8 +1,9 @@
-import React, { ReactNode, MouseEvent, forwardRef, ComponentType, useCallback } from 'react';
+import React, { ComponentType, MouseEvent, ReactNode, forwardRef, useCallback } from 'react';
 import { cx } from '@emotion/css';
 
 import { IconSpinner } from '../Icon';
-import { styles, intentStyles, intentActiveStyles } from './Button.styles';
+
+import { intentActiveStyles, intentStyles, styles } from './Button.styles';
 
 export interface ButtonIconProps {
   className?: string;

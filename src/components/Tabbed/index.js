@@ -1,8 +1,9 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { textStyles } from '../Text';
+
 import { colors, zIndex } from '../../variables';
+import { textStyles } from '../Text';
 
 const styles = {
   default: {

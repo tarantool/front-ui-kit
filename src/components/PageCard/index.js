@@ -1,9 +1,10 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
 import { colors } from '../../variables';
-import { Text } from '../Text';
 import { IconHelperClose } from '../IconHelper';
+import { Text } from '../Text';
 
 const styles = {
   container: css`

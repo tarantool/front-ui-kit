@@ -1,9 +1,11 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { Breadcrumbs, type ActionsBreadCrumbs, type BreadcrumbsItem } from '../Breadcrumbs';
-import { ControlsPanel } from '../ControlsPanel';
+
 import { appLayoutTopPanelHeight, pageLayoutMinWidth } from '../../variables';
+import type { ActionsBreadCrumbs, BreadcrumbsItem } from '../Breadcrumbs';
+import { Breadcrumbs } from '../Breadcrumbs';
+import { ControlsPanel } from '../ControlsPanel';
 
 const styles = {
   header: css`

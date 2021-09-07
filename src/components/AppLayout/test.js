@@ -1,17 +1,19 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import React from 'react';
-import { css } from '@emotion/css';
 import renderer from 'react-test-renderer';
+import { css } from '@emotion/css';
+
 import {
   AppHeader,
   AppLayout,
   Button,
   IconCluster,
   IconCode,
-  IconTrash,
   IconInfo,
   IconSearch,
-  SideMenu,
+  IconTrash,
   SVGImage,
+  SideMenu,
   TarantoolLogoCompact,
   TarantoolLogoFull,
 } from '../../index';

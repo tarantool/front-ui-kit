@@ -1,12 +1,13 @@
 // @flow
-
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { DraggableListItem, DraggableListContainer } from '../DraggableList';
-import { IconBurger } from '../Icon';
-import { Checkbox } from '../Checkbox';
-import { Text } from '../Text';
+
 import { colors, zIndex } from '../../variables';
+import { Checkbox } from '../Checkbox';
+import { DraggableListContainer, DraggableListItem } from '../DraggableList';
+import { IconBurger } from '../Icon';
+import { Text } from '../Text';
+
 const styles = {
   helper: css`
     z-index: ${zIndex.dragNDrop};

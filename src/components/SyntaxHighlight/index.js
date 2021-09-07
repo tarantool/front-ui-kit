@@ -1,11 +1,10 @@
 // @flow
-import * as React from 'react';
-import { createRef } from 'react';
+import React, { createRef } from 'react';
 import { cx } from '@emotion/css';
 import Prism from 'prismjs';
 
-import theme from './themes/okaidia';
 import { textStyles } from '../Text';
+import theme from './themes/okaidia';
 
 require('prismjs/components/prism-go');
 require('prismjs/components/prism-lua');
@@ -25,16 +24,18 @@ type SyntaxHighlightProps = {
 export class SyntaxHighlight extends React.Component<SyntaxHighlightProps> {
   ref = createRef<HTMLElement>();
 
-  componentDidMount() {
+  highlight() {
     if (this.ref.current && this.props.language) {
       Prism.highlightElement(this.ref.current);
     }
   }
 
+  componentDidMount() {
+    this.highlight();
+  }
+
   componentDidUpdate() {
-    if (this.ref.current && this.props.language) {
-      Prism.highlightElement(this.ref.current);
-    }
+    this.highlight();
   }
 
   render() {

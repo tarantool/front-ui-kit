@@ -1,8 +1,9 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { IconLink, IconBoldArrowRight } from '../Icon';
+
 import { colors } from '../../variables';
+import { IconBoldArrowRight, IconLink } from '../Icon';
 import { Text } from '../Text';
 
 const styles = {

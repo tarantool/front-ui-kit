@@ -1,11 +1,10 @@
 // @flow
-
-import * as React from 'react';
+import React from 'react';
+import { css, cx } from '@emotion/css';
 
 import { ResizeSensor } from '../ResizeSensor';
-import { css, cx } from '@emotion/css';
-import { shallowCompareKeys } from './utils';
 import type { Entries } from '../ResizeSensor';
+import { shallowCompareKeys } from './utils';
 
 export interface IOverflowListProps<T> {
   items: T[];

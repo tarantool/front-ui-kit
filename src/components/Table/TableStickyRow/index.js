@@ -1,13 +1,11 @@
 // @flow
-
 import React from 'react';
 import { cx } from '@emotion/css';
 
-import { Text } from '../../Text';
 import { isSafari } from '../../../utils/browser';
-
-import type { TopRowProps } from '../types';
+import { Text } from '../../Text';
 import { styles } from '../TableRow';
+import type { TopRowProps } from '../types';
 
 export const TableStickyRow = React.memo<TopRowProps>(
   ({ cellsLength, topRowClassName, topRowStickySide, headerRef, children }: TopRowProps) => {

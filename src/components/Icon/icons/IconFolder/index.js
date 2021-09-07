@@ -1,17 +1,18 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { Icon, type GenericIconProps } from '../../Icon';
+
 import { colors } from '../../../../variables';
-import folder from './folder.svg';
+import type { GenericIconProps } from '../../Icon';
+import { Icon } from '../../Icon';
 import folderOpened from './folder-opened.svg';
+import folder from './folder.svg';
 
 const styles = css`
   fill: ${colors.dark65};
 `;
 
-type IconFolderProps = {
-  ...$Exact<GenericIconProps>,
+type IconFolderProps = $Exact<GenericIconProps> & {
   opened: boolean,
 };
 

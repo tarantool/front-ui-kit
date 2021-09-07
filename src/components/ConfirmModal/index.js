@@ -1,8 +1,10 @@
 // @flow
 // TODO: default text styles
-import * as React from 'react';
+import React from 'react';
+
 import { Button } from '../Button';
-import { Modal, type ModalProps } from '../Modal';
+import type { ModalProps } from '../Modal';
+import { Modal } from '../Modal';
 
 type ConfirmModalProps = ModalProps & {
   onConfirm: Function,

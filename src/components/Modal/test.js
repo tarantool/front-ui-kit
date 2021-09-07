@@ -1,10 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { css } from '@emotion/css';
-import { Modal } from './index';
+
 import { Button } from '../Button';
-import { Tabbed } from '../Tabbed';
 import { LabeledInput } from '../LabeledInput';
+import { Tabbed } from '../Tabbed';
+import { Modal } from './index';
 
 jest.mock('react-dom', () => ({
   createPortal: (node) => node,

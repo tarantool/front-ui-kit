@@ -1,9 +1,10 @@
 // @flow
-import * as React from 'react';
-import { NonIdealState, NonIdealStateAction } from '../NonIdealState';
+import React from 'react';
+
 import { windowErrorSvg } from '../../images';
 import { Button } from '../Button';
 import { Modal } from '../Modal';
+import { NonIdealState, NonIdealStateAction } from '../NonIdealState';
 import { Text } from '../Text';
 
 export type CommonSplashErrorProps = {

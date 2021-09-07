@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { UploadZone } from './index';
 
 const handler = jest.fn();

@@ -1,8 +1,10 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
 import { colors } from '../../../../variables';
-import { Icon, type GenericIconProps } from '../../Icon';
+import type { GenericIconProps } from '../../Icon';
+import { Icon } from '../../Icon';
 import sortUp from './icon-sort-desc.svg';
 
 const styles = {

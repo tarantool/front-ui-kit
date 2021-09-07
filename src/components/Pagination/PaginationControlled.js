@@ -1,12 +1,12 @@
 // @flow
-
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
+import { colors } from '../../variables';
 import { Button } from '../Button';
 import { Dropdown, DropdownItem } from '../Dropdown';
+import { IconChevronDown, IconChevronLeft, IconChevronRight } from '../Icon/icons/IconChevron';
 import { Text } from '../Text';
-import { colors } from '../../variables';
-import { IconChevronLeft, IconChevronRight, IconChevronDown } from '../Icon/icons/IconChevron';
 
 const styles = {
   pagination: css`

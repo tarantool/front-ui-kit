@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { ConfirmModal } from './index';
 
 jest.mock('react-dom', () => ({
@@ -8,12 +9,14 @@ jest.mock('react-dom', () => ({
 
 const action = jest.fn();
 
+const CONFIRM_MODAL_CONTENT = 'Removing user John Appleseed';
+
 describe('ConfirmModal renders correctly', () => {
   it('hidden state', () => {
     const tree = renderer
       .create(
         <ConfirmModal title="Please confirm" visible={false} onCancel={action} onConfirm={action} confirmText="Remove">
-          Removing user John Appleseed
+          {CONFIRM_MODAL_CONTENT}
         </ConfirmModal>
       )
       .toJSON();
@@ -25,7 +28,7 @@ describe('ConfirmModal renders correctly', () => {
     const tree = renderer
       .create(
         <ConfirmModal title="Please confirm" visible={true} onCancel={action} onConfirm={action} confirmText="Remove">
-          Removing user John Appleseed
+          {CONFIRM_MODAL_CONTENT}
         </ConfirmModal>
       )
       .toJSON();
@@ -44,7 +47,7 @@ describe('ConfirmModal renders correctly', () => {
           confirmText="Remove"
           confirmPreloader={true}
         >
-          Removing user John Appleseed
+          {CONFIRM_MODAL_CONTENT}
         </ConfirmModal>
       )
       .toJSON();

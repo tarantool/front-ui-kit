@@ -1,6 +1,5 @@
 // @flow
-
-import * as React from 'react';
+import React from 'react';
 import { findDOMNode } from 'react-dom';
 import ResizeObserver from 'resize-observer-polyfill';
 

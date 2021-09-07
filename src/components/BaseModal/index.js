@@ -1,11 +1,11 @@
 // @flow
-import * as React from 'react';
-import { createRef } from 'react';
-import * as ReactDOM from 'react-dom';
-import { rgba } from 'emotion-rgba';
+import React, { createRef } from 'react';
+import ReactDOM from 'react-dom';
 import { css, cx } from '@emotion/css';
-import { colors, zIndex } from '../../variables';
+import { rgba } from 'emotion-rgba';
+
 import { isFocusInsideRef } from '../../utils/isFocusInside';
+import { colors, zIndex } from '../../variables';
 
 export const styles = {
   lockedBody: css`

@@ -1,9 +1,9 @@
 // @flow
-import * as React from 'react';
-import { createRef } from 'react';
+import React, { createRef } from 'react';
 import { cx } from '@emotion/css';
-import { commonInputStyles, commonInputSizes } from '../Input/commonStyles';
+
 import { genericStyles } from '../../genericStyles';
+import { commonInputSizes, commonInputStyles } from '../Input/commonStyles';
 
 export type TextAreaProps = {
   autoComplete?: 'on' | 'off', // ?

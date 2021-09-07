@@ -1,10 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { DraggableList, DraggableListItem } from './index';
-import { Text } from '../Text';
+
 import { IconBurger } from '../Icon';
 import { LeaderFlagSmall } from '../LeaderFlagSmall';
+import { Text } from '../Text';
 import { UriLabel } from '../UriLabel';
+import { DraggableList, DraggableListItem } from './index';
 
 const noop = () => void 0;
 

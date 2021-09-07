@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { Markdown } from './index';
 
 describe('Markdown', () => {

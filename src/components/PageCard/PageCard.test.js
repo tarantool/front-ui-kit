@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { Text } from '../Text';
 import { PageCard } from './index';
 

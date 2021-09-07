@@ -1,10 +1,10 @@
 // @flow
-import * as React from 'react';
-import { createRef } from 'react';
+import React, { createRef } from 'react';
 import { css, cx } from '@emotion/css';
-import { commonInputStyles, commonInputSizes } from './commonStyles';
+
 import { colors } from '../../variables';
 import { IconCancel } from '../Icon';
+import { commonInputSizes, commonInputStyles } from './commonStyles';
 
 const styles = {
   outerWithAddition: css`

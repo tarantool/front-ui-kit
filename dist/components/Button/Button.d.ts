@@ -1,8 +1,8 @@
-import React, { ReactNode, MouseEvent, ComponentType } from 'react';
+import React, { ComponentType, MouseEvent, ReactNode } from 'react';
 export interface ButtonIconProps {
     className?: string;
 }
-export interface ButtonProps {
+export interface ButtonProps<T extends unknown = unknown> {
     autoFocus?: boolean;
     className?: string;
     children?: ReactNode;
@@ -10,11 +10,12 @@ export interface ButtonProps {
     icon?: ComponentType<ButtonIconProps>;
     iconRight?: ComponentType<ButtonIconProps>;
     intent?: 'primary' | 'secondary' | 'base' | 'plain' | 'dark';
-    onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+    onClick?: (event: MouseEvent<HTMLButtonElement>, pass?: T) => void;
     loading?: boolean;
     size?: 'l' | 's' | 'xs' | 'm';
     text?: string;
     title?: string;
     type?: 'button' | 'submit';
+    pass?: T;
 }
-export declare const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>>;
+export declare const Button: React.ForwardRefExoticComponent<ButtonProps<unknown> & React.RefAttributes<HTMLButtonElement>>;

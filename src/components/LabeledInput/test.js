@@ -1,8 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { LabeledInput } from './index';
+
 import { InputPassword } from '../InputPassword';
 import { TextArea } from '../TextArea';
+import { LabeledInput } from './index';
 
 const testValue = 'qwertyuiop';
 

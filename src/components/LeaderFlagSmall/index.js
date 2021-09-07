@@ -1,7 +1,8 @@
 // @flow
-import * as React from 'react';
-import glyph from './flagSmall.svg';
+import React from 'react';
+
 import { SVGImage } from '../SVGImage';
+import glyph from './flagSmall.svg';
 
 type LeaderFlagSmallProps = {
   className?: string,

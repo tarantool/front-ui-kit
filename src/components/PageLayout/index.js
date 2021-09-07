@@ -1,9 +1,10 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
+import { appLayoutTopPanelHeight, pageLayoutMaxWidth, pageLayoutMinWidth } from '../../variables';
 import { ControlsPanel } from '../ControlsPanel';
 import { Text } from '../Text';
-import { appLayoutTopPanelHeight, pageLayoutMinWidth, pageLayoutMaxWidth } from '../../variables';
 
 const styles = {
   page: css`

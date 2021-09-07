@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import { IconHelperSortable } from './index';
 
 it('IconHelperSortable renders correctly', () => {

@@ -1,11 +1,11 @@
 // @flow
-import * as React from 'react';
-import { cx, css } from '@emotion/css';
+import React from 'react';
+import { css, cx } from '@emotion/css';
+
 import { colors } from '../../../../variables';
 import { Link } from '../../../Link';
 import { Text } from '../../../Text';
-
-import type { BreadcrumbsItem, ActionsBreadCrumbs } from '../../index';
+import type { ActionsBreadCrumbs, BreadcrumbsItem } from '../../index';
 
 const styles = {
   breadcrumbElement: css`

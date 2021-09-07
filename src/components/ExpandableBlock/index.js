@@ -1,12 +1,12 @@
 // @flow
-
 import React from 'react';
 import { css, cx } from '@emotion/css';
 import { noop } from 'lodash';
-import { Text } from '../Text';
-import { IconChevron } from '../Icon';
+
 import { Button } from '../Button';
 import { CopyToClipboard } from '../CopyToClipboard';
+import { IconChevron } from '../Icon';
+import { Text } from '../Text';
 
 type ExpandableBlockProps = {
   content: string,

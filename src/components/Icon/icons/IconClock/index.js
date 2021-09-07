@@ -1,7 +1,9 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { Icon, type GenericIconProps } from '../../Icon';
+
+import type { GenericIconProps } from '../../Icon';
+import { Icon } from '../../Icon';
 import image from './clock.svg';
 
 const styles = css`
