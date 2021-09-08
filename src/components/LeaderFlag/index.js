@@ -1,10 +1,11 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import flag from './flag.svg';
-import flagLight from './flag-light.svg';
-import { SVGImage } from '../SVGImage';
+
 import { colors } from '../../variables';
+import { SVGImage } from '../SVGImage';
+import flagLight from './flag-light.svg';
+import flag from './flag.svg';
 
 const styles = {
   wrap: css`

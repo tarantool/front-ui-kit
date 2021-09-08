@@ -1,11 +1,12 @@
 // @flow
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
 import memoize from 'lodash/memoize';
-import { textStyles } from '../Text';
+
 import { colors, zIndex } from '../../variables';
+import { textStyles } from '../Text';
 
 const CORNER_HEIGHT = 8;
 

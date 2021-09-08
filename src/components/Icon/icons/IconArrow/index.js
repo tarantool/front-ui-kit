@@ -1,7 +1,9 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { Icon, type GenericIconProps } from '../../Icon';
+
+import type { GenericIconProps } from '../../Icon';
+import { Icon } from '../../Icon';
 import image from './arrow-left.svg';
 
 const styles = {
@@ -20,9 +22,7 @@ const styles = {
     transform: rotate(90deg);
   `,
 };
-
-type IconArrowProps = {
-  ...$Exact<GenericIconProps>,
+type IconArrowProps = $Exact<GenericIconProps> & {
   direction: 'up' | 'down' | 'left' | 'right',
 };
 

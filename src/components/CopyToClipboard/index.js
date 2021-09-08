@@ -1,8 +1,10 @@
 // @flow
-import * as React from 'react';
-import { Button, type ButtonProps } from '../Button';
-import { withTooltip } from '../Tooltip';
+import React from 'react';
+
+import type { ButtonProps } from '../Button';
+import { Button } from '../Button';
 import { IconCopy } from '../Icon';
+import { withTooltip } from '../Tooltip';
 
 export const copyToClipboard = (str: string) => {
   if (!document.body) {
@@ -30,7 +32,7 @@ export const copyToClipboard = (str: string) => {
   body.removeChild(el);
 };
 
-type withCopyToClipboardProps = {
+type WithCopyToClipboardProps = {
   content: string,
   tooltipContent?: string,
   tooltipContentCopied?: string,
@@ -41,7 +43,7 @@ type CopyToClipboardState = {
 };
 
 export const withCopyToClipboard = (Component: React.AbstractComponent<any, any>) =>
-  class extends React.PureComponent<withCopyToClipboardProps, CopyToClipboardState> {
+  class extends React.PureComponent<WithCopyToClipboardProps, CopyToClipboardState> {
     static defaultProps = {
       tooltipContent: 'Copy to clipboard',
       tooltipContentCopied: 'Copied',
@@ -93,10 +95,7 @@ export const withCopyToClipboard = (Component: React.AbstractComponent<any, any>
     }
   };
 
-type CopyToClipboardProps = {|
-  ...$Exact<$Rest<ButtonProps, { onClick: (e: MouseEvent) => void }>>,
-  ...$Exact<withCopyToClipboardProps>,
-|};
+type CopyToClipboardProps = $Exact<$Rest<ButtonProps, { onClick: (e: MouseEvent) => void }> & WithCopyToClipboardProps>;
 
 const CopyButton = withCopyToClipboard(Button);
 

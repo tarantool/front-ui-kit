@@ -1,10 +1,11 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
+import type { BaseModalProps } from '../BaseModal';
+import { BaseModal, styles as baseStyles } from '../BaseModal';
 import { IconHelperClose } from '../IconHelper';
 import { Text } from '../Text';
-import { type BaseModalProps, BaseModal, styles as baseStyles } from '../BaseModal';
-
 import { ModalBody } from './components/ModalBody';
 import { ModalFooter } from './components/ModalFooter';
 

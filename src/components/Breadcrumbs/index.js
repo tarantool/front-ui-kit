@@ -1,11 +1,11 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { colors } from '../../variables';
-import { Text } from '../Text';
-import { OverflowList } from '../OverflowList';
-import { DropdownItem, Dropdown } from '../Dropdown';
 
+import { colors } from '../../variables';
+import { Dropdown, DropdownItem } from '../Dropdown';
+import { OverflowList } from '../OverflowList';
+import { Text } from '../Text';
 import BreadcrumbsItemComponent from './components/BreadcrumbsItem';
 
 export type BreadcrumbsItem = {

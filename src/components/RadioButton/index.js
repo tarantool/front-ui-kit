@@ -1,7 +1,8 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
+
 import { colors } from '../../variables';
 import { IconRadio } from '../Icon';
 import { Text } from '../Text';

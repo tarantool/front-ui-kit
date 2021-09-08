@@ -1,30 +1,20 @@
 // @flow
-
-import * as React from 'react';
-import {
-  useTable,
-  useSortBy,
-  usePagination,
-  useRowSelect,
-  useMountedLayoutEffect,
-  type UseTableOptions,
-  type Row,
-} from 'react-table';
+import React from 'react';
+import { useMountedLayoutEffect, usePagination, useRowSelect, useSortBy, useTable } from 'react-table';
+import type { Row, UseTableOptions } from 'react-table';
 import { css, cx } from '@emotion/css';
 
-import { Text } from '../Text';
-import { Spin } from '../Spin';
+import { colors } from '../../variables';
+import { Checkbox } from '../Checkbox';
+import image from '../Icon/icons/IconEmptyData/icon-empty-data.svg';
 import { NonIdealState } from '../NonIdealState';
 import { Pagination, PaginationControlled } from '../Pagination';
-import { Checkbox } from '../Checkbox';
-import { colors } from '../../variables';
-import image from '../Icon/icons/IconEmptyData/icon-empty-data.svg';
-
+import { Spin } from '../Spin';
+import { Text } from '../Text';
+import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
 import { TableStickyRow } from './TableStickyRow';
-import { TableHeader } from './TableHeader';
-
-import type { ManualPagination, AdditionalProps } from './types';
+import type { AdditionalProps, ManualPagination } from './types';
 
 const styles = {
   table: css`

@@ -1,8 +1,10 @@
 // @flow
 import React from 'react';
 import { css, cx } from '@emotion/css';
+
 import { colors } from '../../variables';
-import { IconClose, type GenericIconProps } from '../Icon';
+import type { GenericIconProps } from '../Icon';
+import { IconClose } from '../Icon';
 
 const styles = {
   closeIcon: css`

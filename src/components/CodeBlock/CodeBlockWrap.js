@@ -1,9 +1,10 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
+import { colors } from '../../variables';
 import { CopyToClipboard } from '../CopyToClipboard';
 import { IconCopy } from '../Icon';
-import { colors } from '../../variables';
 
 const styles = {
   block: css`

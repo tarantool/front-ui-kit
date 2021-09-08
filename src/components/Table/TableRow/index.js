@@ -1,11 +1,10 @@
 // @flow
-
 import React from 'react';
 import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
-import { Text } from '../../Text';
-import { colors } from '../../../variables';
 
+import { colors } from '../../../variables';
+import { Text } from '../../Text';
 import type { RowProps } from '../types';
 
 export const styles = {

@@ -1,8 +1,9 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { PopupNotificationItem } from './PopupNotificationItem';
+
 import { zIndex } from '../../variables';
+import { PopupNotificationItem } from './PopupNotificationItem';
 
 const styles = {
   container: css`

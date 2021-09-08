@@ -1,14 +1,16 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
 import { colors } from '../../../../variables';
-import { Icon, type GenericIconProps } from '../../Icon';
-import checkbox from './checkbox.svg';
+import type { GenericIconProps } from '../../Icon';
+import { Icon } from '../../Icon';
+import checkboxCheckedDisabled from './checkbox-checked-disabled.svg';
 import checkboxChecked from './checkbox-checked.svg';
 import checkboxDisabled from './checkbox-disabled.svg';
-import checkboxIndeterminate from './checkbox-indeterminate.svg';
-import checkboxCheckedDisabled from './checkbox-checked-disabled.svg';
 import checkboxIndeterminateDisabled from './checkbox-indeterminate-disabled.svg';
+import checkboxIndeterminate from './checkbox-indeterminate.svg';
+import checkbox from './checkbox.svg';
 
 const INDETERMINATE = 4;
 const CHECKED = 2;
@@ -33,8 +35,7 @@ const stylesDisabled = css`
   fill: ${colors.intentPrimaryDisabled};
 `;
 
-type IconCheckboxProps = {
-  ...$Exact<GenericIconProps>,
+type IconCheckboxProps = $Exact<GenericIconProps> & {
   checked?: boolean,
   disabled?: boolean,
   indeterminate?: boolean,

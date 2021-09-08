@@ -1,12 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Alert, Button, IconSearch, Input, Text, PageLayout, PageLayoutWithRef } from '../../index';
+
+import { Alert, Button, IconSearch, Input, PageLayout, PageLayoutWithRef, Text } from '../../index';
+
+const HEADER_CONTENT = <Text>Heading content</Text>;
 
 it('PageLayout renders succesfully', () => {
   const tree = renderer
     .create(
       <>
-        <PageLayout heading="Cluster" headingContent={<Text>Heading content</Text>} />
+        <PageLayout heading="Cluster" headingContent={HEADER_CONTENT} />
         <PageLayout
           heading="Cluster"
           topRightControls={[<Button key={0} text="Details" />, <Button key={1} text="Issues" />]}
@@ -43,13 +46,13 @@ it('PageLayoutWithRef renders succesfully', () => {
       <>
         <PageLayoutWithRef
           heading="Cluster"
-          headingContent={<Text>Heading content</Text>}
+          headingContent={HEADER_CONTENT}
           ref={ref}
           topRightControls={[<Button key={0} text="Details" />, <Button key={1} text="Issues" />]}
         />
         <PageLayoutWithRef
           heading="Cluster"
-          headingContent={<Text>Heading content</Text>}
+          headingContent={HEADER_CONTENT}
           topRightControls={[<Button key={0} text="Details" />, <Button key={1} text="Issues" />]}
         />
       </>

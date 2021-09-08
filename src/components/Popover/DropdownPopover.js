@@ -1,9 +1,9 @@
 // @flow
-
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { colors, zIndex, INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';
+
 import { isFocusInsideRef } from '../../utils/isFocusInside';
+import { INTERACTIVE_ELEMENT_SELECTOR, colors, zIndex } from '../../variables';
 
 const styles = {
   popover: css`

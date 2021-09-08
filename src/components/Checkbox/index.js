@@ -1,11 +1,11 @@
 // @flow
-import * as React from 'react';
-import { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { css, cx } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
+
 import { colors } from '../../variables';
-import { Text } from '../Text';
 import { IconCheckbox } from '../Icon/icons/IconCheckbox';
+import { Text } from '../Text';
 
 const styles = {
   icon: css`

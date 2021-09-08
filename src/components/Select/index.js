@@ -1,10 +1,11 @@
 // @flow
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { css, cx } from '@emotion/css';
-import { Input } from '../Input';
-import { Dropdown, DropdownItem } from '../Dropdown';
-import { IconChevronDown, IconChevron } from '../Icon';
+
 import { colors } from '../../variables';
+import { Dropdown, DropdownItem } from '../Dropdown';
+import { IconChevron, IconChevronDown } from '../Icon';
+import { Input } from '../Input';
 
 const styles = {
   icon: css`

@@ -1,6 +1,5 @@
 // @flow
-
-import { type Row } from 'react-table';
+import type { Row } from 'react-table';
 
 export type RowProps = {
   row: Row,

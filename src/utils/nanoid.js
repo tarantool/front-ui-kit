@@ -1,4 +1,5 @@
 // @flow
+
 const alphabet = '_-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export const nanoid = () => {

@@ -1,11 +1,12 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { cx } from '@emotion/css';
+
+import { ControlsPanel } from '../ControlsPanel';
+import { IconInfo } from '../Icon';
+import { InputGroup } from '../InputGroup';
 import { Text } from '../Text';
 import { Tooltip } from '../Tooltip';
-import { IconInfo } from '../Icon';
-import { ControlsPanel } from '../ControlsPanel';
-import { InputGroup } from '../InputGroup';
 import { commonFormFieldStyles as commonStyles } from './commonStyles';
 
 type FormFieldProps = {

@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { css } from '@emotion/css';
-import { TiledList, TiledListItem, Text } from '../../index';
+
+import { Text, TiledList, TiledListItem } from '../../index';
 
 describe('TiledList', () => {
   it('renders correctly', () => {

@@ -1,14 +1,16 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
 import { nanoid } from '../../utils/nanoid';
 import { colors } from '../../variables';
-import { Input, type InputProps } from '../Input';
-import { Text } from '../Text';
-import { Tooltip } from '../Tooltip';
-import { IconInfo } from '../Icon';
 import { ControlsPanel } from '../ControlsPanel';
 import { commonFormFieldStyles as commonStyles } from '../FormField/commonStyles';
+import { IconInfo } from '../Icon';
+import { Input } from '../Input';
+import type { InputProps } from '../Input';
+import { Text } from '../Text';
+import { Tooltip } from '../Tooltip';
 
 const styles = {
   input: css`

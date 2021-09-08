@@ -1,7 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { UriLabel } from './index';
+
 import { IconGeoPin } from '../Icon';
+import { UriLabel } from './index';
 
 it('Text renders correctly', () => {
   const tree = renderer

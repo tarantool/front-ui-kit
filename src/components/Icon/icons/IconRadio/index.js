@@ -1,12 +1,14 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
 import { colors } from '../../../../variables';
-import { Icon, type GenericIconProps } from '../../Icon';
-import radio from './radio.svg';
+import type { GenericIconProps } from '../../Icon';
+import { Icon } from '../../Icon';
+import radioSelectedDisabled from './radio-checked-disabled.svg';
 import radioSelected from './radio-checked.svg';
 import radioDisabled from './radio-disabled.svg';
-import radioSelectedDisabled from './radio-checked-disabled.svg';
+import radio from './radio.svg';
 
 const CHECKED = 1;
 const DISABLED = 2;
@@ -25,8 +27,7 @@ const stylesDisabled = css`
   stroke: ${colors.intentPrimaryDisabled};
 `;
 
-type IconRadioProps = {
-  ...$Exact<GenericIconProps>,
+type IconRadioProps = $Exact<GenericIconProps> & {
   checked?: boolean,
   disabled?: boolean,
 };

@@ -1,9 +1,11 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css } from '@emotion/css';
-import { IconEyeClosed, IconEyeOpened } from '../Icon';
-import { Input, type InputProps } from '../Input';
+
 import { Button } from '../Button';
+import { IconEyeClosed, IconEyeOpened } from '../Icon';
+import type { InputProps } from '../Input';
+import { Input } from '../Input';
 
 const styles = {
   innerButton: css`

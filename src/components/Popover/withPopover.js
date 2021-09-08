@@ -1,8 +1,9 @@
 // @flow
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { throttle } from 'lodash';
+
+import { INTERACTIVE_ELEMENT_SELECTOR } from '../../variables';
 import { DropdownPopoverWithRef } from './DropdownPopover';
 
 const focusFirstInteractiveElement = (containerEl: HTMLElement) => {

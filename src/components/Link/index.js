@@ -1,7 +1,9 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { textStyles, type TextStyleVariants } from '../Text';
+
+import type { TextStyleVariants } from '../Text';
+import { textStyles } from '../Text';
 
 // TODO: Add focused state
 const styles = {

@@ -1,10 +1,12 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+
 import { colors } from '../../variables';
-import { BaseModal, type BaseModalProps } from '../BaseModal';
-import { Text } from '../Text';
+import type { BaseModalProps } from '../BaseModal';
+import { BaseModal } from '../BaseModal';
 import { SVGImage } from '../SVGImage';
+import { Text } from '../Text';
 
 const styles = {
   modal: css`

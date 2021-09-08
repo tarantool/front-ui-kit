@@ -1,6 +1,6 @@
 // @flow
 /* eslint-disable max-len */
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
 
 const style = css`

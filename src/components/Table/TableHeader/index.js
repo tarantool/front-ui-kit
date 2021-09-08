@@ -1,11 +1,12 @@
 // @flow
 import React from 'react';
+import type { ColumnInstance, HeaderGroup, Row, UseSortByColumnProps } from 'react-table';
 import { css } from '@emotion/css';
-import type { ColumnInstance, UseSortByColumnProps, HeaderGroup, Row } from 'react-table';
-import { Text } from '../../Text';
+
+import { colors } from '../../../variables';
 import { Button } from '../../Button';
 import { IconHelperSortable } from '../../IconHelper';
-import { colors } from '../../../variables';
+import { Text } from '../../Text';
 
 const styles = {
   head: css`

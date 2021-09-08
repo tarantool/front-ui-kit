@@ -1,13 +1,12 @@
 // @flow
-
-import * as React from 'react';
-import { useState } from 'react';
-import { css, keyframes, cx } from '@emotion/css';
-import { SideMenuItem } from './components/SideMenuItem';
-import { IconArrowLeft, IconArrowRight } from '../Icon';
-import { colors } from '../../variables';
+import React, { useState } from 'react';
+import { css, cx, keyframes } from '@emotion/css';
 import * as R from 'ramda';
+
 import { genericStyles } from '../../genericStyles';
+import { colors } from '../../variables';
+import { IconArrowLeft, IconArrowRight } from '../Icon';
+import { SideMenuItem } from './components/SideMenuItem';
 
 const translateFromRight = keyframes`
   from{

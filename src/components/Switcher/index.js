@@ -1,9 +1,10 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 import { css, cx } from '@emotion/css';
-import { Text } from '../Text';
 import { rgba } from 'emotion-rgba';
+
 import { colors } from '../../variables';
+import { Text } from '../Text';
 
 const styles = {
   input: css`

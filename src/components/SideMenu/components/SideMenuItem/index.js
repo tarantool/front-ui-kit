@@ -1,11 +1,11 @@
 // @flow
-
 import React from 'react';
 import { css, cx } from '@emotion/css';
-import { SideMenuIcon } from '../SideMenuIcon';
-import { Text } from '../../../Text';
+
 import { IconChevronDown } from '../../../Icon';
+import { Text } from '../../../Text';
 import type { SideMenuItemType } from '../../index';
+import { SideMenuIcon } from '../SideMenuIcon';
 
 type handleClickType = (event: MouseEvent, handler: (...params: any) => void, ...args: any) => void;
 

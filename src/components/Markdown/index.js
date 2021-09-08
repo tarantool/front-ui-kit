@@ -1,11 +1,12 @@
 // @flow
-import * as React from 'react';
-import MD from 'markdown-to-jsx';
+import React from 'react';
 import { css, cx } from '@emotion/css';
+import MD from 'markdown-to-jsx';
+
 import { colors, monoFontFamily } from '../../variables';
 import { CodeBlockWrap } from '../CodeBlock';
-import { SyntaxHighlight } from '../SyntaxHighlight';
 import { Link } from '../Link';
+import { SyntaxHighlight } from '../SyntaxHighlight';
 import { Text } from '../Text';
 
 const styles = {
