@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Enable prettier and change some code style rules;
 
+- Update dependencies;
+
+- Lock `react` and `react-dom` to `^16.14.0` version;
+
 ## [0.41.0] - 2021-08-05
 
 - Add new icon `IconEmptyData`;
