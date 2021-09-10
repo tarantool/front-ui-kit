@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.42.0-beta.1] - 2021-09-10
+## [0.42.0] - 2021-09-10
 
 - Update rollup, eslint and styleguide configurations to support typescript;
 
