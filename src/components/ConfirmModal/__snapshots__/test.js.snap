@@ -159,7 +159,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-8:hover,
@@ -216,7 +216,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -239,7 +239,7 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
 .emotion-10:disabled,
 .emotion-10:disabled:active,
 .emotion-10:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -547,7 +547,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-8:hover,
@@ -604,7 +604,7 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -622,18 +622,18 @@ exports[`ConfirmModal renders correctly visible state 1`] = `
 
 .emotion-10:focus,
 .emotion-10:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-10:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-10:disabled,
 .emotion-10:disabled:active,
 .emotion-10:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 

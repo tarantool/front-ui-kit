@@ -161,7 +161,7 @@ export const intentStyles = {
     &:disabled,
     &:disabled:active,
     &:disabled:hover {
-      background-color: ${colors.intentPrimary50};
+      background-color: ${colors.intentPrimaryDisabled};
       color: #ffffff;
     }
 
@@ -245,11 +245,11 @@ export const intentActiveStyles = {
   primary: css`
     &:focus,
     &:hover {
-      background-color: ${colors.activeAction};
+      background: ${colors.intentPrimaryActive};
     }
 
     &:active {
-      background-color: ${colors.activeAction};
+      background: ${colors.intentPrimaryActive};
       box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
     }
   `,

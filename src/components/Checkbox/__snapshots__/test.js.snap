@@ -37,7 +37,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -56,7 +56,7 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
+  fill: #0077ff;
   display: block;
 }
 
@@ -137,7 +137,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -156,7 +156,7 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
+  fill: #0077ff;
   display: block;
 }
 
@@ -236,7 +236,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -255,7 +255,7 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
+  fill: #0077ff;
   display: block;
 }
 
@@ -336,7 +336,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -355,7 +355,7 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
+  fill: #0077ff;
   display: block;
 }
 
@@ -435,7 +435,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -454,8 +454,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
-  fill: #fcc8cb;
+  fill: #0077ff;
+  fill: #80bbff;
   display: block;
 }
 
@@ -535,7 +535,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -554,8 +554,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
-  fill: #fcc8cb;
+  fill: #0077ff;
+  fill: #80bbff;
   display: block;
 }
 
@@ -635,7 +635,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -654,8 +654,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
-  fill: #fcc8cb;
+  fill: #0077ff;
+  fill: #80bbff;
   display: block;
 }
 
@@ -735,7 +735,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -754,8 +754,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
-  fill: #f5222d;
-  fill: #fcc8cb;
+  fill: #0077ff;
+  fill: #80bbff;
   display: block;
 }
 

@@ -19,7 +19,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -111,7 +111,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -191,7 +191,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -209,18 +209,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -279,7 +279,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -298,7 +298,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -858,7 +858,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -950,7 +950,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -1030,7 +1030,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -1048,18 +1048,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -1118,7 +1118,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -1137,7 +1137,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -1697,7 +1697,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -1789,7 +1789,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -1869,7 +1869,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -1887,18 +1887,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -1957,7 +1957,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -1976,7 +1976,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -2536,7 +2536,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -2628,7 +2628,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -2708,7 +2708,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -2726,18 +2726,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -2796,7 +2796,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -2815,7 +2815,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -3375,7 +3375,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -3467,7 +3467,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -3547,7 +3547,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -3565,18 +3565,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -3635,7 +3635,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -3654,7 +3654,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -4214,7 +4214,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -4306,7 +4306,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -4386,7 +4386,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -4404,18 +4404,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -4474,7 +4474,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -4493,7 +4493,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -5053,1106 +5053,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:focus,
-.emotion-0:hover {
-  background-color: #e6e7e8;
-  box-shadow: none;
-}
-
-.emotion-0:active {
-  background-color: #e6e7e8;
-  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  color: #d9dadd;
-  background-color: #fafafa;
-  box-shadow: inset 0 0 0 1px #d9dadd;
-}
-
-.emotion-0 svg {
-  fill: #5c606c;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    title="Click me right meow!"
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: white;
-  color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  color: #d9dadd;
-  background-color: #fafafa;
-  box-shadow: inset 0 0 0 1px #d9dadd;
-}
-
-.emotion-0 svg {
-  fill: #5c606c;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    disabled={true}
-    title="Click me right meow!"
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: #f5222d;
-  color: #ffffff;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:focus,
-.emotion-0:hover {
-  background-color: #d01d26;
-}
-
-.emotion-0:active {
-  background-color: #d01d26;
-  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  background-color: #f28a91;
-  color: #ffffff;
-}
-
-.emotion-0 svg {
-  fill: #ffffff;
-}
-
-.emotion-0:disabled svg {
-  fill: #ffffff;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: #f5222d;
-  color: #ffffff;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  background-color: #f28a91;
-  color: #ffffff;
-}
-
-.emotion-0 svg {
-  fill: #ffffff;
-}
-
-.emotion-0:disabled svg {
-  fill: #ffffff;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    disabled={true}
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: #e6e7e8;
-  color: #5c606c;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:focus,
-.emotion-0:hover {
-  background-color: #c9cace;
-}
-
-.emotion-0:active {
-  background-color: #c9cace;
-  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  background-color: #fafafa;
-  color: #d9dadd;
-  box-shadow: inset 0 0 0 1px #d9dadd;
-}
-
-.emotion-0 svg {
-  fill: #5c606c;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: #e6e7e8;
-  color: #5c606c;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  background-color: #fafafa;
-  color: #d9dadd;
-  box-shadow: inset 0 0 0 1px #d9dadd;
-}
-
-.emotion-0 svg {
-  fill: #5c606c;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    disabled={true}
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: transparent;
-  color: #5c606c;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:focus,
-.emotion-0:hover {
-  background-color: #e6e7e8;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  background-color: #fafafa;
-  color: #d9dadd;
-}
-
-.emotion-0 svg {
-  fill: #5c606c;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: transparent;
-  color: #5c606c;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  background-color: #fafafa;
-  color: #d9dadd;
-}
-
-.emotion-0 svg {
-  fill: #5c606c;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    disabled={true}
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: #8e9199;
-  color: #ffffff;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:focus,
-.emotion-0:hover {
-  background-color: #797d86;
-}
-
-.emotion-0:active {
-  background-color: #797d86;
-  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  color: #d9dadd;
-  background-color: #fafafa;
-}
-
-.emotion-0 svg {
-  fill: #ffffff;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 9px 20px;
-  background-color: #8e9199;
-  color: #ffffff;
-}
-
-.emotion-0:hover,
-.emotion-0:focus,
-.emotion-0:active {
-  transition-property: background-color,color,box-shadow;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  cursor: default;
-}
-
-.emotion-0:disabled,
-.emotion-0:disabled:active,
-.emotion-0:disabled:hover {
-  color: #d9dadd;
-  background-color: #fafafa;
-}
-
-.emotion-0 svg {
-  fill: #ffffff;
-}
-
-.emotion-0:disabled svg {
-  fill: #d9dadd;
-}
-
-.emotion-1 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-right: 8px;
-}
-
-.emotion-2 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-  width: 16px;
-  height: 16px;
-  fill: #52c41a;
-  width: 16px;
-  height: 16px;
-  margin-bottom: 2px;
-  margin-left: 8px;
-}
-
-<button
-    className="emotion-0"
-    disabled={true}
-    type="button"
-  >
-    <svg
-      className="emotion-1"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-    Click me
-    <svg
-      className="emotion-2"
-      viewBox="0 0 16 16"
-    >
-      <use
-        xlinkHref="#ok"
-      />
-    </svg>
-  </button>,
-  .emotion-0 {
-  white-space: nowrap;
-  border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Inter,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.07s;
-  transition-property: background-color,color;
-  outline: none;
-  cursor: pointer;
-  -webkit-font-smoothing: antialiased;
-  padding: 5px 16px;
-  background-color: white;
-  color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -6267,10 +5168,1109 @@ Array [
   outline: none;
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-0 svg {
+  fill: #5c606c;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    disabled={true}
+    title="Click me right meow!"
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #0077ff;
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
+}
+
+.emotion-0:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  background-color: #80bbff;
+  color: #ffffff;
+}
+
+.emotion-0 svg {
+  fill: #ffffff;
+}
+
+.emotion-0:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #0077ff;
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  background-color: #80bbff;
+  color: #ffffff;
+}
+
+.emotion-0 svg {
+  fill: #ffffff;
+}
+
+.emotion-0:disabled svg {
+  fill: #ffffff;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    disabled={true}
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #e6e7e8;
+  color: #5c606c;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  background-color: #c9cace;
+}
+
+.emotion-0:active {
+  background-color: #c9cace;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-0 svg {
+  fill: #5c606c;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #e6e7e8;
+  color: #5c606c;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-0 svg {
+  fill: #5c606c;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    disabled={true}
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: transparent;
+  color: #5c606c;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  background-color: #e6e7e8;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-0 svg {
+  fill: #5c606c;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: transparent;
+  color: #5c606c;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  background-color: #fafafa;
+  color: #d9dadd;
+}
+
+.emotion-0 svg {
+  fill: #5c606c;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    disabled={true}
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #8e9199;
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  background-color: #797d86;
+}
+
+.emotion-0:active {
+  background-color: #797d86;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+}
+
+.emotion-0 svg {
+  fill: #ffffff;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 9px 20px;
+  background-color: #8e9199;
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+}
+
+.emotion-0 svg {
+  fill: #ffffff;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    disabled={true}
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
+}
+
+.emotion-0:hover,
+.emotion-0:focus,
+.emotion-0:active {
+  transition-property: background-color,color,box-shadow;
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  cursor: default;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  background-color: #e6e7e8;
+  box-shadow: none;
+}
+
+.emotion-0:active {
+  background-color: #e6e7e8;
+  box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
+}
+
+.emotion-0:disabled,
+.emotion-0:disabled:active,
+.emotion-0:disabled:hover {
+  color: #d9dadd;
+  background-color: #fafafa;
+  box-shadow: inset 0 0 0 1px #d9dadd;
+}
+
+.emotion-0 svg {
+  fill: #5c606c;
+}
+
+.emotion-0:disabled svg {
+  fill: #d9dadd;
+}
+
+.emotion-1 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  width: 16px;
+  height: 16px;
+  fill: #52c41a;
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+}
+
+<button
+    className="emotion-0"
+    title="Click me right meow!"
+    type="button"
+  >
+    <svg
+      className="emotion-1"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+    Click me
+    <svg
+      className="emotion-2"
+      viewBox="0 0 16 16"
+    >
+      <use
+        xlinkHref="#ok"
+      />
+    </svg>
+  </button>,
+  .emotion-0 {
+  white-space: nowrap;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.07s;
+  transition-property: background-color,color;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 16px;
+  background-color: white;
+  color: #5c606c;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -6376,7 +6376,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -6394,18 +6394,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -6490,7 +6490,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -6509,7 +6509,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -7251,7 +7251,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -7369,7 +7369,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -7475,7 +7475,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -7493,18 +7493,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -7589,7 +7589,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -7608,7 +7608,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -8355,7 +8355,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -8503,7 +8503,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -8583,7 +8583,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -8606,7 +8606,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -8728,7 +8728,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -8747,7 +8747,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -9483,7 +9483,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -9631,7 +9631,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -9711,7 +9711,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -9734,7 +9734,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -9856,7 +9856,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -9875,7 +9875,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -10611,7 +10611,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -10759,7 +10759,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -10839,7 +10839,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -10862,7 +10862,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -10984,7 +10984,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -11003,7 +11003,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -11744,7 +11744,7 @@ Array [
   padding: 9px 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -11834,7 +11834,7 @@ Array [
   padding: 9px 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -11912,7 +11912,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -11930,18 +11930,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -11998,7 +11998,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -12017,7 +12017,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -12563,7 +12563,7 @@ Array [
   padding: 5px 8px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -12653,7 +12653,7 @@ Array [
   padding: 5px 8px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -12731,7 +12731,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 8px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -12749,18 +12749,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -12817,7 +12817,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 8px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -12836,7 +12836,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -13382,7 +13382,7 @@ Array [
   padding: 1px 4px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -13472,7 +13472,7 @@ Array [
   padding: 1px 4px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -13550,7 +13550,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 4px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -13568,18 +13568,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -13636,7 +13636,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 4px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -13655,7 +13655,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -14206,7 +14206,7 @@ Array [
   padding: 9px 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -14352,7 +14352,7 @@ Array [
   padding: 9px 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -14430,7 +14430,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -14453,7 +14453,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -14573,7 +14573,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -14592,7 +14592,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -15314,7 +15314,7 @@ Array [
   padding: 5px 8px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -15460,7 +15460,7 @@ Array [
   padding: 5px 8px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -15538,7 +15538,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 8px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -15561,7 +15561,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -15681,7 +15681,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 8px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -15700,7 +15700,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -16422,7 +16422,7 @@ Array [
   padding: 1px 4px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -16568,7 +16568,7 @@ Array [
   padding: 1px 4px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -16646,7 +16646,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 4px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -16669,7 +16669,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -16789,7 +16789,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 4px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -16808,7 +16808,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -17535,7 +17535,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -17601,7 +17601,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -17655,7 +17655,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -17673,18 +17673,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -17717,7 +17717,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -17736,7 +17736,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -18114,7 +18114,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -18180,7 +18180,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -18234,7 +18234,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -18252,18 +18252,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -18296,7 +18296,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -18315,7 +18315,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -18693,7 +18693,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -18759,7 +18759,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -18813,7 +18813,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -18831,18 +18831,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -18875,7 +18875,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -18894,7 +18894,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -19274,7 +19274,7 @@ Array [
   font-size: 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -19342,7 +19342,7 @@ Array [
   font-size: 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -19398,7 +19398,7 @@ Array [
   padding: 1px 9px;
   line-height: 18px;
   font-size: 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -19416,18 +19416,18 @@ Array [
 
 .emotion-0:focus,
 .emotion-0:hover {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
 }
 
 .emotion-0:active {
-  background-color: #d01d26;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),#0077ff;
   box-shadow: inset 0 4px 0 rgba(4, 11, 29, 0.1);
 }
 
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -19462,7 +19462,7 @@ Array [
   padding: 1px 9px;
   line-height: 18px;
   font-size: 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -19481,7 +19481,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -19876,7 +19876,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -19998,7 +19998,7 @@ Array [
   padding: 9px 20px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -20052,7 +20052,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -20075,7 +20075,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -20171,7 +20171,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 9px 20px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -20190,7 +20190,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -20744,7 +20744,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -20866,7 +20866,7 @@ Array [
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -20920,7 +20920,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -20943,7 +20943,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -21039,7 +21039,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 5px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -21058,7 +21058,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -21612,7 +21612,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -21734,7 +21734,7 @@ Array [
   padding: 1px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -21788,7 +21788,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -21811,7 +21811,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -21907,7 +21907,7 @@ Array [
   cursor: pointer;
   -webkit-font-smoothing: antialiased;
   padding: 1px 16px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -21926,7 +21926,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -22482,7 +22482,7 @@ Array [
   font-size: 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
   position: relative;
   color: rgba(0, 0, 0, 0);
   -webkit-transition: none;
@@ -22606,7 +22606,7 @@ Array [
   font-size: 12px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-0:hover,
@@ -22662,7 +22662,7 @@ Array [
   padding: 1px 9px;
   line-height: 18px;
   font-size: 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
   position: relative;
   color: rgba(0, 0, 0, 0);
@@ -22685,7 +22685,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 
@@ -22783,7 +22783,7 @@ Array [
   padding: 1px 9px;
   line-height: 18px;
   font-size: 12px;
-  background-color: #f5222d;
+  background-color: #0077ff;
   color: #ffffff;
 }
 
@@ -22802,7 +22802,7 @@ Array [
 .emotion-0:disabled,
 .emotion-0:disabled:active,
 .emotion-0:disabled:hover {
-  background-color: #f28a91;
+  background-color: #80bbff;
   color: #ffffff;
 }
 

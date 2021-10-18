@@ -1,4 +1,4 @@
-import { ReactNode, createElement, forwardRef } from 'react';
+import { MouseEvent, ReactNode, createElement, forwardRef } from 'react';
 import { cx } from '@emotion/css';
 
 import { textStyles } from './Text.styles';
@@ -15,6 +15,7 @@ export interface TextProps {
   noCase?: boolean;
   title?: string;
   variant?: TextStyleVariants;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
   // colorVariant?: 'inherit' | 'primary' | 'secondary' | 'disabled' | 'white' | 'error',
 }
 

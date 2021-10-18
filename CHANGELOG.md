@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.50.0]
+
+- Update the colors for a new brand style;
+
+- Update the logotype icon of the tarantool;
+
 ## [0.42.0] - 2021-09-10
 
 - Update rollup, eslint and styleguide configurations to support typescript;

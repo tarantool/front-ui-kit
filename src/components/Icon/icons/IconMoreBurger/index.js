@@ -10,7 +10,7 @@ import image from './moreBurger.svg';
 const styles = css`
   width: 16px;
   height: 16px;
-  fill: ${colors.intentPrimary65};
+  fill: ${colors.intentPrimary};
 `;
 
 export const IconMoreBurger = ({ className }: GenericIconProps) => (

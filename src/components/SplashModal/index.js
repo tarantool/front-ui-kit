@@ -31,7 +31,7 @@ const styles = {
     width: 68px;
     flex-grow: 0;
     flex-shrink: 0;
-    background: ${colors.dark};
+    background: ${colors.sidebar};
     display: flex;
     flex-direction: column;
     justify-content: center;

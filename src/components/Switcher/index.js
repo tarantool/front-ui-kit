@@ -95,7 +95,7 @@ const styles = {
     }
   `,
   checkedDisabled: css`
-    background-color: #fcc8cb;
+    background-color: ${colors.intentPrimaryDisabled};
 
     &::after {
       left: auto;

@@ -627,7 +627,7 @@ exports[`Pagination renders with page size changer 1`] = `
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-13:hover,
@@ -1102,7 +1102,7 @@ exports[`Pagination renders with page size changer and total 1`] = `
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-14:hover,
@@ -2023,7 +2023,7 @@ exports[`PaginationControlled renders with page size changer 1`] = `
   padding: 5px 16px;
   background-color: white;
   color: #5c606c;
-  box-shadow: inset 0 0 0 1px #f0f2f5;
+  box-shadow: inset 0 0 0 1px #f4f4f4;
 }
 
 .emotion-7:hover,
