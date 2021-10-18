@@ -15,7 +15,7 @@ exports[`error type renders correctly 1`] = `
   margin-bottom: 16px;
   border-color: #fea39e;
   background-color: #fff1f0;
-  color: #f5222d;
+  color: #ff272c;
 }
 
 .emotion-0 b {

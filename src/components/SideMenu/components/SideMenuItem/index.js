@@ -2,6 +2,7 @@
 import React from 'react';
 import { css, cx } from '@emotion/css';
 
+import { colors } from '../../../../variables';
 import { IconChevronDown } from '../../../Icon';
 import { Text } from '../../../Text';
 import type { SideMenuItemType } from '../../index';
@@ -57,7 +58,7 @@ const styles = {
       left: 0;
       top: 0;
       width: 4px;
-      background: #ff272c;
+      background: ${colors.activeAction};
       content: '';
       position: absolute;
     }

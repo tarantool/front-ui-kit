@@ -93,7 +93,7 @@ Array [
   box-sizing: border-box;
   border-radius: 4px;
   background-color: #ffffff;
-  border-color: #f5222d;
+  border-color: #ff272c;
 }
 
 .emotion-1 {
@@ -426,7 +426,7 @@ Array [
   box-sizing: border-box;
   border-radius: 4px;
   background-color: #ffffff;
-  border-color: #f5222d;
+  border-color: #ff272c;
 }
 
 .emotion-1 {

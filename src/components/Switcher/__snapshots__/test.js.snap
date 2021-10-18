@@ -37,7 +37,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -53,7 +53,7 @@ Array [
   box-sizing: border-box;
   background-color: #a6a6a6;
   cursor: pointer;
-  background-color: #f5222d;
+  background-color: #0077ff;
   margin-right: 8px;
 }
 
@@ -70,7 +70,7 @@ Array [
 
 .emotion-2:hover,
 .emotion-2:focus {
-  background-color: #d01d26;
+  background-color: #0077ff;
 }
 
 .emotion-2::after {
@@ -149,7 +149,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -254,7 +254,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {
@@ -271,7 +271,7 @@ Array [
   background-color: #a6a6a6;
   cursor: pointer;
   cursor: default;
-  background-color: #fcc8cb;
+  background-color: #80bbff;
   margin-right: 8px;
 }
 
@@ -362,7 +362,7 @@ Array [
 }
 
 .emotion-1:focus+div::before {
-  border-color: rgba(245, 34, 45, 0.55);
+  border-color: rgba(0, 119, 255, 0.55);
 }
 
 .emotion-2 {

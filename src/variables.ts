@@ -9,20 +9,26 @@ export const baseFontFamily = 'Inter, Arial, sans-serif';
 export const monoFontFamily = "'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace";
 
 export const colors = {
-  // navBg: '#000000',
-  // navBgActive: '#212121',
-  // navActiveItemEdge: '#FF272C',
-  // navFont: '#ffffff',
+  activeAction: '#0077ff',
 
-  activeAction: '#d01d26',
+  intentPrimary: '#0077ff',
+  intentPrimaryDisabled: '#80bbff',
+  intentPrimaryActive: 'linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), #0077ff',
 
-  intentPrimary: '#f5222d',
-  intentPrimaryDisabled: '#fcc8cb',
-  intentPrimary45: '#fb9dac',
-  intentPrimary50: '#f28a91',
-  intentPrimary65: '#f96f83',
+  /**
+   * @deprecated
+   */
+  intentPrimary45: '#0077ff',
+  /**
+   * @deprecated
+   */
+  intentPrimary50: '#0077ff',
+  /**
+   * @deprecated
+   */
+  intentPrimary65: '#0077ff',
 
-  intentDanger: '#f5222d',
+  intentDanger: '#ff272c',
   intentDangerBg: '#fff1f0',
   intentDangerBorder: '#fea39e',
   intentDanger65: '#f96f83',
@@ -38,7 +44,7 @@ export const colors = {
   intentSuccessBg: '#f6ffee',
   intentSuccessBorder: '#b5ec8e',
 
-  baseBg: '#f0f2f5',
+  baseBg: '#f4f4f4',
   scrollbar: '#e8e8e8',
   dark2: '#fafafa',
   dark10: '#e6e7e8',
@@ -47,6 +53,8 @@ export const colors = {
   dark60: '#797d86',
   dark65: '#5c606c',
   dark: '#040b1d',
+
+  sidebar: '#3a3a3a',
 };
 
 export const navItemHeight = '40px';

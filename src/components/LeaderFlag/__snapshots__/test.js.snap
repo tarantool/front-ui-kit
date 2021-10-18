@@ -56,7 +56,7 @@ Array [
   position: absolute;
   left: 0;
   bottom: 0;
-  fill: #f5222d;
+  fill: #ff272c;
 }
 
 <div

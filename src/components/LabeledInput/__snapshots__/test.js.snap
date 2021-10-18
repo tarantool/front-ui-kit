@@ -64,7 +64,7 @@ Array [
   border-radius: 4px;
   background-color: #ffffff;
   height: 40px;
-  border-color: #f5222d;
+  border-color: #ff272c;
   margin-top: 6px;
 }
 
@@ -117,7 +117,7 @@ Array [
   -webkit-font-smoothing: antialiased;
   display: block;
   min-height: 20px;
-  color: #f5222d;
+  color: #ff272c;
 }
 
 <div

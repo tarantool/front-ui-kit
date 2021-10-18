@@ -22,7 +22,7 @@ const styles = {
     border-top: none;
     overflow: hidden;
     width: 256px;
-    background: ${colors.dark};
+    background: ${colors.sidebar};
     height: 100%;
     padding: 0;
     display: flex;
