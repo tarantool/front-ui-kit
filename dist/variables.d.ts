@@ -7,8 +7,18 @@ export declare const colors: {
     activeAction: string;
     intentPrimary: string;
     intentPrimaryDisabled: string;
+    intentPrimaryActive: string;
+    /**
+     * @deprecated
+     */
     intentPrimary45: string;
+    /**
+     * @deprecated
+     */
     intentPrimary50: string;
+    /**
+     * @deprecated
+     */
     intentPrimary65: string;
     intentDanger: string;
     intentDangerBg: string;
@@ -31,6 +41,7 @@ export declare const colors: {
     dark60: string;
     dark65: string;
     dark: string;
+    sidebar: string;
 };
 export declare const navItemHeight = "40px";
 export declare const navWidthExpanded = "256px";
