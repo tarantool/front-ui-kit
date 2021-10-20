@@ -1,4 +1,4 @@
-import React, { ComponentType, MouseEvent, ReactNode } from 'react';
+import { ComponentType, MouseEvent, ReactNode, Ref } from 'react';
 export interface ButtonIconProps {
     className?: string;
 }
@@ -18,4 +18,6 @@ export interface ButtonProps<T extends unknown = unknown> {
     type?: 'button' | 'submit';
     pass?: T;
 }
-export declare const Button: React.ForwardRefExoticComponent<ButtonProps<unknown> & React.RefAttributes<HTMLButtonElement>>;
+export declare const Button: <T extends unknown = unknown>(props: ButtonProps<T> & {
+    ref: Ref<HTMLButtonElement>;
+}) => JSX.Element;
