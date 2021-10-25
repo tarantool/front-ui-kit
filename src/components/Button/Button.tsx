@@ -118,5 +118,5 @@ const ButtonRefFn = <T extends unknown = unknown>(
 };
 
 export const Button = forwardRef(ButtonRefFn) as <T extends unknown = unknown>(
-  props: ButtonProps<T> & { ref: Ref<HTMLButtonElement> }
+  props: ButtonProps<T> & { ref?: Ref<HTMLButtonElement> }
 ) => JSX.Element;

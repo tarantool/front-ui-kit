@@ -23,7 +23,7 @@ const styles = {
     color: rgba(0, 0, 0, 0.65);
   `,
   hereIcon: css`
-    fill: ${colors.intentWarningAccent};
+    fill: ${colors.intentPrimary};
   `,
 };
 
