@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.50.0]
+## [0.50.1] - 2021-10-26
+
+- Fixed colors of the UriLabel component;
+
+- Fixed some types;
+
+## [0.50.0] - 2021-10-20
 
 - Update the colors for a new brand style;
 
