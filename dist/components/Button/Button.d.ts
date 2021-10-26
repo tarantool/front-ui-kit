@@ -1,4 +1,4 @@
-import { ComponentType, MouseEvent, ReactNode, Ref } from 'react';
+import React, { ComponentType, MouseEvent, ReactNode, Ref } from 'react';
 export interface ButtonIconProps {
     className?: string;
 }
@@ -19,5 +19,5 @@ export interface ButtonProps<T extends unknown = unknown> {
     pass?: T;
 }
 export declare const Button: <T extends unknown = unknown>(props: ButtonProps<T> & {
-    ref: Ref<HTMLButtonElement>;
+    ref?: React.Ref<HTMLButtonElement> | undefined;
 }) => JSX.Element;
