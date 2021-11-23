@@ -11,6 +11,7 @@ export interface TextProps {
   className?: string;
   children?: ReactNode;
   tag?: string;
+  href?: string;
   upperCase?: boolean;
   noCase?: boolean;
   title?: string;
