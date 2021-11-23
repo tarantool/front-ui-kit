@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { ComponentType } from 'react';
+
+export interface SideMenuIconProps {
+  className?: string;
+  icon: string | ComponentType<{ className?: string }> | unknown;
+}
 
 export const SideMenuIcon = ({ icon: IconComponent, className }) => {
   if (typeof IconComponent === 'string') {

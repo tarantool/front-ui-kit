@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Rewrite the SideMenu component in typescript;
+
+- Make the SideMenu component controllable;
+
 ## [0.50.1] - 2021-10-26
 
 - Fixed colors of the UriLabel component;

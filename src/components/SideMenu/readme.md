@@ -117,14 +117,33 @@ const menu = [
 
 const onMenuItemClick = (path, type) => console.log(path, type);
 const toggleExpand = (path, expanded) => console.log(path, expanded);
+const [isCollapsed, onCollapse] = React.useState(false);
 
-<div style={{ height: '80vh' }}>
-  <SideMenu
-    menu={menu}
-    path='/'
-    onMenuItemClick={onMenuItemClick}
-    toggleExpand={toggleExpand}
-    renderMenuLogo={renderLogo}
-  />
+<div>
+  <div style={{ height: '80vh' }}>
+    <SideMenu
+      menu={menu}
+      path='/'
+      onMenuItemClick={onMenuItemClick}
+      toggleExpand={toggleExpand}
+      renderMenuLogo={renderLogo}
+    />
+  </div>
+  <br />
+  <hr />
+  Controlled: <button onClick={() => onCollapse((value) => !value)}>isCollapsed: {isCollapsed ? 'true' : 'false'}</button>
+  <br />
+  <br />
+  <div style={{ height: '80vh' }}>
+    <SideMenu
+      menu={menu}
+      path='/'
+      onMenuItemClick={onMenuItemClick}
+      toggleExpand={toggleExpand}
+      renderMenuLogo={renderLogo}
+      isCollapsed={isCollapsed}
+      onCollapse={onCollapse}
+    />
+  </div>
 </div>
 ```
