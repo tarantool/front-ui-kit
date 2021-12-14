@@ -32,7 +32,6 @@ export * from './components/NotificationSplashFixed';
 export * from './components/OverflowList';
 export * from './components/PageCard';
 export * from './components/PageLayout';
-export * from './components/PageSection';
 export * from './components/Pagination';
 export * from './components/Popover';
 export * from './components/PopupNotificationList';

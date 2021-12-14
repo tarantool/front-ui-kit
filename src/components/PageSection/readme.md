@@ -37,5 +37,18 @@ import { Button, PageSection } from '@tarantool.io/ui-kit';
   >
     Section content
   </PageSection>
+
+  <PageSection
+    title="Third section"
+    titleCounter={4}
+    topRightControls={[
+      <Button
+        key={0}
+        text="Configure selected"
+      />
+    ]}
+  >
+    Section content with counter
+  </PageSection>
 </div>
 ```

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Rewrite the PageSection component in typescript;
+
+- Add property `titleCounter` to the PageSection component;
+
+- Fix buttons type in the Tabbed component;
+
 ## [0.50.2] - 2021-11-24
 
 - Rewrite the SideMenu component in typescript;

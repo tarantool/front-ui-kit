@@ -1196,18 +1196,21 @@ exports[`Modal renders modal with tabs 1`] = `
           <button
             className="emotion-7"
             onClick={[Function]}
+            type="button"
           >
             Create Replica Set
           </button>
           <button
             className="emotion-8"
             onClick={[Function]}
+            type="button"
           >
             Join Replica Set
           </button>
           <button
             className="emotion-8"
             onClick={[Function]}
+            type="button"
           >
             Bad example tab
           </button>

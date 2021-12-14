@@ -48,6 +48,7 @@ export const colors = {
   scrollbar: '#e8e8e8',
   dark2: '#fafafa',
   dark10: '#e6e7e8',
+  dark15: '#d9dadd',
   dark25: '#c9cace',
   dark40: '#8e9199',
   dark60: '#797d86',
