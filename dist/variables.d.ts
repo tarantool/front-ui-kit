@@ -36,6 +36,7 @@ export declare const colors: {
     scrollbar: string;
     dark2: string;
     dark10: string;
+    dark15: string;
     dark25: string;
     dark40: string;
     dark60: string;
