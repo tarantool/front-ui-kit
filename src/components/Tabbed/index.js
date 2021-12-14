@@ -121,6 +121,7 @@ export class Tabbed extends React.Component<TabbedProps, TabbedState> {
             tabs.map(({ label }, i) => (
               <button
                 key={i}
+                type="button"
                 className={cx({ [textStyles.h3]: size === 'default' }, styles[size].tab, {
                   [styles[size].activeTab]: tabIndex === i,
                 })}
