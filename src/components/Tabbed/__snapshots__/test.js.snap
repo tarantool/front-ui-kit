@@ -87,18 +87,21 @@ exports[`Tabbed Tabbed renders correctly 1`] = `
     <button
       className="emotion-2"
       onClick={[Function]}
+      type="button"
     >
       Create Replica Set
     </button>
     <button
       className="emotion-3"
       onClick={[Function]}
+      type="button"
     >
       Another tab
     </button>
     <button
       className="emotion-3"
       onClick={[Function]}
+      type="button"
     >
       Third tab
     </button>
@@ -188,18 +191,21 @@ exports[`Tabbed Tabbed small renders correctly 1`] = `
     <button
       className="emotion-2"
       onClick={[Function]}
+      type="button"
     >
       Create Replica Set
     </button>
     <button
       className="emotion-3"
       onClick={[Function]}
+      type="button"
     >
       Another tab
     </button>
     <button
       className="emotion-3"
       onClick={[Function]}
+      type="button"
     >
       Third tab
     </button>
