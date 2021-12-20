@@ -63,7 +63,7 @@ export const SideMenuItem = ({
     subItems = (
       <div className={styles.submenuList}>
         {items.map((x) => (
-          <SideMenuItem {...x} key={x.path} onClick={onClick} isSubitem={true} />
+          <SideMenuItem {...x} key={x.path} onClick={onClick} isSubitem={true} pathPrefix={pathPrefix} />
         ))}
       </div>
     );

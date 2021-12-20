@@ -22,7 +22,7 @@ export interface SideMenuProps {
   isCollapsed?: boolean;
 }
 
-const items = [];
+const collapseMenuItems = [];
 
 export function SideMenu({
   menu,
@@ -103,7 +103,7 @@ export function SideMenu({
         )}
         <SideMenuItem
           key="collapse"
-          items={items}
+          items={collapseMenuItems}
           path=""
           isCollapse
           selected={false}
