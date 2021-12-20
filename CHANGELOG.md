@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Fix the SideMenu component subitems prefix;
+
 ## [0.50.3] - 2021-12-14
 
 - Rewrite the PageSection component in typescript;

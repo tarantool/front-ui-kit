@@ -127,6 +127,7 @@ const [isCollapsed, onCollapse] = React.useState(false);
       onMenuItemClick={onMenuItemClick}
       toggleExpand={toggleExpand}
       renderMenuLogo={renderLogo}
+      pathPrefix="/prefix"
     />
   </div>
   <br />
