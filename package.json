@@ -1,6 +1,6 @@
 {
   "name": "@tarantool.io/ui-kit",
-  "version": "0.50.4",
+  "version": "0.50.5",
   "description": "UI component library for Tarantool",
   "repository": {
     "type": "git",
