@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Use css animation in the IconSpinner component.
+
 ## [0.50.4] - 2021-12-20
 
 - Fix the SideMenu component subitems prefix;

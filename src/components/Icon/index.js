@@ -45,6 +45,7 @@ export * from './icons/IconSchema';
 export * from './icons/IconSearch';
 export * from './icons/IconSortable';
 export * from './icons/IconSpinner';
+export * from './icons/IconSpinnerLegacy';
 export * from './icons/IconUser';
 export * from './icons/IconUsers';
 export * from './icons/IconSuccess';
