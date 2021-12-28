@@ -8338,7 +8338,16 @@ Array [
 
 exports[`Buttons with icons and text renders correctly loading state 1`] = `
 Array [
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -8457,6 +8466,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -8568,7 +8579,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -8685,6 +8705,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -8792,7 +8814,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -8910,6 +8941,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -9018,7 +9051,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -9135,6 +9177,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -9242,7 +9286,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -9359,6 +9412,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -9466,7 +9521,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -9585,6 +9649,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -9696,7 +9762,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -9813,6 +9888,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -9920,7 +9997,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -10038,6 +10124,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -10146,7 +10234,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -10263,6 +10360,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -10370,7 +10469,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -10487,6 +10595,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -10594,7 +10704,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -10713,6 +10832,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -10824,7 +10945,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -10941,6 +11071,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -11048,7 +11180,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -11166,6 +11307,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -11274,7 +11417,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -11391,6 +11543,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -11498,7 +11652,16 @@ Array [
     </svg>
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -11615,6 +11778,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -14189,7 +14354,16 @@ Array [
 
 exports[`Buttons with only icons renders correctly loading state 1`] = `
 Array [
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -14307,6 +14481,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -14415,7 +14591,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -14531,6 +14716,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -14635,7 +14822,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -14752,6 +14948,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -14857,7 +15055,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -14973,6 +15180,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -15077,7 +15286,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -15193,6 +15411,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -15297,7 +15517,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -15415,6 +15644,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -15523,7 +15754,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -15639,6 +15879,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -15743,7 +15985,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -15860,6 +16111,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -15965,7 +16218,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -16081,6 +16343,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -16185,7 +16449,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -16301,6 +16574,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -16405,7 +16680,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -16523,6 +16807,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -16631,7 +16917,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -16747,6 +17042,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -16851,7 +17148,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -16968,6 +17274,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -17073,7 +17381,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -17189,6 +17506,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -17293,7 +17612,16 @@ Array [
       />
     </svg>
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -17409,6 +17737,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -19859,7 +20189,16 @@ Array [
 
 exports[`Simple buttons renders correctly loading state 1`] = `
 Array [
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -19960,6 +20299,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -20037,7 +20378,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -20136,6 +20486,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -20209,7 +20561,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -20309,6 +20670,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -20383,7 +20746,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -20482,6 +20854,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -20555,7 +20929,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -20654,6 +21037,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -20727,7 +21112,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -20828,6 +21222,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -20905,7 +21301,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -21004,6 +21409,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -21077,7 +21484,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -21177,6 +21593,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -21251,7 +21669,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -21350,6 +21777,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -21423,7 +21852,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -21522,6 +21960,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -21595,7 +22035,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -21696,6 +22145,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -21773,7 +22224,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -21872,6 +22332,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -21945,7 +22407,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -22045,6 +22516,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -22119,7 +22592,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -22218,6 +22700,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -22291,7 +22775,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -22390,6 +22883,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -22463,7 +22958,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -22566,6 +23070,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -22645,7 +23151,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -22746,6 +23261,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -22821,7 +23338,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -22923,6 +23449,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -22999,7 +23527,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -23100,6 +23637,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
@@ -23175,7 +23714,16 @@ Array [
   >
     Click me
   </button>,
-  .emotion-0 {
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
+.emotion-0 {
   white-space: nowrap;
   border: none;
   border-radius: 4px;
@@ -23276,6 +23824,8 @@ Array [
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 <button
