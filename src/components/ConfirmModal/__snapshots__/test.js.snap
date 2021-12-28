@@ -3,6 +3,15 @@
 exports[`ConfirmModal renders correctly hidden state 1`] = `null`;
 
 exports[`ConfirmModal renders correctly loading state 1`] = `
+@keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(-1turn);
+    -moz-transform: rotate(-1turn);
+    -ms-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+
 .emotion-0 {
   position: fixed;
   z-index: 100;
@@ -300,6 +309,8 @@ exports[`ConfirmModal renders correctly loading state 1`] = `
   height: 14px;
   width: 16px;
   height: 16px;
+  -webkit-animation: animation-0 720ms infinite steps(8);
+  animation: animation-0 720ms infinite steps(8);
 }
 
 .emotion-13 {
