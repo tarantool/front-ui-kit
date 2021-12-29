@@ -95,7 +95,7 @@ export const ExpandableBlock = (props: ExpandableBlockProps) => {
   }
 
   return (
-    <div className={cx(props.className)}>
+    <div className={props.className}>
       <ExpandableBlockContent {...props} className={props.contentClassName} />
     </div>
   );
