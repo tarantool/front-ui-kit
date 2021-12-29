@@ -8,11 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 - Fix the SideMenu component. Now we don't render the href attribute if the menu item has children.
-If you want to use the old behavior, you can set the `forceToUseHrefAttribute` parameter to true. 
+If you want to use the old behavior, you can set the `forceToUseHrefAttribute` parameter to true;
+
+- Fix the `className` property to use only with root element of the ExpandableBlock component;
+
+- Add new prop `contentClassName` to the ExpandableBlock component;
 
 ## [0.50.5] - 2021-12-28
 
-- Use css animation in the IconSpinner component.
+- Use css animation in the IconSpinner component;
 
 ## [0.50.4] - 2021-12-20
 

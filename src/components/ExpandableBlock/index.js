@@ -12,6 +12,7 @@ type ExpandableBlockProps = {
   content: string,
   visibleLines: number,
   className?: string,
+  contentClassName?: string,
   showCopyBtn?: boolean,
 };
 
@@ -86,14 +87,16 @@ const ExpandableBlockContent = (props: ExpandableBlockProps) => {
 export const ExpandableBlock = (props: ExpandableBlockProps) => {
   if (props.showCopyBtn) {
     return (
-      <div className={cx(styles.withBtn)}>
-        {props.showCopyBtn && (
-          <CopyToClipboard className={styles.copyBtn} intent="plain" content={props.content} size="s" />
-        )}
-        <ExpandableBlockContent {...props} className={cx(styles.contentWrapper, props.className)} />
+      <div className={cx(styles.withBtn, props.className)}>
+        <CopyToClipboard className={styles.copyBtn} intent="plain" content={props.content} size="s" />
+        <ExpandableBlockContent {...props} className={cx(styles.contentWrapper, props.contentClassName)} />
       </div>
     );
   }
 
-  return <ExpandableBlockContent {...props} />;
+  return (
+    <div className={cx(props.className)}>
+      <ExpandableBlockContent {...props} className={props.contentClassName} />
+    </div>
+  );
 };
