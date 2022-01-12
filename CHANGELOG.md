@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Fix the SideMenu component. Now we don't render the href attribute if the menu item has children.
+If you want to use the old behavior, you can set the `forceToUseHrefAttribute` parameter to true. 
+
 ## [0.50.5] - 2021-12-28
 
 - Use css animation in the IconSpinner component.

@@ -38,44 +38,46 @@ const menu = [
       'selected': false,
       'expanded': true,
       'loading': false,
-      'items': [{
-        'selected': true,
-        'expanded': false,
-        'loading': false,
-        'items': [],
-        'label': 'My Test',
-        'path': '/mytest/test',
-        'namespace': 'mytest'
-      },
-      {
-        'selected': false,
-        'expanded': false,
-        'loading': false,
-        'items': [],
-        'icon': '',
-        'label': 'Other',
-        'path': '/other/test',
-        'namespace': 'other'
-      },
-      {
-        'selected': false,
-        'expanded': false,
-        'loading': false,
-        'items': [],
-        'icon': '',
-        'label': 'Other2',
-        'path': '/other/test2',
-        'namespace': 'other'
-      },
-      {
-        'selected': false,
-        'expanded': false,
-        'loading': false,
-        'items': [],
-        'label': 'Other4',
-        'path': '/other/test3',
-        'namespace': 'other'
-      }],
+      'items': [
+        {
+          'selected': true,
+          'expanded': false,
+          'loading': false,
+          'items': [],
+          'label': 'My Test',
+          'path': '/mytest/test',
+          'namespace': 'mytest'
+        },
+        {
+          'selected': false,
+          'expanded': false,
+          'loading': false,
+          'items': [],
+          'icon': '',
+          'label': 'Other',
+          'path': '/other/test',
+          'namespace': 'other'
+        },
+        {
+          'selected': false,
+          'expanded': false,
+          'loading': false,
+          'items': [],
+          'icon': '',
+          'label': 'Other2',
+          'path': '/other/test2',
+          'namespace': 'other'
+        },
+        {
+          'selected': false,
+          'expanded': false,
+          'loading': false,
+          'items': [],
+          'label': 'Other4',
+          'path': '/other/test3',
+          'namespace': 'other'
+        }
+      ],
       'icon': IconCode,
       'label': 'Other',
       'path': '/other/test',
@@ -93,12 +95,42 @@ const menu = [
     },
     {
       'selected': false,
+      'expanded': true,
+      'loading': false,
+      'items': [
+        {
+          'selected': false,
+          'expanded': false,
+          'loading': false,
+          'items': [],
+          'label': 'Other3/1',
+          'path': '/other3/test1',
+          'namespace': 'other3'
+        },
+        {
+          'selected': false,
+          'expanded': false,
+          'loading': false,
+          'items': [],
+          'label': 'Other3/2',
+          'path': '/other3/test2',
+          'namespace': 'other3'
+        },
+      ],
+      'icon': IconCluster,
+      'label': 'Other3',
+      'path': '/other3',
+      'namespace': 'other3',
+      'forceToUseHrefAttribute': true
+    },
+    {
+      'selected': false,
       'expanded': false,
       'loading': false,
       'items': [],
       'icon': IconTrash,
       'label': 'Other4',
-      'path': '/other/test3',
+      'path': '/other/test4',
       'namespace': 'other'
     },
     {
