@@ -22,6 +22,7 @@ export const SideMenuItem = ({
   isCollapse,
   pathPrefix,
   type = 'internal',
+  forceToUseHrefAttribute = false,
 }: SideMenuItemType) => {
   const tag = path ? 'a' : 'button';
   const some = items && items.length > 0;
@@ -39,6 +40,11 @@ export const SideMenuItem = ({
     };
   }, [some, expand, onClick, path, type, expanded]);
 
+  let href: string | undefined = pathPrefix ? pathPrefix + path : path;
+  if (some && !forceToUseHrefAttribute) {
+    href = undefined;
+  }
+
   if (short) {
     const itemSelected = Boolean(selected || (items && items.find((x) => x.selected)));
     return (
@@ -48,7 +54,7 @@ export const SideMenuItem = ({
           [styles.itemSelected]: itemSelected,
         })}
         onClick={handleClick}
-        href={pathPrefix ? pathPrefix + path : path}
+        href={href}
         title={label}
       >
         <div className={styles.iconWrap}>
@@ -83,7 +89,7 @@ export const SideMenuItem = ({
           [styles.subItemSelected]: selected && isSubitem,
           [styles.collapse]: isCollapse,
         })}
-        href={pathPrefix ? pathPrefix + path : path}
+        href={href}
         onClick={handleClick}
         title={label}
       >

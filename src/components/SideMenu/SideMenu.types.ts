@@ -17,4 +17,5 @@ export type SideMenuItemType = {
   isSubitem?: boolean;
   isCollapse?: boolean;
   expand?: (evt: MouseEvent<HTMLElement>, path: string, expanded: boolean) => void;
+  forceToUseHrefAttribute?: boolean;
 };

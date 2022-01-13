@@ -808,7 +808,6 @@ exports[`AppLayout renders correctly 1`] = `
       </a>
       <a
         className="emotion-5"
-        href="/other/test"
         onClick={[Function]}
         title="Other"
       >
