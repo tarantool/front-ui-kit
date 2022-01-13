@@ -161,8 +161,8 @@ const toggle = (key) => () => setFlags({ ...flags, [key]: !flags[key] });
 
 Example with additional controls near input:
 ```js
-import { css, cx } from 'emotion';
-import { Button, Input } from '../../index';
+import { css, cx } from '@emotion/css';
+import { Button, Input } from '@tarantool.io/ui-kit';
 
 const styles = {
   wrap: css`display: flex;`,
