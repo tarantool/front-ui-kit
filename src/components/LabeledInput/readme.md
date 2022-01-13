@@ -1,3 +1,6 @@
+Use LabeledInput to decorate single Input component.
+For another cases please use InputGroup.
+
 It's not recommended to use `topRightControls` without `largeMargins`.
 To keep good looking UI, pass to `message` text which can fit at one row.
 
@@ -154,4 +157,40 @@ const toggle = (key) => () => setFlags({ ...flags, [key]: !flags[key] });
     />
   </div>
 </div>
+```
+
+Example with additional controls near input:
+```js
+import { css, cx } from '@emotion/css';
+import { Button, Input } from '@tarantool.io/ui-kit';
+
+const styles = {
+  wrap: css`display: flex;`,
+  btn: css`margin-left: 10px;`,
+  input: css`flex-grow: 1;`
+};
+
+const ComplexInput = ({ className, ...props }) => (
+  <div className={cx(styles.wrap, className)}>
+    <Input className={styles.input} {...props} />
+    <Button className={styles.btn} text='Go' />
+  </div>
+);
+
+const handleChange = e => setState({ value: e.target.value });
+
+<LabeledInput
+  inputComponent={ComplexInput}
+  label='Label'
+  info='Extended text description'
+  subTitle='Subtitle'
+  value={state.value}
+  placeholder='Placeholder'
+  topRightControls={state.rightControls && [
+    <Button text='Right' intent='secondary' />,
+    <Button text='Contorls' intent='secondary' />,
+    <Button text='Pane' intent='secondary' />
+  ]}
+  onChange={handleChange}
+/>
 ```
