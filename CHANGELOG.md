@@ -13,6 +13,11 @@ If you want to use the old behavior, you can set the `forceToUseHrefAttribute` p
 - Fix the `className` property to use only with root element of the ExpandableBlock component;
 
 - Add new prop `contentClassName` to the ExpandableBlock component;
+If you want to use the old behavior, you can set the `forceToUseHrefAttribute` parameter to true;
+
+- Rewrite the UploadZone component in typescript;
+
+- Fix UploadZone dragover bug in Safari browser;
 
 ## [0.50.5] - 2021-12-28
 
