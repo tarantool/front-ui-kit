@@ -1,5 +1,6 @@
 export * from './components/Alert';
 export * from './components/Button';
+export * from './components/FileTree';
 export * from './components/PageSection';
 export * from './components/SideMenu';
 export * from './components/Text';

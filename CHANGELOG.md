@@ -13,7 +13,6 @@ If you want to use the old behavior, you can set the `forceToUseHrefAttribute` p
 - Fix the `className` property to use only with root element of the ExpandableBlock component;
 
 - Add new prop `contentClassName` to the ExpandableBlock component;
-If you want to use the old behavior, you can set the `forceToUseHrefAttribute` parameter to true;
 
 - Rewrite the UploadZone component in typescript;
 
@@ -23,7 +22,9 @@ If you want to use the old behavior, you can set the `forceToUseHrefAttribute` p
 
 - Added file custom.d.ts for the svg declaration;
 
-- Refactor in TypeScript components in a folders Icon/icons
+- Refactor in TypeScript components in a folders Icon/icons;
+
+- Add new component `FileTree` (Moved from Cartridge);
 
 ## [0.50.5] - 2021-12-28
 
