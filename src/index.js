@@ -55,8 +55,8 @@ export * from './components/TarantoolLogoSpinner';
 export * from './components/TextArea';
 export * from './components/TiledList';
 export * from './components/Tooltip';
-export * from './components/UploadZone';
 export * from './components/UriLabel';
+//
 export * from './genericStyles';
 export * from './images';
 //
