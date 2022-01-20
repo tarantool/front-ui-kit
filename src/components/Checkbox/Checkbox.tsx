@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react';
+import React, { ChangeEventHandler, FC, useEffect, useRef } from 'react';
 import { cx } from '@emotion/css';
 
 import { IconCheckbox } from '../Icon';
@@ -14,7 +14,7 @@ type CheckboxProps = {
   name?: string;
   title: string;
   value?: string;
-  onChange?: (MouseEvent) => void;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
 export const Checkbox: FC<CheckboxProps> = ({

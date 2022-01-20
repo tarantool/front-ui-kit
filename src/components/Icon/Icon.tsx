@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEvent } from 'react';
 import { cx } from '@emotion/css';
 
 import { SVGImage } from '../SVGImage';
@@ -23,7 +23,7 @@ export type GenericIconProps = {
 export type SVGGlyphTypes = {
   content: string;
   id: string;
-  node: SVGSymbolElement;
+  node: SVGSVGElement;
   viewBox: string;
 };
 

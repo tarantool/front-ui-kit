@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 import { css, cx } from '@emotion/css';
 
 import { SVGGlyphTypes } from '../Icon';
@@ -23,7 +23,7 @@ export const SVGImage = ({ className, glyph, ...props }: SVGImageProps) => {
       : '';
 
   return (
-    <svg {...(props as any)} className={cx(sizingClassName, className)} viewBox={glyph.viewBox}>
+    <svg {...props} className={cx(sizingClassName, className)} viewBox={glyph.viewBox}>
       <use xlinkHref={`#${glyph.id}`} />
     </svg>
   );
