@@ -1,8 +1,6 @@
-// @flow
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import { cx } from '@emotion/css';
 
-import { colors } from '../../../../variables';
 import type { GenericIconProps } from '../../Icon';
 import { Icon } from '../../Icon';
 import checkboxCheckedDisabled from './checkbox-checked-disabled.svg';
@@ -11,6 +9,8 @@ import checkboxDisabled from './checkbox-disabled.svg';
 import checkboxIndeterminateDisabled from './checkbox-indeterminate-disabled.svg';
 import checkboxIndeterminate from './checkbox-indeterminate.svg';
 import checkbox from './checkbox.svg';
+
+import { styles } from './IconCheckbox.styles';
 
 const INDETERMINATE = 4;
 const CHECKED = 2;
@@ -25,27 +25,22 @@ const states = [
   checkboxIndeterminateDisabled,
 ];
 
-const styles = css`
-  width: 16px;
-  height: 16px;
-  fill: ${colors.intentPrimary};
-`;
-
-const stylesDisabled = css`
-  fill: ${colors.intentPrimaryDisabled};
-`;
-
-type IconCheckboxProps = $Exact<GenericIconProps> & {
-  checked?: boolean,
-  disabled?: boolean,
-  indeterminate?: boolean,
+type IconCheckboxProps = GenericIconProps & {
+  checked?: boolean;
+  disabled?: boolean;
+  indeterminate?: boolean;
 };
 
 export const IconCheckbox = ({ checked, className, disabled, indeterminate }: IconCheckboxProps) => {
   const mask =
     (indeterminate ? INDETERMINATE : 0) + (disabled ? DISABLED : 0) + (checked && !indeterminate ? CHECKED : 0);
 
-  return <Icon className={cx(styles, { [stylesDisabled]: disabled }, className)} glyph={states[mask]} />;
+  const glyph = states[mask];
+  if (!glyph) {
+    return null;
+  }
+
+  return <Icon className={cx(styles.root, { [styles.disabled]: disabled }, className)} glyph={glyph} />;
 };
 
 export const IconCheckboxChecked = (props: GenericIconProps) => <IconCheckbox {...props} checked />;

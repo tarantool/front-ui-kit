@@ -1,4 +1,11 @@
 declare module '*.svg' {
-  const content: any; // eslint-disable-line
+  type SVGContent = {
+    content: string;
+    id: string;
+    node: SVGSVGElement;
+    viewBox: string;
+  };
+
+  const content: SVGContent;
   export default content;
 }

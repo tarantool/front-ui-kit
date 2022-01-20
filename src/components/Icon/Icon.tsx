@@ -4,20 +4,9 @@ import { cx } from '@emotion/css';
 import { SVGImage } from '../SVGImage';
 import { styles } from './Icon.styled';
 
-type IconProps = {
-  active?: boolean; // Выбраное состояние
-  className?: string;
-  glyph?: SVGGlyphTypes;
-  hasState?: boolean; // Включение состояния: Normal, Hover, Active
-  onClick?: (evt: MouseEvent) => void;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
-  stroke?: boolean; // Задавать stroke вместо fill
-};
-
 export type GenericIconProps = {
   className?: string;
-  onClick?: (e: MouseEvent) => void;
+  onClick?: (event: MouseEvent) => void;
 };
 
 export type SVGGlyphTypes = {
@@ -27,17 +16,22 @@ export type SVGGlyphTypes = {
   viewBox: string;
 };
 
+export type IconProps = {
+  active?: boolean; // Выбраное состояние
+  className?: string;
+  glyph: SVGGlyphTypes;
+  /**
+   * @deprecated
+   */
+  hasState?: boolean; // Включение состояния: Normal, Hover, Active
+  onClick?: (event: MouseEvent) => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  stroke?: boolean; // Задавать stroke вместо fill
+};
+
 export const Icon: FC<IconProps> = React.memo<IconProps>(
-  ({
-    active,
-    className,
-    glyph,
-    // hasState, // TODO: 'hasState' is defined but never used.
-    onMouseLeave,
-    onMouseEnter,
-    onClick,
-    stroke,
-  }: IconProps) => (
+  ({ active, className, glyph, onMouseLeave, onMouseEnter, onClick, stroke }: IconProps) => (
     <SVGImage
       glyph={glyph}
       onClick={onClick}
