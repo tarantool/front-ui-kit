@@ -19,6 +19,10 @@ If you want to use the old behavior, you can set the `forceToUseHrefAttribute` p
 
 - Fix UploadZone dragover bug in Safari browser;
 
+- Refactor in TypeScript: Checkbox, Icon, SVGImage, IconArrow, IconCheckbox, IconChevron, IconSpinner;
+
+- Added file custom.d.ts for the svg declaration;
+
 ## [0.50.5] - 2021-12-28
 
 - Use css animation in the IconSpinner component;
