@@ -1,29 +1,14 @@
-// @flow
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import { cx } from '@emotion/css';
 
 import type { GenericIconProps } from '../../Icon';
 import { Icon } from '../../Icon';
 import image from './arrow-left.svg';
 
-const styles = {
-  icon: css`
-    width: 16px;
-    height: 16px;
-    fill: #ffffff;
-  `,
-  right: css`
-    transform: rotate(180deg);
-  `,
-  down: css`
-    transform: rotate(270deg);
-  `,
-  up: css`
-    transform: rotate(90deg);
-  `,
-};
-type IconArrowProps = $Exact<GenericIconProps> & {
-  direction: 'up' | 'down' | 'left' | 'right',
+import { styles } from './IconArrow.styles';
+
+export type IconArrowProps = GenericIconProps & {
+  direction: 'up' | 'down' | 'left' | 'right';
 };
 
 export const IconArrow = (props: IconArrowProps) => {
@@ -40,7 +25,6 @@ export const IconArrow = (props: IconArrowProps) => {
         className
       )}
       glyph={image}
-      hasState={true}
     />
   );
 };

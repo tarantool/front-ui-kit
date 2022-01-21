@@ -1,8 +1,6 @@
 // @flow
-export * from './Icon';
 export * from './icons/IconAttach';
 export * from './icons/IconAttention';
-export * from './icons/IconArrow';
 export * from './icons/IconBell';
 export * from './icons/IconBoldArrowRight';
 export * from './icons/IconBox';
@@ -11,8 +9,6 @@ export * from './icons/IconBucket';
 export * from './icons/IconBurger';
 export * from './icons/IconCancel';
 export * from './icons/IconCalendar';
-export * from './icons/IconCheckbox';
-export * from './icons/IconChevron';
 export * from './icons/IconChip';
 export * from './icons/IconChipWarning';
 export * from './icons/IconChipDanger';
@@ -44,7 +40,6 @@ export * from './icons/IconRefresh';
 export * from './icons/IconSchema';
 export * from './icons/IconSearch';
 export * from './icons/IconSortable';
-export * from './icons/IconSpinner';
 export * from './icons/IconSpinnerLegacy';
 export * from './icons/IconUser';
 export * from './icons/IconUsers';
@@ -55,3 +50,5 @@ export * from './icons/IconStop';
 export * from './icons/IconTask';
 export * from './icons/IconStopped';
 export * from './icons/IconTrash';
+
+export * from './index.ts';

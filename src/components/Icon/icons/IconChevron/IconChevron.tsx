@@ -1,28 +1,14 @@
-// @flow
 import React from 'react';
-import { css, cx } from '@emotion/css';
+import { cx } from '@emotion/css';
 
 import type { GenericIconProps } from '../../Icon';
 import { Icon } from '../../Icon';
 import image from './chevron-up.svg';
 
-const styles = {
-  icon: css`
-    fill: #ffffff;
-  `,
-  down: css`
-    transform: rotate(180deg);
-  `,
-  left: css`
-    transform: rotate(270deg);
-  `,
-  right: css`
-    transform: rotate(90deg);
-  `,
-};
+import { styles } from './IconChevron.styles';
 
-type IconChevronProps = $Exact<GenericIconProps> & {
-  direction?: 'up' | 'down' | 'left' | 'right',
+type IconChevronProps = GenericIconProps & {
+  direction?: 'up' | 'down' | 'left' | 'right';
 };
 
 export const IconChevron = (props: IconChevronProps) => {
@@ -39,14 +25,9 @@ export const IconChevron = (props: IconChevronProps) => {
         className
       )}
       glyph={image}
-      hasState={true}
     />
   );
 };
-
-// export const IconChevronUp = (props: GenericIconProps) => (
-//   <IconChevron {...props} direction='up' />
-// );
 
 export const IconChevronDown = (props: GenericIconProps) => <IconChevron {...props} direction="down" />;
 
