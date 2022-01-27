@@ -23,6 +23,8 @@ If you want to use the old behavior, you can set the `forceToUseHrefAttribute` p
 
 - Added file custom.d.ts for the svg declaration;
 
+- Refactor in TypeScript components in a folders Icon/icons
+
 ## [0.50.5] - 2021-12-28
 
 - Use css animation in the IconSpinner component;
