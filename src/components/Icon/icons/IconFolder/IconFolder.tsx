@@ -9,7 +9,7 @@ import folder from './folder.svg';
 import { styles } from './IconFolder.styles';
 
 type IconFolderProps = GenericIconProps & {
-  opened: boolean;
+  opened?: boolean;
 };
 
 export const IconFolder = ({ className, onClick, opened }: IconFolderProps) => (
