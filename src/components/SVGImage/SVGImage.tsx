@@ -5,13 +5,17 @@ import { SVGGlyphTypes } from '../Icon';
 
 type SVGImageProps = {
   className?: string;
-  glyph: SVGGlyphTypes;
+  glyph?: SVGGlyphTypes;
   onClick?: (evt: MouseEvent) => void;
   onMouseLeave?: (evt: MouseEvent) => void;
   onMouseEnter?: (evt: MouseEvent) => void;
 };
 
 export const SVGImage = ({ className, glyph, ...props }: SVGImageProps) => {
+  if (!glyph) {
+    return null;
+  }
+
   const [width, height] = (glyph.viewBox || '').split(' ').slice(2);
 
   const sizingClassName =

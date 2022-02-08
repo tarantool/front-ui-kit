@@ -26,6 +26,8 @@ If you want to use the old behavior, you can set the `forceToUseHrefAttribute` p
 
 - Add new component `FileTree` (Moved from Cartridge);
 
+- Update the logotype icon of the tarantool;
+
 ## [0.50.5] - 2021-12-28
 
 - Use css animation in the IconSpinner component;
