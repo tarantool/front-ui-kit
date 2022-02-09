@@ -7,21 +7,12 @@ import {
   IconTrash,
   IconInfo,
   SideMenu,
-  SVGImage,
+  SideMenuRenderMenuLogo,
   TarantoolLogoCompact,
   TarantoolLogoFull
 } from '@tarantool.io/ui-kit';
 
-const logoStyle = css`margin-left: 24px;`;
-
 const IconSuccessGreen = ({ className, ...props }) => <IconSuccess {...props} />
-
-const renderLogo = (collapsed) => (
-  <SVGImage
-    className={!collapsed && logoStyle}
-    glyph={collapsed ? TarantoolLogoCompact : TarantoolLogoFull}
-  />
-);
 
 const menu = [
     {
@@ -158,7 +149,7 @@ const [isCollapsed, onCollapse] = React.useState(false);
       path='/'
       onMenuItemClick={onMenuItemClick}
       toggleExpand={toggleExpand}
-      renderMenuLogo={renderLogo}
+      renderMenuLogo={SideMenuRenderMenuLogo}
       pathPrefix="/prefix"
     />
   </div>
@@ -173,7 +164,7 @@ const [isCollapsed, onCollapse] = React.useState(false);
       path='/'
       onMenuItemClick={onMenuItemClick}
       toggleExpand={toggleExpand}
-      renderMenuLogo={renderLogo}
+      renderMenuLogo={SideMenuRenderMenuLogo}
       isCollapsed={isCollapsed}
       onCollapse={onCollapse}
     />
