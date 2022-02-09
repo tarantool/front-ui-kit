@@ -13,6 +13,7 @@ export declare const styles: {
     itemLoading: string;
     logoContainer: string;
     logoCenter: string;
+    logoStyle: string;
     bottomButtons: string;
     iconStyle: string;
 };

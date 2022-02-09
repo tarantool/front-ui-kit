@@ -11,4 +11,5 @@ export interface SideMenuProps {
     onCollapse?: (isCollapsed: boolean | ((isCollapsed: boolean) => boolean)) => void;
     isCollapsed?: boolean;
 }
+export declare const SideMenuRenderMenuLogo: (collapsed: boolean) => JSX.Element;
 export declare function SideMenu({ menu, className, onMenuItemClick, toggleExpand, pathPrefix, renderMenuLogo, onCollapse, isCollapsed, }: SideMenuProps): JSX.Element;
