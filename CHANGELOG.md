@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.50.6] - 2022-02-08
+
 - Fix the SideMenu component. Now we don't render the href attribute if the menu item has children.
 If you want to use the old behavior, you can set the `forceToUseHrefAttribute` parameter to true;
 

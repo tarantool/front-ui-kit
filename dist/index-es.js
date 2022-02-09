@@ -1,4 +1,4 @@
-import React, { forwardRef, useCallback, createElement, createRef, useRef, useEffect, useContext, Fragment, useState, useMemo } from 'react';
+import React, { forwardRef, useCallback, createElement, createRef, useRef, useEffect, useContext, Fragment, useState, memo, useMemo } from 'react';
 import { keyframes, cx, css } from '@emotion/css';
 import { rgba } from 'emotion-rgba';
 import ReactDOM, { findDOMNode } from 'react-dom';
@@ -347,13 +347,17 @@ var SVGImage = function SVGImage(_ref) {
       glyph = _ref.glyph,
       props = _objectWithoutProperties(_ref, _excluded$B);
 
+  if (!glyph) {
+    return null;
+  }
+
   var _split$slice = (glyph.viewBox || '').split(' ').slice(2),
       _split$slice2 = _slicedToArray(_split$slice, 2),
       width = _split$slice2[0],
       height = _split$slice2[1];
 
   var sizingClassName = width && height ? /*#__PURE__*/css("width:", width, "px;height:", height, "px;" + ("" ), "" ) : '';
-  return /*#__PURE__*/React.createElement("svg", Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement("svg", _objectSpread2(_objectSpread2({}, props), {}, {
     className: cx(sizingClassName, className),
     viewBox: glyph.viewBox
   }), /*#__PURE__*/React.createElement("use", {
@@ -361,7 +365,7 @@ var SVGImage = function SVGImage(_ref) {
   }));
 };
 
-var styles$1O = {
+var styles$1R = {
   icon: /*#__PURE__*/css("flex-shrink:0;vertical-align:middle;width:", iconSize, ";height:", iconSize, ";" + ("" ), "" ),
   state: /*#__PURE__*/css({
     name: "116chn8",
@@ -378,14 +382,14 @@ var styles$1O = {
   active: /*#__PURE__*/css("" , "" ),
   button: /*#__PURE__*/css("display:block;padding:0;border:none;outline:none;background:transparent;&:focus::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;border:solid 1px ", rgba(colors.intentPrimary, 0.55), ";border-radius:3px;}" + ("" ), "" )
 };
+
 var Icon$1 = /*#__PURE__*/React.memo(function (_ref) {
   var _cx;
 
   var active = _ref.active,
       className = _ref.className,
-      glyph = _ref.glyph;
-      _ref.hasState;
-      var onMouseLeave = _ref.onMouseLeave,
+      glyph = _ref.glyph,
+      onMouseLeave = _ref.onMouseLeave,
       onMouseEnter = _ref.onMouseEnter,
       onClick = _ref.onClick,
       stroke = _ref.stroke;
@@ -394,39 +398,31 @@ var Icon$1 = /*#__PURE__*/React.memo(function (_ref) {
     onClick: onClick,
     onMouseLeave: onMouseLeave,
     onMouseEnter: onMouseEnter,
-    className: cx(styles$1O.icon, (_cx = {}, _defineProperty(_cx, styles$1O.stroke, stroke), _defineProperty(_cx, styles$1O.clickable, !!onClick), _defineProperty(_cx, styles$1O.active, active), _cx), className)
+    className: cx(styles$1R.icon, (_cx = {}, _defineProperty(_cx, styles$1R.stroke, stroke), _defineProperty(_cx, styles$1R.clickable, !!onClick), _defineProperty(_cx, styles$1R.active, active), _cx), className)
   });
 });
 
-var img$18 = {id: "hTF6leJYoXLbp_1056-kP", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\">\n    <path d=\"M14.685 3.627A4.486 4.486 0 0 0 11.52 2.33h-.012c-.576 0-1.137.107-1.672.319a4.424 4.424 0 0 0-1.48.967l-4.177 4.13a2.493 2.493 0 0 0-.745 1.793c.002.678.27 1.315.754 1.794a2.567 2.567 0 0 0 1.811.745h.006c.683 0 1.323-.262 1.804-.736l3.666-3.624a.626.626 0 0 0 0-.896.642.642 0 0 0-.904 0l-3.666 3.623a1.27 1.27 0 0 1-.902.366H6a1.295 1.295 0 0 1-.911-.373 1.26 1.26 0 0 1-.377-.9c-.002-.34.13-.657.37-.894l4.177-4.131a3.173 3.173 0 0 1 2.25-.915h.008a3.22 3.22 0 0 1 2.268.927c.602.598.936 1.392.938 2.24a3.102 3.102 0 0 1-.924 2.229l-4.432 4.386a4.72 4.72 0 0 1-3.333 1.353h-.012a4.759 4.759 0 0 1-3.353-1.374 4.636 4.636 0 0 1-1.388-3.314 4.59 4.59 0 0 1 1.37-3.302l5.722-5.658a.626.626 0 0 0 0-.897.644.644 0 0 0-.906-.002l-5.722 5.66A5.85 5.85 0 0 0 0 10.048c.002.773.15 1.526.445 2.239a5.997 5.997 0 0 0 3.31 3.274c.717.288 1.48.435 2.263.439h.016c.779 0 1.534-.143 2.248-.429a5.893 5.893 0 0 0 1.985-1.297L14.7 9.89A4.394 4.394 0 0 0 16 6.758a4.404 4.404 0 0 0-1.315-3.13z\" opacity=\".65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$18 = {id: "TFipkHSZkHDS2oHx8oAMi", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.0\" width=\"64\" height=\"64\" viewBox=\"0 0 128 128\"><g><circle cx=\"16\" cy=\"64\" r=\"16\"/><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\"/><animateTransform attributeName=\"transform\" type=\"rotate\" values=\"0 64 64;315 64 64;270 64 64;225 64 64;180 64 64;135 64 64;90 64 64;45 64 64\" calcMode=\"discrete\" dur=\"720ms\" repeatCount=\"indefinite\"/></g></svg>", viewbox: "0 0 128 128", viewBox: "0 0 128 128" };
 
-var styles$1N = /*#__PURE__*/css({
-  name: "103jtqw",
-  styles: "width:16px;height:16px;fill:#000"
+var styles$1Q = /*#__PURE__*/css({
+  name: "157xhr7",
+  styles: "width:16px;height:16px"
 } );
-var IconAttach = function IconAttach(_ref) {
+/**
+ * @deprecated Use the IconSpinner component instead (../IconSpinner)
+ */
+
+var IconSpinnerLegacy = function IconSpinnerLegacy(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1N, className),
+    className: cx(styles$1Q, className),
     glyph: img$18
   });
 };
 
-var img$17 = {id: "Q0YLlQA5Heqk5RXXUcDpo", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6 .844a5.126 5.126 0 013.646 1.51A5.13 5.13 0 0111.156 6a5.128 5.128 0 01-1.51 3.646A5.13 5.13 0 016 11.156a5.128 5.128 0 01-3.646-1.51A5.13 5.13 0 01.844 6a5.126 5.126 0 011.51-3.646A5.13 5.13 0 016 .844zM6 0a6 6 0 100 12A6 6 0 106 0zm0 7.5a.469.469 0 01-.469-.469V2.707a.469.469 0 11.938 0v4.324c0 .26-.21.469-.469.469zm-.527 1.277a.527.527 0 101.054 0 .527.527 0 00-1.054 0z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
+var img$17 = {id: "b0VOmaH3KewYwTuT2FjzX", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\"><path d=\"M12.436 6.298h-9.15c-.003 0-.004-.003-.003-.003l3.452-3.318a.701.701 0 1 0-.973-1.011L1.063 6.482a.705.705 0 0 0 0 1.01l4.725 4.542a.699.699 0 0 0 .992-.02.702.702 0 0 0-.02-.991L3.31 7.705c-.002-.002 0-.003.002-.003h9.14a.702.702 0 0 0 .701-.659.712.712 0 0 0-.716-.745z\"/></svg>\n", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
 
-var styles$1M = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconAttention = function IconAttention(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1M, className),
-    glyph: img$17
-  });
-};
-
-var img$16 = {id: "Y686k-g9rEGNtB-015Dbe", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\"><path d=\"M12.436 6.298h-9.15c-.003 0-.004-.003-.003-.003l3.452-3.318a.701.701 0 1 0-.973-1.011L1.063 6.482a.705.705 0 0 0 0 1.01l4.725 4.542a.699.699 0 0 0 .992-.02.702.702 0 0 0-.02-.991L3.31 7.705c-.002-.002 0-.003.002-.003h9.14a.702.702 0 0 0 .701-.659.712.712 0 0 0-.716-.745z\"/></svg>\n", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
-
-var _excluded$A = ["direction", "className"];
-var styles$1L = {
+var styles$1P = {
   icon: /*#__PURE__*/css({
     name: "1kngnrc",
     styles: "width:16px;height:16px;fill:#ffffff"
@@ -444,203 +440,108 @@ var styles$1L = {
     styles: "transform:rotate(90deg)"
   } )
 };
+
+var _excluded$A = ["direction", "className"];
 var IconArrow = function IconArrow(props) {
   var direction = props.direction,
       className = props.className,
       otherProps = _objectWithoutProperties(props, _excluded$A);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, otherProps, {
-    className: cx(styles$1L.icon, _defineProperty({}, styles$1L.down, direction === 'down'), _defineProperty({}, styles$1L.right, direction === 'right'), _defineProperty({}, styles$1L.up, direction === 'up'), className),
-    glyph: img$16,
-    hasState: true
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, otherProps), {}, {
+    className: cx(styles$1P.icon, _defineProperty({}, styles$1P.down, direction === 'down'), _defineProperty({}, styles$1P.right, direction === 'right'), _defineProperty({}, styles$1P.up, direction === 'up'), className),
+    glyph: img$17
   }));
 };
 var IconArrowUp = function IconArrowUp(props) {
-  return /*#__PURE__*/React.createElement(IconArrow, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconArrow, _objectSpread2(_objectSpread2({}, props), {}, {
     direction: "up"
   }));
 };
 var IconArrowDown = function IconArrowDown(props) {
-  return /*#__PURE__*/React.createElement(IconArrow, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconArrow, _objectSpread2(_objectSpread2({}, props), {}, {
     direction: "down"
   }));
 };
 var IconArrowLeft = function IconArrowLeft(props) {
-  return /*#__PURE__*/React.createElement(IconArrow, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconArrow, _objectSpread2(_objectSpread2({}, props), {}, {
     direction: "left"
   }));
 };
 var IconArrowRight = function IconArrowRight(props) {
-  return /*#__PURE__*/React.createElement(IconArrow, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconArrow, _objectSpread2(_objectSpread2({}, props), {}, {
     direction: "right"
   }));
 };
 
-var img$15 = {id: "kzAwYAYq59ozlLx5AVW3k", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path d=\"M13.44 13H13V6a5 5 0 00-4.44-4.97V.56a.56.56 0 10-1.12 0v.47A5 5 0 003 6v7h-.44a.56.56 0 100 1.13h4.31v.74a1.12 1.12 0 102.25 0v-.74h4.32a.56.56 0 100-1.13zm-1.56 0H4.12V6a3.87 3.87 0 117.75 0v7z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$16 = {id: "AWopmtHbRv8T8jW_CyFeH", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M5.844 11.57a.47.47 0 0 1-.407-.237L3.57 8.069a.469.469 0 1 1 .815-.465l1.56 2.733L11.7 4.564a.47.47 0 0 1 .664.662l-6.166 6.185-.023.023a.468.468 0 0 1-.331.137z\" fill=\"#fff\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var styles$1K = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconBell = function IconBell(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1K, className),
-    glyph: img$15
-  });
+var img$15 = {id: "iEUTC5Cn6V6GTbOFXMEoI", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M5.84 11.57h-.06a.47.47 0 0 1-.34-.24L3.57 8.07a.47.47 0 1 1 .81-.47l1.57 2.74 5.75-5.78a.47.47 0 0 1 .66.67L6.2 11.4l-.02.02a.47.47 0 0 1-.34.14z\" fill=\"#fff\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var img$14 = {id: "aieVa99vEbpBpzs9yML4I", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var img$13 = {id: "3cQCHwHpCVTLldj_IVqx3", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\"/><path d=\"M5 5h6v6H5z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var img$12 = {id: "HF2ARSFsBv5Ike7_XYtzu", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#fff\" stroke=\"#D9D9D9\"/><path d=\"M5 5h6v6H5z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var img$11 = {id: "jG_wR2MTvN-efaupwlR2K", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><rect fill=\"#D9D9D9\" width=\"16\" height=\"16\" rx=\"2\"/><rect fill=\"#FFF\" x=\"1\" y=\"1\" width=\"14\" height=\"14\" rx=\"1\"/></g></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1O = {
+  root: /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" ),
+  disabled: /*#__PURE__*/css("fill:", colors.intentPrimaryDisabled, ";" + ("" ), "" )
 };
-
-var img$14 = {id: "ICGgbdI6CNymcbeWsWacO", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15.7 7.14l-4.98-3.97c-.51-.4-1.29-.04-1.29.62v1.33c0 .42-.28.8-.7.8H.76a.75.75 0 00-.77.75v2.09c0 .4.35.77.77.77H8.7c.43 0 .71.34.71.76v1.33c0 .65.78 1 1.28.6l4.98-3.86c.41-.3.43-.9.03-1.22z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var _excluded$z = ["className"];
-var styles$1J = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconBoldArrowRight = function IconBoldArrowRight(_ref) {
-  var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$z);
-
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$1J, className),
-    glyph: img$14
-  }));
-};
-
-var img$13 = {id: "ZOsqNCGfxe9zaSKmuZ6DY", content: "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M47.907 19.837l-.013-.05-7.19-18.064A2.471 2.471 0 0038.348 0H9.204C8.114 0 7.147.716 6.84 1.749L.118 19.629l-.02.044-.012.05c-.083.31-.109.628-.064.938a4.828 4.828 0 00-.013.304v23.183C.009 46.27 1.759 48 3.905 48h40.19c2.146 0 3.895-1.73 3.902-3.852V20.965c0-.082 0-.165-.007-.234.026-.31 0-.609-.083-.894zm-18.954-2.724l-.02.995c-.05 2.845-2.037 4.758-4.94 4.758-1.416 0-2.633-.45-3.511-1.305-.878-.856-1.359-2.047-1.384-3.453l-.02-.995H5.892l5.095-12.247h25.58L41.8 17.113H28.953zm-24.03 4.866h10.08c1.557 3.618 4.87 5.753 8.997 5.753 2.16 0 4.165-.596 5.786-1.724 1.422-.988 2.531-2.37 3.249-4.03h10.028v21.156H4.923V21.98z\"/></svg>", viewbox: "0 0 48 48", viewBox: "0 0 48 48" };
-
-var styles$1I = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconBox = function IconBox(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1I, className),
-    glyph: img$13
-  });
-};
-
-var img$12 = {id: "msvgRX89FxLCXDchq2duw", content: "<svg width=\"64\" height=\"41\" viewBox=\"0 0 64 41\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(0 1)\" fill=\"none\" fill-rule=\"evenodd\"><ellipse fill=\"#F5F5F5\" cx=\"32\" cy=\"33\" rx=\"32\" ry=\"7\"></ellipse><g fill-rule=\"nonzero\" stroke=\"#D9D9D9\"><path d=\"M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z\"></path><path d=\"M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z\" fill=\"#FAFAFA\"></path></g></g></svg>", viewbox: "0 0 64 41", viewBox: "0 0 64 41" };
-
-var styles$1H = /*#__PURE__*/css({
-  name: "1jbnfkh",
-  styles: "width:64px;height:41px"
-} );
-var IconBoxNoData = function IconBoxNoData(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1H, className),
-    glyph: img$12
-  });
-};
-
-var img$11 = {id: "wZVFbbkRdmy80qPil4Ki2", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3.5 0h9.1c.773 0 1.4.632 1.4 1.412v1.413c0 .78-.627 1.412-1.4 1.412h-.056l-.644 7.767c0 .78-.627 1.413-1.4 1.413h-7c-.773 0-1.4-.633-1.398-1.354l-.646-7.826H1.4c-.773 0-1.4-.632-1.4-1.412V1.412C0 .632.627 0 1.4 0h2.1zm0 1.412H1.4v1.413h11.2V1.412H3.5zm-.64 2.825l.64 7.767h7l.002-.058.637-7.71H2.861z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
-
-var styles$1G = /*#__PURE__*/css("fill:", colors.dark65, ";" + ("" ), "" );
-var IconBucket = function IconBucket(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1G, className),
-    glyph: img$11
-  });
-};
-
-var img$10 = {id: "aqZIlmPdXUO3X7N2mPhyR", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2 10h12V8.67H2V10zm0 2.67h12v-1.34H2v1.34zm0-5.34h12V6H2v1.33zm0-4v1.34h12V3.33H2z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var styles$1F = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconBurger = function IconBurger(_ref) {
-  var className = _ref.className,
-      onClick = _ref.onClick;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1F, className),
-    glyph: img$10,
-    onClick: onClick
-  });
-};
-
-var img$$ = {id: "LmZcNMbTQu9JR_dAB435F", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M11.2063 4.78438C10.9859 4.56563 10.6297 4.56563 10.4109 4.78594L8 7.20312L5.58906 4.78594C5.37031 4.56563 5.01406 4.56563 4.79375 4.78438C4.57344 5.00313 4.57344 5.35938 4.79219 5.57969L7.20625 8L4.79219 10.4203C4.57344 10.6406 4.57344 10.9969 4.79375 11.2156C4.90313 11.325 5.04688 11.3797 5.19063 11.3797C5.33437 11.3797 5.47969 11.325 5.58906 11.2141L8 8.79688L10.4109 11.2156C10.5203 11.3266 10.6656 11.3813 10.8094 11.3813C10.9531 11.3813 11.0969 11.3266 11.2063 11.2172C11.4266 10.9984 11.4266 10.6422 11.2078 10.4219L8.79375 8L11.2063 5.57969C11.4266 5.35938 11.4266 5.00313 11.2063 4.78438ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var styles$1E = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentDanger, ";" + ("" ), "" );
-var IconCancel = function IconCancel(_ref) {
-  var className = _ref.className,
-      onClick = _ref.onClick;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1E, className),
-    glyph: img$$,
-    onClick: onClick
-  });
-};
-
-var img$_ = {id: "z4dGPGHVm4sk0Iz3Jb90o", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0)\"><path d=\"M13.104 2.375h-.625V1.333h-1.041v1.042H4.563V1.333H3.52v1.042h-.625c-.862 0-1.563.7-1.563 1.562v9.167c0 .862.701 1.563 1.563 1.563h10.208c.862 0 1.563-.701 1.563-1.563V3.937c0-.861-.701-1.562-1.563-1.562zM2.896 3.417h.625v1.041h1.042V3.417h6.875v1.041h1.041V3.417h.625c.287 0 .521.233.521.52v1.25H2.375v-1.25c0-.287.234-.52.52-.52zm10.208 10.208H2.896a.521.521 0 0 1-.521-.52V6.228h11.25v6.875c0 .287-.234.52-.52.52zM9.563 12.53h3.124V9.406H9.563v3.125zm1.041-2.083h1.042v1.041h-1.042v-1.041z\"/></g><defs><clipPath id=\"clip0\"><path transform=\"translate(1.333 1.333)\" d=\"M0 0h13.333v13.333H0z\"/></clipPath></defs></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var _excluded$y = ["className"];
-var styles$1D = /*#__PURE__*/css({
-  name: "1td8b17",
-  styles: "width:16px;height:16px;fill:rgba(0, 0, 0, 0.65)"
-} );
-var IconCalendar = function IconCalendar(_ref) {
-  var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$y);
-
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$1D, className),
-    glyph: img$_
-  }));
-};
-
-var img$Z = {id: "Go4hckuxQydtEiMruzRND", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M5.844 11.57a.47.47 0 0 1-.407-.237L3.57 8.069a.469.469 0 1 1 .815-.465l1.56 2.733L11.7 4.564a.47.47 0 0 1 .664.662l-6.166 6.185-.023.023a.468.468 0 0 1-.331.137z\" fill=\"#fff\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var img$Y = {id: "4yIYigYFplvvZBo-ZNUxf", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"16\" height=\"16\" rx=\"2\"/><path d=\"M5.84 11.57h-.06a.47.47 0 0 1-.34-.24L3.57 8.07a.47.47 0 1 1 .81-.47l1.57 2.74 5.75-5.78a.47.47 0 0 1 .66.67L6.2 11.4l-.02.02a.47.47 0 0 1-.34.14z\" fill=\"#fff\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var img$X = {id: "ruGf8eFu3YQhuRUchcgSW", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var img$W = {id: "nq047iktKWHtW5Qdvz3FH", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\"/><path d=\"M5 5h6v6H5z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var img$V = {id: "JHFOHhjIwGIzfKV7k272q", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#fff\" stroke=\"#D9D9D9\"/><path d=\"M5 5h6v6H5z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var img$U = {id: "tRb4vl4QA99UIh40ExUOW", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><rect fill=\"#D9D9D9\" width=\"16\" height=\"16\" rx=\"2\"/><rect fill=\"#FFF\" x=\"1\" y=\"1\" width=\"14\" height=\"14\" rx=\"1\"/></g></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
 var INDETERMINATE = 4;
 var CHECKED$1 = 2;
 var DISABLED$1 = 1;
-var states$1 = [img$U, img$X, img$Y, img$Z, img$V, img$W];
-var styles$1C = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" );
-var stylesDisabled$1 = /*#__PURE__*/css("fill:", colors.intentPrimaryDisabled, ";" + ("" ), "" );
+var states$1 = [img$11, img$14, img$15, img$16, img$12, img$13];
 var IconCheckbox = function IconCheckbox(_ref) {
   var checked = _ref.checked,
       className = _ref.className,
       disabled = _ref.disabled,
       indeterminate = _ref.indeterminate;
   var mask = (indeterminate ? INDETERMINATE : 0) + (disabled ? DISABLED$1 : 0) + (checked && !indeterminate ? CHECKED$1 : 0);
+  var glyph = states$1[mask];
+
+  if (!glyph) {
+    return null;
+  }
+
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1C, _defineProperty({}, stylesDisabled$1, disabled), className),
-    glyph: states$1[mask]
+    className: cx(styles$1O.root, _defineProperty({}, styles$1O.disabled, disabled), className),
+    glyph: glyph
   });
 };
 var IconCheckboxChecked = function IconCheckboxChecked(props) {
-  return /*#__PURE__*/React.createElement(IconCheckbox, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconCheckbox, _objectSpread2(_objectSpread2({}, props), {}, {
     checked: true
   }));
 };
 var IconCheckboxDisabled = function IconCheckboxDisabled(props) {
-  return /*#__PURE__*/React.createElement(IconCheckbox, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconCheckbox, _objectSpread2(_objectSpread2({}, props), {}, {
     disabled: true
   }));
 };
 var IconCheckboxIndeterminate = function IconCheckboxIndeterminate(props) {
-  return /*#__PURE__*/React.createElement(IconCheckbox, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconCheckbox, _objectSpread2(_objectSpread2({}, props), {}, {
     indeterminate: true
   }));
 };
 var IconCheckboxIndeterminateDisabled = function IconCheckboxIndeterminateDisabled(props) {
-  return /*#__PURE__*/React.createElement(IconCheckbox, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconCheckbox, _objectSpread2(_objectSpread2({}, props), {}, {
     indeterminate: true,
     disabled: true
   }));
 };
 var IconCheckboxCheckedDisabled = function IconCheckboxCheckedDisabled(props) {
-  return /*#__PURE__*/React.createElement(IconCheckbox, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconCheckbox, _objectSpread2(_objectSpread2({}, props), {}, {
     checked: true,
     disabled: true
   }));
 };
 
-var img$T = {id: "uT_ui75J8Wr0fxTXLNBWC", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\"><path fill-rule=\"evenodd\" d=\"M7.017 4.88l4.898 5.44a.547.547 0 0 0 .813-.733l-5.21-5.785a.545.545 0 0 0-.5-.3.545.545 0 0 0-.502.3L1.307 9.587a.547.547 0 0 0 .813.732l4.897-5.44z\" clip-rule=\"evenodd\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var img$10 = {id: "6isaf4okozGnYqiIiu1RX", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\"><path fill-rule=\"evenodd\" d=\"M7.017 4.88l4.898 5.44a.547.547 0 0 0 .813-.733l-5.21-5.785a.545.545 0 0 0-.5-.3.545.545 0 0 0-.502.3L1.307 9.587a.547.547 0 0 0 .813.732l4.897-5.44z\" clip-rule=\"evenodd\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
 
-var _excluded$x = ["direction", "className"];
-var styles$1B = {
+var styles$1N = {
   icon: /*#__PURE__*/css({
     name: "5blccd",
     styles: "fill:#ffffff"
@@ -658,175 +559,315 @@ var styles$1B = {
     styles: "transform:rotate(90deg)"
   } )
 };
+
+var _excluded$z = ["direction", "className"];
 var IconChevron = function IconChevron(props) {
   var _props$direction = props.direction,
       direction = _props$direction === void 0 ? 'up' : _props$direction,
       className = props.className,
-      otherProps = _objectWithoutProperties(props, _excluded$x);
+      otherProps = _objectWithoutProperties(props, _excluded$z);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, otherProps, {
-    className: cx(styles$1B.icon, _defineProperty({}, styles$1B.down, direction === 'down'), _defineProperty({}, styles$1B.left, direction === 'left'), _defineProperty({}, styles$1B.right, direction === 'right'), className),
-    glyph: img$T,
-    hasState: true
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, otherProps), {}, {
+    className: cx(styles$1N.icon, _defineProperty({}, styles$1N.down, direction === 'down'), _defineProperty({}, styles$1N.left, direction === 'left'), _defineProperty({}, styles$1N.right, direction === 'right'), className),
+    glyph: img$10
   }));
-}; // export const IconChevronUp = (props: GenericIconProps) => (
-//   <IconChevron {...props} direction='up' />
-// );
-
+};
 var IconChevronDown = function IconChevronDown(props) {
-  return /*#__PURE__*/React.createElement(IconChevron, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconChevron, _objectSpread2(_objectSpread2({}, props), {}, {
     direction: "down"
   }));
 };
 var IconChevronLeft = function IconChevronLeft(props) {
-  return /*#__PURE__*/React.createElement(IconChevron, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconChevron, _objectSpread2(_objectSpread2({}, props), {}, {
     direction: "left"
   }));
 };
 var IconChevronRight = function IconChevronRight(props) {
-  return /*#__PURE__*/React.createElement(IconChevron, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconChevron, _objectSpread2(_objectSpread2({}, props), {}, {
     direction: "right"
   }));
 };
 
-var img$S = {id: "q2d8JKKOL8uhc7yZfeBcZ", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13.4531 7.5469a.5468.5468 0 100-1.0938h-1.6042V5.3958h1.6042a.5468.5468 0 100-1.0938h-1.6042V2.698a.5468.5468 0 00-.5469-.547H9.698V.547a.5468.5468 0 10-1.0938 0V2.151H7.5469V.5469a.5468.5468 0 10-1.0938 0V2.151H5.3958V.5469a.5468.5468 0 10-1.0938 0V2.151H2.698a.5468.5468 0 00-.547.5469v1.6042H.547a.5468.5468 0 100 1.0937H2.151v1.0572H.5469a.5468.5468 0 100 1.0938H2.151v1.0573H.5469a.5468.5468 0 100 1.0938H2.151v1.6042c0 .3019.2448.5468.5469.5468h1.6042v1.6041a.5468.5468 0 101.0937 0v-1.6042h1.0572v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.0573v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.604a.5468.5468 0 00.5469-.5469V9.6979h1.6042a.5468.5468 0 100-1.0938h-1.6042V7.5469h1.6042zm-2.6979 3.2083H3.2448V3.2448h7.5105v7.5104h-.0001z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var img$$ = {id: "cHNFL65MBzzZvcUD5n551", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.0\" width=\"64\" height=\"64\" viewBox=\"0 0 128 128\"><g><circle cx=\"16\" cy=\"64\" r=\"16\"/><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\"/></g></svg>", viewbox: "0 0 128 128", viewBox: "0 0 128 128" };
 
-var style$5 = /*#__PURE__*/css("fill:", colors.dark65, ";" + ("" ), "" );
-var IconChip = function IconChip(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(style$5, className),
-    glyph: img$S
-  });
-};
-
-var img$R = {id: "-Am5Jaluor-oMRsekyev8", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4531 7.54688C13.7552 7.54688 14 7.30206 14 7s-.2448-.54688-.5469-.54688h-1.6042V5.3958h1.6042c.3021 0 .5469-.24481.5469-.54688 0-.30206-.2448-.54687-.5469-.54687h-1.6042v-1.6041c0-.30206-.2448-.54687-.5469-.54687H9.69795V.54688C9.69795.2448 9.45314 0 9.15108 0c-.30207 0-.54688.24481-.54688.54688v1.6042H7.54688V.54688C7.54688.2448 7.30206 0 7 0s-.54688.24481-.54688.54688v1.6042H5.3958V.54688C5.3958.2448 5.15099 0 4.84892 0c-.30206 0-.54687.24481-.54687.54688v1.6042h-1.6041c-.30206 0-.54687.24481-.54687.54687v1.6042H.54688C.2448 4.30215 0 4.54697 0 4.84903c0 .30196.24481.54687.54688.54687h1.6042v1.05722H.54688C.2448 6.45312 0 6.69794 0 7s.24481.54688.54688.54688h1.6042V8.6042H.54688C.2448 8.6042 0 8.84901 0 9.15108c0 .30206.24481.54687.54688.54687h1.6042v1.60425c0 .3019.24481.5468.54687.5468h1.6042v1.6041c0 .3021.24482.5469.54688.5469.30196 0 .54687-.2448.54687-.5469v-1.6042h1.05722v1.6042c0 .3021.24482.5469.54688.5469s.54688-.2448.54688-.5469v-1.6042H8.6042v1.6042c0 .3021.24481.5469.54688.5469.30206 0 .54687-.2448.54687-.5469v-1.6042H11.302c.3021 0 .5469-.2448.5469-.5469V9.69785h1.6042c.3021 0 .5469-.24482.5469-.54688 0-.30196-.2448-.54687-.5469-.54687h-1.6042V7.54688h1.6042zM3.24483 3.24483h7.51047v7.51037H3.24483V3.24483zm3.75171.70634c.27642 0 .49986.22345.49986.49987v2.99919c0 .27642-.22344.49987-.49986.49987s-.49987-.22395-.49987-.49987V4.45104c0-.27642.22343-.49987.49987-.49987zm-.35439 5.19224c-.045.04498-.07999.09996-.10498.16495-.02498.05998-.03998.12497-.03998.18996 0 .06499.015.12998.03998.18996.02501.05997.05998.11496.10498.16495.05048.045.10497.07999.16495.10497.05997.02498.12445.03998.18944.03998.06499 0 .12998-.015.18996-.03998.05997-.02501.11495-.06.16495-.10497.045-.04999.07999-.10498.10497-.16495.02498-.06.03998-.12497.03998-.18996 0-.06499-.015-.12998-.03998-.18996-.02501-.06497-.05997-.11997-.10497-.16495-.11447-.11449-.28992-.16996-.44939-.13497-.03499.00501-.06496.0145-.09496.03-.03.0105-.06.025-.08499.045-.0222.01109-.04167.02768-.06043.04367-.00657.00559-.01305.01112-.01953.0163z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
-
-var style$4 = /*#__PURE__*/css("fill:", colors.intentWarning, ";" + ("" ), "" );
-var IconChipWarning = function IconChipWarning(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(style$4, className),
-    glyph: img$R
-  });
-};
-
-var img$Q = {id: "x7WEt52cndORyzq_E1Kdd", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 7c0 .30206-.2448.54688-.5469.54688h-1.6042V8.6041h1.6042c.3021 0 .5469.24491.5469.54687 0 .30206-.2448.54688-.5469.54688h-1.6042V11.302c0 .3021-.2448.5469-.5469.5469H9.69795v1.6042c0 .3021-.24481.5469-.54687.5469-.30207 0-.54688-.2448-.54688-.5469v-1.6042H7.54688v1.6042c0 .3021-.24482.5469-.54688.5469s-.54688-.2448-.54688-.5469v-1.6042H5.3959v1.6042c0 .3021-.24491.5469-.54687.5469-.30206 0-.54688-.2448-.54688-.5469V11.849h-1.6042c-.30206 0-.54687-.2449-.54687-.5468V9.69795H.546875C.244812 9.69795 0 9.45314 0 9.15108c0-.30207.244812-.54688.546875-.54688H2.15108V7.54688H.546875C.244812 7.54688 0 7.30206 0 7s.244812-.54688.546875-.54688H2.15108V5.3959H.546875C.244812 5.3959 0 5.15099 0 4.84903c0-.30206.244812-.54688.546875-.54688H2.15108v-1.6042c0-.30206.24481-.54687.54687-.54687h1.6041V.546875C4.30205.244812 4.54686 0 4.84892 0c.30207 0 .54688.244812.54688.546875V2.15108h1.05732V.546875C6.45312.244812 6.69794 0 7 0s.54688.244812.54688.546875V2.15108H8.6042V.546875C8.6042.244812 8.84901 0 9.15108 0c.30206 0 .54687.244812.54687.546875V2.15108H11.302c.3021 0 .5469.24481.5469.54687v1.6041h1.6042c.3021 0 .5469.24481.5469.54687 0 .30207-.2448.54688-.5469.54688h-1.6042v1.05732h1.6042c.3021 0 .5469.24482.5469.54688zm-3.2447-3.75517H3.24483v7.51037h7.51047V3.24483zM8.8082 4.58892c.16407-.16524.43125-.16524.59649-.00118.16523.16407.16523.43125 0 .59649L7.59531 6.99946l1.81055 1.81641c.16406.16523.16406.43242-.00117.59648-.08203.08203-.18985.12305-.29766.12305-.10781 0-.21679-.04102-.29883-.12422L7 7.59712 5.1918 9.41001c-.08203.0832-.19102.12422-.29883.12422-.10781 0-.21563-.04102-.29766-.12305-.16523-.16406-.16523-.43125-.00117-.59648l1.81055-1.81524-1.81055-1.81523c-.16406-.16524-.16406-.43242.00117-.59649.16524-.16406.43243-.16406.59649.00118L7 6.40181l1.8082-1.81289z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
-
-var style$3 = /*#__PURE__*/css("fill:", colors.intentDanger, ";" + ("" ), "" );
-var IconChipDanger = function IconChipDanger(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(style$3, className),
-    glyph: img$Q
-  });
-};
-
-var img$P = {id: "q2Wb4mTdP5tI6y5EZmKv6", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 13.125A6.132 6.132 0 0 1 1.875 8 6.132 6.132 0 0 1 8 1.875 6.132 6.132 0 0 1 14.125 8 6.132 6.132 0 0 1 8 14.125z\"/><path d=\"M8.499 4h-1v4.206l2.646 2.646.707-.707-2.353-2.353V3.999z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var _excluded$w = ["className"];
-var styles$1A = /*#__PURE__*/css({
-  name: "1td8b17",
-  styles: "width:16px;height:16px;fill:rgba(0, 0, 0, 0.65)"
+var animations = /*#__PURE__*/keyframes({
+  name: "6x093u",
+  styles: "to{transform:rotate(-1turn);}"
 } );
-var IconClock = function IconClock(_ref) {
-  var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$w);
+var styles$1M = /*#__PURE__*/css("width:16px;height:16px;animation:", animations, " 720ms infinite steps(8);" + ("" ), "" );
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$1A, className),
-    glyph: img$P
+var _excluded$y = ["className"];
+var IconSpinner = function IconSpinner(_ref) {
+  var className = _ref.className,
+      other = _objectWithoutProperties(_ref, _excluded$y);
+
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({
+    className: cx(styles$1M, className)
+  }, other), {}, {
+    glyph: img$$
   }));
 };
 
-var img$O = {id: "Bk9rGFTVoXaIMGWRj6GQt", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9.384 8l6.33-6.328a.976.976 0 0 0 0-1.382.974.974 0 0 0-1.382 0L8 6.616 1.668.287a.974.974 0 0 0-1.381 0 .976.976 0 0 0 0 1.382L6.617 8l-6.33 6.33a.976.976 0 0 0 .69 1.668c.251 0 .5-.094.691-.285L8 9.382l6.332 6.332a.97.97 0 0 0 .69.286.976.976 0 0 0 .69-1.668L9.385 8.001z\"/></svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$_ = {id: "2DlvGbkvXFz2TAiFOrH3n", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\">\n    <path d=\"M14.685 3.627A4.486 4.486 0 0 0 11.52 2.33h-.012c-.576 0-1.137.107-1.672.319a4.424 4.424 0 0 0-1.48.967l-4.177 4.13a2.493 2.493 0 0 0-.745 1.793c.002.678.27 1.315.754 1.794a2.567 2.567 0 0 0 1.811.745h.006c.683 0 1.323-.262 1.804-.736l3.666-3.624a.626.626 0 0 0 0-.896.642.642 0 0 0-.904 0l-3.666 3.623a1.27 1.27 0 0 1-.902.366H6a1.295 1.295 0 0 1-.911-.373 1.26 1.26 0 0 1-.377-.9c-.002-.34.13-.657.37-.894l4.177-4.131a3.173 3.173 0 0 1 2.25-.915h.008a3.22 3.22 0 0 1 2.268.927c.602.598.936 1.392.938 2.24a3.102 3.102 0 0 1-.924 2.229l-4.432 4.386a4.72 4.72 0 0 1-3.333 1.353h-.012a4.759 4.759 0 0 1-3.353-1.374 4.636 4.636 0 0 1-1.388-3.314 4.59 4.59 0 0 1 1.37-3.302l5.722-5.658a.626.626 0 0 0 0-.897.644.644 0 0 0-.906-.002l-5.722 5.66A5.85 5.85 0 0 0 0 10.048c.002.773.15 1.526.445 2.239a5.997 5.997 0 0 0 3.31 3.274c.717.288 1.48.435 2.263.439h.016c.779 0 1.534-.143 2.248-.429a5.893 5.893 0 0 0 1.985-1.297L14.7 9.89A4.394 4.394 0 0 0 16 6.758a4.404 4.404 0 0 0-1.315-3.13z\" opacity=\".65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var styles$1z = /*#__PURE__*/css({
+var styles$1L = /*#__PURE__*/css({
   name: "103jtqw",
   styles: "width:16px;height:16px;fill:#000"
 } );
-var IconClose = function IconClose(_ref) {
+
+var IconAttach = function IconAttach(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1L, className),
+    glyph: img$_
+  });
+};
+
+var img$Z = {id: "P6THpZEJE7wmVapsujCvg", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6 .844a5.126 5.126 0 013.646 1.51A5.13 5.13 0 0111.156 6a5.128 5.128 0 01-1.51 3.646A5.13 5.13 0 016 11.156a5.128 5.128 0 01-3.646-1.51A5.13 5.13 0 01.844 6a5.126 5.126 0 011.51-3.646A5.13 5.13 0 016 .844zM6 0a6 6 0 100 12A6 6 0 106 0zm0 7.5a.469.469 0 01-.469-.469V2.707a.469.469 0 11.938 0v4.324c0 .26-.21.469-.469.469zm-.527 1.277a.527.527 0 101.054 0 .527.527 0 00-1.054 0z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
+
+var styles$1K = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconAttention = function IconAttention(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1K, className),
+    glyph: img$Z
+  });
+};
+
+var img$Y = {id: "yLLMh3fknWgkEj4WlXL50", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path d=\"M13.44 13H13V6a5 5 0 00-4.44-4.97V.56a.56.56 0 10-1.12 0v.47A5 5 0 003 6v7h-.44a.56.56 0 100 1.13h4.31v.74a1.12 1.12 0 102.25 0v-.74h4.32a.56.56 0 100-1.13zm-1.56 0H4.12V6a3.87 3.87 0 117.75 0v7z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1J = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconBell = function IconBell(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1J, className),
+    glyph: img$Y
+  });
+};
+
+var img$X = {id: "Wevz__2tlMxqyyqN8by2A", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15.7 7.14l-4.98-3.97c-.51-.4-1.29-.04-1.29.62v1.33c0 .42-.28.8-.7.8H.76a.75.75 0 00-.77.75v2.09c0 .4.35.77.77.77H8.7c.43 0 .71.34.71.76v1.33c0 .65.78 1 1.28.6l4.98-3.86c.41-.3.43-.9.03-1.22z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1I = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var _excluded$x = ["className"];
+var IconBoldArrowRight = function IconBoldArrowRight(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, _excluded$x);
+
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$1I, className),
+    glyph: img$X
+  }));
+};
+
+var img$W = {id: "IdWcWpdAnW6soIxOjgDEK", content: "<svg width=\"12\" height=\"12\" viewBox=\"0 0 48 48\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M47.907 19.837l-.013-.05-7.19-18.064A2.471 2.471 0 0038.348 0H9.204C8.114 0 7.147.716 6.84 1.749L.118 19.629l-.02.044-.012.05c-.083.31-.109.628-.064.938a4.828 4.828 0 00-.013.304v23.183C.009 46.27 1.759 48 3.905 48h40.19c2.146 0 3.895-1.73 3.902-3.852V20.965c0-.082 0-.165-.007-.234.026-.31 0-.609-.083-.894zm-18.954-2.724l-.02.995c-.05 2.845-2.037 4.758-4.94 4.758-1.416 0-2.633-.45-3.511-1.305-.878-.856-1.359-2.047-1.384-3.453l-.02-.995H5.892l5.095-12.247h25.58L41.8 17.113H28.953zm-24.03 4.866h10.08c1.557 3.618 4.87 5.753 8.997 5.753 2.16 0 4.165-.596 5.786-1.724 1.422-.988 2.531-2.37 3.249-4.03h10.028v21.156H4.923V21.98z\"/></svg>", viewbox: "0 0 48 48", viewBox: "0 0 48 48" };
+
+var styles$1H = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconBox = function IconBox(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1H, className),
+    glyph: img$W
+  });
+};
+
+var img$V = {id: "AjBeZr7HSQVOpvHL8gGzv", content: "<svg width=\"64\" height=\"41\" viewBox=\"0 0 64 41\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(0 1)\" fill=\"none\" fill-rule=\"evenodd\"><ellipse fill=\"#F5F5F5\" cx=\"32\" cy=\"33\" rx=\"32\" ry=\"7\"></ellipse><g fill-rule=\"nonzero\" stroke=\"#D9D9D9\"><path d=\"M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z\"></path><path d=\"M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z\" fill=\"#FAFAFA\"></path></g></g></svg>", viewbox: "0 0 64 41", viewBox: "0 0 64 41" };
+
+var styles$1G = /*#__PURE__*/css({
+  name: "1jbnfkh",
+  styles: "width:64px;height:41px"
+} );
+
+var IconBoxNoData = function IconBoxNoData(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1G, className),
+    glyph: img$V
+  });
+};
+
+var img$U = {id: "R7sKPb1zB-oRbvmT-g9nj", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3.5 0h9.1c.773 0 1.4.632 1.4 1.412v1.413c0 .78-.627 1.412-1.4 1.412h-.056l-.644 7.767c0 .78-.627 1.413-1.4 1.413h-7c-.773 0-1.4-.633-1.398-1.354l-.646-7.826H1.4c-.773 0-1.4-.632-1.4-1.412V1.412C0 .632.627 0 1.4 0h2.1zm0 1.412H1.4v1.413h11.2V1.412H3.5zm-.64 2.825l.64 7.767h7l.002-.058.637-7.71H2.861z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var styles$1F = /*#__PURE__*/css("fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconBucket = function IconBucket(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1F, className),
+    glyph: img$U
+  });
+};
+
+var img$T = {id: "SiTwDEj7AhRNYzO2JMHT7", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M2 10h12V8.67H2V10zm0 2.67h12v-1.34H2v1.34zm0-5.34h12V6H2v1.33zm0-4v1.34h12V3.33H2z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1E = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconBurger = function IconBurger(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1z, className),
-    glyph: img$O,
+    className: cx(styles$1E, className),
+    glyph: img$T,
     onClick: onClick
   });
 };
 
-var img$N = {id: "2HVEkt4bnc23ZHUMauTbT", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\">\n    <path d=\"M11.266 0H2.734a.984.984 0 0 0-.984.984v12.032c0 .544.44.984.984.984h8.532c.544 0 .984-.44.984-.984V.984A.984.984 0 0 0 11.266 0zm0 12.893H2.734V9.557c0 .006.006.013.014.013h8.504a.014.014 0 0 0 .014-.013v3.336zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V5.264c0 .007.006.013.014.013h8.504a.014.014 0 0 0 .014-.013V8.6zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V.984h8.532v3.323zm-7.37 6.918a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0z\"/>\n</svg>\n", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var img$S = {id: "NTdMwALongwwm-LGRTc9Y", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M11.2063 4.78438C10.9859 4.56563 10.6297 4.56563 10.4109 4.78594L8 7.20312L5.58906 4.78594C5.37031 4.56563 5.01406 4.56563 4.79375 4.78438C4.57344 5.00313 4.57344 5.35938 4.79219 5.57969L7.20625 8L4.79219 10.4203C4.57344 10.6406 4.57344 10.9969 4.79375 11.2156C4.90313 11.325 5.04688 11.3797 5.19063 11.3797C5.33437 11.3797 5.47969 11.325 5.58906 11.2141L8 8.79688L10.4109 11.2156C10.5203 11.3266 10.6656 11.3813 10.8094 11.3813C10.9531 11.3813 11.0969 11.3266 11.2063 11.2172C11.4266 10.9984 11.4266 10.6422 11.2078 10.4219L8.79375 8L11.2063 5.57969C11.4266 5.35938 11.4266 5.00313 11.2063 4.78438ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1D = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentDanger, ";" + ("" ), "" );
+
+var IconCancel = function IconCancel(_ref) {
+  var className = _ref.className,
+      onClick = _ref.onClick;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1D, className),
+    glyph: img$S,
+    onClick: onClick
+  });
+};
+
+var img$R = {id: "NybEh1NBUkx9mOSJf08Lp", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0)\"><path d=\"M13.104 2.375h-.625V1.333h-1.041v1.042H4.563V1.333H3.52v1.042h-.625c-.862 0-1.563.7-1.563 1.562v9.167c0 .862.701 1.563 1.563 1.563h10.208c.862 0 1.563-.701 1.563-1.563V3.937c0-.861-.701-1.562-1.563-1.562zM2.896 3.417h.625v1.041h1.042V3.417h6.875v1.041h1.041V3.417h.625c.287 0 .521.233.521.52v1.25H2.375v-1.25c0-.287.234-.52.52-.52zm10.208 10.208H2.896a.521.521 0 0 1-.521-.52V6.228h11.25v6.875c0 .287-.234.52-.52.52zM9.563 12.53h3.124V9.406H9.563v3.125zm1.041-2.083h1.042v1.041h-1.042v-1.041z\"/></g><defs><clipPath id=\"clip0\"><path transform=\"translate(1.333 1.333)\" d=\"M0 0h13.333v13.333H0z\"/></clipPath></defs></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1C = /*#__PURE__*/css({
+  name: "1td8b17",
+  styles: "width:16px;height:16px;fill:rgba(0, 0, 0, 0.65)"
+} );
+
+var _excluded$w = ["className"];
+var IconCalendar = function IconCalendar(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, _excluded$w);
+
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$1C, className),
+    glyph: img$R
+  }));
+};
+
+var img$Q = {id: "NMRBGrejLwTNAkdgBsBvy", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13.4531 7.5469a.5468.5468 0 100-1.0938h-1.6042V5.3958h1.6042a.5468.5468 0 100-1.0938h-1.6042V2.698a.5468.5468 0 00-.5469-.547H9.698V.547a.5468.5468 0 10-1.0938 0V2.151H7.5469V.5469a.5468.5468 0 10-1.0938 0V2.151H5.3958V.5469a.5468.5468 0 10-1.0938 0V2.151H2.698a.5468.5468 0 00-.547.5469v1.6042H.547a.5468.5468 0 100 1.0937H2.151v1.0572H.5469a.5468.5468 0 100 1.0938H2.151v1.0573H.5469a.5468.5468 0 100 1.0938H2.151v1.6042c0 .3019.2448.5468.5469.5468h1.6042v1.6041a.5468.5468 0 101.0937 0v-1.6042h1.0572v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.0573v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.604a.5468.5468 0 00.5469-.5469V9.6979h1.6042a.5468.5468 0 100-1.0938h-1.6042V7.5469h1.6042zm-2.6979 3.2083H3.2448V3.2448h7.5105v7.5104h-.0001z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var styles$1B = /*#__PURE__*/css("fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconChip = function IconChip(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1B, className),
+    glyph: img$Q
+  });
+};
+
+var img$P = {id: "1kFPUg0TwoysjpvaWHhpG", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4531 7.54688C13.7552 7.54688 14 7.30206 14 7s-.2448-.54688-.5469-.54688h-1.6042V5.3958h1.6042c.3021 0 .5469-.24481.5469-.54688 0-.30206-.2448-.54687-.5469-.54687h-1.6042v-1.6041c0-.30206-.2448-.54687-.5469-.54687H9.69795V.54688C9.69795.2448 9.45314 0 9.15108 0c-.30207 0-.54688.24481-.54688.54688v1.6042H7.54688V.54688C7.54688.2448 7.30206 0 7 0s-.54688.24481-.54688.54688v1.6042H5.3958V.54688C5.3958.2448 5.15099 0 4.84892 0c-.30206 0-.54687.24481-.54687.54688v1.6042h-1.6041c-.30206 0-.54687.24481-.54687.54687v1.6042H.54688C.2448 4.30215 0 4.54697 0 4.84903c0 .30196.24481.54687.54688.54687h1.6042v1.05722H.54688C.2448 6.45312 0 6.69794 0 7s.24481.54688.54688.54688h1.6042V8.6042H.54688C.2448 8.6042 0 8.84901 0 9.15108c0 .30206.24481.54687.54688.54687h1.6042v1.60425c0 .3019.24481.5468.54687.5468h1.6042v1.6041c0 .3021.24482.5469.54688.5469.30196 0 .54687-.2448.54687-.5469v-1.6042h1.05722v1.6042c0 .3021.24482.5469.54688.5469s.54688-.2448.54688-.5469v-1.6042H8.6042v1.6042c0 .3021.24481.5469.54688.5469.30206 0 .54687-.2448.54687-.5469v-1.6042H11.302c.3021 0 .5469-.2448.5469-.5469V9.69785h1.6042c.3021 0 .5469-.24482.5469-.54688 0-.30196-.2448-.54687-.5469-.54687h-1.6042V7.54688h1.6042zM3.24483 3.24483h7.51047v7.51037H3.24483V3.24483zm3.75171.70634c.27642 0 .49986.22345.49986.49987v2.99919c0 .27642-.22344.49987-.49986.49987s-.49987-.22395-.49987-.49987V4.45104c0-.27642.22343-.49987.49987-.49987zm-.35439 5.19224c-.045.04498-.07999.09996-.10498.16495-.02498.05998-.03998.12497-.03998.18996 0 .06499.015.12998.03998.18996.02501.05997.05998.11496.10498.16495.05048.045.10497.07999.16495.10497.05997.02498.12445.03998.18944.03998.06499 0 .12998-.015.18996-.03998.05997-.02501.11495-.06.16495-.10497.045-.04999.07999-.10498.10497-.16495.02498-.06.03998-.12497.03998-.18996 0-.06499-.015-.12998-.03998-.18996-.02501-.06497-.05997-.11997-.10497-.16495-.11447-.11449-.28992-.16996-.44939-.13497-.03499.00501-.06496.0145-.09496.03-.03.0105-.06.025-.08499.045-.0222.01109-.04167.02768-.06043.04367-.00657.00559-.01305.01112-.01953.0163z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var styles$1A = /*#__PURE__*/css("fill:", colors.intentWarning, ";" + ("" ), "" );
+
+var IconChipWarning = function IconChipWarning(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1A, className),
+    glyph: img$P
+  });
+};
+
+var img$O = {id: "jSP1Kywk3QRTWVsPTjaUF", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 7c0 .30206-.2448.54688-.5469.54688h-1.6042V8.6041h1.6042c.3021 0 .5469.24491.5469.54687 0 .30206-.2448.54688-.5469.54688h-1.6042V11.302c0 .3021-.2448.5469-.5469.5469H9.69795v1.6042c0 .3021-.24481.5469-.54687.5469-.30207 0-.54688-.2448-.54688-.5469v-1.6042H7.54688v1.6042c0 .3021-.24482.5469-.54688.5469s-.54688-.2448-.54688-.5469v-1.6042H5.3959v1.6042c0 .3021-.24491.5469-.54687.5469-.30206 0-.54688-.2448-.54688-.5469V11.849h-1.6042c-.30206 0-.54687-.2449-.54687-.5468V9.69795H.546875C.244812 9.69795 0 9.45314 0 9.15108c0-.30207.244812-.54688.546875-.54688H2.15108V7.54688H.546875C.244812 7.54688 0 7.30206 0 7s.244812-.54688.546875-.54688H2.15108V5.3959H.546875C.244812 5.3959 0 5.15099 0 4.84903c0-.30206.244812-.54688.546875-.54688H2.15108v-1.6042c0-.30206.24481-.54687.54687-.54687h1.6041V.546875C4.30205.244812 4.54686 0 4.84892 0c.30207 0 .54688.244812.54688.546875V2.15108h1.05732V.546875C6.45312.244812 6.69794 0 7 0s.54688.244812.54688.546875V2.15108H8.6042V.546875C8.6042.244812 8.84901 0 9.15108 0c.30206 0 .54687.244812.54687.546875V2.15108H11.302c.3021 0 .5469.24481.5469.54687v1.6041h1.6042c.3021 0 .5469.24481.5469.54687 0 .30207-.2448.54688-.5469.54688h-1.6042v1.05732h1.6042c.3021 0 .5469.24482.5469.54688zm-3.2447-3.75517H3.24483v7.51037h7.51047V3.24483zM8.8082 4.58892c.16407-.16524.43125-.16524.59649-.00118.16523.16407.16523.43125 0 .59649L7.59531 6.99946l1.81055 1.81641c.16406.16523.16406.43242-.00117.59648-.08203.08203-.18985.12305-.29766.12305-.10781 0-.21679-.04102-.29883-.12422L7 7.59712 5.1918 9.41001c-.08203.0832-.19102.12422-.29883.12422-.10781 0-.21563-.04102-.29766-.12305-.16523-.16406-.16523-.43125-.00117-.59648l1.81055-1.81524-1.81055-1.81523c-.16406-.16524-.16406-.43242.00117-.59649.16524-.16406.43243-.16406.59649.00118L7 6.40181l1.8082-1.81289z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var styles$1z = /*#__PURE__*/css("fill:", colors.intentDanger, ";" + ("" ), "" );
+
+var IconChipDanger = function IconChipDanger(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1z, className),
+    glyph: img$O
+  });
+};
+
+var img$N = {id: "k88y2PvNAtLOI67Qj74gC", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 13.125A6.132 6.132 0 0 1 1.875 8 6.132 6.132 0 0 1 8 1.875 6.132 6.132 0 0 1 14.125 8 6.132 6.132 0 0 1 8 14.125z\"/><path d=\"M8.499 4h-1v4.206l2.646 2.646.707-.707-2.353-2.353V3.999z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1y = /*#__PURE__*/css({
+  name: "1td8b17",
+  styles: "width:16px;height:16px;fill:rgba(0, 0, 0, 0.65)"
+} );
 
 var _excluded$v = ["className"];
-var styles$1y = /*#__PURE__*/css({
-  name: "e102ul",
-  styles: "width:14px;height:14px;fill:#fff"
-} );
-var IconCluster = function IconCluster(_ref) {
+var IconClock = function IconClock(_ref) {
   var className = _ref.className,
       props = _objectWithoutProperties(_ref, _excluded$v);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
     className: cx(styles$1y, className),
     glyph: img$N
   }));
 };
 
-var img$M = {id: "4GWGPB2_9FZx4MWqdCzqR", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 13.42A6.42 6.42 0 117 .58a6.42 6.42 0 010 12.84zm0-1.17a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5zM5.66 8.92l-.82.83L2.09 7l2.75-2.75.82.83L3.74 7l1.92 1.92zm2.68-3.84l.82-.83L11.91 7 9.16 9.75l-.82-.83L10.26 7 8.34 5.08zM6.99 10.6l-1.15-.2 1.17-7 1.15.2-1.17 7z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var img$M = {id: "5KBTvDAns5mrtngSzlsmF", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9.384 8l6.33-6.328a.976.976 0 0 0 0-1.382.974.974 0 0 0-1.382 0L8 6.616 1.668.287a.974.974 0 0 0-1.381 0 .976.976 0 0 0 0 1.382L6.617 8l-6.33 6.33a.976.976 0 0 0 .69 1.668c.251 0 .5-.094.691-.285L8 9.382l6.332 6.332a.97.97 0 0 0 .69.286.976.976 0 0 0 .69-1.668L9.385 8.001z\"/></svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
 var styles$1x = /*#__PURE__*/css({
+  name: "103jtqw",
+  styles: "width:16px;height:16px;fill:#000"
+} );
+
+var IconClose = function IconClose(_ref) {
+  var className = _ref.className,
+      onClick = _ref.onClick;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1x, className),
+    glyph: img$M,
+    onClick: onClick
+  });
+};
+
+var img$L = {id: "EvCDSHD3chTYzTgQi_aG_", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\">\n    <path d=\"M11.266 0H2.734a.984.984 0 0 0-.984.984v12.032c0 .544.44.984.984.984h8.532c.544 0 .984-.44.984-.984V.984A.984.984 0 0 0 11.266 0zm0 12.893H2.734V9.557c0 .006.006.013.014.013h8.504a.014.014 0 0 0 .014-.013v3.336zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V5.264c0 .007.006.013.014.013h8.504a.014.014 0 0 0 .014-.013V8.6zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V.984h8.532v3.323zm-7.37 6.918a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0z\"/>\n</svg>\n", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var styles$1w = /*#__PURE__*/css({
+  name: "e102ul",
+  styles: "width:14px;height:14px;fill:#fff"
+} );
+
+var _excluded$u = ["className"];
+var IconCluster = function IconCluster(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, _excluded$u);
+
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$1w, className),
+    glyph: img$L
+  }));
+};
+
+var img$K = {id: "CsgprEbbzu5y7v2fyIjR5", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 13.42A6.42 6.42 0 117 .58a6.42 6.42 0 010 12.84zm0-1.17a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5zM5.66 8.92l-.82.83L2.09 7l2.75-2.75.82.83L3.74 7l1.92 1.92zm2.68-3.84l.82-.83L11.91 7 9.16 9.75l-.82-.83L10.26 7 8.34 5.08zM6.99 10.6l-1.15-.2 1.17-7 1.15.2-1.17 7z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var styles$1v = /*#__PURE__*/css({
   name: "1j7hh44",
   styles: "fill:#fff"
 } );
+
 var IconCode = function IconCode(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1x, className),
-    glyph: img$M
+    className: cx(styles$1v, className),
+    glyph: img$K
   });
 };
 
-var img$L = {id: "MQ8-Y__9jxj6AA9OyyBgk", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.2 11.2v3.2c0 .922-.678 1.6-1.6 1.6h-8C.678 16 0 15.322 0 14.4v-8c0-.922.678-1.6 1.6-1.6h3.2V1.6C4.8.678 5.478 0 6.4 0h8c.922 0 1.6.678 1.6 1.6v8c0 .922-.678 1.6-1.6 1.6h-3.2zm-1.6 0H6.4c-.922 0-1.6-.678-1.6-1.6V6.4H1.6v8h8v-3.2zM6.4 1.6v8h8v-8h-8z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$J = {id: "Qy53H_REm9dWnze54nDVA", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.2 11.2v3.2c0 .922-.678 1.6-1.6 1.6h-8C.678 16 0 15.322 0 14.4v-8c0-.922.678-1.6 1.6-1.6h3.2V1.6C4.8.678 5.478 0 6.4 0h8c.922 0 1.6.678 1.6 1.6v8c0 .922-.678 1.6-1.6 1.6h-3.2zm-1.6 0H6.4c-.922 0-1.6-.678-1.6-1.6V6.4H1.6v8h8v-3.2zM6.4 1.6v8h8v-8h-8z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var styles$1w = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+var styles$1u = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
 var IconCopy = function IconCopy(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1w, className),
-    glyph: img$L
-  });
-};
-
-var img$K = {id: "pM9sCBOhFfGLg7Lcovc8G", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.5 1.5h-4v9h5v1h-5a1 1 0 01-1-1v-9a1 1 0 011-1h5.2l2.8 2.8V7h-1V4.5h-2a1 1 0 01-1-1v-2zm3 8v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-.2-6L7.5 1.7v1.8h1.8z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
-
-var styles$1v = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
-var IconCreateFile = function IconCreateFile(_ref) {
-  var className = _ref.className,
-      onClick = _ref.onClick;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1v, className),
-    glyph: img$K,
-    onClick: onClick
-  });
-};
-
-var img$J = {id: "qQUbEVMwVlsLA_DIcuMhY", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.5 9.5v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-8-5h9v-1H6c-.36 0-.6-.17-.85-.48L5 2.82c-.19-.25-.3-.32-.49-.32h-3v2zm9 1h-9v4H7v1H1.5a1 1 0 01-1-1v-7a1 1 0 011-1h3c.56 0 .92.24 1.27.69l.16.2c.08.1.1.11.07.11h4.5a1 1 0 011 1v4h-1v-2z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
-
-var styles$1u = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
-var IconCreateFolder = function IconCreateFolder(_ref) {
-  var className = _ref.className,
-      onClick = _ref.onClick;
-  return /*#__PURE__*/React.createElement(Icon$1, {
     className: cx(styles$1u, className),
-    glyph: img$J,
-    onClick: onClick
+    glyph: img$J
   });
 };
 
-var img$I = {id: "TtzZMaOxcSIw9EgrJjEcz", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.653 5.999l2.986-2.984a.46.46 0 10-.652-.651L6 5.346 3.013 2.363a.46.46 0 10-.652.651l2.986 2.984-2.986 2.984a.46.46 0 10.652.652L6 6.65l2.987 2.985a.458.458 0 00.652 0 .46.46 0 000-.651L6.653 5.999z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
+var img$I = {id: "kBJ_r4ofvgY7mQ0maXUb7", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.5 1.5h-4v9h5v1h-5a1 1 0 01-1-1v-9a1 1 0 011-1h5.2l2.8 2.8V7h-1V4.5h-2a1 1 0 01-1-1v-2zm3 8v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-.2-6L7.5 1.7v1.8h1.8z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
 
-var styles$1t = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentDanger65, ";" + ("" ), "" );
-var IconDelete = function IconDelete(_ref) {
+var styles$1t = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+
+var IconCreateFile = function IconCreateFile(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick;
   return /*#__PURE__*/React.createElement(Icon$1, {
@@ -836,27 +877,25 @@ var IconDelete = function IconDelete(_ref) {
   });
 };
 
-var img$H = {id: "kVdBS6D2AjXbvK9p6iT-3", content: "<svg width=\"35\" height=\"35\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0)\"><path d=\"M30.6 7.84L23.07.31c-.2-.2-.47-.31-.75-.31H5.15C4.57 0 4.1.48 4.1 1.06v32.88c0 .58.48 1.06 1.06 1.06h24.7c.58 0 1.06-.48 1.06-1.06V8.59c0-.28-.11-.55-.31-.75zm-7.22-4.22l3.9 3.91h-3.9v-3.9zM6.22 32.88V2.12h15.03V8.6c0 .59.48 1.06 1.07 1.06h6.46v23.23H6.22z\"/><path d=\"M23.2 15.79a1.06 1.06 0 10-1.5 1.5l1.96 1.95-1.95 1.95a1.06 1.06 0 001.5 1.5l2.7-2.7c.41-.42.41-1.09 0-1.5l-2.7-2.7zM13.3 15.79a1.06 1.06 0 00-1.5 0l-2.7 2.7a1.06 1.06 0 000 1.5l2.7 2.7c.2.2.47.31.74.31.94 0 1.43-1.14.75-1.81l-1.95-1.95 1.95-1.95c.42-.42.42-1.09 0-1.5zM19.46 13.8c-.55-.2-1.16.09-1.36.64l-3.2 8.88a1.06 1.06 0 002 .72l3.2-8.88c.2-.55-.09-1.16-.64-1.36z\"/></g></svg>", viewbox: "0 0 35 35", viewBox: "0 0 35 35" };
+var img$H = {id: "doYHqHhmEOmc53-q-6MTo", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.5 9.5v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-8-5h9v-1H6c-.36 0-.6-.17-.85-.48L5 2.82c-.19-.25-.3-.32-.49-.32h-3v2zm9 1h-9v4H7v1H1.5a1 1 0 01-1-1v-7a1 1 0 011-1h3c.56 0 .92.24 1.27.69l.16.2c.08.1.1.11.07.11h4.5a1 1 0 011 1v4h-1v-2z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
 
-var _excluded$u = ["className"];
-var styles$1s = /*#__PURE__*/css({
-  name: "bgbjt4",
-  styles: "width:36px;height:36px"
-} );
-var IconDocumentCode = function IconDocumentCode(_ref) {
+var styles$1s = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+
+var IconCreateFolder = function IconCreateFolder(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$u);
-
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
+      onClick = _ref.onClick;
+  return /*#__PURE__*/React.createElement(Icon$1, {
     className: cx(styles$1s, className),
-    glyph: img$H
-  }));
+    glyph: img$H,
+    onClick: onClick
+  });
 };
 
-var img$G = {id: "XF_3D41ZPSZchddN2BNaY", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5804 12.8625a.6211.6211 0 00.875 0l2.7839-2.7839a.6175.6175 0 000-.8732.6133.6133 0 00-.4357-.1804.6132.6132 0 00-.4357.1804l-1.7304 1.7303V.6179A.618.618 0 008.0196 0a.618.618 0 00-.6178.6179v10.3178L5.6714 9.2054c-.241-.2411-.6321-.2411-.8714 0a.6192.6192 0 00-.0018.8732l2.7822 2.7839zm7.8017-2.5696a.618.618 0 00-.6178.6178V14.4a.3685.3685 0 01-.3679.3679H1.6018a.3685.3685 0 01-.3679-.3679v-3.4911a.618.618 0 00-.6178-.6178c-.3411 0-.6161.2785-.6161.6178v3.9804c0 .6125.4982 1.1089 1.109 1.1089H14.891c.6125 0 1.1089-.4982 1.1089-1.1089v-3.9804c0-.3393-.2768-.616-.6179-.616z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$G = {id: "SREGuW4l5FMvhld6pT4h6", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M6.653 5.999l2.986-2.984a.46.46 0 10-.652-.651L6 5.346 3.013 2.363a.46.46 0 10-.652.651l2.986 2.984-2.986 2.984a.46.46 0 10.652.652L6 6.65l2.987 2.985a.458.458 0 00.652 0 .46.46 0 000-.651L6.653 5.999z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
 
-var styles$1r = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconDownload = function IconDownload(_ref) {
+var styles$1r = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentDanger65, ";" + ("" ), "" );
+
+var IconDelete = function IconDelete(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick;
   return /*#__PURE__*/React.createElement(Icon$1, {
@@ -866,448 +905,473 @@ var IconDownload = function IconDownload(_ref) {
   });
 };
 
-var img$F = {id: "-aQPhZZj_oniDEOANVZ-C", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M.76 11.95l3.98-1.68a.56.56 0 00.18-.12l6.72-6.72c.48-.48.48-1.26 0-1.73L10.3.36a1.22 1.22 0 00-1.73 0L1.85 7.08a.54.54 0 00-.12.18L.04 11.24c-.09.23-.02.45.12.6.14.14.37.2.6.11zM9.44 1.22l1.34 1.34-1.05 1.05-1.34-1.34 1.05-1.05zM2.8 7.85l4.73-4.72 1.34 1.34L4.15 9.2l-2.33.99.98-2.33z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
+var img$F = {id: "pdpZ0CWj5yzeZAs3e55ot", content: "<svg width=\"35\" height=\"35\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(#clip0)\"><path d=\"M30.6 7.84L23.07.31c-.2-.2-.47-.31-.75-.31H5.15C4.57 0 4.1.48 4.1 1.06v32.88c0 .58.48 1.06 1.06 1.06h24.7c.58 0 1.06-.48 1.06-1.06V8.59c0-.28-.11-.55-.31-.75zm-7.22-4.22l3.9 3.91h-3.9v-3.9zM6.22 32.88V2.12h15.03V8.6c0 .59.48 1.06 1.07 1.06h6.46v23.23H6.22z\"/><path d=\"M23.2 15.79a1.06 1.06 0 10-1.5 1.5l1.96 1.95-1.95 1.95a1.06 1.06 0 001.5 1.5l2.7-2.7c.41-.42.41-1.09 0-1.5l-2.7-2.7zM13.3 15.79a1.06 1.06 0 00-1.5 0l-2.7 2.7a1.06 1.06 0 000 1.5l2.7 2.7c.2.2.47.31.74.31.94 0 1.43-1.14.75-1.81l-1.95-1.95 1.95-1.95c.42-.42.42-1.09 0-1.5zM19.46 13.8c-.55-.2-1.16.09-1.36.64l-3.2 8.88a1.06 1.06 0 002 .72l3.2-8.88c.2-.55-.09-1.16-.64-1.36z\"/></g></svg>", viewbox: "0 0 35 35", viewBox: "0 0 35 35" };
 
-var styles$1q = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
-var IconEdit = function IconEdit(_ref) {
+var _excluded$t = ["className"];
+var IconDocumentCode = function IconDocumentCode(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, _excluded$t);
+
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$1H, className),
+    glyph: img$F
+  }));
+};
+
+var img$E = {id: "cUkoC4dCdpFsjt7saMFTS", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5804 12.8625a.6211.6211 0 00.875 0l2.7839-2.7839a.6175.6175 0 000-.8732.6133.6133 0 00-.4357-.1804.6132.6132 0 00-.4357.1804l-1.7304 1.7303V.6179A.618.618 0 008.0196 0a.618.618 0 00-.6178.6179v10.3178L5.6714 9.2054c-.241-.2411-.6321-.2411-.8714 0a.6192.6192 0 00-.0018.8732l2.7822 2.7839zm7.8017-2.5696a.618.618 0 00-.6178.6178V14.4a.3685.3685 0 01-.3679.3679H1.6018a.3685.3685 0 01-.3679-.3679v-3.4911a.618.618 0 00-.6178-.6178c-.3411 0-.6161.2785-.6161.6178v3.9804c0 .6125.4982 1.1089 1.109 1.1089H14.891c.6125 0 1.1089-.4982 1.1089-1.1089v-3.9804c0-.3393-.2768-.616-.6179-.616z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1q = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconDownload = function IconDownload(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick;
   return /*#__PURE__*/React.createElement(Icon$1, {
     className: cx(styles$1q, className),
-    glyph: img$F,
+    glyph: img$E,
     onClick: onClick
   });
 };
 
-var img$E = {id: "LNxn_poRi11JKgavwWA3V", content: "<svg width=\"120\" height=\"96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M79.382 57.127l.28.162c.093.054.186.108.279.16 4.903 2.831 7.657 4.42 9.082 6.188 2.381 2.952 2.381 6.36 0 9.312-1.425 1.767-4.179 3.356-9.082 6.187l-.559.323c-4.903 2.83-7.657 4.42-10.717 5.243-5.114 1.374-11.017 1.374-16.13 0-3.061-.823-5.815-2.413-10.718-5.243l-.558-.323c-4.904-2.83-7.658-4.42-9.083-6.187-2.381-2.952-2.381-6.36 0-9.312 1.425-1.767 4.179-3.357 9.083-6.187l.279-.161.279-.162c4.903-2.83 7.657-4.42 10.718-5.243 5.113-1.375 11.017-1.375 16.13 0 3.06.823 5.814 2.413 10.717 5.243zm-1.8 1.361c-5.259-3.036-7.629-4.386-10.158-5.066-4.327-1.163-9.322-1.163-13.649 0-2.529.68-4.899 2.03-10.159 5.067-5.26 3.036-7.598 4.404-8.775 5.864-2.015 2.498-2.015 5.382 0 7.88 1.177 1.46 3.515 2.828 8.775 5.864 5.26 3.037 7.63 4.387 10.16 5.067 4.326 1.163 9.321 1.163 13.648 0 2.53-.68 4.899-2.03 10.159-5.067 5.26-3.036 7.598-4.404 8.776-5.864 2.014-2.498 2.014-5.382 0-7.88-1.178-1.46-3.516-2.828-8.776-5.864z\" fill=\"#8E9199\"/><g filter=\"url(#filter0_b)\"><rect width=\"58.888\" height=\"58.888\" rx=\"12\" transform=\"scale(1.22477 .70706) rotate(45 -9.64 73.966)\" fill=\"#e3e3e3\"/></g><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M82.427 17.268l.107.062c3.867 2.232 6.84 3.948 8.99 5.44 2.175 1.506 3.605 2.846 4.29 4.344.845 1.846.845 3.787 0 5.634-.685 1.497-2.115 2.837-4.29 4.344-2.15 1.491-5.123 3.207-8.99 5.44l-.107.062c-3.867 2.232-6.84 3.948-9.423 5.19-2.61 1.255-4.931 2.08-7.525 2.476-3.198.488-6.56.488-9.759 0-2.594-.396-4.915-1.221-7.525-2.476-2.583-1.242-5.556-2.958-9.422-5.19l-.108-.063c-3.867-2.232-6.84-3.948-8.99-5.439-2.174-1.507-3.604-2.847-4.29-4.344-.844-1.847-.844-3.788 0-5.634.686-1.498 2.116-2.838 4.29-4.345 2.15-1.49 5.123-3.207 8.99-5.44l.108-.061c3.866-2.232 6.839-3.949 9.422-5.19 2.61-1.255 4.931-2.08 7.525-2.476a32.73 32.73 0 019.759 0c2.594.395 4.915 1.22 7.525 2.476 2.583 1.241 5.556 2.958 9.423 5.19zm-11.303-3.886c-2.453-1.18-4.388-1.834-6.396-2.14a27.696 27.696 0 00-8.257 0c-2.007.306-3.943.96-6.395 2.14-2.468 1.186-5.348 2.847-9.279 5.117s-6.809 3.932-8.864 5.356c-2.042 1.416-3.175 2.533-3.706 3.692-.714 1.562-.714 3.205 0 4.767.53 1.16 1.664 2.277 3.706 3.692 2.055 1.425 4.933 3.087 8.864 5.357 3.931 2.27 6.811 3.93 9.279 5.117 2.452 1.179 4.388 1.833 6.395 2.14 2.706.412 5.551.412 8.257 0 2.008-.307 3.944-.961 6.396-2.14 2.467-1.187 5.347-2.848 9.278-5.117 3.931-2.27 6.809-3.932 8.864-5.357 2.042-1.415 3.176-2.533 3.706-3.692.715-1.562.715-3.205 0-4.767-.53-1.159-1.664-2.276-3.706-3.692-2.055-1.424-4.933-3.087-8.864-5.356-3.931-2.27-6.81-3.93-9.278-5.117z\" fill=\"#8E9199\"/><defs><filter id=\"filter0_b\" x=\"-8.313\" y=\"-.348\" width=\"137.824\" height=\"99.856\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter></defs></svg>\n", viewbox: "0 0 120 96", viewBox: "0 0 120 96" };
+var img$D = {id: "ydwOryp5QIlTN_CLmSDD9", content: "<svg width=\"12\" height=\"12\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M.76 11.95l3.98-1.68a.56.56 0 00.18-.12l6.72-6.72c.48-.48.48-1.26 0-1.73L10.3.36a1.22 1.22 0 00-1.73 0L1.85 7.08a.54.54 0 00-.12.18L.04 11.24c-.09.23-.02.45.12.6.14.14.37.2.6.11zM9.44 1.22l1.34 1.34-1.05 1.05-1.34-1.34 1.05-1.05zM2.8 7.85l4.73-4.72 1.34 1.34L4.15 9.2l-2.33.99.98-2.33z\"/></svg>", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
 
-var styles$1p = /*#__PURE__*/css({
-  name: "1c2jlrb",
-  styles: "width:36px;height:45px"
-} );
-var IconEmptyData = function IconEmptyData(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1p, className),
-    glyph: img$E
-  });
-};
+var styles$1p = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
 
-var img$D = {id: "hL9DVP_i-XlgEPluFrgRs", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.8521 7.0442a.6363.6363 0 10-.977-.8156C12.7541 7.5716 10.5797 8.5455 8 8.5455s-4.754-.974-5.8751-2.317a.6364.6364 0 10-.977.8157c.3197.383.698.7343 1.125 1.0486v1.089a.6364.6364 0 001.2727 0v-.3295a9.29 9.29 0 001.2727.4968v1.1054a.6363.6363 0 001.2727 0v-.7999a10.994 10.994 0 001.273.1458l-.0003.0178v1.2728a.6363.6363 0 001.2728 0V9.8182l-.0003-.0178c.4337-.0244.859-.0736 1.273-.1458v.7999a.6364.6364 0 001.2728 0V9.3491a9.2909 9.2909 0 001.2727-.497v.3297a.6363.6363 0 101.2727 0V8.0926c.4268-.3143.8051-.6655 1.1247-1.0484z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var styles$1o = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconEyeClosed = function IconEyeClosed(_ref) {
+var IconEdit = function IconEdit(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1o, className),
+    className: cx(styles$1p, className),
     glyph: img$D,
     onClick: onClick
   });
 };
 
-var img$C = {id: "5KvvIZTq03z4th4RXGPbP", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.8317 7.6849a1.3328 1.3328 0 010 1.2968c-1.5475 2.7806-4.4621 4.6848-7.8316 4.6848-3.3697 0-6.2844-1.9042-7.8318-4.6848a1.3333 1.3333 0 010-1.2968C1.7157 4.9042 4.6303 3 8 3c3.3695 0 6.2841 1.9042 7.8316 4.6849zM8.0001 4.3333c2.8486 0 5.3357 1.6088 6.6665 4-1.3308 2.3911-3.8179 3.9999-6.6666 3.9999s-5.3359-1.6088-6.6665-4C2.664 5.9422 5.1513 4.3334 8 4.3334zm1.3333 4c0 .7364-.597 1.3333-1.3333 1.3333-.7364 0-1.3334-.597-1.3334-1.3333C6.6667 7.5969 7.2637 7 8.0001 7c.7363 0 1.3333.5969 1.3333 1.3333zm1.3333 0c0 1.4728-1.1939 2.6666-2.6667 2.6666-1.4727 0-2.6666-1.1938-2.6666-2.6666 0-1.4728 1.1939-2.6667 2.6666-2.6667 1.4728 0 2.6667 1.1939 2.6667 2.6667z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$C = {id: "abIIvgo5IqhJFDQaP2qjl", content: "<svg width=\"120\" height=\"96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M79.382 57.127l.28.162c.093.054.186.108.279.16 4.903 2.831 7.657 4.42 9.082 6.188 2.381 2.952 2.381 6.36 0 9.312-1.425 1.767-4.179 3.356-9.082 6.187l-.559.323c-4.903 2.83-7.657 4.42-10.717 5.243-5.114 1.374-11.017 1.374-16.13 0-3.061-.823-5.815-2.413-10.718-5.243l-.558-.323c-4.904-2.83-7.658-4.42-9.083-6.187-2.381-2.952-2.381-6.36 0-9.312 1.425-1.767 4.179-3.357 9.083-6.187l.279-.161.279-.162c4.903-2.83 7.657-4.42 10.718-5.243 5.113-1.375 11.017-1.375 16.13 0 3.06.823 5.814 2.413 10.717 5.243zm-1.8 1.361c-5.259-3.036-7.629-4.386-10.158-5.066-4.327-1.163-9.322-1.163-13.649 0-2.529.68-4.899 2.03-10.159 5.067-5.26 3.036-7.598 4.404-8.775 5.864-2.015 2.498-2.015 5.382 0 7.88 1.177 1.46 3.515 2.828 8.775 5.864 5.26 3.037 7.63 4.387 10.16 5.067 4.326 1.163 9.321 1.163 13.648 0 2.53-.68 4.899-2.03 10.159-5.067 5.26-3.036 7.598-4.404 8.776-5.864 2.014-2.498 2.014-5.382 0-7.88-1.178-1.46-3.516-2.828-8.776-5.864z\" fill=\"#8E9199\"/><g filter=\"url(#filter0_b)\"><rect width=\"58.888\" height=\"58.888\" rx=\"12\" transform=\"scale(1.22477 .70706) rotate(45 -9.64 73.966)\" fill=\"#e3e3e3\"/></g><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M82.427 17.268l.107.062c3.867 2.232 6.84 3.948 8.99 5.44 2.175 1.506 3.605 2.846 4.29 4.344.845 1.846.845 3.787 0 5.634-.685 1.497-2.115 2.837-4.29 4.344-2.15 1.491-5.123 3.207-8.99 5.44l-.107.062c-3.867 2.232-6.84 3.948-9.423 5.19-2.61 1.255-4.931 2.08-7.525 2.476-3.198.488-6.56.488-9.759 0-2.594-.396-4.915-1.221-7.525-2.476-2.583-1.242-5.556-2.958-9.422-5.19l-.108-.063c-3.867-2.232-6.84-3.948-8.99-5.439-2.174-1.507-3.604-2.847-4.29-4.344-.844-1.847-.844-3.788 0-5.634.686-1.498 2.116-2.838 4.29-4.345 2.15-1.49 5.123-3.207 8.99-5.44l.108-.061c3.866-2.232 6.839-3.949 9.422-5.19 2.61-1.255 4.931-2.08 7.525-2.476a32.73 32.73 0 019.759 0c2.594.395 4.915 1.22 7.525 2.476 2.583 1.241 5.556 2.958 9.423 5.19zm-11.303-3.886c-2.453-1.18-4.388-1.834-6.396-2.14a27.696 27.696 0 00-8.257 0c-2.007.306-3.943.96-6.395 2.14-2.468 1.186-5.348 2.847-9.279 5.117s-6.809 3.932-8.864 5.356c-2.042 1.416-3.175 2.533-3.706 3.692-.714 1.562-.714 3.205 0 4.767.53 1.16 1.664 2.277 3.706 3.692 2.055 1.425 4.933 3.087 8.864 5.357 3.931 2.27 6.811 3.93 9.279 5.117 2.452 1.179 4.388 1.833 6.395 2.14 2.706.412 5.551.412 8.257 0 2.008-.307 3.944-.961 6.396-2.14 2.467-1.187 5.347-2.848 9.278-5.117 3.931-2.27 6.809-3.932 8.864-5.357 2.042-1.415 3.176-2.533 3.706-3.692.715-1.562.715-3.205 0-4.767-.53-1.159-1.664-2.276-3.706-3.692-2.055-1.424-4.933-3.087-8.864-5.356-3.931-2.27-6.81-3.93-9.278-5.117z\" fill=\"#8E9199\"/><defs><filter id=\"filter0_b\" x=\"-8.313\" y=\"-.348\" width=\"137.824\" height=\"99.856\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter></defs></svg>\n", viewbox: "0 0 120 96", viewBox: "0 0 120 96" };
+
+var styles$1o = /*#__PURE__*/css({
+  name: "1c2jlrb",
+  styles: "width:36px;height:45px"
+} );
+
+var IconEmptyData = function IconEmptyData(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1o, className),
+    glyph: img$C
+  });
+};
+
+var img$B = {id: "GEi01RQkwoYnlO1TCCnEE", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.8521 7.0442a.6363.6363 0 10-.977-.8156C12.7541 7.5716 10.5797 8.5455 8 8.5455s-4.754-.974-5.8751-2.317a.6364.6364 0 10-.977.8157c.3197.383.698.7343 1.125 1.0486v1.089a.6364.6364 0 001.2727 0v-.3295a9.29 9.29 0 001.2727.4968v1.1054a.6363.6363 0 001.2727 0v-.7999a10.994 10.994 0 001.273.1458l-.0003.0178v1.2728a.6363.6363 0 001.2728 0V9.8182l-.0003-.0178c.4337-.0244.859-.0736 1.273-.1458v.7999a.6364.6364 0 001.2728 0V9.3491a9.2909 9.2909 0 001.2727-.497v.3297a.6363.6363 0 101.2727 0V8.0926c.4268-.3143.8051-.6655 1.1247-1.0484z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
 var styles$1n = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconEyeOpened = function IconEyeOpened(_ref) {
+
+var IconEyeClosed = function IconEyeClosed(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick;
   return /*#__PURE__*/React.createElement(Icon$1, {
     className: cx(styles$1n, className),
-    glyph: img$C,
-    onClick: onClick
-  });
-};
-
-var img$B = {id: "2EAF86_HiysYPTAxB7-RL", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.8 1.54v2.28h2.29L8.8 1.54zm2.55 3.55H8.8c-.7 0-1.27-.57-1.27-1.27V1.27h-5.1v11.46h8.92V5.09zM2.44 0h6.63l3.55 3.55v9.18c0 .7-.57 1.27-1.27 1.27H2.44c-.7 0-1.27-.57-1.27-1.27V1.27C1.17.57 1.74 0 2.44 0z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
-
-var styles$1m = /*#__PURE__*/css("fill:", colors.dark65, ";" + ("" ), "" );
-var IconFile = function IconFile(_ref) {
-  var className = _ref.className,
-      onClick = _ref.onClick;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1m, className),
     glyph: img$B,
     onClick: onClick
   });
 };
 
-var img$A = {id: "fKB3TPQdZss5gO3VdG7me", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.727 4.407c.703 0 1.273.58 1.273 1.297l-.015.14-1.26 5.776a1.283 1.283 0 01-1.27 1.213H1.272C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h4.453c.704 0 1.273.58 1.273 1.296v.648zm-1.273 0V3.76H6.997c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v3.17l.018-.085c.18-.738.512-1.14 1.254-1.14h8.91zm-10.166 7.13h10.166l.016-.14 1.242-5.693H2.569c-.01.032-.024.078-.039.14l-1.242 5.693z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var img$A = {id: "NP1FrHSpzT6ajNlMkInS-", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.8317 7.6849a1.3328 1.3328 0 010 1.2968c-1.5475 2.7806-4.4621 4.6848-7.8316 4.6848-3.3697 0-6.2844-1.9042-7.8318-4.6848a1.3333 1.3333 0 010-1.2968C1.7157 4.9042 4.6303 3 8 3c3.3695 0 6.2841 1.9042 7.8316 4.6849zM8.0001 4.3333c2.8486 0 5.3357 1.6088 6.6665 4-1.3308 2.3911-3.8179 3.9999-6.6666 3.9999s-5.3359-1.6088-6.6665-4C2.664 5.9422 5.1513 4.3334 8 4.3334zm1.3333 4c0 .7364-.597 1.3333-1.3333 1.3333-.7364 0-1.3334-.597-1.3334-1.3333C6.6667 7.5969 7.2637 7 8.0001 7c.7363 0 1.3333.5969 1.3333 1.3333zm1.3333 0c0 1.4728-1.1939 2.6666-2.6667 2.6666-1.4727 0-2.6666-1.1938-2.6666-2.6666 0-1.4728 1.1939-2.6667 2.6666-2.6667 1.4728 0 2.6667 1.1939 2.6667 2.6667z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var img$z = {id: "iDtKkKJQY1abj1f_OjAm4", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.273 6.352v5.185h11.454V6.352H1.273zm0-1.296h11.454V3.759h-5.73c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v2.593zm11.454-2.593c.703 0 1.273.58 1.273 1.296v7.778c0 .716-.57 1.296-1.273 1.296H1.273C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h5.726z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var styles$1m = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconEyeOpened = function IconEyeOpened(_ref) {
+  var className = _ref.className,
+      onClick = _ref.onClick;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1m, className),
+    glyph: img$A,
+    onClick: onClick
+  });
+};
+
+var img$z = {id: "Gt7D_6w9k5vf1ZUPMVj6E", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.8 1.54v2.28h2.29L8.8 1.54zm2.55 3.55H8.8c-.7 0-1.27-.57-1.27-1.27V1.27h-5.1v11.46h8.92V5.09zM2.44 0h6.63l3.55 3.55v9.18c0 .7-.57 1.27-1.27 1.27H2.44c-.7 0-1.27-.57-1.27-1.27V1.27C1.17.57 1.74 0 2.44 0z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
 
 var styles$1l = /*#__PURE__*/css("fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconFile = function IconFile(_ref) {
+  var className = _ref.className,
+      onClick = _ref.onClick;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1l, className),
+    glyph: img$z,
+    onClick: onClick
+  });
+};
+
+var img$y = {id: "fdGKXs6G78Qz8idkNUueK", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.727 4.407c.703 0 1.273.58 1.273 1.297l-.015.14-1.26 5.776a1.283 1.283 0 01-1.27 1.213H1.272C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h4.453c.704 0 1.273.58 1.273 1.296v.648zm-1.273 0V3.76H6.997c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v3.17l.018-.085c.18-.738.512-1.14 1.254-1.14h8.91zm-10.166 7.13h10.166l.016-.14 1.242-5.693H2.569c-.01.032-.024.078-.039.14l-1.242 5.693z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var img$x = {id: "ZGwuc36jhSs6h6gFfFZIJ", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.273 6.352v5.185h11.454V6.352H1.273zm0-1.296h11.454V3.759h-5.73c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v2.593zm11.454-2.593c.703 0 1.273.58 1.273 1.296v7.778c0 .716-.57 1.296-1.273 1.296H1.273C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h5.726z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+
+var styles$1k = /*#__PURE__*/css("fill:", colors.dark65, ";" + ("" ), "" );
+
 var IconFolder = function IconFolder(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick,
       opened = _ref.opened;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1l, className),
-    glyph: opened ? img$A : img$z,
+    className: cx(styles$1k, className),
+    glyph: opened ? img$y : img$x,
     onClick: onClick
   });
 };
 var IconFolderOpened = function IconFolderOpened(props) {
-  return /*#__PURE__*/React.createElement(IconFolder, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconFolder, _objectSpread2(_objectSpread2({}, props), {}, {
     opened: true
   }));
 };
 
-var img$y = {id: "uh3wZPJ2i4O_EGs7gRXiu", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\"><path d=\"M11.27 5.15l-.04-.28-.86-.29a4.54 4.54 0 0 0-.28-.67l.4-.81-.16-.24a5.48 5.48 0 0 0-1.2-1.2L8.9 1.5l-.81.4a4.6 4.6 0 0 0-.68-.27L7.12.77 6.86.73A5.3 5.3 0 0 0 6 .66c-.26 0-.53.02-.85.07l-.28.04-.28.86a4.75 4.75 0 0 0-.68.28l-.81-.4-.23.16a5.37 5.37 0 0 0-1.2 1.2l-.16.23.4.81c-.1.22-.2.45-.28.68l-.86.28-.04.28a5.3 5.3 0 0 0 0 1.7l.04.28.86.29c.08.23.17.46.28.67l-.4.81.17.23a5.43 5.43 0 0 0 1.2 1.2l.22.16.81-.4c.22.1.44.2.68.28l.28.86.28.04a5.28 5.28 0 0 0 1.7 0l.28-.04.28-.86c.23-.08.46-.17.68-.28l.8.4.24-.16c.25-.18.46-.36.65-.55a5.39 5.39 0 0 0 .55-.65l.16-.23-.4-.81c.1-.22.2-.44.28-.68l.86-.28.04-.28c.05-.31.07-.59.07-.85a4.74 4.74 0 0 0-.07-.85zM10.5 6c0 .16 0 .32-.03.5l-.41.14-.37.12-.11.37c-.07.21-.15.42-.26.62l-.18.34.37.73a4.25 4.25 0 0 1-.32.37l-.37.33-.73-.37-.34.18c-.2.1-.42.19-.63.26l-.37.11-.12.36-.13.42a3.98 3.98 0 0 1-.99 0l-.14-.42-.12-.36-.37-.12a3.52 3.52 0 0 1-.61-.25l-.34-.18-.35.17-.4.2a4.16 4.16 0 0 1-.68-.7l.36-.73-.18-.34a3.6 3.6 0 0 1-.25-.62l-.12-.37-.78-.26a3.99 3.99 0 0 1 0-.98l.78-.26.11-.37c.07-.2.16-.42.26-.62l.18-.34-.17-.34-.2-.4c.2-.25.44-.48.7-.69l.73.37.34-.18c.2-.1.4-.19.62-.26l.37-.11.12-.37.14-.41a4.35 4.35 0 0 1 .98 0l.26.78.37.1c.21.08.42.16.62.27l.34.17.73-.36a4.6 4.6 0 0 1 .7.7l-.36.72.17.34c.1.2.2.42.26.63l.12.37.36.12.41.14c.03.17.04.33.03.48zM6 3.96A2.04 2.04 0 0 0 3.96 6c0 1.13.92 2.04 2.04 2.04A2.04 2.04 0 0 0 8.04 6 2.04 2.04 0 0 0 6 3.96zm.85 2.89A1.2 1.2 0 0 1 6 7.2c-.32 0-.62-.13-.85-.35A1.2 1.2 0 0 1 4.8 6c0-.32.13-.62.36-.85a1.2 1.2 0 0 1 1.69 0 1.2 1.2 0 0 1 0 1.7z\"/></svg>\n", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
+var img$w = {id: "S86-eE_WUzLbQjL1Bzwgv", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\"><path d=\"M11.27 5.15l-.04-.28-.86-.29a4.54 4.54 0 0 0-.28-.67l.4-.81-.16-.24a5.48 5.48 0 0 0-1.2-1.2L8.9 1.5l-.81.4a4.6 4.6 0 0 0-.68-.27L7.12.77 6.86.73A5.3 5.3 0 0 0 6 .66c-.26 0-.53.02-.85.07l-.28.04-.28.86a4.75 4.75 0 0 0-.68.28l-.81-.4-.23.16a5.37 5.37 0 0 0-1.2 1.2l-.16.23.4.81c-.1.22-.2.45-.28.68l-.86.28-.04.28a5.3 5.3 0 0 0 0 1.7l.04.28.86.29c.08.23.17.46.28.67l-.4.81.17.23a5.43 5.43 0 0 0 1.2 1.2l.22.16.81-.4c.22.1.44.2.68.28l.28.86.28.04a5.28 5.28 0 0 0 1.7 0l.28-.04.28-.86c.23-.08.46-.17.68-.28l.8.4.24-.16c.25-.18.46-.36.65-.55a5.39 5.39 0 0 0 .55-.65l.16-.23-.4-.81c.1-.22.2-.44.28-.68l.86-.28.04-.28c.05-.31.07-.59.07-.85a4.74 4.74 0 0 0-.07-.85zM10.5 6c0 .16 0 .32-.03.5l-.41.14-.37.12-.11.37c-.07.21-.15.42-.26.62l-.18.34.37.73a4.25 4.25 0 0 1-.32.37l-.37.33-.73-.37-.34.18c-.2.1-.42.19-.63.26l-.37.11-.12.36-.13.42a3.98 3.98 0 0 1-.99 0l-.14-.42-.12-.36-.37-.12a3.52 3.52 0 0 1-.61-.25l-.34-.18-.35.17-.4.2a4.16 4.16 0 0 1-.68-.7l.36-.73-.18-.34a3.6 3.6 0 0 1-.25-.62l-.12-.37-.78-.26a3.99 3.99 0 0 1 0-.98l.78-.26.11-.37c.07-.2.16-.42.26-.62l.18-.34-.17-.34-.2-.4c.2-.25.44-.48.7-.69l.73.37.34-.18c.2-.1.4-.19.62-.26l.37-.11.12-.37.14-.41a4.35 4.35 0 0 1 .98 0l.26.78.37.1c.21.08.42.16.62.27l.34.17.73-.36a4.6 4.6 0 0 1 .7.7l-.36.72.17.34c.1.2.2.42.26.63l.12.37.36.12.41.14c.03.17.04.33.03.48zM6 3.96A2.04 2.04 0 0 0 3.96 6c0 1.13.92 2.04 2.04 2.04A2.04 2.04 0 0 0 8.04 6 2.04 2.04 0 0 0 6 3.96zm.85 2.89A1.2 1.2 0 0 1 6 7.2c-.32 0-.62-.13-.85-.35A1.2 1.2 0 0 1 4.8 6c0-.32.13-.62.36-.85a1.2 1.2 0 0 1 1.69 0 1.2 1.2 0 0 1 0 1.7z\"/></svg>\n", viewbox: "0 0 12 12", viewBox: "0 0 12 12" };
 
-var styles$1k = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+var styles$1j = /*#__PURE__*/css("width:12px;height:12px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+
 var IconGear = function IconGear(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1k, className),
-    glyph: img$y
-  });
-};
-
-var img$x = {id: "R6P3XNfSq1BDplpHzPu2w", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 14s5-5.753 5-8.688C12 2.378 9.761 0 7 0S2 2.378 2 5.313C2 8.247 7 14 7 14zm0-7a2 2 0 100-4 2 2 0 000 4z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
-
-var _excluded$t = ["className"];
-var styles$1j = /*#__PURE__*/css("width:14px;height:14px;fill:", colors.intentDanger, ";" + ("" ), "" );
-var IconGeoPin = function IconGeoPin(_ref) {
-  var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$t);
-
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
     className: cx(styles$1j, className),
-    glyph: img$x
-  }));
-};
-
-var img$w = {id: "A67Ay-f1K9HCB9uku5MEM", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 0C3.58125 0 0 3.58125 0 8c0 4.4188 3.58125 8 8 8 4.4188 0 8-3.5812 8-8 0-4.41875-3.5812-8-8-8zm4.8609 12.8609c-.6312.6313-1.3671 1.1282-2.1859 1.4735-.84687.3594-1.74687.5406-2.675.5406-.92812 0-1.82812-.1812-2.675-.5391-.81875-.3468-1.55312-.8421-2.18594-1.4734-.63125-.6312-1.12812-1.3672-1.47344-2.1859C1.30625 9.82812 1.125 8.92813 1.125 8c0-.92812.18125-1.82812.53906-2.675.34688-.81875.84219-1.55312 1.47344-2.18594.63125-.63125 1.36719-1.12812 2.18594-1.47344C6.17188 1.30625 7.07188 1.125 8 1.125c.92813 0 1.82813.18125 2.675.53906.8188.34688 1.5531.84219 2.1859 1.47344.6313.63125 1.1282 1.36719 1.4735 2.18594.3594.84844.5406 1.74844.5406 2.67656 0 .92813-.1812 1.82813-.5391 2.675-.3468.8188-.8421 1.5547-1.475 2.1859zM9.84688 11.025H8.51562V5.55469c0-.31094-.25156-.5625-.5625-.5625h-1.5c-.31093 0-.5625.25156-.5625.5625s.25157.5625.5625.5625h.9375V11.025H6.05938c-.31094 0-.5625.2516-.5625.5625s.25156.5625.5625.5625H9.84688c.31092 0 .56252-.2516.56252-.5625s-.2516-.5625-.56252-.5625zM7.39062 3.44531c0 .31066.25185.5625.5625.5625.31067 0 .5625-.25184.5625-.5625s-.25183-.5625-.5625-.5625c-.31065 0-.5625.25184-.5625.5625z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var styles$1i = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconInfo = function IconInfo(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1i, className),
     glyph: img$w
   });
 };
 
-var img$v = {id: "kcayi6hS00YP7jubjuAMF", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\"><path d=\"M7.392 9.142l-2.444 2.446a1.78 1.78 0 0 1-1.266.525c-.479 0-.929-.186-1.266-.525a1.784 1.784 0 0 1-.002-2.532L4.86 6.61a.491.491 0 1 0-.696-.696L1.72 8.36a2.758 2.758 0 0 0-.814 1.963c0 .741.289 1.439.814 1.962a2.767 2.767 0 0 0 1.961.812 2.76 2.76 0 0 0 1.962-.812l2.446-2.446a.491.491 0 1 0-.696-.696zm4.89-7.422a2.778 2.778 0 0 0-3.924 0L5.912 4.166a.491.491 0 1 0 .696.696l2.445-2.446a1.793 1.793 0 0 1 3.059 1.266c0 .478-.186.928-.525 1.266L9.14 7.394a.491.491 0 0 0 .349.84.493.493 0 0 0 .348-.144l2.446-2.446a2.777 2.777 0 0 0-.001-3.924zM6.639 8.087l1.394-1.395a.491.491 0 1 0-.696-.695L5.942 7.39a.491.491 0 1 0 .696.696z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var img$v = {id: "QEFxJJANMPn8cwXezSMA8", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 14s5-5.753 5-8.688C12 2.378 9.761 0 7 0S2 2.378 2 5.313C2 8.247 7 14 7 14zm0-7a2 2 0 100-4 2 2 0 000 4z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
 
-var styles$1h = /*#__PURE__*/css("width:14px;height:14px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconLink = function IconLink(_ref) {
+var styles$1i = /*#__PURE__*/css("width:14px;height:14px;fill:", colors.intentDanger, ";" + ("" ), "" );
+
+var _excluded$s = ["className"];
+var IconGeoPin = function IconGeoPin(_ref) {
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, _excluded$s);
+
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$1i, className),
+    glyph: img$v
+  }));
+};
+
+var img$u = {id: "i-Kqexl_svfu_7_F-CTMl", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 0C3.58125 0 0 3.58125 0 8c0 4.4188 3.58125 8 8 8 4.4188 0 8-3.5812 8-8 0-4.41875-3.5812-8-8-8zm4.8609 12.8609c-.6312.6313-1.3671 1.1282-2.1859 1.4735-.84687.3594-1.74687.5406-2.675.5406-.92812 0-1.82812-.1812-2.675-.5391-.81875-.3468-1.55312-.8421-2.18594-1.4734-.63125-.6312-1.12812-1.3672-1.47344-2.1859C1.30625 9.82812 1.125 8.92813 1.125 8c0-.92812.18125-1.82812.53906-2.675.34688-.81875.84219-1.55312 1.47344-2.18594.63125-.63125 1.36719-1.12812 2.18594-1.47344C6.17188 1.30625 7.07188 1.125 8 1.125c.92813 0 1.82813.18125 2.675.53906.8188.34688 1.5531.84219 2.1859 1.47344.6313.63125 1.1282 1.36719 1.4735 2.18594.3594.84844.5406 1.74844.5406 2.67656 0 .92813-.1812 1.82813-.5391 2.675-.3468.8188-.8421 1.5547-1.475 2.1859zM9.84688 11.025H8.51562V5.55469c0-.31094-.25156-.5625-.5625-.5625h-1.5c-.31093 0-.5625.25156-.5625.5625s.25157.5625.5625.5625h.9375V11.025H6.05938c-.31094 0-.5625.2516-.5625.5625s.25156.5625.5625.5625H9.84688c.31092 0 .56252-.2516.56252-.5625s-.2516-.5625-.56252-.5625zM7.39062 3.44531c0 .31066.25185.5625.5625.5625.31067 0 .5625-.25184.5625-.5625s-.25183-.5625-.5625-.5625c-.31065 0-.5625.25184-.5625.5625z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1h = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconInfo = function IconInfo(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
     className: cx(styles$1h, className),
-    glyph: img$v
-  });
-};
-
-var img$u = {id: "uNn56cz_Mj1at6IgEQPbN", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"2\" cy=\"8\" r=\"2\"/><circle cx=\"8\" cy=\"8\" r=\"2\"/><circle cx=\"14\" cy=\"8\" r=\"2\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var styles$1g = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
-var IconMore = function IconMore(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1g, className),
     glyph: img$u
   });
 };
 
-var img$t = {id: "r8Org_FCqcc9eXnVgPmWo", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><g opacity=\".65\"><path d=\"M2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2z\"/></g><rect x=\"5\" y=\"2\" width=\"9\" height=\"2\" rx=\"1\"/><rect x=\"5\" y=\"7\" width=\"9\" height=\"2\" rx=\"1\"/><rect x=\"5\" y=\"12\" width=\"9\" height=\"2\" rx=\"1\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$t = {id: "1ab2RR4x7aDgDv3oM3vXf", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\"><path d=\"M7.392 9.142l-2.444 2.446a1.78 1.78 0 0 1-1.266.525c-.479 0-.929-.186-1.266-.525a1.784 1.784 0 0 1-.002-2.532L4.86 6.61a.491.491 0 1 0-.696-.696L1.72 8.36a2.758 2.758 0 0 0-.814 1.963c0 .741.289 1.439.814 1.962a2.767 2.767 0 0 0 1.961.812 2.76 2.76 0 0 0 1.962-.812l2.446-2.446a.491.491 0 1 0-.696-.696zm4.89-7.422a2.778 2.778 0 0 0-3.924 0L5.912 4.166a.491.491 0 1 0 .696.696l2.445-2.446a1.793 1.793 0 0 1 3.059 1.266c0 .478-.186.928-.525 1.266L9.14 7.394a.491.491 0 0 0 .349.84.493.493 0 0 0 .348-.144l2.446-2.446a2.777 2.777 0 0 0-.001-3.924zM6.639 8.087l1.394-1.395a.491.491 0 1 0-.696-.695L5.942 7.39a.491.491 0 1 0 .696.696z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
 
-var styles$1f = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" );
-var IconMoreBurger = function IconMoreBurger(_ref) {
+var styles$1g = /*#__PURE__*/css("width:14px;height:14px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconLink = function IconLink(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1f, className),
+    className: cx(styles$1g, className),
     glyph: img$t
   });
 };
 
-var img$s = {id: "Xt9b7Tobbmu5mq4e_7iMz", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.2703 4.775L6.15313 9.90781L4.81875 7.57188C4.66406 7.30156 4.32188 7.20781 4.05156 7.3625C3.78125 7.51719 3.6875 7.85938 3.84219 8.12969L5.54219 11.1062C5.64531 11.2875 5.83594 11.3906 6.03125 11.3906C6.12656 11.3906 6.22188 11.3672 6.30938 11.3172C6.35938 11.2875 6.40469 11.2531 6.44219 11.2125C6.44375 11.2109 6.44688 11.2078 6.44844 11.2063L12.0656 5.57188C12.2844 5.35156 12.2844 4.99531 12.0641 4.77656C11.8453 4.55469 11.4906 4.55469 11.2703 4.775ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\"/>\n</svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$s = {id: "ani3i4NSiqFXm6SIFooTm", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"2\" cy=\"8\" r=\"2\"/><circle cx=\"8\" cy=\"8\" r=\"2\"/><circle cx=\"14\" cy=\"8\" r=\"2\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var _excluded$s = ["className"];
-var styles$1e = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentSuccess, ";" + ("" ), "" );
+var styles$1f = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
+var IconMore = function IconMore(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1f, className),
+    glyph: img$s
+  });
+};
+
+var img$r = {id: "90o7btjGTS8w7Nsg2FkWD", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><g opacity=\".65\"><path d=\"M2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2z\"/></g><rect x=\"5\" y=\"2\" width=\"9\" height=\"2\" rx=\"1\"/><rect x=\"5\" y=\"7\" width=\"9\" height=\"2\" rx=\"1\"/><rect x=\"5\" y=\"12\" width=\"9\" height=\"2\" rx=\"1\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1e = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+
+var IconMoreBurger = function IconMoreBurger(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1e, className),
+    glyph: img$r
+  });
+};
+
+var img$q = {id: "jJb-JlfMqqH-tJqwLV13h", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M11.2703 4.775L6.15313 9.90781L4.81875 7.57188C4.66406 7.30156 4.32188 7.20781 4.05156 7.3625C3.78125 7.51719 3.6875 7.85938 3.84219 8.12969L5.54219 11.1062C5.64531 11.2875 5.83594 11.3906 6.03125 11.3906C6.12656 11.3906 6.22188 11.3672 6.30938 11.3172C6.35938 11.2875 6.40469 11.2531 6.44219 11.2125C6.44375 11.2109 6.44688 11.2078 6.44844 11.2063L12.0656 5.57188C12.2844 5.35156 12.2844 4.99531 12.0641 4.77656C11.8453 4.55469 11.4906 4.55469 11.2703 4.775ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\"/>\n</svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1d = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentSuccess, ";" + ("" ), "" );
+
+var _excluded$r = ["className"];
 var IconOk = function IconOk(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$s);
+      props = _objectWithoutProperties(_ref, _excluded$r);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$1e, className),
-    glyph: img$s
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$1d, className),
+    glyph: img$q
   }));
 };
 
-var img$r = {id: "nc-hhLmTF1cqCJ2yxggUU", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\"/><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$p = {id: "VQ5doFLrtMPv4Wr3Jojus", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\"/><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var img$q = {id: "fS_SgFrRKIjTf7nq8J6KU", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\"/><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$o = {id: "VXBcTX1M_-1zl4RgVXnnQ", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\"/><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var img$p = {id: "PPCkxJsaRzLMuA5lnRqgy", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$n = {id: "SxBMdP0QgfmEDhekH8NrH", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var img$o = {id: "IU7jiS825iSg8DBcGI0IN", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" stroke=\"#D9D9D9\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$m = {id: "wed9nINJQjhWLd0vsQwyA", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" stroke=\"#D9D9D9\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$1c = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";stroke:", colors.intentPrimary, ";" + ("" ), "" );
+var stylesDisabled = /*#__PURE__*/css("fill:", colors.intentPrimaryDisabled, ";stroke:", colors.intentPrimaryDisabled, ";" + ("" ), "" );
 
 var CHECKED = 1;
 var DISABLED = 2;
-var states = [img$o, img$q, img$p, img$r];
-var styles$1d = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";stroke:", colors.intentPrimary, ";" + ("" ), "" );
-var stylesDisabled = /*#__PURE__*/css("fill:", colors.intentPrimaryDisabled, ";stroke:", colors.intentPrimaryDisabled, ";" + ("" ), "" );
+var states = [img$m, img$o, img$n, img$p];
 var IconRadio = function IconRadio(_ref) {
   var checked = _ref.checked,
       className = _ref.className,
       disabled = _ref.disabled;
   var mask = (disabled ? DISABLED : 0) + (checked ? CHECKED : 0);
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1d, _defineProperty({}, stylesDisabled, disabled), className),
-    glyph: states[mask]
-  });
+  return (
+    /*#__PURE__*/
+    // ask Timur
+    React.createElement(Icon$1, {
+      className: cx(styles$1c, _defineProperty({}, stylesDisabled, disabled), className),
+      glyph: states[mask]
+    })
+  );
 };
 var IconRadioChecked = function IconRadioChecked(props) {
-  return /*#__PURE__*/React.createElement(IconRadio, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconRadio, _objectSpread2(_objectSpread2({}, props), {}, {
     checked: true
   }));
 };
 var IconRadioDisabled = function IconRadioDisabled(props) {
-  return /*#__PURE__*/React.createElement(IconRadio, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconRadio, _objectSpread2(_objectSpread2({}, props), {}, {
     disabled: true
   }));
 };
 var IconRadioCheckedDisabled = function IconRadioCheckedDisabled(props) {
-  return /*#__PURE__*/React.createElement(IconRadio, Object.assign({}, props, {
+  return /*#__PURE__*/React.createElement(IconRadio, _objectSpread2(_objectSpread2({}, props), {}, {
     checked: true,
     disabled: true
   }));
 };
 
-var img$n = {id: "JngjdhlmachZzcr_Ixbyi", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.646 4H9.6v1.6h5.6V0h-1.6v2.616C12.22.946 10.243 0 8 0a8 8 0 108 8h-1.6A6.4 6.4 0 118 1.6c1.915 0 3.557.863 4.646 2.4z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$l = {id: "OTQbFd9rahm7EhG-G6q0M", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.646 4H9.6v1.6h5.6V0h-1.6v2.616C12.22.946 10.243 0 8 0a8 8 0 108 8h-1.6A6.4 6.4 0 118 1.6c1.915 0 3.557.863 4.646 2.4z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var styles$1c = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+var styles$1b = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" );
+
 var IconRefresh = function IconRefresh(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1c, className),
-    glyph: img$n
-  });
-};
-
-var img$m = {id: "L-E3850PcmT7RZngqb6Wk", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.333 1.167h9.334c.644 0 1.166.522 1.166 1.166V7c0 .644-.522 1.167-1.166 1.167H2.333A1.167 1.167 0 011.167 7V2.333c0-.644.522-1.166 1.166-1.166zm0 1.166V7h9.334V2.333H2.333zm10.5 7V10.5H1.167V9.333h11.666zm0 2.334v1.166H1.167v-1.166h11.666z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
-
-var styles$1b = /*#__PURE__*/css({
-  name: "1j7hh44",
-  styles: "fill:#fff"
-} );
-var IconSchema = function IconSchema(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
     className: cx(styles$1b, className),
-    glyph: img$m
-  });
-};
-
-var img$l = {id: "ekupOmKe0W3npX_CDEL7K", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15.17 14.37l-3.21-3.21a6 6 0 1 0-.8.8l3.21 3.2a.56.56 0 0 0 .8 0 .57.57 0 0 0 0-.79zm-5.94-2.54a4.82 4.82 0 0 1-3.8 0A4.86 4.86 0 0 1 3.9 3.89a4.86 4.86 0 1 1 6.89 6.89c-.45.45-.97.8-1.55 1.05z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
-
-var styles$1a = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark25, ";" + ("" ), "" );
-var IconSearch = function IconSearch(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$1a, className),
     glyph: img$l
   });
 };
 
-var img$k = {id: "gOtt0pbBctJIEth_qLaVr", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect y=\"3\" width=\"16\" height=\"2\" rx=\"1\" /><rect y=\"7\" width=\"11\" height=\"2\" rx=\"1\" /><rect y=\"11\" width=\"7\" height=\"2\" rx=\"1\" /></svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$k = {id: "BmqupW4RbA_ofFqTTCJl6", content: "<svg width=\"14\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.333 1.167h9.334c.644 0 1.166.522 1.166 1.166V7c0 .644-.522 1.167-1.166 1.167H2.333A1.167 1.167 0 011.167 7V2.333c0-.644.522-1.166 1.166-1.166zm0 1.166V7h9.334V2.333H2.333zm10.5 7V10.5H1.167V9.333h11.666zm0 2.334v1.166H1.167v-1.166h11.666z\"/></svg>", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
 
-var styles$19 = {
+var styles$1a = /*#__PURE__*/css({
+  name: "1j7hh44",
+  styles: "fill:#fff"
+} );
+
+var IconSchema = function IconSchema(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1a, className),
+    glyph: img$k
+  });
+};
+
+var img$j = {id: "NL99d3kJ9EVQfibyIOD7b", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M15.17 14.37l-3.21-3.21a6 6 0 1 0-.8.8l3.21 3.2a.56.56 0 0 0 .8 0 .57.57 0 0 0 0-.79zm-5.94-2.54a4.82 4.82 0 0 1-3.8 0A4.86 4.86 0 0 1 3.9 3.89a4.86 4.86 0 1 1 6.89 6.89c-.45.45-.97.8-1.55 1.05z\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$19 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark25, ";" + ("" ), "" );
+
+var IconSearch = function IconSearch(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$19, className),
+    glyph: img$j
+  });
+};
+
+var img$i = {id: "FoajdVsxHTLdiLzrjePkz", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><rect y=\"3\" width=\"16\" height=\"2\" rx=\"1\" /><rect y=\"7\" width=\"11\" height=\"2\" rx=\"1\" /><rect y=\"11\" width=\"7\" height=\"2\" rx=\"1\" /></svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var styles$18 = {
   icon: /*#__PURE__*/css("width:16px;height:16px;fill:", colors.dark65, ";" + ("" ), "" ),
   asc: /*#__PURE__*/css({
     name: "eufijl",
     styles: "transform:rotateX(180deg)"
   } )
 };
+
 var IconSortableDesc = function IconSortableDesc(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$19.icon, className),
-    glyph: img$k
+    className: cx(styles$18.icon, className),
+    glyph: img$i
   });
 };
 var IconSortableAsc = function IconSortableAsc(_ref2) {
   var className = _ref2.className;
   return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$19.icon, styles$19.asc, className),
-    glyph: img$k
-  });
-};
-
-var img$j = {id: "XW_1q6Gh1siufyO_dlYed", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.0\" width=\"64\" height=\"64\" viewBox=\"0 0 128 128\"><g><circle cx=\"16\" cy=\"64\" r=\"16\"/><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\"/></g></svg>", viewbox: "0 0 128 128", viewBox: "0 0 128 128" };
-
-var animations = /*#__PURE__*/keyframes({
-  name: "6x093u",
-  styles: "to{transform:rotate(-1turn);}"
-} );
-var styles$18 = /*#__PURE__*/css("width:16px;height:16px;animation:", animations, " 720ms infinite steps(8);" + ("" ), "" );
-var IconSpinner = function IconSpinner(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$18, className),
-    glyph: img$j
-  });
-};
-
-var img$i = {id: "o9HyST-jLLd2VAbb2vVfc", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.0\" width=\"64\" height=\"64\" viewBox=\"0 0 128 128\"><g><circle cx=\"16\" cy=\"64\" r=\"16\"/><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\"/><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\"/><animateTransform attributeName=\"transform\" type=\"rotate\" values=\"0 64 64;315 64 64;270 64 64;225 64 64;180 64 64;135 64 64;90 64 64;45 64 64\" calcMode=\"discrete\" dur=\"720ms\" repeatCount=\"indefinite\"/></g></svg>", viewbox: "0 0 128 128", viewBox: "0 0 128 128" };
-
-var styles$17 = /*#__PURE__*/css({
-  name: "157xhr7",
-  styles: "width:16px;height:16px"
-} );
-/**
- * @deprecated Use the IconSpinner component instead (../IconSpinner)
- */
-
-var IconSpinnerLegacy = function IconSpinnerLegacy(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$17, className),
+    className: cx(styles$18.icon, styles$18.asc, className),
     glyph: img$i
   });
 };
 
-var img$h = {id: "NZBiAJiKEet6lgeA6Qa1N", content: "<svg width=\"24\" height=\"24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#EFEFEF\"/><path d=\"M15.959 14.412c-.196 0-.392-.025-.583-.073-1.15-.29-2.095-1.147-2.44-2.277v-.055a3.869 3.869 0 0 1 2.209-2.142c.26-.096.536-.144.814-.144 1.294 0 2.358 1.058 2.358 2.345a2.363 2.363 0 0 1-2.358 2.346zm-4.894-2.35c-.345 1.13-1.29 1.987-2.44 2.277-.19.048-.387.073-.583.073-1.294 0-2.359-1.06-2.359-2.346 0-1.287 1.065-2.345 2.359-2.345.278 0 .554.048.815.144a3.867 3.867 0 0 1 2.208 2.142v.055zM15.979 8c-.467 0-.928.08-1.366.238a5.332 5.332 0 0 0-2.614 1.973 5.324 5.324 0 0 0-2.611-1.973A4.037 4.037 0 0 0 8.022 8C5.816 8 4 9.806 4 12s1.816 4 4.022 4c.234 0 .467-.02.698-.06l.286-.068A5.674 5.674 0 0 0 12 13.71a5.67 5.67 0 0 0 2.994 2.162l.287.068c.23.04.464.06.697.061C18.184 16 20 14.194 20 12s-1.816-4-4.021-4z\" fill=\"#FF272C\"/></svg>", viewbox: "0 0 24 24", viewBox: "0 0 24 24" };
+var img$h = {id: "7js-A-zbUMfeuHdTLx9FP", content: "<svg width=\"24\" height=\"24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#EFEFEF\"/><path d=\"M15.959 14.412c-.196 0-.392-.025-.583-.073-1.15-.29-2.095-1.147-2.44-2.277v-.055a3.869 3.869 0 0 1 2.209-2.142c.26-.096.536-.144.814-.144 1.294 0 2.358 1.058 2.358 2.345a2.363 2.363 0 0 1-2.358 2.346zm-4.894-2.35c-.345 1.13-1.29 1.987-2.44 2.277-.19.048-.387.073-.583.073-1.294 0-2.359-1.06-2.359-2.346 0-1.287 1.065-2.345 2.359-2.345.278 0 .554.048.815.144a3.867 3.867 0 0 1 2.208 2.142v.055zM15.979 8c-.467 0-.928.08-1.366.238a5.332 5.332 0 0 0-2.614 1.973 5.324 5.324 0 0 0-2.611-1.973A4.037 4.037 0 0 0 8.022 8C5.816 8 4 9.806 4 12s1.816 4 4.022 4c.234 0 .467-.02.698-.06l.286-.068A5.674 5.674 0 0 0 12 13.71a5.67 5.67 0 0 0 2.994 2.162l.287.068c.23.04.464.06.697.061C18.184 16 20 14.194 20 12s-1.816-4-4.021-4z\" fill=\"#FF272C\"/></svg>", viewbox: "0 0 24 24", viewBox: "0 0 24 24" };
 
-var _excluded$r = ["className"];
-var styles$16 = /*#__PURE__*/css({
+var styles$17 = /*#__PURE__*/css({
   name: "rrel8y",
   styles: "width:24px;height:24px"
 } );
+
+var _excluded$q = ["className"];
 var IconUser = function IconUser(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$r);
+      props = _objectWithoutProperties(_ref, _excluded$q);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$16, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$17, className),
     glyph: img$h
   }));
 };
 
-var img$g = {id: "6jK2fhSQ9E4UFLj3zSxeP", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\">\n    <path d=\"M11.935 6.698a3.034 3.034 0 0 0-.899-.609c.386-.198.717-.487.964-.843.302-.434.462-.94.462-1.467 0-1.44-1.2-2.612-2.677-2.612-.559 0-1.094.166-1.548.48a2.617 2.617 0 0 0-.898 1.07 2.698 2.698 0 0 0-1.961-.834C3.902 1.883 2.7 3.055 2.7 4.496c0 .526.16 1.032.462 1.466.247.356.578.644.964.844-.333.147-.635.351-.899.61a2.916 2.916 0 0 0-.895 2.098v2.14c0 .65.542 1.18 1.21 1.18h3.673c.485 0 .923-.287 1.112-.718h3.297c.665 0 1.209-.528 1.209-1.18v-2.14a2.925 2.925 0 0 0-.899-2.098zM8.562 2.585c.326-.32.76-.495 1.223-.495.463 0 .897.175 1.223.495a1.657 1.657 0 0 1 0 2.387c-.326.32-.76.495-1.223.495-.463 0-.897-.175-1.223-.495a1.652 1.652 0 0 1-.507-1.193c0-.452.18-.876.507-1.194zm-4.916 1.91c0-.451.18-.875.507-1.193.326-.32.76-.495 1.223-.495.464 0 .898.175 1.224.495a1.656 1.656 0 0 1 0 2.387c-.326.32-.76.495-1.224.495-.461 0-.897-.175-1.224-.495a1.658 1.658 0 0 1-.506-1.193zm3.828 7.157a.262.262 0 0 1-.26.255H3.54a.258.258 0 0 1-.261-.255V9.514c0-.544.218-1.057.616-1.445a2.108 2.108 0 0 1 1.481-.602 2.108 2.108 0 0 1 1.5.62l.003.005c.384.384.595.89.595 1.424v2.137zM7.24 7.167a3.022 3.022 0 0 0-.612-.362 2.656 2.656 0 0 0 1.195-1.248c.205.214.445.395.71.531a3.04 3.04 0 0 0-1.293 1.08zm4.643 3.77c0 .14-.117.254-.26.254h-3.2V9.513c0-.588-.177-1.153-.51-1.639a2.107 2.107 0 0 1 1.872-1.125c.558 0 1.084.213 1.482.602.398.388.616.901.616 1.445v2.14z\"/>\n</svg>\n", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
+var img$g = {id: "QoLCXkhoTafIlkJ_hQJ6p", content: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\">\n    <path d=\"M11.935 6.698a3.034 3.034 0 0 0-.899-.609c.386-.198.717-.487.964-.843.302-.434.462-.94.462-1.467 0-1.44-1.2-2.612-2.677-2.612-.559 0-1.094.166-1.548.48a2.617 2.617 0 0 0-.898 1.07 2.698 2.698 0 0 0-1.961-.834C3.902 1.883 2.7 3.055 2.7 4.496c0 .526.16 1.032.462 1.466.247.356.578.644.964.844-.333.147-.635.351-.899.61a2.916 2.916 0 0 0-.895 2.098v2.14c0 .65.542 1.18 1.21 1.18h3.673c.485 0 .923-.287 1.112-.718h3.297c.665 0 1.209-.528 1.209-1.18v-2.14a2.925 2.925 0 0 0-.899-2.098zM8.562 2.585c.326-.32.76-.495 1.223-.495.463 0 .897.175 1.223.495a1.657 1.657 0 0 1 0 2.387c-.326.32-.76.495-1.223.495-.463 0-.897-.175-1.223-.495a1.652 1.652 0 0 1-.507-1.193c0-.452.18-.876.507-1.194zm-4.916 1.91c0-.451.18-.875.507-1.193.326-.32.76-.495 1.223-.495.464 0 .898.175 1.224.495a1.656 1.656 0 0 1 0 2.387c-.326.32-.76.495-1.224.495-.461 0-.897-.175-1.224-.495a1.658 1.658 0 0 1-.506-1.193zm3.828 7.157a.262.262 0 0 1-.26.255H3.54a.258.258 0 0 1-.261-.255V9.514c0-.544.218-1.057.616-1.445a2.108 2.108 0 0 1 1.481-.602 2.108 2.108 0 0 1 1.5.62l.003.005c.384.384.595.89.595 1.424v2.137zM7.24 7.167a3.022 3.022 0 0 0-.612-.362 2.656 2.656 0 0 0 1.195-1.248c.205.214.445.395.71.531a3.04 3.04 0 0 0-1.293 1.08zm4.643 3.77c0 .14-.117.254-.26.254h-3.2V9.513c0-.588-.177-1.153-.51-1.639a2.107 2.107 0 0 1 1.872-1.125c.558 0 1.084.213 1.482.602.398.388.616.901.616 1.445v2.14z\"/>\n</svg>\n", viewbox: "0 0 14 14", viewBox: "0 0 14 14" };
 
-var _excluded$q = ["className"];
-var styles$15 = /*#__PURE__*/css({
+var styles$16 = /*#__PURE__*/css({
   name: "e102ul",
   styles: "width:14px;height:14px;fill:#fff"
 } );
+
+var _excluded$p = ["className"];
 var IconUsers = function IconUsers(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$q);
+      props = _objectWithoutProperties(_ref, _excluded$p);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$15, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$16, className),
     glyph: img$g
   }));
 };
 
-var img$f = {id: "V4BpmSJbtxEHus0LaiFZl", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"  xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\" />\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.4776 5.30071C12.0871 4.91018 11.4539 4.91018 11.0634 5.30071L7.17529 9.18881L5.28718 7.30071C4.89666 6.91018 4.2635 6.91018 3.87297 7.30071C3.48245 7.69123 3.48245 8.3244 3.87297 8.71492L6.22966 11.0716C6.48604 11.328 6.84699 11.4161 7.17521 11.3358C7.50346 11.4161 7.86448 11.3281 8.12089 11.0716L12.4776 6.71492C12.8681 6.3244 12.8681 5.69123 12.4776 5.30071Z\" fill=\"white\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$f = {id: "t853qpAiq73cgdznriCNI", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"  xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\" />\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.4776 5.30071C12.0871 4.91018 11.4539 4.91018 11.0634 5.30071L7.17529 9.18881L5.28718 7.30071C4.89666 6.91018 4.2635 6.91018 3.87297 7.30071C3.48245 7.69123 3.48245 8.3244 3.87297 8.71492L6.22966 11.0716C6.48604 11.328 6.84699 11.4161 7.17521 11.3358C7.50346 11.4161 7.86448 11.3281 8.12089 11.0716L12.4776 6.71492C12.8681 6.3244 12.8681 5.69123 12.4776 5.30071Z\" fill=\"white\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var _excluded$p = ["className"];
-var styles$14 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentSuccess, ";" + ("" ), "" );
+var styles$15 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentSuccess, ";" + ("" ), "" );
+
+var _excluded$o = ["className"];
 var IconSuccess = function IconSuccess(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$p);
+      props = _objectWithoutProperties(_ref, _excluded$o);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$14, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$15, className),
     glyph: img$f
   }));
 };
 
-var img$e = {id: "smgAQv4UOlUFua33oK_-3", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\"/>\n<circle cx=\"8.02079\" cy=\"11.9685\" r=\"1.32987\" fill=\"white\"/>\n<rect x=\"6.69092\" y=\"2.66016\" width=\"2.65974\" height=\"6.64935\" rx=\"1.32987\" fill=\"white\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$e = {id: "2bGNEZP3K8T1z3M5fZKFK", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\"/>\n<circle cx=\"8.02079\" cy=\"11.9685\" r=\"1.32987\" fill=\"white\"/>\n<rect x=\"6.69092\" y=\"2.66016\" width=\"2.65974\" height=\"6.64935\" rx=\"1.32987\" fill=\"white\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var _excluded$o = ["className"];
-var styles$13 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentDanger, ";" + ("" ), "" );
+var styles$14 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentDanger, ";" + ("" ), "" );
+
+var _excluded$n = ["className"];
 var IconFailed = function IconFailed(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$o);
+      props = _objectWithoutProperties(_ref, _excluded$n);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$13, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$14, className),
     glyph: img$e
   }));
 };
 
-var img$d = {id: "fwkP-dzo0gzpTzOtt-mP7", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M5 4L12 8L5 12V4Z\" fill-opacity=\"0.65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$d = {id: "UvWlsogDLPunIRud9tm9w", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M5 4L12 8L5 12V4Z\" fill-opacity=\"0.65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var _excluded$n = ["className"];
-var styles$12 = /*#__PURE__*/css({
+var styles$13 = /*#__PURE__*/css({
   name: "157xhr7",
   styles: "width:16px;height:16px"
 } );
+
+var _excluded$m = ["className"];
 var IconPlay = function IconPlay(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$n);
+      props = _objectWithoutProperties(_ref, _excluded$m);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$12, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$13, className),
     glyph: img$d
   }));
 };
 
-var img$c = {id: "_kD-IBC0zsJ5O-464qLgx", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"5\" y=\"5\" width=\"6\" height=\"6\" fill-opacity=\"0.65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$c = {id: "3Q5ZyfTSPMHThstzagFoU", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect x=\"5\" y=\"5\" width=\"6\" height=\"6\" fill-opacity=\"0.65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var _excluded$m = ["className"];
-var styles$11 = /*#__PURE__*/css({
+var styles$12 = /*#__PURE__*/css({
   name: "157xhr7",
   styles: "width:16px;height:16px"
 } );
+
+var _excluded$l = ["className"];
 var IconStop = function IconStop(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$m);
+      props = _objectWithoutProperties(_ref, _excluded$l);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$11, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$12, className),
     glyph: img$c
   }));
 };
 
-var img$b = {id: "Tqj7OIFiLPyMIKP83zK87", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.71743 6.94604C7.80755 6.92194 7.90228 6.90909 8 6.90909C8.60249 6.90909 9.09091 7.39751 9.09091 8C9.09091 8.60249 8.60249 9.09091 8 9.09091C7.39751 9.09091 6.90909 8.60249 6.90909 8C6.90909 7.90228 6.92194 7.80755 6.94604 7.71743L4.88703 5.65842L5.65842 4.88703L7.71743 6.94604ZM8.54545 3.12087V5.27273H7.45455V2H8C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 6.38359 2.64289 4.86766 3.76532 3.74941L4.53527 4.52224C3.61627 5.43782 3.09091 6.6766 3.09091 8C3.09091 10.7112 5.28878 12.9091 8 12.9091C10.7112 12.9091 12.9091 10.7112 12.9091 8C12.9091 5.47315 11 3.3922 8.54545 3.12087Z\" fill-opacity=\"0.65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var styles$11 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" );
 
-var _excluded$l = ["className"];
-var styles$10 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+var img$b = {id: "A3bHXa1-ZXZG-pAqfiZJN", content: "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.71743 6.94604C7.80755 6.92194 7.90228 6.90909 8 6.90909C8.60249 6.90909 9.09091 7.39751 9.09091 8C9.09091 8.60249 8.60249 9.09091 8 9.09091C7.39751 9.09091 6.90909 8.60249 6.90909 8C6.90909 7.90228 6.92194 7.80755 6.94604 7.71743L4.88703 5.65842L5.65842 4.88703L7.71743 6.94604ZM8.54545 3.12087V5.27273H7.45455V2H8C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 6.38359 2.64289 4.86766 3.76532 3.74941L4.53527 4.52224C3.61627 5.43782 3.09091 6.6766 3.09091 8C3.09091 10.7112 5.28878 12.9091 8 12.9091C10.7112 12.9091 12.9091 10.7112 12.9091 8C12.9091 5.47315 11 3.3922 8.54545 3.12087Z\" fill-opacity=\"0.65\"/>\n</svg>\n", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+
+var _excluded$k = ["className"];
 var IconTask = function IconTask(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$l);
+      props = _objectWithoutProperties(_ref, _excluded$k);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$10, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$11, className),
     glyph: img$b
   }));
 };
 
-var img$a = {id: "yBFH9BLFjO6tc6qM5eadr", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 1a6.96 6.96 0 0 1 4.95 2.05 6.963 6.963 0 0 1 1.5 2.225c.366.864.55 1.78.55 2.725a6.958 6.958 0 0 1-2.05 4.95 6.962 6.962 0 0 1-2.225 1.5c-.864.366-1.78.55-2.725.55a6.958 6.958 0 0 1-4.95-2.05 6.963 6.963 0 0 1-1.5-2.225A6.946 6.946 0 0 1 1 8a6.96 6.96 0 0 1 2.05-4.95 6.964 6.964 0 0 1 2.225-1.5A6.946 6.946 0 0 1 8 1z\"/><path d=\"M4 9a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2H4z\" fill=\"#fff\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
+var img$a = {id: "eDa60Yf7w1MHeopUTJmIn", content: "<svg width=\"16\" height=\"16\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 1a6.96 6.96 0 0 1 4.95 2.05 6.963 6.963 0 0 1 1.5 2.225c.366.864.55 1.78.55 2.725a6.958 6.958 0 0 1-2.05 4.95 6.962 6.962 0 0 1-2.225 1.5c-.864.366-1.78.55-2.725.55a6.958 6.958 0 0 1-4.95-2.05 6.963 6.963 0 0 1-1.5-2.225A6.946 6.946 0 0 1 1 8a6.96 6.96 0 0 1 2.05-4.95 6.964 6.964 0 0 1 2.225-1.5A6.946 6.946 0 0 1 8 1z\"/><path d=\"M4 9a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2H4z\" fill=\"#fff\"/></svg>", viewbox: "0 0 16 16", viewBox: "0 0 16 16" };
 
-var _excluded$k = ["className"];
-var styles$$ = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentWarning, ";" + ("" ), "" );
+var styles$10 = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentWarning, ";" + ("" ), "" );
+
+var _excluded$j = ["className"];
 var IconStopped = function IconStopped(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$k);
+      props = _objectWithoutProperties(_ref, _excluded$j);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$$, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$10, className),
     glyph: img$a
   }));
 };
 
-var img$9 = {id: "LuoyDwL1QTe_XDqgMJBSp", content: "<svg width=\"12\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.64 2c.068-.126.165-.258.3-.383C4.276 1.305 4.894 1 6 1s1.724.305 2.06.617c.135.125.232.257.3.383H3.64zM2.57 2c.1-.368.315-.77.69-1.117C3.824.361 4.706 0 6 0c1.294 0 2.176.361 2.74.883.375.347.59.749.69 1.117h1.37c.663 0 1.2.542 1.2 1.21v1.211c0 .669-.537 1.21-1.2 1.21h-.048L10.2 12.29c0 .668-.537 1.21-1.2 1.21H3c-.663 0-1.2-.542-1.198-1.16l-.554-6.708H1.2c-.663 0-1.2-.542-1.2-1.21V3.21C0 2.542.537 2 1.2 2h1.37zM1.2 3.21h9.6v1.211H1.2v-1.21zM3 12.29l-.548-6.658h1.123l.832 6.658H3zm1.583-6.658l.832 6.658h1.17l.832-6.658H4.583zM9 12.29H7.593l.832-6.658h1.123l-.546 6.607-.002.05z\"/></svg>", viewbox: "0 0 12 14", viewBox: "0 0 12 14" };
+var img$9 = {id: "7RiiPbusMBeH0TStzJ0Tf", content: "<svg width=\"12\" height=\"14\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.64 2c.068-.126.165-.258.3-.383C4.276 1.305 4.894 1 6 1s1.724.305 2.06.617c.135.125.232.257.3.383H3.64zM2.57 2c.1-.368.315-.77.69-1.117C3.824.361 4.706 0 6 0c1.294 0 2.176.361 2.74.883.375.347.59.749.69 1.117h1.37c.663 0 1.2.542 1.2 1.21v1.211c0 .669-.537 1.21-1.2 1.21h-.048L10.2 12.29c0 .668-.537 1.21-1.2 1.21H3c-.663 0-1.2-.542-1.198-1.16l-.554-6.708H1.2c-.663 0-1.2-.542-1.2-1.21V3.21C0 2.542.537 2 1.2 2h1.37zM1.2 3.21h9.6v1.211H1.2v-1.21zM3 12.29l-.548-6.658h1.123l.832 6.658H3zm1.583-6.658l.832 6.658h1.17l.832-6.658H4.583zM9 12.29H7.593l.832-6.658h1.123l-.546 6.607-.002.05z\"/></svg>", viewbox: "0 0 12 14", viewBox: "0 0 12 14" };
 
-var _excluded$j = ["className"];
-var styles$_ = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+var styles$$ = /*#__PURE__*/css("width:16px;height:16px;fill:", colors.intentPrimary, ";" + ("" ), "" );
+
+var _excluded$i = ["className"];
 var IconTrash = function IconTrash(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$j);
+      props = _objectWithoutProperties(_ref, _excluded$i);
 
-  return /*#__PURE__*/React.createElement(Icon$1, Object.assign({}, props, {
-    className: cx(styles$_, className),
+  return /*#__PURE__*/React.createElement(Icon$1, _objectSpread2(_objectSpread2({}, props), {}, {
+    className: cx(styles$$, className),
     glyph: img$9
   }));
 };
 
-var styles$Z = {
+var styles$_ = {
   button: /*#__PURE__*/css("white-space:nowrap;border:none;border-radius:4px;box-sizing:border-box;font-family:", baseFontFamily, ";font-size:14px;line-height:22px;transition-timing-function:ease-in-out;transition-duration:0.07s;transition-property:background-color,color;outline:none;cursor:pointer;-webkit-font-smoothing:antialiased;&:hover,&:focus,&:active{transition-property:background-color,color,box-shadow;}&:disabled,&:disabled:active,&:disabled:hover{cursor:default;}" + ("" ), "" ),
   icon: /*#__PURE__*/css({
     name: "m4ehm8",
@@ -1373,7 +1437,7 @@ var intentActiveStyles = {
   plain: /*#__PURE__*/css("&:focus,&:hover{background-color:", colors.dark10, ";}" + ("" ), "" )
 };
 
-var _excluded$i = ["autoFocus", "className", "children", "disabled", "icon", "iconRight", "intent", "onClick", "loading", "size", "text", "title", "type", "pass"];
+var _excluded$h = ["autoFocus", "className", "children", "disabled", "icon", "iconRight", "intent", "onClick", "loading", "size", "text", "title", "type", "pass"];
 
 var ButtonRefFn = function ButtonRefFn(_ref, ref) {
   var _cx2;
@@ -1395,7 +1459,7 @@ var ButtonRefFn = function ButtonRefFn(_ref, ref) {
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? 'button' : _ref$type,
       pass = _ref.pass,
-      props = _objectWithoutProperties(_ref, _excluded$i);
+      props = _objectWithoutProperties(_ref, _excluded$h);
 
   var isOnlyIcon = Icon && !children && !text;
   var handleClick = useCallback(function (event) {
@@ -1408,7 +1472,7 @@ var ButtonRefFn = function ButtonRefFn(_ref, ref) {
   if (Icon) {
     content.push( /*#__PURE__*/React.createElement(Icon, {
       key: "Icon",
-      className: cx(styles$Z.icon, _defineProperty({}, styles$Z.iconMargin, !isOnlyIcon))
+      className: cx(styles$_.icon, _defineProperty({}, styles$_.iconMargin, !isOnlyIcon))
     }));
   }
 
@@ -1419,20 +1483,20 @@ var ButtonRefFn = function ButtonRefFn(_ref, ref) {
   if (IconRight && !isOnlyIcon) {
     content.push( /*#__PURE__*/React.createElement(IconRight, {
       key: "IconRight",
-      className: cx(styles$Z.icon, styles$Z.iconRightMargin)
+      className: cx(styles$_.icon, styles$_.iconRightMargin)
     }));
   }
 
   if (loading && !disabled) {
     content.push( /*#__PURE__*/React.createElement("div", {
       key: "loading",
-      className: styles$Z.loadingWrap
+      className: styles$_.loadingWrap
     }, /*#__PURE__*/React.createElement(IconSpinner, null)));
   }
 
   return /*#__PURE__*/React.createElement("button", _objectSpread2(_objectSpread2({}, props), {}, {
     autoFocus: autoFocus,
-    className: cx(styles$Z.button, (_cx2 = {}, _defineProperty(_cx2, styles$Z.iconicL, isOnlyIcon && size === 'l'), _defineProperty(_cx2, styles$Z.iconicM, isOnlyIcon && size === 'm'), _defineProperty(_cx2, styles$Z.iconicS, isOnlyIcon && size === 's'), _defineProperty(_cx2, styles$Z.l, !isOnlyIcon && size === 'l'), _defineProperty(_cx2, styles$Z.m, !isOnlyIcon && size === 'm'), _defineProperty(_cx2, styles$Z.s, !isOnlyIcon && size === 's'), _defineProperty(_cx2, styles$Z.xs, size === 'xs'), _defineProperty(_cx2, intentActiveStyles[intent], !loading && !disabled), _cx2), intentStyles$1[intent], _defineProperty({}, styles$Z.loading, loading && !disabled), className),
+    className: cx(styles$_.button, (_cx2 = {}, _defineProperty(_cx2, styles$_.iconicL, isOnlyIcon && size === 'l'), _defineProperty(_cx2, styles$_.iconicM, isOnlyIcon && size === 'm'), _defineProperty(_cx2, styles$_.iconicS, isOnlyIcon && size === 's'), _defineProperty(_cx2, styles$_.l, !isOnlyIcon && size === 'l'), _defineProperty(_cx2, styles$_.m, !isOnlyIcon && size === 'm'), _defineProperty(_cx2, styles$_.s, !isOnlyIcon && size === 's'), _defineProperty(_cx2, styles$_.xs, size === 'xs'), _defineProperty(_cx2, intentActiveStyles[intent], !loading && !disabled), _cx2), intentStyles$1[intent], _defineProperty({}, styles$_.loading, loading && !disabled), className),
     disabled: disabled,
     onClick: onClick ? handleClick : undefined,
     title: title,
@@ -1486,7 +1550,7 @@ var isFocusInsideRef = function isFocusInsideRef(ref) {
   return ref && ref.current && isFocusInside(ref.current) || false;
 };
 
-var styles$Y = {
+var styles$Z = {
   popover: /*#__PURE__*/css("position:absolute;left:0;max-width:70%;max-height:100%;padding:8px 0;overflow:hidden;border-radius:4px;box-shadow:0 5px 20px 0 rgba(0, 0, 0, 0.09);border:solid 1px ", colors.intentBaseBg, ";background-color:#ffffff;z-index:", zIndex.dropdownMenu, ";box-sizing:border-box;user-select:none;outline:none;&::-moz-focus-inner{border:0;}" + ("" ), "" ),
   popoverScrollable: /*#__PURE__*/css({
     name: "1vsyufa",
@@ -1572,7 +1636,7 @@ var DropdownPopover$1 = /*#__PURE__*/function (_React$Component) {
           onClick = _this$props3.onClick,
           onMouseDown = _this$props3.onMouseDown;
       return /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$Y.popover, genericStyles.scrollbars, _defineProperty({}, styles$Y.popoverScrollable, useScroll), className),
+        className: cx(styles$Z.popover, genericStyles.scrollbars, _defineProperty({}, styles$Z.popoverScrollable, useScroll), className),
         onClick: onClick,
         onMouseDown: onMouseDown,
         onKeyDownCapture: this.handleKeyDown,
@@ -1591,7 +1655,7 @@ var DropdownPopoverWithRef$1 = /*#__PURE__*/React.forwardRef(function (props, re
   }));
 });
 
-var _excluded$h = ["className", "items", "popoverClassName", "onDropdownVisibleChange", "autoFocus", "disabled"];
+var _excluded$g = ["className", "items", "popoverClassName", "onDropdownVisibleChange", "autoFocus", "disabled"];
 var SCROLLBAR_WIDTH = 28;
 var popoverCloseKeyCodes = [9, 13, 27];
 
@@ -1827,7 +1891,7 @@ var withDropdown = function withDropdown(Component) {
             _this$props3.onDropdownVisibleChange;
             _this$props3.autoFocus;
             var disabled = _this$props3.disabled,
-            props = _objectWithoutProperties(_this$props3, _excluded$h);
+            props = _objectWithoutProperties(_this$props3, _excluded$g);
 
         var isOpen = this.state.isOpen;
         return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Component, Object.assign({}, props, {
@@ -1844,8 +1908,8 @@ var withDropdown = function withDropdown(Component) {
   }, _temp;
 };
 
-var _excluded$g = ["className", "children"];
-var styles$X = {
+var _excluded$f = ["className", "children"];
+var styles$Y = {
   wrap: /*#__PURE__*/css({
     name: "1nrevy2",
     styles: "position:relative;display:inline-block"
@@ -1858,22 +1922,22 @@ var Dropdown = withDropdown( /*#__PURE__*/React.forwardRef(function (_ref, ref) 
     icon: IconMore,
     intent: "base"
   }) : _ref$children,
-      props = _objectWithoutProperties(_ref, _excluded$g);
+      props = _objectWithoutProperties(_ref, _excluded$f);
 
   return /*#__PURE__*/React.createElement("div", Object.assign({
-    className: cx(styles$X.wrap, className)
+    className: cx(styles$Y.wrap, className)
   }, props, {
     ref: ref
   }), children);
 }));
 
-var styles$W = {
+var styles$X = {
   divider: /*#__PURE__*/css("border-bottom:1px solid ", colors.intentBaseBg, ";margin:3px 8px 4px;" + ("" ), "" )
 };
 var DropdownDivider = function DropdownDivider(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$W.divider, className),
+    className: cx(styles$X.divider, className),
     onClick: function onClick(e) {
       return e.stopPropagation();
     }
@@ -1899,7 +1963,7 @@ var textStyles = {
   } )
 };
 
-var _excluded$f = ["className", "children", "tag", "upperCase", "noCase", "variant"];
+var _excluded$e = ["className", "children", "tag", "upperCase", "noCase", "variant"];
 var Text = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var _cx;
 
@@ -1910,7 +1974,7 @@ var Text = /*#__PURE__*/forwardRef(function (_ref, ref) {
       noCase = _ref.noCase,
       _ref$variant = _ref.variant,
       variant = _ref$variant === void 0 ? 'basic' : _ref$variant,
-      props = _objectWithoutProperties(_ref, _excluded$f);
+      props = _objectWithoutProperties(_ref, _excluded$e);
 
   var Element = tag || (variant === 'basic' ? 'span' : variant);
   return /*#__PURE__*/createElement(Element, _objectSpread2(_objectSpread2({}, props), {}, {
@@ -1919,9 +1983,9 @@ var Text = /*#__PURE__*/forwardRef(function (_ref, ref) {
   }), children);
 });
 
-var _excluded$e = ["className", "color", "onClick", "pass"];
+var _excluded$d = ["className", "color", "onClick", "pass"];
 var defaultListItemColor = 'rgba(0, 0, 0, 0.65)';
-var styles$V = {
+var styles$W = {
   item: function item() {
     var color = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : defaultListItemColor;
     return /*#__PURE__*/css("padding:0 16px;line-height:32px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:", color, ";cursor:pointer;&:focus,&:active{background-color:", colors.intentBaseBg, ";color:", color, ";outline:none;}&::-moz-focus-inner{border:0;}" + ("" ), "" );
@@ -1932,7 +1996,7 @@ var DropdownItem = /*#__PURE__*/React.memo(function (_ref) {
       color = _ref.color,
       onClick = _ref.onClick,
       pass = _ref.pass,
-      props = _objectWithoutProperties(_ref, _excluded$e);
+      props = _objectWithoutProperties(_ref, _excluded$d);
 
   var handleKeyDownCapture = React.useCallback(function (e) {
     if (e.keyCode === 13) {
@@ -1946,7 +2010,7 @@ var DropdownItem = /*#__PURE__*/React.memo(function (_ref) {
   }, []);
   return /*#__PURE__*/React.createElement("div", Object.assign({}, props, {
     tabIndex: 0,
-    className: cx(textStyles.basic, styles$V.item(color), className),
+    className: cx(textStyles.basic, styles$W.item(color), className),
     onClick: onClick,
     onKeyDownCapture: handleKeyDownCapture,
     onMouseEnter: handleMouseEnter
@@ -2123,7 +2187,7 @@ var OverflowDirection = {
   GROW: 'grow',
   SHRINK: 'shrink'
 };
-var styles$U = {
+var styles$V = {
   overFlowList: /*#__PURE__*/css({
     name: "2lmyum",
     styles: "display:flex;flex-wrap:nowrap;min-width:0"
@@ -2222,10 +2286,10 @@ var OverflowList = /*#__PURE__*/function (_React$Component) {
           visibleItemRenderer = _this$props.visibleItemRenderer;
       var overflow = this.maybeRenderOverflow();
       var list = /*#__PURE__*/React.createElement(tagName, {
-        className: cx(styles$U.overFlowList, className),
+        className: cx(styles$V.overFlowList, className),
         style: style
       }, overflow, this.state.visible.map(visibleItemRenderer), null, /*#__PURE__*/React.createElement("div", {
-        className: styles$U.overflowListSpacer,
+        className: styles$V.overflowListSpacer,
         ref: function ref(_ref) {
           return _this2.spacer = _ref;
         }
@@ -2299,9 +2363,9 @@ OverflowList.defaultProps = {
   minVisibleItems: 0
 };
 
-var _excluded$d = ["className", "variant"];
+var _excluded$c = ["className", "variant"];
 
-var styles$T = {
+var styles$U = {
   link: /*#__PURE__*/css({
     name: "k47rv5",
     styles: "color:inherit;text-decoration:underline;&:hover,&:active{text-decoration:none;}"
@@ -2310,17 +2374,17 @@ var styles$T = {
 var Link = function Link(_ref) {
   var className = _ref.className,
       variant = _ref.variant,
-      props = _objectWithoutProperties(_ref, _excluded$d);
+      props = _objectWithoutProperties(_ref, _excluded$c);
 
   var textStyle = variant && textStyles[variant] || null;
   /* eslint-disable jsx-a11y/anchor-has-content */
 
   return /*#__PURE__*/React.createElement("a", Object.assign({}, props, {
-    className: cx(textStyle, styles$T.link, className)
+    className: cx(textStyle, styles$U.link, className)
   }));
 };
 
-var styles$S = {
+var styles$T = {
   breadcrumbElement: /*#__PURE__*/css("color:", colors.dark40, ";font-size:16px;line-height:24px;white-space:nowrap;" + ("" ), "" ),
   breadcrumbLinkElement: /*#__PURE__*/css("cursor:pointer:color:", colors.dark40, ";&:hover,&:focus,a:link,a:visited,&:active{color:", colors.dark40, ";}&:hover{text-decoration:underline;}" + ("" ), "" )
 };
@@ -2351,14 +2415,14 @@ var BreadcrumbsItemComponent = /*#__PURE__*/function (_React$Component) {
             e.preventDefault();
             onLinkClick(path);
           },
-          className: cx(styles$S.breadcrumbLinkElement, styles$S.breadcrumbElement),
+          className: cx(styles$T.breadcrumbLinkElement, styles$T.breadcrumbElement),
           variant: "basic"
         }, title);
       }
 
       return /*#__PURE__*/React.createElement(Text, {
         tag: "span",
-        className: styles$S.breadcrumbElement
+        className: styles$T.breadcrumbElement
       }, title);
     }
   }]);
@@ -2366,7 +2430,7 @@ var BreadcrumbsItemComponent = /*#__PURE__*/function (_React$Component) {
   return BreadcrumbsItemComponent;
 }(React.Component);
 
-var styles$R = {
+var styles$S = {
   breadcrumbs: /*#__PURE__*/css({
     name: "1hoshla",
     styles: "display:flex;align-items:baseline;width:100%;overflow:hidden"
@@ -2422,11 +2486,11 @@ var Breadcrumbs = /*#__PURE__*/function (_React$Component) {
       }));
       return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Text, {
         tag: "span",
-        className: cx(styles$R.breadcrumbDelimiter, styles$R.breadcrumbElement)
+        className: cx(styles$S.breadcrumbDelimiter, styles$S.breadcrumbElement)
       }, "/"), /*#__PURE__*/React.createElement(Dropdown, {
         items: itemsCollection
       }, /*#__PURE__*/React.createElement(Text, {
-        className: styles$R.overflowButton
+        className: styles$S.overflowButton
       }, "...")));
     };
 
@@ -2436,7 +2500,7 @@ var Breadcrumbs = /*#__PURE__*/function (_React$Component) {
         key: index
       }, /*#__PURE__*/React.createElement(Text, {
         tag: "span",
-        className: cx(styles$R.breadcrumbDelimiter, styles$R.breadcrumbElement)
+        className: cx(styles$S.breadcrumbDelimiter, styles$S.breadcrumbElement)
       }, "/"), /*#__PURE__*/React.createElement(BreadcrumbsItemComponent, {
         title: props.title,
         path: props.path,
@@ -2460,17 +2524,17 @@ var Breadcrumbs = /*#__PURE__*/function (_React$Component) {
       };
 
       return /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$R.breadcrumbs, className)
+        className: cx(styles$S.breadcrumbs, className)
       }, appName && (isLongAppName(appName) ? /*#__PURE__*/React.createElement(AppName, {
         appName: appName
       }) : /*#__PURE__*/React.createElement(Text, {
         tag: "span",
-        className: styles$R.breadcrumbElement,
+        className: styles$S.breadcrumbElement,
         variant: "h3"
       }, appName)), /*#__PURE__*/React.createElement(OverflowList, {
         minVisibleItems: 1,
         items: items,
-        className: styles$R.breadcrumbsList,
+        className: styles$S.breadcrumbsList,
         overflowRenderer: this.renderOverflow,
         visibleItemRenderer: this.renderBreadcrumbWrapper
       }));
@@ -2494,7 +2558,7 @@ function AppName(_ref) {
 
   return /*#__PURE__*/React.createElement(Text, {
     tag: "span",
-    className: cx(styles$R.breadcrumbElement, styles$R.breadcrumbHoveredElement),
+    className: cx(styles$S.breadcrumbElement, styles$S.breadcrumbHoveredElement),
     variant: "h3",
     onMouseOver: function onMouseOver() {
       return setHover(true);
@@ -2504,12 +2568,12 @@ function AppName(_ref) {
     }
   }, shorterAppName(appName), isHover && /*#__PURE__*/React.createElement(Text, {
     tag: "span",
-    className: cx(styles$R.breadcrumbElement, styles$R.appName),
+    className: cx(styles$S.breadcrumbElement, styles$S.appName),
     variant: "h3"
   }, appName));
 }
 
-var styles$Q = {
+var styles$R = {
   outer: /*#__PURE__*/css({
     name: "s5xdrg",
     styles: "display:flex;align-items:center"
@@ -2529,16 +2593,16 @@ var ControlsPanel = function ControlsPanel(_ref) {
       controls = _ref$controls === void 0 ? [] : _ref$controls,
       thin = _ref.thin;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$Q.outer, className)
+    className: cx(styles$R.outer, className)
   }, controls && controls.filter(Boolean).map(function (control, index) {
     return /*#__PURE__*/React.createElement("div", {
       key: index,
-      className: cx(styles$Q.control, _defineProperty({}, styles$Q.thin, thin))
+      className: cx(styles$R.control, _defineProperty({}, styles$R.thin, thin))
     }, control);
   }));
 };
 
-var styles$P = {
+var styles$Q = {
   header: /*#__PURE__*/css("height:", appLayoutTopPanelHeight, "px;min-width:", pageLayoutMinWidth, "px;background:#ffffff;width:100%;display:flex;padding:0 30px;box-sizing:border-box;flex-direction:row;justify-content:space-between;align-items:center;" + ("" ), "" ),
   crumbs: /*#__PURE__*/css({
     name: "843dc",
@@ -2556,20 +2620,20 @@ var AppHeader = function AppHeader(_ref) {
       controls = _ref.controls,
       onLinkClick = _ref.onLinkClick;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$P.header, className)
+    className: cx(styles$Q.header, className)
   }, /*#__PURE__*/React.createElement(Breadcrumbs, {
-    className: styles$P.crumbs,
+    className: styles$Q.crumbs,
     items: breadcrumbs,
     appName: appName,
     onLinkClick: onLinkClick
   }), /*#__PURE__*/React.createElement(ControlsPanel, {
-    className: styles$P.controls,
+    className: styles$Q.controls,
     controls: controls,
     thin: true
   }));
 };
 
-var styles$O = {
+var styles$P = {
   main: /*#__PURE__*/css({
     name: "ww59jg",
     styles: "display:flex;flex-grow:1;flex-shrink:0;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start;align-items:stretch;position:relative;max-width:100vw;height:100vh;margin:0 auto"
@@ -2585,15 +2649,15 @@ var AppLayout = function AppLayout(_ref) {
       className = _ref.className,
       Sidebar = _ref.sidebarComponent;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$O.main, className)
+    className: cx(styles$P.main, className)
   }, /*#__PURE__*/React.createElement(Sidebar, {
-    className: styles$O.sidebar
+    className: styles$P.sidebar
   }), /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$O.content, genericStyles.scrollbars)
+    className: cx(styles$P.content, genericStyles.scrollbars)
   }, children));
 };
 
-var styles$N = {
+var styles$O = {
   lockedBody: /*#__PURE__*/css({
     name: "d3v9zr",
     styles: "overflow:hidden"
@@ -2637,13 +2701,13 @@ var BaseModal = /*#__PURE__*/function (_React$Component) {
     _this.lockBodyScroll = function () {
       var _document = document,
           body = _document.body;
-      body && body.classList.add(styles$N.lockedBody);
+      body && body.classList.add(styles$O.lockedBody);
     };
 
     _this.releaseBodyScroll = function () {
       var _document2 = document,
           body = _document2.body;
-      body && body.classList.remove(styles$N.lockedBody);
+      body && body.classList.remove(styles$O.lockedBody);
     };
 
     _this.focusFirstInteractiveElement = function () {
@@ -2735,15 +2799,15 @@ var BaseModal = /*#__PURE__*/function (_React$Component) {
           wide = _this$props.wide,
           shimClassName = _this$props.shimClassName;
       return /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$N.shim, shimClassName),
+        className: cx(styles$O.shim, shimClassName),
         onMouseDown: this.handleOutsideClick
       }, /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$N.baseModal, _defineProperty({}, styles$N.wide, wide), className),
+        className: cx(styles$O.baseModal, _defineProperty({}, styles$O.wide, wide), className),
         ref: this.modalRef,
         tabIndex: 0,
         onKeyDown: this.handleEscapePress
       }, children, /*#__PURE__*/React.createElement("div", {
-        className: styles$N.focusClosureControl,
+        className: styles$O.focusClosureControl,
         onFocus: this.focusFirstInteractiveElement,
         tabIndex: "0"
       })));
@@ -2752,68 +2816,6 @@ var BaseModal = /*#__PURE__*/function (_React$Component) {
 
   return BaseModal;
 }(React.Component);
-
-var styles$M = {
-  icon: /*#__PURE__*/css({
-    name: "4zleql",
-    styles: "display:block"
-  } ),
-  iconWrap: /*#__PURE__*/css({
-    name: "bjn8wh",
-    styles: "position:relative"
-  } ),
-  children: /*#__PURE__*/css({
-    name: "1h52dri",
-    styles: "overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
-  } ),
-  childrenMargin: /*#__PURE__*/css({
-    name: "1oaeivz",
-    styles: "margin-right:8px"
-  } ),
-  input: /*#__PURE__*/css("clip:rect(0 0 0 0);width:0;height:0;margin:-1px;appearance:none;&+div::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;border:solid 1px rgba(255, 255, 255, 0);border-radius:3px;}&:focus+div::before{border-color:", rgba(colors.intentPrimary, 0.55), ";}" + ("" ), "" ),
-  label: /*#__PURE__*/css({
-    name: "1uoamx5",
-    styles: "display:flex;align-items:center;cursor:pointer"
-  } )
-};
-var Checkbox = function Checkbox(_ref) {
-  var _ref$checked = _ref.checked,
-      checked = _ref$checked === void 0 ? false : _ref$checked,
-      children = _ref.children,
-      className = _ref.className,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$indeterminate = _ref.indeterminate,
-      indeterminate = _ref$indeterminate === void 0 ? false : _ref$indeterminate,
-      onChange = _ref.onChange,
-      name = _ref.name,
-      title = _ref.title,
-      value = _ref.value;
-  var inputRef = useRef(null);
-  useEffect(function () {
-    inputRef.current && (inputRef.current.indeterminate = indeterminate);
-  }, [indeterminate]);
-  return /*#__PURE__*/React.createElement("label", {
-    className: cx(styles$M.label, className),
-    title: title
-  }, /*#__PURE__*/React.createElement("input", {
-    checked: checked,
-    className: styles$M.input,
-    disabled: disabled,
-    type: "checkbox",
-    onChange: onChange,
-    name: name,
-    value: value,
-    ref: inputRef
-  }), /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$M.iconWrap, _defineProperty({}, styles$M.childrenMargin, children))
-  }, /*#__PURE__*/React.createElement(IconCheckbox, {
-    className: styles$M.icon,
-    checked: checked,
-    indeterminate: indeterminate,
-    disabled: disabled
-  })), typeof children === 'string' ? /*#__PURE__*/React.createElement(Text, null, children) : children);
-};
 
 /**
  * based on original okaidia theme from prismjs
@@ -3838,9 +3840,9 @@ memoize$1.Cache = MapCache;
 
 var memoize_1 = memoize$1;
 
-var _excluded$c = ["children", "className", "largePadding", "popoverClassName", "tooltipContent"];
+var _excluded$b = ["children", "className", "largePadding", "popoverClassName", "tooltipContent"];
 var CORNER_HEIGHT = 8;
-var styles$L = {
+var styles$N = {
   tooltip: function tooltip(_ref) {
     var cornerPositionX = _ref.cornerPositionX;
     return /*#__PURE__*/css("position:absolute;z-index:", zIndex.tooltip, ";max-width:400px;padding:5px 8px;color:#ffffff;background:", rgba(colors.dark, 0.8), ";border-radius:4px;&::after{content:'';position:absolute;left:calc(", cornerPositionX, "px - 8px);bottom:-", CORNER_HEIGHT, "px;border:solid 0 transparent;border-left:solid ", CORNER_HEIGHT, "px transparent;border-right:solid ", CORNER_HEIGHT, "px transparent;border-top:solid ", CORNER_HEIGHT, "px ", rgba(colors.dark, 0.8), ";}&::before{position:absolute;left:calc(", cornerPositionX, "px - 8px);top:-", CORNER_HEIGHT, "px;border:solid 0 transparent;border-left:solid ", CORNER_HEIGHT, "px transparent;border-right:solid ", CORNER_HEIGHT, "px transparent;border-bottom:solid ", CORNER_HEIGHT, "px ", rgba(colors.dark, 0.8), ";}" + ("" ), "" );
@@ -4000,10 +4002,10 @@ var withTooltip = function withTooltip(Component) {
             _this$props.largePadding;
             _this$props.popoverClassName;
             _this$props.tooltipContent;
-            var props = _objectWithoutProperties(_this$props, _excluded$c);
+            var props = _objectWithoutProperties(_this$props, _excluded$b);
 
         return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Component, Object.assign({}, props, {
-          className: cx(styles$L.wrapper, className),
+          className: cx(styles$N.wrapper, className),
           onBlur: this.handleMouseLeave,
           onFocus: this.handleMouseEnter,
           onMouseEnter: this.handleMouseEnter,
@@ -4027,9 +4029,9 @@ var withTooltip = function withTooltip(Component) {
             top = _this$state.top,
             topPlacement = _this$state.topPlacement;
         return /*#__PURE__*/React.createElement("div", {
-          className: cx(textStyles.p, styles$L.tooltip({
+          className: cx(textStyles.p, styles$N.tooltip({
             cornerPositionX: cornerPositionX
-          }), (_cx = {}, _defineProperty(_cx, styles$L.cornerUp, !topPlacement), _defineProperty(_cx, styles$L.largePadding, largePadding), _cx), popoverClassName),
+          }), (_cx = {}, _defineProperty(_cx, styles$N.cornerUp, !topPlacement), _defineProperty(_cx, styles$N.largePadding, largePadding), _cx), popoverClassName),
           style: {
             left: left,
             top: top
@@ -4056,14 +4058,14 @@ var Tooltip = function Tooltip(_ref2) {
       popoverClassName = _ref2.popoverClassName;
   var Component = withTooltipMemoized(tag || 'div');
   return /*#__PURE__*/React.createElement(Component, {
-    className: cx(styles$L.wrapper, className),
+    className: cx(styles$N.wrapper, className),
     largePadding: largePadding,
     tooltipContent: content,
     popoverClassName: popoverClassName
   }, children);
 };
 
-var _excluded$b = ["content", "tooltipContent", "tooltipContentCopied"],
+var _excluded$a = ["content", "tooltipContent", "tooltipContentCopied"],
     _excluded2$2 = ["icon"];
 var copyToClipboard = function copyToClipboard(str) {
   if (!document.body) {
@@ -4145,7 +4147,7 @@ var withCopyToClipboard = function withCopyToClipboard(Component) {
             _this$props.content;
             var tooltipContent = _this$props.tooltipContent,
             tooltipContentCopied = _this$props.tooltipContentCopied,
-            restProps = _objectWithoutProperties(_this$props, _excluded$b);
+            restProps = _objectWithoutProperties(_this$props, _excluded$a);
 
         var clicked = this.state.clicked;
         var ComponentWithTooltip = this.ComponentWithTooltip;
@@ -4173,8 +4175,8 @@ var CopyToClipboard = function CopyToClipboard(_ref) {
   }));
 };
 
-var _excluded$a = ["className"];
-var styles$K = {
+var _excluded$9 = ["className"];
+var styles$M = {
   block: /*#__PURE__*/css("max-width:100%;padding:20px;border-radius:10px;background-color:", colors.dark, ";color:white;" + ("" ), "" ),
   inner: /*#__PURE__*/css({
     name: "ol9sdx",
@@ -4193,10 +4195,10 @@ var styles$K = {
 
 var Icon = function Icon(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$a);
+      props = _objectWithoutProperties(_ref, _excluded$9);
 
   return /*#__PURE__*/React.createElement(IconCopy, Object.assign({
-    className: cx(className, styles$K.copyIcon)
+    className: cx(className, styles$M.copyIcon)
   }, props));
 };
 
@@ -4205,15 +4207,15 @@ var CodeBlockWrap = function CodeBlockWrap(_ref2) {
       children = _ref2.children,
       textToCopy = _ref2.textToCopy;
   return /*#__PURE__*/React.createElement("pre", {
-    className: cx(styles$K.block, _defineProperty({}, styles$K.withBtn, !!textToCopy), className)
+    className: cx(styles$M.block, _defineProperty({}, styles$M.withBtn, !!textToCopy), className)
   }, !!textToCopy && /*#__PURE__*/React.createElement(CopyToClipboard, {
-    className: styles$K.copyBtn,
+    className: styles$M.copyBtn,
     icon: Icon,
     intent: "plain",
     content: textToCopy,
     size: "s"
   }), /*#__PURE__*/React.createElement("div", {
-    className: styles$K.inner
+    className: styles$M.inner
   }, children));
 };
 
@@ -4232,24 +4234,24 @@ var CodeBlock = function CodeBlock(_ref) {
   }));
 };
 
-var styles$J = {
+var styles$L = {
   closeIcon: /*#__PURE__*/css("fill:", colors.dark40, ";transition-timing-function:ease-in-out;transition-duration:0.12s;transition-property:fill;cursor:pointer;&:hover{fill:", colors.dark25, ";}" + ("" ), "" )
 };
 var IconHelperClose = function IconHelperClose(_ref) {
   var className = _ref.className,
       onClick = _ref.onClick;
   return /*#__PURE__*/React.createElement(IconClose, {
-    className: cx(styles$J.closeIcon, className),
+    className: cx(styles$L.closeIcon, className),
     onClick: onClick
   });
 };
 
-var _excluded$9 = ["sort", "className"];
+var _excluded$8 = ["sort", "className"];
 var indeterminateStyle = /*#__PURE__*/css("fill:", colors.dark10, "!important;" + ("" ), "" );
 var IconHelperSortable = function IconHelperSortable(_ref) {
   var sort = _ref.sort,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, _excluded$9);
+      props = _objectWithoutProperties(_ref, _excluded$8);
 
   switch (sort) {
     case 'asc':
@@ -4269,7 +4271,7 @@ var IconHelperSortable = function IconHelperSortable(_ref) {
   }
 };
 
-var styles$I = {
+var styles$K = {
   wrap: /*#__PURE__*/css({
     name: "ug0wwi",
     styles: "width:100%;height:100%;padding-left:30px;padding-right:30px;overflow:hidden"
@@ -4289,15 +4291,15 @@ var ModalBody = function ModalBody(_ref) {
       innerClassName = _ref.innerClassName,
       scrollable = _ref.scrollable;
   return scrollable ? /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$I.scrollableWrap, className)
+    className: cx(styles$K.scrollableWrap, className)
   }, /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$I.scrollableBody, genericStyles.scrollbars, innerClassName)
+    className: cx(styles$K.scrollableBody, genericStyles.scrollbars, innerClassName)
   }, children)) : /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$I.wrap, className)
+    className: cx(styles$K.wrap, className)
   }, children);
 };
 
-var styles$H = {
+var styles$J = {
   wrap: /*#__PURE__*/css({
     name: "1414iyd",
     styles: "flex-shrink:0;display:flex;padding:0;margin:20px 0 0"
@@ -4312,15 +4314,15 @@ var ModalFooter = function ModalFooter(_ref) {
       className = _ref.className,
       controls = _ref.controls;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$H.wrap, className)
+    className: cx(styles$J.wrap, className)
   }, children, controls && /*#__PURE__*/React.createElement(ControlsPanel, {
-    className: cx(styles$H.controls),
+    className: cx(styles$J.controls),
     controls: controls,
     thin: true
   }));
 };
 
-var styles$G = {
+var styles$I = {
   modal: /*#__PURE__*/css({
     name: "mibzac",
     styles: "flex-shrink:0;display:flex;flex-direction:column;padding:30px;margin:0 auto auto;overflow:hidden"
@@ -4376,26 +4378,26 @@ var Modal = /*#__PURE__*/function (_BaseModal) {
           wide = _this$props.wide;
       var Component = onSubmit ? 'form' : 'div';
       return /*#__PURE__*/React.createElement("div", {
-        className: styles$N.shim,
+        className: styles$O.shim,
         onMouseDown: this.handleOutsideClick
       }, /*#__PURE__*/React.createElement(Component, {
-        className: cx(styles$N.baseModal, styles$G.modal, (_cx = {}, _defineProperty(_cx, styles$G.fit, fit), _defineProperty(_cx, styles$N.wide, wide), _cx), className),
+        className: cx(styles$O.baseModal, styles$I.modal, (_cx = {}, _defineProperty(_cx, styles$I.fit, fit), _defineProperty(_cx, styles$O.wide, wide), _cx), className),
         ref: this.modalRef,
         tabIndex: 0,
         onKeyDown: this.handleEscapePress,
         onSubmit: onSubmit
       }, /*#__PURE__*/React.createElement(Text, {
-        className: styles$G.title,
+        className: styles$I.title,
         variant: "h2"
       }, title), onClose && /*#__PURE__*/React.createElement(IconHelperClose, {
-        className: styles$G.closeIcon,
+        className: styles$I.closeIcon,
         onClick: onClose
       }), /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$G.children, _defineProperty({}, styles$G.childrenThin, thinBorders))
+        className: cx(styles$I.children, _defineProperty({}, styles$I.childrenThin, thinBorders))
       }, loading ? 'Loading' : children), (footerContent || footerControls) && /*#__PURE__*/React.createElement(Modal.Footer, {
         controls: footerControls
       }, footerContent), /*#__PURE__*/React.createElement("div", {
-        className: styles$N.focusClosureControl,
+        className: styles$O.focusClosureControl,
         onFocus: this.focusFirstInteractiveElement,
         tabIndex: 0
       })));
@@ -4432,7 +4434,7 @@ var ConfirmModal = function ConfirmModal(props) {
   }));
 };
 
-var styles$F = {
+var styles$H = {
   indicator: /*#__PURE__*/css("display:inline-block;flex-shrink:0;margin:8px;background-color:", colors.intentBaseBg, ";border-radius:50%;" + ("" ), "" ),
   state: {
     bad: /*#__PURE__*/css("background-color:", colors.intentDanger, ";" + ("" ), "" ),
@@ -4460,11 +4462,11 @@ var DotIndicator = function DotIndicator(_ref) {
       _ref$state = _ref.state,
       state = _ref$state === void 0 ? 'inactive' : _ref$state;
   return /*#__PURE__*/React.createElement("span", {
-    className: cx(styles$F.indicator, styles$F.state[state], styles$F.size.s, className)
+    className: cx(styles$H.indicator, styles$H.state[state], styles$H.size.s, className)
   });
 };
 
-var styles$E = {
+var styles$G = {
   helper: /*#__PURE__*/css("z-index:", zIndex.dragNDrop, ";" + ("" ), "" )
 };
 var DraggableList = function DraggableList(_ref) {
@@ -4472,7 +4474,7 @@ var DraggableList = function DraggableList(_ref) {
       items = _ref.items,
       onChange = _ref.onChange;
   return /*#__PURE__*/React.createElement(DraggableListContainer, {
-    helperClass: styles$E.helper,
+    helperClass: styles$G.helper,
     className: wrapperClassName,
     onSortEnd: onChange
   }, items);
@@ -4498,7 +4500,70 @@ var DraggableListContainer = sortableContainer(function (_ref3) {
   }, children);
 });
 
-var styles$D = {
+var styles$F = {
+  icon: /*#__PURE__*/css({
+    name: "4zleql",
+    styles: "display:block"
+  } ),
+  iconWrap: /*#__PURE__*/css({
+    name: "bjn8wh",
+    styles: "position:relative"
+  } ),
+  children: /*#__PURE__*/css({
+    name: "1h52dri",
+    styles: "overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
+  } ),
+  childrenMargin: /*#__PURE__*/css({
+    name: "1oaeivz",
+    styles: "margin-right:8px"
+  } ),
+  input: /*#__PURE__*/css("clip:rect(0 0 0 0);width:0;height:0;margin:-1px;appearance:none;&+div::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;border:solid 1px rgba(255, 255, 255, 0);border-radius:3px;}&:focus+div::before{border-color:", rgba(colors.intentPrimary, 0.55), ";}" + ("" ), "" ),
+  label: /*#__PURE__*/css({
+    name: "1uoamx5",
+    styles: "display:flex;align-items:center;cursor:pointer"
+  } )
+};
+
+var Checkbox = function Checkbox(_ref) {
+  var _ref$checked = _ref.checked,
+      checked = _ref$checked === void 0 ? false : _ref$checked,
+      children = _ref.children,
+      className = _ref.className,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      _ref$indeterminate = _ref.indeterminate,
+      indeterminate = _ref$indeterminate === void 0 ? false : _ref$indeterminate,
+      onChange = _ref.onChange,
+      name = _ref.name,
+      title = _ref.title,
+      value = _ref.value;
+  var inputRef = useRef(null);
+  useEffect(function () {
+    inputRef.current && (inputRef.current.indeterminate = indeterminate);
+  }, [indeterminate]);
+  return /*#__PURE__*/React.createElement("label", {
+    className: cx(styles$F.label, className),
+    title: title
+  }, /*#__PURE__*/React.createElement("input", {
+    checked: checked,
+    className: styles$F.input,
+    disabled: disabled,
+    type: "checkbox",
+    onChange: onChange,
+    name: name,
+    value: value,
+    ref: inputRef
+  }), /*#__PURE__*/React.createElement("div", {
+    className: cx(styles$F.iconWrap, _defineProperty({}, styles$F.childrenMargin, !!children))
+  }, /*#__PURE__*/React.createElement(IconCheckbox, {
+    className: styles$F.icon,
+    checked: checked,
+    indeterminate: indeterminate,
+    disabled: disabled
+  })), typeof children === 'string' ? /*#__PURE__*/React.createElement(Text, null, children) : children);
+};
+
+var styles$E = {
   helper: /*#__PURE__*/css("z-index:", zIndex.dragNDrop, ";width:100%;visible:hidden;" + ("" ), "" ),
   table: /*#__PURE__*/css({
     name: "f6vch3",
@@ -4539,24 +4604,24 @@ var DraggableTable = function DraggableTable(_ref) {
     return item.selected;
   }).length === 1;
   return /*#__PURE__*/React.createElement("table", {
-    className: cx(styles$D.table, className)
+    className: cx(styles$E.table, className)
   }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", {
-    className: styles$D.row
+    className: styles$E.row
   }, /*#__PURE__*/React.createElement("th", {
-    className: styles$D.controlsColumn
+    className: styles$E.controlsColumn
   }), onSelectRow && /*#__PURE__*/React.createElement("th", {
-    className: styles$D.controlsColumn
+    className: styles$E.controlsColumn
   }), columns.map(function (column) {
     return /*#__PURE__*/React.createElement(Text, {
-      className: styles$D.head,
+      className: styles$E.head,
       tag: "th",
       key: column.accessor
     }, column.header);
   }), withPositionCol && /*#__PURE__*/React.createElement(Text, {
     tag: "th",
-    className: cx(styles$D.head, styles$D.positionColumn)
+    className: cx(styles$E.head, styles$E.positionColumn)
   }, "\u2116"))), /*#__PURE__*/React.createElement(DraggableListContainer, {
-    helperClass: styles$D.helper,
+    helperClass: styles$E.helper,
     tag: "tbody",
     onSortEnd: onChange,
     shouldCancelStart: function shouldCancelStart(e) {
@@ -4569,12 +4634,12 @@ var DraggableTable = function DraggableTable(_ref) {
       tag: "tr",
       num: index,
       index: index,
-      className: cx(styles$D.row, _defineProperty({}, styles$D.rowDraggable, isDraggableRow), rowClassName),
+      className: cx(styles$E.row, _defineProperty({}, styles$E.rowDraggable, isDraggableRow), rowClassName),
       disabled: draggableOnlySelected && !row.selected
     }, /*#__PURE__*/React.createElement("td", {
-      className: styles$D.controlsColumn
+      className: styles$E.controlsColumn
     }, isDraggableRow ? /*#__PURE__*/React.createElement(IconBurger, null) : null), onSelectRow && /*#__PURE__*/React.createElement("td", {
-      className: styles$D.controlsColumn
+      className: styles$E.controlsColumn
     }, /*#__PURE__*/React.createElement(Checkbox, {
       onChange: function onChange() {
         return onSelectRow(!row.selected, row);
@@ -4585,16 +4650,16 @@ var DraggableTable = function DraggableTable(_ref) {
       return /*#__PURE__*/React.createElement(Text, {
         tag: "td",
         key: column.accessor,
-        className: styles$D.column
+        className: styles$E.column
       }, row[column.accessor] ? row[column.accessor] : defaultColumn);
     }), withPositionCol && /*#__PURE__*/React.createElement(Text, {
       tag: "td",
-      className: cx(styles$D.column, styles$D.positionColumn)
+      className: cx(styles$E.column, styles$E.positionColumn)
     }, isDraggableRow || row.selected ? index + 1 : null));
   })));
 };
 
-var styles$C = {
+var styles$D = {
   textStyle: /*#__PURE__*/css({
     name: "1089mxj",
     styles: "white-space:pre-wrap"
@@ -4632,7 +4697,7 @@ var ExpandableBlockContent = function ExpandableBlockContent(props) {
 
   if (countTextLines <= props.visibleLines) {
     return /*#__PURE__*/React.createElement(Text, {
-      className: cx(styles$C.textStyle, props.className)
+      className: cx(styles$D.textStyle, props.className)
     }, props.content);
   }
 
@@ -4640,11 +4705,11 @@ var ExpandableBlockContent = function ExpandableBlockContent(props) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Text, {
     tag: "div",
     onClick: !fullIsShowing ? setShowFull.bind(undefined, true) : noop$1,
-    className: cx(_defineProperty({}, styles$C.textOverflowStyle, !fullIsShowing), styles$C.textStyle, props.className)
+    className: cx(_defineProperty({}, styles$D.textOverflowStyle, !fullIsShowing), styles$D.textStyle, props.className)
   }, content), fullIsShowing && /*#__PURE__*/React.createElement(Button, {
     onClick: setShowFull.bind(undefined, false),
     iconRight: IconChevron,
-    className: styles$C.btnStyle,
+    className: styles$D.btnStyle,
     text: "less",
     intent: "plain"
   }));
@@ -4653,21 +4718,25 @@ var ExpandableBlockContent = function ExpandableBlockContent(props) {
 var ExpandableBlock = function ExpandableBlock(props) {
   if (props.showCopyBtn) {
     return /*#__PURE__*/React.createElement("div", {
-      className: cx(styles$C.withBtn)
-    }, props.showCopyBtn && /*#__PURE__*/React.createElement(CopyToClipboard, {
-      className: styles$C.copyBtn,
+      className: cx(styles$D.withBtn, props.className)
+    }, /*#__PURE__*/React.createElement(CopyToClipboard, {
+      className: styles$D.copyBtn,
       intent: "plain",
       content: props.content,
       size: "s"
     }), /*#__PURE__*/React.createElement(ExpandableBlockContent, Object.assign({}, props, {
-      className: cx(styles$C.contentWrapper, props.className)
+      className: cx(styles$D.contentWrapper, props.contentClassName)
     })));
   }
 
-  return /*#__PURE__*/React.createElement(ExpandableBlockContent, props);
+  return /*#__PURE__*/React.createElement("div", {
+    className: props.className
+  }, /*#__PURE__*/React.createElement(ExpandableBlockContent, Object.assign({}, props, {
+    className: props.contentClassName
+  })));
 };
 
-var styles$B = {
+var styles$C = {
   outer: /*#__PURE__*/css({
     name: "v4rtqn",
     styles: "padding:8px 0 0;margin:0;list-style:none"
@@ -4678,18 +4747,18 @@ var FlatList = function FlatList(_ref) {
   var className = _ref.className,
       children = _ref.children;
   return /*#__PURE__*/React.createElement("ul", {
-    className: cx(styles$B.outer, className)
+    className: cx(styles$C.outer, className)
   }, children);
 };
 var FlatListItem = function FlatListItem(_ref2) {
   var className = _ref2.className,
       children = _ref2.children;
   return /*#__PURE__*/React.createElement("li", {
-    className: cx(styles$B.item, className)
+    className: cx(styles$C.item, className)
   }, children);
 };
 
-var styles$A = {
+var styles$B = {
   wrap: /*#__PURE__*/css({
     name: "17bfre1",
     styles: "display:flex;flex-wrap:wrap;align-items:center;margin-left:-16px;margin-right:-16px"
@@ -4725,10 +4794,10 @@ var renderers = {
     return Array.isArray(children) ? children.map(function (child, index) {
       return /*#__PURE__*/React.createElement("div", {
         key: index,
-        className: cx(styles$A.input, styles$A.columns[columns - 1], itemClassName)
+        className: cx(styles$B.input, styles$B.columns[columns - 1], itemClassName)
       }, child);
     }) : /*#__PURE__*/React.createElement("div", {
-      className: cx(styles$A.input, styles$A.columns[columns - 1], itemClassName)
+      className: cx(styles$B.input, styles$B.columns[columns - 1], itemClassName)
     }, children);
   },
   Vertical: function Vertical(_ref2) {
@@ -4749,11 +4818,11 @@ var renderers = {
     return groupedItems.map(function (group, index1) {
       return /*#__PURE__*/React.createElement("div", {
         key: index1,
-        className: cx(styles$A.column, styles$A.columns[columns - 1])
+        className: cx(styles$B.column, styles$B.columns[columns - 1])
       }, group.map(function (child, index2) {
         return /*#__PURE__*/React.createElement("div", {
           key: index2,
-          className: cx(styles$A.columnInput, itemClassName)
+          className: cx(styles$B.columnInput, itemClassName)
         }, child);
       }));
     });
@@ -4768,7 +4837,7 @@ var InputGroup = function InputGroup(_ref3) {
       verticalSort = _ref3.verticalSort;
   var Renderer = verticalSort ? renderers.Vertical : renderers.Horizontal;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$A.wrap, className)
+    className: cx(styles$B.wrap, className)
   }, /*#__PURE__*/React.createElement(Renderer, {
     columns: columns,
     itemClassName: itemClassName
@@ -4852,7 +4921,7 @@ var FormField = function FormField(_ref) {
   }, children));
 };
 
-var styles$z = {
+var styles$A = {
   status: /*#__PURE__*/css({
     name: "1afd6oa",
     styles: "display:flex;align-items:baseline;flex-basis:153px;color:rgba(0, 0, 0, 0.65)"
@@ -4865,7 +4934,7 @@ var HealthStatus = function HealthStatus(_ref) {
       message = _ref.message,
       title = _ref.title;
   return /*#__PURE__*/React.createElement(Text, {
-    className: cx(styles$z.status, className),
+    className: cx(styles$A.status, className),
     variant: "p",
     tag: "div",
     title: title
@@ -4893,8 +4962,8 @@ var commonInputSizes = {
   } )
 };
 
-var _excluded$8 = ["autoComplete", "autoFocus", "className", "onClearClick", "onKeyDown", "onKeyDownCapture", "onKeyPress", "onKeyPressCapture", "onKeyUp", "onKeyUpCapture", "disabled", "error", "name", "onChange", "readOnly", "rightIcon", "title", "type", "value", "placeholder", "size", "leftElement", "rightElement"];
-var styles$y = {
+var _excluded$7 = ["autoComplete", "autoFocus", "className", "onClearClick", "onKeyDown", "onKeyDownCapture", "onKeyPress", "onKeyPressCapture", "onKeyUp", "onKeyUpCapture", "disabled", "error", "name", "onChange", "readOnly", "rightIcon", "title", "type", "value", "placeholder", "size", "leftElement", "rightElement"];
+var styles$z = {
   outerWithAddition: /*#__PURE__*/css({
     name: "zjik7",
     styles: "display:flex"
@@ -5026,17 +5095,17 @@ var Input = /*#__PURE__*/function (_React$Component) {
           size = _this$props.size,
           leftElement = _this$props.leftElement,
           rightElement = _this$props.rightElement,
-          props = _objectWithoutProperties(_this$props, _excluded$8);
+          props = _objectWithoutProperties(_this$props, _excluded$7);
 
       var focused = this.state.focused;
       var hasAddition = !!leftElement || !!rightElement;
       return /*#__PURE__*/React.createElement("div", {
-        className: cx(commonInputStyles.outer, wrapSizes[size || 'l'], (_cx = {}, _defineProperty(_cx, commonInputStyles.disabledOuter, disabled), _defineProperty(_cx, commonInputStyles.focused, focused), _defineProperty(_cx, commonInputStyles.error, error), _defineProperty(_cx, styles$y.outerWithAddition, hasAddition), _defineProperty(_cx, styles$y.withLeftElement, !!leftElement), _defineProperty(_cx, styles$y.withRightElement, !!rightElement), _cx), className),
+        className: cx(commonInputStyles.outer, wrapSizes[size || 'l'], (_cx = {}, _defineProperty(_cx, commonInputStyles.disabledOuter, disabled), _defineProperty(_cx, commonInputStyles.focused, focused), _defineProperty(_cx, commonInputStyles.error, error), _defineProperty(_cx, styles$z.outerWithAddition, hasAddition), _defineProperty(_cx, styles$z.withLeftElement, !!leftElement), _defineProperty(_cx, styles$z.withRightElement, !!rightElement), _cx), className),
         title: title
       }, leftElement, /*#__PURE__*/React.createElement("input", Object.assign({}, props, {
         autoFocus: autoFocus,
         autoComplete: autoComplete,
-        className: cx(commonInputStyles.input, commonInputSizes[size || 'l'], (_cx2 = {}, _defineProperty(_cx2, styles$y.inputWithAddition, hasAddition), _defineProperty(_cx2, styles$y.inputWithIcon, rightIcon || onClearClick), _defineProperty(_cx2, commonInputStyles.disabled, disabled), _cx2)),
+        className: cx(commonInputStyles.input, commonInputSizes[size || 'l'], (_cx2 = {}, _defineProperty(_cx2, styles$z.inputWithAddition, hasAddition), _defineProperty(_cx2, styles$z.inputWithIcon, rightIcon || onClearClick), _defineProperty(_cx2, commonInputStyles.disabled, disabled), _cx2)),
         disabled: disabled,
         name: name,
         onChange: onChange,
@@ -5054,9 +5123,9 @@ var Input = /*#__PURE__*/function (_React$Component) {
         readOnly: readOnly,
         ref: this.elementRef
       })), (onClearClick || rightIcon) && /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$y.iconWrap, iconWrapSizes[size || 'l'])
+        className: cx(styles$z.iconWrap, iconWrapSizes[size || 'l'])
       }, onClearClick && (!rightIcon || value) ? /*#__PURE__*/React.createElement(IconCancel, {
-        className: styles$y.clearIcon,
+        className: styles$z.clearIcon,
         onClick: !(disabled || readOnly) && this.handleClearClick || noop
       }) : rightIcon), rightElement);
     }
@@ -5065,7 +5134,7 @@ var Input = /*#__PURE__*/function (_React$Component) {
   return Input;
 }(React.Component);
 
-var styles$x = {
+var styles$y = {
   innerButton: /*#__PURE__*/css({
     name: "1hcx8jb",
     styles: "padding:0"
@@ -5114,12 +5183,12 @@ var InputPassword = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/React.createElement(Input, Object.assign({}, this.props, {
         type: hidden ? 'password' : 'text',
         rightIcon: /*#__PURE__*/React.createElement(Button, {
-          className: styles$x.innerButton,
+          className: styles$y.innerButton,
           size: "xs",
           intent: "plain",
           onClick: this.toggleState
         }, /*#__PURE__*/React.createElement(Icon, {
-          className: styles$x.icon
+          className: styles$y.icon
         }))
       }));
     }
@@ -5139,8 +5208,8 @@ var nanoid = function nanoid() {
   return res;
 };
 
-var _excluded$7 = ["inputComponent", "topRightControls", "className", "id", "inputClassName", "subTitle", "info", "label", "largeMargins", "error", "message", "preserveMessageSpace"];
-var styles$w = {
+var _excluded$6 = ["inputComponent", "topRightControls", "className", "id", "inputClassName", "subTitle", "info", "label", "largeMargins", "error", "message", "preserveMessageSpace"];
+var styles$x = {
   input: /*#__PURE__*/css({
     name: "j9a02z",
     styles: "margin-top:6px"
@@ -5188,7 +5257,7 @@ var LabeledInput = /*#__PURE__*/function (_React$Component) {
           error = _this$props.error,
           message = _this$props.message,
           preserveMessageSpace = _this$props.preserveMessageSpace,
-          restProps = _objectWithoutProperties(_this$props, _excluded$7);
+          restProps = _objectWithoutProperties(_this$props, _excluded$6);
 
       return /*#__PURE__*/React.createElement("div", {
         className: cx(commonFormFieldStyles.wrap, _defineProperty({}, commonFormFieldStyles.wrapMargin, largeMargins), className)
@@ -5212,10 +5281,10 @@ var LabeledInput = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/React.createElement(InputComponent, Object.assign({}, restProps, {
         error: error,
         id: id,
-        className: cx(styles$w.input, inputClassName)
+        className: cx(styles$x.input, inputClassName)
       })), (preserveMessageSpace || message) && /*#__PURE__*/React.createElement(Text, {
         variant: "p",
-        className: cx(styles$w.message, _defineProperty({}, styles$w.errorMessage, error))
+        className: cx(styles$x.message, _defineProperty({}, styles$x.errorMessage, error))
       }, message));
     }
   }]);
@@ -5226,11 +5295,11 @@ LabeledInput.defaultProps = {
   preserveMessageSpace: true
 };
 
-var img$8 = {id: "vkiPySxMTisZF7hFfSUkm", content: "<svg width=\"14\" height=\"59\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\"/><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#fff\" fill-opacity=\".65\"/></svg>", viewbox: "0 0 14 59", viewBox: "0 0 14 59" };
+var img$8 = {id: "XqoDAyUExUakv-bonPn9h", content: "<svg width=\"14\" height=\"59\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\"/><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#fff\" fill-opacity=\".65\"/></svg>", viewbox: "0 0 14 59", viewBox: "0 0 14 59" };
 
-var img$7 = {id: "uX4vyRrlbFgRCNajBxMhj", content: "<svg width=\"14\" height=\"59\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\" /><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#010101\" fill-opacity=\".45\"/></svg>", viewbox: "0 0 14 59", viewBox: "0 0 14 59" };
+var img$7 = {id: "wFQFVV1tmhptB5jOpABp_", content: "<svg width=\"14\" height=\"59\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\" /><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#010101\" fill-opacity=\".45\"/></svg>", viewbox: "0 0 14 59", viewBox: "0 0 14 59" };
 
-var styles$v = {
+var styles$w = {
   wrap: /*#__PURE__*/css({
     name: "3u7751",
     styles: "position:relative;width:14px;height:17px;overflow:hidden;transition:height 0.3s ease-in-out;&:hover{height:59px;}"
@@ -5252,15 +5321,15 @@ var LeaderFlag = function LeaderFlag(_ref) {
       title = _ref.title;
   var glyph = state === 'bad' ? img$8 : img$7;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$v.wrap, className),
+    className: cx(styles$w.wrap, className),
     title: title
   }, /*#__PURE__*/React.createElement(SVGImage, {
     glyph: glyph,
-    className: cx(styles$v.flag, intentions[state])
+    className: cx(styles$w.flag, intentions[state])
   }));
 };
 
-var img$6 = {id: "s4TARkExasOnSU7CMGRS1", content: "<svg width=\"42\" height=\"8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16.5 5.66h-2.47V1h-1.18v5.64h3.64v-.98zM20.93 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1h-3.74v5.64h3.74v-.98zM25.47 6.64h1.25L24.76 1h-1.39l-1.95 5.64h1.2l.44-1.37h1.98l.43 1.37zm-1.43-4.56h.02l.73 2.3H23.3l.73-2.3zM27.3 1v5.64h2.15c1.7 0 2.7-1.05 2.7-2.84 0-1.8-1-2.8-2.7-2.8H27.3zm1.18.97h.83c1.04 0 1.63.65 1.63 1.83 0 1.22-.57 1.86-1.63 1.86h-.83V1.97zM36.64 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1H32.9v5.64h3.74v-.98zM38.67 1.92h1c.59 0 .95.35.95.9 0 .56-.34.9-.94.9h-1.01v-1.8zm0 2.65h.94l1.05 2.07H42L40.81 4.4a1.66 1.66 0 0 0 1.03-1.6c0-1.12-.75-1.8-2.04-1.8h-2.31v5.64h1.18V4.57zM.89 5.43L0 0l2.44 3.46L4 0l1.56 3.46L8 0l-.89 5.43H.9zM7.1 6.91c0 .28-.2.5-.44.5H1.33C1.1 7.4.9 7.19.9 6.9v-.49H7.1v.5z\" fill=\"#F5222D\"/></svg>", viewbox: "0 0 42 8", viewBox: "0 0 42 8" };
+var img$6 = {id: "WuHTn_9bWyqm1yVoFKxfi", content: "<svg width=\"42\" height=\"8\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M16.5 5.66h-2.47V1h-1.18v5.64h3.64v-.98zM20.93 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1h-3.74v5.64h3.74v-.98zM25.47 6.64h1.25L24.76 1h-1.39l-1.95 5.64h1.2l.44-1.37h1.98l.43 1.37zm-1.43-4.56h.02l.73 2.3H23.3l.73-2.3zM27.3 1v5.64h2.15c1.7 0 2.7-1.05 2.7-2.84 0-1.8-1-2.8-2.7-2.8H27.3zm1.18.97h.83c1.04 0 1.63.65 1.63 1.83 0 1.22-.57 1.86-1.63 1.86h-.83V1.97zM36.64 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1H32.9v5.64h3.74v-.98zM38.67 1.92h1c.59 0 .95.35.95.9 0 .56-.34.9-.94.9h-1.01v-1.8zm0 2.65h.94l1.05 2.07H42L40.81 4.4a1.66 1.66 0 0 0 1.03-1.6c0-1.12-.75-1.8-2.04-1.8h-2.31v5.64h1.18V4.57zM.89 5.43L0 0l2.44 3.46L4 0l1.56 3.46L8 0l-.89 5.43H.9zM7.1 6.91c0 .28-.2.5-.44.5H1.33C1.1 7.4.9 7.19.9 6.9v-.49H7.1v.5z\" fill=\"#F5222D\"/></svg>", viewbox: "0 0 42 8", viewBox: "0 0 42 8" };
 
 var LeaderFlagSmall = function LeaderFlagSmall(props) {
   return /*#__PURE__*/React.createElement(SVGImage, Object.assign({}, props, {
@@ -5268,7 +5337,7 @@ var LeaderFlagSmall = function LeaderFlagSmall(props) {
   }));
 };
 
-var _excluded$6 = ["children"],
+var _excluded$5 = ["children"],
     _excluded2$1 = ["children"],
     _excluded3$1 = ["children"],
     _excluded4$1 = ["children"],
@@ -5280,7 +5349,7 @@ var _excluded$6 = ["children"],
     _excluded10 = ["children", "className"],
     _excluded11 = ["children"],
     _excluded12 = ["children"];
-var styles$u = {
+var styles$v = {
   wrap: /*#__PURE__*/css("display:block;& code{padding:3px;border-radius:3px;background-color:", colors.dark, ";color:white;font-family:", monoFontFamily, ";}" + ("" ), "" ),
   pre: /*#__PURE__*/css({
     name: "z9gs9q",
@@ -5311,10 +5380,10 @@ var styles$u = {
 var components = {
   h1: function h1(_ref) {
     var children = _ref.children,
-        props = _objectWithoutProperties(_ref, _excluded$6);
+        props = _objectWithoutProperties(_ref, _excluded$5);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.h,
+      className: styles$v.h,
       variant: "h1"
     }), children);
   },
@@ -5323,7 +5392,7 @@ var components = {
         props = _objectWithoutProperties(_ref2, _excluded2$1);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.h,
+      className: styles$v.h,
       variant: "h2"
     }), children);
   },
@@ -5332,7 +5401,7 @@ var components = {
         props = _objectWithoutProperties(_ref3, _excluded3$1);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.h,
+      className: styles$v.h,
       variant: "h3"
     }), children);
   },
@@ -5341,7 +5410,7 @@ var components = {
         props = _objectWithoutProperties(_ref4, _excluded4$1);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.h,
+      className: styles$v.h,
       variant: "h4"
     }), children);
   },
@@ -5350,7 +5419,7 @@ var components = {
         props = _objectWithoutProperties(_ref5, _excluded5);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.h,
+      className: styles$v.h,
       variant: "h5"
     }), children);
   },
@@ -5359,7 +5428,7 @@ var components = {
         props = _objectWithoutProperties(_ref6, _excluded6);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.h,
+      className: styles$v.h,
       variant: "h6"
     }), children);
   },
@@ -5368,7 +5437,7 @@ var components = {
         props = _objectWithoutProperties(_ref7, _excluded7);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.p,
+      className: styles$v.p,
       variant: "basic",
       tag: "p"
     }), children);
@@ -5386,7 +5455,7 @@ var components = {
         props = _objectWithoutProperties(_ref9, _excluded9);
 
     return /*#__PURE__*/React.createElement("blockquote", Object.assign({}, props, {
-      className: styles$u.blockquote
+      className: styles$v.blockquote
     }), children);
   },
   code: function code(_ref10) {
@@ -5407,7 +5476,7 @@ var components = {
     _children$props = _children$props === void 0 ? {} : _children$props;
     var childrenText = _children$props.children;
     return /*#__PURE__*/React.createElement(CodeBlockWrap, {
-      className: styles$u.pre,
+      className: styles$v.pre,
       textToCopy: childrenText
     }, children);
   },
@@ -5416,7 +5485,7 @@ var components = {
         props = _objectWithoutProperties(_ref12, _excluded11);
 
     return /*#__PURE__*/React.createElement(Text, Object.assign({}, props, {
-      className: styles$u.ul,
+      className: styles$v.ul,
       tag: "ul"
     }), children);
   },
@@ -5425,13 +5494,13 @@ var components = {
         props = _objectWithoutProperties(_ref13, _excluded12);
 
     return /*#__PURE__*/React.createElement("li", Object.assign({}, props, {
-      className: styles$u.li
+      className: styles$v.li
     }), children);
   },
   // eslint-disable-next-line jsx-a11y/alt-text
   img: function img(props) {
     return /*#__PURE__*/React.createElement("img", Object.assign({}, props, {
-      className: styles$u.img
+      className: styles$v.img
     }));
   }
 };
@@ -5444,13 +5513,13 @@ var Markdown = function Markdown(_ref14) {
     forceBlock: true
   };
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$u.wrap, className)
+    className: cx(styles$v.wrap, className)
   }, /*#__PURE__*/React.createElement(MD, {
     options: options
   }, text));
 };
 
-var styles$t = {
+var styles$u = {
   wrap: /*#__PURE__*/css({
     name: "4lv9a",
     styles: "display:flex;flex-direction:column;justify-content:center;align-items:center;padding:16px"
@@ -5482,17 +5551,17 @@ var NonIdealState = function NonIdealState(_ref) {
       title = _ref.title,
       description = _ref.description;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$t.wrap, className)
+    className: cx(styles$u.wrap, className)
   }, image ? /*#__PURE__*/React.createElement(SVGImage, {
     glyph: image,
-    className: cx(styles$t.icon, _defineProperty({}, styles$t.iconMargin, title || description), imageClassName)
+    className: cx(styles$u.icon, _defineProperty({}, styles$u.iconMargin, title || description), imageClassName)
   }) : null, Icon && !image ? /*#__PURE__*/React.createElement(Icon, {
-    className: cx(styles$t.icon, _defineProperty({}, styles$t.iconMargin, title || description), imageClassName)
+    className: cx(styles$u.icon, _defineProperty({}, styles$u.iconMargin, title || description), imageClassName)
   }) : null, title && /*#__PURE__*/React.createElement(Text, {
     variant: "h2",
-    className: styles$t.title
+    className: styles$u.title
   }, title), description && /*#__PURE__*/React.createElement(Text, {
-    className: styles$t.description
+    className: styles$u.description
   }, description), children);
 };
 var NonIdealStateAction = function NonIdealStateAction(_ref2) {
@@ -5516,7 +5585,7 @@ var NonIdealStateAction = function NonIdealStateAction(_ref2) {
   }));
 };
 
-var styles$s = {
+var styles$t = {
   splash: /*#__PURE__*/css("position:relative;display:flex;align-items:center;justify-content:center;padding:16px;background:", colors.intentDangerBg, ";box-shadow:0px 1px 4px rgba(0, 0, 0, 0.11);color:", colors.intentWarningAccent, ";" + ("" ), "" ),
   children: /*#__PURE__*/css("color:", colors.intentWarningAccent, ";" + ("" ), "" ),
   close: /*#__PURE__*/css({
@@ -5542,20 +5611,20 @@ var NotificationSplash = function NotificationSplash(_ref) {
       controls = _ref.controls,
       onClose = _ref.onClose;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$s.splash, _defineProperty({}, styles$s.closePadding, onClose), className)
+    className: cx(styles$t.splash, _defineProperty({}, styles$t.closePadding, onClose), className)
   }, /*#__PURE__*/React.createElement(Text, {
-    className: styles$s.children,
+    className: styles$t.children,
     tag: "span"
   }, children), /*#__PURE__*/React.createElement(ControlsPanel, {
-    className: cx(styles$s.controls, _defineProperty({}, styles$s.controlsMargin, children && controls)),
+    className: cx(styles$t.controls, _defineProperty({}, styles$t.controlsMargin, children && controls)),
     controls: controls
   }), onClose && /*#__PURE__*/React.createElement(IconHelperClose, {
-    className: styles$s.close,
+    className: styles$t.close,
     onClick: onClose
   }));
 };
 
-var styles$r = {
+var styles$s = {
   splash: /*#__PURE__*/css("position:fixed;top:0;left:0;right:0;z-index:", zIndex.fixedSplash, ";" + ("" ), "" )
 };
 var NotificationSplashFixed = /*#__PURE__*/function (_React$Component) {
@@ -5590,7 +5659,7 @@ var NotificationSplashFixed = /*#__PURE__*/function (_React$Component) {
           controls = _this$props.controls,
           onClose = _this$props.onClose;
       return /*#__PURE__*/React.createElement(NotificationSplash, {
-        className: cx(styles$r.splash, className),
+        className: cx(styles$s.splash, className),
         controls: controls,
         onClose: onClose
       }, children);
@@ -5612,7 +5681,7 @@ var NotificationSplashFixed = /*#__PURE__*/function (_React$Component) {
   return NotificationSplashFixed;
 }(React.Component);
 
-var styles$q = {
+var styles$r = {
   container: /*#__PURE__*/css({
     name: "iqq7hm",
     styles: "position:relative;padding:16px;border:1px solid #e8e8e8;border-radius:4px;margin:0 -16px 48px;background:#ffffff;box-shadow:0px 1px 10px rgba(0, 0, 0, 0.06)"
@@ -5631,18 +5700,18 @@ var PageCard = function PageCard(_ref) {
       _ref$title = _ref.title,
       title = _ref$title === void 0 ? '' : _ref$title;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$q.container, // { [styles.corner]: showCorner },
+    className: cx(styles$r.container, // { [styles.corner]: showCorner },
     className)
   }, /*#__PURE__*/React.createElement(Text, {
-    className: styles$q.cardHead,
+    className: styles$r.cardHead,
     variant: "h2"
   }, title), onClose && /*#__PURE__*/React.createElement(IconHelperClose, {
-    className: styles$q.closeIcon,
+    className: styles$r.closeIcon,
     onClick: onClose
   }), /*#__PURE__*/React.createElement("div", null, children));
 };
 
-var styles$p = {
+var styles$q = {
   page: /*#__PURE__*/css("display:flex;flex-direction:column;max-width:", pageLayoutMaxWidth, "px;min-width:", pageLayoutMinWidth, "px;height:calc(100% - ", appLayoutTopPanelHeight, "px - 60px);padding:0 30px;margin:30px auto 30px;box-sizing:border-box;" + ("" ), "" ),
   pageWithAbovePanel: /*#__PURE__*/css({
     name: "iqoq9n",
@@ -5685,28 +5754,28 @@ var PageLayout = function PageLayout(_ref, ref) {
       topRightControls = _ref.topRightControls,
       wide = _ref.wide;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$p.page, (_cx = {}, _defineProperty(_cx, styles$p.wide, wide), _defineProperty(_cx, styles$p.pageWithAbovePanel, !!AboveComponent), _cx), className),
+    className: cx(styles$q.page, (_cx = {}, _defineProperty(_cx, styles$q.wide, wide), _defineProperty(_cx, styles$q.pageWithAbovePanel, !!AboveComponent), _cx), className),
     ref: ref && 'current' in ref ? ref : null
   }, !!AboveComponent && /*#__PURE__*/React.createElement(AboveComponent, {
-    className: styles$p.aboveHeadingPanel
+    className: styles$q.aboveHeadingPanel
   }), (heading || topRightControls || headingContent) && /*#__PURE__*/React.createElement("div", {
-    className: styles$p.headingPanel
+    className: styles$q.headingPanel
   }, heading && /*#__PURE__*/React.createElement(Text, {
-    className: cx(_defineProperty({}, styles$p.divider, !topLeftControls)),
+    className: cx(_defineProperty({}, styles$q.divider, !topLeftControls)),
     variant: "h1"
   }, heading), topLeftControls && /*#__PURE__*/React.createElement(ControlsPanel, {
-    className: cx(styles$p.leftControls, styles$p.divider),
+    className: cx(styles$q.leftControls, styles$q.divider),
     controls: topLeftControls,
     thin: true
   }), headingContent, topRightControls && /*#__PURE__*/React.createElement(ControlsPanel, {
-    className: styles$p.rightControls,
+    className: styles$q.rightControls,
     controls: topRightControls,
     thin: true
   })), children);
 };
 var PageLayoutWithRef = /*#__PURE__*/React.forwardRef(PageLayout);
 
-var styles$o = {
+var styles$p = {
   pagination: /*#__PURE__*/css({
     name: "zjik7",
     styles: "display:flex"
@@ -5827,12 +5896,12 @@ var Pagination = /*#__PURE__*/function (_React$PureComponent) {
       var pages = this.getVisiblePages(activePage, items);
       var visiblePages = this.filterPages(pages, items);
       return /*#__PURE__*/React.createElement("div", {
-        className: styles$o.pagination
+        className: styles$p.pagination
       }, showTotal && /*#__PURE__*/React.createElement(Text, {
-        className: styles$o.countItemsText,
+        className: styles$p.countItemsText,
         tag: "div"
       }, page * pageSize + 1, "-", activePage * pageSize > items ? items : activePage * pageSize, " of ", items, " items"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Button, {
-        className: styles$o.button,
+        className: styles$p.button,
         onClick: this.handleChangePage,
         disabled: activePage === 1,
         icon: IconChevronLeft,
@@ -5843,25 +5912,25 @@ var Pagination = /*#__PURE__*/function (_React$PureComponent) {
         return /*#__PURE__*/React.createElement(React.Fragment, {
           key: visiblePage
         }, needEllipsis && /*#__PURE__*/React.createElement(Button, {
-          className: cx(styles$o.button),
+          className: cx(styles$p.button),
           intent: "plain",
           onClick: _this2.handleChangePage,
           pass: array[index - 1] < activePage ? activePage - 5 : activePage + 5
         }, "..."), /*#__PURE__*/React.createElement(Button, {
-          className: cx(styles$o.button, _defineProperty({}, styles$o.buttonActive, activePage === visiblePage)),
+          className: cx(styles$p.button, _defineProperty({}, styles$p.buttonActive, activePage === visiblePage)),
           intent: "plain",
           onClick: _this2.handleChangePage,
           pass: visiblePage
         }, visiblePage));
       })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Button, {
-        className: styles$o.button,
+        className: styles$p.button,
         onClick: this.handleChangePage,
         disabled: activePage === this.getPages(items),
         icon: IconChevronRight,
         intent: "plain",
         pass: activePage + 1
       })), setPageSize && /*#__PURE__*/React.createElement(Dropdown, {
-        className: styles$o.dropDown,
+        className: styles$p.dropDown,
         items: this.getDropDownItems()
       }, /*#__PURE__*/React.createElement(Button, {
         text: "".concat(pageSize, " / page "),
@@ -5876,7 +5945,7 @@ Pagination.defaultProps = {
   pageSizeOptions: [10, 20, 50, 100]
 };
 
-var styles$n = {
+var styles$o = {
   pagination: /*#__PURE__*/css({
     name: "zjik7",
     styles: "display:flex"
@@ -5956,28 +6025,28 @@ var PaginationControlled = /*#__PURE__*/function (_React$PureComponent) {
           pageSize = _this$props3.pageSize;
       var activePage = page + 1;
       return /*#__PURE__*/React.createElement("div", {
-        className: styles$n.pagination
+        className: styles$o.pagination
       }, /*#__PURE__*/React.createElement(Button, {
-        className: cx(styles$n.btn, styles$n.buttonArrow),
+        className: cx(styles$o.btn, styles$o.buttonArrow),
         onClick: this.handleChangePage,
         disabled: activePage === 1,
         icon: IconChevronLeft,
         intent: "plain",
         pass: activePage - 1
       }), /*#__PURE__*/React.createElement(Text, {
-        className: cx(styles$n.btn, styles$n.activePage)
+        className: cx(styles$o.btn, styles$o.activePage)
       }, activePage), /*#__PURE__*/React.createElement(Button, {
-        className: cx(styles$n.btn, styles$n.buttonArrow),
+        className: cx(styles$o.btn, styles$o.buttonArrow),
         onClick: this.handleChangePage,
         disabled: disableNextPageButton,
         icon: IconChevronRight,
         intent: "plain",
         pass: activePage + 1
       }), setPageSize && /*#__PURE__*/React.createElement(Dropdown, {
-        className: styles$n.dropDown,
+        className: styles$o.dropDown,
         items: this.getDropDownItems()
       }, /*#__PURE__*/React.createElement(Button, {
-        className: styles$n.dropDownBtn,
+        className: styles$o.dropDownBtn,
         text: "".concat(pageSize, " / page "),
         iconRight: IconChevronDown
       })));
@@ -5990,7 +6059,7 @@ PaginationControlled.defaultProps = {
   pageSizeOptions: [10, 20, 50, 100]
 };
 
-var styles$m = {
+var styles$n = {
   popover: /*#__PURE__*/css("position:absolute;left:0;max-width:70%;max-height:100%;padding:20px;overflow:hidden;border-radius:4px;box-shadow:0 5px 20px 0 rgba(0, 0, 0, 0.09);border:solid 1px ", colors.intentBaseBg, ";background-color:#ffffff;z-index:", zIndex.dropdownMenu, ";box-sizing:border-box;outline:none;&::-moz-focus-inner{border:0;}" + ("" ), "" ),
   focusClosureControl: /*#__PURE__*/css({
     name: "alng9s",
@@ -6073,7 +6142,7 @@ var DropdownPopover = /*#__PURE__*/function (_React$Component) {
           onKeyDownCapture = _this$props.onKeyDownCapture,
           onMouseDown = _this$props.onMouseDown;
       return /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$m.popover, className),
+        className: cx(styles$n.popover, className),
         onClick: onClick,
         onKeyDownCapture: onKeyDownCapture,
         onMouseDown: onMouseDown,
@@ -6081,7 +6150,7 @@ var DropdownPopover = /*#__PURE__*/function (_React$Component) {
         ref: innerRef,
         tabIndex: 0
       }, children, /*#__PURE__*/React.createElement("div", {
-        className: styles$m.focusClosureControl,
+        className: styles$n.focusClosureControl,
         onFocus: this.focusFirstInteractiveElement,
         tabIndex: 0
       }));
@@ -6096,7 +6165,7 @@ var DropdownPopoverWithRef = /*#__PURE__*/React.forwardRef(function (props, ref)
   }));
 });
 
-var _excluded$5 = ["className", "popoverContent", "popoverClassName"];
+var _excluded$4 = ["className", "popoverContent", "popoverClassName"];
 
 var focusFirstInteractiveElement = function focusFirstInteractiveElement(containerEl) {
   var firstInteractiveElement = containerEl && containerEl.querySelector(INTERACTIVE_ELEMENT_SELECTOR);
@@ -6307,7 +6376,7 @@ var withPopover = function withPopover(Component) {
             className = _this$props2.className,
             popoverContent = _this$props2.popoverContent;
             _this$props2.popoverClassName;
-            var props = _objectWithoutProperties(_this$props2, _excluded$5);
+            var props = _objectWithoutProperties(_this$props2, _excluded$4);
 
         var isOpen = this.state.isOpen;
         return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Component, Object.assign({}, props, {
@@ -6322,7 +6391,7 @@ var withPopover = function withPopover(Component) {
   }(React.PureComponent);
 };
 
-var styles$l = {
+var styles$m = {
   wrap: /*#__PURE__*/css("position:relative;width:530px;padding:20px;border:solid 1px;box-sizing:border-box;border-radius:10px;animation:0.2s linear ", keyFrames.fadeIn, ";cursor:pointer;" + ("" ), "" ),
   closeBtn: /*#__PURE__*/css({
     name: "1eucs3e",
@@ -6359,23 +6428,23 @@ var PopupNotificationItem = function PopupNotificationItem(_ref) {
       onMouseEnter = _ref.onMouseEnter,
       onMouseLeave = _ref.onMouseLeave;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$l.wrap, intentStyles[intent].wrap, className),
+    className: cx(styles$m.wrap, intentStyles[intent].wrap, className),
     onClick: onClose,
     onMouseEnter: onMouseEnter,
     onMouseLeave: onMouseLeave
   }, /*#__PURE__*/React.createElement(Text, {
-    className: cx(styles$l.heading, intentStyles[intent].heading),
+    className: cx(styles$m.heading, intentStyles[intent].heading),
     variant: "h4",
     tag: "span"
   }, heading), /*#__PURE__*/React.createElement(Text, {
-    className: cx(styles$l.text, _defineProperty({}, styles$l.btmMargin, !!children))
+    className: cx(styles$m.text, _defineProperty({}, styles$m.btmMargin, !!children))
   }, text), children, /*#__PURE__*/React.createElement(IconHelperClose, {
-    className: styles$l.closeBtn,
+    className: styles$m.closeBtn,
     onClick: onClose
   }));
 };
 
-var styles$k = {
+var styles$l = {
   container: /*#__PURE__*/css("position:fixed;right:35px;bottom:0;z-index:", zIndex.notification, ";max-height:calc(100vh - 35px);overflow:hidden;mask-image:linear-gradient(0deg, transparent 0, rgba(0, 0, 0, 1) 40px);" + ("" ), "" ),
   item: /*#__PURE__*/css({
     name: "wntzq4",
@@ -6386,7 +6455,7 @@ var PopupNotificationList = function PopupNotificationList(_ref) {
   var className = _ref.className,
       notifications = _ref.notifications;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$k.container, className)
+    className: cx(styles$l.container, className)
   }, notifications && _toConsumableArray(notifications).reverse().map(function (_ref2) {
     var details = _ref2.details,
         text = _ref2.text,
@@ -6397,7 +6466,7 @@ var PopupNotificationList = function PopupNotificationList(_ref) {
         onMouseEnter = _ref2.onMouseEnter,
         onMouseLeave = _ref2.onMouseLeave;
     return /*#__PURE__*/React.createElement(PopupNotificationItem, {
-      className: styles$k.item,
+      className: styles$l.item,
       heading: heading,
       intent: intent,
       onClose: onClose,
@@ -6430,7 +6499,7 @@ var ProgressBar = function ProgressBar(_ref) {
   });
 };
 
-var styles$j = {
+var styles$k = {
   icon: /*#__PURE__*/css({
     name: "4zleql",
     styles: "display:block"
@@ -6463,24 +6532,24 @@ var RadioButton = function RadioButton(_ref) {
       title = _ref.title,
       value = _ref.value;
   return /*#__PURE__*/React.createElement("label", {
-    className: cx(styles$j.label, className),
+    className: cx(styles$k.label, className),
     title: title
   }, /*#__PURE__*/React.createElement("input", {
     checked: checked,
-    className: styles$j.input,
+    className: styles$k.input,
     disabled: disabled,
     type: "radio",
     onChange: onChange,
     name: name,
     value: value
   }), /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$j.iconWrap, _defineProperty({}, styles$j.childrenMargin, children))
+    className: cx(styles$k.iconWrap, _defineProperty({}, styles$k.childrenMargin, children))
   }, /*#__PURE__*/React.createElement(IconRadio, {
-    className: styles$j.icon,
+    className: styles$k.icon,
     checked: checked,
     disabled: disabled
   })), typeof children === 'string' ? /*#__PURE__*/React.createElement(Text, {
-    className: styles$j.children
+    className: styles$k.children
   }, children) : children);
 };
 
@@ -7050,7 +7119,7 @@ var createStyled = function createStyled(tag, options) {
   };
 };
 
-var _excluded$4 = ["elementRef", "style"],
+var _excluded$3 = ["elementRef", "style"],
     _excluded2 = ["elementRef", "style"],
     _excluded3 = ["elementRef", "style"],
     _excluded4 = ["elementRef", "style"];
@@ -7075,7 +7144,7 @@ var trackYProps = function trackYProps(track) {
     renderer: function renderer(props) {
       var elementRef = props.elementRef,
           style = props.style,
-          rest = _objectWithoutProperties(props, _excluded$4);
+          rest = _objectWithoutProperties(props, _excluded$3);
 
       return /*#__PURE__*/React.createElement(Track, Object.assign({}, rest, {
         style: style,
@@ -7228,7 +7297,7 @@ var TarantoolLogoSpinner = function TarantoolLogoSpinner(_ref) {
   })));
 };
 
-var styles$i = {
+var styles$j = {
   wrap: /*#__PURE__*/css({
     name: "1uxf7yn",
     styles: "display:flex;justify-content:center;align-items:center;height:calc(100% - 69px)"
@@ -7241,13 +7310,13 @@ var styles$i = {
 var SectionPreloader = function SectionPreloader(_ref) {
   var className = _ref.className;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$i.wrap, className)
+    className: cx(styles$j.wrap, className)
   }, /*#__PURE__*/React.createElement(TarantoolLogoSpinner, {
-    className: styles$i.image
+    className: styles$j.image
   }));
 };
 
-var styles$h = {
+var styles$i = {
   icon: /*#__PURE__*/css({
     name: "tifoaz",
     styles: "fill:#595959"
@@ -7317,33 +7386,33 @@ var Select = function Select(props) {
         onClick: function onClick() {
           return props.onChange(option.value, option);
         },
-        className: cx(_defineProperty({}, styles$h.selected, option.value === props.value))
+        className: cx(_defineProperty({}, styles$i.selected, option.value === props.value))
       }, option.label);
     }) : /*#__PURE__*/React.createElement(DropdownItem, {
-      className: styles$h.noData
+      className: styles$i.noData
     }, "No data")
   }, /*#__PURE__*/React.createElement(Input, Object.assign({
     value: props.allowSearch && dropdownVisible ? value : getLabel(),
     placeholder: props.allowSearch && dropdownVisible ? getLabel() : '',
     onChange: onChangeInput,
     disabled: props.disabled,
-    className: cx(_defineProperty({}, styles$h.input, !props.allowSearch && !props.disabled), props.inputClassName),
+    className: cx(_defineProperty({}, styles$i.input, !props.allowSearch && !props.disabled), props.inputClassName),
     autoComplete: "new-password",
     rightIcon: /*#__PURE__*/React.createElement(Icon, {
-      className: styles$h.icon
+      className: styles$i.icon
     })
   }, props.inputProps)));
 };
 
-var img$5 = {id: "NTbNlHuywkcWGi69OyczW", content: "<svg width=\"80\" height=\"80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M40 80c22.0914 0 40-17.9086 40-40S62.0914 0 40 0 0 17.9086 0 40s17.9086 40 40 40zm0-10.8475c16.1005 0 29.1525-13.052 29.1525-29.1525S56.1005 10.8475 40 10.8475 10.8475 23.8995 10.8475 40 23.8995 69.1525 40 69.1525z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M52.4643 58.2169L21.783 27.5357l5.7528-5.7527L58.217 52.4642l-5.7527 5.7527z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.217 27.5357L27.5358 58.217l-5.7528-5.7528L52.4643 21.783l5.7527 5.7527z\" fill=\"#C4C4C4\"/></svg>", viewbox: "0 0 80 80", viewBox: "0 0 80 80" };
+var img$5 = {id: "ex-rTJ-BVasHYy3UVCWu1", content: "<svg width=\"80\" height=\"80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M40 80c22.0914 0 40-17.9086 40-40S62.0914 0 40 0 0 17.9086 0 40s17.9086 40 40 40zm0-10.8475c16.1005 0 29.1525-13.052 29.1525-29.1525S56.1005 10.8475 40 10.8475 10.8475 23.8995 10.8475 40 23.8995 69.1525 40 69.1525z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M52.4643 58.2169L21.783 27.5357l5.7528-5.7527L58.217 52.4642l-5.7527 5.7527z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.217 27.5357L27.5358 58.217l-5.7528-5.7528L52.4643 21.783l5.7527 5.7527z\" fill=\"#C4C4C4\"/></svg>", viewbox: "0 0 80 80", viewBox: "0 0 80 80" };
 
-var img$4 = {id: "iYvJ3BhCddSOqlnoRfrBF", content: "<svg width=\"80\" height=\"112\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661zM20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661zM26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 5.36527C0 2.40211 2.42829 0 5.42373 0H56.9492L80 22.8024v83.8326c0 2.963-2.4283 5.365-5.4237 5.365H5.42373C2.42828 112 0 109.598 0 106.635V5.36527zm50.1695 5.36523V29.509h18.983v71.76h-58.305V10.7305h39.322z\" fill=\"#C4C4C4\"/></svg>", viewbox: "0 0 80 112", viewBox: "0 0 80 112" };
+var img$4 = {id: "8uXTwWnsdfasRosOjAofP", content: "<svg width=\"80\" height=\"112\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661zM20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661zM26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\"/><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 5.36527C0 2.40211 2.42829 0 5.42373 0H56.9492L80 22.8024v83.8326c0 2.963-2.4283 5.365-5.4237 5.365H5.42373C2.42828 112 0 109.598 0 106.635V5.36527zm50.1695 5.36523V29.509h18.983v71.76h-58.305V10.7305h39.322z\" fill=\"#C4C4C4\"/></svg>", viewbox: "0 0 80 112", viewBox: "0 0 80 112" };
 
-var img$3 = {id: "OIlFPhVrZHefhzWrpX3b7", content: "<svg width=\"36\" height=\"35\" viewBox=\"0 0 36 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M35.2 16.3V17.9857C35.2 19.9143 35.2 21.6071 35.2 23.0929C35.1073 22.4529 34.8935 21.8353 34.5693 21.2714C33.836 20.0571 32.604 19.2714 30.25 17.9429V19.1071C30.25 20.0071 30.25 20.8214 30.184 21.5071C30.14 22.3038 29.904 23.0791 29.495 23.7704C29.086 24.4616 28.5156 25.0493 27.83 25.4857C27.2507 25.8857 26.5247 26.2929 25.7253 26.7429L22.2273 28.7143C21.5143 29.1312 20.78 29.5126 20.0273 29.8571C19.2962 30.2063 18.4949 30.3941 17.6807 30.4071C16.8641 30.3942 16.0604 30.2065 15.3267 29.8571C14.574 29.5126 13.8397 29.1312 13.1267 28.7143L9.62867 26.7429C8.82933 26.2929 8.10333 25.8857 7.524 25.4857C6.85098 25.0375 6.28558 24.4527 5.86667 23.7714C5.47234 23.0738 5.23721 22.3014 5.17733 21.5071C5.13333 20.8214 5.13333 20.0071 5.13333 19.1071V17.9429C2.77933 19.2714 1.53267 20.0857 0.814 21.2714C0.351507 22.1271 0.100403 23.0761 0.0806667 24.0429V24.1357C0 22.4071 0 20.4 0 17.9857V16.3C0 8.61429 0 4.77143 2.44933 2.38571C4.89867 0 8.844 0 16.7347 0H18.4653C26.356 0 30.3013 0 32.7507 2.38571C35.2 4.77143 35.2 8.61429 35.2 16.3Z\" fill=\"white\"/>\n<path d=\"M35.1999 23.0929C35.1072 22.4529 34.8934 21.8353 34.5692 21.2714C33.8359 20.0572 32.6039 19.2714 30.2499 17.9429V19.1072C30.2499 20.0072 30.2499 20.8214 30.1839 21.5072C30.1399 22.3038 29.9039 23.0792 29.4949 23.7704C29.0859 24.4616 28.5155 25.0493 27.8299 25.4857C27.2506 25.8857 26.5246 26.2929 25.7252 26.7429L22.2272 28.7143C21.5142 29.1312 20.7799 29.5126 20.0272 29.8572C19.2961 30.2064 18.4948 30.3941 17.6806 30.4072C16.864 30.3943 16.0603 30.2065 15.3266 29.8572C14.5739 29.5126 13.8396 29.1312 13.1266 28.7143L9.62857 26.7429C8.82923 26.2929 8.10323 25.8857 7.5239 25.4857C6.85088 25.0375 6.28548 24.4527 5.86657 23.7714C5.47224 23.0738 5.23711 22.3014 5.17723 21.5072C5.13323 20.8214 5.13323 20.0072 5.13323 19.1072V17.9429C2.77923 19.2714 1.53257 20.0857 0.8139 21.2714C0.351406 22.1271 0.100303 23.0761 0.0805664 24.0429V24.1357C0.0805664 24.2143 0.0805664 24.2929 0.0805664 24.3643C0.0805664 24.9643 0.146566 25.5286 0.1979 26.0572C0.1979 26.35 0.2639 26.6357 0.300566 26.9072C0.300566 27.0429 0.300566 27.1857 0.359233 27.3143C0.508307 29.0462 1.24639 30.6801 2.45657 31.9572C4.91323 34.3572 8.87323 34.3572 16.7932 34.3572H18.5312C26.4512 34.3572 30.4112 34.3572 32.8752 31.9572C34.5839 30.2857 35.0752 27.9143 35.2659 24.0286C35.2439 23.7 35.1999 23.3857 35.1999 23.0929Z\" fill=\"#3A3A3A\"/>\n<path d=\"M14.0725 7.45006C15.7958 6.47863 16.6538 6.02148 17.5998 6.02148C18.5458 6.02148 19.4038 6.50006 21.1272 7.45006L24.4565 9.32148C26.1798 10.2858 27.0378 10.7501 27.5145 11.5715C27.9912 12.3929 27.9838 13.3358 27.9838 15.2715V19.0143C27.9838 20.9501 27.9838 21.9143 27.5145 22.7143C27.0452 23.5143 26.1798 23.9715 24.4565 24.9572L21.1272 26.8286C19.4038 27.7929 18.5458 28.2572 17.5998 28.2572C16.6538 28.2572 15.7958 27.7715 14.0725 26.8286L10.7432 24.9501C9.01983 23.9858 8.16183 23.5215 7.68516 22.7072C7.20849 21.8929 7.21583 20.9429 7.21583 19.0072V15.2715C7.21583 13.3358 7.21583 12.3643 7.68516 11.5715C8.15449 10.7786 9.01983 10.2858 10.7432 9.32148L14.0725 7.45006Z\" fill=\"#0077FF\"/>\n<path d=\"M12.8481 13.3715V15.7715H16.3681V22.6286H18.8321V15.7715H22.3521V13.3715H12.8481Z\" fill=\"white\"/>\n</svg>\n", viewbox: "0 0 36 35", viewBox: "0 0 36 35" };
+var img$3 = {id: "czACxQmlft1fTTAtCQ6Tl", content: "<svg width=\"36\" height=\"35\" viewBox=\"0 0 36 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4742 5.77991C15.5251 4.60997 16.5505 4.025 17.6765 4.025C18.8025 4.025 19.8279 4.60997 21.8788 5.77991L25.8478 8.04408C27.8986 9.21402 28.924 9.79899 29.487 10.7625C30.05 11.726 30.05 12.896 30.05 15.2358V19.7642C30.05 22.104 30.05 23.274 29.487 24.2375C28.924 25.201 27.8986 25.786 25.8478 26.9559L21.8787 29.2201C19.8279 30.39 18.8025 30.975 17.6765 30.975C16.5505 30.975 15.525 30.39 13.4742 29.2201L9.50522 26.9559C7.45437 25.786 6.42894 25.201 5.86595 24.2375C5.30295 23.274 5.30295 22.104 5.30295 19.7642V15.2358C5.30295 12.896 5.30295 11.726 5.86595 10.7625C6.42894 9.79899 7.45437 9.21402 9.50522 8.04408L13.4742 5.77991ZM12.5503 12.775C12.2574 12.775 12.02 13.01 12.02 13.3V15.1537C12.02 15.4437 12.2574 15.6787 12.5503 15.6787H15.6797C15.9726 15.6787 16.21 15.9138 16.21 16.2037V23.45C16.21 23.74 16.4474 23.975 16.7403 23.975H18.6127C18.9056 23.975 19.143 23.74 19.143 23.45V16.2037C19.143 15.9138 19.3804 15.6787 19.6733 15.6787H22.8027C23.0955 15.6787 23.333 15.4437 23.333 15.1537V13.3C23.333 13.0101 23.0955 12.775 22.8027 12.775H12.5503Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 16.6393C0 8.79548 0 4.87355 2.46135 2.43678C4.9227 0 8.88419 0 16.8072 0H18.5458C26.4688 0 30.4303 0 32.8916 2.43678C35.353 4.87355 35.353 8.79548 35.353 16.6393V18.3607C35.353 26.2045 35.353 30.1264 32.8916 32.5632C30.4303 35 26.4688 35 18.5458 35H16.8072C8.88419 35 4.9227 35 2.46135 32.5632C0 30.1264 0 26.2045 0 18.3607V16.6393ZM16.8072 1.05H18.5458C22.5373 1.05 25.4242 1.05223 27.6255 1.34523C29.7963 1.63418 31.1409 2.18846 32.1417 3.17924C33.1425 4.17002 33.7023 5.50118 33.9942 7.65031C34.2901 9.82965 34.2924 12.6877 34.2924 16.6393V18.3607C34.2924 22.3123 34.2901 25.1704 33.9942 27.3497C33.7023 29.4988 33.1425 30.83 32.1417 31.8208C31.1409 32.8115 29.7963 33.3658 27.6255 33.6548C25.4242 33.9478 22.5373 33.95 18.5458 33.95H16.8072C12.8157 33.95 9.92878 33.9478 7.72747 33.6548C5.55666 33.3658 4.21207 32.8115 3.2113 31.8208C2.21053 30.83 1.65066 29.4988 1.3588 27.3497C1.06284 25.1704 1.06059 22.3123 1.06059 18.3607V16.6393C1.06059 12.6877 1.06284 9.82965 1.3588 7.65031C1.65066 5.50118 2.21053 4.17002 3.2113 3.17924C4.21207 2.18846 5.55666 1.63418 7.72747 1.34523C9.92878 1.05223 12.8157 1.05 16.8072 1.05Z\" fill=\"white\"/>\n</svg>\n", viewbox: "0 0 36 35", viewBox: "0 0 36 35" };
 
-var img$2 = {id: "qgo-KPabv-jodw0b8ihH5", content: "<svg width=\"154\" height=\"35\" viewBox=\"0 0 154 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M35.2 16.3V17.9857C35.2 19.9143 35.2 21.6071 35.2 23.0929C35.1073 22.4529 34.8935 21.8353 34.5693 21.2714C33.836 20.0571 32.604 19.2714 30.25 17.9429V19.1071C30.25 20.0071 30.25 20.8214 30.184 21.5071C30.14 22.3038 29.904 23.0791 29.495 23.7704C29.086 24.4616 28.5156 25.0493 27.83 25.4857C27.2507 25.8857 26.5247 26.2929 25.7253 26.7429L22.2273 28.7143C21.5143 29.1312 20.78 29.5126 20.0273 29.8571C19.2962 30.2063 18.4949 30.3941 17.6807 30.4071C16.8641 30.3942 16.0604 30.2065 15.3267 29.8571C14.574 29.5126 13.8397 29.1312 13.1267 28.7143L9.62867 26.7429C8.82933 26.2929 8.10333 25.8857 7.524 25.4857C6.85098 25.0375 6.28558 24.4527 5.86667 23.7714C5.47234 23.0738 5.23721 22.3014 5.17733 21.5071C5.13333 20.8214 5.13333 20.0071 5.13333 19.1071V17.9429C2.77933 19.2714 1.53267 20.0857 0.814 21.2714C0.351507 22.1271 0.100403 23.0761 0.0806667 24.0429V24.1357C0 22.4071 0 20.4 0 17.9857V16.3C0 8.61429 0 4.77143 2.44933 2.38571C4.89867 0 8.844 0 16.7347 0H18.4653C26.356 0 30.3013 0 32.7507 2.38571C35.2 4.77143 35.2 8.61429 35.2 16.3Z\" fill=\"white\"/>\n<path d=\"M35.1999 23.0929C35.1072 22.4529 34.8934 21.8353 34.5692 21.2714C33.8359 20.0572 32.6039 19.2714 30.2499 17.9429V19.1072C30.2499 20.0072 30.2499 20.8214 30.1839 21.5072C30.1399 22.3038 29.9039 23.0792 29.4949 23.7704C29.0859 24.4616 28.5155 25.0493 27.8299 25.4857C27.2506 25.8857 26.5246 26.2929 25.7252 26.7429L22.2272 28.7143C21.5142 29.1312 20.7799 29.5126 20.0272 29.8572C19.2961 30.2064 18.4948 30.3941 17.6806 30.4072C16.864 30.3943 16.0603 30.2065 15.3266 29.8572C14.5739 29.5126 13.8396 29.1312 13.1266 28.7143L9.62857 26.7429C8.82923 26.2929 8.10323 25.8857 7.5239 25.4857C6.85088 25.0375 6.28548 24.4527 5.86657 23.7714C5.47224 23.0738 5.23711 22.3014 5.17723 21.5072C5.13323 20.8214 5.13323 20.0072 5.13323 19.1072V17.9429C2.77923 19.2714 1.53257 20.0857 0.8139 21.2714C0.351406 22.1271 0.100303 23.0761 0.0805664 24.0429V24.1357C0.0805664 24.2143 0.0805664 24.2929 0.0805664 24.3643C0.0805664 24.9643 0.146566 25.5286 0.1979 26.0572C0.1979 26.35 0.2639 26.6357 0.300566 26.9072C0.300566 27.0429 0.300566 27.1857 0.359233 27.3143C0.508307 29.0462 1.24639 30.6801 2.45657 31.9572C4.91323 34.3572 8.87323 34.3572 16.7932 34.3572H18.5312C26.4512 34.3572 30.4112 34.3572 32.8752 31.9572C34.5839 30.2857 35.0752 27.9143 35.2659 24.0286C35.2439 23.7 35.1999 23.3857 35.1999 23.0929Z\" fill=\"#3A3A3A\"/>\n<path d=\"M14.0725 7.45006C15.7958 6.47863 16.6538 6.02148 17.5998 6.02148C18.5458 6.02148 19.4038 6.50006 21.1272 7.45006L24.4565 9.32148C26.1798 10.2858 27.0378 10.7501 27.5145 11.5715C27.9912 12.3929 27.9838 13.3358 27.9838 15.2715V19.0143C27.9838 20.9501 27.9838 21.9143 27.5145 22.7143C27.0452 23.5143 26.1798 23.9715 24.4565 24.9572L21.1272 26.8286C19.4038 27.7929 18.5458 28.2572 17.5998 28.2572C16.6538 28.2572 15.7958 27.7715 14.0725 26.8286L10.7432 24.9501C9.01983 23.9858 8.16183 23.5215 7.68516 22.7072C7.20849 21.8929 7.21583 20.9429 7.21583 19.0072V15.2715C7.21583 13.3358 7.21583 12.3643 7.68516 11.5715C8.15449 10.7786 9.01983 10.2858 10.7432 9.32148L14.0725 7.45006Z\" fill=\"#0077FF\"/>\n<path d=\"M12.8481 13.3715V15.7715H16.3681V22.6286H18.8321V15.7715H22.3521V13.3715H12.8481Z\" fill=\"white\"/>\n<path d=\"M56.2248 25.8857H53.2915V11.8286H47.4248V9.20715H62.0915V11.8286H56.2248V25.8857Z\" fill=\"white\"/>\n<path d=\"M66.6529 13.3429C67.3638 13.3072 68.0743 13.4222 68.7351 13.6799C69.396 13.9377 69.9916 14.332 70.4809 14.8358C71.4756 15.9873 71.9725 17.4701 71.8669 18.9715V25.8786H69.8209L69.2342 23.9715C68.836 24.5964 68.2936 25.1222 67.6502 25.5072C66.902 25.9493 66.039 26.1725 65.1642 26.15C64.3692 26.1632 63.5824 25.9918 62.8689 25.65C62.2175 25.3307 61.675 24.8346 61.3069 24.2215C60.93 23.6067 60.737 22.9017 60.7495 22.1858C60.7331 21.643 60.8535 21.1046 61.1003 20.6177C61.347 20.1308 61.7125 19.7103 62.1649 19.3929C63.3982 18.6079 64.86 18.2343 66.3302 18.3286H69.0655C69.0446 17.6151 68.7699 16.9309 68.2882 16.3929C68.0646 16.152 67.7885 15.9628 67.4802 15.8392C67.1719 15.7157 66.8391 15.6608 66.5062 15.6786C65.9853 15.6687 65.4719 15.8005 65.0237 16.0592C64.5755 16.3179 64.2102 16.6932 63.9689 17.1429L61.3802 16.7215C61.6757 15.6961 62.3563 14.8164 63.2869 14.2572C64.2949 13.6427 65.4638 13.3252 66.6529 13.3429ZM65.8242 23.8286C66.2654 23.8484 66.7058 23.7757 67.1157 23.6155C67.5256 23.4553 67.8954 23.2113 68.2002 22.9C68.5076 22.5718 68.7455 22.1876 68.9003 21.7697C69.055 21.3517 69.1237 20.9082 69.1022 20.4643H66.4329C64.5262 20.4643 63.5802 21 63.5802 22.0715C63.5689 22.3165 63.6183 22.5606 63.7242 22.7832C63.8302 23.0057 63.9895 23.2001 64.1889 23.35C64.6611 23.6883 65.2388 23.8573 65.8242 23.8286Z\" fill=\"white\"/>\n<path d=\"M74.9395 25.8857V13.5785H77.0368L77.5721 15.3571C77.9136 14.7707 78.4233 14.2941 79.0388 13.9857C79.6824 13.6993 80.3848 13.56 81.0921 13.5785H81.6275L81.8695 16.1857H80.2635C78.5963 16.1857 77.7652 16.9976 77.7701 18.6214V25.8857H74.9395Z\" fill=\"white\"/>\n<path d=\"M88.3739 13.3429C89.0849 13.3062 89.7957 13.4208 90.4567 13.6785C91.1178 13.9363 91.7133 14.3312 92.2019 14.8357C93.209 15.9848 93.7167 17.4709 93.6172 18.9786V25.8857H91.5492L90.9332 23.9714C90.535 24.5964 89.9926 25.1222 89.3492 25.5071C88.5981 25.9487 87.7329 26.1718 86.8559 26.15C86.0633 26.1623 85.2791 25.9909 84.5679 25.65C83.9165 25.3307 83.374 24.8345 83.0059 24.2214C82.6268 23.6073 82.4313 22.9023 82.4412 22.1857C82.4261 21.6432 82.547 21.1052 82.7937 20.6185C83.0403 20.1318 83.4052 19.7111 83.8565 19.3929C85.093 18.6087 86.5568 18.2353 88.0292 18.3286H90.7572C90.74 17.6143 90.4648 16.9289 89.9799 16.3929C89.7563 16.152 89.4802 15.9628 89.1719 15.8392C88.8636 15.7156 88.5308 15.6607 88.1979 15.6786C87.677 15.6687 87.1636 15.8005 86.7154 16.0592C86.2671 16.3178 85.9018 16.6931 85.6605 17.1429L83.0792 16.7214C83.3722 15.6969 84.0502 14.8172 84.9785 14.2571C85.995 13.6373 87.1749 13.3196 88.3739 13.3429ZM87.5452 23.8286C87.9851 23.8464 88.4238 23.7728 88.8322 23.6127C89.2406 23.4526 89.6093 23.2096 89.9139 22.9C90.2213 22.5717 90.4592 22.1876 90.6139 21.7697C90.7687 21.3517 90.8373 20.9081 90.8159 20.4643H88.1539C86.257 20.4643 85.3061 21 85.3012 22.0714C85.2917 22.3162 85.3419 22.5597 85.4477 22.782C85.5535 23.0042 85.7119 23.1989 85.9099 23.35C86.3832 23.6861 86.9601 23.8549 87.5452 23.8286Z\" fill=\"white\"/>\n<path d=\"M96.6606 25.8857V13.5786H98.758L99.3226 15.4286C99.7222 14.7941 100.282 14.2694 100.948 13.9044C101.614 13.5394 102.364 13.3461 103.129 13.3429C103.998 13.3322 104.853 13.5626 105.593 14.0072C106.326 14.4529 106.924 15.0818 107.323 15.8286C107.756 16.6397 107.972 17.5434 107.954 18.4572V25.8857H105.153V18.7429C105.182 17.9571 104.902 17.1901 104.368 16.6C104.117 16.3293 103.809 16.1149 103.464 15.9718C103.12 15.8288 102.748 15.7604 102.373 15.7715C101.981 15.7599 101.591 15.8304 101.229 15.9783C100.867 16.1261 100.542 16.3479 100.276 16.6286C100.001 16.9152 99.7886 17.2525 99.6501 17.6205C99.5115 17.9886 99.4501 18.3799 99.4693 18.7715V25.9143L96.6606 25.8857Z\" fill=\"white\"/>\n<path d=\"M118.565 23.5215L118.323 25.8858H115.955C114.821 25.9646 113.698 25.6255 112.809 24.9358C112.434 24.5729 112.145 24.1354 111.96 23.6534C111.775 23.1713 111.699 22.6561 111.738 22.1429V15.9501H109.663V13.5786H111.738L112.471 10.0072H114.569V13.5786H118.353V15.9501H114.569V22.1429C114.542 22.3301 114.56 22.5207 114.622 22.6999C114.683 22.8791 114.787 23.0419 114.924 23.1755C115.061 23.3091 115.228 23.4099 115.412 23.4699C115.596 23.53 115.792 23.5476 115.984 23.5215H118.565Z\" fill=\"white\"/>\n<path d=\"M126.581 26.1143C125.36 26.1312 124.153 25.8539 123.068 25.3072C122.068 24.7764 121.234 23.9914 120.656 23.0358C120.075 22.0264 119.779 20.8854 119.798 19.7286C119.775 18.5759 120.072 17.4386 120.656 16.4358C121.226 15.4736 122.062 14.6866 123.068 14.1643C124.149 13.6041 125.357 13.3191 126.581 13.3358C127.798 13.3165 129 13.6018 130.072 14.1643C131.087 14.6745 131.926 15.4644 132.484 16.4358C133.081 17.4344 133.385 18.5733 133.364 19.7286C133.382 20.8881 133.078 22.0309 132.484 23.0358C131.918 24.0005 131.081 24.7884 130.072 25.3072C128.996 25.8564 127.795 26.134 126.581 26.1143ZM126.581 23.6286C127.096 23.6448 127.609 23.5566 128.087 23.3697C128.566 23.1829 128.999 22.9013 129.36 22.5429C129.726 22.1607 130.01 21.711 130.195 21.2204C130.381 20.7297 130.463 20.2079 130.438 19.6858C130.462 19.1691 130.379 18.6529 130.194 18.1682C130.009 17.6834 129.725 17.24 129.36 16.8643C128.611 16.1683 127.616 15.78 126.581 15.78C125.546 15.78 124.55 16.1683 123.802 16.8643C123.437 17.2403 123.155 17.684 122.971 18.1688C122.787 18.6536 122.705 19.1695 122.731 19.6858C122.705 20.2075 122.786 20.7291 122.97 21.2198C123.154 21.7105 123.436 22.1603 123.802 22.5429C124.162 22.9019 124.596 23.1843 125.074 23.3724C125.552 23.5605 126.065 23.6501 126.581 23.6358V23.6286Z\" fill=\"white\"/>\n<path d=\"M141.849 26.1143C140.627 26.1312 139.421 25.8539 138.336 25.3072C137.336 24.7764 136.502 23.9914 135.923 23.0358C135.349 22.0245 135.055 20.8844 135.073 19.7286C135.052 18.577 135.346 17.4408 135.923 16.4358C136.494 15.4736 137.329 14.6866 138.336 14.1643C139.417 13.6041 140.625 13.3191 141.849 13.3358C143.066 13.3165 144.268 13.6018 145.339 14.1643C146.355 14.6745 147.194 15.4644 147.752 16.4358C148.349 17.4344 148.653 18.5733 148.632 19.7286C148.65 20.8881 148.346 22.0309 147.752 23.0358C147.185 24.0005 146.349 24.7884 145.339 25.3072C144.264 25.8564 143.063 26.134 141.849 26.1143ZM141.849 23.6286C142.363 23.6472 142.876 23.5624 143.356 23.3792C143.835 23.1961 144.271 22.9187 144.635 22.5643C144.999 22.1809 145.281 21.7308 145.465 21.2404C145.649 20.7499 145.731 20.2288 145.706 19.7072C145.73 19.1911 145.647 18.6756 145.464 18.191C145.28 17.7065 144.998 17.2627 144.635 16.8858C143.885 16.1893 142.889 15.8007 141.852 15.8007C140.816 15.8007 139.82 16.1893 139.069 16.8858C138.707 17.2627 138.425 17.7065 138.241 18.191C138.057 18.6756 137.975 19.1911 137.999 19.7072C137.974 20.2288 138.056 20.7499 138.24 21.2404C138.424 21.7308 138.706 22.1809 139.069 22.5643C139.432 22.9195 139.866 23.1979 140.344 23.3822C140.823 23.5666 141.335 23.6529 141.849 23.6358V23.6286Z\" fill=\"white\"/>\n<path d=\"M154 25.8857H151.191V9.20715H154V25.8857Z\" fill=\"white\"/>\n</svg>", viewbox: "0 0 154 35", viewBox: "0 0 154 35" };
+var img$2 = {id: "bZCWaFcABP1nv9jpktnu8", content: "<svg width=\"154\" height=\"35\" viewBox=\"0 0 154 35\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4742 5.77991C15.5251 4.60997 16.5505 4.025 17.6765 4.025C18.8025 4.025 19.8279 4.60997 21.8788 5.77991L25.8478 8.04408C27.8986 9.21402 28.924 9.79899 29.487 10.7625C30.05 11.726 30.05 12.896 30.05 15.2358V19.7642C30.05 22.104 30.05 23.274 29.487 24.2375C28.924 25.201 27.8986 25.786 25.8478 26.9559L21.8787 29.2201C19.8279 30.39 18.8025 30.975 17.6765 30.975C16.5505 30.975 15.525 30.39 13.4742 29.2201L9.50522 26.9559C7.45437 25.786 6.42894 25.201 5.86595 24.2375C5.30295 23.274 5.30295 22.104 5.30295 19.7642V15.2358C5.30295 12.896 5.30295 11.726 5.86595 10.7625C6.42894 9.79899 7.45437 9.21402 9.50522 8.04408L13.4742 5.77991ZM12.5503 12.775C12.2574 12.775 12.02 13.01 12.02 13.3V15.1537C12.02 15.4437 12.2574 15.6787 12.5503 15.6787H15.6797C15.9726 15.6787 16.21 15.9138 16.21 16.2037V23.45C16.21 23.74 16.4474 23.975 16.7403 23.975H18.6127C18.9056 23.975 19.143 23.74 19.143 23.45V16.2037C19.143 15.9138 19.3804 15.6787 19.6733 15.6787H22.8027C23.0955 15.6787 23.333 15.4437 23.333 15.1537V13.3C23.333 13.0101 23.0955 12.775 22.8027 12.775H12.5503Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 16.6393C0 8.79548 0 4.87355 2.46135 2.43678C4.9227 0 8.88419 0 16.8072 0H18.5458C26.4688 0 30.4303 0 32.8916 2.43678C35.353 4.87355 35.353 8.79548 35.353 16.6393V18.3607C35.353 26.2045 35.353 30.1264 32.8916 32.5632C30.4303 35 26.4688 35 18.5458 35H16.8072C8.88419 35 4.9227 35 2.46135 32.5632C0 30.1264 0 26.2045 0 18.3607V16.6393ZM16.8072 1.05H18.5458C22.5373 1.05 25.4242 1.05223 27.6255 1.34523C29.7963 1.63418 31.1409 2.18846 32.1417 3.17924C33.1425 4.17002 33.7023 5.50118 33.9942 7.65031C34.2901 9.82965 34.2924 12.6877 34.2924 16.6393V18.3607C34.2924 22.3123 34.2901 25.1704 33.9942 27.3497C33.7023 29.4988 33.1425 30.83 32.1417 31.8208C31.1409 32.8115 29.7963 33.3658 27.6255 33.6548C25.4242 33.9478 22.5373 33.95 18.5458 33.95H16.8072C12.8157 33.95 9.92878 33.9478 7.72747 33.6548C5.55666 33.3658 4.21207 32.8115 3.2113 31.8208C2.21053 30.83 1.65066 29.4988 1.3588 27.3497C1.06284 25.1704 1.06059 22.3123 1.06059 18.3607V16.6393C1.06059 12.6877 1.06284 9.82965 1.3588 7.65031C1.65066 5.50118 2.21053 4.17002 3.2113 3.17924C4.21207 2.18846 5.55666 1.63418 7.72747 1.34523C9.92878 1.05223 12.8157 1.05 16.8072 1.05Z\" fill=\"white\"/>\n<path d=\"M56.2221 26.4252H53.2949V12.0559H47.4404V9.39941H62.0766V12.0559H56.2221V26.4252Z\" fill=\"white\"/>\n<path d=\"M66.6505 13.6257C68.2768 13.6257 69.5534 14.1328 70.4803 15.1471C71.4236 16.1453 71.8952 17.5541 71.8952 19.3734V26.4252H69.8217L69.2363 24.4449C68.8785 25.0406 68.35 25.5638 67.6507 26.0146C66.9514 26.4493 66.122 26.6667 65.1625 26.6667C64.3169 26.6667 63.5526 26.4976 62.8695 26.1595C62.2028 25.8214 61.6824 25.3465 61.3084 24.7347C60.9343 24.1229 60.7473 23.4306 60.7473 22.6578C60.7473 21.4664 61.2189 20.5165 62.1621 19.8081C63.1216 19.0836 64.512 18.7213 66.3334 18.7213H69.0655C69.0005 17.8841 68.7403 17.224 68.2849 16.741C67.8458 16.2419 67.2523 15.9924 66.5042 15.9924C65.9025 15.9924 65.3821 16.1373 64.943 16.4271C64.5039 16.7169 64.1787 17.0711 63.9673 17.4897L61.3815 17.055C61.6905 15.9924 62.3248 15.1552 63.2842 14.5434C64.26 13.9316 65.3821 13.6257 66.6505 13.6257ZM65.8212 24.3241C66.7969 24.3241 67.5856 24.0102 68.1873 23.3823C68.789 22.7544 69.0899 21.9252 69.0899 20.8948H66.431C64.5283 20.8948 63.577 21.4422 63.577 22.537C63.577 23.0844 63.7802 23.5191 64.1868 23.8411C64.5934 24.1631 65.1381 24.3241 65.8212 24.3241Z\" fill=\"white\"/>\n<path d=\"M74.9384 26.4252V13.8672H77.0363L77.573 15.6784C77.9795 15.0183 78.4593 14.5514 79.0122 14.2777C79.5814 14.004 80.2644 13.8672 81.0612 13.8672H81.5979L81.8418 16.5237H80.2318C78.5731 16.5237 77.7437 17.3528 77.7437 19.0111V26.4252H74.9384Z\" fill=\"white\"/>\n<path d=\"M88.3761 13.6257C90.0023 13.6257 91.2789 14.1328 92.2058 15.1471C93.1491 16.1453 93.6207 17.5541 93.6207 19.3734V26.4252H91.5472L90.9618 24.4449C90.604 25.0406 90.0755 25.5638 89.3762 26.0146C88.6769 26.4493 87.8475 26.6667 86.8881 26.6667C86.0424 26.6667 85.2781 26.4976 84.5951 26.1595C83.9283 25.8214 83.4079 25.3465 83.0339 24.7347C82.6598 24.1229 82.4728 23.4306 82.4728 22.6578C82.4728 21.4664 82.9444 20.5165 83.8876 19.8081C84.8471 19.0836 86.2376 18.7213 88.0589 18.7213H90.791C90.726 17.8841 90.4658 17.224 90.0104 16.741C89.5713 16.2419 88.9778 15.9924 88.2297 15.9924C87.628 15.9924 87.1076 16.1373 86.6685 16.4271C86.2294 16.7169 85.9042 17.0711 85.6928 17.4897L83.107 17.055C83.416 15.9924 84.0503 15.1552 85.0097 14.5434C85.9855 13.9316 87.1076 13.6257 88.3761 13.6257ZM87.5467 24.3241C88.5224 24.3241 89.3111 24.0102 89.9128 23.3823C90.5146 22.7544 90.8154 21.9252 90.8154 20.8948H88.1565C86.2538 20.8948 85.3025 21.4422 85.3025 22.537C85.3025 23.0844 85.5057 23.5191 85.9123 23.8411C86.3189 24.1631 86.8637 24.3241 87.5467 24.3241Z\" fill=\"white\"/>\n<path d=\"M96.664 26.4252V13.8672H98.7618L99.3229 15.7509C99.7294 15.0908 100.266 14.5756 100.933 14.2053C101.616 13.8189 102.348 13.6257 103.128 13.6257C104.039 13.6257 104.86 13.8511 105.592 14.3019C106.324 14.7527 106.901 15.3725 107.324 16.1614C107.747 16.9503 107.958 17.8439 107.958 18.8421V26.4252H105.153V19.156C105.153 18.2544 104.893 17.5219 104.372 16.9584C103.852 16.3949 103.185 16.1131 102.372 16.1131C101.526 16.1131 100.827 16.4029 100.274 16.9825C99.7375 17.546 99.4692 18.2705 99.4692 19.156V26.4252H96.664Z\" fill=\"white\"/>\n<path d=\"M118.567 24.0102L118.323 26.4252H115.957C114.574 26.4252 113.525 26.1032 112.81 25.4592C112.094 24.7991 111.737 23.8492 111.737 22.6095V16.2822H109.663V13.8672H111.737L112.444 10.2447H114.542V13.8672H118.323V16.2822H114.542V22.6095C114.542 23.5433 115.013 24.0102 115.957 24.0102H118.567Z\" fill=\"white\"/>\n<path d=\"M126.583 26.6667C125.282 26.6667 124.111 26.393 123.07 25.8456C122.046 25.2821 121.241 24.5093 120.655 23.5272C120.086 22.529 119.802 21.402 119.802 20.1462C119.802 18.8904 120.086 17.7714 120.655 16.7893C121.241 15.7911 122.046 15.0183 123.07 14.4709C124.111 13.9074 125.282 13.6257 126.583 13.6257C127.884 13.6257 129.047 13.9074 130.071 14.4709C131.112 15.0183 131.917 15.7911 132.486 16.7893C133.072 17.7714 133.364 18.8904 133.364 20.1462C133.364 21.402 133.072 22.529 132.486 23.5272C131.917 24.5093 131.112 25.2821 130.071 25.8456C129.047 26.393 127.884 26.6667 126.583 26.6667ZM126.583 24.1309C127.721 24.1309 128.648 23.7687 129.364 23.0442C130.079 22.3036 130.437 21.3376 130.437 20.1462C130.437 18.9548 130.079 17.9968 129.364 17.2723C128.648 16.5317 127.721 16.1614 126.583 16.1614C125.445 16.1614 124.518 16.5317 123.802 17.2723C123.087 17.9968 122.729 18.9548 122.729 20.1462C122.729 21.3376 123.087 22.3036 123.802 23.0442C124.518 23.7687 125.445 24.1309 126.583 24.1309Z\" fill=\"white\"/>\n<path d=\"M141.853 26.6667C140.552 26.6667 139.381 26.393 138.34 25.8456C137.316 25.2821 136.511 24.5093 135.925 23.5272C135.356 22.529 135.071 21.402 135.071 20.1462C135.071 18.8904 135.356 17.7714 135.925 16.7893C136.511 15.7911 137.316 15.0183 138.34 14.4709C139.381 13.9074 140.552 13.6257 141.853 13.6257C143.154 13.6257 144.317 13.9074 145.341 14.4709C146.382 15.0183 147.187 15.7911 147.756 16.7893C148.342 17.7714 148.634 18.8904 148.634 20.1462C148.634 21.402 148.342 22.529 147.756 23.5272C147.187 24.5093 146.382 25.2821 145.341 25.8456C144.317 26.393 143.154 26.6667 141.853 26.6667ZM141.853 24.1309C142.991 24.1309 143.918 23.7687 144.634 23.0442C145.349 22.3036 145.707 21.3376 145.707 20.1462C145.707 18.9548 145.349 17.9968 144.634 17.2723C143.918 16.5317 142.991 16.1614 141.853 16.1614C140.714 16.1614 139.788 16.5317 139.072 17.2723C138.356 17.9968 137.999 18.9548 137.999 20.1462C137.999 21.3376 138.356 22.3036 139.072 23.0442C139.788 23.7687 140.714 24.1309 141.853 24.1309Z\" fill=\"white\"/>\n<path d=\"M154 26.4252H151.195V9.39941H154V26.4252Z\" fill=\"white\"/>\n</svg>\n", viewbox: "0 0 154 35", viewBox: "0 0 154 35" };
 
-var img$1 = {id: "-C9hfLS6HPJanh6fkykKd", content: "<svg width=\"120\" height=\"96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.937 10.8h.125c6.677 0 11.768 0 15.813.367 4.075.369 7.206 1.118 9.925 2.688a22.8 22.8 0 018.345 8.345c1.57 2.72 2.319 5.85 2.688 9.924.367 4.046.367 9.137.367 15.814v.124c0 6.677 0 11.768-.367 15.814-.37 4.074-1.118 7.205-2.688 9.924a22.8 22.8 0 01-8.345 8.345c-2.72 1.57-5.85 2.32-9.925 2.688-4.045.367-9.136.367-15.813.367h-.125c-6.676 0-11.767 0-15.813-.367-4.074-.369-7.205-1.118-9.924-2.688a22.8 22.8 0 01-8.346-8.345c-1.57-2.72-2.318-5.85-2.688-9.924-.366-4.046-.366-9.137-.366-15.813v-.126c0-6.676 0-11.767.366-15.813.37-4.074 1.119-7.205 2.688-9.924a22.8 22.8 0 018.346-8.345c2.719-1.57 5.85-2.319 9.924-2.688 4.045-.367 9.137-.367 15.813-.367zm-15.596 2.757c-3.908.354-6.648 1.052-8.941 2.376a20.4 20.4 0 00-7.467 7.467c-1.324 2.293-2.022 5.033-2.376 8.941C25.2 36.266 25.2 41.249 25.2 48c0 6.751.001 11.735.357 15.659.354 3.908 1.052 6.648 2.376 8.941a20.4 20.4 0 007.467 7.467c2.293 1.324 5.033 2.022 8.94 2.376 3.925.356 8.908.357 15.66.357 6.751 0 11.734-.001 15.659-.357 3.908-.354 6.648-1.052 8.94-2.376a20.4 20.4 0 007.468-7.467c1.324-2.293 2.022-5.033 2.376-8.941.356-3.924.357-8.908.357-15.659 0-6.751-.001-11.734-.357-15.659-.354-3.908-1.052-6.648-2.376-8.941a20.4 20.4 0 00-7.467-7.467c-2.293-1.324-5.033-2.022-8.941-2.376-3.925-.356-8.908-.357-15.66-.357-6.75 0-11.734.001-15.658.357z\" fill=\"#FF272C\"/><g filter=\"url(#filter0_b)\"><path d=\"M32.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><g filter=\"url(#filter1_b)\"><path d=\"M62.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><g filter=\"url(#filter2_b)\"><path d=\"M32.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><g filter=\"url(#filter3_b)\"><path d=\"M62.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><defs><filter id=\"filter0_b\" x=\"8.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter><filter id=\"filter1_b\" x=\"38.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter><filter id=\"filter2_b\" x=\"8.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter><filter id=\"filter3_b\" x=\"38.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter></defs></svg>\n", viewbox: "0 0 120 96", viewBox: "0 0 120 96" };
+var img$1 = {id: "taki-EyuJWLTaJKU8z1Mu", content: "<svg width=\"120\" height=\"96\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.937 10.8h.125c6.677 0 11.768 0 15.813.367 4.075.369 7.206 1.118 9.925 2.688a22.8 22.8 0 018.345 8.345c1.57 2.72 2.319 5.85 2.688 9.924.367 4.046.367 9.137.367 15.814v.124c0 6.677 0 11.768-.367 15.814-.37 4.074-1.118 7.205-2.688 9.924a22.8 22.8 0 01-8.345 8.345c-2.72 1.57-5.85 2.32-9.925 2.688-4.045.367-9.136.367-15.813.367h-.125c-6.676 0-11.767 0-15.813-.367-4.074-.369-7.205-1.118-9.924-2.688a22.8 22.8 0 01-8.346-8.345c-1.57-2.72-2.318-5.85-2.688-9.924-.366-4.046-.366-9.137-.366-15.813v-.126c0-6.676 0-11.767.366-15.813.37-4.074 1.119-7.205 2.688-9.924a22.8 22.8 0 018.346-8.345c2.719-1.57 5.85-2.319 9.924-2.688 4.045-.367 9.137-.367 15.813-.367zm-15.596 2.757c-3.908.354-6.648 1.052-8.941 2.376a20.4 20.4 0 00-7.467 7.467c-1.324 2.293-2.022 5.033-2.376 8.941C25.2 36.266 25.2 41.249 25.2 48c0 6.751.001 11.735.357 15.659.354 3.908 1.052 6.648 2.376 8.941a20.4 20.4 0 007.467 7.467c2.293 1.324 5.033 2.022 8.94 2.376 3.925.356 8.908.357 15.66.357 6.751 0 11.734-.001 15.659-.357 3.908-.354 6.648-1.052 8.94-2.376a20.4 20.4 0 007.468-7.467c1.324-2.293 2.022-5.033 2.376-8.941.356-3.924.357-8.908.357-15.659 0-6.751-.001-11.734-.357-15.659-.354-3.908-1.052-6.648-2.376-8.941a20.4 20.4 0 00-7.467-7.467c-2.293-1.324-5.033-2.022-8.941-2.376-3.925-.356-8.908-.357-15.66-.357-6.75 0-11.734.001-15.658.357z\" fill=\"#FF272C\"/><g filter=\"url(#filter0_b)\"><path d=\"M32.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><g filter=\"url(#filter1_b)\"><path d=\"M62.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><g filter=\"url(#filter2_b)\"><path d=\"M32.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><g filter=\"url(#filter3_b)\"><path d=\"M62.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\"/></g><defs><filter id=\"filter0_b\" x=\"8.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter><filter id=\"filter1_b\" x=\"38.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter><filter id=\"filter2_b\" x=\"8.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter><filter id=\"filter3_b\" x=\"38.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter></defs></svg>\n", viewbox: "0 0 120 96", viewBox: "0 0 120 96" };
 
 var SplashError = function SplashError(_ref) {
   var description = _ref.description,
@@ -7385,8 +7454,8 @@ var SplashError = function SplashError(_ref) {
   })) : /*#__PURE__*/React.createElement(NonIdealState, commonProps));
 };
 
-var _excluded$3 = ["children", "className", "shimClassName", "subTitle", "title", "logo"];
-var styles$g = {
+var _excluded$2 = ["children", "className", "shimClassName", "subTitle", "title", "logo"];
+var styles$h = {
   modal: /*#__PURE__*/css({
     name: "jnll8w",
     styles: "display:flex;flex-direction:row;flex-shrink:0;min-height:250px;border-radius:6px;overflow:hidden;box-shadow:0px 15px 15px rgba(4, 11, 29, 0.05)"
@@ -7417,29 +7486,29 @@ var SplashModal = function SplashModal(_ref) {
       subTitle = _ref.subTitle,
       title = _ref.title,
       logo = _ref.logo,
-      props = _objectWithoutProperties(_ref, _excluded$3);
+      props = _objectWithoutProperties(_ref, _excluded$2);
 
   return /*#__PURE__*/React.createElement(BaseModal, Object.assign({}, props, {
-    className: cx(styles$g.modal, className),
-    shimClassName: cx(styles$g.shim, shimClassName)
+    className: cx(styles$h.modal, className),
+    shimClassName: cx(styles$h.shim, shimClassName)
   }), logo && /*#__PURE__*/React.createElement("div", {
-    className: styles$g.logoContainer
+    className: styles$h.logoContainer
   }, /*#__PURE__*/React.createElement(SVGImage, {
     glyph: logo,
-    className: styles$g.logo
+    className: styles$h.logo
   })), /*#__PURE__*/React.createElement("div", {
-    className: styles$g.formContainer
+    className: styles$h.formContainer
   }, title && /*#__PURE__*/React.createElement(Text, {
     variant: "h1"
   }, title), subTitle && /*#__PURE__*/React.createElement("div", {
-    className: styles$g.subTitleWrap
+    className: styles$h.subTitleWrap
   }, /*#__PURE__*/React.createElement(Text, {
     variant: "basic",
-    className: styles$g.subTitle
+    className: styles$h.subTitle
   }, subTitle)), children));
 };
 
-var styles$f = {
+var styles$g = {
   wrap: /*#__PURE__*/css({
     name: "bjn8wh",
     styles: "position:relative"
@@ -7476,9 +7545,9 @@ var Spin = /*#__PURE__*/function (_React$Component) {
           enable = _this$props.enable,
           className = _this$props.className;
       return /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$f.wrap, className)
+        className: cx(styles$g.wrap, className)
       }, enable && this.renderSpin(), /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$f.container, {
+        className: cx(styles$g.container, {
           blur: enable
         })
       }, children));
@@ -7487,9 +7556,9 @@ var Spin = /*#__PURE__*/function (_React$Component) {
     key: "renderSpin",
     value: function renderSpin() {
       return /*#__PURE__*/React.createElement("div", {
-        className: styles$f.spin
+        className: styles$g.spin
       }, /*#__PURE__*/React.createElement(TarantoolLogoSpinner, {
-        className: styles$f.icon
+        className: styles$g.icon
       }));
     }
   }]);
@@ -7500,7 +7569,7 @@ Spin.defaultProps = {
   enable: false
 };
 
-var styles$e = {
+var styles$f = {
   input: /*#__PURE__*/css("position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;appearance:none;&:focus+div::before{content:'';position:absolute;top:-3px;left:-3px;right:-3px;bottom:-3px;border:solid 1px rgba(255, 255, 255, 0);border-radius:15px;}&:focus+div::before{border-color:", rgba(colors.intentPrimary, 0.55), ";}" + ("" ), "" ),
   switcher: /*#__PURE__*/css({
     name: "i676p8",
@@ -7541,23 +7610,23 @@ var Switcher = function Switcher(_ref) {
       onChange = _ref.onChange,
       title = _ref.title;
   return /*#__PURE__*/React.createElement("label", {
-    className: cx(styles$e.label, className),
+    className: cx(styles$f.label, className),
     title: title
   }, /*#__PURE__*/React.createElement("input", {
     checked: checked,
-    className: styles$e.input,
+    className: styles$f.input,
     disabled: disabled,
     name: name,
     type: "checkbox",
     onChange: onChange
   }), /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$e.switcher, (_cx = {}, _defineProperty(_cx, styles$e.notDisabled, !checked && !disabled), _defineProperty(_cx, styles$e.checked, checked && !disabled), _defineProperty(_cx, styles$e.disabled, !checked && disabled), _defineProperty(_cx, styles$e.basicDisabled, disabled), _defineProperty(_cx, styles$e.checkedDisabled, checked && disabled), _defineProperty(_cx, styles$e.childrenMargin, children), _cx))
+    className: cx(styles$f.switcher, (_cx = {}, _defineProperty(_cx, styles$f.notDisabled, !checked && !disabled), _defineProperty(_cx, styles$f.checked, checked && !disabled), _defineProperty(_cx, styles$f.disabled, !checked && disabled), _defineProperty(_cx, styles$f.basicDisabled, disabled), _defineProperty(_cx, styles$f.checkedDisabled, checked && disabled), _defineProperty(_cx, styles$f.childrenMargin, children), _cx))
   }), typeof children === 'string' ? /*#__PURE__*/React.createElement(Text, {
-    className: styles$e.children
+    className: styles$f.children
   }, children) : children);
 };
 
-var styles$d = {
+var styles$e = {
   "default": {
     wrap: /*#__PURE__*/css({
       name: "13ku56z",
@@ -7615,15 +7684,15 @@ var Tabbed = /*#__PURE__*/function (_React$Component) {
       var activeTab = this.state.activeTab;
       var tabIndex = activeTabProps !== null && activeTabProps !== void 0 ? activeTabProps : activeTab;
       return /*#__PURE__*/React.createElement("div", {
-        className: cx(styles$d[size].wrap, className)
+        className: cx(styles$e[size].wrap, className)
       }, /*#__PURE__*/React.createElement("div", {
-        className: styles$d[size].tabs
+        className: styles$e[size].tabs
       }, tabs && tabs.map(function (_ref, i) {
         var label = _ref.label;
         return /*#__PURE__*/React.createElement("button", {
           key: i,
           type: "button",
-          className: cx(_defineProperty({}, textStyles.h3, size === 'default'), styles$d[size].tab, _defineProperty({}, styles$d[size].activeTab, tabIndex === i)),
+          className: cx(_defineProperty({}, textStyles.h3, size === 'default'), styles$e[size].tab, _defineProperty({}, styles$e[size].activeTab, tabIndex === i)),
           onClick: function onClick(e) {
             return _this2.handleTabChange(i, e);
           }
@@ -7649,7 +7718,7 @@ Tabbed.defaultProps = {
   size: 'default'
 };
 
-var styles$c = {
+var styles$d = {
   head: /*#__PURE__*/css("color:", colors.dark65, ";font-weight:600;font-size:14px;padding:12px 16px;text-align:left;" + ("" ), "" ),
   buttonSort: /*#__PURE__*/css("margin-left:-16px;font-weight:600;transition-timing-function:ease-in-out;transition-duration:0.07s;transition-property:fill;&:hover{background-color:", colors.intentBase, ";svg{fill:", colors.dark65, "!important;}}" + ("" ), "" )
 };
@@ -7682,10 +7751,10 @@ var TableHeader = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
       return /*#__PURE__*/React.createElement(Text, Object.assign({
         key: index2,
         tag: "th",
-        className: styles$c.head
+        className: styles$d.head
       }, column.getHeaderProps()), column.canSort && dataRows.length > 0 ? /*#__PURE__*/React.createElement(Button, {
         intent: "plain",
-        className: styles$c.buttonSort,
+        className: styles$d.buttonSort,
         onClick: dataRows.length > 0 ? sortColumn : undefined,
         iconRight: function iconRight(props) {
           return /*#__PURE__*/React.createElement(IconHelperSortable, Object.assign({}, props, {
@@ -7697,7 +7766,7 @@ var TableHeader = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   }));
 });
 
-var styles$b = {
+var styles$c = {
   col: /*#__PURE__*/css({
     name: "10rtstj",
     styles: "padding:16px"
@@ -7725,12 +7794,12 @@ function TableRow(_ref) {
     onClick: onRowClick ? function () {
       return onRowClick(row);
     } : null,
-    className: cx(styles$b.row, _defineProperty({}, styles$b.pointer, onRowClick))
+    className: cx(styles$c.row, _defineProperty({}, styles$c.pointer, onRowClick))
   }, row.getRowProps()), row.cells.map(function (cell, index) {
     return /*#__PURE__*/React.createElement(Text, Object.assign({
       key: index,
       tag: "td",
-      className: cx(styles$b.col, styles$b.colText, rowClassName),
+      className: cx(styles$c.col, styles$c.colText, rowClassName),
       onClick: cell.column.id === 'selection' ? function (e) {
         e.stopPropagation();
         e.preventDefault();
@@ -7767,14 +7836,14 @@ var TableStickyRow = /*#__PURE__*/React.memo(function (_ref) {
   return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement(Text, {
     tag: "td",
     colSpan: cellsLength,
-    className: cx(styles$b.topRow, _defineProperty({}, styles$b.sticky, !Number.isNaN(Number(topRowStickySide))), topRowClassName),
+    className: cx(styles$c.topRow, _defineProperty({}, styles$c.sticky, !Number.isNaN(Number(topRowStickySide))), topRowClassName),
     style: {
       top: isSafari ? Number(topRowStickySide) - theadHeight : topRowStickySide
     }
   }, children));
 });
 
-var styles$a = {
+var styles$b = {
   table: /*#__PURE__*/css({
     name: "1f5rm2b",
     styles: "background-color:transparent;width:100%;border-spacing:initial;border-collapse:collapse"
@@ -7882,15 +7951,15 @@ function Table(props) {
   }, [prepareRow, pagination, page, rows]);
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Spin, {
     enable: loading,
-    className: cx(_defineProperty({}, styles$a.loading, loading))
+    className: cx(_defineProperty({}, styles$b.loading, loading))
   }, /*#__PURE__*/React.createElement("table", Object.assign({}, getTableProps(), {
-    className: cx(styles$a.table, className)
+    className: cx(styles$b.table, className)
   }), /*#__PURE__*/React.createElement(TableHeader, {
     ref: headerRef,
     headerGroups: headerGroups,
     dataRows: dataRows
   }), /*#__PURE__*/React.createElement("tbody", Object.assign({
-    className: styles$a.tbody
+    className: styles$b.tbody
   }, getTableBodyProps()), dataRows.map(function (row) {
     var topRow = props.topRowKey && row.original[props.topRowKey];
     return /*#__PURE__*/React.createElement(React.Fragment, {
@@ -7909,13 +7978,13 @@ function Table(props) {
   }), !rows.length && !loading && /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
     colSpan: visibleColumns.length
   }, /*#__PURE__*/React.createElement(NonIdealState, {
-    className: cx(styles$a.noData),
-    image: img$E,
-    imageClassName: styles$a.iconNoData
+    className: cx(styles$b.noData),
+    image: img$C,
+    imageClassName: styles$b.iconNoData
   }, /*#__PURE__*/React.createElement(Text, {
-    className: styles$a.noDataText
+    className: styles$b.noDataText
   }, "The list is empty")))))), pagination && rows.length > 0 && /*#__PURE__*/React.createElement("div", {
-    className: styles$a.pagination
+    className: styles$b.pagination
   }, /*#__PURE__*/React.createElement(Pagination, {
     page: pageIndex,
     pageSize: pageSize,
@@ -7924,7 +7993,7 @@ function Table(props) {
     setPageSize: setPageSize,
     showTotal: true
   })), manualPagination && /*#__PURE__*/React.createElement("div", {
-    className: styles$a.pagination
+    className: styles$b.pagination
   }, /*#__PURE__*/React.createElement(PaginationControlled, {
     page: manualPagination.page,
     pageSize: manualPagination.pageSize,
@@ -7934,7 +8003,7 @@ function Table(props) {
   }))));
 }
 
-var styles$9 = {
+var styles$a = {
   tag: /*#__PURE__*/css("position:relative;border:none;border-radius:4px;padding:1px 8px 3px;margin:0 2px;font-size:12px;line-height:18px;outline:none;transition:0.1s ease-in-out;transition-property:background-color,color;&:focus::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;border:solid 1px ", rgba(colors.intentPrimary, 0.55), ";border-radius:3px;}" + ("" ), "" ),
   interactive: function interactive(className) {
     return className ? /*#__PURE__*/css("color:rgba(0, 0, 0, 0.2);background-color:transparent;.", className, ":hover &{color:#ffffff;background-color:rgba(0, 0, 0, 0.65);}.", className, " &:hover,.", className, " &:focus{background-color:#000000;color:#ffffff;}" + ("" ), "" ) : '';
@@ -7958,13 +8027,13 @@ var Tag = function Tag(_ref) {
       title = _ref.title;
   var Element = onClick ? 'button' : 'span';
   return /*#__PURE__*/React.createElement(Element, {
-    className: cx((_cx = {}, _defineProperty(_cx, styles$9.interactive(highlightingOnHover), !!highlightingOnHover), _defineProperty(_cx, styles$9["static"], !highlightingOnHover), _defineProperty(_cx, styles$9.pointer, onClick), _cx), styles$9.tag, className),
+    className: cx((_cx = {}, _defineProperty(_cx, styles$a.interactive(highlightingOnHover), !!highlightingOnHover), _defineProperty(_cx, styles$a["static"], !highlightingOnHover), _defineProperty(_cx, styles$a.pointer, onClick), _cx), styles$a.tag, className),
     onClick: onClick,
     title: title
   }, text);
 };
 
-var styles$8 = {
+var styles$9 = {
   wrapper: /*#__PURE__*/css({
     name: "1t1kfui",
     styles: "display:flex;align-items:baseline;margin-bottom:-4px;user-select:none"
@@ -7996,15 +8065,15 @@ var TagsList = function TagsList(_ref) {
       tagClassName = _ref.tagClassName,
       values = _ref.values;
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$8.wrapper, className)
+    className: cx(styles$9.wrapper, className)
   }, heading && /*#__PURE__*/React.createElement(Text, {
-    className: styles$8.heading,
+    className: styles$9.heading,
     variant: "h5",
     tag: "span"
   }, /*#__PURE__*/React.createElement("b", null, "".concat(heading, ":"))), /*#__PURE__*/React.createElement("div", null, (values || []).map(function (value, index) {
     return /*#__PURE__*/React.createElement(Tag, {
       key: index,
-      className: cx(styles$8.tag, tagClassName),
+      className: cx(styles$9.tag, tagClassName),
       onClick: function onClick() {
         return onTagClick && onTagClick(value);
       },
@@ -8014,7 +8083,7 @@ var TagsList = function TagsList(_ref) {
   })));
 };
 
-var _excluded$2 = ["autoComplete", "autoFocus", "className", "onKeyDown", "onKeyDownCapture", "onKeyPress", "onKeyPressCapture", "onKeyUp", "onKeyUpCapture", "disabled", "error", "name", "onChange", "readOnly", "rows", "title", "value", "placeholder", "size"];
+var _excluded$1 = ["autoComplete", "autoFocus", "className", "onKeyDown", "onKeyDownCapture", "onKeyPress", "onKeyPressCapture", "onKeyUp", "onKeyUpCapture", "disabled", "error", "name", "onChange", "readOnly", "rows", "title", "value", "placeholder", "size"];
 var TextArea = /*#__PURE__*/function (_React$Component) {
   _inherits(TextArea, _React$Component);
 
@@ -8083,7 +8152,7 @@ var TextArea = /*#__PURE__*/function (_React$Component) {
           value = _this$props.value,
           placeholder = _this$props.placeholder,
           size = _this$props.size,
-          props = _objectWithoutProperties(_this$props, _excluded$2);
+          props = _objectWithoutProperties(_this$props, _excluded$1);
 
       var focused = this.state.focused;
       return /*#__PURE__*/React.createElement("div", {
@@ -8116,7 +8185,7 @@ var TextArea = /*#__PURE__*/function (_React$Component) {
   return TextArea;
 }(React.Component);
 
-var styles$7 = {
+var styles$8 = {
   wrap: /*#__PURE__*/css({
     name: "n1lsvi",
     styles: "padding:0;list-style:none"
@@ -8140,7 +8209,7 @@ var TiledListItem = function TiledListItem(_ref) {
       _ref$corners = _ref.corners,
       corners = _ref$corners === void 0 ? 'hard' : _ref$corners;
   return /*#__PURE__*/React.createElement("li", {
-    className: cx(styles$7.item, _defineProperty({}, styles$7.softCorners, corners === 'soft'), className)
+    className: cx(styles$8.item, _defineProperty({}, styles$8.softCorners, corners === 'soft'), className)
   }, children);
 };
 var TiledList = function TiledList(_ref2) {
@@ -8149,98 +8218,12 @@ var TiledList = function TiledList(_ref2) {
       _ref2$outer = _ref2.outer,
       outer = _ref2$outer === void 0 ? true : _ref2$outer;
   return /*#__PURE__*/React.createElement("ul", {
-    className: cx(styles$7.wrap, _defineProperty({}, styles$7.outer, outer), className)
+    className: cx(styles$8.wrap, _defineProperty({}, styles$8.outer, outer), className)
   }, children);
 };
 
-var img = {id: "cDdhelris7xscCp99SUUG", content: "<svg width=\"100\" height=\"80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.382 24.166h.11c3.987 0 7.052 0 9.485.237 2.459.24 4.378.73 6.034 1.778a13 13 0 014.032 4.032c1.049 1.656 1.538 3.575 1.778 6.035.238 2.432.238 5.497.238 9.483v.684c0 3.986 0 7.051-.238 9.484-.24 2.46-.73 4.378-1.778 6.034a13 13 0 01-4.032 4.033c-1.656 1.048-3.575 1.538-6.034 1.778-2.433.237-5.498.237-9.484.237h-.111c-3.986 0-7.051 0-9.484-.237-2.46-.24-4.378-.73-6.034-1.778a13 13 0 01-4.033-4.033c-1.048-1.656-1.538-3.575-1.778-6.034-.237-2.433-.237-5.498-.237-9.484v-.684c0-3.986 0-7.05.237-9.483.24-2.46.73-4.379 1.778-6.035a13 13 0 014.033-4.032c1.656-1.049 3.575-1.538 6.034-1.778 2.432-.237 5.497-.237 9.484-.237zm-9.29 2.227c-2.309.226-3.876.666-5.159 1.478a11 11 0 00-3.412 3.412c-.812 1.283-1.252 2.85-1.477 5.159-.227 2.324-.228 5.292-.228 9.345v.573c0 4.053.001 7.02.228 9.345.225 2.309.665 3.876 1.477 5.159a10.998 10.998 0 003.412 3.412c1.283.812 2.85 1.252 5.16 1.477 2.323.227 5.291.228 9.344.228 4.053 0 7.021-.001 9.345-.228 2.31-.225 3.877-.665 5.16-1.477a11 11 0 003.411-3.412c.812-1.283 1.253-2.85 1.478-5.16.227-2.323.228-5.291.228-9.344v-.573c0-4.053-.001-7.021-.228-9.345-.225-2.309-.666-3.876-1.478-5.16a11 11 0 00-3.412-3.411c-1.282-.812-2.85-1.252-5.159-1.478-2.324-.226-5.292-.227-9.345-.227-4.053 0-7.02 0-9.345.227z\" fill=\"#8E9199\"/><g filter=\"url(#filter0_b)\"><rect x=\"20.059\" y=\"13.136\" width=\"46.398\" height=\"46.398\" rx=\"12\" fill=\"#e3e3e3\"/></g><defs><filter id=\"filter0_b\" x=\"-3.941\" y=\"-10.864\" width=\"94.398\" height=\"94.398\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter></defs></svg>", viewbox: "0 0 100 80", viewBox: "0 0 100 80" };
-
-var styles$6 = /*#__PURE__*/css({
-  name: "157xhr7",
-  styles: "width:16px;height:16px"
-} );
-var IconDragFile = function IconDragFile(_ref) {
-  var className = _ref.className;
-  return /*#__PURE__*/React.createElement(Icon$1, {
-    className: cx(styles$6, className),
-    glyph: img
-  });
-};
-
-var _excluded$1 = ["ref"];
-var styles$5 = {
-  wrap: /*#__PURE__*/css({
-    name: "zjik7",
-    styles: "display:flex"
-  } ),
-  icon: /*#__PURE__*/css({
-    name: "1yu3ibr",
-    styles: "width:100px;height:80px;margin-bottom:16px"
-  } ),
-  preloader: /*#__PURE__*/css({
-    name: "7kn5bz",
-    styles: "width:68px;height:48px;margin-bottom:16px"
-  } ),
-  notice: /*#__PURE__*/css("margin-top:10px;color:", colors.dark65, ";" + ("" ), "" )
-};
-
-var getColor = function getColor(_ref) {
-  var isDragAccept = _ref.isDragAccept;
-  return isDragAccept ? colors.intentPrimary : colors.intentBase;
-};
-
-var Container = createStyled("div", {
-  target: "e1iml2wq0"
-} )("flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;border-width:1px;border-radius:4px;border-color:", function (props) {
-  return getColor(props);
-}, ";border-style:dashed;background-color:", colors.intentBaseActive, ";transition:border 0.24s ease-in-out;outline:none;cursor:pointer;" + ("" ));
-
-var UploadZone = function UploadZone(_ref2) {
-  var _ref2$accept = _ref2.accept,
-      accept = _ref2$accept === void 0 ? '' : _ref2$accept,
-      handler = _ref2.handler,
-      name = _ref2.name,
-      multiple = _ref2.multiple,
-      className = _ref2.className,
-      title = _ref2.title,
-      subTitle = _ref2.subTitle,
-      loading = _ref2.loading;
-      _ref2.files;
-
-  var _useDropzone = useDropzone({
-    accept: accept,
-    multiple: multiple,
-    onDrop: handler
-  }),
-      getRootProps = _useDropzone.getRootProps,
-      getInputProps = _useDropzone.getInputProps,
-      isDragAccept = _useDropzone.isDragAccept;
-
-  var _getRootProps = getRootProps({
-    isDragAccept: isDragAccept
-  }),
-      ref = _getRootProps.ref,
-      rootProps = _objectWithoutProperties(_getRootProps, _excluded$1);
-
-  return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$5.wrap, className),
-    ref: ref
-  }, /*#__PURE__*/React.createElement(Container, rootProps, /*#__PURE__*/React.createElement("input", Object.assign({}, getInputProps(), {
-    name: name
-  })), loading ? /*#__PURE__*/React.createElement(TarantoolLogoSpinner, {
-    className: styles$5.preloader
-  }) : /*#__PURE__*/React.createElement(IconDragFile, {
-    className: styles$5.icon
-  }), /*#__PURE__*/React.createElement(Text, {
-    variant: "h3",
-    tag: "span"
-  }, loading ? 'Uploading...' : title || 'Click or drag file to this area to upload'), !!subTitle && !loading && /*#__PURE__*/React.createElement(Text, {
-    className: styles$5.notice
-  }, subTitle)));
-};
-
 var _excluded = ["className"];
-var styles$4 = {
+var styles$7 = {
   uriWrap: /*#__PURE__*/css({
     name: "s5xdrg",
     styles: "display:flex;align-items:center"
@@ -8261,7 +8244,7 @@ var IconHere = function IconHere(_ref) {
       props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(IconBoldArrowRight, Object.assign({
-    className: cx(styles$4.hereIcon, className)
+    className: cx(styles$7.hereIcon, className)
   }, props));
 };
 
@@ -8273,18 +8256,18 @@ var UriLabel = function UriLabel(_ref2) {
       weAreHere = _ref2.weAreHere;
   var Icon = icon || (weAreHere ? IconHere : IconLink);
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$4.uriWrap, className),
+    className: cx(styles$7.uriWrap, className),
     title: title
   }, /*#__PURE__*/React.createElement(Icon, {
-    className: styles$4.uriIcon
+    className: styles$7.uriIcon
   }), /*#__PURE__*/React.createElement(Text, {
-    className: styles$4.uri,
+    className: styles$7.uri,
     variant: "p",
     tag: "span"
   }, uri));
 };
 
-var styles$3 = {
+var styles$6 = {
   alert: /*#__PURE__*/css({
     name: "1glxuqs",
     styles: "padding:15px;border:1px solid;border-radius:4px;margin-top:16px;margin-bottom:16px"
@@ -8298,12 +8281,400 @@ var Alert = function Alert(_ref) {
       children = _ref.children,
       type = _ref.type;
   return /*#__PURE__*/React.createElement(Text, {
-    className: cx(styles$3.alert, styles$3[type], className),
+    className: cx(styles$6.alert, styles$6[type], className),
     tag: "div"
   }, children);
 };
 
-var styles$2 = {
+var styles$5 = {
+  tree: /*#__PURE__*/css({
+    name: "192p7kk",
+    styles: "padding:0;margin:0;list-style:none;overflow-x:hidden;overflow-y:auto"
+  } ),
+  row: /*#__PURE__*/css("position:relative;display:flex;flex-wrap:nowrap;justify-content:flex-start;align-items:center;height:38px;padding-right:11px;user-select:none;cursor:pointer;&:hover{background-color:", colors.dark10, ";}.FileTreeElement__btns{display:none;}&:hover>.FileTreeElement__btns{display:flex;}" + ("" ), "" ),
+  dotActive: /*#__PURE__*/css("background-color:", colors.activeAction, ";" + ("" ), "" ),
+  newRow: /*#__PURE__*/css({
+    name: "13vjjlj",
+    styles: "padding-right:8px"
+  } ),
+  active: /*#__PURE__*/css("background-color:", colors.dark10, ";" + ("" ), "" ),
+  fileName: /*#__PURE__*/css({
+    name: "1h52dri",
+    styles: "overflow:hidden;text-overflow:ellipsis;white-space:nowrap"
+  } ),
+  iconChevron: /*#__PURE__*/css("margin:4px;fill:", colors.dark65, ";" + ("" ), "" ),
+  iconChevronHidden: /*#__PURE__*/css({
+    name: "6dhm9o",
+    styles: "visibility:hidden"
+  } ),
+  fileIcon: /*#__PURE__*/css({
+    name: "137pcyc",
+    styles: "margin:4px"
+  } ),
+  buttonsPanel: /*#__PURE__*/css({
+    name: "17bc0qy",
+    styles: "position:absolute;top:calc(50% - 12px);right:8px;display:flex;flex-wrap:nowrap"
+  } ),
+  fileActionBtn: /*#__PURE__*/css({
+    name: "158icaa",
+    styles: "margin-left:4px"
+  } )
+};
+
+var DotIndicatorActive = /*#__PURE__*/memo(function () {
+  return /*#__PURE__*/React.createElement(DotIndicator, {
+    className: styles$5.dotActive
+  });
+});
+var FileTreeElement = function FileTreeElement(_ref) {
+  var active = _ref.active,
+      className = _ref.className,
+      children = _ref.children,
+      expanded = _ref.expanded,
+      file = _ref.file,
+      level = _ref.level,
+      onDelete = _ref.onDelete,
+      onExpand = _ref.onExpand,
+      onFileCreate = _ref.onFileCreate,
+      onFileOpen = _ref.onFileOpen,
+      onFolderCreate = _ref.onFolderCreate,
+      onRename = _ref.onRename;
+  var Icon = file.type === 'folder' ? IconFolder : IconFile;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("li", {
+    className: cx(styles$5.row, _defineProperty({}, styles$5.active, active), className),
+    onClick: function onClick() {
+      file.type === 'folder' ? onExpand(file.fileId) : onFileOpen(file.fileId);
+    },
+    style: {
+      paddingLeft: (level || 0) * 20
+    },
+    title: file.fileName
+  }, /*#__PURE__*/React.createElement(IconChevron, {
+    className: cx(styles$5.iconChevron, _defineProperty({}, styles$5.iconChevronHidden, !file.items || !file.items.length)),
+    direction: expanded ? 'down' : 'right'
+  }), /*#__PURE__*/React.createElement(Icon, {
+    className: styles$5.fileIcon,
+    opened: expanded
+  }), /*#__PURE__*/React.createElement(Text, {
+    className: styles$5.fileName
+  }, file.fileName), (!file.saved || !!file.initialPath && file.initialPath !== file.path) && /*#__PURE__*/React.createElement(DotIndicatorActive, null), /*#__PURE__*/React.createElement("div", {
+    className: cx(styles$5.buttonsPanel, 'FileTreeElement__btns')
+  }, file.type === 'folder' && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Button, {
+    className: cx(styles$5.fileActionBtn, 'meta-test__createFolderInTreeBtn'),
+    intent: "secondary",
+    size: "s",
+    icon: IconCreateFolder,
+    onClick: function onClick(e) {
+      e.stopPropagation();
+      onFolderCreate(file);
+    },
+    title: "Create folder"
+  }), /*#__PURE__*/React.createElement(Button, {
+    className: cx(styles$5.fileActionBtn, 'meta-test__createFileInTreeBtn'),
+    intent: "secondary",
+    size: "s",
+    icon: IconCreateFile,
+    onClick: function onClick(e) {
+      e.stopPropagation();
+      onFileCreate(file);
+    },
+    title: "Create file"
+  })), /*#__PURE__*/React.createElement(Button, {
+    className: cx(styles$5.fileActionBtn, 'meta-test__editFolderInTreeBtn'),
+    intent: "secondary",
+    size: "s",
+    icon: IconEdit,
+    onClick: function onClick(e) {
+      e.stopPropagation();
+      onRename(file.path);
+    },
+    title: "Rename"
+  }), /*#__PURE__*/React.createElement(Button, {
+    className: cx(styles$5.fileActionBtn, 'meta-test__deleteFolderInTreeBtn'),
+    intent: "secondary",
+    size: "s",
+    icon: IconBucket,
+    onClick: function onClick(e) {
+      e.stopPropagation();
+      onDelete(file.path);
+    },
+    title: "Delete"
+  }))), expanded && children);
+};
+
+var ListItemWithTooltip = withTooltip('li');
+var ENABLED_SYMBOLS_REG_EX = /^([A-Za-z0-9-._]){0,32}$/;
+var NewTreeElement = /*#__PURE__*/function (_React$Component) {
+  _inherits(NewTreeElement, _React$Component);
+
+  var _super = _createSuper(NewTreeElement);
+
+  function NewTreeElement(props) {
+    var _this;
+
+    _classCallCheck(this, NewTreeElement);
+
+    _this = _super.call(this, props);
+    _this.inputRef = /*#__PURE__*/React.createRef();
+
+    _this.isFileExists = function (name, parentPath, initial, paths) {
+      return !!name && initial !== name && paths.includes((parentPath ? parentPath + '/' : '') + name);
+    };
+
+    _this.handleChange = function (event) {
+      if (event.target instanceof HTMLInputElement) {
+        var _value = event.target.value;
+
+        if (ENABLED_SYMBOLS_REG_EX.test(_value)) {
+          var _this$props = _this.props,
+              initialValue = _this$props.initialValue,
+              filePaths = _this$props.filePaths,
+              parentPath = _this$props.parentPath;
+
+          _this.setState({
+            value: _value,
+            fileExistsError: _this.isFileExists(_value, parentPath, initialValue, filePaths)
+          });
+        }
+      }
+    };
+
+    _this.handleBlur = function () {
+      var value = _this.state.value;
+
+      _this.props.onConfirm(value);
+    };
+
+    _this.handleKeyPress = function (event) {
+      var value = _this.state.value; // const { type } = this.props;
+
+      if (event.keyCode === 13) {
+        _this.props.onConfirm(value); // if (type === 'file') {
+        //   // if (validateFileNameExtension(value))
+        //   this.props.onConfirm(value);
+        // } else {
+        //   this.props.onConfirm(value);
+        // }
+
+      } else if (event.keyCode === 27) {
+        _this.props.onCancel();
+      }
+    };
+
+    var value = props.initialValue || '';
+    _this.state = {
+      value: value,
+      fileExistsError: _this.isFileExists(value, props.parentPath, props.initialValue, props.filePaths)
+    };
+    return _this;
+  }
+
+  _createClass(NewTreeElement, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.inputRef.current) {
+        this.inputRef.current.focus();
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props2 = this.props,
+          active = _this$props2.active,
+          className = _this$props2.className,
+          children = _this$props2.children,
+          expanded = _this$props2.expanded,
+          initialValue = _this$props2.initialValue,
+          level = _this$props2.level,
+          type = _this$props2.type;
+      var _this$state = this.state,
+          fileExistsError = _this$state.fileExistsError,
+          value = _this$state.value;
+      var Icon = type === 'folder' ? IconFolder : IconFile;
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ListItemWithTooltip, {
+        className: cx(styles$5.row, styles$5.newRow, _defineProperty({}, styles$5.active, active), className),
+        style: {
+          paddingLeft: (level || 0) * 20
+        },
+        title: initialValue,
+        tooltipContent: fileExistsError ? 'The name already exists' : undefined
+      }, /*#__PURE__*/React.createElement(IconChevron, {
+        className: cx(styles$5.iconChevron, _defineProperty({}, styles$5.iconChevronHidden, type !== 'folder' || !children || children instanceof Array && !children.length)),
+        direction: expanded ? 'down' : 'right'
+      }), /*#__PURE__*/React.createElement(Icon, {
+        className: styles$5.fileIcon,
+        opened: expanded
+      }), /*#__PURE__*/React.createElement(Input, {
+        error: fileExistsError,
+        ref: this.inputRef,
+        value: value,
+        onChange: this.handleChange,
+        onBlur: this.handleBlur,
+        onKeyDown: this.handleKeyPress,
+        size: "m"
+      })), expanded && children);
+    }
+  }]);
+
+  return NewTreeElement;
+}(React.Component);
+
+var renderTree = function renderTree(treeNode, prop, render) {
+  var level = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+  var children = (treeNode[prop] || []).map(function (x) {
+    return renderTree(x, prop, render, level + 1);
+  });
+  return render(treeNode, children, level);
+};
+
+var FileTree = /*#__PURE__*/function (_React$Component) {
+  _inherits(FileTree, _React$Component);
+
+  var _super = _createSuper(FileTree);
+
+  function FileTree() {
+    var _this;
+
+    _classCallCheck(this, FileTree);
+
+    _this = _super.apply(this, arguments);
+    _this.state = {
+      collapsedEntries: [],
+      expandedEntries: []
+    }; // TODO: по componentWillUpdate убрать из списка файлы, которые были удалены
+
+    _this.expandEntry = function (id, expand) {
+      var _this$state = _this.state,
+          collapsedEntries = _this$state.collapsedEntries,
+          expandedEntries = _this$state.expandedEntries;
+
+      if (_this.props.initiallyExpanded) {
+        if (expand !== true && (expand === false || !collapsedEntries.includes(id))) {
+          _this.setState({
+            collapsedEntries: [].concat(_toConsumableArray(collapsedEntries), [id])
+          });
+        } else {
+          if (collapsedEntries.includes(id)) {
+            _this.setState({
+              collapsedEntries: collapsedEntries.filter(function (i) {
+                return i !== id;
+              })
+            });
+          }
+        }
+      } else {
+        if (expand !== true && (expand === false || expandedEntries.includes(id))) {
+          _this.setState({
+            expandedEntries: expandedEntries.filter(function (i) {
+              return i !== id;
+            })
+          });
+        } else {
+          if (!expandedEntries.includes(id)) {
+            _this.setState({
+              expandedEntries: [].concat(_toConsumableArray(expandedEntries), [id])
+            });
+          }
+        }
+      }
+    };
+
+    _this.handleFolderCreate = function (file) {
+      var fileId = file.fileId,
+          path = file.path;
+
+      _this.expandEntry(fileId, true);
+
+      _this.props.onFolderCreate(path);
+    };
+
+    _this.handleFileCreate = function (file) {
+      var fileId = file.fileId,
+          path = file.path;
+
+      _this.expandEntry(fileId, true);
+
+      _this.props.onFileCreate(path);
+    };
+
+    return _this;
+  }
+
+  _createClass(FileTree, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          className = _this$props.className,
+          initiallyExpanded = _this$props.initiallyExpanded,
+          fileOperation = _this$props.fileOperation,
+          filePaths = _this$props.filePaths,
+          operationObject = _this$props.operationObject,
+          _this$props$tree = _this$props.tree,
+          tree = _this$props$tree === void 0 ? [] : _this$props$tree,
+          selectedFile = _this$props.selectedFile,
+          onDelete = _this$props.onDelete,
+          onFileOpen = _this$props.onFileOpen,
+          onRename = _this$props.onRename,
+          onOperationConfirm = _this$props.onOperationConfirm,
+          onOperationCancel = _this$props.onOperationCancel;
+      var _this$state2 = this.state,
+          collapsedEntries = _this$state2.collapsedEntries,
+          expandedEntries = _this$state2.expandedEntries;
+      return /*#__PURE__*/React.createElement("ul", {
+        className: cx(styles$5.tree, genericStyles.scrollbars, className, 'meta-test__enterName')
+      }, operationObject === '' && fileOperation && ['createFile', 'createFolder'].includes(fileOperation) && /*#__PURE__*/React.createElement(NewTreeElement, {
+        filePaths: filePaths,
+        type: fileOperation === 'createFolder' ? 'folder' : 'file',
+        level: 0,
+        onCancel: onOperationCancel,
+        onConfirm: onOperationConfirm
+      }), tree.map(function (x) {
+        return renderTree(x, 'items', function (item, children, level) {
+          if (item.deleted) return null;
+          return fileOperation === 'rename' && operationObject === item.path ? /*#__PURE__*/React.createElement(NewTreeElement, {
+            filePaths: filePaths,
+            parentPath: item.parentPath,
+            key: item.path,
+            initialValue: item.fileName,
+            active: selectedFile ? selectedFile.path === item.path : false,
+            type: item.type,
+            level: level,
+            // childsCount={item.items && item.items.length}
+            expanded: initiallyExpanded ? !collapsedEntries.includes(item.fileId) : expandedEntries.includes(item.fileId),
+            onCancel: onOperationCancel,
+            onConfirm: onOperationConfirm
+          }, children) : /*#__PURE__*/React.createElement(FileTreeElement, {
+            key: item.path,
+            file: item,
+            active: selectedFile ? selectedFile.path === item.path : false,
+            level: level,
+            expanded: initiallyExpanded ? !collapsedEntries.includes(item.fileId) : expandedEntries.includes(item.fileId),
+            onDelete: onDelete,
+            onExpand: _this2.expandEntry,
+            onFileCreate: _this2.handleFileCreate,
+            onFileOpen: onFileOpen,
+            onFolderCreate: _this2.handleFolderCreate,
+            onRename: onRename
+          }, operationObject === item.path && fileOperation && ['createFile', 'createFolder'].includes(fileOperation) && /*#__PURE__*/React.createElement(NewTreeElement, {
+            active: selectedFile ? selectedFile.path === item.path : false,
+            filePaths: filePaths,
+            level: level + 1,
+            onCancel: onOperationCancel,
+            onConfirm: onOperationConfirm,
+            parentPath: item.path,
+            type: fileOperation === 'createFolder' ? 'folder' : 'file'
+          }), children);
+        });
+      }));
+    }
+  }]);
+
+  return FileTree;
+}(React.Component);
+
+var styles$4 = {
   section: /*#__PURE__*/css({
     name: "19cqey3",
     styles: "margin:0 0 40px"
@@ -8337,21 +8708,21 @@ var PageSection = function PageSection(_ref) {
       topRightControls = _ref.topRightControls;
   var isHeadingPaneVisible = title || titleCounter !== undefined || subTitle || topRightControls;
   return /*#__PURE__*/React.createElement("section", {
-    className: cx(styles$2.section, className)
+    className: cx(styles$4.section, className)
   }, isHeadingPaneVisible && /*#__PURE__*/React.createElement("div", {
-    className: cx(styles$2.headingPane, _defineProperty({}, styles$2.headingPaneMargin, Boolean(children)))
+    className: cx(styles$4.headingPane, _defineProperty({}, styles$4.headingPaneMargin, Boolean(children)))
   }, title && /*#__PURE__*/React.createElement(Text, {
-    className: styles$2.heading,
+    className: styles$4.heading,
     variant: "h2"
   }, title), titleCounter !== undefined && /*#__PURE__*/React.createElement(Text, {
-    className: styles$2.counter,
+    className: styles$4.counter,
     variant: "h2"
   }, "\xA0", titleCounter), subTitle && /*#__PURE__*/React.createElement(Text, {
-    className: styles$2.subTitle,
+    className: styles$4.subTitle,
     variant: "p",
     tag: "span"
   }, subTitle), topRightControls && /*#__PURE__*/React.createElement(ControlsPanel, {
-    className: styles$2.topRightControls,
+    className: styles$4.topRightControls,
     controls: topRightControls
   })), children);
 };
@@ -8375,7 +8746,7 @@ var SideMenuIcon = function SideMenuIcon(_ref) {
   }, IconComponent);
 };
 
-var styles$1 = {
+var styles$3 = {
   item: /*#__PURE__*/css({
     name: "1cfq0eg",
     styles: "display:block;width:100%;height:40px;position:relative;cursor:pointer;border:none;text-align:left;text-decoration:none;background:transparent;outline:none;&:hover,&:focus{background:rgba(255, 255, 255, 0.05);}"
@@ -8445,7 +8816,9 @@ var SideMenuItem = function SideMenuItem(_ref) {
       isCollapse = _ref.isCollapse,
       pathPrefix = _ref.pathPrefix,
       _ref$type = _ref.type,
-      type = _ref$type === void 0 ? 'internal' : _ref$type;
+      type = _ref$type === void 0 ? 'internal' : _ref$type,
+      _ref$forceToUseHrefAt = _ref.forceToUseHrefAttribute,
+      forceToUseHrefAttribute = _ref$forceToUseHrefAt === void 0 ? false : _ref$forceToUseHrefAt;
   var tag = path ? 'a' : 'button';
   var some = items && items.length > 0;
   var handleClick = useMemo(function () {
@@ -8462,6 +8835,11 @@ var SideMenuItem = function SideMenuItem(_ref) {
       }
     };
   }, [some, expand, onClick, path, type, expanded]);
+  var href = pathPrefix ? pathPrefix + path : path;
+
+  if (some && !forceToUseHrefAttribute) {
+    href = undefined;
+  }
 
   if (_short) {
     var itemSelected = Boolean(selected || items && items.find(function (x) {
@@ -8469,15 +8847,15 @@ var SideMenuItem = function SideMenuItem(_ref) {
     }));
     return /*#__PURE__*/React.createElement(Text, {
       tag: tag,
-      className: cx(styles$1.shortItem, _defineProperty({}, styles$1.itemSelected, itemSelected)),
+      className: cx(styles$3.shortItem, _defineProperty({}, styles$3.itemSelected, itemSelected)),
       onClick: handleClick,
-      href: pathPrefix ? pathPrefix + path : path,
+      href: href,
       title: label
     }, /*#__PURE__*/React.createElement("div", {
-      className: styles$1.iconWrap
+      className: styles$3.iconWrap
     }, /*#__PURE__*/React.createElement(SideMenuIcon, {
       icon: icon,
-      className: styles$1.icon
+      className: styles$3.icon
     })));
   }
 
@@ -8485,7 +8863,7 @@ var SideMenuItem = function SideMenuItem(_ref) {
 
   if (expanded && !_short && items && items.length > 0) {
     subItems = /*#__PURE__*/React.createElement("div", {
-      className: styles$1.submenuList
+      className: styles$3.submenuList
     }, items.map(function (x) {
       return /*#__PURE__*/React.createElement(SideMenuItem, _objectSpread2(_objectSpread2({}, x), {}, {
         key: x.path,
@@ -8497,21 +8875,21 @@ var SideMenuItem = function SideMenuItem(_ref) {
   }
 
   var expandButton = items && items.length > 0 ? /*#__PURE__*/React.createElement(IconChevronDown, {
-    className: cx(styles$1.expandButton, _defineProperty({}, styles$1.expandButtonUnexpand, !expanded))
+    className: cx(styles$3.expandButton, _defineProperty({}, styles$3.expandButtonUnexpand, !expanded))
   }) : null;
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Text, {
     tag: tag,
-    className: cx(styles$1.item, (_cx3 = {}, _defineProperty(_cx3, styles$1.itemSelected, selected), _defineProperty(_cx3, styles$1.subItemSelected, selected && isSubitem), _defineProperty(_cx3, styles$1.collapse, isCollapse), _cx3)),
-    href: pathPrefix ? pathPrefix + path : path,
+    className: cx(styles$3.item, (_cx3 = {}, _defineProperty(_cx3, styles$3.itemSelected, selected), _defineProperty(_cx3, styles$3.subItemSelected, selected && isSubitem), _defineProperty(_cx3, styles$3.collapse, isCollapse), _cx3)),
+    href: href,
     onClick: handleClick,
     title: label
   }, isSubitem ? null : /*#__PURE__*/React.createElement("div", {
-    className: styles$1.iconWrap
+    className: styles$3.iconWrap
   }, /*#__PURE__*/React.createElement(SideMenuIcon, {
     icon: icon,
-    className: styles$1.icon
+    className: styles$3.icon
   })), /*#__PURE__*/React.createElement("span", {
-    className: cx(styles$1.title, (_cx4 = {}, _defineProperty(_cx4, styles$1.subItemTitle, isSubitem), _defineProperty(_cx4, styles$1.titleSelected, selected), _cx4))
+    className: cx(styles$3.title, (_cx4 = {}, _defineProperty(_cx4, styles$3.subItemTitle, isSubitem), _defineProperty(_cx4, styles$3.titleSelected, selected), _cx4))
   }, label), expandButton), subItems);
 };
 
@@ -8519,7 +8897,7 @@ var translateFromRight = /*#__PURE__*/keyframes({
   name: "175ziuu",
   styles: "from{transform:translate3d(200px, 0, 0);}to{transform:translate3d(0, 0, 0);}"
 } );
-var styles = {
+var styles$2 = {
   container: /*#__PURE__*/css("border-top:none;overflow:hidden;width:256px;background:", colors.sidebar, ";height:100%;padding:0;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;" + ("" ), "" ),
   shortContainer: /*#__PURE__*/css({
     name: "1ydfe13",
@@ -8634,11 +9012,11 @@ function SideMenu(_ref) {
     return R.last(pinnedMenu);
   }, [menu]);
   return /*#__PURE__*/React.createElement("div", {
-    className: cx(styles.container, _defineProperty({}, styles.shortContainer, isShort), className)
+    className: cx(styles$2.container, _defineProperty({}, styles$2.shortContainer, isShort), className)
   }, /*#__PURE__*/React.createElement("div", {
-    className: cx(styles.logoContainer, _defineProperty({}, styles.logoCenter, isShort))
+    className: cx(styles$2.logoContainer, _defineProperty({}, styles$2.logoCenter, isShort))
   }, renderMenuLogo ? renderMenuLogo(isShort) : null), /*#__PURE__*/React.createElement("div", {
-    className: cx(styles.menuList, genericStyles.scrollbars)
+    className: cx(styles$2.menuList, genericStyles.scrollbars)
   }, topMenu.map(function (x, i) {
     return /*#__PURE__*/React.createElement(SideMenuItem, _objectSpread2(_objectSpread2({}, x), {}, {
       key: i,
@@ -8648,7 +9026,7 @@ function SideMenu(_ref) {
       "short": isShort
     }));
   })), /*#__PURE__*/React.createElement("div", {
-    className: styles.bottomButtons
+    className: styles$2.bottomButtons
   }, pinnedMenuItem && /*#__PURE__*/React.createElement(SideMenuItem, _objectSpread2(_objectSpread2({
     key: "pinned-element"
   }, pinnedMenuItem), {}, {
@@ -8670,4 +9048,68 @@ function SideMenu(_ref) {
   })));
 }
 
-export { Alert, AppHeader, AppLayout, BaseModal, Breadcrumbs, Button, Checkbox, CodeBlock, CodeBlockWrap, ConfirmModal, ControlsPanel, CopyToClipboard, DotIndicator, DraggableList, DraggableListContainer, DraggableListItem, DraggableTable, Dropdown, DropdownDivider, DropdownItem, ExpandableBlock, FlatList, FlatListItem, FormField, HealthStatus, INTERACTIVE_ELEMENT_SELECTOR, Icon$1 as Icon, IconArrow, IconArrowDown, IconArrowLeft, IconArrowRight, IconArrowUp, IconAttach, IconAttention, IconBell, IconBoldArrowRight, IconBox, IconBoxNoData, IconBucket, IconBurger, IconCalendar, IconCancel, IconCheckbox, IconCheckboxChecked, IconCheckboxCheckedDisabled, IconCheckboxDisabled, IconCheckboxIndeterminate, IconCheckboxIndeterminateDisabled, IconChevron, IconChevronDown, IconChevronLeft, IconChevronRight, IconChip, IconChipDanger, IconChipWarning, IconClock, IconClose, IconCluster, IconCode, IconCopy, IconCreateFile, IconCreateFolder, IconDelete, IconDocumentCode, IconDownload, IconEdit, IconEmptyData, IconEyeClosed, IconEyeOpened, IconFailed, IconFile, IconFolder, IconFolderOpened, IconGear, IconGeoPin, IconHelperClose, IconHelperSortable, IconInfo, IconLink, IconMore, IconMoreBurger, IconOk, IconPlay, IconRadio, IconRadioChecked, IconRadioCheckedDisabled, IconRadioDisabled, IconRefresh, IconSchema, IconSearch, IconSortableAsc, IconSortableDesc, IconSpinner, IconSpinnerLegacy, IconStop, IconStopped, IconSuccess, IconTask, IconTrash, IconUser, IconUsers, Input, InputGroup, InputPassword, LabeledInput, LeaderFlag, LeaderFlagSmall, Link, Markdown, Modal, NonIdealState, NonIdealStateAction, NotificationSplash, NotificationSplashFixed, OverflowList, PageCard, PageLayout, PageLayoutWithRef, PageSection, Pagination, PaginationControlled, ModalBody as PopupBody, ModalFooter as PopupFooter, PopupNotificationList, ProgressBar, RadioButton, ResizeSensor, SVGImage, Scrollbar, SectionPreloader, Select, SideMenu, Spin, SplashError, SplashModal, Switcher, SyntaxHighlight, Tabbed, Table, Tag, TagsList, img$3 as TarantoolLogoCompact, img$2 as TarantoolLogoFull, TarantoolLogoSpinner, Text, TextArea, TiledList, TiledListItem, Tooltip, UploadZone, UriLabel, appLayoutTopPanelHeight, baseFontFamily, colors, copyToClipboard, genericStyles, iconSize, keyFrames, monoFontFamily, navItemHeight, navWidthCollapsed, navWidthExpanded, pageLayoutMaxWidth, pageLayoutMinWidth, img$5 as splashGenericErrorSvg, img$4 as splashSelectFileSvg, styles$N as styles, textStyles, img$1 as windowErrorSvg, withCopyToClipboard, withDropdown, withPopover, withTooltip, zIndex };if (window) { window.document.addEventListener('DOMContentLoaded', function(){ const div = document.createElement('div'); div.setAttribute('style', 'position: absolute; height:0; width: 0; overflow: hidden;');  div.innerHTML = "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><defs><style>\n    .sprite-symbol-usage {display: none;}\n    .sprite-symbol-usage:target {display: inline;}\n  </style><symbol viewBox=\"0 0 14 14\" id=\"-Am5Jaluor-oMRsekyev8\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4531 7.54688C13.7552 7.54688 14 7.30206 14 7s-.2448-.54688-.5469-.54688h-1.6042V5.3958h1.6042c.3021 0 .5469-.24481.5469-.54688 0-.30206-.2448-.54687-.5469-.54687h-1.6042v-1.6041c0-.30206-.2448-.54687-.5469-.54687H9.69795V.54688C9.69795.2448 9.45314 0 9.15108 0c-.30207 0-.54688.24481-.54688.54688v1.6042H7.54688V.54688C7.54688.2448 7.30206 0 7 0s-.54688.24481-.54688.54688v1.6042H5.3958V.54688C5.3958.2448 5.15099 0 4.84892 0c-.30206 0-.54687.24481-.54687.54688v1.6042h-1.6041c-.30206 0-.54687.24481-.54687.54687v1.6042H.54688C.2448 4.30215 0 4.54697 0 4.84903c0 .30196.24481.54687.54688.54687h1.6042v1.05722H.54688C.2448 6.45312 0 6.69794 0 7s.24481.54688.54688.54688h1.6042V8.6042H.54688C.2448 8.6042 0 8.84901 0 9.15108c0 .30206.24481.54687.54688.54687h1.6042v1.60425c0 .3019.24481.5468.54687.5468h1.6042v1.6041c0 .3021.24482.5469.54688.5469.30196 0 .54687-.2448.54687-.5469v-1.6042h1.05722v1.6042c0 .3021.24482.5469.54688.5469s.54688-.2448.54688-.5469v-1.6042H8.6042v1.6042c0 .3021.24481.5469.54688.5469.30206 0 .54687-.2448.54687-.5469v-1.6042H11.302c.3021 0 .5469-.2448.5469-.5469V9.69785h1.6042c.3021 0 .5469-.24482.5469-.54688 0-.30196-.2448-.54687-.5469-.54687h-1.6042V7.54688h1.6042zM3.24483 3.24483h7.51047v7.51037H3.24483V3.24483zm3.75171.70634c.27642 0 .49986.22345.49986.49987v2.99919c0 .27642-.22344.49987-.49986.49987s-.49987-.22395-.49987-.49987V4.45104c0-.27642.22343-.49987.49987-.49987zm-.35439 5.19224c-.045.04498-.07999.09996-.10498.16495-.02498.05998-.03998.12497-.03998.18996 0 .06499.015.12998.03998.18996.02501.05997.05998.11496.10498.16495.05048.045.10497.07999.16495.10497.05997.02498.12445.03998.18944.03998.06499 0 .12998-.015.18996-.03998.05997-.02501.11495-.06.16495-.10497.045-.04999.07999-.10498.10497-.16495.02498-.06.03998-.12497.03998-.18996 0-.06499-.015-.12998-.03998-.18996-.02501-.06497-.05997-.11997-.10497-.16495-.11447-.11449-.28992-.16996-.44939-.13497-.03499.00501-.06496.0145-.09496.03-.03.0105-.06.025-.08499.045-.0222.01109-.04167.02768-.06043.04367-.00657.00559-.01305.01112-.01953.0163z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 120 96\" id=\"-C9hfLS6HPJanh6fkykKd\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.937 10.8h.125c6.677 0 11.768 0 15.813.367 4.075.369 7.206 1.118 9.925 2.688a22.8 22.8 0 018.345 8.345c1.57 2.72 2.319 5.85 2.688 9.924.367 4.046.367 9.137.367 15.814v.124c0 6.677 0 11.768-.367 15.814-.37 4.074-1.118 7.205-2.688 9.924a22.8 22.8 0 01-8.345 8.345c-2.72 1.57-5.85 2.32-9.925 2.688-4.045.367-9.136.367-15.813.367h-.125c-6.676 0-11.767 0-15.813-.367-4.074-.369-7.205-1.118-9.924-2.688a22.8 22.8 0 01-8.346-8.345c-1.57-2.72-2.318-5.85-2.688-9.924-.366-4.046-.366-9.137-.366-15.813v-.126c0-6.676 0-11.767.366-15.813.37-4.074 1.119-7.205 2.688-9.924a22.8 22.8 0 018.346-8.345c2.719-1.57 5.85-2.319 9.924-2.688 4.045-.367 9.137-.367 15.813-.367zm-15.596 2.757c-3.908.354-6.648 1.052-8.941 2.376a20.4 20.4 0 00-7.467 7.467c-1.324 2.293-2.022 5.033-2.376 8.941C25.2 36.266 25.2 41.249 25.2 48c0 6.751.001 11.735.357 15.659.354 3.908 1.052 6.648 2.376 8.941a20.4 20.4 0 007.467 7.467c2.293 1.324 5.033 2.022 8.94 2.376 3.925.356 8.908.357 15.66.357 6.751 0 11.734-.001 15.659-.357 3.908-.354 6.648-1.052 8.94-2.376a20.4 20.4 0 007.468-7.467c1.324-2.293 2.022-5.033 2.376-8.941.356-3.924.357-8.908.357-15.659 0-6.751-.001-11.734-.357-15.659-.354-3.908-1.052-6.648-2.376-8.941a20.4 20.4 0 00-7.467-7.467c-2.293-1.324-5.033-2.022-8.941-2.376-3.925-.356-8.908-.357-15.66-.357-6.75 0-11.734.001-15.658.357z\" fill=\"#FF272C\" /><g filter=\"url(#-C9hfLS6HPJanh6fkykKd_filter0_b)\"><path d=\"M32.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><g filter=\"url(#-C9hfLS6HPJanh6fkykKd_filter1_b)\"><path d=\"M62.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><g filter=\"url(#-C9hfLS6HPJanh6fkykKd_filter2_b)\"><path d=\"M32.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><g filter=\"url(#-C9hfLS6HPJanh6fkykKd_filter3_b)\"><path d=\"M62.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><defs><filter id=\"-C9hfLS6HPJanh6fkykKd_filter0_b\" x=\"8.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter><filter id=\"-C9hfLS6HPJanh6fkykKd_filter1_b\" x=\"38.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter><filter id=\"-C9hfLS6HPJanh6fkykKd_filter2_b\" x=\"8.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter><filter id=\"-C9hfLS6HPJanh6fkykKd_filter3_b\" x=\"38.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter></defs></symbol><symbol viewBox=\"0 0 12 12\" id=\"-aQPhZZj_oniDEOANVZ-C\"><path d=\"M.76 11.95l3.98-1.68a.56.56 0 00.18-.12l6.72-6.72c.48-.48.48-1.26 0-1.73L10.3.36a1.22 1.22 0 00-1.73 0L1.85 7.08a.54.54 0 00-.12.18L.04 11.24c-.09.23-.02.45.12.6.14.14.37.2.6.11zM9.44 1.22l1.34 1.34-1.05 1.05-1.34-1.34 1.05-1.05zM2.8 7.85l4.73-4.72 1.34 1.34L4.15 9.2l-2.33.99.98-2.33z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"2EAF86_HiysYPTAxB7-RL\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.8 1.54v2.28h2.29L8.8 1.54zm2.55 3.55H8.8c-.7 0-1.27-.57-1.27-1.27V1.27h-5.1v11.46h8.92V5.09zM2.44 0h6.63l3.55 3.55v9.18c0 .7-.57 1.27-1.27 1.27H2.44c-.7 0-1.27-.57-1.27-1.27V1.27C1.17.57 1.74 0 2.44 0z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"2HVEkt4bnc23ZHUMauTbT\">\n    <path d=\"M11.266 0H2.734a.984.984 0 0 0-.984.984v12.032c0 .544.44.984.984.984h8.532c.544 0 .984-.44.984-.984V.984A.984.984 0 0 0 11.266 0zm0 12.893H2.734V9.557c0 .006.006.013.014.013h8.504a.014.014 0 0 0 .014-.013v3.336zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V5.264c0 .007.006.013.014.013h8.504a.014.014 0 0 0 .014-.013V8.6zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V.984h8.532v3.323zm-7.37 6.918a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0z\" />\n</symbol><symbol viewBox=\"0 0 14 14\" id=\"4GWGPB2_9FZx4MWqdCzqR\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 13.42A6.42 6.42 0 117 .58a6.42 6.42 0 010 12.84zm0-1.17a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5zM5.66 8.92l-.82.83L2.09 7l2.75-2.75.82.83L3.74 7l1.92 1.92zm2.68-3.84l.82-.83L11.91 7 9.16 9.75l-.82-.83L10.26 7 8.34 5.08zM6.99 10.6l-1.15-.2 1.17-7 1.15.2-1.17 7z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"4yIYigYFplvvZBo-ZNUxf\"><rect width=\"16\" height=\"16\" rx=\"2\" /><path d=\"M5.84 11.57h-.06a.47.47 0 0 1-.34-.24L3.57 8.07a.47.47 0 1 1 .81-.47l1.57 2.74 5.75-5.78a.47.47 0 0 1 .66.67L6.2 11.4l-.02.02a.47.47 0 0 1-.34.14z\" fill=\"#fff\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"5KvvIZTq03z4th4RXGPbP\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.8317 7.6849a1.3328 1.3328 0 010 1.2968c-1.5475 2.7806-4.4621 4.6848-7.8316 4.6848-3.3697 0-6.2844-1.9042-7.8318-4.6848a1.3333 1.3333 0 010-1.2968C1.7157 4.9042 4.6303 3 8 3c3.3695 0 6.2841 1.9042 7.8316 4.6849zM8.0001 4.3333c2.8486 0 5.3357 1.6088 6.6665 4-1.3308 2.3911-3.8179 3.9999-6.6666 3.9999s-5.3359-1.6088-6.6665-4C2.664 5.9422 5.1513 4.3334 8 4.3334zm1.3333 4c0 .7364-.597 1.3333-1.3333 1.3333-.7364 0-1.3334-.597-1.3334-1.3333C6.6667 7.5969 7.2637 7 8.0001 7c.7363 0 1.3333.5969 1.3333 1.3333zm1.3333 0c0 1.4728-1.1939 2.6666-2.6667 2.6666-1.4727 0-2.6666-1.1938-2.6666-2.6666 0-1.4728 1.1939-2.6667 2.6666-2.6667 1.4728 0 2.6667 1.1939 2.6667 2.6667z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"6jK2fhSQ9E4UFLj3zSxeP\">\n    <path d=\"M11.935 6.698a3.034 3.034 0 0 0-.899-.609c.386-.198.717-.487.964-.843.302-.434.462-.94.462-1.467 0-1.44-1.2-2.612-2.677-2.612-.559 0-1.094.166-1.548.48a2.617 2.617 0 0 0-.898 1.07 2.698 2.698 0 0 0-1.961-.834C3.902 1.883 2.7 3.055 2.7 4.496c0 .526.16 1.032.462 1.466.247.356.578.644.964.844-.333.147-.635.351-.899.61a2.916 2.916 0 0 0-.895 2.098v2.14c0 .65.542 1.18 1.21 1.18h3.673c.485 0 .923-.287 1.112-.718h3.297c.665 0 1.209-.528 1.209-1.18v-2.14a2.925 2.925 0 0 0-.899-2.098zM8.562 2.585c.326-.32.76-.495 1.223-.495.463 0 .897.175 1.223.495a1.657 1.657 0 0 1 0 2.387c-.326.32-.76.495-1.223.495-.463 0-.897-.175-1.223-.495a1.652 1.652 0 0 1-.507-1.193c0-.452.18-.876.507-1.194zm-4.916 1.91c0-.451.18-.875.507-1.193.326-.32.76-.495 1.223-.495.464 0 .898.175 1.224.495a1.656 1.656 0 0 1 0 2.387c-.326.32-.76.495-1.224.495-.461 0-.897-.175-1.224-.495a1.658 1.658 0 0 1-.506-1.193zm3.828 7.157a.262.262 0 0 1-.26.255H3.54a.258.258 0 0 1-.261-.255V9.514c0-.544.218-1.057.616-1.445a2.108 2.108 0 0 1 1.481-.602 2.108 2.108 0 0 1 1.5.62l.003.005c.384.384.595.89.595 1.424v2.137zM7.24 7.167a3.022 3.022 0 0 0-.612-.362 2.656 2.656 0 0 0 1.195-1.248c.205.214.445.395.71.531a3.04 3.04 0 0 0-1.293 1.08zm4.643 3.77c0 .14-.117.254-.26.254h-3.2V9.513c0-.588-.177-1.153-.51-1.639a2.107 2.107 0 0 1 1.872-1.125c.558 0 1.084.213 1.482.602.398.388.616.901.616 1.445v2.14z\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"A67Ay-f1K9HCB9uku5MEM\"><path d=\"M8 0C3.58125 0 0 3.58125 0 8c0 4.4188 3.58125 8 8 8 4.4188 0 8-3.5812 8-8 0-4.41875-3.5812-8-8-8zm4.8609 12.8609c-.6312.6313-1.3671 1.1282-2.1859 1.4735-.84687.3594-1.74687.5406-2.675.5406-.92812 0-1.82812-.1812-2.675-.5391-.81875-.3468-1.55312-.8421-2.18594-1.4734-.63125-.6312-1.12812-1.3672-1.47344-2.1859C1.30625 9.82812 1.125 8.92813 1.125 8c0-.92812.18125-1.82812.53906-2.675.34688-.81875.84219-1.55312 1.47344-2.18594.63125-.63125 1.36719-1.12812 2.18594-1.47344C6.17188 1.30625 7.07188 1.125 8 1.125c.92813 0 1.82813.18125 2.675.53906.8188.34688 1.5531.84219 2.1859 1.47344.6313.63125 1.1282 1.36719 1.4735 2.18594.3594.84844.5406 1.74844.5406 2.67656 0 .92813-.1812 1.82813-.5391 2.675-.3468.8188-.8421 1.5547-1.475 2.1859zM9.84688 11.025H8.51562V5.55469c0-.31094-.25156-.5625-.5625-.5625h-1.5c-.31093 0-.5625.25156-.5625.5625s.25157.5625.5625.5625h.9375V11.025H6.05938c-.31094 0-.5625.2516-.5625.5625s.25156.5625.5625.5625H9.84688c.31092 0 .56252-.2516.56252-.5625s-.2516-.5625-.56252-.5625zM7.39062 3.44531c0 .31066.25185.5625.5625.5625.31067 0 .5625-.25184.5625-.5625s-.25183-.5625-.5625-.5625c-.31065 0-.5625.25184-.5625.5625z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"Bk9rGFTVoXaIMGWRj6GQt\"><path d=\"M9.384 8l6.33-6.328a.976.976 0 0 0 0-1.382.974.974 0 0 0-1.382 0L8 6.616 1.668.287a.974.974 0 0 0-1.381 0 .976.976 0 0 0 0 1.382L6.617 8l-6.33 6.33a.976.976 0 0 0 .69 1.668c.251 0 .5-.094.691-.285L8 9.382l6.332 6.332a.97.97 0 0 0 .69.286.976.976 0 0 0 .69-1.668L9.385 8.001z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"Go4hckuxQydtEiMruzRND\"><rect width=\"16\" height=\"16\" rx=\"2\" /><path d=\"M5.844 11.57a.47.47 0 0 1-.407-.237L3.57 8.069a.469.469 0 1 1 .815-.465l1.56 2.733L11.7 4.564a.47.47 0 0 1 .664.662l-6.166 6.185-.023.023a.468.468 0 0 1-.331.137z\" fill=\"#fff\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"ICGgbdI6CNymcbeWsWacO\"><path d=\"M15.7 7.14l-4.98-3.97c-.51-.4-1.29-.04-1.29.62v1.33c0 .42-.28.8-.7.8H.76a.75.75 0 00-.77.75v2.09c0 .4.35.77.77.77H8.7c.43 0 .71.34.71.76v1.33c0 .65.78 1 1.28.6l4.98-3.86c.41-.3.43-.9.03-1.22z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"IU7jiS825iSg8DBcGI0IN\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" stroke=\"#D9D9D9\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"JHFOHhjIwGIzfKV7k272q\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#fff\" stroke=\"#D9D9D9\" /><path d=\"M5 5h6v6H5z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"JngjdhlmachZzcr_Ixbyi\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.646 4H9.6v1.6h5.6V0h-1.6v2.616C12.22.946 10.243 0 8 0a8 8 0 108 8h-1.6A6.4 6.4 0 118 1.6c1.915 0 3.557.863 4.646 2.4z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"L-E3850PcmT7RZngqb6Wk\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.333 1.167h9.334c.644 0 1.166.522 1.166 1.166V7c0 .644-.522 1.167-1.166 1.167H2.333A1.167 1.167 0 011.167 7V2.333c0-.644.522-1.166 1.166-1.166zm0 1.166V7h9.334V2.333H2.333zm10.5 7V10.5H1.167V9.333h11.666zm0 2.334v1.166H1.167v-1.166h11.666z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 120 96\" id=\"LNxn_poRi11JKgavwWA3V\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M79.382 57.127l.28.162c.093.054.186.108.279.16 4.903 2.831 7.657 4.42 9.082 6.188 2.381 2.952 2.381 6.36 0 9.312-1.425 1.767-4.179 3.356-9.082 6.187l-.559.323c-4.903 2.83-7.657 4.42-10.717 5.243-5.114 1.374-11.017 1.374-16.13 0-3.061-.823-5.815-2.413-10.718-5.243l-.558-.323c-4.904-2.83-7.658-4.42-9.083-6.187-2.381-2.952-2.381-6.36 0-9.312 1.425-1.767 4.179-3.357 9.083-6.187l.279-.161.279-.162c4.903-2.83 7.657-4.42 10.718-5.243 5.113-1.375 11.017-1.375 16.13 0 3.06.823 5.814 2.413 10.717 5.243zm-1.8 1.361c-5.259-3.036-7.629-4.386-10.158-5.066-4.327-1.163-9.322-1.163-13.649 0-2.529.68-4.899 2.03-10.159 5.067-5.26 3.036-7.598 4.404-8.775 5.864-2.015 2.498-2.015 5.382 0 7.88 1.177 1.46 3.515 2.828 8.775 5.864 5.26 3.037 7.63 4.387 10.16 5.067 4.326 1.163 9.321 1.163 13.648 0 2.53-.68 4.899-2.03 10.159-5.067 5.26-3.036 7.598-4.404 8.776-5.864 2.014-2.498 2.014-5.382 0-7.88-1.178-1.46-3.516-2.828-8.776-5.864z\" fill=\"#8E9199\" /><g filter=\"url(#LNxn_poRi11JKgavwWA3V_filter0_b)\"><rect width=\"58.888\" height=\"58.888\" rx=\"12\" transform=\"scale(1.22477 .70706) rotate(45 -9.64 73.966)\" fill=\"#e3e3e3\" /></g><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M82.427 17.268l.107.062c3.867 2.232 6.84 3.948 8.99 5.44 2.175 1.506 3.605 2.846 4.29 4.344.845 1.846.845 3.787 0 5.634-.685 1.497-2.115 2.837-4.29 4.344-2.15 1.491-5.123 3.207-8.99 5.44l-.107.062c-3.867 2.232-6.84 3.948-9.423 5.19-2.61 1.255-4.931 2.08-7.525 2.476-3.198.488-6.56.488-9.759 0-2.594-.396-4.915-1.221-7.525-2.476-2.583-1.242-5.556-2.958-9.422-5.19l-.108-.063c-3.867-2.232-6.84-3.948-8.99-5.439-2.174-1.507-3.604-2.847-4.29-4.344-.844-1.847-.844-3.788 0-5.634.686-1.498 2.116-2.838 4.29-4.345 2.15-1.49 5.123-3.207 8.99-5.44l.108-.061c3.866-2.232 6.839-3.949 9.422-5.19 2.61-1.255 4.931-2.08 7.525-2.476a32.73 32.73 0 019.759 0c2.594.395 4.915 1.22 7.525 2.476 2.583 1.241 5.556 2.958 9.423 5.19zm-11.303-3.886c-2.453-1.18-4.388-1.834-6.396-2.14a27.696 27.696 0 00-8.257 0c-2.007.306-3.943.96-6.395 2.14-2.468 1.186-5.348 2.847-9.279 5.117s-6.809 3.932-8.864 5.356c-2.042 1.416-3.175 2.533-3.706 3.692-.714 1.562-.714 3.205 0 4.767.53 1.16 1.664 2.277 3.706 3.692 2.055 1.425 4.933 3.087 8.864 5.357 3.931 2.27 6.811 3.93 9.279 5.117 2.452 1.179 4.388 1.833 6.395 2.14 2.706.412 5.551.412 8.257 0 2.008-.307 3.944-.961 6.396-2.14 2.467-1.187 5.347-2.848 9.278-5.117 3.931-2.27 6.809-3.932 8.864-5.357 2.042-1.415 3.176-2.533 3.706-3.692.715-1.562.715-3.205 0-4.767-.53-1.159-1.664-2.276-3.706-3.692-2.055-1.424-4.933-3.087-8.864-5.356-3.931-2.27-6.81-3.93-9.278-5.117z\" fill=\"#8E9199\" /><defs><filter id=\"LNxn_poRi11JKgavwWA3V_filter0_b\" x=\"-8.313\" y=\"-.348\" width=\"137.824\" height=\"99.856\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter></defs></symbol><symbol viewBox=\"0 0 16 16\" id=\"LmZcNMbTQu9JR_dAB435F\"><path d=\"M11.2063 4.78438C10.9859 4.56563 10.6297 4.56563 10.4109 4.78594L8 7.20312L5.58906 4.78594C5.37031 4.56563 5.01406 4.56563 4.79375 4.78438C4.57344 5.00313 4.57344 5.35938 4.79219 5.57969L7.20625 8L4.79219 10.4203C4.57344 10.6406 4.57344 10.9969 4.79375 11.2156C4.90313 11.325 5.04688 11.3797 5.19063 11.3797C5.33437 11.3797 5.47969 11.325 5.58906 11.2141L8 8.79688L10.4109 11.2156C10.5203 11.3266 10.6656 11.3813 10.8094 11.3813C10.9531 11.3813 11.0969 11.3266 11.2063 11.2172C11.4266 10.9984 11.4266 10.6422 11.2078 10.4219L8.79375 8L11.2063 5.57969C11.4266 5.35938 11.4266 5.00313 11.2063 4.78438ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\" /></symbol><symbol viewBox=\"0 0 12 14\" id=\"LuoyDwL1QTe_XDqgMJBSp\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.64 2c.068-.126.165-.258.3-.383C4.276 1.305 4.894 1 6 1s1.724.305 2.06.617c.135.125.232.257.3.383H3.64zM2.57 2c.1-.368.315-.77.69-1.117C3.824.361 4.706 0 6 0c1.294 0 2.176.361 2.74.883.375.347.59.749.69 1.117h1.37c.663 0 1.2.542 1.2 1.21v1.211c0 .669-.537 1.21-1.2 1.21h-.048L10.2 12.29c0 .668-.537 1.21-1.2 1.21H3c-.663 0-1.2-.542-1.198-1.16l-.554-6.708H1.2c-.663 0-1.2-.542-1.2-1.21V3.21C0 2.542.537 2 1.2 2h1.37zM1.2 3.21h9.6v1.211H1.2v-1.21zM3 12.29l-.548-6.658h1.123l.832 6.658H3zm1.583-6.658l.832 6.658h1.17l.832-6.658H4.583zM9 12.29H7.593l.832-6.658h1.123l-.546 6.607-.002.05z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"MQ8-Y__9jxj6AA9OyyBgk\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.2 11.2v3.2c0 .922-.678 1.6-1.6 1.6h-8C.678 16 0 15.322 0 14.4v-8c0-.922.678-1.6 1.6-1.6h3.2V1.6C4.8.678 5.478 0 6.4 0h8c.922 0 1.6.678 1.6 1.6v8c0 .922-.678 1.6-1.6 1.6h-3.2zm-1.6 0H6.4c-.922 0-1.6-.678-1.6-1.6V6.4H1.6v8h8v-3.2zM6.4 1.6v8h8v-8h-8z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 80 80\" id=\"NTbNlHuywkcWGi69OyczW\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M40 80c22.0914 0 40-17.9086 40-40S62.0914 0 40 0 0 17.9086 0 40s17.9086 40 40 40zm0-10.8475c16.1005 0 29.1525-13.052 29.1525-29.1525S56.1005 10.8475 40 10.8475 10.8475 23.8995 10.8475 40 23.8995 69.1525 40 69.1525z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M52.4643 58.2169L21.783 27.5357l5.7528-5.7527L58.217 52.4642l-5.7527 5.7527z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.217 27.5357L27.5358 58.217l-5.7528-5.7528L52.4643 21.783l5.7527 5.7527z\" fill=\"#C4C4C4\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 24 24\" id=\"NZBiAJiKEet6lgeA6Qa1N\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#EFEFEF\" /><path d=\"M15.959 14.412c-.196 0-.392-.025-.583-.073-1.15-.29-2.095-1.147-2.44-2.277v-.055a3.869 3.869 0 0 1 2.209-2.142c.26-.096.536-.144.814-.144 1.294 0 2.358 1.058 2.358 2.345a2.363 2.363 0 0 1-2.358 2.346zm-4.894-2.35c-.345 1.13-1.29 1.987-2.44 2.277-.19.048-.387.073-.583.073-1.294 0-2.359-1.06-2.359-2.346 0-1.287 1.065-2.345 2.359-2.345.278 0 .554.048.815.144a3.867 3.867 0 0 1 2.208 2.142v.055zM15.979 8c-.467 0-.928.08-1.366.238a5.332 5.332 0 0 0-2.614 1.973 5.324 5.324 0 0 0-2.611-1.973A4.037 4.037 0 0 0 8.022 8C5.816 8 4 9.806 4 12s1.816 4 4.022 4c.234 0 .467-.02.698-.06l.286-.068A5.674 5.674 0 0 0 12 13.71a5.67 5.67 0 0 0 2.994 2.162l.287.068c.23.04.464.06.697.061C18.184 16 20 14.194 20 12s-1.816-4-4.021-4z\" fill=\"#FF272C\" /></symbol><symbol viewBox=\"0 0 36 35\" fill=\"none\" id=\"OIlFPhVrZHefhzWrpX3b7\">\n<path d=\"M35.2 16.3V17.9857C35.2 19.9143 35.2 21.6071 35.2 23.0929C35.1073 22.4529 34.8935 21.8353 34.5693 21.2714C33.836 20.0571 32.604 19.2714 30.25 17.9429V19.1071C30.25 20.0071 30.25 20.8214 30.184 21.5071C30.14 22.3038 29.904 23.0791 29.495 23.7704C29.086 24.4616 28.5156 25.0493 27.83 25.4857C27.2507 25.8857 26.5247 26.2929 25.7253 26.7429L22.2273 28.7143C21.5143 29.1312 20.78 29.5126 20.0273 29.8571C19.2962 30.2063 18.4949 30.3941 17.6807 30.4071C16.8641 30.3942 16.0604 30.2065 15.3267 29.8571C14.574 29.5126 13.8397 29.1312 13.1267 28.7143L9.62867 26.7429C8.82933 26.2929 8.10333 25.8857 7.524 25.4857C6.85098 25.0375 6.28558 24.4527 5.86667 23.7714C5.47234 23.0738 5.23721 22.3014 5.17733 21.5071C5.13333 20.8214 5.13333 20.0071 5.13333 19.1071V17.9429C2.77933 19.2714 1.53267 20.0857 0.814 21.2714C0.351507 22.1271 0.100403 23.0761 0.0806667 24.0429V24.1357C0 22.4071 0 20.4 0 17.9857V16.3C0 8.61429 0 4.77143 2.44933 2.38571C4.89867 0 8.844 0 16.7347 0H18.4653C26.356 0 30.3013 0 32.7507 2.38571C35.2 4.77143 35.2 8.61429 35.2 16.3Z\" fill=\"white\" />\n<path d=\"M35.1999 23.0929C35.1072 22.4529 34.8934 21.8353 34.5692 21.2714C33.8359 20.0572 32.6039 19.2714 30.2499 17.9429V19.1072C30.2499 20.0072 30.2499 20.8214 30.1839 21.5072C30.1399 22.3038 29.9039 23.0792 29.4949 23.7704C29.0859 24.4616 28.5155 25.0493 27.8299 25.4857C27.2506 25.8857 26.5246 26.2929 25.7252 26.7429L22.2272 28.7143C21.5142 29.1312 20.7799 29.5126 20.0272 29.8572C19.2961 30.2064 18.4948 30.3941 17.6806 30.4072C16.864 30.3943 16.0603 30.2065 15.3266 29.8572C14.5739 29.5126 13.8396 29.1312 13.1266 28.7143L9.62857 26.7429C8.82923 26.2929 8.10323 25.8857 7.5239 25.4857C6.85088 25.0375 6.28548 24.4527 5.86657 23.7714C5.47224 23.0738 5.23711 22.3014 5.17723 21.5072C5.13323 20.8214 5.13323 20.0072 5.13323 19.1072V17.9429C2.77923 19.2714 1.53257 20.0857 0.8139 21.2714C0.351406 22.1271 0.100303 23.0761 0.0805664 24.0429V24.1357C0.0805664 24.2143 0.0805664 24.2929 0.0805664 24.3643C0.0805664 24.9643 0.146566 25.5286 0.1979 26.0572C0.1979 26.35 0.2639 26.6357 0.300566 26.9072C0.300566 27.0429 0.300566 27.1857 0.359233 27.3143C0.508307 29.0462 1.24639 30.6801 2.45657 31.9572C4.91323 34.3572 8.87323 34.3572 16.7932 34.3572H18.5312C26.4512 34.3572 30.4112 34.3572 32.8752 31.9572C34.5839 30.2857 35.0752 27.9143 35.2659 24.0286C35.2439 23.7 35.1999 23.3857 35.1999 23.0929Z\" fill=\"#3A3A3A\" />\n<path d=\"M14.0725 7.45006C15.7958 6.47863 16.6538 6.02148 17.5998 6.02148C18.5458 6.02148 19.4038 6.50006 21.1272 7.45006L24.4565 9.32148C26.1798 10.2858 27.0378 10.7501 27.5145 11.5715C27.9912 12.3929 27.9838 13.3358 27.9838 15.2715V19.0143C27.9838 20.9501 27.9838 21.9143 27.5145 22.7143C27.0452 23.5143 26.1798 23.9715 24.4565 24.9572L21.1272 26.8286C19.4038 27.7929 18.5458 28.2572 17.5998 28.2572C16.6538 28.2572 15.7958 27.7715 14.0725 26.8286L10.7432 24.9501C9.01983 23.9858 8.16183 23.5215 7.68516 22.7072C7.20849 21.8929 7.21583 20.9429 7.21583 19.0072V15.2715C7.21583 13.3358 7.21583 12.3643 7.68516 11.5715C8.15449 10.7786 9.01983 10.2858 10.7432 9.32148L14.0725 7.45006Z\" fill=\"#0077FF\" />\n<path d=\"M12.8481 13.3715V15.7715H16.3681V22.6286H18.8321V15.7715H22.3521V13.3715H12.8481Z\" fill=\"white\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"PPCkxJsaRzLMuA5lnRqgy\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"Q0YLlQA5Heqk5RXXUcDpo\"><path d=\"M6 .844a5.126 5.126 0 013.646 1.51A5.13 5.13 0 0111.156 6a5.128 5.128 0 01-1.51 3.646A5.13 5.13 0 016 11.156a5.128 5.128 0 01-3.646-1.51A5.13 5.13 0 01.844 6a5.126 5.126 0 011.51-3.646A5.13 5.13 0 016 .844zM6 0a6 6 0 100 12A6 6 0 106 0zm0 7.5a.469.469 0 01-.469-.469V2.707a.469.469 0 11.938 0v4.324c0 .26-.21.469-.469.469zm-.527 1.277a.527.527 0 101.054 0 .527.527 0 00-1.054 0z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"R6P3XNfSq1BDplpHzPu2w\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 14s5-5.753 5-8.688C12 2.378 9.761 0 7 0S2 2.378 2 5.313C2 8.247 7 14 7 14zm0-7a2 2 0 100-4 2 2 0 000 4z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"Tqj7OIFiLPyMIKP83zK87\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.71743 6.94604C7.80755 6.92194 7.90228 6.90909 8 6.90909C8.60249 6.90909 9.09091 7.39751 9.09091 8C9.09091 8.60249 8.60249 9.09091 8 9.09091C7.39751 9.09091 6.90909 8.60249 6.90909 8C6.90909 7.90228 6.92194 7.80755 6.94604 7.71743L4.88703 5.65842L5.65842 4.88703L7.71743 6.94604ZM8.54545 3.12087V5.27273H7.45455V2H8C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 6.38359 2.64289 4.86766 3.76532 3.74941L4.53527 4.52224C3.61627 5.43782 3.09091 6.6766 3.09091 8C3.09091 10.7112 5.28878 12.9091 8 12.9091C10.7112 12.9091 12.9091 10.7112 12.9091 8C12.9091 5.47315 11 3.3922 8.54545 3.12087Z\" fill-opacity=\"0.65\" />\n</symbol><symbol viewBox=\"0 0 12 12\" id=\"TtzZMaOxcSIw9EgrJjEcz\"><path d=\"M6.653 5.999l2.986-2.984a.46.46 0 10-.652-.651L6 5.346 3.013 2.363a.46.46 0 10-.652.651l2.986 2.984-2.986 2.984a.46.46 0 10.652.652L6 6.65l2.987 2.985a.458.458 0 00.652 0 .46.46 0 000-.651L6.653 5.999z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"V4BpmSJbtxEHus0LaiFZl\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\" />\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.4776 5.30071C12.0871 4.91018 11.4539 4.91018 11.0634 5.30071L7.17529 9.18881L5.28718 7.30071C4.89666 6.91018 4.2635 6.91018 3.87297 7.30071C3.48245 7.69123 3.48245 8.3244 3.87297 8.71492L6.22966 11.0716C6.48604 11.328 6.84699 11.4161 7.17521 11.3358C7.50346 11.4161 7.86448 11.3281 8.12089 11.0716L12.4776 6.71492C12.8681 6.3244 12.8681 5.69123 12.4776 5.30071Z\" fill=\"white\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"XF_3D41ZPSZchddN2BNaY\"><path d=\"M7.5804 12.8625a.6211.6211 0 00.875 0l2.7839-2.7839a.6175.6175 0 000-.8732.6133.6133 0 00-.4357-.1804.6132.6132 0 00-.4357.1804l-1.7304 1.7303V.6179A.618.618 0 008.0196 0a.618.618 0 00-.6178.6179v10.3178L5.6714 9.2054c-.241-.2411-.6321-.2411-.8714 0a.6192.6192 0 00-.0018.8732l2.7822 2.7839zm7.8017-2.5696a.618.618 0 00-.6178.6178V14.4a.3685.3685 0 01-.3679.3679H1.6018a.3685.3685 0 01-.3679-.3679v-3.4911a.618.618 0 00-.6178-.6178c-.3411 0-.6161.2785-.6161.6178v3.9804c0 .6125.4982 1.1089 1.109 1.1089H14.891c.6125 0 1.1089-.4982 1.1089-1.1089v-3.9804c0-.3393-.2768-.616-.6179-.616z\" /></symbol><symbol viewBox=\"0 0 128 128\" id=\"XW_1q6Gh1siufyO_dlYed\"><g><circle cx=\"16\" cy=\"64\" r=\"16\" /><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\" /></g></symbol><symbol viewBox=\"0 0 16 16\" id=\"Xt9b7Tobbmu5mq4e_7iMz\">\n<path d=\"M11.2703 4.775L6.15313 9.90781L4.81875 7.57188C4.66406 7.30156 4.32188 7.20781 4.05156 7.3625C3.78125 7.51719 3.6875 7.85938 3.84219 8.12969L5.54219 11.1062C5.64531 11.2875 5.83594 11.3906 6.03125 11.3906C6.12656 11.3906 6.22188 11.3672 6.30938 11.3172C6.35938 11.2875 6.40469 11.2531 6.44219 11.2125C6.44375 11.2109 6.44688 11.2078 6.44844 11.2063L12.0656 5.57188C12.2844 5.35156 12.2844 4.99531 12.0641 4.77656C11.8453 4.55469 11.4906 4.55469 11.2703 4.775ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\" />\n</symbol><symbol viewBox=\"0 0 14 14\" id=\"Y686k-g9rEGNtB-015Dbe\"><path d=\"M12.436 6.298h-9.15c-.003 0-.004-.003-.003-.003l3.452-3.318a.701.701 0 1 0-.973-1.011L1.063 6.482a.705.705 0 0 0 0 1.01l4.725 4.542a.699.699 0 0 0 .992-.02.702.702 0 0 0-.02-.991L3.31 7.705c-.002-.002 0-.003.002-.003h9.14a.702.702 0 0 0 .701-.659.712.712 0 0 0-.716-.745z\" /></symbol><symbol viewBox=\"0 0 48 48\" id=\"ZOsqNCGfxe9zaSKmuZ6DY\"><path d=\"M47.907 19.837l-.013-.05-7.19-18.064A2.471 2.471 0 0038.348 0H9.204C8.114 0 7.147.716 6.84 1.749L.118 19.629l-.02.044-.012.05c-.083.31-.109.628-.064.938a4.828 4.828 0 00-.013.304v23.183C.009 46.27 1.759 48 3.905 48h40.19c2.146 0 3.895-1.73 3.902-3.852V20.965c0-.082 0-.165-.007-.234.026-.31 0-.609-.083-.894zm-18.954-2.724l-.02.995c-.05 2.845-2.037 4.758-4.94 4.758-1.416 0-2.633-.45-3.511-1.305-.878-.856-1.359-2.047-1.384-3.453l-.02-.995H5.892l5.095-12.247h25.58L41.8 17.113H28.953zm-24.03 4.866h10.08c1.557 3.618 4.87 5.753 8.997 5.753 2.16 0 4.165-.596 5.786-1.724 1.422-.988 2.531-2.37 3.249-4.03h10.028v21.156H4.923V21.98z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"_kD-IBC0zsJ5O-464qLgx\">\n<rect x=\"5\" y=\"5\" width=\"6\" height=\"6\" fill-opacity=\"0.65\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"aqZIlmPdXUO3X7N2mPhyR\"><path d=\"M2 10h12V8.67H2V10zm0 2.67h12v-1.34H2v1.34zm0-5.34h12V6H2v1.33zm0-4v1.34h12V3.33H2z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 100 80\" id=\"cDdhelris7xscCp99SUUG\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.382 24.166h.11c3.987 0 7.052 0 9.485.237 2.459.24 4.378.73 6.034 1.778a13 13 0 014.032 4.032c1.049 1.656 1.538 3.575 1.778 6.035.238 2.432.238 5.497.238 9.483v.684c0 3.986 0 7.051-.238 9.484-.24 2.46-.73 4.378-1.778 6.034a13 13 0 01-4.032 4.033c-1.656 1.048-3.575 1.538-6.034 1.778-2.433.237-5.498.237-9.484.237h-.111c-3.986 0-7.051 0-9.484-.237-2.46-.24-4.378-.73-6.034-1.778a13 13 0 01-4.033-4.033c-1.048-1.656-1.538-3.575-1.778-6.034-.237-2.433-.237-5.498-.237-9.484v-.684c0-3.986 0-7.05.237-9.483.24-2.46.73-4.379 1.778-6.035a13 13 0 014.033-4.032c1.656-1.049 3.575-1.538 6.034-1.778 2.432-.237 5.497-.237 9.484-.237zm-9.29 2.227c-2.309.226-3.876.666-5.159 1.478a11 11 0 00-3.412 3.412c-.812 1.283-1.252 2.85-1.477 5.159-.227 2.324-.228 5.292-.228 9.345v.573c0 4.053.001 7.02.228 9.345.225 2.309.665 3.876 1.477 5.159a10.998 10.998 0 003.412 3.412c1.283.812 2.85 1.252 5.16 1.477 2.323.227 5.291.228 9.344.228 4.053 0 7.021-.001 9.345-.228 2.31-.225 3.877-.665 5.16-1.477a11 11 0 003.411-3.412c.812-1.283 1.253-2.85 1.478-5.16.227-2.323.228-5.291.228-9.344v-.573c0-4.053-.001-7.021-.228-9.345-.225-2.309-.666-3.876-1.478-5.16a11 11 0 00-3.412-3.411c-1.282-.812-2.85-1.252-5.159-1.478-2.324-.226-5.292-.227-9.345-.227-4.053 0-7.02 0-9.345.227z\" fill=\"#8E9199\" /><g filter=\"url(#cDdhelris7xscCp99SUUG_filter0_b)\"><rect x=\"20.059\" y=\"13.136\" width=\"46.398\" height=\"46.398\" rx=\"12\" fill=\"#e3e3e3\" /></g><defs><filter id=\"cDdhelris7xscCp99SUUG_filter0_b\" x=\"-3.941\" y=\"-10.864\" width=\"94.398\" height=\"94.398\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter></defs></symbol><symbol viewBox=\"0 0 16 16\" id=\"ekupOmKe0W3npX_CDEL7K\"><path d=\"M15.17 14.37l-3.21-3.21a6 6 0 1 0-.8.8l3.21 3.2a.56.56 0 0 0 .8 0 .57.57 0 0 0 0-.79zm-5.94-2.54a4.82 4.82 0 0 1-3.8 0A4.86 4.86 0 0 1 3.9 3.89a4.86 4.86 0 1 1 6.89 6.89c-.45.45-.97.8-1.55 1.05z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"fKB3TPQdZss5gO3VdG7me\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.727 4.407c.703 0 1.273.58 1.273 1.297l-.015.14-1.26 5.776a1.283 1.283 0 01-1.27 1.213H1.272C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h4.453c.704 0 1.273.58 1.273 1.296v.648zm-1.273 0V3.76H6.997c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v3.17l.018-.085c.18-.738.512-1.14 1.254-1.14h8.91zm-10.166 7.13h10.166l.016-.14 1.242-5.693H2.569c-.01.032-.024.078-.039.14l-1.242 5.693z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"fS_SgFrRKIjTf7nq8J6KU\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" /><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"fwkP-dzo0gzpTzOtt-mP7\">\n<path d=\"M5 4L12 8L5 12V4Z\" fill-opacity=\"0.65\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"gOtt0pbBctJIEth_qLaVr\"><rect y=\"3\" width=\"16\" height=\"2\" rx=\"1\" /><rect y=\"7\" width=\"11\" height=\"2\" rx=\"1\" /><rect y=\"11\" width=\"7\" height=\"2\" rx=\"1\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"hL9DVP_i-XlgEPluFrgRs\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.8521 7.0442a.6363.6363 0 10-.977-.8156C12.7541 7.5716 10.5797 8.5455 8 8.5455s-4.754-.974-5.8751-2.317a.6364.6364 0 10-.977.8157c.3197.383.698.7343 1.125 1.0486v1.089a.6364.6364 0 001.2727 0v-.3295a9.29 9.29 0 001.2727.4968v1.1054a.6363.6363 0 001.2727 0v-.7999a10.994 10.994 0 001.273.1458l-.0003.0178v1.2728a.6363.6363 0 001.2728 0V9.8182l-.0003-.0178c.4337-.0244.859-.0736 1.273-.1458v.7999a.6364.6364 0 001.2728 0V9.3491a9.2909 9.2909 0 001.2727-.497v.3297a.6363.6363 0 101.2727 0V8.0926c.4268-.3143.8051-.6655 1.1247-1.0484z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"hTF6leJYoXLbp_1056-kP\">\n    <path d=\"M14.685 3.627A4.486 4.486 0 0 0 11.52 2.33h-.012c-.576 0-1.137.107-1.672.319a4.424 4.424 0 0 0-1.48.967l-4.177 4.13a2.493 2.493 0 0 0-.745 1.793c.002.678.27 1.315.754 1.794a2.567 2.567 0 0 0 1.811.745h.006c.683 0 1.323-.262 1.804-.736l3.666-3.624a.626.626 0 0 0 0-.896.642.642 0 0 0-.904 0l-3.666 3.623a1.27 1.27 0 0 1-.902.366H6a1.295 1.295 0 0 1-.911-.373 1.26 1.26 0 0 1-.377-.9c-.002-.34.13-.657.37-.894l4.177-4.131a3.173 3.173 0 0 1 2.25-.915h.008a3.22 3.22 0 0 1 2.268.927c.602.598.936 1.392.938 2.24a3.102 3.102 0 0 1-.924 2.229l-4.432 4.386a4.72 4.72 0 0 1-3.333 1.353h-.012a4.759 4.759 0 0 1-3.353-1.374 4.636 4.636 0 0 1-1.388-3.314 4.59 4.59 0 0 1 1.37-3.302l5.722-5.658a.626.626 0 0 0 0-.897.644.644 0 0 0-.906-.002l-5.722 5.66A5.85 5.85 0 0 0 0 10.048c.002.773.15 1.526.445 2.239a5.997 5.997 0 0 0 3.31 3.274c.717.288 1.48.435 2.263.439h.016c.779 0 1.534-.143 2.248-.429a5.893 5.893 0 0 0 1.985-1.297L14.7 9.89A4.394 4.394 0 0 0 16 6.758a4.404 4.404 0 0 0-1.315-3.13z\" opacity=\".65\" />\n</symbol><symbol viewBox=\"0 0 14 14\" id=\"iDtKkKJQY1abj1f_OjAm4\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.273 6.352v5.185h11.454V6.352H1.273zm0-1.296h11.454V3.759h-5.73c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v2.593zm11.454-2.593c.703 0 1.273.58 1.273 1.296v7.778c0 .716-.57 1.296-1.273 1.296H1.273C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h5.726z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 80 112\" id=\"iYvJ3BhCddSOqlnoRfrBF\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661zM20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661zM26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 5.36527C0 2.40211 2.42829 0 5.42373 0H56.9492L80 22.8024v83.8326c0 2.963-2.4283 5.365-5.4237 5.365H5.42373C2.42828 112 0 109.598 0 106.635V5.36527zm50.1695 5.36523V29.509h18.983v71.76h-58.305V10.7305h39.322z\" fill=\"#C4C4C4\" /></symbol><symbol viewBox=\"0 0 35 35\" id=\"kVdBS6D2AjXbvK9p6iT-3\"><g clip-path=\"url(#clip0)\"><path d=\"M30.6 7.84L23.07.31c-.2-.2-.47-.31-.75-.31H5.15C4.57 0 4.1.48 4.1 1.06v32.88c0 .58.48 1.06 1.06 1.06h24.7c.58 0 1.06-.48 1.06-1.06V8.59c0-.28-.11-.55-.31-.75zm-7.22-4.22l3.9 3.91h-3.9v-3.9zM6.22 32.88V2.12h15.03V8.6c0 .59.48 1.06 1.07 1.06h6.46v23.23H6.22z\" /><path d=\"M23.2 15.79a1.06 1.06 0 10-1.5 1.5l1.96 1.95-1.95 1.95a1.06 1.06 0 001.5 1.5l2.7-2.7c.41-.42.41-1.09 0-1.5l-2.7-2.7zM13.3 15.79a1.06 1.06 0 00-1.5 0l-2.7 2.7a1.06 1.06 0 000 1.5l2.7 2.7c.2.2.47.31.74.31.94 0 1.43-1.14.75-1.81l-1.95-1.95 1.95-1.95c.42-.42.42-1.09 0-1.5zM19.46 13.8c-.55-.2-1.16.09-1.36.64l-3.2 8.88a1.06 1.06 0 002 .72l3.2-8.88c.2-.55-.09-1.16-.64-1.36z\" /></g></symbol><symbol viewBox=\"0 0 14 14\" id=\"kcayi6hS00YP7jubjuAMF\"><path d=\"M7.392 9.142l-2.444 2.446a1.78 1.78 0 0 1-1.266.525c-.479 0-.929-.186-1.266-.525a1.784 1.784 0 0 1-.002-2.532L4.86 6.61a.491.491 0 1 0-.696-.696L1.72 8.36a2.758 2.758 0 0 0-.814 1.963c0 .741.289 1.439.814 1.962a2.767 2.767 0 0 0 1.961.812 2.76 2.76 0 0 0 1.962-.812l2.446-2.446a.491.491 0 1 0-.696-.696zm4.89-7.422a2.778 2.778 0 0 0-3.924 0L5.912 4.166a.491.491 0 1 0 .696.696l2.445-2.446a1.793 1.793 0 0 1 3.059 1.266c0 .478-.186.928-.525 1.266L9.14 7.394a.491.491 0 0 0 .349.84.493.493 0 0 0 .348-.144l2.446-2.446a2.777 2.777 0 0 0-.001-3.924zM6.639 8.087l1.394-1.395a.491.491 0 1 0-.696-.695L5.942 7.39a.491.491 0 1 0 .696.696z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"kzAwYAYq59ozlLx5AVW3k\"><path d=\"M13.44 13H13V6a5 5 0 00-4.44-4.97V.56a.56.56 0 10-1.12 0v.47A5 5 0 003 6v7h-.44a.56.56 0 100 1.13h4.31v.74a1.12 1.12 0 102.25 0v-.74h4.32a.56.56 0 100-1.13zm-1.56 0H4.12V6a3.87 3.87 0 117.75 0v7z\" /></symbol><symbol viewBox=\"0 0 64 41\" id=\"msvgRX89FxLCXDchq2duw\"><g transform=\"translate(0 1)\" fill=\"none\" fill-rule=\"evenodd\"><ellipse fill=\"#F5F5F5\" cx=\"32\" cy=\"33\" rx=\"32\" ry=\"7\" /><g fill-rule=\"nonzero\" stroke=\"#D9D9D9\"><path d=\"M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z\" /><path d=\"M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z\" fill=\"#FAFAFA\" /></g></g></symbol><symbol viewBox=\"0 0 16 16\" id=\"nc-hhLmTF1cqCJ2yxggUU\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" /><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"nq047iktKWHtW5Qdvz3FH\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\" /><path d=\"M5 5h6v6H5z\" /></symbol><symbol viewBox=\"0 0 128 128\" id=\"o9HyST-jLLd2VAbb2vVfc\"><g><circle cx=\"16\" cy=\"64\" r=\"16\" /><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\" /><animateTransform attributeName=\"transform\" type=\"rotate\" values=\"0 64 64;315 64 64;270 64 64;225 64 64;180 64 64;135 64 64;90 64 64;45 64 64\" calcMode=\"discrete\" dur=\"720ms\" repeatCount=\"indefinite\" /></g></symbol><symbol viewBox=\"0 0 12 12\" id=\"pM9sCBOhFfGLg7Lcovc8G\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.5 1.5h-4v9h5v1h-5a1 1 0 01-1-1v-9a1 1 0 011-1h5.2l2.8 2.8V7h-1V4.5h-2a1 1 0 01-1-1v-2zm3 8v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-.2-6L7.5 1.7v1.8h1.8z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"q2Wb4mTdP5tI6y5EZmKv6\"><path d=\"M8 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 13.125A6.132 6.132 0 0 1 1.875 8 6.132 6.132 0 0 1 8 1.875 6.132 6.132 0 0 1 14.125 8 6.132 6.132 0 0 1 8 14.125z\" /><path d=\"M8.499 4h-1v4.206l2.646 2.646.707-.707-2.353-2.353V3.999z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"q2d8JKKOL8uhc7yZfeBcZ\"><path d=\"M13.4531 7.5469a.5468.5468 0 100-1.0938h-1.6042V5.3958h1.6042a.5468.5468 0 100-1.0938h-1.6042V2.698a.5468.5468 0 00-.5469-.547H9.698V.547a.5468.5468 0 10-1.0938 0V2.151H7.5469V.5469a.5468.5468 0 10-1.0938 0V2.151H5.3958V.5469a.5468.5468 0 10-1.0938 0V2.151H2.698a.5468.5468 0 00-.547.5469v1.6042H.547a.5468.5468 0 100 1.0937H2.151v1.0572H.5469a.5468.5468 0 100 1.0938H2.151v1.0573H.5469a.5468.5468 0 100 1.0938H2.151v1.6042c0 .3019.2448.5468.5469.5468h1.6042v1.6041a.5468.5468 0 101.0937 0v-1.6042h1.0572v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.0573v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.604a.5468.5468 0 00.5469-.5469V9.6979h1.6042a.5468.5468 0 100-1.0938h-1.6042V7.5469h1.6042zm-2.6979 3.2083H3.2448V3.2448h7.5105v7.5104h-.0001z\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"qQUbEVMwVlsLA_DIcuMhY\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.5 9.5v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-8-5h9v-1H6c-.36 0-.6-.17-.85-.48L5 2.82c-.19-.25-.3-.32-.49-.32h-3v2zm9 1h-9v4H7v1H1.5a1 1 0 01-1-1v-7a1 1 0 011-1h3c.56 0 .92.24 1.27.69l.16.2c.08.1.1.11.07.11h4.5a1 1 0 011 1v4h-1v-2z\" /></symbol><symbol viewBox=\"0 0 154 35\" fill=\"none\" id=\"qgo-KPabv-jodw0b8ihH5\">\n<path d=\"M35.2 16.3V17.9857C35.2 19.9143 35.2 21.6071 35.2 23.0929C35.1073 22.4529 34.8935 21.8353 34.5693 21.2714C33.836 20.0571 32.604 19.2714 30.25 17.9429V19.1071C30.25 20.0071 30.25 20.8214 30.184 21.5071C30.14 22.3038 29.904 23.0791 29.495 23.7704C29.086 24.4616 28.5156 25.0493 27.83 25.4857C27.2507 25.8857 26.5247 26.2929 25.7253 26.7429L22.2273 28.7143C21.5143 29.1312 20.78 29.5126 20.0273 29.8571C19.2962 30.2063 18.4949 30.3941 17.6807 30.4071C16.8641 30.3942 16.0604 30.2065 15.3267 29.8571C14.574 29.5126 13.8397 29.1312 13.1267 28.7143L9.62867 26.7429C8.82933 26.2929 8.10333 25.8857 7.524 25.4857C6.85098 25.0375 6.28558 24.4527 5.86667 23.7714C5.47234 23.0738 5.23721 22.3014 5.17733 21.5071C5.13333 20.8214 5.13333 20.0071 5.13333 19.1071V17.9429C2.77933 19.2714 1.53267 20.0857 0.814 21.2714C0.351507 22.1271 0.100403 23.0761 0.0806667 24.0429V24.1357C0 22.4071 0 20.4 0 17.9857V16.3C0 8.61429 0 4.77143 2.44933 2.38571C4.89867 0 8.844 0 16.7347 0H18.4653C26.356 0 30.3013 0 32.7507 2.38571C35.2 4.77143 35.2 8.61429 35.2 16.3Z\" fill=\"white\" />\n<path d=\"M35.1999 23.0929C35.1072 22.4529 34.8934 21.8353 34.5692 21.2714C33.8359 20.0572 32.6039 19.2714 30.2499 17.9429V19.1072C30.2499 20.0072 30.2499 20.8214 30.1839 21.5072C30.1399 22.3038 29.9039 23.0792 29.4949 23.7704C29.0859 24.4616 28.5155 25.0493 27.8299 25.4857C27.2506 25.8857 26.5246 26.2929 25.7252 26.7429L22.2272 28.7143C21.5142 29.1312 20.7799 29.5126 20.0272 29.8572C19.2961 30.2064 18.4948 30.3941 17.6806 30.4072C16.864 30.3943 16.0603 30.2065 15.3266 29.8572C14.5739 29.5126 13.8396 29.1312 13.1266 28.7143L9.62857 26.7429C8.82923 26.2929 8.10323 25.8857 7.5239 25.4857C6.85088 25.0375 6.28548 24.4527 5.86657 23.7714C5.47224 23.0738 5.23711 22.3014 5.17723 21.5072C5.13323 20.8214 5.13323 20.0072 5.13323 19.1072V17.9429C2.77923 19.2714 1.53257 20.0857 0.8139 21.2714C0.351406 22.1271 0.100303 23.0761 0.0805664 24.0429V24.1357C0.0805664 24.2143 0.0805664 24.2929 0.0805664 24.3643C0.0805664 24.9643 0.146566 25.5286 0.1979 26.0572C0.1979 26.35 0.2639 26.6357 0.300566 26.9072C0.300566 27.0429 0.300566 27.1857 0.359233 27.3143C0.508307 29.0462 1.24639 30.6801 2.45657 31.9572C4.91323 34.3572 8.87323 34.3572 16.7932 34.3572H18.5312C26.4512 34.3572 30.4112 34.3572 32.8752 31.9572C34.5839 30.2857 35.0752 27.9143 35.2659 24.0286C35.2439 23.7 35.1999 23.3857 35.1999 23.0929Z\" fill=\"#3A3A3A\" />\n<path d=\"M14.0725 7.45006C15.7958 6.47863 16.6538 6.02148 17.5998 6.02148C18.5458 6.02148 19.4038 6.50006 21.1272 7.45006L24.4565 9.32148C26.1798 10.2858 27.0378 10.7501 27.5145 11.5715C27.9912 12.3929 27.9838 13.3358 27.9838 15.2715V19.0143C27.9838 20.9501 27.9838 21.9143 27.5145 22.7143C27.0452 23.5143 26.1798 23.9715 24.4565 24.9572L21.1272 26.8286C19.4038 27.7929 18.5458 28.2572 17.5998 28.2572C16.6538 28.2572 15.7958 27.7715 14.0725 26.8286L10.7432 24.9501C9.01983 23.9858 8.16183 23.5215 7.68516 22.7072C7.20849 21.8929 7.21583 20.9429 7.21583 19.0072V15.2715C7.21583 13.3358 7.21583 12.3643 7.68516 11.5715C8.15449 10.7786 9.01983 10.2858 10.7432 9.32148L14.0725 7.45006Z\" fill=\"#0077FF\" />\n<path d=\"M12.8481 13.3715V15.7715H16.3681V22.6286H18.8321V15.7715H22.3521V13.3715H12.8481Z\" fill=\"white\" />\n<path d=\"M56.2248 25.8857H53.2915V11.8286H47.4248V9.20715H62.0915V11.8286H56.2248V25.8857Z\" fill=\"white\" />\n<path d=\"M66.6529 13.3429C67.3638 13.3072 68.0743 13.4222 68.7351 13.6799C69.396 13.9377 69.9916 14.332 70.4809 14.8358C71.4756 15.9873 71.9725 17.4701 71.8669 18.9715V25.8786H69.8209L69.2342 23.9715C68.836 24.5964 68.2936 25.1222 67.6502 25.5072C66.902 25.9493 66.039 26.1725 65.1642 26.15C64.3692 26.1632 63.5824 25.9918 62.8689 25.65C62.2175 25.3307 61.675 24.8346 61.3069 24.2215C60.93 23.6067 60.737 22.9017 60.7495 22.1858C60.7331 21.643 60.8535 21.1046 61.1003 20.6177C61.347 20.1308 61.7125 19.7103 62.1649 19.3929C63.3982 18.6079 64.86 18.2343 66.3302 18.3286H69.0655C69.0446 17.6151 68.7699 16.9309 68.2882 16.3929C68.0646 16.152 67.7885 15.9628 67.4802 15.8392C67.1719 15.7157 66.8391 15.6608 66.5062 15.6786C65.9853 15.6687 65.4719 15.8005 65.0237 16.0592C64.5755 16.3179 64.2102 16.6932 63.9689 17.1429L61.3802 16.7215C61.6757 15.6961 62.3563 14.8164 63.2869 14.2572C64.2949 13.6427 65.4638 13.3252 66.6529 13.3429ZM65.8242 23.8286C66.2654 23.8484 66.7058 23.7757 67.1157 23.6155C67.5256 23.4553 67.8954 23.2113 68.2002 22.9C68.5076 22.5718 68.7455 22.1876 68.9003 21.7697C69.055 21.3517 69.1237 20.9082 69.1022 20.4643H66.4329C64.5262 20.4643 63.5802 21 63.5802 22.0715C63.5689 22.3165 63.6183 22.5606 63.7242 22.7832C63.8302 23.0057 63.9895 23.2001 64.1889 23.35C64.6611 23.6883 65.2388 23.8573 65.8242 23.8286Z\" fill=\"white\" />\n<path d=\"M74.9395 25.8857V13.5785H77.0368L77.5721 15.3571C77.9136 14.7707 78.4233 14.2941 79.0388 13.9857C79.6824 13.6993 80.3848 13.56 81.0921 13.5785H81.6275L81.8695 16.1857H80.2635C78.5963 16.1857 77.7652 16.9976 77.7701 18.6214V25.8857H74.9395Z\" fill=\"white\" />\n<path d=\"M88.3739 13.3429C89.0849 13.3062 89.7957 13.4208 90.4567 13.6785C91.1178 13.9363 91.7133 14.3312 92.2019 14.8357C93.209 15.9848 93.7167 17.4709 93.6172 18.9786V25.8857H91.5492L90.9332 23.9714C90.535 24.5964 89.9926 25.1222 89.3492 25.5071C88.5981 25.9487 87.7329 26.1718 86.8559 26.15C86.0633 26.1623 85.2791 25.9909 84.5679 25.65C83.9165 25.3307 83.374 24.8345 83.0059 24.2214C82.6268 23.6073 82.4313 22.9023 82.4412 22.1857C82.4261 21.6432 82.547 21.1052 82.7937 20.6185C83.0403 20.1318 83.4052 19.7111 83.8565 19.3929C85.093 18.6087 86.5568 18.2353 88.0292 18.3286H90.7572C90.74 17.6143 90.4648 16.9289 89.9799 16.3929C89.7563 16.152 89.4802 15.9628 89.1719 15.8392C88.8636 15.7156 88.5308 15.6607 88.1979 15.6786C87.677 15.6687 87.1636 15.8005 86.7154 16.0592C86.2671 16.3178 85.9018 16.6931 85.6605 17.1429L83.0792 16.7214C83.3722 15.6969 84.0502 14.8172 84.9785 14.2571C85.995 13.6373 87.1749 13.3196 88.3739 13.3429ZM87.5452 23.8286C87.9851 23.8464 88.4238 23.7728 88.8322 23.6127C89.2406 23.4526 89.6093 23.2096 89.9139 22.9C90.2213 22.5717 90.4592 22.1876 90.6139 21.7697C90.7687 21.3517 90.8373 20.9081 90.8159 20.4643H88.1539C86.257 20.4643 85.3061 21 85.3012 22.0714C85.2917 22.3162 85.3419 22.5597 85.4477 22.782C85.5535 23.0042 85.7119 23.1989 85.9099 23.35C86.3832 23.6861 86.9601 23.8549 87.5452 23.8286Z\" fill=\"white\" />\n<path d=\"M96.6606 25.8857V13.5786H98.758L99.3226 15.4286C99.7222 14.7941 100.282 14.2694 100.948 13.9044C101.614 13.5394 102.364 13.3461 103.129 13.3429C103.998 13.3322 104.853 13.5626 105.593 14.0072C106.326 14.4529 106.924 15.0818 107.323 15.8286C107.756 16.6397 107.972 17.5434 107.954 18.4572V25.8857H105.153V18.7429C105.182 17.9571 104.902 17.1901 104.368 16.6C104.117 16.3293 103.809 16.1149 103.464 15.9718C103.12 15.8288 102.748 15.7604 102.373 15.7715C101.981 15.7599 101.591 15.8304 101.229 15.9783C100.867 16.1261 100.542 16.3479 100.276 16.6286C100.001 16.9152 99.7886 17.2525 99.6501 17.6205C99.5115 17.9886 99.4501 18.3799 99.4693 18.7715V25.9143L96.6606 25.8857Z\" fill=\"white\" />\n<path d=\"M118.565 23.5215L118.323 25.8858H115.955C114.821 25.9646 113.698 25.6255 112.809 24.9358C112.434 24.5729 112.145 24.1354 111.96 23.6534C111.775 23.1713 111.699 22.6561 111.738 22.1429V15.9501H109.663V13.5786H111.738L112.471 10.0072H114.569V13.5786H118.353V15.9501H114.569V22.1429C114.542 22.3301 114.56 22.5207 114.622 22.6999C114.683 22.8791 114.787 23.0419 114.924 23.1755C115.061 23.3091 115.228 23.4099 115.412 23.4699C115.596 23.53 115.792 23.5476 115.984 23.5215H118.565Z\" fill=\"white\" />\n<path d=\"M126.581 26.1143C125.36 26.1312 124.153 25.8539 123.068 25.3072C122.068 24.7764 121.234 23.9914 120.656 23.0358C120.075 22.0264 119.779 20.8854 119.798 19.7286C119.775 18.5759 120.072 17.4386 120.656 16.4358C121.226 15.4736 122.062 14.6866 123.068 14.1643C124.149 13.6041 125.357 13.3191 126.581 13.3358C127.798 13.3165 129 13.6018 130.072 14.1643C131.087 14.6745 131.926 15.4644 132.484 16.4358C133.081 17.4344 133.385 18.5733 133.364 19.7286C133.382 20.8881 133.078 22.0309 132.484 23.0358C131.918 24.0005 131.081 24.7884 130.072 25.3072C128.996 25.8564 127.795 26.134 126.581 26.1143ZM126.581 23.6286C127.096 23.6448 127.609 23.5566 128.087 23.3697C128.566 23.1829 128.999 22.9013 129.36 22.5429C129.726 22.1607 130.01 21.711 130.195 21.2204C130.381 20.7297 130.463 20.2079 130.438 19.6858C130.462 19.1691 130.379 18.6529 130.194 18.1682C130.009 17.6834 129.725 17.24 129.36 16.8643C128.611 16.1683 127.616 15.78 126.581 15.78C125.546 15.78 124.55 16.1683 123.802 16.8643C123.437 17.2403 123.155 17.684 122.971 18.1688C122.787 18.6536 122.705 19.1695 122.731 19.6858C122.705 20.2075 122.786 20.7291 122.97 21.2198C123.154 21.7105 123.436 22.1603 123.802 22.5429C124.162 22.9019 124.596 23.1843 125.074 23.3724C125.552 23.5605 126.065 23.6501 126.581 23.6358V23.6286Z\" fill=\"white\" />\n<path d=\"M141.849 26.1143C140.627 26.1312 139.421 25.8539 138.336 25.3072C137.336 24.7764 136.502 23.9914 135.923 23.0358C135.349 22.0245 135.055 20.8844 135.073 19.7286C135.052 18.577 135.346 17.4408 135.923 16.4358C136.494 15.4736 137.329 14.6866 138.336 14.1643C139.417 13.6041 140.625 13.3191 141.849 13.3358C143.066 13.3165 144.268 13.6018 145.339 14.1643C146.355 14.6745 147.194 15.4644 147.752 16.4358C148.349 17.4344 148.653 18.5733 148.632 19.7286C148.65 20.8881 148.346 22.0309 147.752 23.0358C147.185 24.0005 146.349 24.7884 145.339 25.3072C144.264 25.8564 143.063 26.134 141.849 26.1143ZM141.849 23.6286C142.363 23.6472 142.876 23.5624 143.356 23.3792C143.835 23.1961 144.271 22.9187 144.635 22.5643C144.999 22.1809 145.281 21.7308 145.465 21.2404C145.649 20.7499 145.731 20.2288 145.706 19.7072C145.73 19.1911 145.647 18.6756 145.464 18.191C145.28 17.7065 144.998 17.2627 144.635 16.8858C143.885 16.1893 142.889 15.8007 141.852 15.8007C140.816 15.8007 139.82 16.1893 139.069 16.8858C138.707 17.2627 138.425 17.7065 138.241 18.191C138.057 18.6756 137.975 19.1911 137.999 19.7072C137.974 20.2288 138.056 20.7499 138.24 21.2404C138.424 21.7308 138.706 22.1809 139.069 22.5643C139.432 22.9195 139.866 23.1979 140.344 23.3822C140.823 23.5666 141.335 23.6529 141.849 23.6358V23.6286Z\" fill=\"white\" />\n<path d=\"M154 25.8857H151.191V9.20715H154V25.8857Z\" fill=\"white\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"r8Org_FCqcc9eXnVgPmWo\"><g opacity=\".65\"><path d=\"M2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2z\" /></g><rect x=\"5\" y=\"2\" width=\"9\" height=\"2\" rx=\"1\" /><rect x=\"5\" y=\"7\" width=\"9\" height=\"2\" rx=\"1\" /><rect x=\"5\" y=\"12\" width=\"9\" height=\"2\" rx=\"1\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"ruGf8eFu3YQhuRUchcgSW\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\" /></symbol><symbol viewBox=\"0 0 42 8\" id=\"s4TARkExasOnSU7CMGRS1\"><path d=\"M16.5 5.66h-2.47V1h-1.18v5.64h3.64v-.98zM20.93 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1h-3.74v5.64h3.74v-.98zM25.47 6.64h1.25L24.76 1h-1.39l-1.95 5.64h1.2l.44-1.37h1.98l.43 1.37zm-1.43-4.56h.02l.73 2.3H23.3l.73-2.3zM27.3 1v5.64h2.15c1.7 0 2.7-1.05 2.7-2.84 0-1.8-1-2.8-2.7-2.8H27.3zm1.18.97h.83c1.04 0 1.63.65 1.63 1.83 0 1.22-.57 1.86-1.63 1.86h-.83V1.97zM36.64 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1H32.9v5.64h3.74v-.98zM38.67 1.92h1c.59 0 .95.35.95.9 0 .56-.34.9-.94.9h-1.01v-1.8zm0 2.65h.94l1.05 2.07H42L40.81 4.4a1.66 1.66 0 0 0 1.03-1.6c0-1.12-.75-1.8-2.04-1.8h-2.31v5.64h1.18V4.57zM.89 5.43L0 0l2.44 3.46L4 0l1.56 3.46L8 0l-.89 5.43H.9zM7.1 6.91c0 .28-.2.5-.44.5H1.33C1.1 7.4.9 7.19.9 6.9v-.49H7.1v.5z\" fill=\"#F5222D\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"smgAQv4UOlUFua33oK_-3\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\" />\n<circle cx=\"8.02079\" cy=\"11.9685\" r=\"1.32987\" fill=\"white\" />\n<rect x=\"6.69092\" y=\"2.66016\" width=\"2.65974\" height=\"6.64935\" rx=\"1.32987\" fill=\"white\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"tRb4vl4QA99UIh40ExUOW\"><g fill=\"none\" fill-rule=\"evenodd\"><rect fill=\"#D9D9D9\" width=\"16\" height=\"16\" rx=\"2\" /><rect fill=\"#FFF\" x=\"1\" y=\"1\" width=\"14\" height=\"14\" rx=\"1\" /></g></symbol><symbol viewBox=\"0 0 16 16\" id=\"uNn56cz_Mj1at6IgEQPbN\"><circle cx=\"2\" cy=\"8\" r=\"2\" /><circle cx=\"8\" cy=\"8\" r=\"2\" /><circle cx=\"14\" cy=\"8\" r=\"2\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"uT_ui75J8Wr0fxTXLNBWC\"><path fill-rule=\"evenodd\" d=\"M7.017 4.88l4.898 5.44a.547.547 0 0 0 .813-.733l-5.21-5.785a.545.545 0 0 0-.5-.3.545.545 0 0 0-.502.3L1.307 9.587a.547.547 0 0 0 .813.732l4.897-5.44z\" clip-rule=\"evenodd\" /></symbol><symbol viewBox=\"0 0 14 59\" id=\"uX4vyRrlbFgRCNajBxMhj\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\" /><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#010101\" fill-opacity=\".45\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"uh3wZPJ2i4O_EGs7gRXiu\"><path d=\"M11.27 5.15l-.04-.28-.86-.29a4.54 4.54 0 0 0-.28-.67l.4-.81-.16-.24a5.48 5.48 0 0 0-1.2-1.2L8.9 1.5l-.81.4a4.6 4.6 0 0 0-.68-.27L7.12.77 6.86.73A5.3 5.3 0 0 0 6 .66c-.26 0-.53.02-.85.07l-.28.04-.28.86a4.75 4.75 0 0 0-.68.28l-.81-.4-.23.16a5.37 5.37 0 0 0-1.2 1.2l-.16.23.4.81c-.1.22-.2.45-.28.68l-.86.28-.04.28a5.3 5.3 0 0 0 0 1.7l.04.28.86.29c.08.23.17.46.28.67l-.4.81.17.23a5.43 5.43 0 0 0 1.2 1.2l.22.16.81-.4c.22.1.44.2.68.28l.28.86.28.04a5.28 5.28 0 0 0 1.7 0l.28-.04.28-.86c.23-.08.46-.17.68-.28l.8.4.24-.16c.25-.18.46-.36.65-.55a5.39 5.39 0 0 0 .55-.65l.16-.23-.4-.81c.1-.22.2-.44.28-.68l.86-.28.04-.28c.05-.31.07-.59.07-.85a4.74 4.74 0 0 0-.07-.85zM10.5 6c0 .16 0 .32-.03.5l-.41.14-.37.12-.11.37c-.07.21-.15.42-.26.62l-.18.34.37.73a4.25 4.25 0 0 1-.32.37l-.37.33-.73-.37-.34.18c-.2.1-.42.19-.63.26l-.37.11-.12.36-.13.42a3.98 3.98 0 0 1-.99 0l-.14-.42-.12-.36-.37-.12a3.52 3.52 0 0 1-.61-.25l-.34-.18-.35.17-.4.2a4.16 4.16 0 0 1-.68-.7l.36-.73-.18-.34a3.6 3.6 0 0 1-.25-.62l-.12-.37-.78-.26a3.99 3.99 0 0 1 0-.98l.78-.26.11-.37c.07-.2.16-.42.26-.62l.18-.34-.17-.34-.2-.4c.2-.25.44-.48.7-.69l.73.37.34-.18c.2-.1.4-.19.62-.26l.37-.11.12-.37.14-.41a4.35 4.35 0 0 1 .98 0l.26.78.37.1c.21.08.42.16.62.27l.34.17.73-.36a4.6 4.6 0 0 1 .7.7l-.36.72.17.34c.1.2.2.42.26.63l.12.37.36.12.41.14c.03.17.04.33.03.48zM6 3.96A2.04 2.04 0 0 0 3.96 6c0 1.13.92 2.04 2.04 2.04A2.04 2.04 0 0 0 8.04 6 2.04 2.04 0 0 0 6 3.96zm.85 2.89A1.2 1.2 0 0 1 6 7.2c-.32 0-.62-.13-.85-.35A1.2 1.2 0 0 1 4.8 6c0-.32.13-.62.36-.85a1.2 1.2 0 0 1 1.69 0 1.2 1.2 0 0 1 0 1.7z\" /></symbol><symbol viewBox=\"0 0 14 59\" id=\"vkiPySxMTisZF7hFfSUkm\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\" /><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#fff\" fill-opacity=\".65\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"wZVFbbkRdmy80qPil4Ki2\"><path d=\"M3.5 0h9.1c.773 0 1.4.632 1.4 1.412v1.413c0 .78-.627 1.412-1.4 1.412h-.056l-.644 7.767c0 .78-.627 1.413-1.4 1.413h-7c-.773 0-1.4-.633-1.398-1.354l-.646-7.826H1.4c-.773 0-1.4-.632-1.4-1.412V1.412C0 .632.627 0 1.4 0h2.1zm0 1.412H1.4v1.413h11.2V1.412H3.5zm-.64 2.825l.64 7.767h7l.002-.058.637-7.71H2.861z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"x7WEt52cndORyzq_E1Kdd\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 7c0 .30206-.2448.54688-.5469.54688h-1.6042V8.6041h1.6042c.3021 0 .5469.24491.5469.54687 0 .30206-.2448.54688-.5469.54688h-1.6042V11.302c0 .3021-.2448.5469-.5469.5469H9.69795v1.6042c0 .3021-.24481.5469-.54687.5469-.30207 0-.54688-.2448-.54688-.5469v-1.6042H7.54688v1.6042c0 .3021-.24482.5469-.54688.5469s-.54688-.2448-.54688-.5469v-1.6042H5.3959v1.6042c0 .3021-.24491.5469-.54687.5469-.30206 0-.54688-.2448-.54688-.5469V11.849h-1.6042c-.30206 0-.54687-.2449-.54687-.5468V9.69795H.546875C.244812 9.69795 0 9.45314 0 9.15108c0-.30207.244812-.54688.546875-.54688H2.15108V7.54688H.546875C.244812 7.54688 0 7.30206 0 7s.244812-.54688.546875-.54688H2.15108V5.3959H.546875C.244812 5.3959 0 5.15099 0 4.84903c0-.30206.244812-.54688.546875-.54688H2.15108v-1.6042c0-.30206.24481-.54687.54687-.54687h1.6041V.546875C4.30205.244812 4.54686 0 4.84892 0c.30207 0 .54688.244812.54688.546875V2.15108h1.05732V.546875C6.45312.244812 6.69794 0 7 0s.54688.244812.54688.546875V2.15108H8.6042V.546875C8.6042.244812 8.84901 0 9.15108 0c.30206 0 .54687.244812.54687.546875V2.15108H11.302c.3021 0 .5469.24481.5469.54687v1.6041h1.6042c.3021 0 .5469.24481.5469.54687 0 .30207-.2448.54688-.5469.54688h-1.6042v1.05732h1.6042c.3021 0 .5469.24482.5469.54688zm-3.2447-3.75517H3.24483v7.51037h7.51047V3.24483zM8.8082 4.58892c.16407-.16524.43125-.16524.59649-.00118.16523.16407.16523.43125 0 .59649L7.59531 6.99946l1.81055 1.81641c.16406.16523.16406.43242-.00117.59648-.08203.08203-.18985.12305-.29766.12305-.10781 0-.21679-.04102-.29883-.12422L7 7.59712 5.1918 9.41001c-.08203.0832-.19102.12422-.29883.12422-.10781 0-.21563-.04102-.29766-.12305-.16523-.16406-.16523-.43125-.00117-.59648l1.81055-1.81524-1.81055-1.81523c-.16406-.16524-.16406-.43242.00117-.59649.16524-.16406.43243-.16406.59649.00118L7 6.40181l1.8082-1.81289z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"yBFH9BLFjO6tc6qM5eadr\"><path d=\"M8 1a6.96 6.96 0 0 1 4.95 2.05 6.963 6.963 0 0 1 1.5 2.225c.366.864.55 1.78.55 2.725a6.958 6.958 0 0 1-2.05 4.95 6.962 6.962 0 0 1-2.225 1.5c-.864.366-1.78.55-2.725.55a6.958 6.958 0 0 1-4.95-2.05 6.963 6.963 0 0 1-1.5-2.225A6.946 6.946 0 0 1 1 8a6.96 6.96 0 0 1 2.05-4.95 6.964 6.964 0 0 1 2.225-1.5A6.946 6.946 0 0 1 8 1z\" /><path d=\"M4 9a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2H4z\" fill=\"#fff\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"z4dGPGHVm4sk0Iz3Jb90o\"><g clip-path=\"url(#z4dGPGHVm4sk0Iz3Jb90o_clip0)\"><path d=\"M13.104 2.375h-.625V1.333h-1.041v1.042H4.563V1.333H3.52v1.042h-.625c-.862 0-1.563.7-1.563 1.562v9.167c0 .862.701 1.563 1.563 1.563h10.208c.862 0 1.563-.701 1.563-1.563V3.937c0-.861-.701-1.562-1.563-1.562zM2.896 3.417h.625v1.041h1.042V3.417h6.875v1.041h1.041V3.417h.625c.287 0 .521.233.521.52v1.25H2.375v-1.25c0-.287.234-.52.52-.52zm10.208 10.208H2.896a.521.521 0 0 1-.521-.52V6.228h11.25v6.875c0 .287-.234.52-.52.52zM9.563 12.53h3.124V9.406H9.563v3.125zm1.041-2.083h1.042v1.041h-1.042v-1.041z\" /></g><defs></defs></symbol><clipPath id=\"z4dGPGHVm4sk0Iz3Jb90o_clip0\"><path transform=\"translate(1.333 1.333)\" d=\"M0 0h13.333v13.333H0z\" /></clipPath></defs><use id=\"-Am5Jaluor-oMRsekyev8-usage\" xlink:href=\"#-Am5Jaluor-oMRsekyev8\" class=\"sprite-symbol-usage\" /><use id=\"-C9hfLS6HPJanh6fkykKd-usage\" xlink:href=\"#-C9hfLS6HPJanh6fkykKd\" class=\"sprite-symbol-usage\" /><use id=\"-aQPhZZj_oniDEOANVZ-C-usage\" xlink:href=\"#-aQPhZZj_oniDEOANVZ-C\" class=\"sprite-symbol-usage\" /><use id=\"2EAF86_HiysYPTAxB7-RL-usage\" xlink:href=\"#2EAF86_HiysYPTAxB7-RL\" class=\"sprite-symbol-usage\" /><use id=\"2HVEkt4bnc23ZHUMauTbT-usage\" xlink:href=\"#2HVEkt4bnc23ZHUMauTbT\" class=\"sprite-symbol-usage\" /><use id=\"4GWGPB2_9FZx4MWqdCzqR-usage\" xlink:href=\"#4GWGPB2_9FZx4MWqdCzqR\" class=\"sprite-symbol-usage\" /><use id=\"4yIYigYFplvvZBo-ZNUxf-usage\" xlink:href=\"#4yIYigYFplvvZBo-ZNUxf\" class=\"sprite-symbol-usage\" /><use id=\"5KvvIZTq03z4th4RXGPbP-usage\" xlink:href=\"#5KvvIZTq03z4th4RXGPbP\" class=\"sprite-symbol-usage\" /><use id=\"6jK2fhSQ9E4UFLj3zSxeP-usage\" xlink:href=\"#6jK2fhSQ9E4UFLj3zSxeP\" class=\"sprite-symbol-usage\" /><use id=\"A67Ay-f1K9HCB9uku5MEM-usage\" xlink:href=\"#A67Ay-f1K9HCB9uku5MEM\" class=\"sprite-symbol-usage\" /><use id=\"Bk9rGFTVoXaIMGWRj6GQt-usage\" xlink:href=\"#Bk9rGFTVoXaIMGWRj6GQt\" class=\"sprite-symbol-usage\" /><use id=\"Go4hckuxQydtEiMruzRND-usage\" xlink:href=\"#Go4hckuxQydtEiMruzRND\" class=\"sprite-symbol-usage\" /><use id=\"ICGgbdI6CNymcbeWsWacO-usage\" xlink:href=\"#ICGgbdI6CNymcbeWsWacO\" class=\"sprite-symbol-usage\" /><use id=\"IU7jiS825iSg8DBcGI0IN-usage\" xlink:href=\"#IU7jiS825iSg8DBcGI0IN\" class=\"sprite-symbol-usage\" /><use id=\"JHFOHhjIwGIzfKV7k272q-usage\" xlink:href=\"#JHFOHhjIwGIzfKV7k272q\" class=\"sprite-symbol-usage\" /><use id=\"JngjdhlmachZzcr_Ixbyi-usage\" xlink:href=\"#JngjdhlmachZzcr_Ixbyi\" class=\"sprite-symbol-usage\" /><use id=\"L-E3850PcmT7RZngqb6Wk-usage\" xlink:href=\"#L-E3850PcmT7RZngqb6Wk\" class=\"sprite-symbol-usage\" /><use id=\"LNxn_poRi11JKgavwWA3V-usage\" xlink:href=\"#LNxn_poRi11JKgavwWA3V\" class=\"sprite-symbol-usage\" /><use id=\"LmZcNMbTQu9JR_dAB435F-usage\" xlink:href=\"#LmZcNMbTQu9JR_dAB435F\" class=\"sprite-symbol-usage\" /><use id=\"LuoyDwL1QTe_XDqgMJBSp-usage\" xlink:href=\"#LuoyDwL1QTe_XDqgMJBSp\" class=\"sprite-symbol-usage\" /><use id=\"MQ8-Y__9jxj6AA9OyyBgk-usage\" xlink:href=\"#MQ8-Y__9jxj6AA9OyyBgk\" class=\"sprite-symbol-usage\" /><use id=\"NTbNlHuywkcWGi69OyczW-usage\" xlink:href=\"#NTbNlHuywkcWGi69OyczW\" class=\"sprite-symbol-usage\" /><use id=\"NZBiAJiKEet6lgeA6Qa1N-usage\" xlink:href=\"#NZBiAJiKEet6lgeA6Qa1N\" class=\"sprite-symbol-usage\" /><use id=\"OIlFPhVrZHefhzWrpX3b7-usage\" xlink:href=\"#OIlFPhVrZHefhzWrpX3b7\" class=\"sprite-symbol-usage\" /><use id=\"PPCkxJsaRzLMuA5lnRqgy-usage\" xlink:href=\"#PPCkxJsaRzLMuA5lnRqgy\" class=\"sprite-symbol-usage\" /><use id=\"Q0YLlQA5Heqk5RXXUcDpo-usage\" xlink:href=\"#Q0YLlQA5Heqk5RXXUcDpo\" class=\"sprite-symbol-usage\" /><use id=\"R6P3XNfSq1BDplpHzPu2w-usage\" xlink:href=\"#R6P3XNfSq1BDplpHzPu2w\" class=\"sprite-symbol-usage\" /><use id=\"Tqj7OIFiLPyMIKP83zK87-usage\" xlink:href=\"#Tqj7OIFiLPyMIKP83zK87\" class=\"sprite-symbol-usage\" /><use id=\"TtzZMaOxcSIw9EgrJjEcz-usage\" xlink:href=\"#TtzZMaOxcSIw9EgrJjEcz\" class=\"sprite-symbol-usage\" /><use id=\"V4BpmSJbtxEHus0LaiFZl-usage\" xlink:href=\"#V4BpmSJbtxEHus0LaiFZl\" class=\"sprite-symbol-usage\" /><use id=\"XF_3D41ZPSZchddN2BNaY-usage\" xlink:href=\"#XF_3D41ZPSZchddN2BNaY\" class=\"sprite-symbol-usage\" /><use id=\"XW_1q6Gh1siufyO_dlYed-usage\" xlink:href=\"#XW_1q6Gh1siufyO_dlYed\" class=\"sprite-symbol-usage\" /><use id=\"Xt9b7Tobbmu5mq4e_7iMz-usage\" xlink:href=\"#Xt9b7Tobbmu5mq4e_7iMz\" class=\"sprite-symbol-usage\" /><use id=\"Y686k-g9rEGNtB-015Dbe-usage\" xlink:href=\"#Y686k-g9rEGNtB-015Dbe\" class=\"sprite-symbol-usage\" /><use id=\"ZOsqNCGfxe9zaSKmuZ6DY-usage\" xlink:href=\"#ZOsqNCGfxe9zaSKmuZ6DY\" class=\"sprite-symbol-usage\" /><use id=\"_kD-IBC0zsJ5O-464qLgx-usage\" xlink:href=\"#_kD-IBC0zsJ5O-464qLgx\" class=\"sprite-symbol-usage\" /><use id=\"aqZIlmPdXUO3X7N2mPhyR-usage\" xlink:href=\"#aqZIlmPdXUO3X7N2mPhyR\" class=\"sprite-symbol-usage\" /><use id=\"cDdhelris7xscCp99SUUG-usage\" xlink:href=\"#cDdhelris7xscCp99SUUG\" class=\"sprite-symbol-usage\" /><use id=\"ekupOmKe0W3npX_CDEL7K-usage\" xlink:href=\"#ekupOmKe0W3npX_CDEL7K\" class=\"sprite-symbol-usage\" /><use id=\"fKB3TPQdZss5gO3VdG7me-usage\" xlink:href=\"#fKB3TPQdZss5gO3VdG7me\" class=\"sprite-symbol-usage\" /><use id=\"fS_SgFrRKIjTf7nq8J6KU-usage\" xlink:href=\"#fS_SgFrRKIjTf7nq8J6KU\" class=\"sprite-symbol-usage\" /><use id=\"fwkP-dzo0gzpTzOtt-mP7-usage\" xlink:href=\"#fwkP-dzo0gzpTzOtt-mP7\" class=\"sprite-symbol-usage\" /><use id=\"gOtt0pbBctJIEth_qLaVr-usage\" xlink:href=\"#gOtt0pbBctJIEth_qLaVr\" class=\"sprite-symbol-usage\" /><use id=\"hL9DVP_i-XlgEPluFrgRs-usage\" xlink:href=\"#hL9DVP_i-XlgEPluFrgRs\" class=\"sprite-symbol-usage\" /><use id=\"hTF6leJYoXLbp_1056-kP-usage\" xlink:href=\"#hTF6leJYoXLbp_1056-kP\" class=\"sprite-symbol-usage\" /><use id=\"iDtKkKJQY1abj1f_OjAm4-usage\" xlink:href=\"#iDtKkKJQY1abj1f_OjAm4\" class=\"sprite-symbol-usage\" /><use id=\"iYvJ3BhCddSOqlnoRfrBF-usage\" xlink:href=\"#iYvJ3BhCddSOqlnoRfrBF\" class=\"sprite-symbol-usage\" /><use id=\"kVdBS6D2AjXbvK9p6iT-3-usage\" xlink:href=\"#kVdBS6D2AjXbvK9p6iT-3\" class=\"sprite-symbol-usage\" /><use id=\"kcayi6hS00YP7jubjuAMF-usage\" xlink:href=\"#kcayi6hS00YP7jubjuAMF\" class=\"sprite-symbol-usage\" /><use id=\"kzAwYAYq59ozlLx5AVW3k-usage\" xlink:href=\"#kzAwYAYq59ozlLx5AVW3k\" class=\"sprite-symbol-usage\" /><use id=\"msvgRX89FxLCXDchq2duw-usage\" xlink:href=\"#msvgRX89FxLCXDchq2duw\" class=\"sprite-symbol-usage\" /><use id=\"nc-hhLmTF1cqCJ2yxggUU-usage\" xlink:href=\"#nc-hhLmTF1cqCJ2yxggUU\" class=\"sprite-symbol-usage\" /><use id=\"nq047iktKWHtW5Qdvz3FH-usage\" xlink:href=\"#nq047iktKWHtW5Qdvz3FH\" class=\"sprite-symbol-usage\" /><use id=\"o9HyST-jLLd2VAbb2vVfc-usage\" xlink:href=\"#o9HyST-jLLd2VAbb2vVfc\" class=\"sprite-symbol-usage\" /><use id=\"pM9sCBOhFfGLg7Lcovc8G-usage\" xlink:href=\"#pM9sCBOhFfGLg7Lcovc8G\" class=\"sprite-symbol-usage\" /><use id=\"q2Wb4mTdP5tI6y5EZmKv6-usage\" xlink:href=\"#q2Wb4mTdP5tI6y5EZmKv6\" class=\"sprite-symbol-usage\" /><use id=\"q2d8JKKOL8uhc7yZfeBcZ-usage\" xlink:href=\"#q2d8JKKOL8uhc7yZfeBcZ\" class=\"sprite-symbol-usage\" /><use id=\"qQUbEVMwVlsLA_DIcuMhY-usage\" xlink:href=\"#qQUbEVMwVlsLA_DIcuMhY\" class=\"sprite-symbol-usage\" /><use id=\"qgo-KPabv-jodw0b8ihH5-usage\" xlink:href=\"#qgo-KPabv-jodw0b8ihH5\" class=\"sprite-symbol-usage\" /><use id=\"r8Org_FCqcc9eXnVgPmWo-usage\" xlink:href=\"#r8Org_FCqcc9eXnVgPmWo\" class=\"sprite-symbol-usage\" /><use id=\"ruGf8eFu3YQhuRUchcgSW-usage\" xlink:href=\"#ruGf8eFu3YQhuRUchcgSW\" class=\"sprite-symbol-usage\" /><use id=\"s4TARkExasOnSU7CMGRS1-usage\" xlink:href=\"#s4TARkExasOnSU7CMGRS1\" class=\"sprite-symbol-usage\" /><use id=\"smgAQv4UOlUFua33oK_-3-usage\" xlink:href=\"#smgAQv4UOlUFua33oK_-3\" class=\"sprite-symbol-usage\" /><use id=\"tRb4vl4QA99UIh40ExUOW-usage\" xlink:href=\"#tRb4vl4QA99UIh40ExUOW\" class=\"sprite-symbol-usage\" /><use id=\"uNn56cz_Mj1at6IgEQPbN-usage\" xlink:href=\"#uNn56cz_Mj1at6IgEQPbN\" class=\"sprite-symbol-usage\" /><use id=\"uT_ui75J8Wr0fxTXLNBWC-usage\" xlink:href=\"#uT_ui75J8Wr0fxTXLNBWC\" class=\"sprite-symbol-usage\" /><use id=\"uX4vyRrlbFgRCNajBxMhj-usage\" xlink:href=\"#uX4vyRrlbFgRCNajBxMhj\" class=\"sprite-symbol-usage\" /><use id=\"uh3wZPJ2i4O_EGs7gRXiu-usage\" xlink:href=\"#uh3wZPJ2i4O_EGs7gRXiu\" class=\"sprite-symbol-usage\" /><use id=\"vkiPySxMTisZF7hFfSUkm-usage\" xlink:href=\"#vkiPySxMTisZF7hFfSUkm\" class=\"sprite-symbol-usage\" /><use id=\"wZVFbbkRdmy80qPil4Ki2-usage\" xlink:href=\"#wZVFbbkRdmy80qPil4Ki2\" class=\"sprite-symbol-usage\" /><use id=\"x7WEt52cndORyzq_E1Kdd-usage\" xlink:href=\"#x7WEt52cndORyzq_E1Kdd\" class=\"sprite-symbol-usage\" /><use id=\"yBFH9BLFjO6tc6qM5eadr-usage\" xlink:href=\"#yBFH9BLFjO6tc6qM5eadr\" class=\"sprite-symbol-usage\" /><use id=\"z4dGPGHVm4sk0Iz3Jb90o-usage\" xlink:href=\"#z4dGPGHVm4sk0Iz3Jb90o\" class=\"sprite-symbol-usage\" /></svg>";  window.document.body.appendChild(div) }); }
+var img = {id: "nNqga5j7FC6QktpHDJzbv", content: "<svg width=\"100\" height=\"80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.382 24.166h.11c3.987 0 7.052 0 9.485.237 2.459.24 4.378.73 6.034 1.778a13 13 0 014.032 4.032c1.049 1.656 1.538 3.575 1.778 6.035.238 2.432.238 5.497.238 9.483v.684c0 3.986 0 7.051-.238 9.484-.24 2.46-.73 4.378-1.778 6.034a13 13 0 01-4.032 4.033c-1.656 1.048-3.575 1.538-6.034 1.778-2.433.237-5.498.237-9.484.237h-.111c-3.986 0-7.051 0-9.484-.237-2.46-.24-4.378-.73-6.034-1.778a13 13 0 01-4.033-4.033c-1.048-1.656-1.538-3.575-1.778-6.034-.237-2.433-.237-5.498-.237-9.484v-.684c0-3.986 0-7.05.237-9.483.24-2.46.73-4.379 1.778-6.035a13 13 0 014.033-4.032c1.656-1.049 3.575-1.538 6.034-1.778 2.432-.237 5.497-.237 9.484-.237zm-9.29 2.227c-2.309.226-3.876.666-5.159 1.478a11 11 0 00-3.412 3.412c-.812 1.283-1.252 2.85-1.477 5.159-.227 2.324-.228 5.292-.228 9.345v.573c0 4.053.001 7.02.228 9.345.225 2.309.665 3.876 1.477 5.159a10.998 10.998 0 003.412 3.412c1.283.812 2.85 1.252 5.16 1.477 2.323.227 5.291.228 9.344.228 4.053 0 7.021-.001 9.345-.228 2.31-.225 3.877-.665 5.16-1.477a11 11 0 003.411-3.412c.812-1.283 1.253-2.85 1.478-5.16.227-2.323.228-5.291.228-9.344v-.573c0-4.053-.001-7.021-.228-9.345-.225-2.309-.666-3.876-1.478-5.16a11 11 0 00-3.412-3.411c-1.282-.812-2.85-1.252-5.159-1.478-2.324-.226-5.292-.227-9.345-.227-4.053 0-7.02 0-9.345.227z\" fill=\"#8E9199\"/><g filter=\"url(#filter0_b)\"><rect x=\"20.059\" y=\"13.136\" width=\"46.398\" height=\"46.398\" rx=\"12\" fill=\"#e3e3e3\"/></g><defs><filter id=\"filter0_b\" x=\"-3.941\" y=\"-10.864\" width=\"94.398\" height=\"94.398\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feGaussianBlur stdDeviation=\"12\"/><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"/></filter></defs></svg>", viewbox: "0 0 100 80", viewBox: "0 0 100 80" };
+
+var styles$1 = /*#__PURE__*/css({
+  name: "157xhr7",
+  styles: "width:16px;height:16px"
+} );
+var IconDragFile = function IconDragFile(_ref) {
+  var className = _ref.className;
+  return /*#__PURE__*/React.createElement(Icon$1, {
+    className: cx(styles$1, className),
+    glyph: img
+  });
+};
+
+var styles = {
+  root: /*#__PURE__*/css("display:flex;flex:1;flex-direction:column;justify-content:center;align-items:center;padding:20px;border-width:1px;border-radius:4px;border-color:", colors.intentBase, ";border-style:dashed;background-color:", colors.intentBaseActive, ";transition:border 0.24s ease-in-out;outline:none;cursor:pointer;" + ("" ), "" ),
+  dragover: /*#__PURE__*/css("border-color:", colors.intentPrimary, ";" + ("" ), "" ),
+  icon: /*#__PURE__*/css({
+    name: "1yu3ibr",
+    styles: "width:100px;height:80px;margin-bottom:16px"
+  } ),
+  preloader: /*#__PURE__*/css({
+    name: "7kn5bz",
+    styles: "width:68px;height:48px;margin-bottom:16px"
+  } ),
+  notice: /*#__PURE__*/css("margin-top:10px;color:", colors.dark65, ";text-align:center;white-space:pre-line;" + ("" ), "" )
+};
+
+var UploadZone = function UploadZone(_ref) {
+  var _ref$accept = _ref.accept,
+      accept = _ref$accept === void 0 ? '' : _ref$accept,
+      handler = _ref.handler,
+      name = _ref.name,
+      multiple = _ref.multiple,
+      className = _ref.className,
+      title = _ref.title,
+      subTitle = _ref.subTitle,
+      loading = _ref.loading;
+
+  var _useDropzone = useDropzone({
+    accept: accept,
+    multiple: multiple,
+    onDrop: handler
+  }),
+      getRootProps = _useDropzone.getRootProps,
+      getInputProps = _useDropzone.getInputProps,
+      isDragActive = _useDropzone.isDragActive;
+
+  return /*#__PURE__*/React.createElement("div", _objectSpread2({
+    className: cx(styles.root, _defineProperty({}, styles.dragover, isDragActive), className)
+  }, getRootProps()), /*#__PURE__*/React.createElement("input", _objectSpread2(_objectSpread2({}, getInputProps()), {}, {
+    name: name
+  })), loading ? /*#__PURE__*/React.createElement(TarantoolLogoSpinner, {
+    className: styles.preloader
+  }) : /*#__PURE__*/React.createElement(IconDragFile, {
+    className: styles.icon
+  }), /*#__PURE__*/React.createElement(Text, {
+    variant: "h3",
+    tag: "span"
+  }, loading ? 'Uploading...' : title || 'Click or drag file to this area to upload'), !!subTitle && !loading && /*#__PURE__*/React.createElement(Text, {
+    className: styles.notice
+  }, subTitle));
+};
+
+export { Alert, AppHeader, AppLayout, BaseModal, Breadcrumbs, Button, Checkbox, CodeBlock, CodeBlockWrap, ConfirmModal, ControlsPanel, CopyToClipboard, DotIndicator, DraggableList, DraggableListContainer, DraggableListItem, DraggableTable, Dropdown, DropdownDivider, DropdownItem, ExpandableBlock, FileTree, FlatList, FlatListItem, FormField, HealthStatus, INTERACTIVE_ELEMENT_SELECTOR, Icon$1 as Icon, IconArrow, IconArrowDown, IconArrowLeft, IconArrowRight, IconArrowUp, IconAttach, IconAttention, IconBell, IconBoldArrowRight, IconBox, IconBoxNoData, IconBucket, IconBurger, IconCalendar, IconCancel, IconCheckbox, IconCheckboxChecked, IconCheckboxCheckedDisabled, IconCheckboxDisabled, IconCheckboxIndeterminate, IconCheckboxIndeterminateDisabled, IconChevron, IconChevronDown, IconChevronLeft, IconChevronRight, IconChip, IconChipDanger, IconChipWarning, IconClock, IconClose, IconCluster, IconCode, IconCopy, IconCreateFile, IconCreateFolder, IconDelete, IconDocumentCode, IconDownload, IconEdit, IconEmptyData, IconEyeClosed, IconEyeOpened, IconFailed, IconFile, IconFolder, IconFolderOpened, IconGear, IconGeoPin, IconHelperClose, IconHelperSortable, IconInfo, IconLink, IconMore, IconMoreBurger, IconOk, IconPlay, IconRadio, IconRadioChecked, IconRadioCheckedDisabled, IconRadioDisabled, IconRefresh, IconSchema, IconSearch, IconSortableAsc, IconSortableDesc, IconSpinner, IconSpinnerLegacy, IconStop, IconStopped, IconSuccess, IconTask, IconTrash, IconUser, IconUsers, Input, InputGroup, InputPassword, LabeledInput, LeaderFlag, LeaderFlagSmall, Link, Markdown, Modal, NonIdealState, NonIdealStateAction, NotificationSplash, NotificationSplashFixed, OverflowList, PageCard, PageLayout, PageLayoutWithRef, PageSection, Pagination, PaginationControlled, ModalBody as PopupBody, ModalFooter as PopupFooter, PopupNotificationList, ProgressBar, RadioButton, ResizeSensor, SVGImage, Scrollbar, SectionPreloader, Select, SideMenu, Spin, SplashError, SplashModal, Switcher, SyntaxHighlight, Tabbed, Table, Tag, TagsList, img$3 as TarantoolLogoCompact, img$2 as TarantoolLogoFull, TarantoolLogoSpinner, Text, TextArea, TiledList, TiledListItem, Tooltip, UploadZone, UriLabel, appLayoutTopPanelHeight, baseFontFamily, colors, copyToClipboard, genericStyles, iconSize, keyFrames, monoFontFamily, navItemHeight, navWidthCollapsed, navWidthExpanded, pageLayoutMaxWidth, pageLayoutMinWidth, img$5 as splashGenericErrorSvg, img$4 as splashSelectFileSvg, styles$O as styles, textStyles, img$1 as windowErrorSvg, withCopyToClipboard, withDropdown, withPopover, withTooltip, zIndex };if (window) { window.document.addEventListener('DOMContentLoaded', function(){ const div = document.createElement('div'); div.setAttribute('style', 'position: absolute; height:0; width: 0; overflow: hidden;');  div.innerHTML = "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><defs><style>\n    .sprite-symbol-usage {display: none;}\n    .sprite-symbol-usage:target {display: inline;}\n  </style><symbol viewBox=\"0 0 14 14\" id=\"1ab2RR4x7aDgDv3oM3vXf\"><path d=\"M7.392 9.142l-2.444 2.446a1.78 1.78 0 0 1-1.266.525c-.479 0-.929-.186-1.266-.525a1.784 1.784 0 0 1-.002-2.532L4.86 6.61a.491.491 0 1 0-.696-.696L1.72 8.36a2.758 2.758 0 0 0-.814 1.963c0 .741.289 1.439.814 1.962a2.767 2.767 0 0 0 1.961.812 2.76 2.76 0 0 0 1.962-.812l2.446-2.446a.491.491 0 1 0-.696-.696zm4.89-7.422a2.778 2.778 0 0 0-3.924 0L5.912 4.166a.491.491 0 1 0 .696.696l2.445-2.446a1.793 1.793 0 0 1 3.059 1.266c0 .478-.186.928-.525 1.266L9.14 7.394a.491.491 0 0 0 .349.84.493.493 0 0 0 .348-.144l2.446-2.446a2.777 2.777 0 0 0-.001-3.924zM6.639 8.087l1.394-1.395a.491.491 0 1 0-.696-.695L5.942 7.39a.491.491 0 1 0 .696.696z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"1kFPUg0TwoysjpvaWHhpG\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4531 7.54688C13.7552 7.54688 14 7.30206 14 7s-.2448-.54688-.5469-.54688h-1.6042V5.3958h1.6042c.3021 0 .5469-.24481.5469-.54688 0-.30206-.2448-.54687-.5469-.54687h-1.6042v-1.6041c0-.30206-.2448-.54687-.5469-.54687H9.69795V.54688C9.69795.2448 9.45314 0 9.15108 0c-.30207 0-.54688.24481-.54688.54688v1.6042H7.54688V.54688C7.54688.2448 7.30206 0 7 0s-.54688.24481-.54688.54688v1.6042H5.3958V.54688C5.3958.2448 5.15099 0 4.84892 0c-.30206 0-.54687.24481-.54687.54688v1.6042h-1.6041c-.30206 0-.54687.24481-.54687.54687v1.6042H.54688C.2448 4.30215 0 4.54697 0 4.84903c0 .30196.24481.54687.54688.54687h1.6042v1.05722H.54688C.2448 6.45312 0 6.69794 0 7s.24481.54688.54688.54688h1.6042V8.6042H.54688C.2448 8.6042 0 8.84901 0 9.15108c0 .30206.24481.54687.54688.54687h1.6042v1.60425c0 .3019.24481.5468.54687.5468h1.6042v1.6041c0 .3021.24482.5469.54688.5469.30196 0 .54687-.2448.54687-.5469v-1.6042h1.05722v1.6042c0 .3021.24482.5469.54688.5469s.54688-.2448.54688-.5469v-1.6042H8.6042v1.6042c0 .3021.24481.5469.54688.5469.30206 0 .54687-.2448.54687-.5469v-1.6042H11.302c.3021 0 .5469-.2448.5469-.5469V9.69785h1.6042c.3021 0 .5469-.24482.5469-.54688 0-.30196-.2448-.54687-.5469-.54687h-1.6042V7.54688h1.6042zM3.24483 3.24483h7.51047v7.51037H3.24483V3.24483zm3.75171.70634c.27642 0 .49986.22345.49986.49987v2.99919c0 .27642-.22344.49987-.49986.49987s-.49987-.22395-.49987-.49987V4.45104c0-.27642.22343-.49987.49987-.49987zm-.35439 5.19224c-.045.04498-.07999.09996-.10498.16495-.02498.05998-.03998.12497-.03998.18996 0 .06499.015.12998.03998.18996.02501.05997.05998.11496.10498.16495.05048.045.10497.07999.16495.10497.05997.02498.12445.03998.18944.03998.06499 0 .12998-.015.18996-.03998.05997-.02501.11495-.06.16495-.10497.045-.04999.07999-.10498.10497-.16495.02498-.06.03998-.12497.03998-.18996 0-.06499-.015-.12998-.03998-.18996-.02501-.06497-.05997-.11997-.10497-.16495-.11447-.11449-.28992-.16996-.44939-.13497-.03499.00501-.06496.0145-.09496.03-.03.0105-.06.025-.08499.045-.0222.01109-.04167.02768-.06043.04367-.00657.00559-.01305.01112-.01953.0163z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"2DlvGbkvXFz2TAiFOrH3n\">\n    <path d=\"M14.685 3.627A4.486 4.486 0 0 0 11.52 2.33h-.012c-.576 0-1.137.107-1.672.319a4.424 4.424 0 0 0-1.48.967l-4.177 4.13a2.493 2.493 0 0 0-.745 1.793c.002.678.27 1.315.754 1.794a2.567 2.567 0 0 0 1.811.745h.006c.683 0 1.323-.262 1.804-.736l3.666-3.624a.626.626 0 0 0 0-.896.642.642 0 0 0-.904 0l-3.666 3.623a1.27 1.27 0 0 1-.902.366H6a1.295 1.295 0 0 1-.911-.373 1.26 1.26 0 0 1-.377-.9c-.002-.34.13-.657.37-.894l4.177-4.131a3.173 3.173 0 0 1 2.25-.915h.008a3.22 3.22 0 0 1 2.268.927c.602.598.936 1.392.938 2.24a3.102 3.102 0 0 1-.924 2.229l-4.432 4.386a4.72 4.72 0 0 1-3.333 1.353h-.012a4.759 4.759 0 0 1-3.353-1.374 4.636 4.636 0 0 1-1.388-3.314 4.59 4.59 0 0 1 1.37-3.302l5.722-5.658a.626.626 0 0 0 0-.897.644.644 0 0 0-.906-.002l-5.722 5.66A5.85 5.85 0 0 0 0 10.048c.002.773.15 1.526.445 2.239a5.997 5.997 0 0 0 3.31 3.274c.717.288 1.48.435 2.263.439h.016c.779 0 1.534-.143 2.248-.429a5.893 5.893 0 0 0 1.985-1.297L14.7 9.89A4.394 4.394 0 0 0 16 6.758a4.404 4.404 0 0 0-1.315-3.13z\" opacity=\".65\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"2bGNEZP3K8T1z3M5fZKFK\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\" />\n<circle cx=\"8.02079\" cy=\"11.9685\" r=\"1.32987\" fill=\"white\" />\n<rect x=\"6.69092\" y=\"2.66016\" width=\"2.65974\" height=\"6.64935\" rx=\"1.32987\" fill=\"white\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"3Q5ZyfTSPMHThstzagFoU\">\n<rect x=\"5\" y=\"5\" width=\"6\" height=\"6\" fill-opacity=\"0.65\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"3cQCHwHpCVTLldj_IVqx3\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\" /><path d=\"M5 5h6v6H5z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"5KBTvDAns5mrtngSzlsmF\"><path d=\"M9.384 8l6.33-6.328a.976.976 0 0 0 0-1.382.974.974 0 0 0-1.382 0L8 6.616 1.668.287a.974.974 0 0 0-1.381 0 .976.976 0 0 0 0 1.382L6.617 8l-6.33 6.33a.976.976 0 0 0 .69 1.668c.251 0 .5-.094.691-.285L8 9.382l6.332 6.332a.97.97 0 0 0 .69.286.976.976 0 0 0 .69-1.668L9.385 8.001z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"6isaf4okozGnYqiIiu1RX\"><path fill-rule=\"evenodd\" d=\"M7.017 4.88l4.898 5.44a.547.547 0 0 0 .813-.733l-5.21-5.785a.545.545 0 0 0-.5-.3.545.545 0 0 0-.502.3L1.307 9.587a.547.547 0 0 0 .813.732l4.897-5.44z\" clip-rule=\"evenodd\" /></symbol><symbol viewBox=\"0 0 12 14\" id=\"7RiiPbusMBeH0TStzJ0Tf\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.64 2c.068-.126.165-.258.3-.383C4.276 1.305 4.894 1 6 1s1.724.305 2.06.617c.135.125.232.257.3.383H3.64zM2.57 2c.1-.368.315-.77.69-1.117C3.824.361 4.706 0 6 0c1.294 0 2.176.361 2.74.883.375.347.59.749.69 1.117h1.37c.663 0 1.2.542 1.2 1.21v1.211c0 .669-.537 1.21-1.2 1.21h-.048L10.2 12.29c0 .668-.537 1.21-1.2 1.21H3c-.663 0-1.2-.542-1.198-1.16l-.554-6.708H1.2c-.663 0-1.2-.542-1.2-1.21V3.21C0 2.542.537 2 1.2 2h1.37zM1.2 3.21h9.6v1.211H1.2v-1.21zM3 12.29l-.548-6.658h1.123l.832 6.658H3zm1.583-6.658l.832 6.658h1.17l.832-6.658H4.583zM9 12.29H7.593l.832-6.658h1.123l-.546 6.607-.002.05z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 24 24\" id=\"7js-A-zbUMfeuHdTLx9FP\"><circle cx=\"12\" cy=\"12\" r=\"12\" fill=\"#EFEFEF\" /><path d=\"M15.959 14.412c-.196 0-.392-.025-.583-.073-1.15-.29-2.095-1.147-2.44-2.277v-.055a3.869 3.869 0 0 1 2.209-2.142c.26-.096.536-.144.814-.144 1.294 0 2.358 1.058 2.358 2.345a2.363 2.363 0 0 1-2.358 2.346zm-4.894-2.35c-.345 1.13-1.29 1.987-2.44 2.277-.19.048-.387.073-.583.073-1.294 0-2.359-1.06-2.359-2.346 0-1.287 1.065-2.345 2.359-2.345.278 0 .554.048.815.144a3.867 3.867 0 0 1 2.208 2.142v.055zM15.979 8c-.467 0-.928.08-1.366.238a5.332 5.332 0 0 0-2.614 1.973 5.324 5.324 0 0 0-2.611-1.973A4.037 4.037 0 0 0 8.022 8C5.816 8 4 9.806 4 12s1.816 4 4.022 4c.234 0 .467-.02.698-.06l.286-.068A5.674 5.674 0 0 0 12 13.71a5.67 5.67 0 0 0 2.994 2.162l.287.068c.23.04.464.06.697.061C18.184 16 20 14.194 20 12s-1.816-4-4.021-4z\" fill=\"#FF272C\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 80 112\" id=\"8uXTwWnsdfasRosOjAofP\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.9352 61.2952l-6.661-6.661 3.0994-3.0994 9.7751 9.7751-3.0994 3.0994-.0147-.0147-6.6611 6.661-3.0994-3.0994 6.6611-6.661zM20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.4462 61.2952l6.661-6.661-3.0994-3.0994-9.7751 9.7751 3.0994 3.0994.0147-.0147 6.661 6.661 3.0994-3.0994-6.661-6.661zM26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M26.0165 78.047l22.066-38.2196 6.7533 3.899-22.066 38.2196-6.7533-3.899z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 5.36527C0 2.40211 2.42829 0 5.42373 0H56.9492L80 22.8024v83.8326c0 2.963-2.4283 5.365-5.4237 5.365H5.42373C2.42828 112 0 109.598 0 106.635V5.36527zm50.1695 5.36523V29.509h18.983v71.76h-58.305V10.7305h39.322z\" fill=\"#C4C4C4\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"90o7btjGTS8w7Nsg2FkWD\"><g opacity=\".65\"><path d=\"M2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2z\" /></g><rect x=\"5\" y=\"2\" width=\"9\" height=\"2\" rx=\"1\" /><rect x=\"5\" y=\"7\" width=\"9\" height=\"2\" rx=\"1\" /><rect x=\"5\" y=\"12\" width=\"9\" height=\"2\" rx=\"1\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"A3bHXa1-ZXZG-pAqfiZJN\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.71743 6.94604C7.80755 6.92194 7.90228 6.90909 8 6.90909C8.60249 6.90909 9.09091 7.39751 9.09091 8C9.09091 8.60249 8.60249 9.09091 8 9.09091C7.39751 9.09091 6.90909 8.60249 6.90909 8C6.90909 7.90228 6.92194 7.80755 6.94604 7.71743L4.88703 5.65842L5.65842 4.88703L7.71743 6.94604ZM8.54545 3.12087V5.27273H7.45455V2H8C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 6.38359 2.64289 4.86766 3.76532 3.74941L4.53527 4.52224C3.61627 5.43782 3.09091 6.6766 3.09091 8C3.09091 10.7112 5.28878 12.9091 8 12.9091C10.7112 12.9091 12.9091 10.7112 12.9091 8C12.9091 5.47315 11 3.3922 8.54545 3.12087Z\" fill-opacity=\"0.65\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"AWopmtHbRv8T8jW_CyFeH\"><rect width=\"16\" height=\"16\" rx=\"2\" /><path d=\"M5.844 11.57a.47.47 0 0 1-.407-.237L3.57 8.069a.469.469 0 1 1 .815-.465l1.56 2.733L11.7 4.564a.47.47 0 0 1 .664.662l-6.166 6.185-.023.023a.468.468 0 0 1-.331.137z\" fill=\"#fff\" /></symbol><symbol viewBox=\"0 0 64 41\" id=\"AjBeZr7HSQVOpvHL8gGzv\"><g transform=\"translate(0 1)\" fill=\"none\" fill-rule=\"evenodd\"><ellipse fill=\"#F5F5F5\" cx=\"32\" cy=\"33\" rx=\"32\" ry=\"7\" /><g fill-rule=\"nonzero\" stroke=\"#D9D9D9\"><path d=\"M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z\" /><path d=\"M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z\" fill=\"#FAFAFA\" /></g></g></symbol><symbol viewBox=\"0 0 14 14\" id=\"BmqupW4RbA_ofFqTTCJl6\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.333 1.167h9.334c.644 0 1.166.522 1.166 1.166V7c0 .644-.522 1.167-1.166 1.167H2.333A1.167 1.167 0 011.167 7V2.333c0-.644.522-1.166 1.166-1.166zm0 1.166V7h9.334V2.333H2.333zm10.5 7V10.5H1.167V9.333h11.666zm0 2.334v1.166H1.167v-1.166h11.666z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"CsgprEbbzu5y7v2fyIjR5\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 13.42A6.42 6.42 0 117 .58a6.42 6.42 0 010 12.84zm0-1.17a5.25 5.25 0 100-10.5 5.25 5.25 0 000 10.5zM5.66 8.92l-.82.83L2.09 7l2.75-2.75.82.83L3.74 7l1.92 1.92zm2.68-3.84l.82-.83L11.91 7 9.16 9.75l-.82-.83L10.26 7 8.34 5.08zM6.99 10.6l-1.15-.2 1.17-7 1.15.2-1.17 7z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"EvCDSHD3chTYzTgQi_aG_\">\n    <path d=\"M11.266 0H2.734a.984.984 0 0 0-.984.984v12.032c0 .544.44.984.984.984h8.532c.544 0 .984-.44.984-.984V.984A.984.984 0 0 0 11.266 0zm0 12.893H2.734V9.557c0 .006.006.013.014.013h8.504a.014.014 0 0 0 .014-.013v3.336zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V5.264c0 .007.006.013.014.013h8.504a.014.014 0 0 0 .014-.013V8.6zm0-4.293a.014.014 0 0 0-.014-.014H2.748a.014.014 0 0 0-.014.014V.984h8.532v3.323zm-7.37 6.918a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0zm0-4.293a.492.492 0 1 0 .985 0 .492.492 0 0 0-.985 0z\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"FoajdVsxHTLdiLzrjePkz\"><rect y=\"3\" width=\"16\" height=\"2\" rx=\"1\" /><rect y=\"7\" width=\"11\" height=\"2\" rx=\"1\" /><rect y=\"11\" width=\"7\" height=\"2\" rx=\"1\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"GEi01RQkwoYnlO1TCCnEE\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.8521 7.0442a.6363.6363 0 10-.977-.8156C12.7541 7.5716 10.5797 8.5455 8 8.5455s-4.754-.974-5.8751-2.317a.6364.6364 0 10-.977.8157c.3197.383.698.7343 1.125 1.0486v1.089a.6364.6364 0 001.2727 0v-.3295a9.29 9.29 0 001.2727.4968v1.1054a.6363.6363 0 001.2727 0v-.7999a10.994 10.994 0 001.273.1458l-.0003.0178v1.2728a.6363.6363 0 001.2728 0V9.8182l-.0003-.0178c.4337-.0244.859-.0736 1.273-.1458v.7999a.6364.6364 0 001.2728 0V9.3491a9.2909 9.2909 0 001.2727-.497v.3297a.6363.6363 0 101.2727 0V8.0926c.4268-.3143.8051-.6655 1.1247-1.0484z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"Gt7D_6w9k5vf1ZUPMVj6E\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.8 1.54v2.28h2.29L8.8 1.54zm2.55 3.55H8.8c-.7 0-1.27-.57-1.27-1.27V1.27h-5.1v11.46h8.92V5.09zM2.44 0h6.63l3.55 3.55v9.18c0 .7-.57 1.27-1.27 1.27H2.44c-.7 0-1.27-.57-1.27-1.27V1.27C1.17.57 1.74 0 2.44 0z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"HF2ARSFsBv5Ike7_XYtzu\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#fff\" stroke=\"#D9D9D9\" /><path d=\"M5 5h6v6H5z\" /></symbol><symbol viewBox=\"0 0 48 48\" id=\"IdWcWpdAnW6soIxOjgDEK\"><path d=\"M47.907 19.837l-.013-.05-7.19-18.064A2.471 2.471 0 0038.348 0H9.204C8.114 0 7.147.716 6.84 1.749L.118 19.629l-.02.044-.012.05c-.083.31-.109.628-.064.938a4.828 4.828 0 00-.013.304v23.183C.009 46.27 1.759 48 3.905 48h40.19c2.146 0 3.895-1.73 3.902-3.852V20.965c0-.082 0-.165-.007-.234.026-.31 0-.609-.083-.894zm-18.954-2.724l-.02.995c-.05 2.845-2.037 4.758-4.94 4.758-1.416 0-2.633-.45-3.511-1.305-.878-.856-1.359-2.047-1.384-3.453l-.02-.995H5.892l5.095-12.247h25.58L41.8 17.113H28.953zm-24.03 4.866h10.08c1.557 3.618 4.87 5.753 8.997 5.753 2.16 0 4.165-.596 5.786-1.724 1.422-.988 2.531-2.37 3.249-4.03h10.028v21.156H4.923V21.98z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"NL99d3kJ9EVQfibyIOD7b\"><path d=\"M15.17 14.37l-3.21-3.21a6 6 0 1 0-.8.8l3.21 3.2a.56.56 0 0 0 .8 0 .57.57 0 0 0 0-.79zm-5.94-2.54a4.82 4.82 0 0 1-3.8 0A4.86 4.86 0 0 1 3.9 3.89a4.86 4.86 0 1 1 6.89 6.89c-.45.45-.97.8-1.55 1.05z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"NMRBGrejLwTNAkdgBsBvy\"><path d=\"M13.4531 7.5469a.5468.5468 0 100-1.0938h-1.6042V5.3958h1.6042a.5468.5468 0 100-1.0938h-1.6042V2.698a.5468.5468 0 00-.5469-.547H9.698V.547a.5468.5468 0 10-1.0938 0V2.151H7.5469V.5469a.5468.5468 0 10-1.0938 0V2.151H5.3958V.5469a.5468.5468 0 10-1.0938 0V2.151H2.698a.5468.5468 0 00-.547.5469v1.6042H.547a.5468.5468 0 100 1.0937H2.151v1.0572H.5469a.5468.5468 0 100 1.0938H2.151v1.0573H.5469a.5468.5468 0 100 1.0938H2.151v1.6042c0 .3019.2448.5468.5469.5468h1.6042v1.6041a.5468.5468 0 101.0937 0v-1.6042h1.0572v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.0573v1.6042a.5468.5468 0 101.0938 0v-1.6042h1.604a.5468.5468 0 00.5469-.5469V9.6979h1.6042a.5468.5468 0 100-1.0938h-1.6042V7.5469h1.6042zm-2.6979 3.2083H3.2448V3.2448h7.5105v7.5104h-.0001z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"NP1FrHSpzT6ajNlMkInS-\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.8317 7.6849a1.3328 1.3328 0 010 1.2968c-1.5475 2.7806-4.4621 4.6848-7.8316 4.6848-3.3697 0-6.2844-1.9042-7.8318-4.6848a1.3333 1.3333 0 010-1.2968C1.7157 4.9042 4.6303 3 8 3c3.3695 0 6.2841 1.9042 7.8316 4.6849zM8.0001 4.3333c2.8486 0 5.3357 1.6088 6.6665 4-1.3308 2.3911-3.8179 3.9999-6.6666 3.9999s-5.3359-1.6088-6.6665-4C2.664 5.9422 5.1513 4.3334 8 4.3334zm1.3333 4c0 .7364-.597 1.3333-1.3333 1.3333-.7364 0-1.3334-.597-1.3334-1.3333C6.6667 7.5969 7.2637 7 8.0001 7c.7363 0 1.3333.5969 1.3333 1.3333zm1.3333 0c0 1.4728-1.1939 2.6666-2.6667 2.6666-1.4727 0-2.6666-1.1938-2.6666-2.6666 0-1.4728 1.1939-2.6667 2.6666-2.6667 1.4728 0 2.6667 1.1939 2.6667 2.6667z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"NTdMwALongwwm-LGRTc9Y\"><path d=\"M11.2063 4.78438C10.9859 4.56563 10.6297 4.56563 10.4109 4.78594L8 7.20312L5.58906 4.78594C5.37031 4.56563 5.01406 4.56563 4.79375 4.78438C4.57344 5.00313 4.57344 5.35938 4.79219 5.57969L7.20625 8L4.79219 10.4203C4.57344 10.6406 4.57344 10.9969 4.79375 11.2156C4.90313 11.325 5.04688 11.3797 5.19063 11.3797C5.33437 11.3797 5.47969 11.325 5.58906 11.2141L8 8.79688L10.4109 11.2156C10.5203 11.3266 10.6656 11.3813 10.8094 11.3813C10.9531 11.3813 11.0969 11.3266 11.2063 11.2172C11.4266 10.9984 11.4266 10.6422 11.2078 10.4219L8.79375 8L11.2063 5.57969C11.4266 5.35938 11.4266 5.00313 11.2063 4.78438ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"NybEh1NBUkx9mOSJf08Lp\"><g clip-path=\"url(#NybEh1NBUkx9mOSJf08Lp_clip0)\"><path d=\"M13.104 2.375h-.625V1.333h-1.041v1.042H4.563V1.333H3.52v1.042h-.625c-.862 0-1.563.7-1.563 1.562v9.167c0 .862.701 1.563 1.563 1.563h10.208c.862 0 1.563-.701 1.563-1.563V3.937c0-.861-.701-1.562-1.563-1.562zM2.896 3.417h.625v1.041h1.042V3.417h6.875v1.041h1.041V3.417h.625c.287 0 .521.233.521.52v1.25H2.375v-1.25c0-.287.234-.52.52-.52zm10.208 10.208H2.896a.521.521 0 0 1-.521-.52V6.228h11.25v6.875c0 .287-.234.52-.52.52zM9.563 12.53h3.124V9.406H9.563v3.125zm1.041-2.083h1.042v1.041h-1.042v-1.041z\" /></g><defs></defs></symbol><clipPath id=\"NybEh1NBUkx9mOSJf08Lp_clip0\"><path transform=\"translate(1.333 1.333)\" d=\"M0 0h13.333v13.333H0z\" /></clipPath><symbol viewBox=\"0 0 16 16\" id=\"OTQbFd9rahm7EhG-G6q0M\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.646 4H9.6v1.6h5.6V0h-1.6v2.616C12.22.946 10.243 0 8 0a8 8 0 108 8h-1.6A6.4 6.4 0 118 1.6c1.915 0 3.557.863 4.646 2.4z\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"P6THpZEJE7wmVapsujCvg\"><path d=\"M6 .844a5.126 5.126 0 013.646 1.51A5.13 5.13 0 0111.156 6a5.128 5.128 0 01-1.51 3.646A5.13 5.13 0 016 11.156a5.128 5.128 0 01-3.646-1.51A5.13 5.13 0 01.844 6a5.126 5.126 0 011.51-3.646A5.13 5.13 0 016 .844zM6 0a6 6 0 100 12A6 6 0 106 0zm0 7.5a.469.469 0 01-.469-.469V2.707a.469.469 0 11.938 0v4.324c0 .26-.21.469-.469.469zm-.527 1.277a.527.527 0 101.054 0 .527.527 0 00-1.054 0z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"QEFxJJANMPn8cwXezSMA8\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 14s5-5.753 5-8.688C12 2.378 9.761 0 7 0S2 2.378 2 5.313C2 8.247 7 14 7 14zm0-7a2 2 0 100-4 2 2 0 000 4z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"QoLCXkhoTafIlkJ_hQJ6p\">\n    <path d=\"M11.935 6.698a3.034 3.034 0 0 0-.899-.609c.386-.198.717-.487.964-.843.302-.434.462-.94.462-1.467 0-1.44-1.2-2.612-2.677-2.612-.559 0-1.094.166-1.548.48a2.617 2.617 0 0 0-.898 1.07 2.698 2.698 0 0 0-1.961-.834C3.902 1.883 2.7 3.055 2.7 4.496c0 .526.16 1.032.462 1.466.247.356.578.644.964.844-.333.147-.635.351-.899.61a2.916 2.916 0 0 0-.895 2.098v2.14c0 .65.542 1.18 1.21 1.18h3.673c.485 0 .923-.287 1.112-.718h3.297c.665 0 1.209-.528 1.209-1.18v-2.14a2.925 2.925 0 0 0-.899-2.098zM8.562 2.585c.326-.32.76-.495 1.223-.495.463 0 .897.175 1.223.495a1.657 1.657 0 0 1 0 2.387c-.326.32-.76.495-1.223.495-.463 0-.897-.175-1.223-.495a1.652 1.652 0 0 1-.507-1.193c0-.452.18-.876.507-1.194zm-4.916 1.91c0-.451.18-.875.507-1.193.326-.32.76-.495 1.223-.495.464 0 .898.175 1.224.495a1.656 1.656 0 0 1 0 2.387c-.326.32-.76.495-1.224.495-.461 0-.897-.175-1.224-.495a1.658 1.658 0 0 1-.506-1.193zm3.828 7.157a.262.262 0 0 1-.26.255H3.54a.258.258 0 0 1-.261-.255V9.514c0-.544.218-1.057.616-1.445a2.108 2.108 0 0 1 1.481-.602 2.108 2.108 0 0 1 1.5.62l.003.005c.384.384.595.89.595 1.424v2.137zM7.24 7.167a3.022 3.022 0 0 0-.612-.362 2.656 2.656 0 0 0 1.195-1.248c.205.214.445.395.71.531a3.04 3.04 0 0 0-1.293 1.08zm4.643 3.77c0 .14-.117.254-.26.254h-3.2V9.513c0-.588-.177-1.153-.51-1.639a2.107 2.107 0 0 1 1.872-1.125c.558 0 1.084.213 1.482.602.398.388.616.901.616 1.445v2.14z\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"Qy53H_REm9dWnze54nDVA\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.2 11.2v3.2c0 .922-.678 1.6-1.6 1.6h-8C.678 16 0 15.322 0 14.4v-8c0-.922.678-1.6 1.6-1.6h3.2V1.6C4.8.678 5.478 0 6.4 0h8c.922 0 1.6.678 1.6 1.6v8c0 .922-.678 1.6-1.6 1.6h-3.2zm-1.6 0H6.4c-.922 0-1.6-.678-1.6-1.6V6.4H1.6v8h8v-3.2zM6.4 1.6v8h8v-8h-8z\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"R7sKPb1zB-oRbvmT-g9nj\"><path d=\"M3.5 0h9.1c.773 0 1.4.632 1.4 1.412v1.413c0 .78-.627 1.412-1.4 1.412h-.056l-.644 7.767c0 .78-.627 1.413-1.4 1.413h-7c-.773 0-1.4-.633-1.398-1.354l-.646-7.826H1.4c-.773 0-1.4-.632-1.4-1.412V1.412C0 .632.627 0 1.4 0h2.1zm0 1.412H1.4v1.413h11.2V1.412H3.5zm-.64 2.825l.64 7.767h7l.002-.058.637-7.71H2.861z\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"S86-eE_WUzLbQjL1Bzwgv\"><path d=\"M11.27 5.15l-.04-.28-.86-.29a4.54 4.54 0 0 0-.28-.67l.4-.81-.16-.24a5.48 5.48 0 0 0-1.2-1.2L8.9 1.5l-.81.4a4.6 4.6 0 0 0-.68-.27L7.12.77 6.86.73A5.3 5.3 0 0 0 6 .66c-.26 0-.53.02-.85.07l-.28.04-.28.86a4.75 4.75 0 0 0-.68.28l-.81-.4-.23.16a5.37 5.37 0 0 0-1.2 1.2l-.16.23.4.81c-.1.22-.2.45-.28.68l-.86.28-.04.28a5.3 5.3 0 0 0 0 1.7l.04.28.86.29c.08.23.17.46.28.67l-.4.81.17.23a5.43 5.43 0 0 0 1.2 1.2l.22.16.81-.4c.22.1.44.2.68.28l.28.86.28.04a5.28 5.28 0 0 0 1.7 0l.28-.04.28-.86c.23-.08.46-.17.68-.28l.8.4.24-.16c.25-.18.46-.36.65-.55a5.39 5.39 0 0 0 .55-.65l.16-.23-.4-.81c.1-.22.2-.44.28-.68l.86-.28.04-.28c.05-.31.07-.59.07-.85a4.74 4.74 0 0 0-.07-.85zM10.5 6c0 .16 0 .32-.03.5l-.41.14-.37.12-.11.37c-.07.21-.15.42-.26.62l-.18.34.37.73a4.25 4.25 0 0 1-.32.37l-.37.33-.73-.37-.34.18c-.2.1-.42.19-.63.26l-.37.11-.12.36-.13.42a3.98 3.98 0 0 1-.99 0l-.14-.42-.12-.36-.37-.12a3.52 3.52 0 0 1-.61-.25l-.34-.18-.35.17-.4.2a4.16 4.16 0 0 1-.68-.7l.36-.73-.18-.34a3.6 3.6 0 0 1-.25-.62l-.12-.37-.78-.26a3.99 3.99 0 0 1 0-.98l.78-.26.11-.37c.07-.2.16-.42.26-.62l.18-.34-.17-.34-.2-.4c.2-.25.44-.48.7-.69l.73.37.34-.18c.2-.1.4-.19.62-.26l.37-.11.12-.37.14-.41a4.35 4.35 0 0 1 .98 0l.26.78.37.1c.21.08.42.16.62.27l.34.17.73-.36a4.6 4.6 0 0 1 .7.7l-.36.72.17.34c.1.2.2.42.26.63l.12.37.36.12.41.14c.03.17.04.33.03.48zM6 3.96A2.04 2.04 0 0 0 3.96 6c0 1.13.92 2.04 2.04 2.04A2.04 2.04 0 0 0 8.04 6 2.04 2.04 0 0 0 6 3.96zm.85 2.89A1.2 1.2 0 0 1 6 7.2c-.32 0-.62-.13-.85-.35A1.2 1.2 0 0 1 4.8 6c0-.32.13-.62.36-.85a1.2 1.2 0 0 1 1.69 0 1.2 1.2 0 0 1 0 1.7z\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"SREGuW4l5FMvhld6pT4h6\"><path d=\"M6.653 5.999l2.986-2.984a.46.46 0 10-.652-.651L6 5.346 3.013 2.363a.46.46 0 10-.652.651l2.986 2.984-2.986 2.984a.46.46 0 10.652.652L6 6.65l2.987 2.985a.458.458 0 00.652 0 .46.46 0 000-.651L6.653 5.999z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"SiTwDEj7AhRNYzO2JMHT7\"><path d=\"M2 10h12V8.67H2V10zm0 2.67h12v-1.34H2v1.34zm0-5.34h12V6H2v1.33zm0-4v1.34h12V3.33H2z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"SxBMdP0QgfmEDhekH8NrH\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\" /></symbol><symbol viewBox=\"0 0 128 128\" id=\"TFipkHSZkHDS2oHx8oAMi\"><g><circle cx=\"16\" cy=\"64\" r=\"16\" /><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\" /><animateTransform attributeName=\"transform\" type=\"rotate\" values=\"0 64 64;315 64 64;270 64 64;225 64 64;180 64 64;135 64 64;90 64 64;45 64 64\" calcMode=\"discrete\" dur=\"720ms\" repeatCount=\"indefinite\" /></g></symbol><symbol viewBox=\"0 0 16 16\" id=\"UvWlsogDLPunIRud9tm9w\">\n<path d=\"M5 4L12 8L5 12V4Z\" fill-opacity=\"0.65\" />\n</symbol><symbol viewBox=\"0 0 16 16\" id=\"VQ5doFLrtMPv4Wr3Jojus\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" /><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"VXBcTX1M_-1zl4RgVXnnQ\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" /><rect x=\"4\" y=\"4\" width=\"8\" height=\"8\" rx=\"4\" stroke=\"rgba(0,0,0,0)\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"Wevz__2tlMxqyyqN8by2A\"><path d=\"M15.7 7.14l-4.98-3.97c-.51-.4-1.29-.04-1.29.62v1.33c0 .42-.28.8-.7.8H.76a.75.75 0 00-.77.75v2.09c0 .4.35.77.77.77H8.7c.43 0 .71.34.71.76v1.33c0 .65.78 1 1.28.6l4.98-3.86c.41-.3.43-.9.03-1.22z\" /></symbol><symbol viewBox=\"0 0 42 8\" id=\"WuHTn_9bWyqm1yVoFKxfi\"><path d=\"M16.5 5.66h-2.47V1h-1.18v5.64h3.64v-.98zM20.93 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1h-3.74v5.64h3.74v-.98zM25.47 6.64h1.25L24.76 1h-1.39l-1.95 5.64h1.2l.44-1.37h1.98l.43 1.37zm-1.43-4.56h.02l.73 2.3H23.3l.73-2.3zM27.3 1v5.64h2.15c1.7 0 2.7-1.05 2.7-2.84 0-1.8-1-2.8-2.7-2.8H27.3zm1.18.97h.83c1.04 0 1.63.65 1.63 1.83 0 1.22-.57 1.86-1.63 1.86h-.83V1.97zM36.64 5.66h-2.56V4.24h2.41v-.9h-2.4V1.96h2.55V1H32.9v5.64h3.74v-.98zM38.67 1.92h1c.59 0 .95.35.95.9 0 .56-.34.9-.94.9h-1.01v-1.8zm0 2.65h.94l1.05 2.07H42L40.81 4.4a1.66 1.66 0 0 0 1.03-1.6c0-1.12-.75-1.8-2.04-1.8h-2.31v5.64h1.18V4.57zM.89 5.43L0 0l2.44 3.46L4 0l1.56 3.46L8 0l-.89 5.43H.9zM7.1 6.91c0 .28-.2.5-.44.5H1.33C1.1 7.4.9 7.19.9 6.9v-.49H7.1v.5z\" fill=\"#F5222D\" /></symbol><symbol viewBox=\"0 0 14 59\" id=\"XqoDAyUExUakv-bonPn9h\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\" /><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#fff\" fill-opacity=\".65\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"ZGwuc36jhSs6h6gFfFZIJ\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.273 6.352v5.185h11.454V6.352H1.273zm0-1.296h11.454V3.759h-5.73c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v2.593zm11.454-2.593c.703 0 1.273.58 1.273 1.296v7.778c0 .716-.57 1.296-1.273 1.296H1.273C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h5.726z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 120 96\" id=\"abIIvgo5IqhJFDQaP2qjl\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M79.382 57.127l.28.162c.093.054.186.108.279.16 4.903 2.831 7.657 4.42 9.082 6.188 2.381 2.952 2.381 6.36 0 9.312-1.425 1.767-4.179 3.356-9.082 6.187l-.559.323c-4.903 2.83-7.657 4.42-10.717 5.243-5.114 1.374-11.017 1.374-16.13 0-3.061-.823-5.815-2.413-10.718-5.243l-.558-.323c-4.904-2.83-7.658-4.42-9.083-6.187-2.381-2.952-2.381-6.36 0-9.312 1.425-1.767 4.179-3.357 9.083-6.187l.279-.161.279-.162c4.903-2.83 7.657-4.42 10.718-5.243 5.113-1.375 11.017-1.375 16.13 0 3.06.823 5.814 2.413 10.717 5.243zm-1.8 1.361c-5.259-3.036-7.629-4.386-10.158-5.066-4.327-1.163-9.322-1.163-13.649 0-2.529.68-4.899 2.03-10.159 5.067-5.26 3.036-7.598 4.404-8.775 5.864-2.015 2.498-2.015 5.382 0 7.88 1.177 1.46 3.515 2.828 8.775 5.864 5.26 3.037 7.63 4.387 10.16 5.067 4.326 1.163 9.321 1.163 13.648 0 2.53-.68 4.899-2.03 10.159-5.067 5.26-3.036 7.598-4.404 8.776-5.864 2.014-2.498 2.014-5.382 0-7.88-1.178-1.46-3.516-2.828-8.776-5.864z\" fill=\"#8E9199\" /><g filter=\"url(#abIIvgo5IqhJFDQaP2qjl_filter0_b)\"><rect width=\"58.888\" height=\"58.888\" rx=\"12\" transform=\"scale(1.22477 .70706) rotate(45 -9.64 73.966)\" fill=\"#e3e3e3\" /></g><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M82.427 17.268l.107.062c3.867 2.232 6.84 3.948 8.99 5.44 2.175 1.506 3.605 2.846 4.29 4.344.845 1.846.845 3.787 0 5.634-.685 1.497-2.115 2.837-4.29 4.344-2.15 1.491-5.123 3.207-8.99 5.44l-.107.062c-3.867 2.232-6.84 3.948-9.423 5.19-2.61 1.255-4.931 2.08-7.525 2.476-3.198.488-6.56.488-9.759 0-2.594-.396-4.915-1.221-7.525-2.476-2.583-1.242-5.556-2.958-9.422-5.19l-.108-.063c-3.867-2.232-6.84-3.948-8.99-5.439-2.174-1.507-3.604-2.847-4.29-4.344-.844-1.847-.844-3.788 0-5.634.686-1.498 2.116-2.838 4.29-4.345 2.15-1.49 5.123-3.207 8.99-5.44l.108-.061c3.866-2.232 6.839-3.949 9.422-5.19 2.61-1.255 4.931-2.08 7.525-2.476a32.73 32.73 0 019.759 0c2.594.395 4.915 1.22 7.525 2.476 2.583 1.241 5.556 2.958 9.423 5.19zm-11.303-3.886c-2.453-1.18-4.388-1.834-6.396-2.14a27.696 27.696 0 00-8.257 0c-2.007.306-3.943.96-6.395 2.14-2.468 1.186-5.348 2.847-9.279 5.117s-6.809 3.932-8.864 5.356c-2.042 1.416-3.175 2.533-3.706 3.692-.714 1.562-.714 3.205 0 4.767.53 1.16 1.664 2.277 3.706 3.692 2.055 1.425 4.933 3.087 8.864 5.357 3.931 2.27 6.811 3.93 9.279 5.117 2.452 1.179 4.388 1.833 6.395 2.14 2.706.412 5.551.412 8.257 0 2.008-.307 3.944-.961 6.396-2.14 2.467-1.187 5.347-2.848 9.278-5.117 3.931-2.27 6.809-3.932 8.864-5.357 2.042-1.415 3.176-2.533 3.706-3.692.715-1.562.715-3.205 0-4.767-.53-1.159-1.664-2.276-3.706-3.692-2.055-1.424-4.933-3.087-8.864-5.356-3.931-2.27-6.81-3.93-9.278-5.117z\" fill=\"#8E9199\" /><defs><filter id=\"abIIvgo5IqhJFDQaP2qjl_filter0_b\" x=\"-8.313\" y=\"-.348\" width=\"137.824\" height=\"99.856\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter></defs></symbol><symbol viewBox=\"0 0 16 16\" id=\"aieVa99vEbpBpzs9yML4I\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"1.5\" fill=\"#F3F3F3\" stroke=\"#D9D9D9\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"ani3i4NSiqFXm6SIFooTm\"><circle cx=\"2\" cy=\"8\" r=\"2\" /><circle cx=\"8\" cy=\"8\" r=\"2\" /><circle cx=\"14\" cy=\"8\" r=\"2\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"b0VOmaH3KewYwTuT2FjzX\"><path d=\"M12.436 6.298h-9.15c-.003 0-.004-.003-.003-.003l3.452-3.318a.701.701 0 1 0-.973-1.011L1.063 6.482a.705.705 0 0 0 0 1.01l4.725 4.542a.699.699 0 0 0 .992-.02.702.702 0 0 0-.02-.991L3.31 7.705c-.002-.002 0-.003.002-.003h9.14a.702.702 0 0 0 .701-.659.712.712 0 0 0-.716-.745z\" /></symbol><symbol viewBox=\"0 0 154 35\" fill=\"none\" id=\"bZCWaFcABP1nv9jpktnu8\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4742 5.77991C15.5251 4.60997 16.5505 4.025 17.6765 4.025C18.8025 4.025 19.8279 4.60997 21.8788 5.77991L25.8478 8.04408C27.8986 9.21402 28.924 9.79899 29.487 10.7625C30.05 11.726 30.05 12.896 30.05 15.2358V19.7642C30.05 22.104 30.05 23.274 29.487 24.2375C28.924 25.201 27.8986 25.786 25.8478 26.9559L21.8787 29.2201C19.8279 30.39 18.8025 30.975 17.6765 30.975C16.5505 30.975 15.525 30.39 13.4742 29.2201L9.50522 26.9559C7.45437 25.786 6.42894 25.201 5.86595 24.2375C5.30295 23.274 5.30295 22.104 5.30295 19.7642V15.2358C5.30295 12.896 5.30295 11.726 5.86595 10.7625C6.42894 9.79899 7.45437 9.21402 9.50522 8.04408L13.4742 5.77991ZM12.5503 12.775C12.2574 12.775 12.02 13.01 12.02 13.3V15.1537C12.02 15.4437 12.2574 15.6787 12.5503 15.6787H15.6797C15.9726 15.6787 16.21 15.9138 16.21 16.2037V23.45C16.21 23.74 16.4474 23.975 16.7403 23.975H18.6127C18.9056 23.975 19.143 23.74 19.143 23.45V16.2037C19.143 15.9138 19.3804 15.6787 19.6733 15.6787H22.8027C23.0955 15.6787 23.333 15.4437 23.333 15.1537V13.3C23.333 13.0101 23.0955 12.775 22.8027 12.775H12.5503Z\" fill=\"white\" />\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 16.6393C0 8.79548 0 4.87355 2.46135 2.43678C4.9227 0 8.88419 0 16.8072 0H18.5458C26.4688 0 30.4303 0 32.8916 2.43678C35.353 4.87355 35.353 8.79548 35.353 16.6393V18.3607C35.353 26.2045 35.353 30.1264 32.8916 32.5632C30.4303 35 26.4688 35 18.5458 35H16.8072C8.88419 35 4.9227 35 2.46135 32.5632C0 30.1264 0 26.2045 0 18.3607V16.6393ZM16.8072 1.05H18.5458C22.5373 1.05 25.4242 1.05223 27.6255 1.34523C29.7963 1.63418 31.1409 2.18846 32.1417 3.17924C33.1425 4.17002 33.7023 5.50118 33.9942 7.65031C34.2901 9.82965 34.2924 12.6877 34.2924 16.6393V18.3607C34.2924 22.3123 34.2901 25.1704 33.9942 27.3497C33.7023 29.4988 33.1425 30.83 32.1417 31.8208C31.1409 32.8115 29.7963 33.3658 27.6255 33.6548C25.4242 33.9478 22.5373 33.95 18.5458 33.95H16.8072C12.8157 33.95 9.92878 33.9478 7.72747 33.6548C5.55666 33.3658 4.21207 32.8115 3.2113 31.8208C2.21053 30.83 1.65066 29.4988 1.3588 27.3497C1.06284 25.1704 1.06059 22.3123 1.06059 18.3607V16.6393C1.06059 12.6877 1.06284 9.82965 1.3588 7.65031C1.65066 5.50118 2.21053 4.17002 3.2113 3.17924C4.21207 2.18846 5.55666 1.63418 7.72747 1.34523C9.92878 1.05223 12.8157 1.05 16.8072 1.05Z\" fill=\"white\" />\n<path d=\"M56.2221 26.4252H53.2949V12.0559H47.4404V9.39941H62.0766V12.0559H56.2221V26.4252Z\" fill=\"white\" />\n<path d=\"M66.6505 13.6257C68.2768 13.6257 69.5534 14.1328 70.4803 15.1471C71.4236 16.1453 71.8952 17.5541 71.8952 19.3734V26.4252H69.8217L69.2363 24.4449C68.8785 25.0406 68.35 25.5638 67.6507 26.0146C66.9514 26.4493 66.122 26.6667 65.1625 26.6667C64.3169 26.6667 63.5526 26.4976 62.8695 26.1595C62.2028 25.8214 61.6824 25.3465 61.3084 24.7347C60.9343 24.1229 60.7473 23.4306 60.7473 22.6578C60.7473 21.4664 61.2189 20.5165 62.1621 19.8081C63.1216 19.0836 64.512 18.7213 66.3334 18.7213H69.0655C69.0005 17.8841 68.7403 17.224 68.2849 16.741C67.8458 16.2419 67.2523 15.9924 66.5042 15.9924C65.9025 15.9924 65.3821 16.1373 64.943 16.4271C64.5039 16.7169 64.1787 17.0711 63.9673 17.4897L61.3815 17.055C61.6905 15.9924 62.3248 15.1552 63.2842 14.5434C64.26 13.9316 65.3821 13.6257 66.6505 13.6257ZM65.8212 24.3241C66.7969 24.3241 67.5856 24.0102 68.1873 23.3823C68.789 22.7544 69.0899 21.9252 69.0899 20.8948H66.431C64.5283 20.8948 63.577 21.4422 63.577 22.537C63.577 23.0844 63.7802 23.5191 64.1868 23.8411C64.5934 24.1631 65.1381 24.3241 65.8212 24.3241Z\" fill=\"white\" />\n<path d=\"M74.9384 26.4252V13.8672H77.0363L77.573 15.6784C77.9795 15.0183 78.4593 14.5514 79.0122 14.2777C79.5814 14.004 80.2644 13.8672 81.0612 13.8672H81.5979L81.8418 16.5237H80.2318C78.5731 16.5237 77.7437 17.3528 77.7437 19.0111V26.4252H74.9384Z\" fill=\"white\" />\n<path d=\"M88.3761 13.6257C90.0023 13.6257 91.2789 14.1328 92.2058 15.1471C93.1491 16.1453 93.6207 17.5541 93.6207 19.3734V26.4252H91.5472L90.9618 24.4449C90.604 25.0406 90.0755 25.5638 89.3762 26.0146C88.6769 26.4493 87.8475 26.6667 86.8881 26.6667C86.0424 26.6667 85.2781 26.4976 84.5951 26.1595C83.9283 25.8214 83.4079 25.3465 83.0339 24.7347C82.6598 24.1229 82.4728 23.4306 82.4728 22.6578C82.4728 21.4664 82.9444 20.5165 83.8876 19.8081C84.8471 19.0836 86.2376 18.7213 88.0589 18.7213H90.791C90.726 17.8841 90.4658 17.224 90.0104 16.741C89.5713 16.2419 88.9778 15.9924 88.2297 15.9924C87.628 15.9924 87.1076 16.1373 86.6685 16.4271C86.2294 16.7169 85.9042 17.0711 85.6928 17.4897L83.107 17.055C83.416 15.9924 84.0503 15.1552 85.0097 14.5434C85.9855 13.9316 87.1076 13.6257 88.3761 13.6257ZM87.5467 24.3241C88.5224 24.3241 89.3111 24.0102 89.9128 23.3823C90.5146 22.7544 90.8154 21.9252 90.8154 20.8948H88.1565C86.2538 20.8948 85.3025 21.4422 85.3025 22.537C85.3025 23.0844 85.5057 23.5191 85.9123 23.8411C86.3189 24.1631 86.8637 24.3241 87.5467 24.3241Z\" fill=\"white\" />\n<path d=\"M96.664 26.4252V13.8672H98.7618L99.3229 15.7509C99.7294 15.0908 100.266 14.5756 100.933 14.2053C101.616 13.8189 102.348 13.6257 103.128 13.6257C104.039 13.6257 104.86 13.8511 105.592 14.3019C106.324 14.7527 106.901 15.3725 107.324 16.1614C107.747 16.9503 107.958 17.8439 107.958 18.8421V26.4252H105.153V19.156C105.153 18.2544 104.893 17.5219 104.372 16.9584C103.852 16.3949 103.185 16.1131 102.372 16.1131C101.526 16.1131 100.827 16.4029 100.274 16.9825C99.7375 17.546 99.4692 18.2705 99.4692 19.156V26.4252H96.664Z\" fill=\"white\" />\n<path d=\"M118.567 24.0102L118.323 26.4252H115.957C114.574 26.4252 113.525 26.1032 112.81 25.4592C112.094 24.7991 111.737 23.8492 111.737 22.6095V16.2822H109.663V13.8672H111.737L112.444 10.2447H114.542V13.8672H118.323V16.2822H114.542V22.6095C114.542 23.5433 115.013 24.0102 115.957 24.0102H118.567Z\" fill=\"white\" />\n<path d=\"M126.583 26.6667C125.282 26.6667 124.111 26.393 123.07 25.8456C122.046 25.2821 121.241 24.5093 120.655 23.5272C120.086 22.529 119.802 21.402 119.802 20.1462C119.802 18.8904 120.086 17.7714 120.655 16.7893C121.241 15.7911 122.046 15.0183 123.07 14.4709C124.111 13.9074 125.282 13.6257 126.583 13.6257C127.884 13.6257 129.047 13.9074 130.071 14.4709C131.112 15.0183 131.917 15.7911 132.486 16.7893C133.072 17.7714 133.364 18.8904 133.364 20.1462C133.364 21.402 133.072 22.529 132.486 23.5272C131.917 24.5093 131.112 25.2821 130.071 25.8456C129.047 26.393 127.884 26.6667 126.583 26.6667ZM126.583 24.1309C127.721 24.1309 128.648 23.7687 129.364 23.0442C130.079 22.3036 130.437 21.3376 130.437 20.1462C130.437 18.9548 130.079 17.9968 129.364 17.2723C128.648 16.5317 127.721 16.1614 126.583 16.1614C125.445 16.1614 124.518 16.5317 123.802 17.2723C123.087 17.9968 122.729 18.9548 122.729 20.1462C122.729 21.3376 123.087 22.3036 123.802 23.0442C124.518 23.7687 125.445 24.1309 126.583 24.1309Z\" fill=\"white\" />\n<path d=\"M141.853 26.6667C140.552 26.6667 139.381 26.393 138.34 25.8456C137.316 25.2821 136.511 24.5093 135.925 23.5272C135.356 22.529 135.071 21.402 135.071 20.1462C135.071 18.8904 135.356 17.7714 135.925 16.7893C136.511 15.7911 137.316 15.0183 138.34 14.4709C139.381 13.9074 140.552 13.6257 141.853 13.6257C143.154 13.6257 144.317 13.9074 145.341 14.4709C146.382 15.0183 147.187 15.7911 147.756 16.7893C148.342 17.7714 148.634 18.8904 148.634 20.1462C148.634 21.402 148.342 22.529 147.756 23.5272C147.187 24.5093 146.382 25.2821 145.341 25.8456C144.317 26.393 143.154 26.6667 141.853 26.6667ZM141.853 24.1309C142.991 24.1309 143.918 23.7687 144.634 23.0442C145.349 22.3036 145.707 21.3376 145.707 20.1462C145.707 18.9548 145.349 17.9968 144.634 17.2723C143.918 16.5317 142.991 16.1614 141.853 16.1614C140.714 16.1614 139.788 16.5317 139.072 17.2723C138.356 17.9968 137.999 18.9548 137.999 20.1462C137.999 21.3376 138.356 22.3036 139.072 23.0442C139.788 23.7687 140.714 24.1309 141.853 24.1309Z\" fill=\"white\" />\n<path d=\"M154 26.4252H151.195V9.39941H154V26.4252Z\" fill=\"white\" />\n</symbol><symbol viewBox=\"0 0 128 128\" id=\"cHNFL65MBzzZvcUD5n551\"><g><circle cx=\"16\" cy=\"64\" r=\"16\" /><circle cx=\"16\" cy=\"64\" r=\"14.34\" transform=\"rotate(45 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"12.53\" transform=\"rotate(90 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.75\" transform=\"rotate(135 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"10.06\" transform=\"rotate(180 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"8.06\" transform=\"rotate(225 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"6.44\" transform=\"rotate(270 64 64)\" /><circle cx=\"16\" cy=\"64\" r=\"5.38\" transform=\"rotate(315 64 64)\" /></g></symbol><symbol viewBox=\"0 0 16 16\" id=\"cUkoC4dCdpFsjt7saMFTS\"><path d=\"M7.5804 12.8625a.6211.6211 0 00.875 0l2.7839-2.7839a.6175.6175 0 000-.8732.6133.6133 0 00-.4357-.1804.6132.6132 0 00-.4357.1804l-1.7304 1.7303V.6179A.618.618 0 008.0196 0a.618.618 0 00-.6178.6179v10.3178L5.6714 9.2054c-.241-.2411-.6321-.2411-.8714 0a.6192.6192 0 00-.0018.8732l2.7822 2.7839zm7.8017-2.5696a.618.618 0 00-.6178.6178V14.4a.3685.3685 0 01-.3679.3679H1.6018a.3685.3685 0 01-.3679-.3679v-3.4911a.618.618 0 00-.6178-.6178c-.3411 0-.6161.2785-.6161.6178v3.9804c0 .6125.4982 1.1089 1.109 1.1089H14.891c.6125 0 1.1089-.4982 1.1089-1.1089v-3.9804c0-.3393-.2768-.616-.6179-.616z\" /></symbol><symbol viewBox=\"0 0 36 35\" fill=\"none\" id=\"czACxQmlft1fTTAtCQ6Tl\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4742 5.77991C15.5251 4.60997 16.5505 4.025 17.6765 4.025C18.8025 4.025 19.8279 4.60997 21.8788 5.77991L25.8478 8.04408C27.8986 9.21402 28.924 9.79899 29.487 10.7625C30.05 11.726 30.05 12.896 30.05 15.2358V19.7642C30.05 22.104 30.05 23.274 29.487 24.2375C28.924 25.201 27.8986 25.786 25.8478 26.9559L21.8787 29.2201C19.8279 30.39 18.8025 30.975 17.6765 30.975C16.5505 30.975 15.525 30.39 13.4742 29.2201L9.50522 26.9559C7.45437 25.786 6.42894 25.201 5.86595 24.2375C5.30295 23.274 5.30295 22.104 5.30295 19.7642V15.2358C5.30295 12.896 5.30295 11.726 5.86595 10.7625C6.42894 9.79899 7.45437 9.21402 9.50522 8.04408L13.4742 5.77991ZM12.5503 12.775C12.2574 12.775 12.02 13.01 12.02 13.3V15.1537C12.02 15.4437 12.2574 15.6787 12.5503 15.6787H15.6797C15.9726 15.6787 16.21 15.9138 16.21 16.2037V23.45C16.21 23.74 16.4474 23.975 16.7403 23.975H18.6127C18.9056 23.975 19.143 23.74 19.143 23.45V16.2037C19.143 15.9138 19.3804 15.6787 19.6733 15.6787H22.8027C23.0955 15.6787 23.333 15.4437 23.333 15.1537V13.3C23.333 13.0101 23.0955 12.775 22.8027 12.775H12.5503Z\" fill=\"white\" />\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 16.6393C0 8.79548 0 4.87355 2.46135 2.43678C4.9227 0 8.88419 0 16.8072 0H18.5458C26.4688 0 30.4303 0 32.8916 2.43678C35.353 4.87355 35.353 8.79548 35.353 16.6393V18.3607C35.353 26.2045 35.353 30.1264 32.8916 32.5632C30.4303 35 26.4688 35 18.5458 35H16.8072C8.88419 35 4.9227 35 2.46135 32.5632C0 30.1264 0 26.2045 0 18.3607V16.6393ZM16.8072 1.05H18.5458C22.5373 1.05 25.4242 1.05223 27.6255 1.34523C29.7963 1.63418 31.1409 2.18846 32.1417 3.17924C33.1425 4.17002 33.7023 5.50118 33.9942 7.65031C34.2901 9.82965 34.2924 12.6877 34.2924 16.6393V18.3607C34.2924 22.3123 34.2901 25.1704 33.9942 27.3497C33.7023 29.4988 33.1425 30.83 32.1417 31.8208C31.1409 32.8115 29.7963 33.3658 27.6255 33.6548C25.4242 33.9478 22.5373 33.95 18.5458 33.95H16.8072C12.8157 33.95 9.92878 33.9478 7.72747 33.6548C5.55666 33.3658 4.21207 32.8115 3.2113 31.8208C2.21053 30.83 1.65066 29.4988 1.3588 27.3497C1.06284 25.1704 1.06059 22.3123 1.06059 18.3607V16.6393C1.06059 12.6877 1.06284 9.82965 1.3588 7.65031C1.65066 5.50118 2.21053 4.17002 3.2113 3.17924C4.21207 2.18846 5.55666 1.63418 7.72747 1.34523C9.92878 1.05223 12.8157 1.05 16.8072 1.05Z\" fill=\"white\" />\n</symbol><symbol viewBox=\"0 0 12 12\" id=\"doYHqHhmEOmc53-q-6MTo\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.5 9.5v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-8-5h9v-1H6c-.36 0-.6-.17-.85-.48L5 2.82c-.19-.25-.3-.32-.49-.32h-3v2zm9 1h-9v4H7v1H1.5a1 1 0 01-1-1v-7a1 1 0 011-1h3c.56 0 .92.24 1.27.69l.16.2c.08.1.1.11.07.11h4.5a1 1 0 011 1v4h-1v-2z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"eDa60Yf7w1MHeopUTJmIn\"><path d=\"M8 1a6.96 6.96 0 0 1 4.95 2.05 6.963 6.963 0 0 1 1.5 2.225c.366.864.55 1.78.55 2.725a6.958 6.958 0 0 1-2.05 4.95 6.962 6.962 0 0 1-2.225 1.5c-.864.366-1.78.55-2.725.55a6.958 6.958 0 0 1-4.95-2.05 6.963 6.963 0 0 1-1.5-2.225A6.946 6.946 0 0 1 1 8a6.96 6.96 0 0 1 2.05-4.95 6.964 6.964 0 0 1 2.225-1.5A6.946 6.946 0 0 1 8 1z\" /><path d=\"M4 9a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2H4z\" fill=\"#fff\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 80 80\" id=\"ex-rTJ-BVasHYy3UVCWu1\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M40 80c22.0914 0 40-17.9086 40-40S62.0914 0 40 0 0 17.9086 0 40s17.9086 40 40 40zm0-10.8475c16.1005 0 29.1525-13.052 29.1525-29.1525S56.1005 10.8475 40 10.8475 10.8475 23.8995 10.8475 40 23.8995 69.1525 40 69.1525z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M52.4643 58.2169L21.783 27.5357l5.7528-5.7527L58.217 52.4642l-5.7527 5.7527z\" fill=\"#C4C4C4\" /><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.217 27.5357L27.5358 58.217l-5.7528-5.7528L52.4643 21.783l5.7527 5.7527z\" fill=\"#C4C4C4\" /></symbol><symbol viewBox=\"0 0 14 14\" id=\"fdGKXs6G78Qz8idkNUueK\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.727 4.407c.703 0 1.273.58 1.273 1.297l-.015.14-1.26 5.776a1.283 1.283 0 01-1.27 1.213H1.272C.57 12.833 0 12.253 0 11.537V2.463c0-.716.57-1.296 1.273-1.296H5.09c.713 0 1.166.308 1.622.893.03.04.166.219.2.26.1.127.12.143.088.143h4.453c.704 0 1.273.58 1.273 1.296v.648zm-1.273 0V3.76H6.997c-.457-.002-.755-.22-1.075-.624-.044-.056-.185-.241-.206-.27-.239-.306-.38-.402-.625-.402H1.273v3.17l.018-.085c.18-.738.512-1.14 1.254-1.14h8.91zm-10.166 7.13h10.166l.016-.14 1.242-5.693H2.569c-.01.032-.024.078-.039.14l-1.242 5.693z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"i-Kqexl_svfu_7_F-CTMl\"><path d=\"M8 0C3.58125 0 0 3.58125 0 8c0 4.4188 3.58125 8 8 8 4.4188 0 8-3.5812 8-8 0-4.41875-3.5812-8-8-8zm4.8609 12.8609c-.6312.6313-1.3671 1.1282-2.1859 1.4735-.84687.3594-1.74687.5406-2.675.5406-.92812 0-1.82812-.1812-2.675-.5391-.81875-.3468-1.55312-.8421-2.18594-1.4734-.63125-.6312-1.12812-1.3672-1.47344-2.1859C1.30625 9.82812 1.125 8.92813 1.125 8c0-.92812.18125-1.82812.53906-2.675.34688-.81875.84219-1.55312 1.47344-2.18594.63125-.63125 1.36719-1.12812 2.18594-1.47344C6.17188 1.30625 7.07188 1.125 8 1.125c.92813 0 1.82813.18125 2.675.53906.8188.34688 1.5531.84219 2.1859 1.47344.6313.63125 1.1282 1.36719 1.4735 2.18594.3594.84844.5406 1.74844.5406 2.67656 0 .92813-.1812 1.82813-.5391 2.675-.3468.8188-.8421 1.5547-1.475 2.1859zM9.84688 11.025H8.51562V5.55469c0-.31094-.25156-.5625-.5625-.5625h-1.5c-.31093 0-.5625.25156-.5625.5625s.25157.5625.5625.5625h.9375V11.025H6.05938c-.31094 0-.5625.2516-.5625.5625s.25156.5625.5625.5625H9.84688c.31092 0 .56252-.2516.56252-.5625s-.2516-.5625-.56252-.5625zM7.39062 3.44531c0 .31066.25185.5625.5625.5625.31067 0 .5625-.25184.5625-.5625s-.25183-.5625-.5625-.5625c-.31065 0-.5625.25184-.5625.5625z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"iEUTC5Cn6V6GTbOFXMEoI\"><rect width=\"16\" height=\"16\" rx=\"2\" /><path d=\"M5.84 11.57h-.06a.47.47 0 0 1-.34-.24L3.57 8.07a.47.47 0 1 1 .81-.47l1.57 2.74 5.75-5.78a.47.47 0 0 1 .66.67L6.2 11.4l-.02.02a.47.47 0 0 1-.34.14z\" fill=\"#fff\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"jG_wR2MTvN-efaupwlR2K\"><g fill=\"none\" fill-rule=\"evenodd\"><rect fill=\"#D9D9D9\" width=\"16\" height=\"16\" rx=\"2\" /><rect fill=\"#FFF\" x=\"1\" y=\"1\" width=\"14\" height=\"14\" rx=\"1\" /></g></symbol><symbol viewBox=\"0 0 16 16\" id=\"jJb-JlfMqqH-tJqwLV13h\">\n<path d=\"M11.2703 4.775L6.15313 9.90781L4.81875 7.57188C4.66406 7.30156 4.32188 7.20781 4.05156 7.3625C3.78125 7.51719 3.6875 7.85938 3.84219 8.12969L5.54219 11.1062C5.64531 11.2875 5.83594 11.3906 6.03125 11.3906C6.12656 11.3906 6.22188 11.3672 6.30938 11.3172C6.35938 11.2875 6.40469 11.2531 6.44219 11.2125C6.44375 11.2109 6.44688 11.2078 6.44844 11.2063L12.0656 5.57188C12.2844 5.35156 12.2844 4.99531 12.0641 4.77656C11.8453 4.55469 11.4906 4.55469 11.2703 4.775ZM8 0C3.58125 0 0 3.58125 0 8C0 12.4188 3.58125 16 8 16C12.4188 16 16 12.4188 16 8C16 3.58125 12.4188 0 8 0ZM12.8609 12.8609C12.2297 13.4922 11.4938 13.9891 10.675 14.3344C9.82813 14.6938 8.92813 14.875 8 14.875C7.07188 14.875 6.17188 14.6938 5.325 14.3359C4.50625 13.9891 3.77188 13.4938 3.13906 12.8625C2.50781 12.2313 2.01094 11.4953 1.66562 10.6766C1.30625 9.82812 1.125 8.92813 1.125 8C1.125 7.07188 1.30625 6.17188 1.66406 5.325C2.01094 4.50625 2.50625 3.77188 3.1375 3.13906C3.76875 2.50781 4.50469 2.01094 5.32344 1.66562C6.17188 1.30625 7.07188 1.125 8 1.125C8.92813 1.125 9.82813 1.30625 10.675 1.66406C11.4938 2.01094 12.2281 2.50625 12.8609 3.1375C13.4922 3.76875 13.9891 4.50469 14.3344 5.32344C14.6938 6.17188 14.875 7.07188 14.875 8C14.875 8.92813 14.6938 9.82813 14.3359 10.675C13.9891 11.4938 13.4938 12.2297 12.8609 12.8609Z\" />\n</symbol><symbol viewBox=\"0 0 14 14\" id=\"jSP1Kywk3QRTWVsPTjaUF\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 7c0 .30206-.2448.54688-.5469.54688h-1.6042V8.6041h1.6042c.3021 0 .5469.24491.5469.54687 0 .30206-.2448.54688-.5469.54688h-1.6042V11.302c0 .3021-.2448.5469-.5469.5469H9.69795v1.6042c0 .3021-.24481.5469-.54687.5469-.30207 0-.54688-.2448-.54688-.5469v-1.6042H7.54688v1.6042c0 .3021-.24482.5469-.54688.5469s-.54688-.2448-.54688-.5469v-1.6042H5.3959v1.6042c0 .3021-.24491.5469-.54687.5469-.30206 0-.54688-.2448-.54688-.5469V11.849h-1.6042c-.30206 0-.54687-.2449-.54687-.5468V9.69795H.546875C.244812 9.69795 0 9.45314 0 9.15108c0-.30207.244812-.54688.546875-.54688H2.15108V7.54688H.546875C.244812 7.54688 0 7.30206 0 7s.244812-.54688.546875-.54688H2.15108V5.3959H.546875C.244812 5.3959 0 5.15099 0 4.84903c0-.30206.244812-.54688.546875-.54688H2.15108v-1.6042c0-.30206.24481-.54687.54687-.54687h1.6041V.546875C4.30205.244812 4.54686 0 4.84892 0c.30207 0 .54688.244812.54688.546875V2.15108h1.05732V.546875C6.45312.244812 6.69794 0 7 0s.54688.244812.54688.546875V2.15108H8.6042V.546875C8.6042.244812 8.84901 0 9.15108 0c.30206 0 .54687.244812.54687.546875V2.15108H11.302c.3021 0 .5469.24481.5469.54687v1.6041h1.6042c.3021 0 .5469.24481.5469.54687 0 .30207-.2448.54688-.5469.54688h-1.6042v1.05732h1.6042c.3021 0 .5469.24482.5469.54688zm-3.2447-3.75517H3.24483v7.51037h7.51047V3.24483zM8.8082 4.58892c.16407-.16524.43125-.16524.59649-.00118.16523.16407.16523.43125 0 .59649L7.59531 6.99946l1.81055 1.81641c.16406.16523.16406.43242-.00117.59648-.08203.08203-.18985.12305-.29766.12305-.10781 0-.21679-.04102-.29883-.12422L7 7.59712 5.1918 9.41001c-.08203.0832-.19102.12422-.29883.12422-.10781 0-.21563-.04102-.29766-.12305-.16523-.16406-.16523-.43125-.00117-.59648l1.81055-1.81524-1.81055-1.81523c-.16406-.16524-.16406-.43242.00117-.59649.16524-.16406.43243-.16406.59649.00118L7 6.40181l1.8082-1.81289z\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"k88y2PvNAtLOI67Qj74gC\"><path d=\"M8 1C4.14 1 1 4.14 1 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm0 13.125A6.132 6.132 0 0 1 1.875 8 6.132 6.132 0 0 1 8 1.875 6.132 6.132 0 0 1 14.125 8 6.132 6.132 0 0 1 8 14.125z\" /><path d=\"M8.499 4h-1v4.206l2.646 2.646.707-.707-2.353-2.353V3.999z\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"kBJ_r4ofvgY7mQ0maXUb7\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.5 1.5h-4v9h5v1h-5a1 1 0 01-1-1v-9a1 1 0 011-1h5.2l2.8 2.8V7h-1V4.5h-2a1 1 0 01-1-1v-2zm3 8v-1h1v1h1v1h-1v1h-1v-1h-1v-1h1zm-.2-6L7.5 1.7v1.8h1.8z\" /></symbol><symbol fill=\"none\" viewBox=\"0 0 100 80\" id=\"nNqga5j7FC6QktpHDJzbv\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M58.382 24.166h.11c3.987 0 7.052 0 9.485.237 2.459.24 4.378.73 6.034 1.778a13 13 0 014.032 4.032c1.049 1.656 1.538 3.575 1.778 6.035.238 2.432.238 5.497.238 9.483v.684c0 3.986 0 7.051-.238 9.484-.24 2.46-.73 4.378-1.778 6.034a13 13 0 01-4.032 4.033c-1.656 1.048-3.575 1.538-6.034 1.778-2.433.237-5.498.237-9.484.237h-.111c-3.986 0-7.051 0-9.484-.237-2.46-.24-4.378-.73-6.034-1.778a13 13 0 01-4.033-4.033c-1.048-1.656-1.538-3.575-1.778-6.034-.237-2.433-.237-5.498-.237-9.484v-.684c0-3.986 0-7.05.237-9.483.24-2.46.73-4.379 1.778-6.035a13 13 0 014.033-4.032c1.656-1.049 3.575-1.538 6.034-1.778 2.432-.237 5.497-.237 9.484-.237zm-9.29 2.227c-2.309.226-3.876.666-5.159 1.478a11 11 0 00-3.412 3.412c-.812 1.283-1.252 2.85-1.477 5.159-.227 2.324-.228 5.292-.228 9.345v.573c0 4.053.001 7.02.228 9.345.225 2.309.665 3.876 1.477 5.159a10.998 10.998 0 003.412 3.412c1.283.812 2.85 1.252 5.16 1.477 2.323.227 5.291.228 9.344.228 4.053 0 7.021-.001 9.345-.228 2.31-.225 3.877-.665 5.16-1.477a11 11 0 003.411-3.412c.812-1.283 1.253-2.85 1.478-5.16.227-2.323.228-5.291.228-9.344v-.573c0-4.053-.001-7.021-.228-9.345-.225-2.309-.666-3.876-1.478-5.16a11 11 0 00-3.412-3.411c-1.282-.812-2.85-1.252-5.159-1.478-2.324-.226-5.292-.227-9.345-.227-4.053 0-7.02 0-9.345.227z\" fill=\"#8E9199\" /><g filter=\"url(#nNqga5j7FC6QktpHDJzbv_filter0_b)\"><rect x=\"20.059\" y=\"13.136\" width=\"46.398\" height=\"46.398\" rx=\"12\" fill=\"#e3e3e3\" /></g><defs><filter id=\"nNqga5j7FC6QktpHDJzbv_filter0_b\" x=\"-3.941\" y=\"-10.864\" width=\"94.398\" height=\"94.398\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter></defs></symbol><symbol viewBox=\"0 0 35 35\" id=\"pdpZ0CWj5yzeZAs3e55ot\"><g clip-path=\"url(#clip0)\"><path d=\"M30.6 7.84L23.07.31c-.2-.2-.47-.31-.75-.31H5.15C4.57 0 4.1.48 4.1 1.06v32.88c0 .58.48 1.06 1.06 1.06h24.7c.58 0 1.06-.48 1.06-1.06V8.59c0-.28-.11-.55-.31-.75zm-7.22-4.22l3.9 3.91h-3.9v-3.9zM6.22 32.88V2.12h15.03V8.6c0 .59.48 1.06 1.07 1.06h6.46v23.23H6.22z\" /><path d=\"M23.2 15.79a1.06 1.06 0 10-1.5 1.5l1.96 1.95-1.95 1.95a1.06 1.06 0 001.5 1.5l2.7-2.7c.41-.42.41-1.09 0-1.5l-2.7-2.7zM13.3 15.79a1.06 1.06 0 00-1.5 0l-2.7 2.7a1.06 1.06 0 000 1.5l2.7 2.7c.2.2.47.31.74.31.94 0 1.43-1.14.75-1.81l-1.95-1.95 1.95-1.95c.42-.42.42-1.09 0-1.5zM19.46 13.8c-.55-.2-1.16.09-1.36.64l-3.2 8.88a1.06 1.06 0 002 .72l3.2-8.88c.2-.55-.09-1.16-.64-1.36z\" /></g></symbol><symbol viewBox=\"0 0 16 16\" id=\"t853qpAiq73cgdznriCNI\">\n<path d=\"M8 1C8.945 1 9.86136 1.18455 10.7236 1.54886C11.5573 1.90205 12.305 2.40636 12.9493 3.04909C13.592 3.69182 14.098 4.44114 14.4495 5.27477C14.8155 6.13864 15 7.055 15 8C15 8.945 14.8155 9.86136 14.4511 10.7236C14.098 11.5573 13.5936 12.305 12.9509 12.9493C12.3082 13.592 11.5589 14.098 10.7252 14.4495C9.86136 14.8155 8.945 15 8 15C7.055 15 6.13864 14.8155 5.27636 14.4511C4.44273 14.098 3.695 13.5936 3.05068 12.9509C2.40795 12.3082 1.90205 11.5589 1.55045 10.7252C1.18455 9.86136 1 8.945 1 8C1 7.055 1.18455 6.13864 1.54886 5.27636C1.90205 4.44273 2.40636 3.695 3.04909 3.05068C3.69182 2.40795 4.44114 1.90205 5.27477 1.55045C6.13864 1.18455 7.055 1 8 1Z\" />\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.4776 5.30071C12.0871 4.91018 11.4539 4.91018 11.0634 5.30071L7.17529 9.18881L5.28718 7.30071C4.89666 6.91018 4.2635 6.91018 3.87297 7.30071C3.48245 7.69123 3.48245 8.3244 3.87297 8.71492L6.22966 11.0716C6.48604 11.328 6.84699 11.4161 7.17521 11.3358C7.50346 11.4161 7.86448 11.3281 8.12089 11.0716L12.4776 6.71492C12.8681 6.3244 12.8681 5.69123 12.4776 5.30071Z\" fill=\"white\" />\n</symbol><symbol fill=\"none\" viewBox=\"0 0 120 96\" id=\"taki-EyuJWLTaJKU8z1Mu\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M59.937 10.8h.125c6.677 0 11.768 0 15.813.367 4.075.369 7.206 1.118 9.925 2.688a22.8 22.8 0 018.345 8.345c1.57 2.72 2.319 5.85 2.688 9.924.367 4.046.367 9.137.367 15.814v.124c0 6.677 0 11.768-.367 15.814-.37 4.074-1.118 7.205-2.688 9.924a22.8 22.8 0 01-8.345 8.345c-2.72 1.57-5.85 2.32-9.925 2.688-4.045.367-9.136.367-15.813.367h-.125c-6.676 0-11.767 0-15.813-.367-4.074-.369-7.205-1.118-9.924-2.688a22.8 22.8 0 01-8.346-8.345c-1.57-2.72-2.318-5.85-2.688-9.924-.366-4.046-.366-9.137-.366-15.813v-.126c0-6.676 0-11.767.366-15.813.37-4.074 1.119-7.205 2.688-9.924a22.8 22.8 0 018.346-8.345c2.719-1.57 5.85-2.319 9.924-2.688 4.045-.367 9.137-.367 15.813-.367zm-15.596 2.757c-3.908.354-6.648 1.052-8.941 2.376a20.4 20.4 0 00-7.467 7.467c-1.324 2.293-2.022 5.033-2.376 8.941C25.2 36.266 25.2 41.249 25.2 48c0 6.751.001 11.735.357 15.659.354 3.908 1.052 6.648 2.376 8.941a20.4 20.4 0 007.467 7.467c2.293 1.324 5.033 2.022 8.94 2.376 3.925.356 8.908.357 15.66.357 6.751 0 11.734-.001 15.659-.357 3.908-.354 6.648-1.052 8.94-2.376a20.4 20.4 0 007.468-7.467c1.324-2.293 2.022-5.033 2.376-8.941.356-3.924.357-8.908.357-15.659 0-6.751-.001-11.734-.357-15.659-.354-3.908-1.052-6.648-2.376-8.941a20.4 20.4 0 00-7.467-7.467c-2.293-1.324-5.033-2.022-8.941-2.376-3.925-.356-8.908-.357-15.66-.357-6.75 0-11.734.001-15.658.357z\" fill=\"#FF272C\" /><g filter=\"url(#taki-EyuJWLTaJKU8z1Mu_filter0_b)\"><path d=\"M32.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><g filter=\"url(#taki-EyuJWLTaJKU8z1Mu_filter1_b)\"><path d=\"M62.4 63c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><g filter=\"url(#taki-EyuJWLTaJKU8z1Mu_filter2_b)\"><path d=\"M32.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><g filter=\"url(#taki-EyuJWLTaJKU8z1Mu_filter3_b)\"><path d=\"M62.4 33c0 4.292 0 6.438.802 8.091a8 8 0 003.707 3.707c1.653.802 3.8.802 8.09.802 4.293 0 6.439 0 8.092-.802a8 8 0 003.707-3.707c.802-1.653.802-3.8.802-8.09 0-4.293 0-6.439-.802-8.092a8 8 0 00-3.707-3.707c-1.653-.802-3.8-.802-8.091-.802-4.292 0-6.438 0-8.091.802a8 8 0 00-3.707 3.707c-.802 1.653-.802 3.8-.802 8.091z\" fill=\"#040B1D\" fill-opacity=\".1\" /></g><defs><filter id=\"taki-EyuJWLTaJKU8z1Mu_filter0_b\" x=\"8.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter><filter id=\"taki-EyuJWLTaJKU8z1Mu_filter1_b\" x=\"38.4\" y=\"26.4\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter><filter id=\"taki-EyuJWLTaJKU8z1Mu_filter2_b\" x=\"8.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter><filter id=\"taki-EyuJWLTaJKU8z1Mu_filter3_b\" x=\"38.4\" y=\"-3.6\" width=\"73.2\" height=\"73.2\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"></feFlood><feGaussianBlur stdDeviation=\"12\"></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur\"></feComposite><feBlend in=\"SourceGraphic\" in2=\"effect1_backgroundBlur\" result=\"shape\"></feBlend></filter></defs></symbol><symbol viewBox=\"0 0 14 59\" id=\"wFQFVV1tmhptB5jOpABp_\"><path d=\"M7 56.17L14 59v-3H0v3l7-2.83zM0 0h14v56H0V0z\" /><path d=\"M8.66 33.5v2.47H4v1.18h5.64v-3.64h-.98zM8.66 29.07v2.56H7.24v-2.41h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM9.64 24.53v-1.25L4 25.24v1.39l5.64 1.95v-1.2l-1.37-.44v-1.98l1.37-.43zm-4.56 1.43v-.02l2.3-.73v1.48l-2.3-.73zM4 22.7h5.64v-2.15c0-1.7-1.05-2.7-2.84-2.7-1.8 0-2.8 1-2.8 2.7v2.15zm.97-1.18v-.83c0-1.04.65-1.63 1.83-1.63 1.22 0 1.86.57 1.86 1.63v.83H4.97zM8.66 13.36v2.56H7.24V13.5h-.9v2.4H4.96v-2.55H4v3.74h5.64v-3.74h-.98zM4.92 11.33v-1c0-.59.35-.96.9-.96.56 0 .9.35.9.95v1.01h-1.8zm2.65 0v-.94l2.07-1.05V8L7.4 9.19a1.66 1.66 0 0 0-1.6-1.03c-1.12 0-1.8.75-1.8 2.04v2.31h5.64v-1.18H7.57zM3.89 51.43L3 46l2.44 3.46L7 46l1.56 3.46L11 46l-.89 5.43H3.9zm6.22 1.48c0 .28-.2.5-.44.5H4.33c-.24 0-.44-.22-.44-.5v-.49h6.22v.5z\" fill=\"#010101\" fill-opacity=\".45\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"wed9nINJQjhWLd0vsQwyA\"><rect x=\".5\" y=\".5\" width=\"15\" height=\"15\" rx=\"7.5\" fill=\"#fff\" stroke=\"#D9D9D9\" /></symbol><symbol viewBox=\"0 0 16 16\" id=\"yLLMh3fknWgkEj4WlXL50\"><path d=\"M13.44 13H13V6a5 5 0 00-4.44-4.97V.56a.56.56 0 10-1.12 0v.47A5 5 0 003 6v7h-.44a.56.56 0 100 1.13h4.31v.74a1.12 1.12 0 102.25 0v-.74h4.32a.56.56 0 100-1.13zm-1.56 0H4.12V6a3.87 3.87 0 117.75 0v7z\" /></symbol><symbol viewBox=\"0 0 12 12\" id=\"ydwOryp5QIlTN_CLmSDD9\"><path d=\"M.76 11.95l3.98-1.68a.56.56 0 00.18-.12l6.72-6.72c.48-.48.48-1.26 0-1.73L10.3.36a1.22 1.22 0 00-1.73 0L1.85 7.08a.54.54 0 00-.12.18L.04 11.24c-.09.23-.02.45.12.6.14.14.37.2.6.11zM9.44 1.22l1.34 1.34-1.05 1.05-1.34-1.34 1.05-1.05zM2.8 7.85l4.73-4.72 1.34 1.34L4.15 9.2l-2.33.99.98-2.33z\" /></symbol></defs><use id=\"1ab2RR4x7aDgDv3oM3vXf-usage\" xlink:href=\"#1ab2RR4x7aDgDv3oM3vXf\" class=\"sprite-symbol-usage\" /><use id=\"1kFPUg0TwoysjpvaWHhpG-usage\" xlink:href=\"#1kFPUg0TwoysjpvaWHhpG\" class=\"sprite-symbol-usage\" /><use id=\"2DlvGbkvXFz2TAiFOrH3n-usage\" xlink:href=\"#2DlvGbkvXFz2TAiFOrH3n\" class=\"sprite-symbol-usage\" /><use id=\"2bGNEZP3K8T1z3M5fZKFK-usage\" xlink:href=\"#2bGNEZP3K8T1z3M5fZKFK\" class=\"sprite-symbol-usage\" /><use id=\"3Q5ZyfTSPMHThstzagFoU-usage\" xlink:href=\"#3Q5ZyfTSPMHThstzagFoU\" class=\"sprite-symbol-usage\" /><use id=\"3cQCHwHpCVTLldj_IVqx3-usage\" xlink:href=\"#3cQCHwHpCVTLldj_IVqx3\" class=\"sprite-symbol-usage\" /><use id=\"5KBTvDAns5mrtngSzlsmF-usage\" xlink:href=\"#5KBTvDAns5mrtngSzlsmF\" class=\"sprite-symbol-usage\" /><use id=\"6isaf4okozGnYqiIiu1RX-usage\" xlink:href=\"#6isaf4okozGnYqiIiu1RX\" class=\"sprite-symbol-usage\" /><use id=\"7RiiPbusMBeH0TStzJ0Tf-usage\" xlink:href=\"#7RiiPbusMBeH0TStzJ0Tf\" class=\"sprite-symbol-usage\" /><use id=\"7js-A-zbUMfeuHdTLx9FP-usage\" xlink:href=\"#7js-A-zbUMfeuHdTLx9FP\" class=\"sprite-symbol-usage\" /><use id=\"8uXTwWnsdfasRosOjAofP-usage\" xlink:href=\"#8uXTwWnsdfasRosOjAofP\" class=\"sprite-symbol-usage\" /><use id=\"90o7btjGTS8w7Nsg2FkWD-usage\" xlink:href=\"#90o7btjGTS8w7Nsg2FkWD\" class=\"sprite-symbol-usage\" /><use id=\"A3bHXa1-ZXZG-pAqfiZJN-usage\" xlink:href=\"#A3bHXa1-ZXZG-pAqfiZJN\" class=\"sprite-symbol-usage\" /><use id=\"AWopmtHbRv8T8jW_CyFeH-usage\" xlink:href=\"#AWopmtHbRv8T8jW_CyFeH\" class=\"sprite-symbol-usage\" /><use id=\"AjBeZr7HSQVOpvHL8gGzv-usage\" xlink:href=\"#AjBeZr7HSQVOpvHL8gGzv\" class=\"sprite-symbol-usage\" /><use id=\"BmqupW4RbA_ofFqTTCJl6-usage\" xlink:href=\"#BmqupW4RbA_ofFqTTCJl6\" class=\"sprite-symbol-usage\" /><use id=\"CsgprEbbzu5y7v2fyIjR5-usage\" xlink:href=\"#CsgprEbbzu5y7v2fyIjR5\" class=\"sprite-symbol-usage\" /><use id=\"EvCDSHD3chTYzTgQi_aG_-usage\" xlink:href=\"#EvCDSHD3chTYzTgQi_aG_\" class=\"sprite-symbol-usage\" /><use id=\"FoajdVsxHTLdiLzrjePkz-usage\" xlink:href=\"#FoajdVsxHTLdiLzrjePkz\" class=\"sprite-symbol-usage\" /><use id=\"GEi01RQkwoYnlO1TCCnEE-usage\" xlink:href=\"#GEi01RQkwoYnlO1TCCnEE\" class=\"sprite-symbol-usage\" /><use id=\"Gt7D_6w9k5vf1ZUPMVj6E-usage\" xlink:href=\"#Gt7D_6w9k5vf1ZUPMVj6E\" class=\"sprite-symbol-usage\" /><use id=\"HF2ARSFsBv5Ike7_XYtzu-usage\" xlink:href=\"#HF2ARSFsBv5Ike7_XYtzu\" class=\"sprite-symbol-usage\" /><use id=\"IdWcWpdAnW6soIxOjgDEK-usage\" xlink:href=\"#IdWcWpdAnW6soIxOjgDEK\" class=\"sprite-symbol-usage\" /><use id=\"NL99d3kJ9EVQfibyIOD7b-usage\" xlink:href=\"#NL99d3kJ9EVQfibyIOD7b\" class=\"sprite-symbol-usage\" /><use id=\"NMRBGrejLwTNAkdgBsBvy-usage\" xlink:href=\"#NMRBGrejLwTNAkdgBsBvy\" class=\"sprite-symbol-usage\" /><use id=\"NP1FrHSpzT6ajNlMkInS--usage\" xlink:href=\"#NP1FrHSpzT6ajNlMkInS-\" class=\"sprite-symbol-usage\" /><use id=\"NTdMwALongwwm-LGRTc9Y-usage\" xlink:href=\"#NTdMwALongwwm-LGRTc9Y\" class=\"sprite-symbol-usage\" /><use id=\"NybEh1NBUkx9mOSJf08Lp-usage\" xlink:href=\"#NybEh1NBUkx9mOSJf08Lp\" class=\"sprite-symbol-usage\" /><use id=\"OTQbFd9rahm7EhG-G6q0M-usage\" xlink:href=\"#OTQbFd9rahm7EhG-G6q0M\" class=\"sprite-symbol-usage\" /><use id=\"P6THpZEJE7wmVapsujCvg-usage\" xlink:href=\"#P6THpZEJE7wmVapsujCvg\" class=\"sprite-symbol-usage\" /><use id=\"QEFxJJANMPn8cwXezSMA8-usage\" xlink:href=\"#QEFxJJANMPn8cwXezSMA8\" class=\"sprite-symbol-usage\" /><use id=\"QoLCXkhoTafIlkJ_hQJ6p-usage\" xlink:href=\"#QoLCXkhoTafIlkJ_hQJ6p\" class=\"sprite-symbol-usage\" /><use id=\"Qy53H_REm9dWnze54nDVA-usage\" xlink:href=\"#Qy53H_REm9dWnze54nDVA\" class=\"sprite-symbol-usage\" /><use id=\"R7sKPb1zB-oRbvmT-g9nj-usage\" xlink:href=\"#R7sKPb1zB-oRbvmT-g9nj\" class=\"sprite-symbol-usage\" /><use id=\"S86-eE_WUzLbQjL1Bzwgv-usage\" xlink:href=\"#S86-eE_WUzLbQjL1Bzwgv\" class=\"sprite-symbol-usage\" /><use id=\"SREGuW4l5FMvhld6pT4h6-usage\" xlink:href=\"#SREGuW4l5FMvhld6pT4h6\" class=\"sprite-symbol-usage\" /><use id=\"SiTwDEj7AhRNYzO2JMHT7-usage\" xlink:href=\"#SiTwDEj7AhRNYzO2JMHT7\" class=\"sprite-symbol-usage\" /><use id=\"SxBMdP0QgfmEDhekH8NrH-usage\" xlink:href=\"#SxBMdP0QgfmEDhekH8NrH\" class=\"sprite-symbol-usage\" /><use id=\"TFipkHSZkHDS2oHx8oAMi-usage\" xlink:href=\"#TFipkHSZkHDS2oHx8oAMi\" class=\"sprite-symbol-usage\" /><use id=\"UvWlsogDLPunIRud9tm9w-usage\" xlink:href=\"#UvWlsogDLPunIRud9tm9w\" class=\"sprite-symbol-usage\" /><use id=\"VQ5doFLrtMPv4Wr3Jojus-usage\" xlink:href=\"#VQ5doFLrtMPv4Wr3Jojus\" class=\"sprite-symbol-usage\" /><use id=\"VXBcTX1M_-1zl4RgVXnnQ-usage\" xlink:href=\"#VXBcTX1M_-1zl4RgVXnnQ\" class=\"sprite-symbol-usage\" /><use id=\"Wevz__2tlMxqyyqN8by2A-usage\" xlink:href=\"#Wevz__2tlMxqyyqN8by2A\" class=\"sprite-symbol-usage\" /><use id=\"WuHTn_9bWyqm1yVoFKxfi-usage\" xlink:href=\"#WuHTn_9bWyqm1yVoFKxfi\" class=\"sprite-symbol-usage\" /><use id=\"XqoDAyUExUakv-bonPn9h-usage\" xlink:href=\"#XqoDAyUExUakv-bonPn9h\" class=\"sprite-symbol-usage\" /><use id=\"ZGwuc36jhSs6h6gFfFZIJ-usage\" xlink:href=\"#ZGwuc36jhSs6h6gFfFZIJ\" class=\"sprite-symbol-usage\" /><use id=\"abIIvgo5IqhJFDQaP2qjl-usage\" xlink:href=\"#abIIvgo5IqhJFDQaP2qjl\" class=\"sprite-symbol-usage\" /><use id=\"aieVa99vEbpBpzs9yML4I-usage\" xlink:href=\"#aieVa99vEbpBpzs9yML4I\" class=\"sprite-symbol-usage\" /><use id=\"ani3i4NSiqFXm6SIFooTm-usage\" xlink:href=\"#ani3i4NSiqFXm6SIFooTm\" class=\"sprite-symbol-usage\" /><use id=\"b0VOmaH3KewYwTuT2FjzX-usage\" xlink:href=\"#b0VOmaH3KewYwTuT2FjzX\" class=\"sprite-symbol-usage\" /><use id=\"bZCWaFcABP1nv9jpktnu8-usage\" xlink:href=\"#bZCWaFcABP1nv9jpktnu8\" class=\"sprite-symbol-usage\" /><use id=\"cHNFL65MBzzZvcUD5n551-usage\" xlink:href=\"#cHNFL65MBzzZvcUD5n551\" class=\"sprite-symbol-usage\" /><use id=\"cUkoC4dCdpFsjt7saMFTS-usage\" xlink:href=\"#cUkoC4dCdpFsjt7saMFTS\" class=\"sprite-symbol-usage\" /><use id=\"czACxQmlft1fTTAtCQ6Tl-usage\" xlink:href=\"#czACxQmlft1fTTAtCQ6Tl\" class=\"sprite-symbol-usage\" /><use id=\"doYHqHhmEOmc53-q-6MTo-usage\" xlink:href=\"#doYHqHhmEOmc53-q-6MTo\" class=\"sprite-symbol-usage\" /><use id=\"eDa60Yf7w1MHeopUTJmIn-usage\" xlink:href=\"#eDa60Yf7w1MHeopUTJmIn\" class=\"sprite-symbol-usage\" /><use id=\"ex-rTJ-BVasHYy3UVCWu1-usage\" xlink:href=\"#ex-rTJ-BVasHYy3UVCWu1\" class=\"sprite-symbol-usage\" /><use id=\"fdGKXs6G78Qz8idkNUueK-usage\" xlink:href=\"#fdGKXs6G78Qz8idkNUueK\" class=\"sprite-symbol-usage\" /><use id=\"i-Kqexl_svfu_7_F-CTMl-usage\" xlink:href=\"#i-Kqexl_svfu_7_F-CTMl\" class=\"sprite-symbol-usage\" /><use id=\"iEUTC5Cn6V6GTbOFXMEoI-usage\" xlink:href=\"#iEUTC5Cn6V6GTbOFXMEoI\" class=\"sprite-symbol-usage\" /><use id=\"jG_wR2MTvN-efaupwlR2K-usage\" xlink:href=\"#jG_wR2MTvN-efaupwlR2K\" class=\"sprite-symbol-usage\" /><use id=\"jJb-JlfMqqH-tJqwLV13h-usage\" xlink:href=\"#jJb-JlfMqqH-tJqwLV13h\" class=\"sprite-symbol-usage\" /><use id=\"jSP1Kywk3QRTWVsPTjaUF-usage\" xlink:href=\"#jSP1Kywk3QRTWVsPTjaUF\" class=\"sprite-symbol-usage\" /><use id=\"k88y2PvNAtLOI67Qj74gC-usage\" xlink:href=\"#k88y2PvNAtLOI67Qj74gC\" class=\"sprite-symbol-usage\" /><use id=\"kBJ_r4ofvgY7mQ0maXUb7-usage\" xlink:href=\"#kBJ_r4ofvgY7mQ0maXUb7\" class=\"sprite-symbol-usage\" /><use id=\"nNqga5j7FC6QktpHDJzbv-usage\" xlink:href=\"#nNqga5j7FC6QktpHDJzbv\" class=\"sprite-symbol-usage\" /><use id=\"pdpZ0CWj5yzeZAs3e55ot-usage\" xlink:href=\"#pdpZ0CWj5yzeZAs3e55ot\" class=\"sprite-symbol-usage\" /><use id=\"t853qpAiq73cgdznriCNI-usage\" xlink:href=\"#t853qpAiq73cgdznriCNI\" class=\"sprite-symbol-usage\" /><use id=\"taki-EyuJWLTaJKU8z1Mu-usage\" xlink:href=\"#taki-EyuJWLTaJKU8z1Mu\" class=\"sprite-symbol-usage\" /><use id=\"wFQFVV1tmhptB5jOpABp_-usage\" xlink:href=\"#wFQFVV1tmhptB5jOpABp_\" class=\"sprite-symbol-usage\" /><use id=\"wed9nINJQjhWLd0vsQwyA-usage\" xlink:href=\"#wed9nINJQjhWLd0vsQwyA\" class=\"sprite-symbol-usage\" /><use id=\"yLLMh3fknWgkEj4WlXL50-usage\" xlink:href=\"#yLLMh3fknWgkEj4WlXL50\" class=\"sprite-symbol-usage\" /><use id=\"ydwOryp5QIlTN_CLmSDD9-usage\" xlink:href=\"#ydwOryp5QIlTN_CLmSDD9\" class=\"sprite-symbol-usage\" /></svg>";  window.document.body.appendChild(div) }); }
