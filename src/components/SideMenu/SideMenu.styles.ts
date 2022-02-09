@@ -132,6 +132,9 @@ export const styles = {
   logoCenter: css`
     text-align: center;
   `,
+  logoStyle: css`
+    margin-left: 24px;
+  `,
   bottomButtons: css`
     flex-grow: 0;
     flex-shrink: 0;
