@@ -5,7 +5,7 @@ declare type CheckboxProps = {
     disabled?: boolean;
     indeterminate?: boolean;
     name?: string;
-    title: string;
+    title?: string;
     value?: string;
     onChange?: ChangeEventHandler<HTMLInputElement>;
 };
