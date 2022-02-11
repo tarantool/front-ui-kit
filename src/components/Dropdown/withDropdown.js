@@ -248,6 +248,7 @@ export const withDropdown = (Component: React.AbstractComponent<any, HTMLElement
         <>
           <Component
             {...props}
+            disabled={disabled}
             className={className}
             onClick={!disabled ? this.handleClick : undefined}
             ref={this.wrapperRef}

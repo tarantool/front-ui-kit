@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Fix the `disabled` attribute in the `withDropdown` HOC;
+
 ## [0.50.8] - 2022-02-11
 
 - Fix CheckboxProps.title typescript type;
@@ -19,10 +21,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.50.6] - 2022-02-08
 
-- Fix the SideMenu component. Now we don't render the href attribute if the menu item has children.
+- Fix the `SideMenu` component. Now we don't render the href attribute if the menu item has children.
 If you want to use the old behavior, you can set the `forceToUseHrefAttribute` parameter to true;
 
-- Fix the `className` property to use only with root element of the ExpandableBlock component;
+- Fix the `className` property to use only with root element of the `ExpandableBlock` component;
 
 - Add new prop `contentClassName` to the ExpandableBlock component;
 
