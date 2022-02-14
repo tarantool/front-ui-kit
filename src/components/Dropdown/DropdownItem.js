@@ -51,6 +51,13 @@ export const DropdownItem = React.memo<DropdownItemProps>(
       [onClick, pass]
     );
 
+    const handleClick = React.useCallback(
+      (e: MouseEvent) => {
+        onClick && onClick(e, pass);
+      },
+      [onClick, pass]
+    );
+
     const handleMouseEnter = React.useCallback((e: any) => {
       e.target && e.target.focus();
     }, []);
@@ -60,7 +67,7 @@ export const DropdownItem = React.memo<DropdownItemProps>(
         {...props}
         tabIndex={0}
         className={cx(textStyles.basic, styles.item(color), className)}
-        onClick={onClick}
+        onClick={handleClick}
         onKeyDownCapture={handleKeyDownCapture}
         onMouseEnter={handleMouseEnter}
       />

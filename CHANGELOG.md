@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Fix the `pass` attribute in the `DropdownItem` component;
+
 ## [0.50.9] - 2022-02-11
 
 - Fix the `disabled` attribute in the `withDropdown` HOC;
