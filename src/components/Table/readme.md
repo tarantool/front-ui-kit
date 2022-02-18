@@ -1178,41 +1178,63 @@ const data = [
   },
 ];
 
+const ref = React.useRef();
 const [page, setPage] = React.useState(0);
 const [pageSize, setPageSize] = React.useState(10);
 const [rows, setRows] = React.useState(data.slice(0, 10));
 const [loading, setLoading] = React.useState(false);
 
-const updateData = (page, pageSize) => {
+const updateData = React.useCallback((page, pageSize) => {
   setLoading(true);
   setTimeout(() => {
     setLoading(false);
     setRows(data.slice(page * pageSize, (page + 1) * pageSize));
   }, 1000);
-}
+}, []);
 
-const onChangePage = (page) => {
+const onChangePage = React.useCallback((page) => {
   setPage(page);
   updateData(page, pageSize);
-}
+}, [updateData]);
 
-const onChangePageSize = (pageSize) => {
+const onChangePageSize = React.useCallback((pageSize) => {
   setPageSize(pageSize);
   updateData(page, pageSize);
-}
+}, [updateData]);
 
-const onSelectedRowsChange = (rows, rowsIds) => {
+const onSelectedRowsChange = React.useCallback((rows, rowsIds) => {
   console.log('onSelectedRowsChange', rows, rowsIds)
-}
+}, []);
+
+const manualPagination = React.useMemo(() => ({
+  page, pageSize, onChangePage, onChangePageSize, disableNextPageButton: rows.length < pageSize
+}), [page, pageSize, onChangePage, onChangePageSize, rows.length, pageSize]);
+
+const toggleAllPageRowsSelected = React.useCallback((rows, rowsIds) => {
+  if (ref.current) {
+    ref.current.toggleAllPageRowsSelected();
+  }
+}, [ref.current ? ref.current.toggleAllPageRowsSelected : null]);
+
+const toggleAllRowsSelected = React.useCallback((rows, rowsIds) => {
+  if (ref.current) {
+    ref.current.toggleAllRowsSelected();
+  }
+}, [ref.current ? ref.current.toggleAllRowsSelected : null]);
 
 <div style={{ backgroundColor: '#F0F2F5', padding: '20px' }}>
   <Table
+    ref={ref}
     columns={columns}
     data={rows}
     loading={loading}
     tableKey="id"
     onSelectedRowsChange={onSelectedRowsChange}
-    manualPagination={{ page, pageSize, onChangePage, onChangePageSize, disableNextPageButton: rows.length < pageSize }}
+    manualPagination={manualPagination}
   />
+  <div>
+    <button onClick={toggleAllPageRowsSelected}>toggleAllPageRowsSelected</button>
+    <button onClick={toggleAllRowsSelected}>toggleAllRowsSelected</button>
+  </div>
 </div>
 ```

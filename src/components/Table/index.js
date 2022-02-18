@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { useMountedLayoutEffect, usePagination, useRowSelect, useSortBy, useTable } from 'react-table';
-import type { Row, UseTableOptions } from 'react-table';
+import type { Hooks, Row, UseTableOptions } from 'react-table';
 import { css, cx } from '@emotion/css';
 
 import { colors } from '../../variables';
@@ -50,22 +50,47 @@ const styles = {
 };
 
 type TableProps = $Exact<
-  UseTableOptions &
-    AdditionalProps & {
-      className?: string,
-      pagination?: boolean,
-      loading?: boolean,
-      manualPagination?: ManualPagination,
-      onSelectedRowsChange?: (selectedFlatRows: Row[], selectedRowIds: any[]) => void,
-      tableKey?: string,
-      initialSelectedRowIds?: any[],
-      initialSortBy?: Array<{ id: string, desc: boolean }>,
-    }
+  AdditionalProps & {
+    className?: string,
+    pagination?: boolean,
+    loading?: boolean,
+    manualPagination?: ManualPagination,
+    onSelectedRowsChange?: (selectedFlatRows: Row[], selectedRowIds: any[]) => void,
+    tableKey?: string,
+    initialSelectedRowIds?: any[],
+    initialSortBy?: Array<{ id: string, desc: boolean }>,
+    useTableOptions?: UseTableOptions,
+  }
 >;
 
 const emptyArr = [];
 
-export function Table(props: TableProps) {
+const createUseSelectionColumnsHook = (enable: boolean) => (hooks: Hooks<object>) => {
+  if (enable) {
+    hooks.visibleColumns.push((columns) => [
+      // Let's make a column for selection
+      {
+        id: 'selection',
+        Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
+        Cell: ({ row: { getToggleRowSelectedProps } }) => <Checkbox {...getToggleRowSelectedProps()} />,
+      },
+      ...columns,
+    ]);
+  }
+};
+
+const fixedToggleAllPageRowsSelectedActionReducer = (newState, action) => {
+  if (action && action.type === 'toggleAllPageRowsSelected' && action.value === false) {
+    return {
+      ...newState,
+      selectedRowIds: {},
+    };
+  }
+
+  return newState;
+};
+
+export const Table = React.forwardRef((props: TableProps, ref) => {
   const {
     rowClassName,
     columns = emptyArr,
@@ -78,7 +103,10 @@ export function Table(props: TableProps) {
     initialSortBy = emptyArr,
     manualPagination,
     loading = false,
+    useTableOptions,
   } = props;
+
+  const useSelectionColumns = createUseSelectionColumnsHook(Boolean(onSelectedRowsChange));
 
   const getRowId = React.useCallback(
     (row, index) => {
@@ -88,6 +116,29 @@ export function Table(props: TableProps) {
   );
 
   const headerRef = React.useRef<HTMLTableSectionElement | null>(null);
+
+  const options = {
+    columns,
+    data,
+    getRowId,
+    initialState: {
+      selectedRowIds: initialSelectedRowIds,
+      sortBy: initialSortBy,
+    },
+    manualPagination: !!manualPagination,
+    autoResetSelectedRows: !manualPagination,
+    autoResetSortBy: !manualPagination,
+    ...(useTableOptions ? useTableOptions : {}),
+  };
+
+  if (options.stateReducer) {
+    options.stateReducer = (newState, action) => {
+      const nextState = fixedToggleAllPageRowsSelectedActionReducer(newState, action);
+      return options.stateReducer(nextState, action, newState);
+    };
+  } else {
+    options.stateReducer = fixedToggleAllPageRowsSelectedActionReducer;
+  }
 
   const {
     getTableProps,
@@ -100,36 +151,10 @@ export function Table(props: TableProps) {
     gotoPage,
     setPageSize,
     selectedFlatRows,
+    toggleAllRowsSelected,
+    toggleAllPageRowsSelected,
     state: { pageIndex, pageSize, selectedRowIds },
-  } = useTable(
-    {
-      columns,
-      data,
-      getRowId,
-      initialState: {
-        selectedRowIds: initialSelectedRowIds,
-        sortBy: initialSortBy,
-      },
-      manualPagination: !!manualPagination,
-      autoResetSelectedRows: !manualPagination,
-      autoResetSortBy: !manualPagination,
-    },
-    useSortBy,
-    usePagination,
-    useRowSelect,
-    (hooks) => {
-      onSelectedRowsChange &&
-        hooks.visibleColumns.push((columns) => [
-          // Let's make a column for selection
-          {
-            id: 'selection',
-            Header: ({ getToggleAllRowsSelectedProps }) => <Checkbox {...getToggleAllRowsSelectedProps()} />,
-            Cell: ({ row: { getToggleRowSelectedProps } }) => <Checkbox {...getToggleRowSelectedProps()} />,
-          },
-          ...columns,
-        ]);
-    }
-  );
+  } = useTable(options, useSortBy, usePagination, useRowSelect, useSelectionColumns);
 
   useMountedLayoutEffect(() => {
     if (onSelectedRowsChange) {
@@ -138,8 +163,10 @@ export function Table(props: TableProps) {
     }
   }, [selectedFlatRows]);
 
-  const dataRows: Row[] = React.useMemo(() => {
-    return (pagination ? page : rows).map((item) => {
+  React.useImperativeHandle(ref, () => ({ toggleAllRowsSelected, toggleAllPageRowsSelected }));
+
+  const dataRows = React.useMemo((): Row[] => {
+    return (pagination ? page : rows).map((item: Row) => {
       prepareRow(item);
       return item;
     });
@@ -207,4 +234,4 @@ export function Table(props: TableProps) {
       </Spin>
     </>
   );
-}
+});

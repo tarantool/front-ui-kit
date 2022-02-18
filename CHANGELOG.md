@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.50.11] - 2022-02-18
+
+- Improve the `Table` component;
+
 ## [0.50.10] - 2022-02-14
 
 - Fix the `pass` attribute in the `DropdownItem` component;
