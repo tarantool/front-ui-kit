@@ -1,4 +1,3 @@
-// @flow
 import { css } from '@emotion/css';
 
 import { baseFontFamily, colors } from '../../variables';
@@ -56,5 +55,62 @@ export const commonInputSizes = {
   l: css`
     padding-top: 9px;
     padding-bottom: 9px;
+  `,
+};
+
+export const styles = {
+  outerWithAddition: css`
+    display: flex;
+  `,
+  inputWithAddition: css`
+    width: auto;
+    flex-grow: 1;
+  `,
+  inputWithIcon: css`
+    padding-left: 15px;
+    padding-right: 8px;
+  `,
+  iconWrap: css`
+    display: flex;
+    align-items: center;
+  `,
+  clearIcon: css`
+    fill: ${colors.dark65};
+  `,
+  withLeftElement: css`
+    & > :first-child {
+      align-self: stretch;
+      flex-shrink: 0;
+      margin: -1px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  `,
+  withRightElement: css`
+    & > :last-child {
+      align-self: stretch;
+      flex-shrink: 0;
+      margin: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  `,
+};
+
+export const wrapSizes = {
+  m: css`
+    height: 32px;
+  `,
+  l: css`
+    height: 40px;
+  `,
+};
+
+export const iconWrapSizes = {
+  m: css`
+    margin-right: 7px;
+  `,
+  l: css`
+    margin-right: 15px;
   `,
 };

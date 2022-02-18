@@ -8,5 +8,8 @@ export * from './components/UploadZone';
 export * from './components/SVGImage';
 export * from './components/Icon';
 export * from './components/Checkbox';
+export * from './components/Input';
+export * from './components/InputPassword';
+export * from './components/Input';
 
 export * from './variables';

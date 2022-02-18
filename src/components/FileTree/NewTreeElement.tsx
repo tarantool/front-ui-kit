@@ -42,14 +42,6 @@ export class NewTreeElement extends React.Component<NewTreeElementProps, NewTree
     };
   }
 
-  inputRef = React.createRef<Input>();
-
-  componentDidMount() {
-    if (this.inputRef.current) {
-      this.inputRef.current.focus();
-    }
-  }
-
   isFileExists = (
     name: string,
     parentPath: string | null | undefined,
@@ -57,7 +49,7 @@ export class NewTreeElement extends React.Component<NewTreeElementProps, NewTree
     paths: string[]
   ) => !!name && initial !== name && paths.includes((parentPath ? parentPath + '/' : '') + name);
 
-  handleChange = (event: InputEvent) => {
+  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target instanceof HTMLInputElement) {
       const { value } = event.target;
 
@@ -78,7 +70,7 @@ export class NewTreeElement extends React.Component<NewTreeElementProps, NewTree
     this.props.onConfirm(value);
   };
 
-  handleKeyPress = (event: KeyboardEvent) => {
+  handleKeyPress = (event: React.KeyboardEvent) => {
     const { value } = this.state;
     // const { type } = this.props;
 
@@ -121,8 +113,8 @@ export class NewTreeElement extends React.Component<NewTreeElementProps, NewTree
           />
           <Icon className={styles.fileIcon} opened={expanded} />
           <Input
+            autoFocus={true}
             error={fileExistsError}
-            ref={this.inputRef}
             value={value}
             onChange={this.handleChange}
             onBlur={this.handleBlur}

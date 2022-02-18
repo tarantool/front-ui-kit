@@ -8,7 +8,7 @@ import {
   Button,
   IconChevron,
   IconSearch,
-  Input,
+  Input2,
   Switcher,
   Text,
   withDropdown
@@ -64,18 +64,19 @@ const dropdownExample = (
   />
 
   <div style={{ margin: '12px' }}>
-    <Input
+    <Input2
       disabled={disabled}
+      autoFocus={true}
       value={value}
       placeholder="Placeholder"
       onChange={handleChange}
-      title="Input"
+      title="Input Auto Focus"
       size="l"
     />
   </div>
 
   <div style={{ margin: '12px' }}>
-    <Input
+    <Input2
       disabled={disabled}
       value={value}
       placeholder="Filter by uri, uuid, role, alias or labels"
@@ -85,7 +86,7 @@ const dropdownExample = (
   </div>
 
   <div style={{ width: '250px', margin: '12px' }}>
-    <Input
+    <Input2
       disabled={disabled}
       value={value}
       placeholder="Filter by uri, uuid, role, alias or labels"
@@ -100,7 +101,7 @@ const dropdownExample = (
   </div>
 
   <div style={{ margin: '12px' }}>
-    <Input
+    <Input2
       disabled={disabled}
       value={value}
       placeholder="Filter by uri, uuid, role, alias or labels"
@@ -113,7 +114,7 @@ const dropdownExample = (
   </div>
 
   <div style={{ margin: '12px' }}>
-    <Input
+    <Input2
       disabled={disabled}
       value={value}
       placeholder="Filter by uri, uuid, role, alias or labels"
@@ -125,7 +126,7 @@ const dropdownExample = (
   </div>
 
   <div style={{ width: '250px', margin: '12px' }}>
-    <Input
+    <Input2
       disabled={disabled}
       value={value}
       placeholder="Filter by uri, uuid, role, alias or labels"
