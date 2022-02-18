@@ -115,6 +115,7 @@ export const withTooltip = (
       const { tooltipRef } = this;
       const tooltipElement = tooltipRef.current;
       const wrapperElement = this.getWrapperElement();
+      console.log('wrapperElement', wrapperElement);
 
       if (((visible && !prevState.visible) || prevProps !== this.props) && tooltipElement && wrapperElement) {
         const bodyWidth = document.body ? document.body.clientWidth : 0;
