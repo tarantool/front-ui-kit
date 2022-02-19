@@ -103,10 +103,10 @@ export const withTooltip = (
 
     getWrapperElement(): ?HTMLElement {
       const { wrapperRef } = this;
-
+      console.log('this', this); // props event ....
+      console.log('wrapperRef', wrapperRef); //{ current: span.className}
       const componentRef = wrapperRef.current && ((wrapperRef.current: any): ComponentRef).elementRef;
       const domNodeRef = ((wrapperRef: any): { current: HTMLElement });
-
       return componentRef ? componentRef.current : domNodeRef.current;
     }
 
@@ -115,8 +115,6 @@ export const withTooltip = (
       const { tooltipRef } = this;
       const tooltipElement = tooltipRef.current;
       const wrapperElement = this.getWrapperElement();
-      console.log('wrapperElement', wrapperElement);
-
       if (((visible && !prevState.visible) || prevProps !== this.props) && tooltipElement && wrapperElement) {
         const bodyWidth = document.body ? document.body.clientWidth : 0;
         const wrapperRect = wrapperElement.getBoundingClientRect();
