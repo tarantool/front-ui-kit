@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useRef, useState } from 'react';
 import { cx } from '@emotion/css';
 
 import { IconCancel } from '../Icon';
@@ -32,7 +32,7 @@ export type InputProps = {
   rightElement?: React.ReactNode;
 };
 
-export const Input = forwardRef<any, InputProps>(
+export const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
       onFocus,
@@ -62,18 +62,16 @@ export const Input = forwardRef<any, InputProps>(
       rightElement,
       ...props
     }: InputProps,
-    ref: any
+    ref
   ) => {
     const [focused, setFocused] = useState(false);
+    const localRef = useRef<HTMLInputElement>(null);
 
-    // useEffect(() => {
-    //   console.log(newRef);
-    //   ref = elementRef;
-    // }, []);
+    const usedRef = ref || localRef;
 
     const focus = () => {
-      if (ref && ref.current) {
-        ref.current?.focus();
+      if (localRef && localRef.current) {
+        localRef.current?.focus();
       }
     };
 
@@ -139,7 +137,7 @@ export const Input = forwardRef<any, InputProps>(
           value={value}
           placeholder={placeholder}
           readOnly={readOnly}
-          ref={ref}
+          ref={usedRef}
         />
         {(onClearClick || rightIcon) && (
           <div className={cx(styles.iconWrap, iconWrapSizes[size || 'l'])}>

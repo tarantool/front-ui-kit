@@ -103,10 +103,9 @@ export const withTooltip = (
 
     getWrapperElement(): ?HTMLElement {
       const { wrapperRef } = this;
-      console.log('this', this); // props event ....
-      console.log('wrapperRef', wrapperRef); //{ current: span.className}
       const componentRef = wrapperRef.current && ((wrapperRef.current: any): ComponentRef).elementRef;
       const domNodeRef = ((wrapperRef: any): { current: HTMLElement });
+
       return componentRef ? componentRef.current : domNodeRef.current;
     }
 
