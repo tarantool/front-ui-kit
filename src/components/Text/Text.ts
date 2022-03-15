@@ -9,6 +9,7 @@ export type TextStyleVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'p' | 'basic'
 
 export interface TextProps {
   className?: string;
+  htmlFor?: string;
   children?: ReactNode;
   tag?: string;
   href?: string;

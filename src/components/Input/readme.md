@@ -66,10 +66,11 @@ const dropdownExample = (
   <div style={{ margin: '12px' }}>
     <Input
       disabled={disabled}
+      autoFocus={true}
       value={value}
       placeholder="Placeholder"
       onChange={handleChange}
-      title="Input"
+      title="Input Auto Focus"
       size="l"
     />
   </div>

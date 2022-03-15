@@ -3,7 +3,8 @@ import React, { createRef } from 'react';
 import { cx } from '@emotion/css';
 
 import { genericStyles } from '../../genericStyles';
-import { commonInputSizes, commonInputStyles } from '../Input/commonStyles';
+
+import { commonInputSizes, commonInputStyles } from '../Input/Input.styles';
 
 export type TextAreaProps = {
   autoComplete?: 'on' | 'off', // ?
