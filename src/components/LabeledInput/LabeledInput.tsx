@@ -29,13 +29,11 @@ type LabeledInputProps = InputProps & {
   preserveMessageSpace?: boolean;
 };
 
-const internalId = nanoid();
-
 export const LabeledInput: FC<LabeledInputProps> = ({
   inputComponent: InputComponent = Input,
   topRightControls,
   className,
-  id = internalId,
+  id,
   inputClassName,
   subTitle,
   info,
@@ -46,6 +44,8 @@ export const LabeledInput: FC<LabeledInputProps> = ({
   preserveMessageSpace,
   ...props
 }: LabeledInputProps) => {
+  const internalId = nanoid();
+
   return (
     <div className={cx(commonStyles.wrap, { [commonStyles.wrapMargin]: largeMargins }, className)}>
       <div className={cx(commonStyles.headingPane, { [commonStyles.headingPaneMargin]: largeMargins })}>
@@ -64,7 +64,7 @@ export const LabeledInput: FC<LabeledInputProps> = ({
         )}
         {topRightControls && <ControlsPanel className={commonStyles.topRightControls} controls={topRightControls} />}
       </div>
-      <InputComponent {...props} error={error} id={id} className={cx(styles.input, inputClassName)} />
+      <InputComponent {...props} error={error} id={id || internalId} className={cx(styles.input, inputClassName)} />
       {(preserveMessageSpace || message) && (
         <Text variant="p" className={cx(styles.message, { [styles.errorMessage]: error })}>
           {message}
