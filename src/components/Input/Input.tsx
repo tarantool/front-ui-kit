@@ -1,8 +1,9 @@
-import React, { forwardRef, useRef, useState } from 'react';
+import React, { MutableRefObject, forwardRef, useRef, useState } from 'react';
 import { cx } from '@emotion/css';
 
 import { IconCancel } from '../Icon';
-import { commonInputSizes, commonInputStyles, iconWrapSizes, styles, wrapSizes } from './Input.stytles';
+
+import { commonInputSizes, commonInputStyles, iconWrapSizes, styles, wrapSizes } from './Input.styles';
 
 export type InputProps = {
   autoComplete?: 'on' | 'off' | 'new-password';
@@ -70,8 +71,8 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const usedRef = ref || localRef;
 
     const focus = () => {
-      if (localRef && localRef.current) {
-        localRef.current?.focus();
+      if (usedRef) {
+        (usedRef as MutableRefObject<HTMLInputElement>).current.focus();
       }
     };
 

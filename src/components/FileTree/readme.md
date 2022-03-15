@@ -1,6 +1,6 @@
 ```jsx
-import {FileTree} from '@tarantool.io/ui-kit';
-import {NewTreeElement} from "./NewTreeElement";
+import { FileTree } from '@tarantool.io/ui-kit';
+import { NewTreeElement } from "./NewTreeElement";
 
 const filePaths = [];
 const tree = [
