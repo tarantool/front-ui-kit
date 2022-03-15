@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
 import { cx } from '@emotion/css';
 
 import { nanoid } from '../../utils/nanoid';
@@ -44,12 +44,14 @@ export const LabeledInput: FC<LabeledInputProps> = ({
   preserveMessageSpace,
   ...props
 }: LabeledInputProps) => {
-  const internalId = nanoid();
+  const internalId = useMemo(() => {
+    return id ?? nanoid();
+  }, [id]);
 
   return (
     <div className={cx(commonStyles.wrap, { [commonStyles.wrapMargin]: largeMargins }, className)}>
       <div className={cx(commonStyles.headingPane, { [commonStyles.headingPaneMargin]: largeMargins })}>
-        <Text className={commonStyles.label} variant="h4" tag="label">
+        <Text htmlFor={internalId} className={commonStyles.label} variant="h4" tag="label">
           {label}
         </Text>
         {!!info && (
@@ -64,7 +66,7 @@ export const LabeledInput: FC<LabeledInputProps> = ({
         )}
         {topRightControls && <ControlsPanel className={commonStyles.topRightControls} controls={topRightControls} />}
       </div>
-      <InputComponent {...props} error={error} id={id || internalId} className={cx(styles.input, inputClassName)} />
+      <InputComponent {...props} error={error} id={internalId} className={cx(styles.input, inputClassName)} />
       {(preserveMessageSpace || message) && (
         <Text variant="p" className={cx(styles.message, { [styles.errorMessage]: error })}>
           {message}
