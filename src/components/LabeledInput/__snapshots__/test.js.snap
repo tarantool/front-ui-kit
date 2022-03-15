@@ -128,6 +128,7 @@ Array [
     >
       <label
         className="emotion-2"
+        htmlFor="1"
       >
         Label
       </label>
@@ -355,6 +356,7 @@ Array [
     >
       <label
         className="emotion-2"
+        htmlFor="2"
       >
         Label
       </label>
@@ -511,6 +513,7 @@ Array [
     >
       <label
         className="emotion-2"
+        htmlFor="3"
       >
         Label
       </label>
@@ -672,6 +675,7 @@ Array [
     >
       <label
         className="emotion-2"
+        htmlFor="4"
       >
         Multiline labeled input
       </label>

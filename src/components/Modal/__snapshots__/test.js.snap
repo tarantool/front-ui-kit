@@ -384,6 +384,7 @@ exports[`Modal renders modal with form 1`] = `
         >
           <label
             className="emotion-7"
+            htmlFor="first-input"
           >
             First input
           </label>
