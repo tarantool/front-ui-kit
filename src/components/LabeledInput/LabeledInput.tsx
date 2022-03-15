@@ -8,11 +8,13 @@ import { IconInfo } from '../Icon';
 import type { InputProps } from '../Input';
 import { Input } from '../Input';
 import { Text } from '../Text';
+// eslint-disable-next-line import/namespace
 import { Tooltip } from '../Tooltip';
 
 import { styles } from './LabeledInput.styles';
 
 type LabeledInputProps = InputProps & {
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   inputComponent?: React.ComponentType<any>;
   inputClassName?: string;
   className?: string;
