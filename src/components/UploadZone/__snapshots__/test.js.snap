@@ -69,6 +69,7 @@ Array [
     onDrop={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
+    role="button"
     tabIndex={0}
   >
     <input
@@ -182,6 +183,7 @@ Array [
     onDrop={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
+    role="button"
     tabIndex={0}
   >
     <input

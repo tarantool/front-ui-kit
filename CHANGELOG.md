@@ -6,13 +6,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
--- Refactor in TypeScript: Input, InputPassword, ControlPanel, LabeledInput;
+
+## [0.51.0] - 2022-03-25
+
+- Refactor in TypeScript: Input, InputPassword, ControlPanel, LabeledInput;
+
+- Update dependencies;
+
 ## [0.50.11] - 2022-02-18
 
 - Added the cancelText field in ConfirmModal;
 
 - Improve the `Table` component;
-
 
 ## [0.50.10] - 2022-02-14
 
