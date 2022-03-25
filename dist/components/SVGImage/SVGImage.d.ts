@@ -1,5 +1,5 @@
 import { MouseEvent } from 'react';
-import { SVGGlyphTypes } from '../Icon';
+import type { SVGGlyphTypes } from '../Icon/Icon.types';
 declare type SVGImageProps = {
     className?: string;
     glyph?: SVGGlyphTypes;
