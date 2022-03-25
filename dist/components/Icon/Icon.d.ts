@@ -1,14 +1,6 @@
 import { FC, MouseEvent } from 'react';
-export declare type GenericIconProps = {
-    className?: string;
-    onClick?: (event: MouseEvent) => void;
-};
-export declare type SVGGlyphTypes = {
-    content: string;
-    id: string;
-    node: SVGSVGElement;
-    viewBox: string;
-};
+import type { GenericIconProps, SVGGlyphTypes } from './Icon.types';
+export type { SVGGlyphTypes, GenericIconProps };
 export declare type IconProps = {
     active?: boolean;
     className?: string;

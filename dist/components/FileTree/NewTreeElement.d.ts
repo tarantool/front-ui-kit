@@ -18,12 +18,10 @@ export declare type NewTreeElementState = {
 };
 export declare class NewTreeElement extends React.Component<NewTreeElementProps, NewTreeElementState> {
     constructor(props: NewTreeElementProps);
-    inputRef: React.RefObject<any>;
-    componentDidMount(): void;
     isFileExists: (name: string, parentPath: string | null | undefined, initial: string | null | undefined, paths: string[]) => boolean;
-    handleChange: (event: InputEvent) => void;
+    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     handleBlur: () => void;
-    handleKeyPress: (event: KeyboardEvent) => void;
+    handleKeyPress: (event: React.KeyboardEvent) => void;
     render(): JSX.Element;
 }
 export {};
