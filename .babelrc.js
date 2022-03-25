@@ -1,11 +1,1 @@
-module.exports = {
-  plugins: ['@emotion'],
-  presets: [
-    [
-      'react-app',
-      {
-        flow: true,
-      },
-    ],
-  ],
-};
+module.exports = require('@tarantool.io/babel-config')({});

@@ -1,17 +1,15 @@
 // @flow
-import { DEFAULT_EXTENSIONS } from '@babel/core';
-import babel from '@rollup/plugin-babel';
+import { babel } from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import autoExternal from 'rollup-plugin-auto-external';
 import del from 'rollup-plugin-delete';
+// import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 import svgSpriteLoader from 'rollup-svg-sprite-loader';
 
-// import { terser } from 'rollup-plugin-terser';
-
-const extensions = [...DEFAULT_EXTENSIONS, '.ts', '.tsx'];
+const extensions = ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx'];
 
 const rollupBuilds = [
   {
@@ -48,7 +46,7 @@ const rollupBuilds = [
       }),
       babel({
         exclude: ['node_modules/**'],
-        babelHelpers: 'runtime',
+        babelHelpers: 'inline',
         extensions,
       }),
       replace({
@@ -58,7 +56,7 @@ const rollupBuilds = [
         },
       }),
       autoExternal(),
-      // terser()
+      // terser(),
     ],
   },
 ];

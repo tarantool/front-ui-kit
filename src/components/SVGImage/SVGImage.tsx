@@ -1,7 +1,7 @@
 import React, { MouseEvent } from 'react';
 import { css, cx } from '@emotion/css';
 
-import { SVGGlyphTypes } from '../Icon';
+import type { SVGGlyphTypes } from '../Icon/Icon.types';
 
 type SVGImageProps = {
   className?: string;

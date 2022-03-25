@@ -67,18 +67,21 @@ export function SideMenu({
 
       toggleExpand(path, expanded);
     },
-    [toggleExpand]
+    [toggleExpand, onCollapse]
   );
 
-  const handleShortToggle = useCallback((event: MouseEvent<HTMLElement>) => {
-    event.preventDefault();
+  const handleShortToggle = useCallback(
+    (event: MouseEvent<HTMLElement>) => {
+      event.preventDefault();
 
-    if (onCollapse) {
-      onCollapse((value) => !value);
-    } else {
-      setIsShortLocal((value) => !value);
-    }
-  }, []);
+      if (onCollapse) {
+        onCollapse((value) => !value);
+      } else {
+        setIsShortLocal((value) => !value);
+      }
+    },
+    [onCollapse]
+  );
 
   const topMenu = useMemo(() => {
     return menu.filter((item) => !item.pinBottom);

@@ -3,18 +3,9 @@ import { cx } from '@emotion/css';
 
 import { SVGImage } from '../SVGImage';
 import { styles } from './Icon.styled';
+import type { GenericIconProps, SVGGlyphTypes } from './Icon.types';
 
-export type GenericIconProps = {
-  className?: string;
-  onClick?: (event: MouseEvent) => void;
-};
-
-export type SVGGlyphTypes = {
-  content: string;
-  id: string;
-  node: SVGSVGElement;
-  viewBox: string;
-};
+export type { SVGGlyphTypes, GenericIconProps };
 
 export type IconProps = {
   active?: boolean; // Выбраное состояние

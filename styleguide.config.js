@@ -1,19 +1,30 @@
 const path = require('path');
-const docgen = require('react-docgen');
+const { parse, resolver } = require('react-docgen');
+const { withDefaultConfig } = require('react-docgen-typescript');
+const { createWebpackConfiguration } = require('@tarantool.io/webpack-config');
 
-const { version } = require('./package');
-
-const tsParser = require('react-docgen-typescript').withDefaultConfig({
+const tsParser = withDefaultConfig({
   savePropValueAsString: true,
 }).parse;
 
 const propsParser = function (filePath, source) {
-  if (filePath.endsWith('.js') || filePath.endsWith('.jsx')) {
-    return docgen.parse(source);
+  if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {
+    return tsParser(filePath);
   }
 
-  return tsParser(filePath);
+  return parse(source);
 };
+
+const webpackConfig = createWebpackConfiguration({
+  root: __dirname,
+  entry: path.join(__dirname, 'src', 'index.js'),
+  lint: true,
+  emotion: true,
+  middleware: (cfg) => {
+    delete cfg.devServer;
+    return cfg;
+  },
+});
 
 module.exports = {
   getComponentPathLine: (componentPath) => {
@@ -61,17 +72,16 @@ module.exports = {
       ],
     },
   },
-  exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
   moduleAliases: {
     '@tarantool.io/ui-kit': path.resolve(__dirname, 'src'),
   },
   pagePerSection: true,
-  // skipComponentsWithoutExample: true,
   styleguideDir: 'docs',
   title: 'Tarantool UI-Kit',
-  // tocMode: 'expand',
   usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
-  version,
+  exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
+  version: require('./package').version,
+  resolver: resolver.findAllComponentDefinitions,
   propsParser,
-  resolver: docgen.resolver.findAllComponentDefinitions,
+  webpackConfig,
 };

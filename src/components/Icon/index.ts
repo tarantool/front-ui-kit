@@ -3,6 +3,7 @@ export * from './icons/IconArrow';
 export * from './icons/IconCheckbox';
 export * from './icons/IconChevron';
 export * from './icons/IconSpinner';
+export * from './icons/IconSpinnerLegacy';
 export * from './icons/IconAttach';
 export * from './icons/IconAttention';
 export * from './icons/IconBell';
