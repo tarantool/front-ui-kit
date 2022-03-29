@@ -348,6 +348,17 @@ Array [
   display: block;
 }
 
+.emotion-9 {
+  margin: 0;
+  font-family: Inter,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  min-height: 20px;
+}
+
 <div
     className="emotion-0"
   >
@@ -399,6 +410,9 @@ Array [
         </button>
       </div>
     </div>
+    <p
+      className="emotion-9"
+    />
   </div>,
   .emotion-0 {
   margin-bottom: 10px;

@@ -20,7 +20,7 @@ export declare type InputProps = {
     rightIcon?: React.ReactNode;
     title?: string;
     type?: 'text' | 'password' | 'email' | 'number';
-    value?: string;
+    value?: string | ReadonlyArray<string> | number | undefined;
     placeholder?: string;
     size?: 'm' | 'l';
     leftElement?: React.ReactNode;
