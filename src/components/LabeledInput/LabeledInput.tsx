@@ -41,7 +41,7 @@ export const LabeledInput: FC<LabeledInputProps> = ({
   largeMargins,
   error,
   message,
-  preserveMessageSpace,
+  preserveMessageSpace = true,
   ...props
 }: LabeledInputProps) => {
   const internalId = useMemo(() => {
