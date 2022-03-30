@@ -10,6 +10,7 @@ import { styles } from './Select.styles';
 type Option = {
   label: string;
   value: string;
+  icon?: React.ReactNode;
 };
 
 type SelectProps = {
@@ -76,6 +77,7 @@ export const Select: FC<SelectProps> = ({
           getSelectOptions().map((option) => (
             <DropdownItem
               key={option.value}
+              icon={option.icon}
               onClick={() => onChange(option.value, option)}
               className={cx({ [styles.selected]: option.value === value })}
             >

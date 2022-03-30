@@ -8,6 +8,8 @@ import {
   Switcher,
   Text
 } from '@tarantool.io/ui-kit';
+import { IconAttach } from '../Icon';
+
 
 const styles = {
   w100: css`
@@ -20,7 +22,7 @@ const toggleDisabled = () => setDisabled(!disabled);
 
 const [value, setValue] = useState('male');
 const options = [
-  { value: 'male', label: 'Male'},
+  { value: 'male', label: 'Male', icon: <IconAttach />},
   { value: 'female', label: 'Female'},
 ];
 

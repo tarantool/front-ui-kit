@@ -8,7 +8,13 @@ import { textStyles } from '../Text';
 const defaultListItemColor = 'rgba(0, 0, 0, 0.65)';
 
 const styles = {
+  wrap: css`
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+  `,
   item: (color = defaultListItemColor) => css`
+    flex-grow: 1;
     padding: 0 16px;
     line-height: 32px;
     overflow: hidden;
@@ -23,7 +29,6 @@ const styles = {
       color: ${color};
       outline: none;
     }
-
     &::-moz-focus-inner {
       border: 0;
     }
@@ -36,10 +41,11 @@ type DropdownItemProps = {
   className?: string,
   onClick?: (e: MouseEvent | KeyboardEvent, pass?: any) => void,
   pass?: any,
+  icon?: React.Node,
 };
 
 export const DropdownItem = React.memo<DropdownItemProps>(
-  ({ className, color, onClick, pass, ...props }: DropdownItemProps) => {
+  ({ icon, className, color, onClick, pass, ...props }: DropdownItemProps) => {
     const handleKeyDownCapture = React.useCallback(
       (e: KeyboardEvent) => {
         if (e.keyCode === 13) {
@@ -63,14 +69,17 @@ export const DropdownItem = React.memo<DropdownItemProps>(
     }, []);
 
     return (
-      <div
-        {...props}
-        tabIndex={0}
-        className={cx(textStyles.basic, styles.item(color), className)}
-        onClick={handleClick}
-        onKeyDownCapture={handleKeyDownCapture}
-        onMouseEnter={handleMouseEnter}
-      />
+      <div className={styles.wrap}>
+        {icon ? icon : null}
+        <div
+          {...props}
+          tabIndex={0}
+          className={cx(textStyles.basic, styles.item(color), className)}
+          onClick={handleClick}
+          onKeyDownCapture={handleKeyDownCapture}
+          onMouseEnter={handleMouseEnter}
+        />
+      </div>
     );
   }
 );
