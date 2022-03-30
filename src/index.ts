@@ -12,5 +12,6 @@ export * from './components/InputPassword';
 export * from './components/Input';
 export * from './components/LabeledInput';
 export * from './components/ControlsPanel';
+export * from './components/Select';
 
 export * from './variables';

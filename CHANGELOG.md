@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Refactor `Select` in TypeScript, added value reset
+
 ## [0.51.0] - 2022-03-25
 
 - Refactor in TypeScript: Input, InputPassword, ControlPanel, LabeledInput;

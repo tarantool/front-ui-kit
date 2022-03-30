@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { css } from '@emotion/css';
 import {
+  Button,
   Select,
   ControlsPanel,
   Switcher,
@@ -29,14 +30,17 @@ const options = [
       <Switcher key={0} checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
     ]}
   />
-
+  <div style={{ margin: '12px' }}>
+    <Button onClick={() => setValue(null)}>Reset value</Button>
+  </div>
+  
   <div style={{ margin: '12px' }}>
     <Select
       options={[]}
       disabled={disabled}
     />
   </div>
-
+    
   <div style={{ margin: '12px' }}>
     <Select
       options={options}
