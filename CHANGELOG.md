@@ -6,11 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+- Added the ability to add icons in the component DropdownItem
+
+- Refactor `Select` in TypeScript, added value reset
 
 ## [0.51.1] - 2022-03-29
 
 - Fix LabeledInput and Input types;
-
+- 
 ## [0.51.0] - 2022-03-25
 
 - Refactor in TypeScript: Input, InputPassword, ControlPanel, LabeledInput;

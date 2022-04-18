@@ -2,11 +2,14 @@
 import { useState } from 'react';
 import { css } from '@emotion/css';
 import {
+  Button,
   Select,
   ControlsPanel,
   Switcher,
   Text
 } from '@tarantool.io/ui-kit';
+import { IconAttach } from '../Icon';
+
 
 const styles = {
   w100: css`
@@ -19,7 +22,7 @@ const toggleDisabled = () => setDisabled(!disabled);
 
 const [value, setValue] = useState('male');
 const options = [
-  { value: 'male', label: 'Male'},
+  { value: 'male', label: 'Male', icon: <IconAttach />},
   { value: 'female', label: 'Female'},
 ];
 
@@ -29,14 +32,17 @@ const options = [
       <Switcher key={0} checked={disabled} onChange={toggleDisabled}>Disabled</Switcher>
     ]}
   />
-
+  <div style={{ margin: '12px' }}>
+    <Button onClick={() => setValue(null)}>Reset value</Button>
+  </div>
+  
   <div style={{ margin: '12px' }}>
     <Select
       options={[]}
       disabled={disabled}
     />
   </div>
-
+    
   <div style={{ margin: '12px' }}>
     <Select
       options={options}

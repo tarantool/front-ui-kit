@@ -112,6 +112,7 @@ exports[`Select Render empty 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       placeholder=""
+      value=""
     />
     <div
       className="emotion-3"
