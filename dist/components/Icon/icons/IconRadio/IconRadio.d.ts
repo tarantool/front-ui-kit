@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import type { GenericIconProps } from '../../Icon';
 declare type IconRadioProps = GenericIconProps & {
     checked?: boolean;
