@@ -14,4 +14,9 @@ export * from './components/LabeledInput';
 export * from './components/ControlsPanel';
 export * from './components/Select';
 
+// icons
+export * from './components/IconTarantoolLogoFull';
+export * from './components/IconTarantoolLogoCompact';
+export * from './components/IconTarantoolUser';
+
 export * from './variables';
