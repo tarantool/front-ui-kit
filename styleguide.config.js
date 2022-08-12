@@ -20,6 +20,7 @@ const webpackConfig = createWebpackConfiguration({
   entry: path.join(__dirname, 'src', 'index.js'),
   lint: true,
   emotion: true,
+  svgSprite: true,
   middleware: (cfg) => {
     delete cfg.devServer;
     return cfg;
