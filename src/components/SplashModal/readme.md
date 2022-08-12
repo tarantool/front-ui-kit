@@ -7,7 +7,7 @@ import {
   InputPassword,
   LabeledInput,
   SplashModal,
-  TarantoolLogoFull
+  IconTarantoolLogoFull
 } from '@tarantool.io/ui-kit';
 
 const [opened, setOpened] = useState(false);
@@ -16,6 +16,7 @@ const openModal = () => setOpened(true);
 const closeModal = () => setOpened(false);
 
 const controlsStyle = css`justify-content: flex-end;`;
+const iconStyle = css`color: white`;
 
 <>
   <Button onClick={openModal} text="Open SplashModal" />
@@ -24,7 +25,7 @@ const controlsStyle = css`justify-content: flex-end;`;
     title="Authorization"
     subTitle="Please, input your credentials"
     onClose={closeModal}
-    logo={TarantoolLogoFull}
+    logo={<IconTarantoolLogoFull className={iconStyle} />}
   >
   <LabeledInput
     label="Your account ID"

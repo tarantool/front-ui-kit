@@ -135,6 +135,9 @@ export const styles = {
   logoStyle: css`
     margin-left: 24px;
   `,
+  logo: css`
+    color: white;
+  `,
   bottomButtons: css`
     flex-grow: 0;
     flex-shrink: 0;

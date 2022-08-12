@@ -8,8 +8,6 @@ import {
   IconInfo,
   SideMenu,
   SideMenuRenderMenuLogo,
-  TarantoolLogoCompact,
-  TarantoolLogoFull
 } from '@tarantool.io/ui-kit';
 
 const IconSuccessGreen = ({ className, ...props }) => <IconSuccess {...props} />

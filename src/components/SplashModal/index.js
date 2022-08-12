@@ -38,7 +38,6 @@ const styles = {
     position: relative;
   `,
   logo: css`
-    width: 210px;
     position: absolute;
     transform: translate3d(-50%, -50%, 0) rotate(-90deg);
     left: 50%;
@@ -68,7 +67,7 @@ export const SplashModal = ({
   <BaseModal {...props} className={cx(styles.modal, className)} shimClassName={cx(styles.shim, shimClassName)}>
     {logo && (
       <div className={styles.logoContainer}>
-        <SVGImage glyph={logo} className={styles.logo} />
+        {logo.viewBox ? <SVGImage glyph={logo} className={styles.logo} /> : <div className={styles.logo}>{logo}</div>}
       </div>
     )}
     <div className={styles.formContainer}>
