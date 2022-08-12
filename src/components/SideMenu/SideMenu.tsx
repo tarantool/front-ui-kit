@@ -4,9 +4,9 @@ import { cx } from '@emotion/css';
 import * as R from 'ramda';
 
 import { genericStyles } from '../../genericStyles';
-import { TarantoolLogoCompact, TarantoolLogoFull } from '../../images';
 import { IconArrowLeft, IconArrowRight } from '../Icon';
-import { SVGImage } from '../SVGImage';
+import { IconTarantoolLogoCompact } from '../IconTarantoolLogoCompact';
+import { IconTarantoolLogoFull } from '../IconTarantoolLogoFull';
 import { SideMenuItem } from './components/SideMenuItem';
 import type { SideMenuItemType, SideMenuItemTypes } from './SideMenu.types';
 
@@ -26,12 +26,12 @@ export interface SideMenuProps {
 
 const collapseMenuItems = [];
 
-export const SideMenuRenderMenuLogo = (collapsed: boolean) => (
-  <SVGImage
-    className={cx(!collapsed && styles.logoStyle)}
-    glyph={collapsed ? TarantoolLogoCompact : TarantoolLogoFull}
-  />
-);
+export const SideMenuRenderMenuLogo = (collapsed: boolean) =>
+  collapsed ? (
+    <IconTarantoolLogoCompact className={cx(styles.logo, !collapsed && styles.logoStyle)} fixed />
+  ) : (
+    <IconTarantoolLogoFull className={cx(styles.logo, !collapsed && styles.logoStyle)} fixed />
+  );
 
 export function SideMenu({
   menu,

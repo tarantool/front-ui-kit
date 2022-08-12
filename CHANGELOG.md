@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- Use new logos in the ui components;
+
 ## [0.52.0] - 2022-08-12
 
 - Added the ability to add icons in the component DropdownItem;
