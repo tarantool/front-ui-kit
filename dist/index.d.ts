@@ -12,4 +12,8 @@ export * from './components/InputPassword';
 export * from './components/Input';
 export * from './components/LabeledInput';
 export * from './components/ControlsPanel';
+export * from './components/Select';
+export * from './components/IconTarantoolLogoFull';
+export * from './components/IconTarantoolLogoCompact';
+export * from './components/IconTarantoolUser';
 export * from './variables';

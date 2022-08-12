@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import type { GenericIconProps } from '../../Icon';
 declare type IconFolderProps = GenericIconProps & {
     opened?: boolean;

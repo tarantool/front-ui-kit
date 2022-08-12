@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { DropzoneOptions } from 'react-dropzone';
 export declare type UploadZoneHandler = DropzoneOptions['onDrop'];
 export interface UploadZoneProps {

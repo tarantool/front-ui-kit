@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { GenericIconProps } from '../../Icon';
 export declare type IconSpinnerLegacyProps = GenericIconProps;
 /**

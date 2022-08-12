@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import type { GenericIconProps } from '../../Icon';
 export declare type IconArrowProps = GenericIconProps & {
     direction: 'up' | 'down' | 'left' | 'right';
