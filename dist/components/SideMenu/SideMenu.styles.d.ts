@@ -14,6 +14,7 @@ export declare const styles: {
     logoContainer: string;
     logoCenter: string;
     logoStyle: string;
+    logo: string;
     bottomButtons: string;
     iconStyle: string;
 };
